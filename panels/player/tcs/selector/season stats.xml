@@ -1,0 +1,27 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+	<container height="32"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+			<record id="object_property">
+				<list id="get_properties">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<record id="object_property" get_property="Pila" set_property="hidn"/>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+			<record id="object_property">
+				<list id="get_properties">
+					<record id="object_property" get_property="Pila" set_property="Shwn"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+</panel>
