@@ -152,7 +152,7 @@
 					</container>
 				</container>
 
-				<container>
+				<container class="tcs_table_trans">
 					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
 					<!-- DOB -->
@@ -178,7 +178,7 @@
 					</container>
 				</container>
 
-				<container class="tcs_table">
+				<container class="tcs_table_trans">
 					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
 					<!-- PERSONALITY -->
