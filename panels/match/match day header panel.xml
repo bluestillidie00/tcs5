@@ -1,0 +1,186 @@
+﻿<panel height="50">
+    <list id="properties_to_forward">
+        <record get_property="titl" set_property="text" target="sect" />
+    </list>
+
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <boolean id="should_force_refresh" value="true" />
+
+    <container class="bordered_box" appearance="boxes/custom/full screen header/paper">
+        <attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="15" vertical_alignment="top" />
+
+        <!-- Back Button -->
+        <widget class="screen_history_button" id="back" fixed="true" width="50" height="50" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre" controller_button="b_button">
+            <attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+            <record id="primary_icon_properties" red_replacement="text" />
+            <record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+
+            <attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+        </widget>
+
+        <widget class="vertical_divider" height="50">
+            <attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+        </widget>
+
+        <container class="match_titlebar_panel" file="match/match score area panel" id="scoC" colour_team_names="false" colour_team_scores="false" height="40" disable_animations="true">
+            <attachment class="get_global_attachment" get_property="usMF" set_property="objt" />
+            <attachment class="get_global_attachment" get_property="hide_match_score" set_property="hidn" />
+        </container>
+
+        <widget class="spacer"/>
+
+        <container height="50">
+            <attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" vertical_gap="0" />
+
+            <!-- title area -->
+            <widget class="text" id="sect" font="title" alignment="left,centre_y" size="large" multiline="false" auto_size="all" colour="white" />
+
+            <!-- subtitle area -->
+            <container>
+                <attachment class="get_global_attachment" get_property="hide_pre_match_details" set_property="hidn" />
+                <attachment_group class="horizontal_arrange_autosize_all" horizontal_gap="4" />
+
+                <widget class="team_button" alignment="left, centre_y" height="20" multiline="false" auto_size="horizontal" colour="faded text" icon_enabled="false" mode="1">
+                    <record id="object_property" get_property="home" set_property="valu" />
+                </widget>
+
+                <widget class="text" alignment="left, centre_y" height="20" auto_size="horizontal" colour="faded text">
+                    <translation id="text" translation_id="516206" type="use" value="vs[COMMENT: AREA: Prematch Header Panels; SUB-AREA: subtitle text; BN: 35843; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: short for versus, eg Team1 vs Team2]" />
+                </widget>
+
+                <widget class="team_button" alignment="left, centre_y" height="20" auto_size="horizontal" colour="faded text" icon_enabled="false" mode="1">
+                    <record id="object_property" get_property="away" set_property="valu" />
+                </widget>
+
+                <widget class="text" alignment="left, centre_y" height="20" auto_size="horizontal" colour="faded text" value="-" />
+
+                <widget class="comp_button" alignment="left, centre_y" height="20" auto_size="horizontal" colour="faded text" icon_enabled="false">
+                    <record id="object_property" get_property="fxCo" set_property="valu" />
+                </widget>
+            </container>
+        </container>
+
+        <!-- "live" press conference icon/label, tunnel interviews only -->
+        <container height="50">
+            <attachment_group class="horizontal_arrange_autosize_vertical_centre"/>
+            <attachment class="get_global_attachment" get_property="TItq" set_property="Shwn" skip_if_null="false"/>
+
+            <widget class="picture" file="icons/16px/record" scale_picture="true" image_alignment="centre" height="16" width="16" colour="yellow"/>
+            <widget class="text" font="label" colour="yellow" alignment="left, centre_y" auto_size="all" multiline="true">
+                <translation id="text" translation_id="466452" type="use" value="Live[COMMENT: FR 22941; press conference; label indicating the press conference is in progress]"/>
+            </widget>
+        </container>
+
+        <!-- press conference questions remaining, tunnel interviews only -->
+        <container height="50">
+            <attachment_group class="horizontal_arrange_autosize" horizontal_alignment="horizontal" vertical_alignment="vertical" horizontal_offset="0"/>
+            <layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+            <attachment class="get_global_attachment" get_property="TItq" set_property="Shwn" skip_if_null="false"/>
+
+            <widget class="percentage_pie_chart" value_colour="bg darker" filler_colour="fg" is_donut_chart="true" layout="-6, -3, -1" height="30" width="30">
+                <attachment class="get_global_attachment" get_property="TInq" set_property="value"/>
+                <attachment class="get_global_attachment" get_property="TItq" set_property="max_value"/>
+            </widget>
+            
+            <widget class="text" font="label" colour="faded text" alignment="left, centre_y" width="80" size="small" multiline="true">
+                <translation id="text" translation_id="515704" type="use" value="Questions\nRemaining[COMMENT: AREA: Press Conference; SUB-AREA: Header panel; FR-BN: 32571; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: number of questions remaining in the press conference, same as translation id 466453 with additional line break between words]"/>
+            </widget>
+        </container>
+
+        <container height="50">
+            <attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0" horizontal_offset="6"/>
+
+            <widget class="spacer" />
+
+            <container>
+                <attachment_group class="horizontal_arrange_autosize" horizontal_gap="6" />
+
+                <!-- FM button -->
+                <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="58" height="39" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
+                    <event id="click_notification_event" event_id="FM" item="NULL" />
+                    <event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
+                    <record id="items" file="menus/game" />
+                    <translation id="hint" translation_id="292829" type="use" value="Options[COMMENT: menubar game options button]" />
+                </widget>
+
+                <!--calendar button-->
+                <widget class="current_game_date_widget" id="cgdw" height="60">
+                    <attachment class="test_global_attachment" get_property="cont" set_property="disa">
+                        <list id="value">
+                            <integer value="-5" />
+                        </list>
+                    </attachment>
+                </widget>
+                                <!--instant match button-->
+                <widget class="icon_button" id="INST" appearance="chrome/buttons/continue/button" icon="icons/26px/whistle" width="180" style="bold" alignment="centre" icon_alignment="centre_right, centre_y" font="title" colour="text" height="60" >
+                    <record id="primary_icon_properties" red_replacement="text" />
+                    <translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
+                    <record id="click_event" event_id="INST" event_target="glob" />
+
+                    <attachment class="test_global_attachment" get_property="section" mode="1" set_property="hidden">
+                        <list id="value">
+                            <integer value="phtc" />
+                            <integer value="PhcP" />
+                            <integer value="PhcR" />
+                            <integer value="PhcK" />
+                            <integer value="PhcH" />
+                            <integer value="PhcN" />
+                            <integer value="PhcC" />
+                            <integer value="PhcF" />
+                            <integer value="patc" />
+                            <integer value="PacP" />
+                            <integer value="PacR" />
+                            <integer value="PacK" />
+                            <integer value="PacH" />
+                            <integer value="PacN" />
+                            <integer value="PacC" />
+                            <integer value="PacF" />
+                        </list>
+                    </attachment>
+                </widget>
+
+                <container id="ctnu" file="generic/continue" height="60" width="150">
+                    <attachment class="test_global_attachment" get_property="cont" set_property="hidden">
+                        <list id="value">
+                            <integer value="-16" />
+                            <integer value="-14" />
+                            <integer value="-13" />
+                            <integer value="-7" />
+                        </list>
+
+                    </attachment>
+                </container>
+                
+
+                <!--match continue button-->
+                <widget class="icon_button" id="IMBu" appearance="chrome/buttons/continue/button" controller_button="right_trigger" width="200" alignment="centre" secondary_icon_enabled="true" secondary_icon_alignment="centre_right, centre_y" font="title" colour="accent button text">
+                    <record id="click_event" event_id="CONT" event_target="glob" />
+
+                    <attachment class="test_global_attachment" get_property="cont" set_property="hidden" mode="not_equal">
+                        <list id="value">
+                            <integer value="-16" />
+                            <integer value="-14" />
+                            <integer value="-13" />
+                            <integer value="-7" />
+                        </list>
+
+                    </attachment>
+
+                    <!-- match play text -->
+                    <attachment class="get_global_attachment" get_property="cttx" set_property="text" />
+                    <attachment class="get_global_attachment" get_property="ctht" set_property="hint" />
+                    <attachment class="get_global_attachment" get_property="ctic" set_property="icon" />
+
+                    <attachment class="get_global_attachment" get_property="UsrL" set_property="Flas" skip_if_null="false" />
+                    <attachment class="flash_colour_attachment" auto_start="false">
+                        <colour id="first_colour" name="blue" />
+                        <colour id="second_colour" name="red" />
+                        <flags id="colour_property" value="bkcl" />
+                    </attachment>
+                </widget>
+            </container>
+        </container>
+    </container>
+
+</panel>

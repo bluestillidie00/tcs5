@@ -1,0 +1,87 @@
+<panel>
+	<!-- BACKGROUND FOR CURRENT PLAYER -->
+	<flags id="cham" value="tables/custom/league/champions/row" />
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="use_pro_con_long_strings" value="true"/>
+
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!-- No scout report -->
+	<container id="nsrc" class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+
+		<container id="nocs" height="100">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+			</widget>
+
+			<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+				<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+			</widget>
+		</container>
+
+		<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+	</container>
+
+	<!-- Already being scounted -->
+	<container id="Arbs" class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+		</widget>
+	</container>
+
+	<!-- Already being scouted by pool -->
+	<container id="Pool" class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+		</widget>
+	</container>
+
+	<container id="scou" >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="4"/>
+
+		<container class="tcs_box" rrep="fg positive" transparency="0.4">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+			<widget class="text" colour="fg positive" size="large" font="title" alignment="left,centre_y" auto_size="vertical">
+				<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+			</widget>
+
+			<widget class="table" id="tpro" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
+				<list id="column_table_properties">
+					<record index="0" sort_ascending="false"/>
+				</list>
+			</widget>
+
+			<widget class="text" id="nPro" auto_size="vertical" colour ="faded text" multiline="true" hidden="true"/>
+		</container>
+
+		<container class="tcs_box" rrep="fg negative" transparency="0.4">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+			<widget class="text" colour="fg negative" size="large" font="title" alignment="left,centre_y" auto_size="vertical">
+				<translation id="text" translation_id="361094" type="use" value="Pros[COMMENT: FR 8316 ]" />
+			</widget>
+
+			<widget class="table" id="tcon" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
+				<list id="column_table_properties">
+					<record index="0" sort_ascending="false"/>
+				</list>
+			</widget>
+
+			<widget class="text" id="nCon" auto_size="vertical" colour ="faded text" multiline="true" hidden="true"/>
+		</container>
+	</container>
+</panel>

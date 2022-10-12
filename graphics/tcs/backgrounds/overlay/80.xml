@@ -1,0 +1,9 @@
+<properties>
+	<record id="image_borders" left="0" right="0" top="0" bottom="0"/>
+	<record id="title_borders" left="7" right="7" top="32" bottom="7"/>
+	<record id="image_slices" left="2" right="2" top="2" bottom="2"/>
+	
+	<colour id="rrep" name="subtle_box_background"/>
+	<colour id="brep" name="subtle_box_border"/>
+	<colour id="grep" name="subtle_box_shadow"/>
+</properties>

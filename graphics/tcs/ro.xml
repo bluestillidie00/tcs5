@@ -1,0 +1,5 @@
+<properties>
+	<record id="image_borders" left="6" right="6" top="6" bottom="6"/>
+	<record id="image_slices" left="25" right="25" top="25" bottom="25"/>
+	<colour id="red_replacement" name="bg"/>
+</properties>

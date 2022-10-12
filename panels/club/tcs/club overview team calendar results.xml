@@ -1,0 +1,25 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_box" id="nofi">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<widget class="text" alignment="centre" colour="faded text" hidden="false">
+			<translation id="text" translation_id="319451" type="use" value="No recent fixtures played.[COMMENT: club overview team results panel; text indicating that because no fixtures have been played, there is no expected screen content]" />
+		</widget>
+
+	</container>
+
+	<container id="fixt" class="horizontal_adaptive_container" gap="4">
+
+		<record id="default_properties" file="club/tcs/club overview team results item" minimum_width="90" default_width="-1"/>
+
+		<container class="client_object_viewer_xml_panel" id="res0" priority="1"/>
+		<container class="client_object_viewer_xml_panel" id="res1" priority="2"/>
+		<container class="client_object_viewer_xml_panel" id="res2" priority="3"/>
+		<container class="client_object_viewer_xml_panel" id="res3" priority="4"/>
+		<container class="client_object_viewer_xml_panel" id="res4" priority="5"/>
+
+	</container>
+
+</panel>

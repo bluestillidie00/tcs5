@@ -1,0 +1,33 @@
+<record>
+
+	<!--  
+	 ============================================================
+	 Basic Skin Details
+	 
+	 The commands in this file are only used to describe the skin. 
+	 Settings should be placed in the file "skins/<skin>/settings/<skin> settings.xml",
+	 where <skin> is the name of the skin.
+	 
+	 ============================================================ 
+	 -->
+
+	<!-- skin details - most of these are intentionally not translated -->
+	<translation id="name" type="use" value="TCS" />
+	<string id="author" value="Sports Interactive" />
+	<translation id="description" translation_id="419433" type="use" value="FM Skin[COMMENT: skin name]" />
+	<string id="version" value="1.0" />
+	<flags id="parent" value="fm" />
+	<string id="skin_name" value="tcs" />
+	<!--
+	 Minimum game version this skin requires to be valid, and listed as an option in the list of skins .
+	 
+	 This is used for two things: 
+	 - First of all you can force a skin to only be available for a minimum minor release (ie patch), in other words
+	 setting the required_version to 7.0.1 makes sure the skin won't be listed if the game is in version 7.0.0.
+	 - Secondly, the first number ("major version") is used to decide which version the skin was designed for,
+	 so if the version is "7.0.0" it won't be listed in the list of skins if the game version is "6.0.0." or "8.0.0",
+	 even though 7 is less than 8.
+	 -->
+	<string id="required_version" value="23.0.0" />
+
+</record>

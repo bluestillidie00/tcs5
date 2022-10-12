@@ -1,0 +1,34 @@
+﻿<!-- image properties -->
+<properties>
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image -->
+	<!-- (for example, in the case of a button, the content would be the text label) -->
+	<record id="image_borders" left="1" right="1" top="1" bottom="6"/>
+
+	<!-- title borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image when there is a title included -->
+	<!-- (for example, in the case of a button, the content would be the text label) -->
+	<record id="title_borders" left="8" right="8" top="30" bottom="8"/>
+
+	<!-- image slices determine the points at which the image will be sliced to enable scaling -->
+	<!-- the image will only slice in the directions slicing values are provided for-->
+	<record id="image_slices" left="12" right="12" top="12" bottom="12"/>
+
+	<colour id="red_replacement" name="tcs_box"/>
+		<!-- these determine how many pixels the title is inset from the top/bottom/left/right of the box -->
+	<integer id="text_top_inset" value="8"/>
+	<integer id="text_bottom_inset" value="0"/>
+	<integer id="text_left_inset" value="8"/>
+	<integer id="text_right_inset" value="8"/>
+
+	<boolean id="blurred" value="false"/>
+
+	<!-- title properties -->
+	<record id="font_spec">
+		<flags id="font" value="title"/> 
+		<colour id="colr" name="accent"/> 
+		<flags id="size" value="normal"/> 
+	</record>
+
+</properties>

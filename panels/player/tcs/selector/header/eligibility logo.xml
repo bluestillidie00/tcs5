@@ -1,0 +1,13 @@
+<!-- A panel showing a nation or club logo and it's name below. Designed to be used with a CLIENT_OBJECT_VIEWER_XML_PANEL parent.-->
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="8" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <widget class="object_portrait_picture" id="mbdg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+    <record id="object_property">
+      <integer id="get_property" value="objt" />
+      <integer id="set_property" value="objt" />
+    </record>
+  </widget>
+
+</panel>

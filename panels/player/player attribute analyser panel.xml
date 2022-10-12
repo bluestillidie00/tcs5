@@ -1,0 +1,88 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" mode="distribute_equally">
+        <container minimum_width="300" priority="1" default_width="-1">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+            <!-- Outfield player -->
+            <container class="person_attributes_analyser_panel" id="ofap" file="player/player attribute analyser outfield" >
+                <record id="object_property" get_property="Pigo" set_property="hidn"/>
+            </container>
+
+            <!-- Goalkeeper -->
+            <container class="person_attributes_analyser_panel" file="player/player attribute analyser goalkeeper" id="gkap">
+                <record id="object_property" get_property="Pigo" set_property="Shwn"/>
+            </container>
+        </container>
+
+        <!-- More attribute stuff-->
+        <container class="client_object_viewer_xml_panel" id="atT2" file="none" minimum_width="170" priority="2" default_width="170">
+            <record id="object_property" get_property="objt" set_property="objt"/>
+
+            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+            <container class="tcs_box">
+                <layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="8" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+                <container id="topc" class="player_transfer_information_panel" file="none">
+                    <record id="object_property" get_property="objt" set_property="objt"/>
+                    <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                    <!-- Top panel with detailed contract info -->
+                    <container id="cntI" height="80" navigation_container="true" default_focus="true">
+                        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                        <!-- Contract info for all leagues (incl. Contracted to, Value, Asking Price, Transfer status, Loan status) -->
+                        <container class="vertical_arrange_container" alignment="fill" inset="0" offset="0" gap="10">
+
+                            <!-- Player value -->
+                            <container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+                                <widget class="label" font="label" auto_size="vertical">
+                                    <translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+                                </widget>
+                                <widget class="transfer_value_label" id="TrVa" font="value" size="small" auto_size="all" alignment="left, centre_y" allow_link_to_transfer_info="false" />
+                            </container>
+
+                            <!-- Player's guide value - displayed when human sets a specific value
+                            <container class="vertical_arrange_container" id="GdVc" inset="0" offset="2" gap="2">
+                                <widget class="label" font="label" auto_size="vertical">
+                                    <translation id="text" translation_id="541768" type="use" value="Guide Value[COMMENT: AREA: Player Transfer Stauts; SUB-AREA: Transfer Information sup panel; FR-BN: 52771; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Heading for section to display the guide transfer value range of a player in the human team]" />
+                                </widget>
+                                <widget class="transfer_value_label" id="GdVa" font="value" size="small" auto_size="all" alignment="left, centre_y" />
+                            </container> -->
+
+                            <!-- Transfer Status -->
+                            <container class="vertical_arrange_container" layout="15, 20" inset="0" offset="2" gap="2">
+                                <widget class="label" font="label" auto_size="vertical">
+                                    <translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+                                </widget>
+
+                                <container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+                                    <widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" />
+                                    <widget class="transfer_status_label" id="TSta" font="value" auto_size="vertical" size="small" />
+                                </container>
+                            </container>
+
+                            <!-- Loan Status -->
+                            <container class="vertical_arrange_container" id="lssT" layout="15, 20" inset="0" offset="2" gap="2">
+                                <widget class="label" font="label" auto_size="vertical">
+                                    <translation id="text" translation_id="247489" type="use" value="Loan Status" />
+                                </widget>
+
+                                <container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+                                    <widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" />
+                                    <widget class="loan_status_label" id="LSta" font="value" auto_size="vertical" size="small" multiline="true" alignment="left, centre_y" />
+                                </container>
+                            </container>
+                        </container>
+                    </container>
+
+                </container>
+
+            </container>
+
+        </container>
+    </container>
+</panel>

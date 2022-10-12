@@ -1,0 +1,154 @@
+<!-- Panel displaying extra attributes a bout a player, for example condition, footedness etc -->
+<!-- Meant to be used with a CLIENT_OBJECT_XML_PANEL -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<container class="tcs_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container id="topc">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- CA and RCA for edit mode -->
+			<container id="cacn" height="24" hidden="true">
+				<layout class="arrange_horizontal_attachment" layout="30,25,22,50" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="label">
+					<translation id="text" translation_id="458476" type="use" value="RCA:[COMMENT: Player attributes panel; Edit Mode, abbreviation for Recommended Current Ability; see also Current Ability ID 310135 for context]" />
+				</widget>
+				<widget class="label" id="prca">
+					<record id="object_property" get_property="PRCA" />
+				</widget>
+				<widget class="label">
+					<translation id="text" translation_id="456577" type="use" value="CA:[COMMENT: Player attributes panel; abbreviation for Current Ability]" />
+				</widget>
+				<widget class="editable_client_object_property_panel" id="plca" alignment="right,centre_y">
+					<record id="object_property" get_property="PCAB" />
+				</widget>
+			</container>
+
+			<!-- Preferred Foot-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="Pfo:" auto_size="vertical" font="title" colour="text">
+					<record id="object_property" get_property="Pfot" name="true" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,20" />
+				</widget>
+				<widget class="foot_label" id="Pfot" auto_size="vertical">
+					<record id="object_property" get_property="Pfot" />
+				</widget>
+			</container>
+
+			<widget class="horizontal_subtle_divider" />
+
+			<!-- Personality -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="PPs:" auto_size="vertical" font="title" colour="text">
+					<record id="object_property" get_property="PPst" name="true" />
+				</widget>
+				<widget class="personality_label" id="PPst" auto_size="vertical">
+					<record id="object_property" get_property="PPst" />
+				</widget>
+			</container>
+
+			<widget class="horizontal_subtle_divider" />
+
+			<!-- Media Description -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="Pde:" auto_size="vertical" font="title" colour="text">
+					<record id="object_property" get_property="Pdes" name="true" />
+				</widget>
+				<widget class="player_description_text" id="Pdes" auto_size="vertical">
+					<record id="object_property" get_property="Pdes" />
+				</widget>
+			</container>
+
+			<widget class="horizontal_subtle_divider" />
+
+			<!-- Goalkeeper rating -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container id="GKRA">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<record id="object_property" get_property="Pigo" set_property="hidn" />
+
+					<widget class="label" id="Pgk:" auto_size="vertical" font="title" colour="text">
+						<record id="object_property" get_property="PgkR" name="true" />
+					</widget>
+					<widget class="dashed_number_label" id="PgkR" auto_size="vertical">
+						<record id="object_property" get_property="PgkR" />
+					</widget>
+				</container>
+
+				<!-- Outfield rating -->
+				<container id="OFRA">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<record id="object_property" get_property="Pigo" set_property="Shwn" />
+
+					<widget class="label" id="Pof:" auto_size="vertical" font="title" colour="text">
+						<record id="object_property" get_property="PofR" name="true" />
+					</widget>
+					<widget class="dashed_number_label" id="PofR" auto_size="vertical">
+						<record id="object_property" get_property="PofR" />
+					</widget>
+				</container>
+			</container>
+
+			<widget class="horizontal_subtle_divider" />
+		</container>
+
+		<!-- Preferred moves -->
+		<container id="botc">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="label" auto_size="vertical" font="title" colour="text">
+				<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+			</widget>
+
+			<container class="scrolling_box">
+
+				<container>
+					<layout class="vertical_arrange" vertical_alignment="top"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill"/>
+
+					<widget class="preferred_moves_panel" auto_size="vertical" file="player/player information preferred moves" id="pfmp">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+
+					<container>
+						<layout class="vertical_arrange_autosize"/>
+
+						<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+
+						<widget class="preferred_move_popup_button" id="nPPM" appearance="" alignment="left,centre_y" icon_enabled="false" font="text" height="20" colour="faded text" rrep="faded text">
+							<record id="object_property" get_property="PmCo" set_property="valu" />
+						</widget>
+
+						<widget class="preferred_move_label" id="ppML" alignment="left,centre_y" auto_size="vertical">
+							<record id="object_property" get_property="PTpm" set_property="valu" />
+						</widget>
+
+						<widget class="button" hidden="true" click_event="PPMC" id="cPPM" alignment="left,centre_y" auto_size="all">
+							<translation id="text" translation_id="229828" type="use" value="Cancel" />
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+</panel>

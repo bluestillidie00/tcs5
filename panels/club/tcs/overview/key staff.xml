@@ -1,0 +1,23 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container draw_horizontal_dividers="true">
+		<!-- MANAGER PROFILE AND STAFF -->
+		<layout class="vertical_arrange" vertical_layout="200,-10"  vertical_gap="16"/>
+
+		<!-- MANAGER INFO -->
+		<widget class="club_overview_staff_panel" id="tStM" file="club/tcs/header manager" >
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>	
+
+		<!-- REST OF STAFF -->
+		<container class="client_object_viewer_xml_panel" file="club/tcs/staff" id="ctao" >
+			<translation id="title" type="use" value="Overview" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+	</container>
+
+</panel>

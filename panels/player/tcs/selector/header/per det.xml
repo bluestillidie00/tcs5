@@ -1,0 +1,114 @@
+﻿<panel >
+<attachment_group class="horizontal_arrange" horizontal_alignment="left" />
+			<container width="180" priority="2">
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" horizontal_inset="4" vertical_inset="0" />
+
+			<!-- AGE + DOB -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- AGE LABEL-->
+				<widget class="label" auto_size="vertical" style="semi_bold" colour="fg" size="10.5">
+					<translation id="text" type="use"  translation_id="227770" value="Age" />          
+				</widget>
+
+				<!-- CONTAINER USED TO SET AGE + DOB HORIZONTALLY -->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="1" />
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="2" />
+					<!-- AGE -->
+					<widget class="editable_client_object_property_panel" id="age " height="22" auto_size="horizontal" colour="fg" >
+						<record id="widget_info" class="formatted_label" alignment="left,top"  auto_size="horizontal" size="10.5" >
+							<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+						</record>
+						<record id="widget_edit_info" width="0" height="0"/>
+						<record id="object_property" get_property="Page" />
+					</widget>
+				</container>
+			</container>
+
+			<!-- INTERNATIONAL -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<widget class="label" auto_size="vertical" style="semi_bold" size="10.5" colour="fg">
+					<translation id="text" translation_id="230147" type="use" value="Date of Birth" />
+				</widget>
+				<widget class="editable_client_object_property_panel" id="dobl"  alignment="left,top" auto_size="vertical" colour="fg" size="10.5" format="[%date#1-short]">
+					<record id="widget_info" class="game_formatted_label" auto_size="vertical" />
+					<record id="object_property" get_property="Pdob" />
+				</widget>
+			</container> 
+
+			<!-- PERSONALITY -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-1" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<widget id="PPs:" class="label" auto_size="vertical" style="semi_bold" colour="fg" size="10.5">
+					<record id="object_property" get_property="PPst" name="true" />
+				</widget>
+				<widget class="personality_label" id="PPst" auto_size="vertical" size="10.5" colour="fg">
+					<record id="object_property" get_property="PPst" />
+				</widget>
+			</container>
+
+			<!-- TRANSFER STATUS -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="Ptin" auto_size="vertical" style="semi_bold"  colour="fg" size="10.5">
+					<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+				</widget>
+				<widget class="transfer_status_label" id="trnc" alignment="left" auto_size="vertical" colour="fg" size="10.5">
+					<record id="object_property" get_property="trnc" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- GRADIENT PATTERN -->
+		<container class="plain_box" appearance="tcs/player overview" red_replacement="primary" width="2"/>
+
+		<!-- E //TRANSFER - CONTRACT -->
+		<container width="160" priority="3">
+
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<!-- PLAYING TIME -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" auto_size="vertical" style="semi_bold"  colour="fg" size="10.5">
+						<translation id="text" translation_id="423877" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+					</widget>
+					<widget class="playing_time_label" id="PccV" alignment="left,top"  auto_size="vertical" colour="fg" size="10.5">
+						<record id="object_property" get_property="Pcpt" />
+					</widget>
+				</container>	
+
+				<!-- VALUE -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<widget class="label" id="vall" auto_size="vertical" style="semi_bold"  colour="fg" size="10.5">
+						<translation id="text" translation_id="227806" type="use" value="Value" />
+					</widget>
+					<widget class="value_label" id="valu" alignment="left" auto_size="vertical" colour="fg" size="10.5">
+						<record id="object_property" get_property="Pdva" />
+					</widget>
+				</container>
+
+				<!-- WAGE -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<widget class="label" id="wglb" auto_size="vertical" style="semi_bold"  colour="fg" size="10.5">
+						<translation id="text"  type="use"   translation_id="242353" value="Wages" />
+					</widget>
+					<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="normal" colour="fg"/>
+				</container>			
+
+				<!-- SPACER... FOR NOW -->
+				<container />
+			</container>
+
+
+
+	
+</panel>

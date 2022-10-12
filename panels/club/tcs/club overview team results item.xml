@@ -1,0 +1,96 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-70" apply_to_children="true" transparency="0.4"/>
+		<widget class="stadium_picture" id="STAp" image_alignment="centre_ycentre_x" keep_aspect_ratio="true">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="bg" transparency="0.64"/>
+	</container>
+
+	<container class="plain_box" appearance="tcs/ro"/>
+
+	<container class="tcs_box" >
+		<layout class="vertical_arrange" vertical_alignment="middle"/>
+
+		<widget class="fixture_opponent_picture" id="oppi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+			<record id="object_property" get_property="fopP"/>
+		</widget>
+
+		<widget class="fixture_opponent_picture" id="oppi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="fopP"/>
+						<boolean id="dont_set_object" value="true"/>
+					</record>
+					<record>
+						<integer id="get_property" value="text"/>
+						<string id="set_property" value="hint"/>
+					</record>
+				</list>
+			</record>
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="vertical"/>
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="868"/>
+						<symbol id="set_property" value="height" />
+						<integer id="true_value" value="30" />
+					</record>
+					<record min_value="868" max_value="1260" true_value="50"/>
+					<record min_value="1260" max_value="9999" true_value="85"/>
+				</list>
+			</attachment>
+
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="2"/>
+
+			<record id="default_properties" spec="text" size="small" alignment="centre" auto_size="all" />
+
+	           <widget class="fixture_opponent_venue_text" style="semi_bold" size="small" alignment="centre" auto_size="vertical">
+                <record id="object_property" get_property="fOpV" />
+            </widget>
+
+			<!--opponent league position
+			<widget class="fixture_opponent_league_position_text" id="Ooml" >
+				<record id="object_property" get_property="Ooml" />
+			</widget> -->
+
+			<container>
+				<layout class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="8"/>
+
+				<widget class="fixture_result_icon" auto_size="all" wants_mouse_events="false">
+					<record id="object_property" get_property="FxRs"/>
+				</widget>
+
+				<widget class="fixture_full_result_text" spec="text" style="bold" alignment="centre" multiline="false" auto_size="all" format="[%scoreline#1-result_h_a_result]">
+					<record id="object_property" get_property="FxFR"/>
+				</widget>
+			</container>
+
+			<widget class="fixture_name_text" id="FxNm" alignment="centre_x,can_scale" auto_size="vertical" size="xxsmall">
+				<record id="object_property" get_property="FxNm" />
+			</widget>
+
+			<!--stadium
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<widget class="stadium_button" id="stad" auto_size="all" auto_size_restricted_to_parent_width="true" navigation_focus_target="false" icon_enabled="false" size="xxsmall"  multiline="true">
+					<layout class="centre_in_parent_attachment" alignment="all" />
+					<translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+					<record id="object_property" get_property="stad" />
+				</widget>
+			</container> -->
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,66 @@
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+    <string id="skin_style" value="title link" />
+
+    <!-- TRANSFER STATUS -->
+    <widget class="link_button" section="Ptin" auto_size="horizontal" >
+        <translation id="text" translation_id="227953" type="use"/>
+    </widget>
+
+    <widget class="text" id="agnL" size="small" font="text" auto_size="vertical" />
+    
+    <!-- Top panel with detailed contract info -->
+    <container id="cntI" height="80" navigation_container="true" default_focus="true">
+        <attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+        <container>
+            <attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+            <!-- Transfer Status -->
+            <container class="vertical_arrange_container" layout="15, 20" inset="0" offset="2" gap="2">
+                <widget class="label" font="label" auto_size="vertical">
+                    <translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+                </widget>
+
+                <container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+                    <widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" />
+                    <widget class="transfer_status_label" id="TSta" font="value" auto_size="vertical" size="small" />
+                </container>
+            </container>
+
+            <!-- Loan Status -->
+            <container class="vertical_arrange_container" id="lssT" layout="15, 20" inset="0" offset="2" gap="2">
+                <widget class="label" font="label" auto_size="vertical">
+                    <translation id="text" translation_id="247489" type="use" value="Loan Status" />
+                </widget>
+
+                <container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+                    <widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" />
+                    <widget class="loan_status_label" id="LSta" font="value" auto_size="vertical" size="small" multiline="true" alignment="left, centre_y" />
+                </container>
+            </container>
+        </container>
+
+        <container>
+            <attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+            <!-- Player value -->
+            <container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+                <widget class="label" font="label" auto_size="vertical">
+                    <translation id="text" translation_id="538841" type="use"/>
+                </widget>
+
+                <widget class="transfer_value_label" id="TrVa" font="value" size="small" auto_size="all" alignment="left, centre_y" allow_link_to_transfer_info="false" />
+            </container>
+
+            <!-- Player's guide value - displayed when human sets a specific value-->
+            <container class="vertical_arrange_container" id="GdVc" inset="0" offset="2" gap="2">
+                <widget class="label" font="label" auto_size="vertical">
+                    <translation id="text" translation_id="541768" type="use" value="Guide Value[COMMENT: AREA: Player Transfer Stauts; SUB-AREA: Transfer Information sup panel; FR-BN: 52771; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Heading for section to display the guide transfer value range of a player in the human team]" />
+                </widget>
+                <widget class="transfer_value_label" id="GdVa" font="value" size="small" auto_size="all" alignment="left, centre_y" />
+            </container>
+        </container>
+
+    </container>
+</panel>

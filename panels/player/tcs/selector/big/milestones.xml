@@ -1,0 +1,42 @@
+<panel save_session_state="true">
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Pfrm" auto_size="all">
+			<translation id="text" translation_id="435775" type="use" />
+		</widget>
+	</container>
+
+	<!-- We need to use a more compact version of the layout for each achievement item too -->
+	<string id="item_file" value="player/career milestone item small"/>
+	<string id="view" value="5"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_layout="-1,30," vertical_gap="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1, -4" />
+
+			<!-- Achievements filtered by selected clubs in left panel -->
+			<container class="main_box" navigation_container="true">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- List of achievements -->
+				<container class="scrolling_box" id="achl">
+					<container id="lndM">
+						<attachment_group class="vertical_arrange_autosize" vertical_inset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0" />
+					</container>
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+</panel>

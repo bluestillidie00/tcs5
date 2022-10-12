@@ -1,0 +1,144 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Pfrm" auto_size="all">
+			<translation id="text" translation_id="260816" type="use"/>
+		</widget>
+	</container>
+
+	<container >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+		<!-- Personal Information and Nationality information (tabbed) -->
+		<container class="tcs_tabs" id="mult" default_item="PerI" save_session_state="true">
+		
+			<widget class="person_personal_information_panel" file="player/player information nationalities" id="Nati" vertical="false">
+				<translation id="title" translation_id="333939" type="use" value="Nationalities[COMMENT: Player information; section title for a box displaying information about a player's nationality, elligibility and languages spoken]" />
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!-- Knowledge panel -->
+			<widget class="non_player_knowledge_panel" id="ckp2" file="human/non player human knowledge">
+				<translation id="title" translation_id="330425" type="use" value="Scouting Knowledge[COMMENT: Staff comparison type header]" />
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!-- Eligibility (Home-grown status) -->
+			<container id="elig" >
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+				<translation id="title" translation_id="260816" type="use" value="Eligibility[COMMENT: filter panel; a player eligibility for certain squads e.g. U21s]" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="4" vertical_inset="0" />
+
+					<!-- Nations -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="label" font="text" size="normal" auto_size="vertical">
+							<translation id="text" translation_id="363691" type="use" value="Nation trained in[COMMENT: player information; nation player trained at for purposes of domestic eligibility]" />
+						</widget>
+
+						<widget class="table" id="NaEl" layout="-1, -1, -1, 70, 16" mode="stripe_rows" fixed_size_rows="false" auto_size_rows="true" sort_disabled="true" auto_size="vertical">
+							<list id="column_table_properties">
+								<record index="0" default_width="90" minimum_width="90" auto_hide_priority="1">
+									<record id="widget_info" class="nation_button"/>
+								</record>
+								<record index="1" default_width="50" minimum_width="50" auto_hide_priority="2">
+									<record id="widget_info" class="horizontal_percentage_bar" label_width="0"/>
+								</record>
+								<record index="2" default_width="100" minimum_width="100" auto_hide_priority="1">
+									<record id="widget_info" class="text" alignment="centre"/>
+								</record>
+								<record index="3" default_width="65" minimum_width="65" auto_hide_priority="1">
+									<record id="widget_info" class="text" alignment="centre"/>
+								</record>
+								<record index="4" default_width="16" minimum_width="16" auto_hide_priority="1">
+									<record id="widget_info" class="info_icon_hint_text" icon_alignment="centre"/>
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<!-- Clubs -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="label" font="text" size="normal" auto_size="vertical">
+							<translation id="text" translation_id="363611" type="use" value="Club trained at[COMMENT: player information; nation player trained at for purposes of domestic eligibility]" />
+						</widget>
+
+						<widget class="table" id="ClEl" layout="-1, -1, -1, 70, 16" mode="stripe_rows" fixed_size_rows="false" auto_size_rows="true" sort_disabled="true" auto_size="vertical">
+							<list id="column_table_properties">
+								<record index="0" default_width="90" minimum_width="90" auto_hide_priority="1">
+									<record id="widget_info" class="club_button"/>
+								</record>
+								<record index="1" default_width="50" minimum_width="50" auto_hide_priority="2">
+									<record id="widget_info" class="horizontal_percentage_bar" label_width="0"/>
+								</record>
+								<record index="2" default_width="100" minimum_width="100" auto_hide_priority="1">
+									<record id="widget_info" class="text" alignment="centre"/>
+								</record>
+								<record index="3" default_width="65" minimum_width="65" auto_hide_priority="1">
+									<record id="widget_info" class="text" alignment="centre"/>
+								</record>
+								<record index="4" default_width="16" minimum_width="16" auto_hide_priority="1">
+									<record id="widget_info" class="info_icon_hint_text" icon_alignment="centre"/>
+								</record>
+							</list>
+						</widget>
+					</container>
+				</container>
+
+				<!-- Time to eligibility table -->
+				<widget class="table" id="elit" layout="141,140,100,12" mode="stripe_rows" fixed_size_rows="false" auto_size_rows="true" sort_disabled="true">
+					<list id="headings">
+						<translation id="text" translation_id="229390" type="use" value="Nation" />
+						<translation id="text" translation_id="395180" type="use" value="Days To Eligibility[COMMENT: Column heading; National team eligibility rules - days until eligible]" />
+						<translation id="text" translation_id="258282" type="use" value="Days Completed[COMMENT: Work Permit qualification rules]" />
+					</list>
+					<record id="default_properties" colour="selection" />
+					<list id="column_table_properties">
+						<record indx="0">
+							<record id="widget_info" class="nation_button" />
+						</record>
+						<record indx="3">
+							<record id="widget_info" class="info_icon_hint_text" icon_alignment="centre">
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="395202" type="use" value="Eligibility Rules[COMMENT: FR 11062; national team eligibility rules title]" />
+									<translation id="text" translation_id="395744" type="use" value="The player must live in the country for at least five years consecutively after the age of 18 before he is eligible for selection.[COMMENT: FR 11062; national team eligibility rules title, this is a standard worldwide rule for acquiring nationality so doesn't need variables...yet]" />
+								</record>
+							</record>
+						</record>
+					</list>
+				</widget>
+			</container>
+
+			<!-- Work Permit -->
+			<container class="scrolling_box" id="Work">
+				<translation id="title" translation_id="242863" type="use" value="Work Permit" />
+				<widget class="work_permit_panel" vertical="false">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

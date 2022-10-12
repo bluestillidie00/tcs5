@@ -1,0 +1,9 @@
+<properties version="1.0">
+
+	<colour name="tcs_bg" 																			value="rgb(28,32,48)"/>
+	<colour name="tcs_bg_lighter" 															value="rgb(40,45,57)"/>
+	
+	<colour name="divider" 																			value="fg"/>
+	
+	
+</properties>
