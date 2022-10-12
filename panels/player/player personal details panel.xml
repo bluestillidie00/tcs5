@@ -109,10 +109,10 @@
 			<container priority="1" class="tcs_box">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<container class="client_object_viewer_selector_panel" id="tcH1" file="player/player overview header selector panel" save_session_state="true">
-					<integer id="default_for_unemployed_managers" value="thPC"/>
-					<integer id="default_for_international_managers_other_team" value="thPC"/>
-					<integer id="default_for_everyone_else" value="thPC"/>
-					<integer id="default_for_versus_mode" value="thPC"/>
+					<integer id="default_for_unemployed_managers" value="tper"/>
+					<integer id="default_for_international_managers_other_team" value="tper"/>
+					<integer id="default_for_everyone_else" value="tper"/>
+					<integer id="default_for_versus_mode" value="tper"/>
 				</container>
 			</container>
 			
