@@ -2,31 +2,30 @@
 	<layout class="vertical_arrange" vertical_layout="200,-1" vertical_gap="8"/>
 
 	<!-- HEADER -->
-		<widget class="player_personal_details_panel" id="ppdp" navigation_container="true" height="80">
-			<record id="object_property" get_property="objt" set_property="objt"/>
-		</widget>
+	<widget class="player_personal_details_panel" id="ppdp" navigation_container="true" height="80">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
 	
-	<container>
-		<layout class="vertical_arrange" vertical_layout="-580,-170" vertical_gap="8"/>
+	<container class="vertical_adaptive_container" gap="8" id="top">
+		<!-- <layout class="vertical_arrange" vertical_layout="-580,-170" vertical_gap="8"/> -->
 
-		<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true" >
+		<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true" default_height="-555" priority="1">
 
 			<!-- OVERVIEW -->
-			<container id="over">
+			<container class="horizontal_adaptive_container" gap="8" id="over">
 				<translation id="title" translation_id="247414" type="use"/>
-				<layout class="horizontal_arrange" horizontal_layout="420,-1" horizontal_gap="8"  />
 
-				<container >
-					<layout class="vertical_arrange" vertical_layout="-10,-6" vertical_gap="8"/>
+				<!-- LEFT SIDE -->
+				<container class="vertical_adaptive_container" default_width="420" priority="2" gap="8">
 
-					<container class="tcs_box">
+					<!-- TOP -->
+					<container class="tcs_box" default_height="-10" priority="1">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<container class="client_object_viewer_selector_panel" id="csL1" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" >
-
+						<container class="client_object_viewer_selector_panel" id="csL1" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 							<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
 								<record id="object_property" get_property="objt" set_property="objt"/>
-								<translation id="title" translation_id="254774" type="use" />
+								<translation id="title" translation_id="254774" type="use"/>
 							</widget>
 							<integer id="default_for_unemployed_managers" value="tCSR"/>
 							<integer id="default_for_international_managers_other_team" value="tCSR"/>
@@ -35,10 +34,11 @@
 						</container>
 					</container>
 
-					<container class="tcs_box">
+					<!-- BOTTOM -->
+					<container class="tcs_box" default_height="-6" priority="2" minimum_height="160">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<container class="client_object_viewer_selector_panel" id="csL2" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" >
+						<container class="client_object_viewer_selector_panel" id="csL2" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 							<integer id="default_for_unemployed_managers" value="pscR"/>
 							<integer id="default_for_international_managers_other_team" value="pscR"/>
 							<integer id="default_for_everyone_else" value="pscR"/>
@@ -47,44 +47,48 @@
 					</container>
 				</container>
 
-				<container >
-					<layout class="horizontal_arrange" horizontal_layout="820,-1" horizontal_gap="8"  />
+				<!-- MIDDLE AND RIGHT -->
+				<container class="horizontal_adaptive_container" gap="8" id="mid" default_width="-1" minimum_width="650" priority="1">
 
-					<container>
-						<layout class="vertical_arrange" vertical_layout="360,-1" vertical_gap="8"/>
+					<!-- MIDDLE -->
+					<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
 
-						<!-- ATTRIBUTES -->				
-						<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true">
+						<!-- ATTRIBUTES -->
+						<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="360" priority="1">
 							<record id="object_property" get_property="objt" set_property="objt"/>
-							<translation id="title" translation_id="229822" type="use" value="Attributes" />
+							<translation id="title" translation_id="229822" type="use" value="Attributes"/>
 						</widget>
 
-						<container class="tcs_box">
+						<!-- BOTTOM -->
+						<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-							<container class="client_object_viewer_selector_panel" id="csb3" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true" >
+							<container class="client_object_viewer_selector_panel" id="csb3" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
 								<integer id="default_for_unemployed_managers" value="pfSm"/>
 								<integer id="default_for_international_managers_other_team" value="pfSm"/>
 								<integer id="default_for_everyone_else" value="pfSm"/>
 								<integer id="default_for_versus_mode" value="pfSm"/>
 								<widget class="player_form_panel" id="pfSm" late_loading="true" file="player/tcs/selector/big/form 20">
-									<translation id="title" value="Form (Last 20 Matches)" type="use" />
+									<translation id="title" value="Form (Last 20 Matches)" type="use"/>
+								</widget>
+								<widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
+									<translation id="title" translation_id="385617" type="use"/>
 								</widget>
 								<widget class="person_happiness_panel" file="player/tcs/selector/happiness" id="tpmr" late_loading="true" valid_for_other_team_managers="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false">
-									<translation id="title" type="use" translation_id="227840" />
+									<translation id="title" type="use" translation_id="227840"/>
 								</widget>
 							</container>
 						</container>
 
 					</container>
 
-					<container>
+					<container default_width="520" priority="2">
 						<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
 
-						<container class="tcs_box" >
+						<container class="tcs_box">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-							<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" >
+							<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 								<integer id="default_for_unemployed_managers" value="Ppos"/>
 								<integer id="default_for_international_managers_other_team" value="Ppos"/>
 								<integer id="default_for_everyone_else" value="Ppos"/>
@@ -95,7 +99,7 @@
 						<container class="tcs_box">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-							<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" >
+							<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 								<integer id="default_for_unemployed_managers" value="PrCo"/>
 								<integer id="default_for_international_managers_other_team" value="PrCo"/>
 								<integer id="default_for_everyone_else" value="PrCo"/>
@@ -110,7 +114,7 @@
 
 			<!-- ANALYSIS -->
 			<container id="data">
-				<translation id="title" translation_id="334959" type="use" />
+				<translation id="title" translation_id="334959" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,4,4,4"/>
 
 				<container class="tcs_box">
@@ -120,10 +124,10 @@
 						<record id="object_property" get_property="objt" set_property="objt"/>
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 						<widget class="data_hub_splashscreen" id="spls">
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 							<container class="main_box" id="dflt">
 								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
@@ -149,12 +153,12 @@
 			</container> -->
 
 								<container>
-									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 									<container class="scrolling_box">
-										<container class="horizontal_arrange_container" auto_size="vertical" wrap="true" gap="8" id="wcnt" />
+										<container class="horizontal_arrange_container" auto_size="vertical" wrap="true" gap="8" id="wcnt"/>
 									</container>
 									<widget id="noAn" class="text" hidden="true" alignment="centre" size="large" colour="faded text" style="semi_bold">
-										<translation id="text" translation_id="538899" type="use" value="No analytics have currently been requested[COMMENT: AREA: Data Hub; SUB-AREA: data hub Analytics ; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: warning when no analytics have been requested to show]" />
+										<translation id="text" translation_id="538899" type="use" value="No analytics have currently been requested[COMMENT: AREA: Data Hub; SUB-AREA: data hub Analytics ; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: warning when no analytics have been requested to show]"/>
 									</widget>
 								</container>
 							</container>
@@ -166,8 +170,8 @@
 			</container>
 
 			<!-- DISCUSSIONS -->
-			<container id="talk" >
-				<translation id="title" translation_id="509216" type="use" />
+			<container id="talk">
+				<translation id="title" translation_id="509216" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container id="phit" class="person_discussion_panel" file="none">
@@ -201,7 +205,7 @@
 										<attachment_group class="vertical_arrange_autosize"/>
 									</container>
 
-									<container class="plain_box" width="500" appearance="boxes/custom/quick chat/ai_quick_chat_speech"  alignment="left" red_replacement="bg darker">
+									<container class="plain_box" width="500" appearance="boxes/custom/quick chat/ai_quick_chat_speech" alignment="left" red_replacement="bg darker">
 										<attachment_group class="vertical_arrange_autosize"/>
 										<widget class="text" id="stQU" height="50" alignment="left, centre_y">
 										</widget>
@@ -211,7 +215,7 @@
 
 							<container class="scrolling_box">
 
-								<container class="plain_box" >
+								<container class="plain_box">
 									<attachment_group class="vertical_arrange_autosize"/>
 
 									<container class="plain_box" id="QCbo" appearance="boxes/inner/subtle/paper" colour="text" size="large" navigation_container="true">
@@ -229,9 +233,9 @@
 									</container>
 								</container>
 							</container>
-						</container>	
+						</container>
 
-						<container >
+						<container>
 							<attachment class="vertical_arrange" vertical_alignment="centre_x,middle"/>
 							<record id="object_property" get_property="PHcr" set_property="hidn"/>
 
@@ -268,11 +272,11 @@
 							<widget class="spacer" height="8"/>
 
 							<widget class="text" colour="faded text">
-								<translation id="text" translation_id="284138" type="use" value="No Training Information Available" />
+								<translation id="text" translation_id="284138" type="use" value="No Training Information Available"/>
 							</widget>
 
 							<widget class="player_extra_details_text" multiline="false">
-								<record id="object_property" get_property="PExD" />
+								<record id="object_property" get_property="PExD"/>
 							</widget>
 						</container>
 					</container>
@@ -280,52 +284,52 @@
 			</container>
 
 			<!-- FORM -->
-			<container id="Form" >
-				<translation id="title" translation_id="344664" type="use" />
+			<container id="Form">
+				<translation id="title" translation_id="344664" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container id="Pfom" class="player_form_panel" file="none">
 					<record id="object_property" get_property="Pers"/>
-					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 					<!-- Stuff to show when there is no form -->
 					<container id="nofm" hidden="true" navigation_container="true" default_focus="true" navigation_container_allow_empty="true">
 
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
 						<!--explanatory text for no form being available-->
 						<widget class="text" id="nost" spec="text" size="large" alignment="centre" hidden="true">
-							<translation id="text" translation_id="342459" type="use" value="Player form information is currently unavailable for this player. Add him to a shortlist to track his form.[COMMENT: Player form; Text displayed when form data is not available. Instructs the user on how to generate the data]" />
+							<translation id="text" translation_id="342459" type="use" value="Player form information is currently unavailable for this player. Add him to a shortlist to track his form.[COMMENT: Player form; Text displayed when form data is not available. Instructs the user on how to generate the data]"/>
 						</widget>
 						<widget class="text" id="nodt" spec="text" size="large" alignment="centre" hidden="true">
-							<translation id="text" translation_id="342781" type="use" value="This player's form is being tracked by the backroom team but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]" />
+							<translation id="text" translation_id="342781" type="use" value="This player's form is being tracked by the backroom team but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]"/>
 						</widget>
 						<widget class="text" id="nobt" spec="text" size="large" alignment="centre" hidden="true">
-							<translation id="text" translation_id="382400" type="use" value="This player's form is being tracked but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]" />
+							<translation id="text" translation_id="382400" type="use" value="This player's form is being tracked but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]"/>
 						</widget>
 					</container>
 
 					<container class="tcs_box">
-						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
-						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
 						<!-- Actual data panel -->
 						<container class="main_box" id="titl" navigation_container="true">
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 							<!--This box contains the two popups-->
 							<container embed_in_frame="true">
 								<attachment_group class="title_embedded_panel_right" horizontal_offset="0" vertical_inset="0"/>
 
 								<container class="embedded_popup_button" id="ptea" auto_tick_exclusive="true" embed_in_frame="true" save_session_state="true" fixed="false" auto_size="vertical">
-									<translation id="text" translation_id="243480" type="use" value="Team[COMMENT - team menu text for player form section]" />
-									<flags id="appearance" value="buttons/subtle/normal/button" />
-									<flags id="auto_size" value="all" />
+									<translation id="text" translation_id="243480" type="use" value="Team[COMMENT - team menu text for player form section]"/>
+									<flags id="appearance" value="buttons/subtle/normal/button"/>
+									<flags id="auto_size" value="all"/>
 								</container>
 
 								<container class="embedded_popup_button" id="pcom" auto_tick_exclusive="true" embed_in_frame="true" save_session_state="true" fixed="false" auto_size="vertical">
-									<translation id="text" translation_id="243481" type="use" value="Competition[COMMENT - competition menu text for player form section]" />
-									<flags id="appearance" value="buttons/subtle/normal/button" />
-									<flags id="auto_size" value="all" />
+									<translation id="text" translation_id="243481" type="use" value="Competition[COMMENT - competition menu text for player form section]"/>
+									<flags id="appearance" value="buttons/subtle/normal/button"/>
+									<flags id="auto_size" value="all"/>
 								</container>
 							</container>
 
@@ -333,14 +337,14 @@
 								<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0">
 									<global id="gap" name="ui.main_contrast_box_gap"/>
 								</layout>
-								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
 								<!-- group box containing graph and summary-->
-								<widget class="player_form_summary_panel" id="pfSm" height="220" />
+								<widget class="player_form_summary_panel" id="pfSm" height="220"/>
 
 								<container class="inner_box" force_title_borders="true" navigation_container="true">
-									<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
-									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+									<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
 
 									<!-- buttons area -->
@@ -348,19 +352,19 @@
 										<attachment_group class="title_embedded_panel_left" horizontal_offset="0" vertical_inset="2"/>
 
 
-										<widget class="view_menu_label" id="TitL" >
-											<translation id="text" translation_id="257238" type="use" value="Matches" />
+										<widget class="view_menu_label" id="TitL">
+											<translation id="text" translation_id="257238" type="use" value="Matches"/>
 										</widget>
 										<widget class="view_menu_popup" id="visc" sele="stsc" save_session_state="true" save_default_state="true">
 											<list id="items">
 												<record id="Mfrm">
-													<translation id="name" translation_id="337915" type="use" value="Form[COMMENT: player form; title of a view displaying per match statistics about a player's performance]" />
+													<translation id="name" translation_id="337915" type="use" value="Form[COMMENT: player form; title of a view displaying per match statistics about a player's performance]"/>
 												</record>
 												<record id="Mfee">
-													<translation id="name" translation_id="337896" type="use" value="Feedback[COMMENT: player form; title of a view displaying comments made by the assistant manager after matches]" />
+													<translation id="name" translation_id="337896" type="use" value="Feedback[COMMENT: player form; title of a view displaying comments made by the assistant manager after matches]"/>
 												</record>
 											</list>
-											<flags id="slct" value="Mfrm" />
+											<flags id="slct" value="Mfrm"/>
 										</widget>
 									</container>
 
@@ -369,43 +373,43 @@
 
 										<list id="headings">
 											<record>
-												<translation id="text" translation_id="451565" type="use" value="#[COMMENT: character used to denote a number, used as a header on the match form screen where ID 339772 is used as the title; use the appropriate character for your locale as per bug 165978]" />
-												<translation id="hint" translation_id="339772" type="use" value="Match form details[COMMENT: Hint text for table column showing the match form number]" />
+												<translation id="text" translation_id="451565" type="use" value="#[COMMENT: character used to denote a number, used as a header on the match form screen where ID 339772 is used as the title; use the appropriate character for your locale as per bug 165978]"/>
+												<translation id="hint" translation_id="339772" type="use" value="Match form details[COMMENT: Hint text for table column showing the match form number]"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="230120" type="use" value="Date" />
-												<translation id="hint" translation_id="242658" type="use" value="Match Date" />
+												<translation id="text" translation_id="230120" type="use" value="Date"/>
+												<translation id="hint" translation_id="242658" type="use" value="Match Date"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="242659" type="use" value="C.[COMMENT - cards]" />
-												<translation id="hint" translation_id="232993" type="use" value="Cards" />
+												<translation id="text" translation_id="242659" type="use" value="C.[COMMENT - cards]"/>
+												<translation id="hint" translation_id="232993" type="use" value="Cards"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="242883" type="use" value="Pos" />
-												<translation id="hint" translation_id="319547" type="use" value="Position played in match[COMMENT: column hint text]" />
+												<translation id="text" translation_id="242883" type="use" value="Pos"/>
+												<translation id="hint" translation_id="319547" type="use" value="Position played in match[COMMENT: column hint text]"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]" />
-												<translation id="hint" translation_id="412465" type="use" value="Role played in match[COMMENT: column hint text]" />
+												<translation id="text" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]"/>
+												<translation id="hint" translation_id="412465" type="use" value="Role played in match[COMMENT: column hint text]"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="242660" type="use" value="Opposition" />
+												<translation id="text" translation_id="242660" type="use" value="Opposition"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="232992" type="use" value="Inf." />
-												<translation id="hint" translation_id="232994" type="use" value="Info" />
+												<translation id="text" translation_id="232992" type="use" value="Inf."/>
+												<translation id="hint" translation_id="232994" type="use" value="Info"/>
 											</record>
 										</list>
 
 										<list id="column_widget_properties">
-											<record indx="0" alignment="left,centre_y" />
-											<record indx="1" alignment="left,centre_y" />
+											<record indx="0" alignment="left,centre_y"/>
+											<record indx="1" alignment="left,centre_y"/>
 											<record indx="3" alignment="left,centre_y" navigation_focus_target="false"/>
-											<record indx="4" alignment="left,centre_y" />
-											<record indx="5" alignment="left,centre_y" />
+											<record indx="4" alignment="left,centre_y"/>
+											<record indx="5" alignment="left,centre_y"/>
 										</list>
 
-										<record id="default_properties" alignment="centre" />
+										<record id="default_properties" alignment="centre"/>
 									</widget>
 
 									<!-- Player match feedback-->
@@ -413,16 +417,16 @@
 
 										<list id="headings">
 											<record>
-												<translation id="text" translation_id="319504" type="use" value="Opponent[COMMENT: player match feedback history; panel header text above a list of opponents]" />
+												<translation id="text" translation_id="319504" type="use" value="Opponent[COMMENT: player match feedback history; panel header text above a list of opponents]"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="319505" type="use" value="Date[COMMENT: stage type for menu]" />
+												<translation id="text" translation_id="319505" type="use" value="Date[COMMENT: stage type for menu]"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="247233" type="use" value="Venue" />
+												<translation id="text" translation_id="247233" type="use" value="Venue"/>
 											</record>
 											<record>
-												<translation id="text" translation_id="319506" type="use" value="Assistant's Comment[COMMENT: match team talk; text preceding the assistant manager's advice on what to say in the team talk]" />
+												<translation id="text" translation_id="319506" type="use" value="Assistant's Comment[COMMENT: match team talk; text preceding the assistant manager's advice on what to say in the team talk]"/>
 											</record>
 										</list>
 									</widget>
@@ -435,8 +439,8 @@
 			</container>
 
 			<!-- HAPPINESS -->
-			<container id="smile" >
-				<translation id="title" translation_id="309189" type="use" />
+			<container id="smile">
+				<translation id="title" translation_id="309189" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container id="Prel" class="person_chemistry_relationship_panel" file="player/tcs/happiness">
@@ -445,30 +449,30 @@
 			</container>
 
 			<!-- Player History -->
-			<container id="hist" >
-				<translation id="title" translation_id="513602" type="use" />
+			<container id="hist">
+				<translation id="title" translation_id="513602" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container class="client_object_viewer_selector_panel" file="none">
 					<record id="object_property" get_property="Pers"/>
-					<layout class="horizontal_arrange" horizontal_layout="1260,-1" horizontal_gap="8"  />
+					<layout class="horizontal_arrange" horizontal_layout="1260,-1" horizontal_gap="8"/>
 
 					<!-- CAREER STATS -->
 					<container class="tcs_box">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<container id="PHst" class="player_history_stats_panel" >
+						<container id="PHst" class="player_history_stats_panel">
 							<record id="object_property" get_property="Pers"/>
 						</container>
 					</container>
 
 					<container>
-						<layout class="vertical_arrange" vertical_layout="-17,-15" vertical_gap="8" />
+						<layout class="vertical_arrange" vertical_layout="-17,-15" vertical_gap="8"/>
 
 						<container class="tcs_box">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 							<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
-								<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
+								<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]"/>
 								<record id="object_property" get_property="Pers"/>
 							</widget>
 
@@ -478,7 +482,7 @@
 						<container class="tcs_box">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 							<!-- BIOGRAPHY -->
-							<widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title" >
+							<widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title">
 								<translation id="title" translation_id="295868" type="use"/>
 								<record id="object_property" get_property="Pers"/>
 
@@ -501,9 +505,9 @@
 					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
 
 					<container>
-						<layout class="horizontal_arrange" horizontal_layout="420,-1" horizontal_gap="8"  />
+						<layout class="horizontal_arrange" horizontal_layout="420,-1" horizontal_gap="8"/>
 						<!-- LEFT SIDED CONTAINERS -->
-						<container >
+						<container>
 							<layout class="vertical_arrange" vertical_layout="-10,-6" vertical_gap="8"/>
 
 							<!-- TOP -->
@@ -518,43 +522,43 @@
 							<container class="tcs_box">
 								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-								<widget class="client_object_viewer_xml_panel" file="none" >
+								<widget class="client_object_viewer_xml_panel" file="none">
 									<record id="object_property" get_property="objt" set_property="objt"/>
 									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 									<widget class="progress_graph_panel" file="none">
 										<record id="object_property">
 											<list id="get_properties">
 												<record>
-													<integer id="get_property" value="PpAH" />
-													<integer id="set_property" value="value" />
+													<integer id="get_property" value="PpAH"/>
+													<integer id="set_property" value="value"/>
 												</record>
 											</list>
 										</record>
 
-										<layout class="stick_to_sides_attachment" alignment="all" inset="5,5" apply_to_children="true" />
+										<layout class="stick_to_sides_attachment" alignment="all" inset="5,5" apply_to_children="true"/>
 
-										<container >
-											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+										<container>
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
 											<container height="15">
-												<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+												<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true"/>
 
-												<string id="skin_style" value="title link" />
+												<string id="skin_style" value="title link"/>
 
 												<!-- Linked header -->
 												<widget class="link_button" id="scBt" auto_size="horizontal">
-													<translation id="text" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
+													<translation id="text" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/>
 												</widget>
 											</container>
 
-											<widget class="graph" id="grap" >
+											<widget class="graph" id="grap">
 
-												<record id="default_series_properties" colour="accent" type="line" line_width="2" />
-												<record id="instant_hint" file="generic/graph instant hint star rating" />
+												<record id="default_series_properties" colour="accent" type="line" line_width="2"/>
+												<record id="instant_hint" file="generic/graph instant hint star rating"/>
 												<record id="x_axis" hide_title="true" consistent_label_width="true" gap="3">
 													<record id="label_font" font="title"/>
 												</record>
-												<record id="y_axis" interval="2"  show_labels="false" >
+												<record id="y_axis" interval="2" show_labels="false">
 													<translation id="title" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]"/>
 													<translation id="hint" translation_id="257318" type="use" value="Assistant manager's opinion of this player's current ability[COMMENT - person list view column heading hint]"/>
 												</record>
@@ -565,11 +569,11 @@
 												</list>
 											</widget>
 											<widget class="text" id="nprg" colour="faded white" alignment="centre" hidden="true">
-												<translation id="text" translation_id="242522" type="use" value="N/A" />
+												<translation id="text" translation_id="242522" type="use" value="N/A"/>
 											</widget>
 										</container>
 
-									</widget>	
+									</widget>
 								</widget>
 
 							</container>
@@ -577,8 +581,8 @@
 						</container>
 
 						<!-- MIDDLE AND RIGHT CONTAINER -->
-						<container >
-							<layout class="horizontal_arrange" horizontal_layout="820,-1" horizontal_gap="8"  />
+						<container>
+							<layout class="horizontal_arrange" horizontal_layout="820,-1" horizontal_gap="8"/>
 
 							<!-- MIDDLE -->
 							<container>
@@ -590,7 +594,7 @@
 
 									<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true">
 										<record id="object_property" get_property="objt" set_property="objt"/>
-										<translation id="title" translation_id="229822" type="use" value="Attributes" />
+										<translation id="title" translation_id="229822" type="use" value="Attributes"/>
 									</widget>
 								</container>
 
@@ -604,37 +608,37 @@
 										</attachment_group>
 
 										<container class="main_box">
-											<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+											<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
-											<container  navigation_container="true">
-												<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+											<container navigation_container="true">
+												<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
-												<container >
-													<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
-													<layout class="arrange_horizontal_attachment" layout="70,-1" gap="0" offset="0" />
-													<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+												<container>
+													<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+													<layout class="arrange_horizontal_attachment" layout="70,-1" gap="0" offset="0"/>
+													<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
 
-													<widget class="object_portrait_picture" id="cpic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="70" />
+													<widget class="object_portrait_picture" id="cpic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="70"/>
 
 													<container class="title_link_box" id="TrRp" hide_view_menu="true">
-														<translation id="link_title" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
+														<translation id="link_title" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]"/>
 														<string id="section" value="Pgrg"/>
-														<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
-														<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
-														<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+														<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+														<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+														<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
-														<widget class="popup_button" id="vcoa" auto_tick_exclusive="true" auto_size="vertical" select_event="view" save_session_state="true" />
+														<widget class="popup_button" id="vcoa" auto_tick_exclusive="true" auto_size="vertical" select_event="view" save_session_state="true"/>
 													</container>
 												</container>
 
 												<widget class="table" id="trtb" layout="20,-1" auto_size_rows="true" fixed_size_rows="false">
 													<list id="column_table_properties">
 														<record id="bull">
-															<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" />
-															<integer id="top" value="2" />
+															<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text"/>
+															<integer id="top" value="2"/>
 														</record>
 														<record id="text">
-															<record id="widget_info" class="text" auto_size="vertical" />
+															<record id="widget_info" class="text" auto_size="vertical"/>
 														</record>
 													</list>
 												</widget>
@@ -643,16 +647,16 @@
 										</container>
 
 										<container class="title_link_box" id="MeRp" hide_view_menu="true" navigation_container="true">
-											<translation id="link_title" translation_id="447586" type="use" value="Medical Report[COMMENT: Panel title for when viewing medical report]" />
+											<translation id="link_title" translation_id="447586" type="use" value="Medical Report[COMMENT: Panel title for when viewing medical report]"/>
 											<string id="section" value="PInj"/>
-											<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+											<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 											<container class="player_injury_panel" file="none">
-												<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
-												<record id="object_property" get_property="objt" set_property="objt" />
+												<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+												<record id="object_property" get_property="objt" set_property="objt"/>
 
 												<container>
-													<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3" horizontal_offset="0"  vertical_inset="0" />
+													<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3" horizontal_offset="0" vertical_inset="0"/>
 
 													<container>
 														<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
@@ -661,27 +665,27 @@
 															<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 															<widget class="label" auto_size="vertical" font="label">
 																<record id="object_property">
-																	<integer id="get_property" value="PcOI" />
+																	<integer id="get_property" value="PcOI"/>
 																	<boolean id="name" value="true"/>
 																</record>
 															</widget>
 
 															<widget class="client_object_property_panel" property="PcOI" height="25">
-																<record id="object_property" get_property="objt" set_property="objt" />
+																<record id="object_property" get_property="objt" set_property="objt"/>
 															</widget>
 														</container>
 
-														<container >
+														<container>
 															<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 															<widget class="label" auto_size="vertical" font="label">
 																<record id="object_property">
-																	<integer id="get_property" value="PftI" />
+																	<integer id="get_property" value="PftI"/>
 																	<boolean id="name" value="true"/>
 																</record>
 															</widget>
 
 															<widget class="client_object_property_panel" property="PftI" height="25">
-																<record id="object_property" get_property="objt" set_property="objt" />
+																<record id="object_property" get_property="objt" set_property="objt"/>
 															</widget>
 														</container>
 													</container>
@@ -690,13 +694,13 @@
 													<container class="main_box_no_margin" id="OAct" red_replacement="injury_body_colour_injured">
 														<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 
-														<widget class="text" id="OAtl" font="label" height="15" />
-														<widget class="label" id="OAnm" size="large" style="bold" auto_size="vertical" />
+														<widget class="text" id="OAtl" font="label" height="15"/>
+														<widget class="label" id="OAnm" size="large" style="bold" auto_size="vertical"/>
 													</container>
 												</container>
 
 												<container class="scrolling_box" id="Scbx">
-													<widget class="text" id="AsQt" auto_size="vertical" />
+													<widget class="text" id="AsQt" auto_size="vertical"/>
 												</container>
 											</container>
 										</container>
@@ -710,7 +714,7 @@
 								<container class="tcs_box">
 									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-									<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" >
+									<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 										<integer id="default_for_unemployed_managers" value="phb1"/>
 										<integer id="default_for_international_managers_other_team" value="phb1"/>
 										<integer id="default_for_everyone_else" value="phb1"/>
@@ -721,7 +725,7 @@
 								<container class="tcs_box">
 									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-									<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" >
+									<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 										<integer id="default_for_unemployed_managers" value="phb1"/>
 										<integer id="default_for_international_managers_other_team" value="phb1"/>
 										<integer id="default_for_everyone_else" value="phb1"/>
@@ -736,7 +740,7 @@
 				</container>
 
 				<!-- IF NOT A HUMAN TEAMS PLAYER. CREDIT TO FME -->
-				<container >
+				<container>
 					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,4,4,4"/>
 
 					<container class="tcs_box">
@@ -776,19 +780,19 @@
 						<widget class="spacer" height="8"/>
 
 						<widget class="text" colour="faded text">
-							<translation id="text" translation_id="284138" type="use" value="No Training Information Available" />
+							<translation id="text" translation_id="284138" type="use" value="No Training Information Available"/>
 						</widget>
 
 						<widget class="player_extra_details_text" multiline="false">
-							<record id="object_property" get_property="PExD" />
+							<record id="object_property" get_property="PExD"/>
 						</widget>
 					</container>
 				</container>
 			</container>
 
 			<!-- NOTEBOOK -->
-			<container id="note" >
-				<translation id="title" translation_id="242775" type="use" />
+			<container id="note">
+				<translation id="title" translation_id="242775" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container id="Pnot" class="filterable_notes_panel">
@@ -798,13 +802,14 @@
 		</container>
 
 		<!-- BOTTOM SECTION -->
-		<container draw_vertical_dividers="true">
+		<container draw_vertical_dividers="true" default_height="-160" priority="1" minimum_height="160">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="16"/>
 
 			<!-- Season stats-->
-			<container width="650" priority="2" default_width="-2"  navigation_container="true" >
+			<container width="650" priority="2" default_width="-2" navigation_container="true">
 				<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 				<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
 					<record id="object_property">
@@ -829,10 +834,10 @@
 				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="16"/>
 
 				<!-- <container class="tcs_box"> -->
-				<container >
+				<container>
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-					<container class="client_object_viewer_selector_panel" id="csb1" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true" >
+					<container class="client_object_viewer_selector_panel" id="csb1" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
 						<integer id="default_for_unemployed_managers" value="Pcrs"/>
 						<integer id="default_for_international_managers_other_team" value="Pcrs"/>
 						<integer id="default_for_everyone_else" value="Pcrs"/>
@@ -841,9 +846,9 @@
 				</container>
 
 				<!-- <container class="tcs_box"> -->
-				<container >
+				<container>
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-					<container class="client_object_viewer_selector_panel" id="csb2" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true" >
+					<container class="client_object_viewer_selector_panel" id="csb2" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
 						<integer id="default_for_unemployed_managers" value="Pcrs"/>
 						<integer id="default_for_international_managers_other_team" value="Pcrs"/>
 						<integer id="default_for_everyone_else" value="Pcrs"/>
