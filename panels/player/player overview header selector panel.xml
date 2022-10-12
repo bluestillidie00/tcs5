@@ -4,7 +4,7 @@
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 	</container>
 	<widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="tcs/buttons/header/button" fixed="true">
-		<layout class="stick_to_sides_attachment" alignment="top,right" inset="8"/>
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="4,6"/>
 	</widget>
 
 	<!-- ATTRIBUTE ANALYSER -->

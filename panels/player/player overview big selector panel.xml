@@ -5,7 +5,7 @@
   </container>
 
   <widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true" navigation_focus_target="true">
-    <layout class="stick_to_sides_attachment" alignment="right,top" inset="6"/>
+    <layout class="stick_to_sides_attachment" alignment="right,top" inset="2"/>
 
     <!-- This is a bit clumsy but I can't think of a better way without using equally clumsy code -->
     <!-- Animation to 'hide' the widget by drawing it out of the clipping area -->
