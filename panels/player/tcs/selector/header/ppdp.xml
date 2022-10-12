@@ -2,7 +2,7 @@
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 	<!-- PERSONAL DETAILS -->
-	<container class="tcs_box" priority="1">
+	<container priority="1">
 		<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
 
 		<container class="tcs_table">
@@ -73,7 +73,7 @@
 			</container>
 		</container>
 
-		<container class="tcs_table_trans">
+		<container class="tcs_table">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
 			<!-- PERSONALITY -->
@@ -104,7 +104,7 @@
 			</container>
 		</container>
 
-		<container>
+		<container class="tcs_table_trans">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
 			<!--  PLAYING TIME -->
