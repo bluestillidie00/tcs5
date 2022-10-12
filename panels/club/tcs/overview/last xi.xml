@@ -1,0 +1,18 @@
+﻿<panel should_force_refresh="true" >
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<!-- <widget class="link_button"  auto_size="vertical" alignment="top,centre_x" appearance="tcs/buttons/selector/no link/button" red_replacement="primary" style="bold" colour="secondary">
+		<translation id="text" type="use" translation_id="344103" value="LAST XI" />
+	</widget> -->
+
+	<widget class="pitch_with_tactics" id="pwtc" priority="1" icon_flags="show_name,show_extra_details,show_number,dont_show_team_names,drop_initial_if_possible,show_preview_info_popup" player_icon_file="tactics/tactics icon match confidence previous lineup" pitch_draw_markings="true" line_width="2.2" pitch_line_colour="fg" alignment="centre,can_scale" minimum_height="300" default_height="-3">
+		<boolean id="vertical" value="true" />
+		<boolean id="pitch_dont_draw_indicators" value="true" />
+		<integer id="pitch_touchline_width_percentage" value="30" />
+		<integer id="pitch_vertical_padding" value="30" />
+		<string id="pitch_draw_grass" value="false" />
+		<string id="pitch_draw_goals" value="true" />
+		<string id="pitch_pattern" value="ui_circles" />
+		<integer id="pitch_alignment" value="centre_x,centre_y" />									
+	</widget>
+</panel>

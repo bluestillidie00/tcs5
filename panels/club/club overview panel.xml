@@ -10,9 +10,9 @@
 		</widget>
 
 		<!-- KITS -->
-		<container width="550" >
+		<container width="550">
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-			<translation id="title" translation_id="" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]" />
+			<translation id="title" translation_id="" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]"/>
 
 			<widget class="club_overview_kits_panel" id="cloK" file="none">
 				<record id="object_property" get_property="objt" set_property="objt"/>
@@ -21,37 +21,37 @@
 
 				<record id="default_properties" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
 					<record id="object_property">
-						<integer id="get_property" value="Tidx" />
-						<integer id="set_property" value="indx" />
+						<integer id="get_property" value="Tidx"/>
+						<integer id="set_property" value="indx"/>
 					</record>
 				</record>
 
 				<container class="tcs_box" id="T_hk">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-					<widget class="kit_picture" id="T_hk" kit_id="0"  scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true" >
+					<widget class="kit_picture" id="T_hk" kit_id="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
 						<record id="object_property">
-							<integer id="get_property" value="Tidx" />
-							<integer id="set_property" value="indx" />
+							<integer id="get_property" value="Tidx"/>
+							<integer id="set_property" value="indx"/>
 						</record>
 					</widget>
 				</container>
 
 				<container class="tcs_box" id="T_ak">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-					<widget class="kit_picture" id="T_ak" kit_id="1"  scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true" >
+					<widget class="kit_picture" id="T_ak" kit_id="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
 						<record id="object_property">
-							<integer id="get_property" value="Tidx" />
-							<integer id="set_property" value="indx" />
+							<integer id="get_property" value="Tidx"/>
+							<integer id="set_property" value="indx"/>
 						</record>
 					</widget>
 				</container>
 
 				<container class="tcs_box" id="T_tk">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-					<widget class="kit_picture" id="T_tk" kit_id="2"  scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true" >
+					<widget class="kit_picture" id="T_tk" kit_id="2" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
 						<record id="object_property">
-							<integer id="get_property" value="Tidx" />
-							<integer id="set_property" value="indx" />
+							<integer id="get_property" value="Tidx"/>
+							<integer id="set_property" value="indx"/>
 						</record>
 					</widget>
 				</container>
@@ -62,11 +62,11 @@
 
 	<!-- BOTTOM -->
 	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-560,-600,-560"  />
+		<layout class="horizontal_arrange" horizontal_layout="-560,-600,-560"/>
 
 		<!-- LEAGUE TABLE AND RESULTS -->
-		<container >
-			<layout class="vertical_arrange" vertical_layout="-3,-6" vertical_gap="4" />
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-3,-6" vertical_gap="4"/>
 
 			<!-- RESULTS AND FIXTURES -->
 			<container class="vertical_arrange_container" alignment="fill" gap="4">
@@ -102,7 +102,7 @@
 
 						<!-- Past positions -->
 						<widget class="label" auto_size="vertical" size="small" row="0" col="0">
-							<translation id="text" translation_id="232109" type="use" value="League Positions" />
+							<translation id="text" translation_id="232109" type="use" value="League Positions"/>
 						</widget>
 
 						<!-- League Table -->
@@ -136,16 +136,16 @@
 
 								<widget class="competition_stage_panel" file="none">
 									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-									<record id="object_property" get_property="objt" set_property="objt" />
-									<boolean id="overview_version" value="true" />
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<boolean id="overview_version" value="true"/>
 
 									<widget class="league_past_positions_panel">
-										<record id="object_property" get_property="objt" set_property="objt" />
+										<record id="object_property" get_property="objt" set_property="objt"/>
 									</widget>
 
 									<!-- group box which extends to include all other areas -->
 									<container>
-										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 										<!-- the group box that is the main container for the competition stage panel this container holds whatever league or cup panel we need to create -->
 										<container class="inner_box" id="stse" force_title_borders="false">
@@ -154,7 +154,7 @@
 											<container embed_in_frame="true">
 												<attachment_group class="title_embedded_panel_left" horizontal_offset="4"/>
 												<widget class="link_button_title" section="cssp" id="labl" embed_in_frame="true">
-													<translation id="text" translation_id="247175" type="use" value="Stages" />
+													<translation id="text" translation_id="247175" type="use" value="Stages"/>
 												</widget>
 												<!-- the stages menu: visible if more than one stage/substage -->
 												<widget class="view_menu_popup" id="stpb" sele="acsm" auto_tick_exclusive="true" save_session_state="true" embed_in_frame="true" auto_size="horizontal" show_button_appearance="false">
@@ -166,11 +166,11 @@
 
 											<!-- No game panel-->
 											<container id="nots" hidden="true">
-												<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
-												<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
-												<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-												<widget class="spacer" height="10" />
-												<widget class="text" id="nost" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical" />
+												<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+												<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+												<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+												<widget class="spacer" height="10"/>
+												<widget class="text" id="nost" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical"/>
 											</container>
 
 											<!-- group box for stage to go into -->
@@ -184,16 +184,16 @@
 													<!--league stage panel-->
 													<widget class="league_stage_panel" id="lspn" hidden="true" view="ovrC" league_table_heading_length="0"/>
 													<!--cup stage_panel-->
-													<widget class="cup_stage_panel" file="competition/cup overview stage" id="cstp" hidden="true" save_session_state="true" />
+													<widget class="cup_stage_panel" file="competition/cup overview stage" id="cstp" hidden="true" save_session_state="true"/>
 													<!--group stage scrolling box (to be filled in code)-->
 													<widget class="scrolling_box" id="gscb" hidden="true" save_session_state="true" navigation_container="true"/>
 												</container>
 											</container>
 
 											<container>
-												<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+												<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 												<!-- The exceptions so point deductions in the league etc-->
-												<widget class="table" layout="-1" id="exta" auto_size="vertical" auto_size_rows="true" row_spacing="2" hidden="true" mode="fill_rows" />
+												<widget class="table" layout="-1" id="exta" auto_size="vertical" auto_size_rows="true" row_spacing="2" hidden="true" mode="fill_rows"/>
 											</container>
 										</container>
 									</container>
@@ -203,20 +203,81 @@
 					</container>
 				</container>
 			</container>
-		</container>		
+		</container>
 
-		<!-- MIDDLE -->		
-		<container />
+		<!-- MIDDLE -->
+	<container class="tcs_tabs" id="tclub" default_height="-1" priority="1" default_item="co01" save_default_state="true" save_session_state="true">
+
+			<container id="co01" icon="icons/16px/info">
+				<translation id="title" translation_id="243486" type="use" value="Info" />
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="tcs_box" >
+					<layout class="vertical_arrange" vertical_layout="-1,185" vertical_gap="8"/>
+
+					<widget class="club_overview_details_panel" id="clod" file="club/tcs/tcs22v2/clod">
+						<record id="object_property" get_property="objt" set_property="objt"/>				
+					</widget>
+
+					<!-- HONOURS -->
+					<widget class="team_container_honours_panel" id="hons" file="club/tcs/tcs22v2/honours">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+				</container>
+			</container>
+
+			<container id="co02" icon="icons/16px/tactics">
+				<translation id="title" type="use" value="Last XI" />
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="plain_box" appearance="FME/tabbed pane/subtle/paper">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container class="team_container_information_overview_panel" id="csio" file="club/last xi"  >
+						<translation id="title" type="use" value="Last XI" />
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+
+				</container>
+			</container>
+
+			<container id="co03" icon="tcs/icons/club/Hof">
+				<translation id="title" translation_id="247122" type="use" value="Hall of Fame" />
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="plain_box" appearance="FME/tabbed pane/subtle/paper">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container class="team_container_information_overview_panel" id="csio"  file="club/tcs/tcs22v2/hall of fame">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				</container>
+			</container>
+
+			<container id="co04" icon="icons/26px/development">
+				<translation id="title"  type="use" value="Loans" />
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="plain_box" appearance="FME/tabbed pane/subtle/paper">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container class="players_on_loan_panel" file="club/tcs/tcs22v2/loans">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				</container>
+			</container>
+		</container>
 
 		<!-- RIGHT -->
-		<container >
+		<container>
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<container class="tcs_tabs" id="tsta" default_height="-1" priority="1" default_item="st01" save_default_state="true" save_session_state="true">
 
 				<!-- KEY EMPLOYEES -->
 				<container id="st01">
-					<translation id="title" translation_id="257300" type="use" />
+					<translation id="title" translation_id="257300" type="use"/>
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 					<container class="tcs_box">
@@ -228,15 +289,31 @@
 							<record id="object_property" get_property="objt" set_property="objt"/>
 
 							<!--snapshot selector 1-->
-							<container class="client_object_viewer_selector_panel" file="club/staff selector panel" id="cos1" priority="1" default_widget="pssp"  late_loading="true"/>
+							<container class="client_object_viewer_selector_panel" file="club/staff selector panel" id="cos1" priority="1" default_widget="pssp" late_loading="true"/>
 
+						</container>
+					</container>
+				</container>			
+
+				<!-- LAST XI -->
+				<container id="st03">
+					<translation id="title" translation_id="344103" type="use"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="tcs_box">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<!-- BOTTOM SELECTOR -->
+						<container class="team_container_information_overview_panel" id="csio" file="club/tcs/overview/last xi">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
 						</container>
 					</container>
 				</container>
 
-				<!-- KEY EMPLOYEES -->
+				<!-- SUPPORTER PROFILES -->
 				<container id="st02">
-					<translation id="title" translation_id="320609" type="use" />
+					<translation id="title" translation_id="320609" type="use"/>
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 					<container class="tcs_box">
@@ -249,10 +326,39 @@
 						</container>
 					</container>
 				</container>
+				
+				<!-- BOARD MEMBERS -->
+				<!-- LAST XI -->
+				<container id="st04">
+					<translation id="title" translation_id="557622" type="use"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
+					<container class="tcs_box">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<!-- BOTTOM SELECTOR -->
+						<container class="board_profile_panel" id="boar" file="none">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="8"/>
+							
+							<widget class="text" font="title" colour="title" auto_size="vertical">
+								<translation id="text" translation_id="557622" type="use" value="Board Members[COMMENT: AREA: Club vision; SUB-AREA: Board profile; FR: 3266; TONE: Formal; CHARLIMIT: None; NOTE: Title for section listing current board members]"/>
+							</widget>
+				
+							<container>
+								<attachment_group class="vertical_arrange"/>
+
+								<container class="team_container_staff_details_panel" type="TCsO" file="team/team container staff details board overview panel">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+								</container>
+							</container>
+						
+						</container>
+					</container>
+				</container>
+				
 			</container>
 		</container>
-
-
 	</container>
 </panel>
