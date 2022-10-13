@@ -4,9 +4,9 @@
 
 	<widget class="club_overview_staff_panel" id="cloS" file="none">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
 
-		<container class="vertical_adaptive_container" gap="4" id="top">
-			<record id="object_property" get_property="objt" set_property="objt"/>
+		<container class="vertical_adaptive_container" gap="4">
 			
 			<record id="default_properties" default_height="-1" minimum_height="100"/>
 
