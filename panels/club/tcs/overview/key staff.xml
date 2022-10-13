@@ -3,7 +3,7 @@
 
 	<container draw_horizontal_dividers="true">
 		<!-- MANAGER PROFILE AND STAFF -->
-		<layout class="vertical_arrange" vertical_layout="200,-10"  vertical_gap="16"/>
+		<layout class="vertical_arrange" vertical_layout="200,-10"  vertical_gap="8"/>
 
 		<!-- MANAGER INFO -->
 		<widget class="club_overview_staff_panel" id="tStM" file="club/tcs/header manager" >

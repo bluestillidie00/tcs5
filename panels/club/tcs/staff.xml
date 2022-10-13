@@ -3,52 +3,55 @@
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 	<widget class="club_overview_staff_panel" id="cloS" file="none">
-		<!-- SPLITS PANEL INTO TWO SECTIONS -->
-		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-		<record id="object_property" get_property="objt" set_property="objt"/>
+		<container class="vertical_adaptive_container" gap="4" id="top">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			
+			<record id="default_properties" default_height="-1" minimum_height="100"/>
 
-		<container class="tcs_box" default_height="-1">
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			<container class="tcs_box" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-			<!-- CAPTAINS -->
-			<widget class="person_snapshot_club_overview_panel" id="capt" player="true" file="club/tcs/snapshots/captain">
-				<record id="object_property">
-					<integer id="get_property" value="TCap" />
-					<integer id="set_property" value="objt" />
-				</record>
-			</widget>
+				<!-- CAPTAINS -->
+				<widget class="person_snapshot_club_overview_panel" id="capt" player="true" file="club/tcs/snapshots/captain">
+					<record id="object_property">
+						<integer id="get_property" value="TCap"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+
+			<!-- VICE CAPTAIN -->
+			<container class="tcs_box" appearance="tcs/boxes/main/trans/paper" priority="3">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="person_snapshot_club_overview_panel" id="vice" player="true" file="club/tcs/snapshots/vice">
+					<record id="object_property">
+						<integer id="get_property" value="TVca"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+
+			<container class="tcs_box" default_height="-1" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="person_snapshot_club_overview_panel" id="KeyP" player="true" file="club/tcs/snapshots/key">
+					<record id="object_property">
+						<integer id="get_property" value="TKpL"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+
+			<container class="tcs_box" appearance="tcs/boxes/main/trans/paper" priority="4">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<widget class="person_snapshot_club_overview_panel" id="HotP" player="true" file="club/tcs/snapshots/hot">
+				</widget>
+			</container>
 		</container>
 
-		<!-- VICE CAPTAIN -->
-		<container class="tcs_box" appearance="tcs/boxes/main/trans/paper">
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-			<widget class="person_snapshot_club_overview_panel" id="vice" player="true" file="club/tcs/snapshots/vice">
-				<record id="object_property">
-					<integer id="get_property" value="TVca" />
-					<integer id="set_property" value="objt" />
-				</record>
-			</widget>			
-		</container>
-
-		<container class="tcs_box" default_height="-1">
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-			<widget class="person_snapshot_club_overview_panel" id="KeyP" player="true" file="club/tcs/snapshots/key">
-				<record id="object_property">
-					<integer id="get_property" value="TKpL" />
-					<integer id="set_property" value="objt" />
-				</record>
-			</widget>
-		</container>
-
-		<container class="tcs_box" appearance="tcs/boxes/main/trans/paper">
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-			<widget class="person_snapshot_club_overview_panel" id="HotP" player="true" file="club/tcs/snapshots/hot">
-			</widget>			
-		</container>
-
-	</widget>			
+	</widget>
 
 </panel>
