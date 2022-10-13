@@ -18,74 +18,7 @@
 		<translation id="title" translation_id="328524" type="use"/>
 	</container>
 
-	<!-- LEGENDS -->
-	<container class="club_overview_panel" id="tsLe" file="none">
-		<translation id="title" translation_id="247454" type="use"/>
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-		<container class="scrolling_box">
-		
-			<container>
-				<layout class="vertical_arrange_autosize"/>
-
-				<!-- LEGENDS -->
-				<container class="tcs_box">
-					<layout class="vertical_arrange_autosize"/>
-
-					<widget class="label" auto_size="vertical" style="semi_bold" size="10.5" font="title">
-						<translation id="text" translation_id="281393" type="use"/>
-					</widget>
-						
-					<container class="legend_list_table" id="TLeg" auto_size="vertical">
-						<record id="object_property">
-							<string id="get_property" value="TLeg"/>
-						</record>
-						<list id="column_widget_properties">
-							<record indx="0" navigation_focus_target="false"/>
-						</list>
-					</container>
-				</container>
-
-				<!-- ICONS -->
-				<container class="tcs_box">
-					<layout class="vertical_arrange_autosize"/>
-
-					<widget class="label" auto_size="vertical" style="semi_bold" size="10.5" font="title">
-						<translation id="text" translation_id="289355" type="use"/>
-					</widget>
-						
-					<container class="legend_list_table" id="Csvp" auto_size="vertical">
-						<record id="object_property">
-							<string id="get_property" value="Csvp"/>
-						</record>
-						<list id="column_widget_properties">
-							<record indx="0" navigation_focus_target="false"/>
-						</list>
-					</container>
-				</container>
-
-				<!-- FAV PERSONAL -->
-				<container class="tcs_box">
-					<layout class="vertical_arrange_autosize"/>
-
-					<widget class="label" auto_size="vertical" style="semi_bold" size="10.5" font="title">
-						<translation id="text" translation_id="247454" type="use"/>
-					</widget>
-						
-					<container class="legend_list_table" id="Cfap" auto_size="vertical">
-						<record id="object_property">
-							<string id="get_property" value="Cfap"/>
-						</record>
-						<list id="column_widget_properties">
-							<record indx="0" navigation_focus_target="false"/>
-						</list>
-					</container>
-				</container>
-			</container>
-		</container>
-	</container>
-
+	
 	<!-- ALL PLAYERS -->
 	<container class="club_players_panel" id="Capl">
 		<translation id="title" translation_id="306490" type="use"/>
