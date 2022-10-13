@@ -62,7 +62,7 @@
 
 	<!-- BOTTOM -->
 	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-560,-600,-560"/>
+		<layout class="horizontal_arrange" horizontal_layout="-560,-600,-560" horizontal_gap="8"/>
 
 		<!-- LEAGUE TABLE AND RESULTS -->
 		<container>
@@ -280,7 +280,7 @@
 					<translation id="title" translation_id="257300" type="use"/>
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-					<container class="tcs_box">
+					<container >
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 						<!-- BOTTOM SELECTOR -->
