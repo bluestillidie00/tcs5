@@ -285,72 +285,73 @@
 		</container>
 
 
-			<!-- Current Favoured Personnel -->
-			<container id="cfpc" class="tcs_box">
-				<attachment_group class="vertical_arrange_autosize" />
+		<!-- Current Favoured Personnel -->
+		<container id="cfpc" class="collapsable_box">
+			<translation id="title" translation_id="557716" type="use" value="Details"/>
+			<attachment_group class="vertical_arrange_autosize"/>
 
-				<container>
-					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="8" />
+		<!-- 	<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="8"/>
 
-					<widget class="picture" file="icons/custom/icon box/squad" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="20" width="20" red_replacement="title" blue_replacement="bg">
-						<layout class="centre_in_parent_attachment" alignment="vertical" />
-					</widget>
-
-					<widget class="link_button" section="tciG" appearance="buttons/text/button" font="title" colour="title" alignment="left, centre_y" auto_size="all">
-						<translation id="text" translation_id="557716" type="use" value="Favoured Personnel at Club[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: title string for current favoured personnel section.]" />
-					</widget>
-				</container>
-				
-				<widget class="table" id="fptb" layout="-2, -2, -1" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" row_height="26" height="108">
-					<list id="headings">
-						<record>
-							<integer id="index" value="0" />
-							<translation id="text" translation_id="229689" type="use" value="Name" />
-						</record>
-						<record>
-							<integer id="index" value="1" />
-							<translation id="text" translation_id="227964" type="use" value="Job" />
-						</record>
-						<record>
-							<integer id="index" value="2" />
-							<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
-						</record>
-					</list>
-					<list id="column_table_properties">
-						<record>
-							<integer id="index" value="0" />
-							<record id="widget_info">
-								<symbol id="class" value="person_button" />
-							</record>
-						</record>
-						<record>
-							<integer id="index" value="1" />
-							<record id="widget_info">
-								<symbol id="class" value="client_object_property_panel" />
-								<string id="property" value="Pcjo" />
-							</record>
-						</record>
-						<record>
-							<integer id="index" value="2" />
-							<record id="widget_info">
-								<symbol id="class" value="client_object_property_panel" />
-								<string id="property" value="PacP" />
-							</record>
-						</record>
-					</list>
-					<list id="column_widget_properties">
-						<record alignment="centre_y,left">
-							<integer id="index" value="0" />
-						</record>
-						<record alignment="centre_y,left">
-							<integer id="index" value="1" />
-						</record>
-						<record alignment="centre_y,left">
-							<integer id="index" value="2" />
-						</record>
-					</list>
+				<widget class="picture" file="icons/custom/icon box/squad" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="20" width="20" red_replacement="title" blue_replacement="bg">
+					<layout class="centre_in_parent_attachment" alignment="vertical"/>
 				</widget>
-			</container>
+
+				<widget class="link_button" section="tciG" appearance="buttons/text/button" font="title" colour="title" alignment="left, centre_y" auto_size="all">
+					<translation id="text" translation_id="557716" type="use" value="Favoured Personnel at Club[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: title string for current favoured personnel section.]"/>
+				</widget>
+			</container> -->
+				
+			<widget class="table" id="fptb" layout="-2, -2, -1" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" row_height="26" height="108">
+				<list id="headings">
+					<record>
+						<integer id="index" value="0"/>
+						<translation id="text" translation_id="229689" type="use" value="Name"/>
+					</record>
+					<record>
+						<integer id="index" value="1"/>
+						<translation id="text" translation_id="227964" type="use" value="Job"/>
+					</record>
+					<record>
+						<integer id="index" value="2"/>
+						<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]"/>
+					</record>
+				</list>
+				<list id="column_table_properties">
+					<record>
+						<integer id="index" value="0"/>
+						<record id="widget_info">
+							<symbol id="class" value="person_button"/>
+						</record>
+					</record>
+					<record>
+						<integer id="index" value="1"/>
+						<record id="widget_info">
+							<symbol id="class" value="client_object_property_panel"/>
+							<string id="property" value="Pcjo"/>
+						</record>
+					</record>
+					<record>
+						<integer id="index" value="2"/>
+						<record id="widget_info">
+							<symbol id="class" value="client_object_property_panel"/>
+							<string id="property" value="PacP"/>
+						</record>
+					</record>
+				</list>
+				<list id="column_widget_properties">
+					<record alignment="centre_y,left">
+						<integer id="index" value="0"/>
+					</record>
+					<record alignment="centre_y,left">
+						<integer id="index" value="1"/>
+					</record>
+					<record alignment="centre_y,left">
+						<integer id="index" value="2"/>
+					</record>
+				</list>
+			</widget>
+		</container>
 
 	</container>
 
