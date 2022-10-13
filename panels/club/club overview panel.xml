@@ -344,27 +344,27 @@
 				</container>
 			</container>
 
-			<container id="co03" icon="tcs/icons/club/Hof">
-				<translation id="title" translation_id="247122" type="use" value="Hall of Fame"/>
+			<container id="comp">
+				<translation id="title" translation_id="227741" type="use" />
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-				<container class="plain_box" appearance="FME/tabbed pane/subtle/paper">
+				<container class="tcs_box">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-					<container class="team_container_information_overview_panel" id="csio" file="club/tcs/tcs22v2/hall of fame">
+					<container class="team_container_records_competitions_panel" id="cmps">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 				</container>
 			</container>
-
-			<container id="co04" icon="icons/26px/development">
-				<translation id="title" type="use" value="Loans"/>
+		
+			<container id="tran">
+				<translation id="title" translation_id="297217" type="use" />
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-				<container class="plain_box" appearance="FME/tabbed pane/subtle/paper">
+				<container class="tcs_box">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-					<container class="players_on_loan_panel" file="club/tcs/tcs22v2/loans">
+					<container class="transfer_panel_club" id="csio" file="club/tcs/transfers">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 				</container>

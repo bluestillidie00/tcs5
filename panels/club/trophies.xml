@@ -1,0 +1,10 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <container class="scrolling_box" fit_content_horizontal="true" fit_content_vertical="false">
+        <container class="container" id="hnrs">
+            <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="8"/>
+            <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="8"/>
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+        </container>
+    </container>
+</panel>
