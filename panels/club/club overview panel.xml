@@ -345,7 +345,7 @@
 			</container>
 
 			<container id="comp">
-				<translation id="title" translation_id="227741" type="use" />
+				<translation id="title" translation_id="227741" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container class="tcs_box">
@@ -358,7 +358,7 @@
 			</container>
 		
 			<container id="tran">
-				<translation id="title" translation_id="297217" type="use" />
+				<translation id="title" translation_id="297217" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container class="tcs_box">
