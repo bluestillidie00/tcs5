@@ -1,0 +1,128 @@
+<!-- THIS IS THE PANEL THAT SHOWS ON THE CLUB OVERVIEW SCREEN -->
+<panel>
+	<!-- STICK TO SIDES ALL USED TO LAYER ELEMENTS ON TOP OF OTHERS -->
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+	<!-- STADIUM PICTURE -->
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<widget class="stadium_picture" id="STAp" file="none">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+			<widget class="picture" file="pictures/stadiums/stadium_bg" />
+			<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+			<widget class="picture" id="STPC"/>
+		</widget>
+	</container>
+
+	<!-- INFORMATION -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="12" horizontal_inset="32"/>
+
+		<container class="tcs_box" appearance="tcs/boxes/stadium/paper" rrep="bg" height="46" >
+			<!-- AUTOSIZE USED SO WE DON'T HAVE TO DEFINE SPECIFIC WIDTHS FOR STUFF -->
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0"/>
+
+			<!-- WE USED DEFAULT_PROPERTIES SO WE DON'T HAVE TO REDEFINE THE SAME ATTRIBUTES EVERY TIME -->
+			<record id="default_properties" auto_size="vertical"  alignment="centre_x,centre_y"/>
+
+			<!-- STADIUM NAME -->
+			<widget class="client_object_label" id="namV" style="bold" size="large">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+				</record>
+			</widget>		
+
+			<!-- CITY LABEL -->
+			<widget class="city_label" show_nation="true" size="8" >
+				<record id="object_property">
+					<integer id="get_property" value="SctI" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+	<!-- BOTTOM -->
+	<container>
+		<!-- BOTTOM ALIGNMENT USED TO PUT CONTENT AT BOTTOM -->
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom" vertical_offset="12" horizontal_inset="32"/>
+
+		<!-- CONTAINER HOLDING GRAPHIC -->
+		<container class="main_box" appearance="tcs/boxes/stadium/paper" rrep="bg" height="52" draw_vertical_dividers="true" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+			<!-- CAPACITY -->
+			<container>
+				<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0" />
+
+				<!-- LABEL -->
+				<widget class="label" id="ScpL" font="label" alignment="centre_x,bottom"  >
+					<record id="object_property">
+						<integer id="get_property" value="Scpy" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+
+				<!-- CAPACITY -->
+				<widget class="dashed_number_label" id="ScpV" size="large" style="bold" alignment="centre_x,top">
+					<record id="object_property">
+						<integer id="get_property" value="Scpy" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- SURFACE -->
+			<container>
+				<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0" />
+
+				<!-- LABELS -->
+				<widget class="label" id="SptL" font="label" alignment="centre_x,bottom"  >
+					<translation id="text" translation_id="284339" type="use" value="Surface[COMMENT: heading; team_information_panel; pitch surface type]" />
+				</widget>
+
+				<!-- SURFACE -->
+				<widget class="pitch_surface_type_label" id="SsfV" size="large" style="bold" alignment="centre_x,top,can_scale">
+					<record id="object_property">
+						<integer id="get_property" value="SsfT" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- PITCH CONDITION -->
+			<container>
+				<layout class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0" />
+
+				<!-- LABEL -->
+				<widget class="label" id="SptL" font="label" alignment="centre_x,bottom"  >
+					<record id="object_property">
+						<integer id="get_property" value="Sptc" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+
+				<!-- PITCH CONDITION -->
+				<widget class="pitch_condition_label" id="SptV" size="large" style="bold" alignment="centre_x,top">
+					<!-- VALUE RECOLOURS -->
+					<list id="value_list">
+						<record min_value="0" max_value="30" colour="negative" />
+						<record min_value="31" max_value="50" colour="very poor" />
+						<record min_value="51" max_value="80" colour="poor" />
+						<record min_value="81" max_value="130" colour="text" />
+						<record min_value="131" max_value="170" colour="good" />
+						<record min_value="171" max_value="200" colour="positive" />
+					</list>
+					<record id="object_property">
+						<integer id="get_property" value="Sptc" />
+					</record>
+				</widget>				
+			</container>
+		</container>
+	</container>
+
+	<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+	<container class="bordered_box" appearance="tcs/ro" />
+</panel>
