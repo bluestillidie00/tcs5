@@ -208,24 +208,64 @@
 		<!-- MIDDLE -->
 	<container class="tcs_tabs" id="tclub" default_height="-1" priority="1" default_item="co01" save_default_state="true" save_session_state="true">
 
-			<container id="co01" icon="icons/16px/info">
-				<translation id="title" translation_id="243486" type="use" value="Info" />
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+			<!-- OVERVIEW -->
+			<container id="over">
+				<layout class="vertical_arrange" vertical_layout="360,-1,-1" vertical_gap="8"/>
+				<translation id="title" translation_id="336543" type="use" />
 
-				<container class="tcs_box" >
-					<layout class="vertical_arrange" vertical_layout="-1,185" vertical_gap="8"/>
-
-					<widget class="club_overview_details_panel" id="clod" file="club/tcs/tcs22v2/clod">
-						<record id="object_property" get_property="objt" set_property="objt"/>				
+				<container  class="tcs_box" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<widget class="club_overview_stadium_panel" id="clos" file="club/tcs/overview/stadium" >
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="TsHA" />
+									<integer id="set_property" value="Shwn" />
+									<boolean id="dont_set_object" value="true" />
+								</record>
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="Cclu" />
+									<boolean id="dont_set_object" value="true" />
+								</record>
+								<record>
+									<integer id="get_property" value="Tsre" />
+									<integer id="set_property" value="objt" />
+									<boolean id="dont_set_hint" value="true" />
+								</record>
+							</list>
+						</record>
 					</widget>
 
-					<!-- HONOURS -->
-					<widget class="team_container_honours_panel" id="hons" file="club/tcs/tcs22v2/honours">
-						<record id="object_property" get_property="objt" set_property="objt"/>
+					<!-- NO STADIUM INFO -->
+					<widget class="text" id="NoSt" alignment="centre">
+						<translation id="text" translation_id="436452" type="use" value="Stadium information not available.[COMMENT: line of text saying when we don't have any information on a team's stadium]" />
+						<record id="object_property">
+							<integer id="get_property" value="TsHA" />
+							<integer id="set_property" value="hidn" />
+						</record>
 					</widget>
+				</container>
+
+				<!-- BOTTOM SELECTOR -->
+				<container class="team_container_information_overview_panel" file="none">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<container class="tcs_box" gap="8" draw_vertical_dividers="true" priority="1">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<record id="default_properties" default_width="-1" minimum_width="250"/>
+
+						<!--snapshot selector 1-->
+						<container class="client_object_viewer_selector_panel" file="club/club overview selector panel" id="cos2" priority="1" default_widget="upfx"  late_loading="true"/>
+
+					</container>
 
 				</container>
 			</container>
+
 
 			<container id="co02" icon="icons/16px/tactics">
 				<translation id="title" type="use" value="Last XI" />
@@ -290,7 +330,6 @@
 
 							<!--snapshot selector 1-->
 							<container class="client_object_viewer_selector_panel" file="club/staff selector panel" id="cos1" priority="1" default_widget="pssp" late_loading="true"/>
-
 						</container>
 					</container>
 				</container>			
