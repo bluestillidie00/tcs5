@@ -1,0 +1,138 @@
+<panel>
+    <container id="SUBP" class="title_link_box">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="2,0,0,0" />
+    </container>
+
+    <widget class="club_league_history_graph" id="clhg" file="club/club league history graph no buttons" section="cmps">
+        <translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+    </widget>
+
+    <widget class="team_transfer_snapshot_panel" id="Tran" valid_for_fmc="false">
+        <translation id="title" translation_id="296337" type="use" value="Pending Transfers" />
+    </widget>
+
+    <widget class="team_container_information_background_panel" id="Cbac" section="trov">
+        <translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+    </widget>
+
+    <widget class="squad_status_snapshot_panel" id="sssn" section="TeSq" late_loading="true" valid_for_unemployed_manager="false">
+        <translation id="title" translation_id="227783" type="use" value="Squad Status" />
+    </widget>
+
+    <widget class="team_snapshot_contract_panel" id="tsco" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_unemployed_manager="false">
+        <translation id="title" translation_id="255039" type="use" value="Contract Expiry Dates[COMMENT: team contract snapshot panel heading]" />
+    </widget>
+
+    <widget class="team_snapshot_injury_panel" id="tsin" late_loading="true" valid_for_unemployed_manager="false">
+        <translation id="title" translation_id="298734" type="use" value="Team Injuries[COMMENT:title for a box containing a list of a team's injuries]" />
+    </widget>
+<!-- 
+    <container class="legend_list_table" id="TLeg">
+        <translation id="title" translation_id="281393" type="use" value="Legends[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+        <record id="object_property" get_property="TLeg" />
+    </container>
+
+    <container class="legend_list_table" id="Csvp">
+        <translation id="title" translation_id="289355" type="use" value="Icons[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+        <record id="object_property" get_property="Csvp" />
+    </container>
+
+    <container class="legend_list_table" id="Cfap">
+        <translation id="title" translation_id="247454" type="use" value="Favoured Personnel" />
+        <record id="object_property" get_property="Cfap" />
+    </container>
+ -->
+    <widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/trophy info" file="club/trophies" section="trov">
+        <translation id="title" translation_id="321147" type="use" value="Trophies Won" />
+        <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
+
+    <container id="upfx" section="TeFi">
+        <translation id="title" translation_id="247326" type="use" value="Fixtures &amp; Results"/>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <container class="manager_upcoming_fixtures_panel" id="upfx" file="club/club overview upcoming fixtures">
+            <record id="object_property" get_property="TCsf" set_property="objt"/>
+        </container>
+
+    </container>
+
+    <container class="scrolling_box" id="rivl">
+        <translation id="title" translation_id="364723" type="use" value="Rivalries" />
+        <container>
+            <attachment_group class="vertical_arrange_autosize"/>
+
+            <!--Derbies-->
+            <container>
+                <attachment_group class="vertical_arrange_autosize" alignment="top,extend"/>
+                <widget class="label" id="TDeL" auto_size="vertical">
+                    <record id="object_property" name="true">
+                        <string id="get_property" value="TDer" />
+                    </record>
+                    <string id="font" value="label" />
+                </widget>
+                <widget class="team_derbies_text" id="TDeV" auto_size="all">
+                    <record id="object_property">
+                        <string id="get_property" value="TDer" />
+                    </record>
+                </widget>
+
+            </container>
+
+            <!--Fierce Rivals-->
+            <container>
+                <attachment_group class="vertical_arrange_autosize" alignment="top,extend" horizontal_offset="0" vertical_gap="0" vertical_inset="0" />
+                <widget class="label" id="CfmL" auto_size="vertical">
+                    <record id="object_property" name="true">
+                        <string id="get_property" value="Cfmr" />
+                    </record>
+                    <string id="font" value="label" />
+                </widget>
+                <widget class="club_rivalries_list_text" id="CfmV" auto_size="vertical">
+                    <record id="object_property">
+                        <string id="get_property" value="Cfmr" />
+                    </record>
+                </widget>
+            </container>
+
+            <container>
+                <attachment_group class="vertical_arrange_autosize" alignment="top,extend"/>
+                <widget class="label" id="CfrL" auto_size="vertical">
+                    <record id="object_property" name="true">
+                        <string id="get_property" value="Cfrt" />
+                    </record>
+                    <string id="font" value="label" />
+                </widget>
+                <widget class="club_rivalries_list_text" id="CfrV" auto_size="vertical">
+                    <record id="object_property">
+                        <string id="get_property" value="Cfrt" />
+                    </record>
+                </widget>
+            </container>
+
+        </container>
+
+    </container>
+
+    <container class="club_overview_panel" file="none" id="tssp">
+        <translation id="title" translation_id="247393" type="use" value="Team Stats"/>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <container class="team_stats_summary_panel">
+            <record id="object_property" get_property="Tftm" set_property="objt"/>
+        </container>
+
+    </container>
+
+    <container class="club_overview_panel" file="none" id="pssp">
+        <translation id="title" translation_id="248440" type="use" value="Player Stats"/>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <container class="player_stats_summary_panel">
+            <record id="object_property" get_property="Tftm" set_property="objt"/>
+        </container>
+
+    </container>
+
+</panel>
