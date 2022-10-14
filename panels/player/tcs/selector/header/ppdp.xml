@@ -69,7 +69,7 @@
 				<widget class="label" id="wglb" auto_size="vertical" style="semi_bold" size="10.5">
 					<translation id="text" type="use" translation_id="242353" value="Wages"/>
 				</widget>
-				<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="normal"/>
+				<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="normal" alignment="left,can_scale"/>
 			</container>
 		</container>
 
