@@ -1,0 +1,90 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" horizontal_alignment="horizontal" />
+
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_immediate_state" value="true" />
+
+	<record id="object_property">
+		<integer id="get_property" value="objt" />
+		<integer id="set_property" value="objt" />
+	</record>
+
+	<!--Focus title bar-->
+	<container height="26">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" horizontal_gap="12" />
+
+		<widget class="picture" file="icons/26px/search" red_replacement="title" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" blue_replacement="black" width="16" height="16" />
+		<widget class="text" font="title" size="large" colour="title" alignment="left, centre_y" auto_size="horizontal">
+			<translation id="text" translation_id="557619" type="use" value="Recommendations For: [COMMENT: AREA: Scouting; SUB-AREA: Recruitment Focus Section; FR-BN: FM-4270; NOTE: Header text for current recruitment focus]" />
+		</widget>
+		
+		<widget class="picture" file="icons/custom/scouting/key player" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" red_replacement="fg positive" width="16" height="16" />
+		<widget class="text" font="title" size="large" colour="text" alignment="left, centre_y" auto_size="horizontal">
+			<translation id="text" type="new" value="Other Recommended Players[COMMENT: AREA: Recruitment Meeting; SUB-AREA: Recommended players panel; FN: FM-12191; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Button label to view other recommended players not listed in the scouting focus lists]" />
+		</widget>
+	</container>
+
+	<widget class="horizontal_divider" />
+
+	<!--Player list table container-->
+	<container id="rsTB">
+		<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" gap="12" />
+
+		<!--No results yet text-->
+		<widget class="text" id="noPL" alignment="centre_x, centre_y" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<translation id="text" translation_id="557618" type="use" value="No players found yet. Check in again in a few days.[COMMENT: AREA: Scouting; SUB-AREA: Recruitment Focus Section; FR-BN: FM-4023; NOTE: Fallback text shown, when recruitment focus hasn't foudn players yet]" />
+		</widget>
+
+		<!--Player list table -->
+		<widget class="client_object_list_table" id="rstb" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" select_event="ePLS" fixed_size_rows="true" auto_size_rows="false" fixed_row_height="30" navigation_container="true" default_focus="true">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<flags id="default_sort_column" value="PsRK" />
+			
+			<list id="views">
+				<record id="ovvw">
+					<record id="view_table_properties">
+						<integer id="row_height" value="60" />
+					</record>
+					<translation id="name" translation_id="247414" type="use" value="Overview" />
+					<record id="view">
+						<record id="PSpi" auto_hide_priority="4" />
+						<!-- player status/info -->
+						<record id="PNaN" auto_hide_priority="1" minimum_width="120" />
+						<!-- player name/nationality -->
+						<record id="Ppos" auto_hide_priority="9" />
+						<!-- position -->
+						<record id="PCaD" auto_hide_priority="9" />
+								<!-- age -->
+										<flags id="Pcab" width="100"/>
+										<!-- currant ability -->
+										<flags id="Ppab"/>
+						<!-- club -->
+						<record id="PSag" auto_hide_priority="9" />
+						<!-- age -->
+						<record id="Pdva" auto_hide_priority="9" />
+						<!-- value -->
+						<record id="Pcww" auto_hide_priority="11" />
+						<!-- weekly wage -->
+						<record id="PsRK" auto_hide_priority="3" minimum_width="70" width="70" />
+						<!-- recommended -->
+						<record id="PsKL" auto_hide_priority="9" />
+						<!-- knowledge -->
+					</record>
+				</record>
+			</list>
+		</widget>
+
+		<widget class="horizontal_divider" height="2">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+
+		<widget class="player_scouting_centre_actions_panel" id="acts" file="player/player active focuses actions" height="40" navigation_container="true" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			<boolean id="save_immediate_state" value="true" />
+		</widget>
+	</container>
+</panel>
