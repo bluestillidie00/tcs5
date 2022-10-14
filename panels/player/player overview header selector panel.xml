@@ -80,8 +80,8 @@
 		<translation id="title" type="use" translation_id="298527"/>
 	</container>
 	
-	<!-- PROS AND CONS -->
+	<!-- PERSONAL DETAILS -->
 	<container class="client_object_viewer_xml_panel" id="tper" file="player/tcs/selector/header/ppdp">
-		<translation id="title" type="use" value="298527"/>
+		<translation id="title" type="use" translation_id="292599"/>
 	</container>
 </panel>
