@@ -802,13 +802,18 @@
 		</container>
 
 		<!-- BOTTOM SECTION -->
-		<container draw_vertical_dividers="true" default_height="-160" priority="1" minimum_height="160">
-			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="16"/>
+		<container draw_vertical_dividers="true" default_height="-160" priority="2" minimum_height="160" class="horizontal_adaptive_container">
 
-			<!-- Season stats-->
-			<container width="650" priority="2" default_width="-2" navigation_container="true">
-				<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
+			<container class="client_object_viewer_selector_panel" id="csb1" file="player/player overview small selector panel" minimum_width="310" default_width="-25" priority="2" navigation_container="true">
+				<integer id="default_for_unemployed_managers" value="Pgrg"/>
+				<integer id="default_for_international_managers_other_team" value="Pgrg"/>
+				<integer id="default_for_everyone_else" value="Pgrg"/>
+				<integer id="default_for_versus_mode" value="Pgrg"/>
+			</container>
 			
+			<!-- Season stats-->
+			<container priority="1" default_width="-48" navigation_container="true">
+				<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 				<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
@@ -830,33 +835,13 @@
 				</widget>
 			</container>
 
-			<container draw_vertical_dividers="true">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="16"/>
-
-				<!-- <container class="tcs_box"> -->
-				<container>
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-					<container class="client_object_viewer_selector_panel" id="csb1" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
-						<integer id="default_for_unemployed_managers" value="Pgrg"/>
-						<integer id="default_for_international_managers_other_team" value="Pgrg"/>
-						<integer id="default_for_everyone_else" value="Pgrg"/>
-						<integer id="default_for_versus_mode" value="Pgrg"/>
-					</container>
-				</container>
-
-				<!-- <container class="tcs_box"> -->
-				<container>
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-					<container class="client_object_viewer_selector_panel" id="csb2" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
-						<integer id="default_for_unemployed_managers" value="Pcrs"/>
-						<integer id="default_for_international_managers_other_team" value="Pcrs"/>
-						<integer id="default_for_everyone_else" value="Pcrs"/>
-						<integer id="default_for_versus_mode" value="Pcrs"/>
-					</container>
-
-				</container>
+			<container class="client_object_viewer_selector_panel" id="csb2" file="player/player overview small selector panel" minimum_width="310" default_width="-25" priority="3" navigation_container="true">
+				<integer id="default_for_unemployed_managers" value="Pgrg"/>
+				<integer id="default_for_international_managers_other_team" value="Pgrg"/>
+				<integer id="default_for_everyone_else" value="Pgrg"/>
+				<integer id="default_for_versus_mode" value="Pgrg"/>
 			</container>
+
 		</container>
 	</container>
 </panel>
