@@ -1,5 +1,5 @@
 ﻿<properties>
-	<record id="image_borders" left="1" right="1" top="1" bottom="1"/>
+	<record id="image_borders" left="8" right="8" top="1" bottom="1"/>
 	<!-- <record id="title_borders" left="8" right="8" top="28" bottom="8"/> -->
 	<record id="image_slices" left="8" right="8" top="8" bottom="8"/>
 	
@@ -14,5 +14,5 @@
 		<flags id="size" value="normal"/>  
 	</record> -->
 	
-	<colour id="red_replacement" name="tcs_bg_lighter"/>	
+	<colour id="red_replacement" name="fg"/>	
 </properties>
