@@ -838,10 +838,10 @@
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 					<container class="client_object_viewer_selector_panel" id="csb1" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
-						<integer id="default_for_unemployed_managers" value="Pcrs"/>
-						<integer id="default_for_international_managers_other_team" value="Pcrs"/>
-						<integer id="default_for_everyone_else" value="Pcrs"/>
-						<integer id="default_for_versus_mode" value="Pcrs"/>
+						<integer id="default_for_unemployed_managers" value="Pgrg"/>
+						<integer id="default_for_international_managers_other_team" value="Pgrg"/>
+						<integer id="default_for_everyone_else" value="Pgrg"/>
+						<integer id="default_for_versus_mode" value="Pgrg"/>
 					</container>
 				</container>
 
