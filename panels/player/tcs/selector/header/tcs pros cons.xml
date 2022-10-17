@@ -9,7 +9,7 @@
 
 		<!-- TRANSFER STATUS -->
 		<widget class="link_button" section="Ptin" auto_size="horizontal" >
-			<translation id="text" translation_id="248079" type="use"/>
+			<translation id="text" translation_id="254774" type="use"/>
 		</widget>
 
 		<container>
