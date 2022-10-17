@@ -9,7 +9,7 @@
 			<record id="default_properties" width="200"/>
 
 			<container class="tcs_box">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8"/>
 
 				<!-- CLUB LOGO -->
 				<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
@@ -18,7 +18,7 @@
 			</container>
 
 			<container class="tcs_box">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8"/>
 
 				<!-- CLUB LOGO -->
 				<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
