@@ -4,212 +4,212 @@
 
 	<!-- SET UP TABS -->
 	<!-- TOM TODO: ADD FAINT GRAPHIC -->
-	<container class="tcs_tabs" id="tran" default_item="rep1" save_default_state="true" save_session_state="true" >
+	<container class="tcs_tabs" id="tran" default_item="rep1" save_default_state="true" save_session_state="true">
 
-		<!-- OVERALL -->	
+		<!-- OVERALL -->
 		<container id="rep1">
 			<translation id="title" translation_id="259402" type="use"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
 
-			<container >
+			<container>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<!-- IF USER CONTROLLED -->
-				<container >
-					<layout class="vertical_arrange" vertical_layout="150,-1" />
+				<container>
+					<layout class="vertical_arrange" vertical_layout="150,-1"/>
 
 					<!-- IF HUMAN CONTROLLED TEAM, SHOW -->
 					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
 
-					<widget class="player_scout_reports_panel" id="pscR"  late_loading="true" file="none">
-						<translation id="title" translation_id="420686" type="use" />
+					<widget class="player_scout_reports_panel" id="pscR" late_loading="true" file="none">
+						<translation id="title" translation_id="420686" type="use"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0">
-							<global id="gap" name="ui.main_box_gap" />
+							<global id="gap" name="ui.main_box_gap"/>
 						</layout>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
 						<!-- NO REPORT -->
 						<container id="norp" hidden="true">
-							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 							<!-- NO SCOUT REPORT -->
 							<container id="csrc" class="bordered_box_no_margin">
-								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="20" />
-								<widget class="spacer" height="10" />
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="20"/>
+								<widget class="spacer" height="10"/>
 								<!-- NO STAFF -->
 								<container id="cocs" height="70">
-									<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
-									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+									<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8"/>
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 									<!--explanatory text-->
 									<widget class="label" alignment="centre" spec="text" size="11" auto_size="vertical">
-										<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+										<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]"/>
 									</widget>
 									<container height="30">
-										<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
-										<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+										<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8"/>
+										<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 										<widget class="button" id="sctP" click_event="sctc" alignment="centre" auto_size="horizontal" height="30">
-											<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+											<translation id="text" translation_id="243421" type="use" value="Scout Player"/>
 										</widget>
 									</container>
 								</container>
 								<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical"/>
-								<widget class="spacer" height="10" />
+								<widget class="spacer" height="10"/>
 							</container>
 							<!-- No Coach Report-->
 							<container id="ccrc" class="main_box" height="150">
-								<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" />
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+								<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 								<!--explanatory text-->
 								<widget class="label" alignment="centre" spec="text" size="large" style="semi_bold" auto_size="vertical">
-									<translation id="text" translation_id="320498" type="use" value="You need to have at least one coach at your team to compile a report on this player.[COMMENT: coach report; need staff advice]" />
+									<translation id="text" translation_id="320498" type="use" value="You need to have at least one coach at your team to compile a report on this player.[COMMENT: coach report; need staff advice]"/>
 								</widget>
 								<widget class="label" auto_size="vertical" spec="text" size="large" alignment="centre" colour="faded text">
-									<translation id="text" translation_id="326089" type="use" value="You can find staff to hire via the Staff Search.[COMMENT: team report; need to scout sub advice]" />
+									<translation id="text" translation_id="326089" type="use" value="You can find staff to hire via the Staff Search.[COMMENT: team report; need to scout sub advice]"/>
 								</widget>
-								<container height="5" />
+								<container height="5"/>
 								<container>
-									<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+									<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+									<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 									<widget class="link_appearance_button" click_event="gtss">
-										<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
-										<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
-										<layout class="centre_in_parent_attachment" alignment="horizontal" />
+										<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]"/>
+										<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+										<layout class="centre_in_parent_attachment" alignment="horizontal"/>
 									</widget>
 								</container>
 							</container>
 							<!-- No national report-->
 							<container id="cnrc" class="bordered_box_no_margin" height="100">
-								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
-								<widget class="spacer" height="10" />
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true"/>
+								<widget class="spacer" height="10"/>
 								<!--explanatory text-->
-								<widget class="label" id="info" alignment="centre" spec="text" size="11" auto_size="vertical" />
+								<widget class="label" id="info" alignment="centre" spec="text" size="11" auto_size="vertical"/>
 								<container height="30">
-									<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
-									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8"/>
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 									<widget class="button" id="sctn" click_event="sctn" alignment="centre" auto_size="horizontal" height="30">
-										<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+										<translation id="text" translation_id="243421" type="use" value="Scout Player"/>
 									</widget>
 								</container>
-								<widget class="spacer" height="10" />
+								<widget class="spacer" height="10"/>
 							</container>
 							<!-- Already being scouted -->
 							<container id="crbs" class="bordered_box_no_margin" height="80">
-								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
-								<widget class="spacer" height="15" />
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true"/>
+								<widget class="spacer" height="15"/>
 								<!--explanatory text-->
 								<widget class="text" id="crbt" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
-									<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+									<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]"/>
 								</widget>
-								<widget class="spacer" height="15" />
+								<widget class="spacer" height="15"/>
 							</container>
 							<!-- Already being scouted by pool-->
 							<container id="cool" class="bordered_box_no_margin" height="80">
-								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
-								<widget class="spacer" height="15" />
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true"/>
+								<widget class="spacer" height="15"/>
 								<!--explanatory text-->
 								<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
-									<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+									<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]"/>
 								</widget>
-								<widget class="spacer" height="15" />
+								<widget class="spacer" height="15"/>
 							</container>
 							<!-- No actions report-->
 							<container id="caSP" class="bordered_box_no_margin">
-								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="20" />
-								<widget class="spacer" height="15" />
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="20"/>
+								<widget class="spacer" height="15"/>
 								<!--explanatory text-->
 								<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
-									<translation id="text" translation_id="435189" type="use" value="Unavailable[COMMENT: no scouting report available; was ID 247303 but some languages need specific translations here]" />
+									<translation id="text" translation_id="435189" type="use" value="Unavailable[COMMENT: no scouting report available; was ID 247303 but some languages need specific translations here]"/>
 								</widget>
-								<widget class="spacer" height="15" />
+								<widget class="spacer" height="15"/>
 							</container>
 						</container>
 
 						<!-- IF WE DO HAVE A SCOUT REPORT -->
-						<container id="scou" >
-							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+						<container id="scou">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 
 							<widget class="player_reports_overview_summary_panel" id="proS" file="player/player reports overview summary vertical" always_recolour_wage_cost_text="true" mode="6"/>
 
 							<container height="30">
-								<layout class="arrange_horizontal_attachment" layout="-1,2" offset="0" gap="0" />
-								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+								<layout class="arrange_horizontal_attachment" layout="-1,2" offset="0" gap="0"/>
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 
 								<container navigation_container="true">
-									<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
-									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+									<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
 
 									<container id="sTRS">
-										<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" />
+										<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12"/>
 
-										<container height="60" >
-											<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="40,-1" vertical_offset="0" vertical_gap="0" />
+										<container height="60">
+											<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="40,-1" vertical_offset="0" vertical_gap="0"/>
 
 											<widget class="text" alignment="centre" id="norp" multiline="true" colour="text" font="bold" height="32">
-												<string id="text" value="-" />
+												<string id="text" value="-"/>
 											</widget>
 
 											<widget class="text" id="chRC" alignment="left,centre_y" multiline="true" style="bold" colour="text" auto_size="vertical"/>
 										</container>
 
 										<container>
-											<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" />
+											<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6"/>
 
 											<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
-												<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+												<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]"/>
 											</widget>
 
 											<container>
-												<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1" />
+												<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1"/>
 
 												<!--CA-->
 												<widget class="scout_stars_label" id="cast" height="18" alignment="left, centre_y" mode="1">
-													<record id="object_property" get_property="Pcab" />
+													<record id="object_property" get_property="Pcab"/>
 												</widget>
 
 												<!--CA label-->
-												<widget class="text" id="crTX" auto_size="vertical" alignment="left" colour="faded text" />
+												<widget class="text" id="crTX" auto_size="vertical" alignment="left" colour="faded text"/>
 											</container>
 
 										</container>
 
 										<container>
-											<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" />
+											<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6"/>
 
 											<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
-												<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+												<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]"/>
 											</widget>
 
 											<container>
-												<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1" />
+												<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1"/>
 
 												<!--PA-->
 												<widget class="scout_stars_label" id="past" height="18" alignment="left" mode="2">
-													<record id="object_property" get_property="Ppab" />
+													<record id="object_property" get_property="Ppab"/>
 												</widget>
 
 												<!--PA label-->
-												<widget class="text" id="prTX" auto_size="vertical" alignment="left" colour="faded text" />
+												<widget class="text" id="prTX" auto_size="vertical" alignment="left" colour="faded text"/>
 											</container>
 										</container>
 
-										<widget class="horizontal_subtle_divider" height="2" />
+										<widget class="horizontal_subtle_divider" height="2"/>
 									</container>
 								</container>
 							</container>
 						</container>
-					</widget>					
+					</widget>
 
 					<widget class="player_additional_stats_panel" file="none">
-						<record id="object_property" get_property="objt" set_property="objt" />
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
+						<record id="object_property" get_property="objt" set_property="objt"/>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<widget class="player_form_summary_panel" file="player/player form summary panel for analyst report" >
-							<record id="object_property" get_property="objt" set_property="objt" />
-						</widget>	
+						<widget class="player_form_summary_panel" file="player/player form summary panel for analyst report">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
 					</widget>
 				</container>
 
@@ -226,50 +226,50 @@
 
 						<!-- No scout report -->
 						<container id="nsrc" class="main_box">
-							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
 
 							<container id="nocs" height="100">
-								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
 								<!--explanatory text-->
 								<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
-									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
-									<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+									<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]"/>
 								</widget>
 
 								<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="40" icon="icons/16px/search">
-									<translation id="text" translation_id="243421" type="use" value="Scout Player" />
-									<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+									<translation id="text" translation_id="243421" type="use" value="Scout Player"/>
+									<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
 								</widget>
 							</container>
 
 							<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 							</widget>
 						</container>
 
 						<!-- Already being scounted -->
 						<container id="Arbs" class="main_box">
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 							<!--explanatory text-->
 							<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
-								<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+								<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]"/>
 							</widget>
 						</container>
 
 						<!-- Already being scouted by pool -->
 						<container id="Pool" class="main_box">
-							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 							<!--explanatory text-->
 							<widget class="text" alignment="centre" spec="text" colour="attention">
-								<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+								<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]"/>
 							</widget>
 						</container>
 
-						<container id="scou" >
+						<container id="scou">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 							<widget class="player_reports_overview_summary_panel" id="proS" file="player/player reports overview summary vertical scouting card" always_recolour_wage_cost_text="true" recommendation_widget_mode="0" mode="1"/>
@@ -289,12 +289,404 @@
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison no title" late_loading="true">
-				<translation id="title" translation_id="420686" type="use" />
+				<translation id="title" translation_id="420686" type="use"/>
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
 		</container>
+	
+		<!-- PER 90 -->
+		<container id="rep5">
+			<translation id="title" translation_id="374186" type="use"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-		<!-- PROS AND CONS -->
+			<widget file="none" class="player_additional_stats_panel" id="pSta" late_loading="true">
+				<translation id="title" translation_id="420686" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="scrolling_box">
+					<container>
+						<layout class="vertical_arrange_autosize"/>
+
+						<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
+						<container class="tcs_table">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="249483" type="use"/>
+								</widget>
+						
+								<!-- EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POgg"/>
+								</widget>
+							</container>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="301175" type="use"/>
+								</widget>
+						
+								<!-- NP EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POag"/>
+								</widget>
+							</container>
+						</container>
+				
+				<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
+						<container class="tcs_table_trans">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="513538" type="use"/>
+								</widget>
+						
+								<!-- EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PxG9"/>
+								</widget>
+							</container>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="557890" type="use"/>
+								</widget>
+						
+								<!-- NP EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PNx9"/>
+								</widget>
+							</container>
+						</container>
+				
+				<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
+						<container class="tcs_table">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="513539" type="use"/>
+								</widget>
+						
+								<!-- EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PxA9"/>
+								</widget>
+							</container>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="557896" type="use"/>
+								</widget>
+						
+								<!-- NP EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PGR9"/>
+								</widget>
+							</container>
+						</container>
+				
+				<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
+						<container class="tcs_table_trans">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="421399" type="use"/>
+								</widget>
+						
+								<!-- EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POkG"/>
+								</widget>
+							</container>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="557907" type="use"/>
+								</widget>
+						
+								<!-- NP EXPECTED GOALS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="Pop9"/>
+								</widget>
+							</container>
+						</container>
+				
+						<!-- HEADERS WON PER 90 + AERIEL ATTEMPTS PER 90 -->
+						<container class="tcs_table">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+				
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="388151" type="use"/>
+								</widget>
+						
+								<!-- HEADERS WON PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POHg"/>
+								</widget>
+							</container>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="376379" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POhg"/>
+								</widget>
+							</container>
+					
+						</container>
+			
+						<!-- HEADERS WON PER 90 + DISTANCE COVERED PER 90 -->
+						<container class="tcs_table_trans">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+				
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="542452" type="use"/>
+								</widget>
+						
+								<!-- HEADERS WON PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="Podr"/>
+								</widget>
+							</container>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="301212" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PODr"/>
+								</widget>
+							</container>
+					
+						</container>
+				
+						<!-- HEADERS WON PER 90 + DISTANCE COVERED PER 90 -->
+						<container class="tcs_table">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+				
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="513534" type="use"/>
+								</widget>
+						
+								<!-- HEADERS WON PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PObg"/>
+								</widget>
+							</container>
+
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="552443" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POt9"/>
+								</widget>
+							</container>
+					
+						</container>
+				
+						<!-- HEADERS WON PER 90 + DISTANCE COVERED PER 90 -->
+						<container class="tcs_table_trans">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+				
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="555713" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PRS9"/>
+								</widget>
+							</container>
+					
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="554495" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="Prs9"/>
+								</widget>
+							</container>
+					
+						</container>
+				
+						<container class="tcs_table">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+				
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="555713" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="PRS9"/>
+								</widget>
+							</container>
+					
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="554495" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="Prs9"/>
+								</widget>
+							</container>
+					</container>
+						
+						<container class="tcs_table_trans">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+				
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="552477" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POW9"/>
+								</widget>
+							</container>
+					
+							<container>
+								<layout class="vertical_arrange_autosize"/>
+						
+								<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+								<!-- LABEL -->
+								<widget class="text" size="small">
+									<translation id="text" translation_id="513536" type="use"/>
+								</widget>
+						
+								<!-- AERIEL ATTEMPTS PER 90 -->
+								<widget class="dashed_number_label" size="10.5" style="semi_bold">
+									<record id="object_property" get_property="POL9"/>
+								</widget>
+							</container>
+					</container>
+						
+					</container>
+				</container>
+				
+			</widget>
+		</container>
+
+		<!-- PROS AND CONS 
 		<container id="rep3">
 			<translation id="title" type="use" value="Pros/Cons"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true" />
@@ -303,12 +695,12 @@
 				<translation id="title" translation_id="420686" type="use" />
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
-		</container>		
+		</container> -->
 
 		<!-- ANALYST REPORT -->
 		<container id="rep4">
-			<translation id="title" translation_id="447607" type="use" />
-			<layout class="stick_to_sides_attachment" apply_to_children="true" />
+			<translation id="title" translation_id="447607" type="use"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<container>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
@@ -322,16 +714,16 @@
 
 					<!--Data hub widgets-->
 					<container>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 						<widget class="player_additional_stats_panel" id="staP" file="player/player additional stats mini report">
-							<record id="object_property" get_property="objt" set_property="objt" />
+							<record id="object_property" get_property="objt" set_property="objt"/>
 						</widget>
 
 						<widget class="data_analyst_visualisation_widget" id="visU" hidden="true" visualisation_type="polygon" data_type="player" category="defensive_wide_midfielder" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
-							<record id="object_property" get_property="objt" set_property="objt" />
-							<record id="object_property" get_property="PclC" set_property="comp" />
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<record id="object_property" get_property="PclC" set_property="comp"/>
 						</widget>
 					</container>
 				</widget>
@@ -344,59 +736,59 @@
 				<record id="object_property" get_property="PHcr" set_property="hidn"/>
 
 				<widget class="player_data_analyst_report_panel" id="PrDa" file="none" late_loading="true">
-					<translation id="title" translation_id="420686" type="use" />
+					<translation id="title" translation_id="420686" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 
-					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 
 					<!-- No analyst report -->
 					<container id="ndar" class="main_box">
-						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
 
 						<container id="nocs" height="60">
-							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
-							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
 							<!--explanatory text-->
 							<widget class="text" id="titT" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
-								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
-								<translation id="text" translation_id="447601" type="use" value="Analyst Report Required[COMMENT: shown when the user can't view player info without getting anlalyst report first]" />
+								<translation id="text" translation_id="447601" type="use" value="Analyst Report Required[COMMENT: shown when the user can't view player info without getting anlalyst report first]"/>
 							</widget>
 							<widget class="icon_button" id="sctP" click_event="rcar" auto_size="horizontal" height="30" icon="icons/16px/search">
-								<translation id="text" translation_id="243421" type="use" value="Scout Player" />
-								<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+								<translation id="text" translation_id="243421" type="use" value="Scout Player"/>
+								<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
 							</widget>
 						</container>
 
 						<widget id="nocn" class="label" spec="text" size="11" alignment="left" auto_size="vertical">
-							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 						</widget>
 					</container>
 
 					<!-- Already being analyzed -->
 					<container id="anlc" class="main_box">
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 						<!--explanatory text-->
 						<widget class="text" alignment="centre" spec="text" colour="attention">
-							<translation id="text" translation_id="447603" type="use" value="Analysis In Progress[COMMENT: FR 21135 disabled menu item when a player is already being analysed]" />
+							<translation id="text" translation_id="447603" type="use" value="Analysis In Progress[COMMENT: FR 21135 disabled menu item when a player is already being analysed]"/>
 						</widget>
 					</container>
 
-					<container  id="pctc">
+					<container id="pctc">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<container >
-							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
 
 							<container>
 								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="4"/>
 
 								<container class="tcs_box" rrep="fg positive" transparency="0.4">
-									<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+									<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 									<widget class="text" colour="fg positive" size="large" font="title" alignment="left,centre_y" auto_size="vertical">
-										<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+										<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
 									</widget>
 
 									<widget class="table" id="tpro" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
@@ -405,13 +797,13 @@
 										</list>
 									</widget>
 
-									<widget class="text" id="nPro" auto_size="vertical" colour ="faded text" multiline="true" hidden="true"/>
+									<widget class="text" id="nPro" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
 								</container>
 
 								<container class="tcs_box" rrep="fg negative" transparency="0.4">
-									<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+									<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 									<widget class="text" colour="fg negative" size="large" font="title" alignment="left,centre_y" auto_size="vertical">
-										<translation id="text" translation_id="361094" type="use" value="Pros[COMMENT: FR 8316 ]" />
+										<translation id="text" translation_id="361094" type="use" value="Pros[COMMENT: FR 8316 ]"/>
 									</widget>
 
 									<widget class="table" id="tcon" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
@@ -420,7 +812,7 @@
 										</list>
 									</widget>
 
-									<widget class="text" id="nCon" auto_size="vertical" colour ="faded text" multiline="true" hidden="true"/>
+									<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
 								</container>
 							</container>
 
