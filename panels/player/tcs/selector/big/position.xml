@@ -21,15 +21,14 @@
 
 					<!-- Header -->
 					<widget class="link_button" section="Ptac" auto_size="all" navigation_focus_target="false">
-						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
-						<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="6"/>
 						<translation id="text" translation_id="230082" type="use" value="Positions"/>
 					</widget>
 
 					<!-- Popup menu for highlighting attributes -->
 					<widget class="popup_table_button" appearance="buttons/subtle/normal/button" id="hipo" item_file="tactics/positions indicator highlight menu" fixed="true" select_event="high" auto_size="all">
-						<layout class="stick_to_sides_attachment" alignment="right" inset="24"/>
-						<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
+						<layout class="stick_to_sides_attachment" alignment="right" inset="32"/>
 						<translation id="text" translation_id="383368" type="use" value="Highlight[COMMENT: FR 10661; player overview positions panel; label for popup button displaying position highlighting options]"/>
 					</widget>
 				</container>
