@@ -5,7 +5,7 @@
 	<widget class="player_personal_details_panel" id="ppdp" navigation_container="true" height="80">
 		<record id="object_property" get_property="objt" set_property="objt"/>
 	</widget>
-	
+
 	<container class="vertical_adaptive_container" gap="8" id="top">
 		<!-- <layout class="vertical_arrange" vertical_layout="-580,-170" vertical_gap="8"/> -->
 
@@ -34,7 +34,7 @@
 						</container>
 					</container>
 
-					<!-- BOTTOM -->
+					<!-- BOTTOM 
 					<container class="tcs_box" default_height="-6" priority="2" minimum_height="160">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -43,8 +43,8 @@
 							<integer id="default_for_international_managers_other_team" value="pscR"/>
 							<integer id="default_for_everyone_else" value="pscR"/>
 							<integer id="default_for_versus_mode" value="pscR"/>
-						</container>
-					</container>
+						</container> 
+					</container> -->
 				</container>
 
 				<!-- MIDDLE AND RIGHT -->
@@ -82,13 +82,16 @@
 
 					</container>
 
-					<container default_width="520" priority="2">
-						<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+					<container default_width="520" priority="2" class="vertical_adaptive_container" gap="8">
 
-						<container class="tcs_box">
+						<container class="tcs_box" default_height="-10" priority="1">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 							<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+								<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<translation id="title" translation_id="254774" type="use"/>
+								</widget>
 								<integer id="default_for_unemployed_managers" value="Ppos"/>
 								<integer id="default_for_international_managers_other_team" value="Ppos"/>
 								<integer id="default_for_everyone_else" value="Ppos"/>
@@ -96,7 +99,7 @@
 							</container>
 						</container>
 
-						<container class="tcs_box">
+						<container class="tcs_box" default_height="-6" priority="2" minimum_height="160">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 							<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
@@ -514,7 +517,7 @@
 							<container class="tcs_box">
 								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	
+
 							</container>
 
 							<!-- BOTTOM -->
@@ -810,7 +813,7 @@
 				<integer id="default_for_everyone_else" value="Pgrg"/>
 				<integer id="default_for_versus_mode" value="Pgrg"/>
 			</container>
-			
+
 			<!-- Season stats-->
 			<container priority="1" default_width="-48" navigation_container="true">
 				<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
