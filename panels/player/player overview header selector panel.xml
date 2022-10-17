@@ -72,10 +72,15 @@
 
 	<!-- PROS AND CONS -->
 	<container class="player_scout_reports_panel" id="thPC" file="player/tcs/selector/header/tcs pros cons">
-		<translation id="title" type="use" value="TCS Pros and Cons"/>
+		<translation id="title" type="use" translation_id="254774"/>
 	</container>
 
-	<!-- PROS AND CONS -->
+	<!-- PROS AND CONS ONLY -->
+	<container class="player_scout_reports_panel" id="tPCo" file="player/tcs/selector/header/tcs pros cons only">
+		<translation id="title" type="use" value="Pros and Cons"/>
+	</container>
+
+	<!-- TRANSFER STATUS -->
 	<container class="player_transfer_information_panel" id="thTr" file="player/tcs/selector/header/transfer">
 		<translation id="title" type="use" translation_id="298527"/>
 	</container>
