@@ -5,5 +5,13 @@
 	
 	<colour name="divider" 																			value="fg"/>
 	
-	
+	<!-- TCS PROFILE ATTRIBUTE COLOURS -->
+	<colour name="low attribute" red="169" green="169" blue="169" />
+	<colour name="normal attribute" red="241" green="241" blue="241" />
+	<colour name="good attribute" red="1" green="238" blue="255" />
+	<colour name="excellent attribute" red="255" green="235" blue="59" />
+	<colour name="low attribute background" red="200" green="21" blue="16" alpha="140"/>
+	<colour name="normal attribute background" red="0" green="127" blue="228" alpha="200"/>
+	<colour name="good attribute background" red="0" green="120" blue="106" />
+	<colour name="excellent attribute background" red="22" green="180" blue="40" />
 </properties>
