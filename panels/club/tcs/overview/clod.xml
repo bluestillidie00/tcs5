@@ -1,7 +1,7 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<container class="horizontal_adaptive_container" gap="4" id="left">
+	<container class="horizontal_adaptive_container" gap="8" id="left">
 		<!-- LEAGUE AND COMP LOGO -->
 		<container priority="1">
 			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="8"/>
