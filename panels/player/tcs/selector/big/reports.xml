@@ -23,13 +23,10 @@
 					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
 
 					<widget class="player_scout_reports_panel" id="pscR" late_loading="true" file="none">
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 						<translation id="title" translation_id="420686" type="use"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
-						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0">
-							<global id="gap" name="ui.main_box_gap"/>
-						</layout>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-
+						
 						<!-- NO REPORT -->
 						<container id="norp" hidden="true">
 							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
@@ -207,8 +204,142 @@
 						<record id="object_property" get_property="objt" set_property="objt"/>
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<widget class="player_form_summary_panel" file="player/player form summary panel for analyst report">
+						<widget class="player_form_summary_panel" file="none"  maximum_items="10" ompl="true">
 							<record id="object_property" get_property="objt" set_property="objt"/>
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							
+							<container class="vertical_adaptive_container">
+							
+							<!-- HEADER -->
+							<container height="18" priority="2">
+								<attachment_group class="horizontal_arrange" horizontal_alignment="left" />
+								<string id="skin_style" value="title link" />
+
+								<!-- Linked header -->
+								<widget class="link_button" section="Pfrm" auto_size="all">
+									<translation id="text" translation_id="557845" type="use" />
+								</widget>
+							</container>
+
+							<container default_height="-1" priority="1" minimum_height="25">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<!-- NONE AVAILABLE SONG -->
+								<widget class="label" id="nfrm" size="11" alignment="centre" hidden="true" colour="faded text">
+									<translation id="text" translation_id="338020" type="use" />
+								</widget>
+
+								<container id="cont" class="vertical_adaptive_container">
+									<!-- <attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" /> -->
+									<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+									<!-- graph -->
+									<container default_height="-1" minimum_height="25" priority="1">
+<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+										<widget class="graph" id="grap" draw_shadows="true" shadow_offset="1,2" draw_label="false">
+											<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+											<record id="instant_hint">
+												<string id="format" value="[%fraction#1-3.2]"/>
+											</record>
+											<record id="default_series_properties" colour="accent" type="line" line_width="3" point_radius="6" point_colour="accent"/>
+											<record id="x_axis" hidden="true">
+												<string id="format" value="[%fraction#1-3.0]"/>
+												<translation id="title" translation_id="242774" type="use" value="Match" />
+											</record>
+											<record id="y_axis" hidden="true">
+												<string id="format" value="[%fraction#1-3.0]"/>
+												<record id="title_font" style="vertical"/>
+												<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
+											</record>
+											<list id="grid_line_styles">
+												<record colour="graph row"/>
+												<record/>
+											</list>
+										</widget>
+										<widget class="label" id="nogp" hidden="true" colour="faded text">
+											<translation id="text" translation_id="330262" type="use" value="No Games Played Yet[COMMENT: player_positions_details_panel; string indicating that a player is yet to compete in any matches and as such has no positional data]" />
+										</widget>
+									</container>
+
+									<container id="psco" class="tcs_table" priority="2">
+										<attachment_group class="vertical_arrange_autosize"  />
+
+										<widget class="text" font="title" auto_size="vertical">
+											<translation id="text" translation_id="247414" type="use" />
+										</widget>
+
+										<container>
+											<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+											<container>
+												<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+												<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+												<layout class="arrange_horizontal_attachment" alignment="left,extend" />
+												<widget class="picture" file="icons/16px/recommended nation" auto_size="all" image_alignment="centre" red_replacement="faded text" />
+
+												<!-- average rating -->
+												<widget class="formatted_label" id="avrt" auto_size="vertical" size="small" alignment="left,centre_y">
+													<translation id="format" translation_id="383949" type="use" value="[%fraction#1-4.2] Average Rating[COMMENT: FR 10661; player overview form; average rating of player]" />
+												</widget>
+											</container>
+
+											<container>
+												<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+												<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+												<layout class="arrange_horizontal_attachment" alignment="left,extend" />
+												<widget class="picture" file="icons/16px/goal" auto_size="all" image_alignment="centre" red_replacement="faded text" />
+
+												<!-- goals scored -->
+												<widget class="formatted_label" id="glsc" auto_size="all" size="small" alignment="left,centre_y">
+													<list id="format">
+														<record value="1">
+															<translation id="format" translation_id="385425" type="use" value="1 goal[COMMENT: FR 10661; player overview form; number of goals scored by player; singular]" />
+														</record>
+														<record default_value="true">
+															<translation id="format" translation_id="327328" type="use" value="[%number#1] goals" />
+														</record>
+													</list>
+												</widget>
+												<!-- goals conceded -->
+												<widget class="formatted_label" id="glcd" auto_size="vertical" size="small" alignment="left,centre_y">
+													<list id="format">
+														<record value="1">
+															<translation id="format" translation_id="382197" type="use" value="1 goal conceded[COMMENT: league table data popup; number of goals conceded by a team in the league]" />
+														</record>
+														<record default_value="true">
+															<translation id="format" translation_id="374433" type="use" value="[%number#1] goals conceded[COMMENT: league table data popup; number of goals conceded by a team in the league]" />
+														</record>
+													</list>
+												</widget>
+											</container>
+
+											<container>
+												<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+												<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+												<layout class="arrange_horizontal_attachment" alignment="left,extend" />
+												<widget class="picture" file="icons/16px/assist" id="assp" auto_size="all" image_alignment="centre" red_replacement="faded text" />
+
+												<!-- assists rating -->
+												<widget class="formatted_label" id="asst" auto_size="vertical" size="small" alignment="left,centre_y">
+													<list id="format">
+														<record value="1">
+															<translation id="format" translation_id="385424" type="use" value="1 assist[COMMENT: FR 10661; player overview form; number of assists made by player; singular]" />
+														</record>
+														<record default_value="true">
+															<translation id="format" translation_id="384051" type="use" value="[%number#1] assists[COMMENT: FR 10661; player overview form; number of assists made by player; multiple/plural]" />
+														</record>
+													</list>
+												</widget>
+											</container>
+										</container>
+									</container>
+									
+								</container>
+
+							</container>
+							</container>
+
 						</widget>
 					</widget>
 				</container>
@@ -293,7 +424,7 @@
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
 		</container>
-	
+
 		<!-- PER 90 -->
 		<container id="rep5">
 			<translation id="title" translation_id="374186" type="use"/>
@@ -314,14 +445,14 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="249483" type="use"/>
 								</widget>
-						
+
 								<!-- EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POgg"/>
@@ -330,35 +461,35 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="301175" type="use"/>
 								</widget>
-						
+
 								<!-- NP EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POag"/>
 								</widget>
 							</container>
 						</container>
-				
-				<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
+
+						<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
 						<container class="tcs_table_trans">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="513538" type="use"/>
 								</widget>
-						
+
 								<!-- EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PxG9"/>
@@ -367,35 +498,35 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="557890" type="use"/>
 								</widget>
-						
+
 								<!-- NP EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PNx9"/>
 								</widget>
 							</container>
 						</container>
-				
-				<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
+
+						<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
 						<container class="tcs_table">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="513539" type="use"/>
 								</widget>
-						
+
 								<!-- EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PxA9"/>
@@ -404,35 +535,35 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="557896" type="use"/>
 								</widget>
-						
+
 								<!-- NP EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PGR9"/>
 								</widget>
 							</container>
 						</container>
-				
-				<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
+
+						<!-- EXPECTED GOALS PER 90 + NON PENALTIES XG PER 90 -->
 						<container class="tcs_table_trans">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="421399" type="use"/>
 								</widget>
-						
+
 								<!-- EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POkG"/>
@@ -441,35 +572,35 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="557907" type="use"/>
 								</widget>
-						
+
 								<!-- NP EXPECTED GOALS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="Pop9"/>
 								</widget>
 							</container>
 						</container>
-				
+
 						<!-- HEADERS WON PER 90 + AERIEL ATTEMPTS PER 90 -->
 						<container class="tcs_table">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
-				
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="388151" type="use"/>
 								</widget>
-						
+
 								<!-- HEADERS WON PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POHg"/>
@@ -478,36 +609,36 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="376379" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POhg"/>
 								</widget>
 							</container>
-					
+
 						</container>
-			
+
 						<!-- HEADERS WON PER 90 + DISTANCE COVERED PER 90 -->
 						<container class="tcs_table_trans">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
-				
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="542452" type="use"/>
 								</widget>
-						
+
 								<!-- HEADERS WON PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="Podr"/>
@@ -516,36 +647,36 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="301212" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PODr"/>
 								</widget>
 							</container>
-					
+
 						</container>
-				
+
 						<!-- HEADERS WON PER 90 + DISTANCE COVERED PER 90 -->
 						<container class="tcs_table">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
-				
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="513534" type="use"/>
 								</widget>
-						
+
 								<!-- HEADERS WON PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PObg"/>
@@ -554,135 +685,135 @@
 
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="552443" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POt9"/>
 								</widget>
 							</container>
-					
+
 						</container>
-				
+
 						<!-- HEADERS WON PER 90 + DISTANCE COVERED PER 90 -->
 						<container class="tcs_table_trans">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
-				
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="555713" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PRS9"/>
 								</widget>
 							</container>
-					
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="554495" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="Prs9"/>
 								</widget>
 							</container>
-					
+
 						</container>
-				
+
 						<container class="tcs_table">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
-				
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="555713" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="PRS9"/>
 								</widget>
 							</container>
-					
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="554495" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="Prs9"/>
 								</widget>
 							</container>
-					</container>
-						
+						</container>
+
 						<container class="tcs_table_trans">
 							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
-				
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="552477" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POW9"/>
 								</widget>
 							</container>
-					
+
 							<container>
 								<layout class="vertical_arrange_autosize"/>
-						
+
 								<record id="default_properties" auto_size="vertical" alignment="left"/>
 
 								<!-- LABEL -->
 								<widget class="text" size="small">
 									<translation id="text" translation_id="513536" type="use"/>
 								</widget>
-						
+
 								<!-- AERIEL ATTEMPTS PER 90 -->
 								<widget class="dashed_number_label" size="10.5" style="semi_bold">
 									<record id="object_property" get_property="POL9"/>
 								</widget>
 							</container>
-					</container>
-						
+						</container>
+
 					</container>
 				</container>
-				
+
 			</widget>
 		</container>
 
