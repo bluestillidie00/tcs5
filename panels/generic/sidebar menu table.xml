@@ -6,7 +6,7 @@
     <string id="table_selected_appearance" value="tables/custom/sidebar/selected/row"/>
     <string id="table_alt_selected_appearance" value="tables/custom/sidebar/alt selected/row"/>
 
-  	<container class="tcs_box" appearance="tcs/boxes/ui/sidebar/paper" rrep="primary" grep="bg">
+  	<container class="tcs_box" appearance="tcs/boxes/ui/sidebar/paper" rrep="primary" grep="bg" transparency="0">
 		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="4"/>
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true" />
 		
