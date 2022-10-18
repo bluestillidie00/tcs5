@@ -369,6 +369,20 @@
 					</container>
 				</container>
 			</container>
+
+			
+			<!-- <container id="hipl">
+				<translation id="title" translation_id="243323" type="use"/>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container class="tcs_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container class="club_records_master_panel" id="hipl" file="club/tcs/overview/records/master">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				</container>
+			</container> -->
 		</container>
 
 		<!-- RIGHT -->

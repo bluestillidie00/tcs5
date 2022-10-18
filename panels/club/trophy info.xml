@@ -1,0 +1,29 @@
+<panel width="120">
+    <layout class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="8"/>
+
+    <container>
+        <layout class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0"/>
+
+        <widget class="picture" id="" file="pictures/trophies/default/shadow" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true">
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+        </widget>
+
+        <widget class="object_portrait_picture" id="trop" scale_picture="true">
+            <integer id="property" value="trop"/>
+            <boolean id="keep_aspect_ratio" value="true"/>
+            <boolean id="comp_use_trophy_icon" value="true"/>
+            <flags id="image_alignment" value="centre_x,bottom"/>
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        </widget>
+
+    </container>
+
+    <container class="inner_subtle_box" height="75">
+        <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+        <widget class="text" id="wcnt" alignment="centre" size="large" style="bold" auto_size="vertical" />
+        <widget class="text" id="cmpn" multiline="true" auto_size="vertical" alignment="centre_x,top" size="small"/>
+
+    </container>
+
+</panel>
