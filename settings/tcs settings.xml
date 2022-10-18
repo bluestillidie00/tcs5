@@ -1,6 +1,7 @@
 <properties version="1.0">
 
 	<colour name="tcs_bg" 																			value="rgb(28,32,48)"/>
+	<colour name="tcs_bg" 																			value="rgb(28,32,48)"/>
 	<colour name="tcs_bg_lighter" 															value="rgb(40,45,57)"/>
 	
 	<colour name="divider" 																			value="fg"/>
@@ -14,4 +15,9 @@
 	<colour name="normal attribute background" red="0" green="127" blue="228" alpha="200"/>
 	<colour name="good attribute background" red="0" green="120" blue="106" />
 	<colour name="excellent attribute background" red="22" green="180" blue="40" />
+	
+	<!-- WTS LOGO -->
+	<colour name="wts_p" 																			value="rgb(245,245,245)"/>
+	<colour name="wts_s" 																			value="rgb(255,0,132)"/>
+	
 </properties>

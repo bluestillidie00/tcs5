@@ -122,7 +122,7 @@
             </widget>
 
             <!-- FM button -->
-            <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="44" height="44" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
+            <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="tcs/icons/ui/wts" width="50" height="50" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
                 <event id="click_notification_event" event_id="FM" item="NULL" />
                 <event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
                 <record id="items" file="menus/game" />
