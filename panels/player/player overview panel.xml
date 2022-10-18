@@ -10,31 +10,37 @@
 		<!-- <layout class="vertical_arrange" vertical_layout="-580,-170" vertical_gap="8"/> -->
 
 		<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true" default_height="-555" priority="1">
+	
 
-			<!-- OVERVIEW -->
-			<container class="horizontal_adaptive_container" gap="8" id="over">
-				<translation id="title" translation_id="247414" type="use"/>
+			<container id="over" class="player_profile_panel" file="none">
+					<translation id="title" translation_id="247414" type="use"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-				<!-- LEFT SIDE -->
-				<container class="vertical_adaptive_container" default_width="420" priority="2" gap="8">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				
+				<!-- OVERVIEW -->
+				<container class="horizontal_adaptive_container" gap="8" >
 
-					<!-- TOP -->
-					<container class="tcs_box" default_height="-10" priority="1">
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<!-- LEFT SIDE -->
+					<container class="vertical_adaptive_container" default_width="420" priority="2" gap="8">
 
-						<container class="client_object_viewer_selector_panel" id="csL1" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
-							<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-								<translation id="title" translation_id="254774" type="use"/>
-							</widget>
-							<integer id="default_for_unemployed_managers" value="tCSR"/>
-							<integer id="default_for_international_managers_other_team" value="tCSR"/>
-							<integer id="default_for_everyone_else" value="tCSR"/>
-							<integer id="default_for_versus_mode" value="tCSR"/>
+						<!-- TOP -->
+						<container class="tcs_box" default_height="-10" priority="1">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container class="client_object_viewer_selector_panel" id="csL1" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+								<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
+                        <record id="object_property" get_property="Pers"/>
+									<translation id="title" translation_id="254774" type="use"/>
+								</widget>
+								<integer id="default_for_unemployed_managers" value="tCSR"/>
+								<integer id="default_for_international_managers_other_team" value="tCSR"/>
+								<integer id="default_for_everyone_else" value="tCSR"/>
+								<integer id="default_for_versus_mode" value="tCSR"/>
+							</container>
 						</container>
-					</container>
 
-					<!-- BOTTOM 
+						<!-- BOTTOM 
 					<container class="tcs_box" default_height="-6" priority="2" minimum_height="160">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -45,79 +51,82 @@
 							<integer id="default_for_versus_mode" value="pscR"/>
 						</container> 
 					</container> -->
-				</container>
+					</container>
 
-				<!-- MIDDLE AND RIGHT -->
-				<container class="horizontal_adaptive_container" gap="8" id="mid" default_width="-1" minimum_width="650" priority="1">
-
-					<!-- MIDDLE -->
-					<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
+					<!-- MIDDLE AND RIGHT -->
+					<container class="horizontal_adaptive_container" gap="8" id="mid" default_width="-1" minimum_width="650" priority="1">
 					
-					                    <record id="object_property" get_property="objt" set_property="objt" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
 
-						<!-- ATTRIBUTES -->
-						<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="360" priority="1">
-                        <record id="object_property" get_property="Pers"/>
-						</widget>
+						<!-- MIDDLE -->
+						<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
+							
+							<record id="object_property" get_property="objt" set_property="objt" />
 
-						<!-- BOTTOM -->
-						<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<!-- ATTRIBUTES -->
+							<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="360" priority="1">
+<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
 
-							<container class="client_object_viewer_selector_panel" id="cos6" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
-								<integer id="default_for_unemployed_managers" value="pfSm"/>
-								<integer id="default_for_international_managers_other_team" value="pfSm"/>
-								<integer id="default_for_everyone_else" value="pfSm"/>
-								<integer id="default_for_versus_mode" value="pfSm"/>
-								<widget class="player_form_panel" id="pfSm" late_loading="true" file="player/tcs/selector/big/form 20">
-									<translation id="title" value="Form (Last 20 Matches)" type="use"/>
-								</widget>
-								<!-- <widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
+							<!-- BOTTOM -->
+							<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<container class="client_object_viewer_selector_panel" id="cos6" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
+									<integer id="default_for_unemployed_managers" value="pfSm"/>
+									<integer id="default_for_international_managers_other_team" value="pfSm"/>
+									<integer id="default_for_everyone_else" value="pfSm"/>
+									<integer id="default_for_versus_mode" value="pfSm"/>
+									<widget class="player_form_panel" id="pfSm" late_loading="true" file="player/tcs/selector/big/form 20">
+										<translation id="title" value="Form (Last 20 Matches)" type="use"/>
+									</widget>
+									<!-- <widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
 									<translation id="title" translation_id="385617" type="use"/>
 								</widget> -->
-								<widget class="person_happiness_panel" file="player/tcs/selector/happiness" id="tpmr" late_loading="true" valid_for_other_team_managers="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false">
-									<translation id="title" type="use" translation_id="227840"/>
-								</widget>
+									<widget class="person_happiness_panel" file="player/tcs/selector/happiness" id="tpmr" late_loading="true" valid_for_other_team_managers="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false">
+										<translation id="title" type="use" translation_id="227840"/>
+									</widget>
+								</container>
+							</container>
+
+						</container>
+
+						<container default_width="520" priority="2" class="vertical_adaptive_container" gap="8">
+
+							<container class="tcs_box" default_height="-14" priority="1">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+									<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<translation id="title" translation_id="254774" type="use"/>
+									</widget>
+									<integer id="default_for_unemployed_managers" value="Ppos"/>
+									<integer id="default_for_international_managers_other_team" value="Ppos"/>
+									<integer id="default_for_everyone_else" value="Ppos"/>
+									<integer id="default_for_versus_mode" value="Ppos"/>
+								</container>
+							</container>
+
+							<container class="tcs_box" default_height="-6" priority="2">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+									<integer id="default_for_unemployed_managers" value="PrCo"/>
+									<integer id="default_for_international_managers_other_team" value="PrCo"/>
+									<integer id="default_for_everyone_else" value="PrCo"/>
+									<integer id="default_for_versus_mode" value="PrCo"/>
+								</container>
+
 							</container>
 						</container>
 
 					</container>
-
-					<container default_width="520" priority="2" class="vertical_adaptive_container" gap="8">
-
-						<container class="tcs_box" default_height="-14" priority="1">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
-								<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
-									<record id="object_property" get_property="objt" set_property="objt"/>
-									<translation id="title" translation_id="254774" type="use"/>
-								</widget>
-								<integer id="default_for_unemployed_managers" value="Ppos"/>
-								<integer id="default_for_international_managers_other_team" value="Ppos"/>
-								<integer id="default_for_everyone_else" value="Ppos"/>
-								<integer id="default_for_versus_mode" value="Ppos"/>
-							</container>
-						</container>
-
-						<container class="tcs_box" default_height="-6" priority="2">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
-								<integer id="default_for_unemployed_managers" value="PrCo"/>
-								<integer id="default_for_international_managers_other_team" value="PrCo"/>
-								<integer id="default_for_everyone_else" value="PrCo"/>
-								<integer id="default_for_versus_mode" value="PrCo"/>
-							</container>
-
-						</container>
-					</container>
-
 				</container>
 			</container>
 
 			<!-- ANALYSIS -->
-			<container id="data">
+			<container id="data">	
 				<translation id="title" translation_id="334959" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,4,4,4"/>
 
@@ -515,199 +524,199 @@
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 							<container file="none" id="ptst" class="player_training_information">
-      <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="16" horizontal_alignment="horizontal" horizontal_inset="0" />
+								<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="16" horizontal_alignment="horizontal" horizontal_inset="0" />
 
-<container >
-					<layout class="vertical_arrange" vertical_layout="-8,-12" />
+								<container >
+									<layout class="vertical_arrange" vertical_layout="-8,-12" />
 
-		<widget class="pitch_with_player_positions" id="pspi" allow_click="false" wants_mouse_events="false" pitch_keep_selected_icons="false" vertical="false" pitch_alignment="centre_x,top" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="alt text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="8" height="180">
-					<string id="pitch_kit_icon" value="pitch/icons/dots" />
-				</widget>
+								<!-- 	<widget class="pitch_with_player_positions" id="pspi" allow_click="false" wants_mouse_events="false" pitch_keep_selected_icons="false" vertical="false" pitch_alignment="centre_x,top" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="alt text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="8" height="180">
+										<string id="pitch_kit_icon" value="pitch/icons/dots" />
+									</widget> -->
 
-<container>
-                                        <attachment_group class="vertical_arrange_autosize"/>
+									<container>
+										<attachment_group class="vertical_arrange_autosize"/>
 
-  <!-- Position/Role/Duty -->
-                                    <container>
-                                        <attachment_group class="vertical_arrange_autosize"/>
+										<!-- Position/Role/Duty -->
+										<container>
+											<attachment_group class="vertical_arrange_autosize"/>
 
-                                        <widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
-                                            <translation id="text" translation_id="363709" type="use" value="Position/Role/Duty[COMMENT: FR 8989 - Player position, role and duty]" />
-                                        </widget>
+											<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+												<translation id="text" translation_id="363709" type="use" value="Position/Role/Duty[COMMENT: FR 8989 - Player position, role and duty]" />
+											</widget>
 
-                                        <widget class="individual_position_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itpu" alignment="left,centre_y" auto_size="vertical" event_target="ptap" target="ptap">
-                                            <flags id="event_target" value="ptap" />
-                                        </widget>
-                                    </container>
+											<widget class="individual_position_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itpu" alignment="left,centre_y" auto_size="vertical" event_target="ptap" target="ptap">
+												<flags id="event_target" value="ptap" />
+											</widget>
+										</container>
 
-      <!-- Additional Focus -->
-                                    <container>
-                                        <attachment_group class="vertical_arrange_autosize"/>
+										<!-- Additional Focus -->
+										<container>
+											<attachment_group class="vertical_arrange_autosize"/>
 
-                                        <widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
-                                            <translation id="text" translation_id="394317" type="use" value="Additional Focus[COMMENT - individual training popup menu; specific focus training]" />
-                                        </widget>
+											<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+												<translation id="text" translation_id="394317" type="use" value="Additional Focus[COMMENT - individual training popup menu; specific focus training]" />
+											</widget>
 
-                                        <widget class="individual_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itat" alignment="left,centre_y" auto_size="vertical">
-                                            <flags id="event_target" value="ptap" />
-                                        </widget>
-                                    </container>
-									
-									                        <!-- Intensity Level -->
-                                    <container>
-                                        <attachment_group class="vertical_arrange_autosize"/>
+											<widget class="individual_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itat" alignment="left,centre_y" auto_size="vertical">
+												<flags id="event_target" value="ptap" />
+											</widget>
+										</container>
 
-                                        <widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
-                                            <translation id="text" translation_id="347767" type="use" value="Intensity Level[COMMENT: team training; the desired default level of intensity the players will train under]" />
-                                        </widget>
+										<!-- Intensity Level -->
+										<container>
+											<attachment_group class="vertical_arrange_autosize"/>
 
-                                        <widget class="player_training_intensity_rest_popup_button" fixed="false" appearance="buttons/standard/normal/button" id="inPt" alignment="left,centre_y" auto_size="vertical" />
+											<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+												<translation id="text" translation_id="347767" type="use" value="Intensity Level[COMMENT: team training; the desired default level of intensity the players will train under]" />
+											</widget>
 
-                                        <widget class="text" id="phyL" auto_size="vertical" alignment="centre_x, centre_y" colour="faded text" size="8" />
+											<widget class="player_training_intensity_rest_popup_button" fixed="false" appearance="buttons/standard/normal/button" id="inPt" alignment="left,centre_y" auto_size="vertical" />
 
-                                        <widget class="client_object_property_panel" id="phyR" size="8" property="pTIR" alignment="centre_x,centre_y" colour="faded text">
-                                            <record id="widget_properties" auto_size="vertical" />
-                                            <record id="object_property">
-                                                <integer id="get_property" value="objt"/>
-                                                <integer id="set_property" value="objt"/>
-                                            </record>
-                                        </widget>
-                                    </container>
-																	
-                                    <!-- Weaker Foot Training -->
-                                    <container>
-                                        <attachment_group class="vertical_arrange_autosize"/>
+											<widget class="text" id="phyL" auto_size="vertical" alignment="centre_x, centre_y" colour="faded text" size="8" />
 
-                                        <widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
-                                            <translation id="text" translation_id="505830" type="use" value="Weaker Foot Training[COMMENT: AREA: Backroom advice; SUB-AREA: Training suggestion; FR-BN: 27129; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: ]" />
-                                        </widget>
+											<widget class="client_object_property_panel" id="phyR" size="8" property="pTIR" alignment="centre_x,centre_y" colour="faded text">
+												<record id="widget_properties" auto_size="vertical" />
+												<record id="object_property">
+													<integer id="get_property" value="objt"/>
+													<integer id="set_property" value="objt"/>
+												</record>
+											</widget>
+										</container>
 
-                                        <widget class="button" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="swft" alignment="left,centre_y" auto_size="vertical" />
+										<!-- Weaker Foot Training -->
+										<container>
+											<attachment_group class="vertical_arrange_autosize"/>
 
-                                    </container>
+											<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+												<translation id="text" translation_id="505830" type="use" value="Weaker Foot Training[COMMENT: AREA: Backroom advice; SUB-AREA: Training suggestion; FR-BN: 27129; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: ]" />
+											</widget>
 
-</container>
-</container>
+											<widget class="button" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="swft" alignment="left,centre_y" auto_size="vertical" />
 
-              <!-- Training Information -->
-                                <container class="tcs_box">
-                                    <layout class="vertical_arrange_autosize"/>
+										</container>
 
-                                    <!-- Training Rating -->
-                                    <container>
-                                        <layout class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend"/>
+									</container>
+								</container>
 
-                                        <record id="object_property" get_property="Piin" set_property="hidn"/>
+								<!-- Training Information -->
+								<container class="tcs_box">
+									<layout class="vertical_arrange_autosize"/>
 
-                                        <!-- Training Rating -->
-                                        <container class="vertical_arrange_container" alignment="top,extend" gap="0" auto_size="all">
+									<!-- Training Rating -->
+									<container>
+										<layout class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend"/>
 
-                                            <widget class="label" font="label" auto_size="all">
-                                                <translation id="value" translation_id="466504" type="use" value="Training Rating[COMMENT: a rating of how well the player is getting on in training]" />
-                                            </widget>
+										<record id="object_property" get_property="Piin" set_property="hidn"/>
 
-                                            <widget class="property_list_viewer_xml_panel" file="widgets/training rating with change icon" should_colour="true" id="plci" navigation_focus_target="false" auto_size="all">
-                                                <record id="object_property" get_property="PtWC" set_property="valu" />
-                                            </widget>
-                                        </container>
+										<!-- Training Rating -->
+										<container class="vertical_arrange_container" alignment="top,extend" gap="0" auto_size="all">
 
-                                        <!-- Praise/Criticise -->
-                                        <container>
-                                            <layout class="horizontal_arrange_autosize_all"/>
-                                            <widget class="button" id="ptbn" click_event="ptev" auto_size="horizontal" red_replacement="pro high"/>
-                                            <widget class="button" id="ctbn" click_event="ctev" auto_size="horizontal" red_replacement="con high"/>
-                                        </container>
+											<widget class="label" font="label" auto_size="all">
+												<translation id="value" translation_id="466504" type="use" value="Training Rating[COMMENT: a rating of how well the player is getting on in training]" />
+											</widget>
 
-                                    </container>
+											<widget class="property_list_viewer_xml_panel" file="widgets/training rating with change icon" should_colour="true" id="plci" navigation_focus_target="false" auto_size="all">
+												<record id="object_property" get_property="PtWC" set_property="valu" />
+											</widget>
+										</container>
 
-                                    <!-- Training Summary -->
-                                    <container class="vertical_arrange_container" alignment="top,extend" gap="0" auto_size="vertical">
+										<!-- Praise/Criticise -->
+										<container>
+											<layout class="horizontal_arrange_autosize_all"/>
+											<widget class="button" id="ptbn" click_event="ptev" auto_size="horizontal" red_replacement="pro high"/>
+											<widget class="button" id="ctbn" click_event="ctev" auto_size="horizontal" red_replacement="con high"/>
+										</container>
 
-                                        <record id="object_property" get_property="Piin" set_property="Shwn"/>
+									</container>
 
-                                        <widget class="label" font="label" auto_size="vertical">
-                                            <translation id="value" translation_id="466504" type="use" value="Training Rating[COMMENT: a rating of how well the player is getting on in training]" />
-                                        </widget>
+									<!-- Training Summary -->
+									<container class="vertical_arrange_container" alignment="top,extend" gap="0" auto_size="vertical">
 
-                                        <widget class="text" auto_size="vertical" style="bold">
-                                            <translation id="value" translation_id="315808" type="use" value="Currently Injured" />
-                                        </widget>
-                                    </container>
-                                </container>
+										<record id="object_property" get_property="Piin" set_property="Shwn"/>
+
+										<widget class="label" font="label" auto_size="vertical">
+											<translation id="value" translation_id="466504" type="use" value="Training Rating[COMMENT: a rating of how well the player is getting on in training]" />
+										</widget>
+
+										<widget class="text" auto_size="vertical" style="bold">
+											<translation id="value" translation_id="315808" type="use" value="Currently Injured" />
+										</widget>
+									</container>
+								</container>
 							</container>
 
 						</container>
 
 						<!-- MIDDLE AND RIGHT -->
-				                        <container class="player_profile_panel" file="none"  gap="8" id="mid" default_width="-1" minimum_width="650" priority="1">
-                            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
-                            <record id="object_property" get_property="Pers"/>
-						
-						<container class="horizontal_adaptive_container">
+						<container class="player_profile_panel" file="none" id="mid" default_width="-1" minimum_width="650" priority="1">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<record id="object_property" get_property="Pers"/>
 
-							<!-- MIDDLE -->
-							<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
+							<container class="horizontal_adaptive_container" gap="8" >
 
-								<!-- ATTRIBUTES -->
-								<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="360" priority="1">
-									<record id="object_property" get_property="objt" set_property="objt"/>
-									<translation id="title" translation_id="229822" type="use" value="Attributes"/>
-								</widget>
+								<!-- MIDDLE -->
+								<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
 
-								<!-- BOTTOM -->
-								<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
-									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+									<!-- ATTRIBUTES -->
+									<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="360" priority="1">
+<record id="object_property" get_property="Pers"/> 
+										<translation id="title" translation_id="229822" type="use" value="Attributes"/>
+									</widget>
 
-									<container class="client_object_viewer_selector_panel" id="cos6" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
-										<integer id="default_for_unemployed_managers" value="pfSm"/>
-										<integer id="default_for_international_managers_other_team" value="pfSm"/>
-										<integer id="default_for_everyone_else" value="pfSm"/>
-										<integer id="default_for_versus_mode" value="pfSm"/>
-										<widget class="player_form_panel" id="pfSm" late_loading="true" file="player/tcs/selector/big/form 20">
-											<translation id="title" value="Form (Last 20 Matches)" type="use"/>
-										</widget>
-										<!-- <widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
+									<!-- BOTTOM -->
+									<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+										<container class="client_object_viewer_selector_panel" id="cos6" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
+											<integer id="default_for_unemployed_managers" value="pfSm"/>
+											<integer id="default_for_international_managers_other_team" value="pfSm"/>
+											<integer id="default_for_everyone_else" value="pfSm"/>
+											<integer id="default_for_versus_mode" value="pfSm"/>
+											<widget class="player_form_panel" id="pfSm" late_loading="true" file="player/tcs/selector/big/form 20">
+												<translation id="title" value="Form (Last 20 Matches)" type="use"/>
+											</widget>
+											<!-- <widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
 									<translation id="title" translation_id="385617" type="use"/>
 								</widget> -->
-										<widget class="person_happiness_panel" file="player/tcs/selector/happiness" id="tpmr" late_loading="true" valid_for_other_team_managers="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false">
-											<translation id="title" type="use" translation_id="227840"/>
-										</widget>
+											<widget class="person_happiness_panel" file="player/tcs/selector/happiness" id="tpmr" late_loading="true" valid_for_other_team_managers="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false">
+												<translation id="title" type="use" translation_id="227840"/>
+											</widget>
+										</container>
+									</container>
+
+								</container>
+
+								<container default_width="520" priority="2" class="vertical_adaptive_container" gap="8">
+
+									<container class="tcs_box" default_height="-14" priority="1">
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+										<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+											<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<translation id="title" translation_id="254774" type="use"/>
+											</widget>
+											<integer id="default_for_unemployed_managers" value="Ppos"/>
+											<integer id="default_for_international_managers_other_team" value="Ppos"/>
+											<integer id="default_for_everyone_else" value="Ppos"/>
+											<integer id="default_for_versus_mode" value="Ppos"/>
+										</container>
+									</container>
+
+									<container class="tcs_box" default_height="-6" priority="2">
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+										<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+											<integer id="default_for_unemployed_managers" value="PrCo"/>
+											<integer id="default_for_international_managers_other_team" value="PrCo"/>
+											<integer id="default_for_everyone_else" value="PrCo"/>
+											<integer id="default_for_versus_mode" value="PrCo"/>
+										</container>
+
 									</container>
 								</container>
 
 							</container>
-
-							<container default_width="520" priority="2" class="vertical_adaptive_container" gap="8">
-
-								<container class="tcs_box" default_height="-14" priority="1">
-									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-									<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
-										<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
-											<record id="object_property" get_property="objt" set_property="objt"/>
-											<translation id="title" translation_id="254774" type="use"/>
-										</widget>
-										<integer id="default_for_unemployed_managers" value="Ppos"/>
-										<integer id="default_for_international_managers_other_team" value="Ppos"/>
-										<integer id="default_for_everyone_else" value="Ppos"/>
-										<integer id="default_for_versus_mode" value="Ppos"/>
-									</container>
-								</container>
-
-								<container class="tcs_box" default_height="-6" priority="2">
-									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-									<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
-										<integer id="default_for_unemployed_managers" value="PrCo"/>
-										<integer id="default_for_international_managers_other_team" value="PrCo"/>
-										<integer id="default_for_everyone_else" value="PrCo"/>
-										<integer id="default_for_versus_mode" value="PrCo"/>
-									</container>
-
-								</container>
-							</container>
-
-						</container>
 						</container>
 					</container>
 
