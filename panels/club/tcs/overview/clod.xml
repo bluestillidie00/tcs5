@@ -54,10 +54,10 @@
 					<container priority="3">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="319583" type="use"/>
 						</widget>
-						<widget class="club_squad_character_label" alignment="left" icon_enabled="false" auto_size="vertical" size="10.5">
+						<widget class="club_squad_character_label" alignment="left" icon_enabled="false" auto_size="vertical" >
 							<record id="object_property" get_property="Csca"/>
 						</widget>
 					</container>
@@ -66,10 +66,10 @@
 					<container priority="2">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="227963" type="use"/>
 						</widget>
-						<widget class="club_reputation_stars_label" alignment="left" icon_enabled="false" auto_size="vertical" size="10.5">
+						<widget class="club_reputation_stars_label" alignment="left" icon_enabled="false" auto_size="vertical" >
 							<record id="object_property" get_property="Csta"/>
 						</widget>
 					</container>
@@ -78,10 +78,10 @@
 					<container priority="4">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="255029" type="use"/>
 						</widget>
-						<widget class="cash_cell" auto_size="vertical" size="10.5">
+						<widget class="cash_cell" auto_size="vertical" >
 							<record id="object_property" get_property="Ccba"/>
 						</widget>
 					</container>
@@ -102,10 +102,10 @@
 					<container priority="1">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="242479" type="use"/>
 						</widget>
-						<widget class="division_position_button" alignment="left" auto_size="vertical" size="10.5">
+						<widget class="division_position_button" alignment="left" auto_size="vertical" >
 							<record id="object_property" get_property="Cmai"/>
 						</widget>
 					</container>
@@ -114,10 +114,10 @@
 					<container priority="3">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="319581" type="use"/>
 						</widget>
-						<widget class="professional_status_label" auto_size="vertical" size="10.5">
+						<widget class="professional_status_label" auto_size="vertical" >
 							<record id="object_property" get_property="Cprs"/>
 						</widget>
 					</container>
@@ -126,10 +126,10 @@
 					<container priority="2">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="229395" type="use"/>
 						</widget>
-						<widget class="training_facilities_stars_label" auto_size="vertical" size="10.5" alignment="left">
+						<widget class="training_facilities_stars_label" auto_size="vertical"  alignment="left">
 							<record id="object_property" get_property="Ctf*"/>
 						</widget>
 					</container>
@@ -138,10 +138,10 @@
 					<container priority="4">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="251300" type="use"/>
 						</widget>
-						<widget class="club_value_description_text" auto_size="vertical" size="10.5" alignment="left,can_scale">
+						<widget class="club_value_description_text" auto_size="vertical"  alignment="left,can_scale">
 							<record id="object_property" get_property="CovD"/>
 						</widget>
 					</container>
@@ -161,10 +161,10 @@
 					<container priority="1">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="243509" type="use"/>
 						</widget>
-						<widget class="media_expectation_text" alignment="left" auto_size="vertical" size="10.5">
+						<widget class="media_expectation_text" alignment="left" auto_size="vertical" >
 							<record id="object_property" get_property="CmeD"/>
 						</widget>
 					</container>
@@ -173,10 +173,10 @@
 					<container priority="3">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="319580" type="use"/>
 						</widget>
-						<widget class="comp_button" auto_size="vertical" size="10.5" alignment="left,can_scale" icon_alignment="top,left">
+						<widget class="comp_button" auto_size="vertical"  alignment="left,can_scale" icon_alignment="top,left">
 							<record id="object_property" get_property="Ccon"/>
 						</widget>
 					</container>
@@ -185,10 +185,10 @@
 					<container priority="2">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="255008" type="use"/>
 						</widget>
-						<widget class="youth_facilities_stars_label" auto_size="vertical" size="10.5" alignment="left">
+						<widget class="youth_facilities_stars_label" auto_size="vertical"  alignment="left">
 							<record id="object_property" get_property="Cfc*"/>
 						</widget>
 					</container>
@@ -197,10 +197,10 @@
 					<container priority="4">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="229821" type="use"/>
 						</widget>
-						<widget class="club_finances_description_text" auto_size="vertical" size="10.5">
+						<widget class="club_finances_description_text" auto_size="vertical" >
 							<record id="object_property" get_property="CfiD"/>
 						</widget>
 					</container>
@@ -220,7 +220,7 @@
 					<container priority="1">
 						<attachment_group class="vertical_arrange_autosize" vertical_gap="-4"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="344664" type="use"/>
 						</widget>
 						<widget class="team_recent_form_widget" alignment="left,top">
@@ -232,10 +232,10 @@
 					<container priority="3">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="557873" type="use"/>
 						</widget>
-						<widget class="number_label" auto_size="vertical" size="10.5" alignment="left,can_scale">
+						<widget class="number_label" auto_size="vertical"  alignment="left,can_scale">
 							<record id="object_property" get_property="CsSF"/>
 						</widget>
 					</container>
@@ -244,10 +244,10 @@
 					<container priority="2">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="308084" type="use"/>
 						</widget>
-						<widget class="youth_facilities_stars_label" auto_size="vertical" size="10.5" alignment="left">
+						<widget class="youth_facilities_stars_label" auto_size="vertical"  alignment="left">
 							<record id="object_property" get_property="Crcb"/>
 						</widget>
 					</container>
@@ -256,10 +256,10 @@
 					<container priority="4">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="394525" type="use"/>
 						</widget>
-						<widget class="chairman_status_text" alignment="left,can_scale" auto_size="vertical" size="10.5">
+						<widget class="chairman_status_text" alignment="left,can_scale" auto_size="vertical" >
 							<record id="object_property" get_property="CStT"/>
 						</widget>
 					</container>
