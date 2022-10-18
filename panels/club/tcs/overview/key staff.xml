@@ -1,9 +1,9 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<container draw_horizontal_dividers="true">
+	<container >
 		<!-- MANAGER PROFILE AND STAFF -->
-		<layout class="vertical_arrange" vertical_layout="200,-10"  vertical_gap="8"/>
+		<layout class="vertical_arrange" vertical_layout="200,2,-1"  vertical_gap="4"/>
 
 		<!-- MANAGER INFO -->
 		<widget class="club_overview_staff_panel" id="tStM" file="club/tcs/header manager" >
@@ -12,6 +12,8 @@
 				<integer id="set_property" value="objt" />
 			</record>
 		</widget>	
+		
+		<widget class="horizontal_subtle_divider" height="2"/>
 
 		<!-- REST OF STAFF -->
 		<container class="client_object_viewer_xml_panel" file="club/tcs/staff" id="ctao" >
