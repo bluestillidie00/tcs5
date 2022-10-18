@@ -356,6 +356,19 @@
 					</container>
 				</container>
 			</container>
+
+			<container id="tcfa">
+				<translation id="title" translation_id="292709" type="use"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="tcs_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container class="team_container_information_stadium_panel" id="tcfa">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				</container>
+			</container>
 		
 			<container id="tran">
 				<translation id="title" translation_id="297217" type="use"/>
