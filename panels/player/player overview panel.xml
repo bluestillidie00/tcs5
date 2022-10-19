@@ -11,7 +11,6 @@
 
 		<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true" default_height="-555" priority="1">
 	
-
 			<container id="over" class="player_profile_panel" file="none">
 					<translation id="title" translation_id="247414" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
@@ -67,6 +66,10 @@
 							<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="360" priority="1">
 <record id="object_property" get_property="objt" set_property="objt"/>
 							</widget>
+							
+							<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="30" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true">
+                        <translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+                    </widget>
 
 							<!-- BOTTOM -->
 							<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
