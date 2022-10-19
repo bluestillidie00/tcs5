@@ -1,7 +1,7 @@
 <panel>
 
 	<!-- Continue Button -->
-	<widget class="icon_button" id="GCNT" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="fg" multiline="true" red_replacement="primary_button" blue_replacement="white">
+	<widget class="icon_button" id="GCNT" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="fg" multiline="true" red_replacement="continue" blue_replacement="white">
 		<translation id="text" translation_id="243222" type="use" value="Continue" />
         <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
         
