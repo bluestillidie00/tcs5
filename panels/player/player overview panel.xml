@@ -10,13 +10,13 @@
 		<!-- <layout class="vertical_arrange" vertical_layout="-580,-170" vertical_gap="8"/> -->
 
 		<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true" default_height="-555" priority="1">
-	
+
 			<container id="over" class="player_profile_panel" file="none">
-					<translation id="title" translation_id="247414" type="use"/>
+				<translation id="title" translation_id="247414" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<record id="object_property" get_property="objt" set_property="objt"/>
-				
+
 				<!-- OVERVIEW -->
 				<container class="horizontal_adaptive_container" gap="8" >
 
@@ -29,7 +29,7 @@
 
 							<container class="client_object_viewer_selector_panel" id="csL1" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 								<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
-                        <record id="object_property" get_property="Pers"/>
+									<record id="object_property" get_property="Pers"/>
 									<translation id="title" translation_id="254774" type="use"/>
 								</widget>
 								<integer id="default_for_unemployed_managers" value="tCSR"/>
@@ -54,25 +54,25 @@
 
 					<!-- MIDDLE AND RIGHT -->
 					<container class="horizontal_adaptive_container" gap="8" id="mid" default_width="-1" minimum_width="650" priority="1">
-					
-					<record id="object_property" get_property="objt" set_property="objt"/>
+
+						<record id="object_property" get_property="objt" set_property="objt"/>
 
 						<!-- MIDDLE -->
 						<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
-							
+
 							<record id="object_property" get_property="objt" set_property="objt" />
 
-<container default_height="360" priority="1">
-<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<container default_height="360" priority="1">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-							<!-- ATTRIBUTES -->
-							<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true" >
-<record id="object_property" get_property="objt" set_property="objt"/>
-							</widget>
-							
-							<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="1" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true" file="none">
-                        <translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
-                    </widget>
+								<!-- ATTRIBUTES -->
+								<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true" >
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</widget>
+
+								<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="1" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true" file="none">
+									<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+								</widget>
 							</container>
 
 							<!-- BOTTOM -->
@@ -536,9 +536,9 @@
 								<container >
 									<layout class="vertical_arrange" vertical_layout="-8,-12" />
 
-								<!-- 	<widget class="pitch_with_player_positions" id="pspi" allow_click="false" wants_mouse_events="false" pitch_keep_selected_icons="false" vertical="false" pitch_alignment="centre_x,top" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="alt text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="8" height="180">
+									<widget class="pitch_with_player_positions" id="pspi" allow_click="false" wants_mouse_events="false" pitch_keep_selected_icons="false" vertical="false" pitch_alignment="centre_x,top" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="alt text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="8" height="180">
 										<string id="pitch_kit_icon" value="pitch/icons/dots" />
-									</widget> -->
+									</widget>
 
 									<container>
 										<attachment_group class="vertical_arrange_autosize"/>
@@ -666,7 +666,7 @@
 
 									<!-- ATTRIBUTES -->
 									<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="360" priority="1">
-<record id="object_property" get_property="Pers"/> 
+										<record id="object_property" get_property="Pers"/> 
 										<translation id="title" translation_id="229822" type="use" value="Attributes"/>
 									</widget>
 
@@ -674,31 +674,132 @@
 									<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-										<container class="client_object_viewer_selector_panel" id="cos6" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
-											<integer id="default_for_unemployed_managers" value="pfSm"/>
-											<integer id="default_for_international_managers_other_team" value="pfSm"/>
-											<integer id="default_for_everyone_else" value="pfSm"/>
-											<integer id="default_for_versus_mode" value="pfSm"/>
-											<widget class="player_form_panel" id="pfSm" late_loading="true" file="player/tcs/selector/big/form 20">
-												<translation id="title" value="Form (Last 20 Matches)" type="use"/>
-											</widget>
-											<!-- <widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
-									<translation id="title" translation_id="385617" type="use"/>
-								</widget> -->
-											<widget class="person_happiness_panel" file="player/tcs/selector/happiness" id="tpmr" late_loading="true" valid_for_other_team_managers="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false">
-												<translation id="title" type="use" translation_id="227840"/>
-											</widget>
-										</container>
+									<container draw_vertical_dividers="true">
+					<attachment_group class="horizontal_arrange" horizontal_layout="-10,-9">
+						<global id="horizontal_gap" name="ui.main_box_gap"/>
+					</attachment_group>
+
+					<container class="main_box">
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<container  navigation_container="true">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<container >
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+								<layout class="arrange_horizontal_attachment" layout="70,-1" gap="0" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+								<widget class="object_portrait_picture" id="cpic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="70" />
+
+								<container class="title_link_box" id="TrRp" hide_view_menu="true">
+									<translation id="link_title" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
+									<string id="section" value="Pgrg"/>
+									<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+									<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+									<widget class="popup_button" id="vcoa" auto_tick_exclusive="true" auto_size="vertical" select_event="view" save_session_state="true" />
+								</container>
+							</container>
+
+							<widget class="table" id="trtb" layout="20,-1" auto_size_rows="true" fixed_size_rows="false">
+								<list id="column_table_properties">
+									<record id="bull">
+										<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" />
+										<integer id="top" value="2" />
+									</record>
+									<record id="text">
+										<record id="widget_info" class="text" auto_size="vertical" />
+									</record>
+								</list>
+							</widget>
+
+						</container>
+					</container>
+
+					<container class="title_link_box" id="MeRp" hide_view_menu="true" navigation_container="true">
+						<translation id="link_title" translation_id="447586" type="use" value="Medical Report[COMMENT: Panel title for when viewing medical report]" />
+						<string id="section" value="PInj"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container class="player_injury_panel" file="none">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+							<record id="object_property" get_property="objt" set_property="objt" />
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3" horizontal_offset="0"  vertical_inset="0" />
+
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+								
+									<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+									<widget class="label" auto_size="vertical" font="label">
+										<record id="object_property">
+											<integer id="get_property" value="PcOI" />
+											<boolean id="name" value="true"/>
+										</record>
+									</widget>
+
+									<widget class="client_object_property_panel" property="PcOI" height="25">
+
+										<record id="object_property" get_property="objt" set_property="objt" />
+
+									</widget>
+
+
+								</container>
+
+								<container >
+									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+									<widget class="label" auto_size="vertical" font="label">
+										<record id="object_property">
+											<integer id="get_property" value="PftI" />
+											<boolean id="name" value="true"/>
+										</record>
+									</widget>
+
+									<widget class="client_object_property_panel" property="PftI" height="25">
+
+										<record id="object_property" get_property="objt" set_property="objt" />
+
+									</widget>
+
+
+								</container>
+								</container>
+							
+
+								<container class="main_box_no_margin" id="OAct" red_replacement="injury_body_colour_injured">
+									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+									<widget class="text" id="OAtl" font="label" height="15" />
+									<widget class="label" id="OAnm" size="large" style="bold" auto_size="vertical" />
+								</container>
+
+							</container>
+
+							<container class="scrolling_box" id="Scbx">
+								<widget class="text" id="AsQt" auto_size="vertical" />
+							</container>
+
+						</container>
+
+					</container>
+
+				</container>
 									</container>
 
 								</container>
 
+								<!-- RIGHT -->
 								<container default_width="520" priority="2" class="vertical_adaptive_container" gap="8">
 
 									<container class="tcs_box" default_height="-14" priority="1">
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-										<container class="client_object_viewer_selector_panel" id="csL3" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+										<container class="client_object_viewer_selector_panel" id="csT3" minimum_width="330" default_width="-1" priority="3" file="player/player overview training selector panel" save_session_state="true" dont_set_embedded_title="true">
 											<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
 												<record id="object_property" get_property="objt" set_property="objt"/>
 												<translation id="title" translation_id="254774" type="use"/>
@@ -713,7 +814,7 @@
 									<container class="tcs_box" default_height="-6" priority="2">
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-										<container class="client_object_viewer_selector_panel" id="csL4" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+										<container class="client_object_viewer_selector_panel" id="csT4" minimum_width="330" default_width="-1" priority="3" file="player/player overview training selector panel" save_session_state="true" dont_set_embedded_title="true">
 											<integer id="default_for_unemployed_managers" value="PrCo"/>
 											<integer id="default_for_international_managers_other_team" value="PrCo"/>
 											<integer id="default_for_everyone_else" value="PrCo"/>
