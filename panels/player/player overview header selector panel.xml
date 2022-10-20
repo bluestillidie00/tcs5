@@ -89,4 +89,9 @@
 	<container class="player_personal_details_panel" id="tper" file="player/tcs/selector/header/ppdp">
 		<translation id="title" type="use" translation_id="292599"/>
 	</container>
+
+	<!-- PERSONAL DETAILS -->
+	<container class="player_personal_details_panel" id="tpe1" file="player/tcs/selector/header/ppdp alt">
+		<translation id="title" type="use" value="Personal Details (alt)"/>
+	</container>
 </panel>

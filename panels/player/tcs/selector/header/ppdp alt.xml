@@ -13,7 +13,7 @@
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
 				<!-- AGE LABEL-->
-				<widget class="label" auto_size="vertical" style="semi_bold" >
+				<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
 					<translation id="text" type="use" translation_id="227770" value="Age"/>
 				</widget>
 
@@ -24,7 +24,7 @@
 					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="2"/>
 					<!-- AGE -->
 					<widget class="editable_client_object_property_panel" id="age " height="22" auto_size="horizontal">
-						<record id="widget_info" class="formatted_label" alignment="left,top" auto_size="horizontal" >
+						<record id="widget_info" class="formatted_label" alignment="left,top" auto_size="horizontal" size="10.5">
 							<translation id="format" translation_id="242551" type="use" value="[%number#1] years old"/>
 						</record>
 						<record id="widget_edit_info" width="0" height="0"/>
@@ -38,10 +38,10 @@
 			<container>
 				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
-				<widget class="label" id="vall" auto_size="vertical" style="semi_bold" >
+				<widget class="label" id="vall" auto_size="vertical" style="semi_bold" size="10.5">
 					<translation id="text" translation_id="227806" type="use" value="Value"/>
 				</widget>
-				<widget class="transfer_value_label" id="TrVa" auto_size="all" alignment="left, centre_y" >
+				<widget class="transfer_value_label" id="TrVa" auto_size="all" alignment="left, centre_y" size="10.5">
 					<record id="object_property" get_property="Pdva"/>
 				</widget>
 			</container>
@@ -53,12 +53,37 @@
 			<!-- DOB -->
 			<container>
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-				<widget class="label" auto_size="vertical" style="semi_bold" >
+				<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
 					<translation id="text" translation_id="230147" type="use" value="Date of Birth"/>
 				</widget>
-				<widget class="editable_client_object_property_panel" id="dobl" alignment="left,top" auto_size="vertical"  format="[%date#1-short]">
+				<widget class="editable_client_object_property_panel" id="dobl" alignment="left,top" auto_size="vertical" size="10.5" format="[%date#1-short]">
 					<record id="widget_info" class="game_formatted_label" auto_size="vertical"/>
 					<record id="object_property" get_property="Pdob"/>
+				</widget>
+			</container>
+
+			<!-- WAGE -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+				<widget class="label" id="wglb" auto_size="vertical" style="semi_bold" size="10.5">
+					<translation id="text" type="use" translation_id="242353" value="Wages"/>
+				</widget>
+				<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="normal" alignment="left,can_scale"/>
+			</container>
+		</container>
+
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+			<!-- PERSONALITY -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-1" horizontal_alignment="horizontal" horizontal_inset="0"/>
+				<widget class="label" id="PPs:" auto_size="vertical" style="semi_bold" size="10.5">
+					<record id="object_property" get_property="PPst" name="true"/>
+				</widget>
+				<widget class="personality_label" id="PPst" auto_size="vertical" size="10.5">
+					<record id="object_property" get_property="PPst"/>
 				</widget>
 			</container>
 
@@ -66,7 +91,7 @@
 			<container>
 				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
-				<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" >
+				<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" size="10.5">
 					<translation id="text" type="use" translation_id="227852"/>
 				</widget>
 
@@ -79,30 +104,32 @@
 			</container>
 		</container>
 
-		<container class="tcs_table">
+		<container class="tcs_table_trans">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
-			<!-- PERSONALITY -->
+			<!--  PLAYING TIME -->
 			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-1" horizontal_alignment="horizontal" horizontal_inset="0"/>
-				<widget class="label" id="PPs:" auto_size="vertical" style="semi_bold" >
-					<record id="object_property" get_property="PPst" name="true"/>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+				<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+					<translation id="text" translation_id="492001" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]"/>
 				</widget>
-				<widget class="personality_label" id="PPst" auto_size="vertical" >
-					<record id="object_property" get_property="PPst"/>
+				<widget class="playing_time_label" id="PccV" alignment="left,top" auto_size="vertical" size="9.5">
+					<record id="object_property" get_property="Pcpt"/>
 				</widget>
 			</container>
 
 			<!-- TRAINING RATING -->
 			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
+				<!-- IF PLAYER IS HUMAN CONTROLLED -->
 				<container>
 					<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
 					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
 
-					<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" >
+					<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" size="10.5">
 						<translation id="text" type="use" translation_id="466504"/>
 					</widget>
 
@@ -119,41 +146,13 @@
 
 					<container/>
 				</container>
-
 			</container>
 		</container>
-
-		<container class="tcs_table_trans">
-			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-
-			<!--  PLAYING TIME -->
-			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-	<widget class="label" auto_size="vertical" style="semi_bold" >
-					<translation id="text" translation_id="492002" type="use" value="Value"/>
-				</widget>
-				<widget class="playing_time_label" id="Pcpt" auto_size="vertical" alignment="left, centre_y,can_scale" >
-					<record id="object_property" get_property="Pcpt"/>
-				</widget>
-			</container>
-
-			<!-- TRAINING RATING -->
-			<container>
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-				<container>
-					<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-					<widget class="label" auto_size="vertical" style="semi_bold" >
-						<translation id="text" translation_id="492001" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]"/>
-					</widget>
-					<widget class="playing_time_label" id="PccV" alignment="left,top,can_scale" auto_size="vertical" >
-						<record id="object_property" get_property="Pcpt"/>
-					</widget>
-				</container>
-			</container>
-		</container>
-
 	</container>
+
+
+
+
+
 
 </panel>
