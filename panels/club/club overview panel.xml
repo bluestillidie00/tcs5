@@ -379,12 +379,12 @@
 					</widget>
 
 					<container class="competition_news_panel" file="none">
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 						<record id="object_property" get_property="objt" set_property="objt"/>
 
 						<container class="competition_overview_panel" file="none">
-							<layout class="stick_to_sides_attachment" alignment="all"/>
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
 
 							<record id="object_property" get_property="Cdiv" set_property="objt"/>
 
@@ -461,6 +461,26 @@
 								</widget>
 							</container>
 						</container>
+
+						<container height="70" class="tcs_box">
+							<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0"/>
+
+							<container class="competition_news_side_panel" id="side" file="none">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"  inset="0"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<!-- Prozone -->
+								<container id="proC">
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/> 
+									<!-- Cycle through different prozone stats -->
+									<container id="proz" class="animated_wipe_cycle_fade_container" property_to_set="objt">
+										<!-- Note: Interval is the number of seconds each stat will be visible for-->
+										<record id="widget_properties" class="property_list_viewer_xml_panel" file="club/tcs/overview/stat" interval="6"/>
+									</container>
+								</container>
+							</container>
+						</container>
+
 					</container>
 				</container>
 			</container>
