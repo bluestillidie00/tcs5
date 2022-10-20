@@ -5,7 +5,7 @@
 
 	<!-- MAIN CONTAINER -->
 	<container>
-		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 
 		<!-- PLAYER INFO -->
 		<container class="tcs_box" width="520">
@@ -101,7 +101,7 @@
 			</container>
 		</container>
 
-		<container class="horizontal_adaptive_container" gap="4" id="left">
+		<container class="horizontal_adaptive_container" gap="8" id="left">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
 			<record id="default_properties" default_width="-1" minimum_width="340"/>
