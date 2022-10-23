@@ -1,0 +1,171 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<list id="properties_to_forward">
+		<record get_property="default_item" target="ftr6" set_property="default_item"/>
+		<record get_property="cfID" target="ftr6" set_property="cfID"/>
+		<!-- added by patch -->
+		<record get_property="HSMt" target="hfSM" set_property="WdgP"/>
+		<record get_property="ASMt" target="afSM" set_property="WdgP"/>
+	</list>
+ 
+	<!--in-between highlights summary panel-->
+	<widget class="match_view_selector_panel" id="ftr6" pause_match_on_menu_opening="false" default_item="afSM" file="client_object/client object viewer selector match" colour="match accent" alignment="centre_x" navigation_container="true" >
+ 	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+ 
+ 
+		<!-- Match xG Story -->
+		<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="8" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+		<translation id="title" translation_id="514223" type="use" value="xG Match Story" />
+		</widget>
+		<!-- Shot Map Home -->
+		<widget class="data_analyst_visualisation_widget" id="hfSM" visualisation_type="6" data_type="3"  file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+			<record id="widget_properties" type="0"/>
+			<translation id="title" translation_id="514222" type="use" value="Shot Map[COMMENT: AREA: Visualisation Header; SUB-AREA: Shot map header FR: 32932; TONE: Formal; CHARLIMIT: None NOTE: Shot map header string]" />
+		</widget>
+		<!-- Shot Map Away -->
+		<widget class="data_analyst_visualisation_widget" id="afSM" visualisation_type="6" data_type="3"  file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+			<record id="widget_properties" type="1"/>
+			<translation id="title" translation_id="514222" type="use" value="Shot Map[COMMENT: AREA: Visualisation Header; SUB-AREA: Shot map header FR: 32932; TONE: Formal; CHARLIMIT: None NOTE: Shot map header string]" />
+		</widget>
+		
+<!-- Overview -->
+		<widget class="match_info_panel" id="bmin" file="match/match info small ibh">
+			<translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+		</widget>
+		<widget class="match_info_panel" id="bmin2" auto_size="vertical" file="match/match info overview ibh">
+			<translation id="title" translation_id="308582" type="use" value="Match Overview" />
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		
+<!-- Match Stats -->
+		<widget class="match_stats_panel" id="mtst" file="match/match stats floating">
+			<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+		</widget>
+		<widget class="match_stats_panel" id="mtst2" title="Match Stats (Bars)" file="match/match stats">
+		</widget>
+		
+	
+<!-- Formations -->
+		<widget class="match_formation_panel" id="hmtt" file="match/match formation panel review ftr" team_index="0" read_only="true">
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		</widget>
+ 		<widget class="match_formation_panel" id="amtt" file="match/match formation panel review ftr" team_index="1" read_only="true">
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		</widget>
+		
+<!-- Both Formations -->
+		<widget class="both_match_formation_panels" title="Formations (Horizontal)" file="match/match both formations ftr_h" id="bmfs"/>
+		<widget class="both_match_formation_panels" title="Formations (Vertical)" file="match/match both formations ftr_v" id="bmfs2"/>
+		
+<!-- Player Ratings -->
+		<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats full ftr" use_short_name_format="true" team_index="0">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget>
+ 
+		<widget class="match_team_stats_panel" id="afMs" file="match/match team stats full ftr" use_short_name_format="true" team_index="1">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget>
+		
+<!-- Motivation Top option doesn't work on FTR -->
+		<!-- <widget class="match_team_stats_panel" id="htms" file="match/match team stats full top" use_short_name_format="true" team_index="0">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget>
+ 
+		<widget class="match_team_stats_panel" id="atms" file="match/match team stats full top" use_short_name_format="true" team_index="1">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget> -->
+		
+<!-- Both Team Player Ratings -->
+		<widget class="both_match_team_stats_panels" title="Player Ratings" file="match/match both team stats ftr" id="bmts" save_current_state="true" />
+		
+		
+<!-- Standard views no alts -->
+		<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
+            <translation id="title" translation_id="247381" type="use" value="Shots" />
+        </widget>
+<!-- Disabled Action Zone, Focus, Report options as can cause crash when viewing non-full detail matches -->
+		<!-- <widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+            <translation id="title" translation_id="247327" type="use" value="Action Zones" />
+            <colour id="ptlc" name="white" />
+        </widget>
+        <widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+            <translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+        </widget> 
+		<widget class="match_report_panel" id="mtrp" file="match/match report small">
+            <translation id="title" translation_id="248079" type="use" value="Report" />
+        </widget> -->
+
+		
+		<widget class="post_match_report_widget" id="pstL">
+			<translation id="title" translation_id="515056" type="use" value="Post-Match Report[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for shpwing the post-match report summary of the fixture just played]" />
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+		
+		<!-- use this for the PMR screen - one outside of matchday -->
+        <widget class="match_analysis_panel" id="Anal" file="match/match analysis panel pmr">
+		<translation id="title" translation_id="296334" type="use" value="Analysis" />
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+		
+		<!-- Use this on FTR page - before team talk as data doesn't show outside matchday -->
+		<widget class="match_analysis_panel" id="AnalF" file="match/match analysis panel ftr">
+			<translation id="title" translation_id="441063" type="use" value="Team Analysis" />
+			<record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+			</record>
+        </widget>
+		
+		
+<!-- DISABLED AS NOT NEEDED FOR FTR/PMR SCREENS
+		<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis floating">
+			<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+		</widget>
+		<widget class="match_away_analysis_panel" id="Maan" file="match/match analysis floating">
+			<translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+		</widget>
+		<widget class="match_feed_panel" id="Feed" file="match/match feed panel expanded">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+			<translation id="title" translation_id="309188" type="use" value="Advice[COMMENT: interaction manager; category type]" />
+		</widget>
+		<widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+            <translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+        </widget>
+		<widget class="match_league_table_panel" id="mltp" MLTs="true">
+			<translation id="title" translation_id="248082" type="use" value="League Table" />
+        </widget>
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+-->
+		
+
+		
+		
+		
+		
+		
+ 
+	</widget>	<!-- end selector panel -->
+	
+</panel>

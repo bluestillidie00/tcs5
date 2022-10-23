@@ -1,0 +1,93 @@
+<panel info_panel_type="1">
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+
+
+  
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<record id="default_properties" spec="text" size="small" />
+
+			<widget class="fixture_name_text" id="fxnm" spec="text" size="small" style="semi_bold" colour="title" auto_size="vertical">
+				<record id="object_property">
+					<integer id="get_property" value="FxNm" />
+				</record>
+			</widget>
+
+			<widget class="referee_strictness_label" id="reff" spec="text" size="small" auto_size="vertical" colour="faded text">
+				<translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]" />
+			</widget>
+
+			<widget class="label" id="attl" auto_size="vertical" />
+
+		</container>
+		
+		<!-- Watch Goals Button No longer needed patch added to header -->
+		<!-- <container class="match_playback_control_container" file="" height="40">
+			<layout class="arrange_horizontal_attachment" alignment="middle"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<record id="object_property" get_property="maCo" set_property="maCo" />
+			<widget id="View" class="priority_action_popup_button">
+				<list id="items">
+					<record id="vgls" event_id="vgls" type="5" priority="1">
+						<translation id="name" translation_id="454724" type="use" value="Watch Goals[COMMENT: command to watch some match highlights]" />
+					</record>
+					<record id="vkey" event_id="vkey" type="3">
+						<translation id="name" translation_id="454725" type="use" value="Watch Key Highlights[COMMENT: command to watch some match highlights]" />
+					</record>
+					<record id="vext" event_id="vext" type="2">
+						<translation id="name" translation_id="454726" type="use" value="Watch Extended Highlights[COMMENT: command to watch some match highlights]" />
+					</record>
+					<record id="vcom" event_id="vcom" type="1">
+						<translation id="name" translation_id="454727" type="use" value="Watch Comprehensive Highlights[COMMENT: command to watch some match highlights]" />
+					</record>
+				</list>
+			</widget>
+
+		</container> -->
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<record id="default_properties" spec="text" size="small" alignment="right,centre_y" />
+			<widget class="date_cell" id="date" format="[%date#1-short] [%date#1-time]" colour="faded text" auto_size="vertical">
+				<record id="object_property">
+					<integer id="get_property" value="fxdt" />
+				</record>
+			</widget>
+
+			<widget class="weather_forecast_label" id="weal" auto_size="vertical" colour="faded text"/>
+		</container>
+
+	</container>
+
+	<widget class="text" id="stad" alignment="centre_x" auto_size="vertical" multiline="false" size="small" colour="faded text"/>
+	
+
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,10,-1" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--  home incidents panel -->
+		<widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/match incidents left ibh" />
+
+		<widget class="text"  size="normal" style="semi_bold" alignment="centre_x,top">
+			<string id="text" value="-"/>
+		</widget>
+		
+		<!--  away incidents panel -->
+		<widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/match incidents right ibh" />
+
+	</container>
+	
+
+
+</panel>

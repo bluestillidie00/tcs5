@@ -1,0 +1,49 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/normal"/>
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row"/>
+
+  <container class="subsection_box" appearance="tcs/match/ibh/transparent/paper" >
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <container embed_in_frame="true">
+		<attachment_group class="title_embedded_panel_left" vertical_inset="4" horizontal_offset="4"/>
+
+      <widget class="view_menu_label" id="labl"/>
+    </container>
+
+    <widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows" row_height="28" column_spacing="0">
+      <boolean id="fixed_size_rows" value="true" />
+      <boolean id="dont_restore_selection" value="true" />
+      <boolean id="save_session_state" value="true" />
+      <boolean id="sort_disabled" value="true" />
+
+      <flags id="default_view" value="msvw" />
+
+      <!-- default sort by playing position (primary), then picked position, then name -->
+      <list id="default_sort_column">
+        <integer value="TPRD" />
+      </list>
+
+      <list id="viws">
+        <record id="msvw">
+          <record id="view">
+            <record id="TPRD" hidden="true"/>
+            <record id="PsnC" auto_hide_priority="5" />
+            <record id="Pcar" auto_hide_priority="6" />
+            <record id="Pnam" auto_hide_priority="2" minimum_width="100" />
+            <record id="Pcon" auto_hide_priority="7" />
+            <record id="MPrt" auto_hide_priority="3" />
+            <record id="MPgl" auto_hide_priority="4" />
+            <record id="MPas" auto_hide_priority="8" />
+          </record>
+        </record>
+      </list>
+
+    </widget>
+
+  </container>
+</panel>

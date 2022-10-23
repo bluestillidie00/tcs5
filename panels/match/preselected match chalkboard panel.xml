@@ -1,0 +1,5 @@
+<!-- added pitch change orientation code -->											
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  <widget class="chalkboard_pitch" id="Cpit" select_event="slic" pitch_draw_ads="false" hide_linked_events="true" pitch_draw_arrows="true" pitch_keep_selected_icons="false" pitch_draw_grass="false" pitch_player_icon_font="match pitch players" wants_mouse_events="true" pitch_draw_dugout="false" enable_popup="true" line_width="1" pitch_line_colour="text" pitch_touchline_width_percentage="80" can_change_orientation="true" />
+</panel>

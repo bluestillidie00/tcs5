@@ -1,0 +1,219 @@
+﻿<panel >
+<!-- Touchline Tablet file which is the old IBH panel - adjusted to use split panels and increased panel count to eight, changed ids to ibh1-8 -->
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0"/>
+
+		<list id="properties_to_forward">
+			<record get_property="HSMt" target="ibh1" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh2" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh3" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh4" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh5" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh6" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh7" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh8" set_property="HSMt" />
+			<record get_property="ASMt" target="ibh1" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh2" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh3" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh4" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh5" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh6" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh7" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh8" set_property="ASMt" />
+		</list>
+
+
+	<container >
+		
+		<layout class="arrange_vertical_attachment" alignment="middle,extend" gap="0"/>
+
+		<!-- lowered these values to 2 not sure what they do? -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="vertical" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="720" />
+						<symbol id="set_property" value="height" />
+						<integer id="true_value" value="2" />
+						<integer id="false_value" value="2" />
+					</record>
+					<record>
+						<flags id="alignment" value="vertical" />
+						<integer id="min_value" value="720" />
+						<integer id="max_value" value="900" />
+						<symbol id="set_property" value="height" />
+						<integer id="true_value" value="2" />
+						<integer id="false_value" value="2" />
+					</record>
+					<record>
+						<flags id="alignment" value="vertical" />
+						<integer id="min_value" value="900" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="height" />
+						<integer id="true_value" value="2" />
+						<integer id="false_value" value="2" />
+					</record>
+				</list>
+			</attachment>
+		</container>
+	 
+		<!-- NEED CONTAINER FOR GRAPHIC, ALSO SETS COLLSAPSE STATUS -->
+		<container class="main_transparent_box" id="TbLt" appearance="boxes/custom/match/dugout/paper">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+			<attachment class="sizeable_attachment" mode="left" minimum_width="300"/>
+			<attachment class="match_ball_fade_attachment"/>
+			
+			<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="1.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="0.5,1" />
+			<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="0.5,1" trigger_id="hidden" trigger_value="false" />
+	 
+			<!-- hidden header to free up more space -->
+			<!-- <container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" />
+				<widget class="icon_button" appearance="" font="title" auto_size="all" alignment="centre" icon="icons/16px/show me" icon_colour="title" navigation_focus_target="false">
+					<translation id="text" translation_id="516208" type="use" value="Touchline Tablet[COMMENT: AREA: Match panel; SUB-AREA: Area where manager can pull up stats/info on demand; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: we're calling this touchline tablet as the best way to demonstrate how managers get live information while in the dugout - it's a tablet device they use]" />
+				</widget>
+			</container> -->
+	 
+	<!-- Overall split containers now need own ids otherwise game doesn't remember split position -->		
+	<container class="vertical_split_container" id="ibhO" starting_layout="-1, -1" save_default_state="true" save_session_state="true"  min_width_left="1" min_width_right="1">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	 				
+	<!-- LL, LR -->
+	<container class="vertical_split_container" id="ibhLLLR" starting_layout="-1, -1" save_default_state="true" save_session_state="true"  min_width_left="1" min_width_right="1">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	
+		<!-- LL  -->
+		<container class="horizontal_split_container" id="ibhLL" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			
+			<!-- LLT Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh1" file="match/match touchline tablet slot ibh1"  minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+			<!-- LLB Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh2" file="match/match touchline tablet slot ibh2" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+		
+		</container>	<!-- End LL -->
+		
+		<!-- LR -->
+		<container class="horizontal_split_container" id="ibhLR" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		 
+			<!-- LRT Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh3" file="match/match touchline tablet slot ibh3" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+			<!-- LRB Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh4" file="match/match touchline tablet slot ibh4"  minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+		</container>	<!-- End LR -->
+ 
+	</container>	<!-- End LL LR -->
+	 
+	<!-- RL RR -->
+	<container class="vertical_split_container" id="ibhRLRR" starting_layout="-1, -1" save_default_state="true" save_session_state="true"  min_width_left="1" min_width_right="1">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	
+		<!-- RL -->
+		<container class="horizontal_split_container" id="ibhRL" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			
+			<!-- RLT Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh5" file="match/match touchline tablet slot ibh5"  minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+			<!-- RLB Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh6" file="match/match touchline tablet slot ibh6" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+		
+		</container>	<!-- End RL -->
+		
+		<!-- RR -->
+		<container class="horizontal_split_container" id="ibhRR" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+ 
+			<!-- RRT Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh7" file="match/match touchline tablet slot ibh7" minimum_width="1" >
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+			<!-- RRB Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh8" file="match/match touchline tablet slot ibh8"  minimum_width="1" >
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+		</container>	<!-- End RR -->
+ 
+	</container>	<!-- End RL RR -->
+	 
+	</container>	<!-- End Overall -->
+ 
+	</container>	<!-- END CONTAINER FOR GRAPHIC -->
+
+		<!-- commentary bar spacer -->
+		<container height="34">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+		</container>
+
+	</container>
+
+	<!-- Changed to 2 -->
+	<container>
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="1600" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="2" />
+						<integer id="false_value" value="2" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1600" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="2" />
+						<integer id="false_value" value="2" />
+					</record>
+				</list>
+			</attachment>
+	</container>
+	
+</panel>

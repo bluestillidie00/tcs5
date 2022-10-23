@@ -1,0 +1,32 @@
+﻿<panel >
+
+	<list id="properties_to_forward">
+	<record get_property="HSMt" target="nep1" set_property="HSMt" />
+	<record get_property="HSMt" target="nep2" set_property="HSMt" />
+	<record get_property="ASMt" target="nep1" set_property="ASMt" />
+	<record get_property="ASMt" target="nep2" set_property="ASMt" />
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- Split Container for MNE Left Panel -->
+	<container class="horizontal_split_container" id="nepL" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+
+		<container class="client_object_viewer_xml_panel" id="nep1" file="match/match touchline tablet slot nep1" >
+		<record id="object_property">
+		<integer id="get_property" value="objt" />
+		<integer id="set_property" value="objt" />
+		</record>
+		</container>
+
+		<container class="client_object_viewer_xml_panel" id="nep2" file="match/match touchline tablet slot nep2" >
+		<record id="object_property">
+		<integer id="get_property" value="objt" />
+		<integer id="set_property" value="objt" />
+		</record>
+		</container>
+
+	</container>	<!-- close split -->
+	
+</panel>

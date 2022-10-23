@@ -1,0 +1,52 @@
+<panel>
+<layout class="arrange_vertical_attachment" layout="50,-1" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+<!-- container for the score details -->
+<container>
+    <layout class="arrange_horizontal_attachment" layout="-1,60,-1" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+  <!--name and kit-->
+      <container class="home_match_incidents_panel" id="Hnkp" file="match/match incidents left pmr" height="50">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+	  </container>
+		<!--comp picture-->
+		<widget class="object_portrait_picture" id="fxCo" scale_picture="true" height="50" width="50" clickable="false">
+			<boolean id="keep_aspect_ratio" value="true" />
+			<flags id="image_alignment" value="centre_x,top" />
+			<record id="object_property">
+				<integer id="get_property" value="fxCo" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+        <!--name and kit-->
+      <container class="away_match_incidents_panel" id="Ankp" file="match/match incidents right pmr" height="50">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </container>
+</container>
+	
+<!-- container for player ratings -->	
+<container>
+
+    <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <container class="plain_box" navigation_container="true">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+      <widget class="match_team_stats_panel" file="match/match team stats full bottom" id="HMts" team_index="0"/>
+    </container>
+
+    <container class="plain_box" navigation_container="true">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+      <widget class="match_team_stats_panel" file="match/match team stats full bottom" id="AMts" team_index="1"/>
+    </container>
+</container>
+
+</panel>

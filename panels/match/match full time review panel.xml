@@ -1,0 +1,208 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="plain_box"  appearance="tcs/backgrounds/overlay/70" rrep="bg"/>
+
+	<container>
+		<layout class="vertical_arrange" vertical_layout="190,-1"/>
+
+		<!-- TOP SECTION -->
+		<container class="bordered_box" appearance="tcs/match/ibh/paper" >
+			<layout class="horizontal_arrange" horizontal_layout="300,-1,-1" horizontal_inset="10"/>
+
+			<!-- STADIUM PICTURE -->
+			<container >
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<!-- PICTURE -->
+				<widget class="stadium_picture" id="STAp" image_alignment="centre_x,top" scale_picture="true" transparency="0.9" keep_aspect_ratio="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="-35" apply_to_children="true"/> 
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!-- STADIUM NAME -->
+				<container>
+					<layout class="vertical_arrange" vertical_layout="-1,50" />
+
+					<widget class="spacer" />
+
+					<container class="bordered_box" appearance="tcs/boxes/schedule/info" >
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+						<widget class="stadium_button" id="stad" auto_size="all" auto_size_restricted_to_parent_width="true">
+							<layout class="centre_in_parent_attachment" alignment="all" />
+							<translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+							<record id="object_property" get_property="stad" />
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<!-- MATCH INFO -->
+			<widget class="match_info_panel" file="match/tcs/full time/match info" id="bmin">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!-- MEDIA COMMENT -->
+			<container class="bordered_box" appearance="tcs/match/ibh/paper" red_replacement="primary">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="20" gap="20" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--COMPETITION LOGO-->
+				<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="140" clickable="true">
+					<boolean id="keep_aspect_ratio" value="true" />
+					<flags id="image_alignment" value="centre_x,top" />
+					<record id="object_property">
+						<integer id="get_property" value="fxCo" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--COMMENT-->
+				<container >
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--COMMENT-->
+					<widget class="text" auto_size="vertical" id="jcom" size="large" colour="secondary"/>
+
+					<!-- SOURCE -->
+					<widget class="text" auto_size="vertical" id="jnam" colour="secondary" />
+				</container>
+			</container>
+
+		</container>
+
+		<!-- ANOTHER CONTAINER ADDED DUE TO THE ENTIRE SECOND LEVEL BEING IN IT'S OWN BORDERED BOX -->
+		<container >
+			<!-- SPLITS 2ND LEVEL INTO THREE VERTICAL SECTIONS  // LEFT = STATS AND MILESTONES, MIDDLE TEAM STATS, RIGHT COMP NEWS-->
+			<layout class="horizontal_arrange" horizontal_layout="-1,1000,-1" horizontal_gap="0" horizontal_inset="6"/>
+
+			<!-- LEFT SIDED PANEL -->
+			<container class="bordered_box" appearance="tcs/match/ibh/left/paper" >
+				<layout class="vertical_arrange" vertical_layout="-1,3,200"/>
+
+				<!-- TEAM STATS -->
+				<container class="subsection_box"  appearance="tcs/match/ibh/transparent/paper">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+					<translation id="title" type="use" value="Match Stats" />
+
+					<widget class="match_stats_panel" id="mtst" file="match/tcs/full time/tcs match stats">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+
+				<!-- DIVIDER -->
+				<widget class="horizontal_divider" />
+
+				<!-- MILESTONES -->
+				<container class="subsection_box" appearance="tcs/match/ibh/transparent/paper" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+					<translation id="title" type="use" value="Milestones" />
+					<widget class="match_preview_milestones_panel" id="mile" miti="1">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>		
+			</container>
+
+			<!-- MIDDLE CONTAINER -->
+			<container class="bordered_box" appearance="tcs/match/ibh/middle/paper" red_replacement="tcs_dark_box" >
+				<layout class="vertical_arrange" vertical_layout="-10,-8"/>
+
+				<!-- TOP HALF // TEAM STATS -->
+				<container >
+					<layout class="horizontal_arrange" horizontal_layout="-1,3,-1"/>
+
+					<!-- HOME STATS -->
+					<widget class="match_team_stats_panel" id="HMts" file="match/tcs/full time/tcs team stats" team_index="0">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<!-- DIVIDER -->
+					<widget class="vertical_divider" />
+
+					<!-- AWAY STATS -->
+					<widget class="match_team_stats_panel" id="AMts" file="match/tcs/full time/tcs team stats" team_index="1">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+
+				<!-- 2ND LEVEL -->			
+				<container >
+					<layout class="horizontal_arrange" horizontal_layout="-5,3,-3"/>
+
+					<!-- BEST/WORST PEFORMERS -->
+					<container class="bordered_box"  appearance="tcs/match/ibh/transparent/paper" >
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+						<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/tcs/full time/tcs match analysis">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+					</container>				
+
+					<!-- ACTION ZONES -->
+					<container class="bordered_box"  appearance="tcs/match/ibh/transparent/paper">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+						<widget class="match_action_zones_panel" id="mazp" file="match/tcs/full time/match action zones">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+					</container>				
+				</container>	
+			</container>	
+
+			<!-- RIGHT SECTION -->
+			<container class="bordered_box" appearance="tcs/match/ibh/right/paper" >
+				<layout class="vertical_arrange" vertical_layout="-1,3,-1"/>
+
+				<!-- LEAGUE TABLE -->
+				<container class="subsection_box"  appearance="tcs/match/ibh/transparent/paper" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+					<translation id="title" type="use" value="League Table" />
+					<widget class="match_league_table_panel" id="mltp" MLTs="true">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>		
+
+				<!-- DIVIDER -->
+				<widget class="horizontal_divider" />
+
+				<!-- LATEST SCORES -->
+				<container class="subsection_box"  appearance="tcs/match/ibh/transparent/paper" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+					<translation id="title" type="use" value="Latest Scores" />
+
+					<widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>				
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

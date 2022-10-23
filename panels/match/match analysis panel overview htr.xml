@@ -1,0 +1,283 @@
+﻿<panel>
+<!-- Based on match analysis panel overview
+Removed Match Stats part and links from titles -->
+	<colour id="positive_rating_background_colour" name="positive" />
+	<colour id="neutral_rating_background_colour" name="dark_box_background" />
+	<colour id="negative_rating_background_colour" name="negative" />
+
+	<colour id="positive_rating_text_colour" name="black" />
+	<colour id="neutral_rating_text_colour" name="orange" />
+	<colour id="negative_rating_text_colour" name="white" />
+	<symbol id="positive_appearance" value="boxes/custom/positive/paper" />
+	<symbol id="negative_appearance" value="boxes/custom/negative/paper" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="vertical_adaptive_container" inset="0" offset="0" gap="6">
+
+		<!-- Team Analysis -->
+		<container class="inner_subtle_box" id="TeAn" default_height="-1" minimum_height="160" priority="1">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<container height="25">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--title button-->
+				<widget class="text" id="TAln" section="matm" alignment="centre" auto_size="all" colour="match accent" red_replacement="match accent" blue_replacement="match accent">
+					<translation id="text" translation_id="441063" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--home team analysis-->
+				<container class="scrolling_box">
+					<container id="hlma">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<record id="default_properties" multiline="true" auto_size="vertical" appearance="" size="normal" colour="text"/>
+					</container>
+				</container>
+
+				<widget class="vertical_divider"/>
+
+				<!--away team analysis-->
+				<container class="scrolling_box">
+					<container id="alma">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<record id="default_properties" multiline="true" auto_size="vertical" appearance="" size="normal" colour="text"/>
+					</container>
+				</container>
+			</container>
+
+		</container>
+
+		<!--best players-->
+		<container class="inner_subtle_box" default_height="150" minimum_height="150" priority="1">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<container height="25">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--title-->
+				<widget class="text" section="mapl" id="bpln" auto_size="all" alignment="centre" font="title" colour="positive" red_replacement="positive" blue_replacement="positive">
+					<translation id="text" translation_id="441061" type="use" value="Best Performers[COMMENT: match analysis screen title]" />
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--home team-->
+				<container class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" layout="4,-1" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="inner_box_no_margin" id="bPhc" />
+
+					<container class="client_object_viewer_xml_panel" id="bPho">
+						<layout class="arrange_horizontal_attachment" layout="-1,40" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="22,20,26" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<record id="default_properties" alignment="right,centre_y">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</record>
+							
+							<widget class="client_object_property_panel" property="Pers" style="bold" />
+							<widget class="client_object_property_panel" property="PpsC" size="small" colour="faded text" />
+							<widget class="client_object_property_panel" id="PpSP" property="PpSP" />
+						</container>
+
+						<container>
+							<widget class="object_portrait_picture" image_alignment="top" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<container class="bordered_box_no_margin" id="bphR" height="22">
+								<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0,3" />
+
+								<!-- Rating Text -->
+								<widget class="dashed_number_label" id="bpTx" alignment="centre" style="bold" format="[%fraction#1-4.1]">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								</widget>
+							</container>
+						</container>
+					</container>
+				</container>
+
+				<!--away team-->
+				<container class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" layout="4,-1" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="inner_box_no_margin" id="bPac" />
+
+					<container class="client_object_viewer_xml_panel" id="bPao">
+						<layout class="arrange_horizontal_attachment" layout="40,-1" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<container>
+							<widget class="object_portrait_picture" image_alignment="top" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<container class="bordered_box_no_margin" id="bphR" height="22">
+								<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0,3" />
+
+								<!-- Rating Text -->
+								<widget class="dashed_number_label" id="bpTx" alignment="centre" style="bold" format="[%fraction#1-4.1]">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								</widget>
+							</container>
+						</container>
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="22,20,26" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<record id="default_properties" alignment="left,centre_y">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</record>
+							
+							<widget class="client_object_property_panel" property="Pers" style="bold" />
+							<widget class="client_object_property_panel" property="PpsC" size="small" colour="faded text" />
+							<widget class="client_object_property_panel" property="PpSP" />
+						</container>
+
+
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<!--worst players-->
+		<container class="inner_subtle_box" default_height="150" minimum_height="150" priority="2">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<container height="25">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--title-->
+				<widget class="text" section="mapl" id="wpln" auto_size="all" alignment="centre" font="title" colour="negative" red_replacement="negative" blue_replacement="negative">
+					<translation id="text" translation_id="441062" type="use" value="Struggled to Perform[COMMENT: match analysis screen title, please try to avoid outright negatives like 'Worst Performers']" />
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--home team-->
+				<container class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" layout="4,-1" offset="0" gap="8"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="inner_box_no_margin" id="wPhc" />
+
+					<container class="client_object_viewer_xml_panel" id="wPho">
+						<layout class="arrange_horizontal_attachment" layout="-1,40" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="22,20,26" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<record id="default_properties" alignment="right,centre_y">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</record>
+							
+							<widget class="client_object_property_panel" property="Pers" style="bold" />
+							<widget class="client_object_property_panel" property="PpsC" size="small" colour="faded text" />
+							<widget class="client_object_property_panel" property="PpSN" />
+						</container>
+
+						<container>
+							<widget class="object_portrait_picture" image_alignment="top" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<container class="bordered_box_no_margin" id="bphR" height="22">
+								<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0,3" />
+
+								<!-- Rating Text -->
+								<widget class="dashed_number_label" id="bpTx" alignment="centre" style="bold" format="[%fraction#1-4.1]">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								</widget>
+							</container>
+						</container>
+					</container>
+				</container>
+
+				<!--away team-->
+				<container class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" layout="4,-1" offset="0" gap="8"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="inner_box_no_margin" id="wPac" />
+
+					<container class="client_object_viewer_xml_panel" id="wPao">
+						<layout class="arrange_horizontal_attachment" layout="40,-1" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<container>
+							<widget class="object_portrait_picture" image_alignment="top" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<container class="bordered_box_no_margin" id="bphR" height="22">
+								<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0,3" />
+
+								<!-- Rating Text -->
+								<widget class="dashed_number_label" id="bpTx" alignment="centre" style="bold" format="[%fraction#1-4.1]">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								</widget>
+							</container>
+						</container>
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="22,20,26" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<record id="default_properties" alignment="left,centre_y">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</record>
+							
+							<widget class="client_object_property_panel" property="Pers" style="bold" />
+							<widget class="client_object_property_panel" property="PpsC" size="small" colour="faded text" />
+							<widget class="client_object_property_panel" property="PpSN" />
+						</container>
+
+					</container>
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

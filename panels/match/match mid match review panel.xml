@@ -1,0 +1,132 @@
+<!-- Half Time Review Panel -->
+<!-- v1.1 Set To Adaptive so right panel will disappear at lower resolutions -->
+<panel>
+
+	<layout class="arrange_vertical_attachment" layout="-1,27" gap="1" offset="2"/>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="4"/>
+	
+	<list id="properties_to_forward">
+		<!-- Added by patch -->
+		<record get_property="HSMt" target="htr1" set_property="HSMt" />
+		<record get_property="HSMt" target="htr2" set_property="HSMt" />
+		<record get_property="ASMt" target="htr1" set_property="ASMt" />
+		<record get_property="ASMt" target="htr2" set_property="ASMt" />
+	</list>
+	<container class="horizontal_adaptive_container" inset="0" offset="0" gap="0" draw_vertical_dividers="true">
+	<!-- <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="vertical" inset="2"/>
+	<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" gap="1" offset="2"/> -->
+		
+		<!-- Left Panel -->
+		<container class="main_transparent_box" default_width="-1" minimum_width="400" priority="2"  >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		
+			<container class="horizontal_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" min_height_top="1" min_height_bottom="1" >
+
+				<!-- LLT TOP  htr1 -->
+				<container class="client_object_viewer_xml_panel" id="htr1" file="match/match touchline tablet slot htr" default_item="bmin" minimum_width="1" default_width="-1" >
+				<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+				</record>
+				</container>
+			
+				<!-- LLB - BOTTOM CONTENT htr2 -->
+				<container class="client_object_viewer_xml_panel" id="htr2" file="match/match touchline tablet slot htr" default_item="mtst" minimum_width="1" default_width="-1">
+				<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+				</record>
+				</container>
+
+			</container>
+			
+		</container>	<!-- close left panel -->
+	
+		<!-- Middle Panel - Review Data -->
+		<container class="main_transparent_box" default_width="-1" minimum_width="500" priority="1"  >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container embed_in_frame="true">
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="0" offset="10" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="4" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="4" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+
+				<layout class="fit_children_attachment" alignment="vertical"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="10" gap="0"/>
+
+				<!--title-->
+				<widget class="text" id="Titl" auto_size="all" font="title" size="large" colour="match accent">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+				</widget>
+			</container>
+
+			<container class="vertical_adaptive_container" inset="0" offset="0" gap="2">
+
+				<!--match info Team Score-->
+				<widget class="match_info_panel" id="minf" default_height="-1" minimum_height="200" priority="1" file="match/match info overview ibh">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!-- see about adding another lower priority box here for higher res screens heatmap? -->
+
+				<!--match stats/analysis/best/worst players-->
+				<widget class="match_analysis_panel" id="Anal" default_height="500" minimum_height="300" priority="1" file="match/match analysis panel overview htr">
+					<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+			
+		</container> <!-- Close Middle -->
+	
+		<!-- Right Side with Advice, Analysis Details -->
+		<container class="main_transparent_box" default_width="-1" minimum_width="400" priority="10" >
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+				
+			<!-- Backroom Advice Title Text -->
+			<widget class="text" auto_size="vertical" alignment="centre" font="title" size="large" colour="match accent">
+				<translation id="text" translation_id="515060" type="use" value="Half-Time Backroom Advice[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing backroom advice delivered at half time]" />
+			</widget>
+
+			<!-- Advice Blurb -->
+			<widget class="text" id="blrb" auto_size="vertical" alignment="centre" colour="faded text" />
+			
+			<!-- Data Widget #01 -->
+			<widget class="data_analyst_visualisation_widget" id="smVi" visualisation_type="6" data_type="3" file="widgets/data analyst visualisation mini" navigation_container="true" />
+			<!--will have the widgets from data analysis Part of Data Widget #01 -->
+			<widget class="match_feed_panel" file="match/halftime match feed panel advice" id="feed" show_half_time_advice_only="true" />
+			
+			<!-- Data Widget #02 -->
+			<widget class="data_analyst_visualisation_widget" id="sfVi" visualisation_type="8" data_type="3" file="widgets/data analyst visualisation mini" navigation_container="true">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+
+		</container> <!-- Close Right Panel -->
+
+	</container>	<!-- End Main Panels -->
+
+<!-- Spacer Container - put buttons here -->
+	
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" vertical_inset="0" horizontal_gap="24" />
+	
+		<widget class="icon_button" auto_size="all" alignment="centre" click_event="FpsD" icon="icons/16px/man" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/custom/inbox/button">
+			<translation id="text" translation_id="515058" type="use" value="Player Statistics[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing player statistics from the match just finished]" />
+		</widget>
+
+		<widget class="icon_button" auto_size="all" alignment="centre" click_event="AnDD" icon="icons/16px/stats" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/custom/inbox/button">
+			<translation id="text" translation_id="515054" type="use" value="Analytical Data[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing key analytics data post-match]" />
+		</widget>
+
+		<widget class="icon_button" auto_size="all" alignment="centre" click_event="ScTD" icon="icons/16px/competition" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/custom/inbox/button">
+			<translation id="text" translation_id="515062" type="use" value="Latest Scores &amp; Table[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing latest scores from other matches and the live league table]" />
+		</widget>
+
+	</container> <!-- end spacer -->
+
+</panel>

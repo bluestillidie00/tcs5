@@ -1,0 +1,70 @@
+<panel>
+<!-- based on match incidents small -->
+<!-- Edited incidents to include both logo and kit, plus a team colour bar -->
+<!-- FM21 tweaked logo/kit inset -->
+	<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+<!-- first value controls width of logo/kit column keep slightly larger than below value when resizing images -->
+	<widget class="table" id="tntb" layout="100,-60,-15" mode="fill_rows, stripe_rows" auto_size_rows="true" auto_size="vertical" row_spacing="0">
+
+		<list id="column_widget_properties">
+			<record index="0" auto_size="all" />
+			<record index="1" size="18" alignment="left,centre_y" />
+			<record index="2" alignment="right,centre_y" size="18" />
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0"  />
+			<record index="2" right="8" />
+		</list>
+
+<!-- Logo & Kit container, controls the height/width-->
+		<container height="80" width="80" col="0" row="0">
+<!-- If you only want either the kit or the logo rather than both delete the below line and then delete the lines for either the kit or logo-->		
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="4" />
+			<!-- Logo -->
+			<widget class="match_team_logo_picture" id="TeLo" scale_picture="true" keep_aspect_ratio="true" image_alignment="left" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="2,2,2,2" /> 
+			</widget>
+			<!-- Kit -->
+			<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="2,2,2,2" /> 
+			</widget>
+		</container>
+		
+
+
+<!-- KEEP HEIGHT SAME AS LOGO ABOVE team name -->
+		<widget class="text" id="mitn" col="1" row="0" height="80" font="fonts/title" />
+
+		<!-- score -->
+		<widget class="text" id="mits" col="2" row="0" font="fonts/title">
+			<translation id="text" type="new" value="0" />
+		</widget>
+
+
+	</widget>
+	
+<!-- this widget is for the team colour bar, delete it if you don't want it -->
+  <widget class="picture" id="bkcl" height="4" file="boxes/custom/solid/paper" scale_picture="true" rthr="68" />
+  
+<!-- KEEP FIRST WIDTH VALUE THE SAME AS LOGO CONTAINER TO KEEP INLINE -->
+	<widget class="table" id="miit" layout="80,40,-1" mode="fill_rows, stripe_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false">
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="centre" auto_size="vertical" />
+			<record index="1"  auto_size="all"/>
+			<record index="2" spec="text" auto_size="vertical" multiline="true" auto_size_minimum_height="28" alignment="left,centre_y"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="1" id="icon" alignment="centre" />
+			<record index="2" id="text"  />
+		</list>
+		<record id="default_properties" spec="text" />
+	</widget>
+
+
+
+</panel>

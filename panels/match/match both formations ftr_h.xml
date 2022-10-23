@@ -1,0 +1,19 @@
+<!-- Both formations show side by side, best used for wider panels -->
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+<!-- CHANGED CONTAINER CLASS FROM TITLED BOX TO PLAIN, REMOVED TITLE -->	
+	<container class="plain_box">
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+<!-- if want small formation panel change file to match/match formation small panel ibh -->
+<!-- For review formation panel change file to match/match formation panel review ibh -->
+		<container class="match_formation_panel" file="match/match formation panel review ftr" id="hfor" team_index="0" />
+		<container class="match_formation_panel" file="match/match formation panel review ftr" id="afor" team_index="1" />
+
+	</container>
+
+
+</panel>

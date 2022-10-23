@@ -1,0 +1,129 @@
+﻿<!-- custom panel for ibh review screen - heatmap and best/worst performers -->
+<panel>
+	<colour id="positive_rating_background_colour" name="positive" />
+	<colour id="neutral_rating_background_colour" name="grey 900" />
+	<colour id="negative_rating_background_colour" name="negative" />
+
+	<colour id="positive_rating_text_colour" name="white" />
+	<colour id="neutral_rating_text_colour" name="orange" />
+	<colour id="negative_rating_text_colour" name="white" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	
+	<container class="vertical_adaptive_container" inset="0" offset="0" gap="2">
+
+		<!-- Blur with journo comment and ref rating -->
+		<!-- DISABLED AS NOT READING TEXT
+		<container class="main_transparent_box" red_replacement="bg darker" green_replacement="match accent" blue_replacement="bg darker" minimum_height="130" priority="3" default_height="180">
+
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="2" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			
+			<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="100" clickable="false">
+			<boolean id="keep_aspect_ratio" value="true" />
+			<flags id="image_alignment" value="centre_x,top" />
+			<record id="object_property">
+			<integer id="get_property" value="fxCo" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,30" gap="1" offset="4"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="4"/>
+
+			
+				<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			
+				<widget class="text" id="mper" size="xlarge" auto_size="vertical" font="title" colour="text"/>
+
+			
+				<widget class="text" auto_size="vertical" id="jcom" size="large" colour="text"/>
+
+			
+				<widget class="text" auto_size="vertical" id="jnam" colour="text" />
+				</container>
+				
+			
+				<container minimum_height="30" priority="3" id="RInf" hidden="true">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+				<widget class="picture" file="icons/26px/whistle" red_replacement="text" auto_size="all" />
+				<widget class="text" auto_size="all" hidden="false" id="RfNT" alignment="centre_y">
+				<translation id="text" translation_id="496115" type="use" value="Referee Rating: [COMMENT: Text describing how well a referee performed within a match]" /> 
+				</widget>
+				<widget class="person_button" id="RefN" alignment="centre_y" auto_size="all" hidden="true" />
+				<widget class="dashed_number_label" id="RefR" auto_size="all" alignment="left, centre_y" format="[%fraction#1-4.1]" />
+				</container>
+			</container>
+		</container> -->
+
+		<!-- Team Analysis -->
+		<container class="inner_subtle_box" id="TeAn" default_height="-1" minimum_height="160" priority="1">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<container height="25">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--title button-->
+				<widget class="text" id="TAln" section="matm" alignment="centre" auto_size="all" colour="match accent" red_replacement="match accent" blue_replacement="match accent">
+					<translation id="text" translation_id="441063" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--home team analysis-->
+				<container class="scrolling_box">
+					<container id="hlma">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+						<record id="default_properties" multiline="true" auto_size="vertical" appearance="" size="normal" colour="text"/>
+					</container>
+				</container>
+
+				<widget class="vertical_divider"/>
+
+				<!--away team analysis-->
+				<container class="scrolling_box">
+					<container id="alma">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+						<record id="default_properties" multiline="true" auto_size="vertical" appearance="" size="normal" colour="text"/>
+					</container>
+				</container>
+			</container>
+
+		</container>
+
+		<!--milestones-->
+		<container class="inner_titled_box" default_height="150" minimum_height="100" priority="3" >
+			<translation id="title" translation_id="308471" type="use" value="Milestones[COMMENT: title of match panel containing milestones]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			<widget class="match_preview_milestones_panel" id="mile" miti="1">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+	</container>
+
+			
+
+		
+
+		
+
+
+
+</panel>

@@ -1,0 +1,226 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<list id="properties_to_forward">
+		<record get_property="default_item" target="ibh2" set_property="default_item"/>
+		<record get_property="cfID" target="ibh2" set_property="cfID"/>
+		<!-- added by patch -->
+		<record get_property="HSMt" target="hfSM" set_property="WdgP"/>
+		<record get_property="ASMt" target="afSM" set_property="WdgP"/>
+	</list>
+ 
+	<!--in-between highlights summary panel-->
+	<widget class="match_view_selector_panel" id="ibh2" pause_match_on_menu_opening="false" default_item="bmts" file="client_object/client object viewer selector match" colour="match accent" alignment="centre_x" navigation_container="true">
+ 	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+ 
+<!-- Visualiser -->
+		<container class="client_object_viewer_xml_panel" id="prmC">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+			<translation id="title" translation_id="511076" type="use" value="Visualiser[COMMENT: AREA: match; SUB-AREA: in-between highlights; FR: 32359; TONE: Formal; CHARLIMIT: None; NOTE: Match visualiser to show text descriptions of latest events happening during gaps in match highlights]" />
+ 
+			<widget class="preselected_match_chalkboard_panel"  display_event_time_window="5" display_last_major_event="true" display_recent_events="true" file="match/visualiser">
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="vertical" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="720" />
+						<symbol id="set_property" value="height" />
+						<integer id="true_value" value="177" />
+						<integer id="false_value" value="177" />
+					</record>
+					<record>
+						<flags id="alignment" value="vertical" />
+						<integer id="min_value" value="720" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="height" />
+						<integer id="true_value" value="200" />
+						<integer id="false_value" value="200" />
+					</record>
+				</list>
+			</attachment>
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				<record id="icon_properties">
+					<string id="icon" value="icons/custom/visualiser/ball" />
+					<string id="red_replacement" value="white" />
+					<string id="blue_replacement" value="black" />
+				</record>
+				<list id="chalkboard_events_to_display">
+					<!-- Shot missed target -->
+					<integer value="2" />
+ 
+					<!-- Shot hit woodwork -->
+					<integer value="3" />
+ 
+					<!-- Shot saved -->
+					<integer value="4" />
+ 
+					<!-- Shot blocked -->
+					<integer value="5" />
+					
+					<!-- Foul called -->
+					<integer value="19" />
+ 
+					<!-- Yellow card -->
+					<integer value="20" />
+ 
+					<!-- Red card -->
+					<integer value="21" />
+ 
+					<!-- Foul penalty -->
+					<integer value="22" />
+ 
+					<!-- Touches -->
+					<integer value="54" />
+				</list>
+			</widget>
+ 
+			<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks and action zones combined panel">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+			</widget>
+		</container>	<!-- End Visualiser -->
+		
+ 
+<!--home shot map-->
+		<widget class="match_live_data_analyst_visualisation_panel" id="hfSM">
+			<translation id="title" translation_id="514222" type="use" value="Shot Map[COMMENT: AREA: Visualisation Header; SUB-AREA: Shot map header FR: 32932; TONE: Formal; CHARLIMIT: None NOTE: Shot map header string]" />
+		</widget>
+<!--away shot map-->
+		<widget class="match_live_data_analyst_visualisation_panel" id="afSM">
+			<translation id="title" translation_id="514222" type="use" value="Shot Map[COMMENT: AREA: Visualisation Header; SUB-AREA: Shot map header FR: 32932; TONE: Formal; CHARLIMIT: None NOTE: Shot map header string]" />
+		</widget>
+		
+<!-- Match xG Story -->
+		<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="8" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+		<translation id="title" translation_id="514223" type="use" value="xG Match Story" />
+		</widget>
+		
+<!-- Overview -->
+		<widget class="match_info_panel" id="bmin" file="match/match info small ibh">
+			<translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+		</widget>
+		<widget class="match_info_panel" id="bmin2" auto_size="vertical" file="match/match info overview ibh">
+			<translation id="title" translation_id="308582" type="use" value="Match Overview" />
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		
+<!-- Match Stats -->
+		<widget class="match_stats_panel" id="mtst" file="match/match stats floating">
+			<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+		</widget>
+		<widget class="match_stats_panel" id="mtst2" title="Match Stats (Bars)" file="match/match stats">
+		</widget>
+		
+	
+<!-- Formations -->
+		<widget class="match_formation_panel" id="hmtt" file="match/match formation panel review ibh" team_index="0" read_only="true">
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		</widget>
+ 		<widget class="match_formation_panel" id="amtt" file="match/match formation panel review ibh" team_index="1" read_only="true">
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		</widget>
+		
+<!-- Both Formations -->
+		<widget class="both_match_formation_panels" title="Formations (Horizontal)" file="match/match both formations ibh_h" id="bmfs"/>
+		<widget class="both_match_formation_panels" title="Formations (Vertical)" file="match/match both formations ibh_v" id="bmfs2"/>
+		
+<!-- Player Ratings -->
+		<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats full bottom" use_short_name_format="true" team_index="0">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget>
+ 
+		<widget class="match_team_stats_panel" id="afMs" file="match/match team stats full bottom" use_short_name_format="true" team_index="1">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget>
+		
+<!-- Motivation -->
+		<widget class="match_team_stats_panel" id="htms" file="match/match team stats full top" use_short_name_format="true" team_index="0">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget>
+ 
+		<widget class="match_team_stats_panel" id="atms" file="match/match team stats full top" use_short_name_format="true" team_index="1">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+		</widget>
+		
+<!-- Both Team Player Ratings -->
+		<widget class="both_match_team_stats_panels" title="Player Ratings" file="match/match both team stats ibh" id="bmts" save_current_state="true" />
+		
+		
+<!-- Standard views no alts -->
+		<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
+            <translation id="title" translation_id="247381" type="use" value="Shots" />
+        </widget>
+		<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+            <translation id="title" translation_id="247327" type="use" value="Action Zones" />
+            <colour id="ptlc" name="white" />
+        </widget>
+        <widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+            <translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+        </widget>
+		<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis floating">
+			<translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+		</widget>
+		<widget class="match_away_analysis_panel" id="Maan" file="match/match analysis floating">
+			<translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+		</widget>
+		
+		<!-- Heat Maps -->
+		<widget class="match_analysis_panel" id="Anal" file="match/match analysis panel ibh">
+		<translation id="title" translation_id="420623" type="use" value="Heat Map" />
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+		
+		<widget class="match_feed_panel" id="Feed" file="match/match feed panel expanded">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+			<translation id="title" translation_id="309188" type="use" value="Advice[COMMENT: interaction manager; category type]" />
+		</widget>
+		        <widget class="match_report_panel" id="mtrp" file="match/match report small">
+            <translation id="title" translation_id="248079" type="use" value="Report" />
+        </widget>
+        <widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+            <translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+        </widget>
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+        <widget class="match_league_table_panel" id="mltp" MLTs="true">
+			<translation id="title" translation_id="248082" type="use" value="League Table" />
+        </widget>
+
+		
+		
+		
+		
+		
+ 
+	</widget>	<!-- end selector panel -->
+	
+</panel>

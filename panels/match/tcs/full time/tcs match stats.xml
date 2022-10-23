@@ -1,0 +1,49 @@
+<panel>
+	<!-- changed colours from match text to text, removed inset and button appearance -->
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<widget class="table" id="mstn" 
+  layout="-1, -1, -1"
+  mode="stripe_rows, printable"
+  auto_size_rows="false"
+row_height="31"  
+	fixed_size_rows="false"  
+	row_spacing="0">
+
+		<list id="headings">
+			<record alignment="left, centre_y" id="m_HH" font="title" colour="text">
+				<translation id="text" translation_id="242477" type="use" value="Home" />
+			</record>
+			<record alignment="centre" id="m_SH" font="title"  colour="text">
+				<translation id="text" translation_id="247380" type="use" value="Statistic" />
+			</record>
+			<record alignment="right, centre_y" id="m_AH" font="title"  colour="text">
+				<translation id="text" translation_id="242476" type="use" value="Away" />
+			</record>
+		</list>
+
+		<list id="column_properties">
+			<record indx="0" alignment="left, centre_y" colour="text" />
+			<record indx="1" alignment="centre" colour="text" />
+			<record indx="2" alignment="right, centre_y" colour="text" />
+		</list>
+
+		<list id="column_display_properties">
+			<record indx="0" id="home" sort_disabled="true" left="0" />
+			<record indx="1" id="labl" sort_disabled="true" />
+			<record indx="2" id="away" sort_disabled="true" right="0" />
+		</list>
+
+	</widget>
+
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" alignment="right" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="button" click_event="mcss" auto_size="horizontal">
+			<translation id="text" translation_id="333760" type="use" value="Customise[COMMENT:Match screen; match stats panel; button text for customising visible match stats]" />
+		</widget>
+	</container>
+
+</panel>

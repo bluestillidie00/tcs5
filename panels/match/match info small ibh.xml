@@ -1,0 +1,103 @@
+<panel info_panel_type="1">
+<!-- NO changes need for FM21 based on match info small -->
+<!-- re-directed incidents to ibh versions which include kit and logo plus team colour bar-->
+	<container>
+	
+		<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="10" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="table" layout="-3,-1" mode="none" auto_size="vertical" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false" row_spacing="0">
+		
+			<!-- column properties -->
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" spec="text" size="small"  />
+				<record indx="1" alignment="right,centre_y" spec="text" size="small"  />
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" left="4" />
+				<record indx="1" right="4" />
+			</list>
+
+				<!--REMOVED AS GAME DOESNT LIKE IT HERE & ON REVIEW SCREENS comp picture-->
+	<!-- <widget class="object_portrait_picture" id="fxCo" scale_picture="true" height="18" row="0" col="0" row_span="2" >
+		<boolean id="keep_aspect_ratio" value="true" />
+		<flags id="image_alignment" value="centre" />
+		<record id="object_property">
+			<integer id="get_property" value="fxCo" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget> -->
+			
+      <widget class="fixture_name_text" id="fxnm" row="0" col="0">
+        <record id="object_property">
+          <integer id="get_property" value="FxNm" />
+        </record>
+      </widget>
+      <widget class="date_cell" id="date" format="[%date#1-short] [%date#1-time]" row="0" col="1">
+        <record id="object_property">
+          <integer id="get_property" value="fxdt" />
+        </record>
+      </widget>
+			<widget class="text" id="stad" row="1" col="0" column_span="2" auto_size="vertical" />
+		</widget>
+			
+
+		
+		<container>			
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1,-1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					
+					<!--  home incidents panel -->
+					<widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/match incidents small ibh" />
+												
+					<!--  away incidents panel -->
+					<widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/match incidents small ibh" />
+					
+				</container>
+						
+		</container>
+
+	
+			
+		<!-- Table containing attendance, referee, weather and half time score details -->
+		<widget class="table" layout="-1,-1,40" mode="none" auto_size="vertical" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false" row_spacing="0">
+					
+			<list id="column_widget_properties">
+				<record indx="0" spec="text" size="small" alignment="left,centre_y" />
+				<record indx="1" spec="text" size="small" alignment="right,centre_y" />
+			</list>
+	
+		   <list id="column_table_properties">
+				<record indx="0" left="4" sort_disabled="true" top="2" />
+				<record indx="1" rght="4" sort_disabled="true" top="2" />
+			</list>
+
+      <record id="default_properties" spec="text"  />
+
+      <widget class="label" id="attl" row="0" col="0" auto_size="vertical" />
+			<widget class="label" id="hfts" row="0" col="1" auto_size="vertical" />
+
+      <widget class="referee_strictness_label" id="reff" row="1" col="0" spec="text" size="small" auto_size="vertical">
+        <translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]" />
+      </widget>
+      <widget class="weather_forecast_label" id="weal" row="1" col="1" auto_size="vertical" />
+
+			<widget class="weather_indicator_panel" id="weic" row="0" col="2" row_span="2" spec="text">
+    			<boolean id="show_weather_label" value="false" />
+    			<boolean id="show_weather_icon" value="true" />
+    			<boolean id="show_temperature_on_icon" value="false" />
+    			<boolean id="weather_icon_size" value="1" />
+			</widget>			
+		</widget>
+		
+	</container>
+					
+			
+		
+
+</panel>

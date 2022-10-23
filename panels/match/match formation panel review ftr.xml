@@ -1,0 +1,17 @@
+﻿<!-- Added option to change pitch orientation -->
+<!-- modified panel to use the formation panel from ftr screen but without sub bench as doesnt work -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<!-- the pitch-->
+	<widget	class="pitch_with_tactics" id="pwtc" can_change_orientation="true" icon_flags="show_name,show_extra_details,drop_initial_if_possible,show_number,dont_colour_number,use_player_kits_back" tactic_icon_min_size="120.f" >
+		<boolean id="vertical" value="true"/>
+		<boolean id="pitch_dont_draw_indicators" value="true"/>
+		<boolean id="pitch_is_read_only" value="true" />
+		<boolean id="pitch_draw_grass" value="false"/>
+		<flags id="pitch_alignment" value="can_scale"/>
+		<string id="pitch_line_colour" value="faded text" />
+		<integer id="pitch_touchline_width_percentage" value="50" />
+		<string id="player_icon_file" value="tactics/tactics icon info panel match stats" />
+		<boolean id="allow_y_score_adjustment_for_roles" value="false" />
+	</widget>
+</panel>
