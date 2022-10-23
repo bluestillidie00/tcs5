@@ -322,14 +322,13 @@
 	</container>
 
 	<!-- BOTTOM -->
-	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-560,-600,-560" horizontal_gap="8"/>
-
+<container class="horizontal_adaptive_container" gap="8">
 		<!-- LEAGUE TABLE AND RESULTS -->
-		<container>
-			<layout class="vertical_arrange" vertical_layout="-3,-6" vertical_gap="4"/>
+		<container default_width="-560" priority="3" minimum_width="400"  class="vertical_adaptive_container"> 
 
 			<!-- RESULTS AND FIXTURES -->
+			<container  default_height="255" priority="2">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 			<container class="vertical_arrange_container" alignment="fill" gap="4">
 
 				<container class="club_overview_team_results_panel" file="club/tcs/club overview team calendar results">
@@ -340,9 +339,10 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</container>
 			</container>
+			</container>
 
 			<!-- LEAGUE TABLE -->
-			<container class="tcs_box">
+			<container class="tcs_box" default_height="-1" priority="1">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 				<container>
@@ -487,8 +487,7 @@
 		</container>
 
 		<!-- MIDDLE -->
-		<container class="tcs_tabs" id="tclub" default_height="-1" priority="1" default_item="co01" save_default_state="true" save_session_state="true">
-
+		<container class="tcs_tabs" id="tclub" default_item="over" save_default_state="true" save_session_state="true" default_width="-600" priority="1" minimum_width="500">
 
 			<!-- OVERVIEW -->
 			<container id="over">
@@ -680,7 +679,7 @@
 		</container>
 
 		<!-- RIGHT -->
-		<container>
+		<container default_width="-560" priority="2" minimum_width="400"> 
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<container class="tcs_tabs" id="tsta" default_height="-1" priority="1" default_item="st01" save_default_state="true" save_session_state="true">
