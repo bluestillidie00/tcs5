@@ -18,7 +18,15 @@
 				<record id="object_property" get_property="objt" set_property="objt" />
 			</widget>
 
-			<!-- CONSOLE -->
+		</container>
+
+		<!-- LAPTOP BATTERY POWER -->
+		<container height="30">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
+
+			<widget class="spacer" />
+			
+				<!-- CONSOLE -->
 			<container class="inner_box" appearance="boxes/contrast/no margin/middle/paper" red_replacement="bg" height="30">
 				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_gap="2" />
 
@@ -84,13 +92,7 @@
 					<translation id="text" translation_id="229828" type="use" value="Cancel" />
 				</widget>
 			</container>	
-		</container>
-
-		<!-- LAPTOP BATTERY POWER -->
-		<container height="30">
-			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
-
-			<widget class="spacer" />
+		
 
 			<container navigation_container="true">
 				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0">
