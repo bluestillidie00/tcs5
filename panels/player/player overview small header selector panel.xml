@@ -62,19 +62,23 @@
 		<translation id="subtitle" translation_id="486383" type="use" />
 	</container> 
 
-	<!-- CONTRACT -->
-	<widget class="player_contract_panel" id="pcon" file="player/tcs/selector/header/contract small" valid_for_unemployed_player="false" >
-		<translation id="title" translation_id="247576" type="use" />
-	</widget>
-
-<!-- PERSONAL INFORMATION -->
+	<!-- PERSONAL INFORMATION -->
+	<!-- INTERNATIONAL RECORD -->
 	<widget class="person_personal_information_panel" file="player/tcs/selector/header/intl small" id="Nati" vertical="false">
 		<translation id="title" translation_id="328539" type="use" />
 		<translation id="subtitle" translation_id="292589" type="use" />
 	</widget>
 
+	<!-- ELIGIBILITY -->
 	<widget class="person_personal_information_panel" id="teli" file="player/tcs/selector/header/eligibilty" late_loading="true">
 		<translation id="title" type="use" translation_id="260816" />
 		<translation id="subtitle" translation_id="292589" type="use" />
 	</widget>
+
+	<!-- UNGROUPED -->	
+	<!-- CONTRACT -->
+	<widget class="player_contract_panel" id="pcon" file="player/tcs/selector/header/contract small" valid_for_unemployed_player="false" >
+		<translation id="title" translation_id="247576" type="use" />
+	</widget>
+
 </panel>
