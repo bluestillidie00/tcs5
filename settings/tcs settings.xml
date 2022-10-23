@@ -4,7 +4,8 @@
 	<colour name="tcs_bg" 																			value="rgb(28,32,48)"/>
 	<colour name="tcs_bg_lighter" 															value="rgb(40,45,57)"/>
 	
-	<colour name="divider" 																			value="fg"/>
+<colour name="divider"                                    value="white"/>
+
 	
 	<!-- TCS PROFILE ATTRIBUTE COLOURS -->
 	<colour name="low attribute" red="169" green="169" blue="169" />
