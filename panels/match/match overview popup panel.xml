@@ -1,81 +1,99 @@
-<panel navigation_container="true">
-	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4"/>
-	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
 
-	<container class="inner_subtle_box" height="220">
+    <!-- TOP BAR -->
+    <container height="80" class="tcs_box">
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+        <widget class="match_info_panel" id="bmin" file="match/match info overview popup" small_version="true">
+            <record id="object_property" get_property="objt" set_property="objt"/>
+        </widget>
+    </container>
 
-	<widget class="match_info_panel" id="bmin" file="match/match info overview popup" small_version="true">
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,20,0,20" />
-		<translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
-		<record id="object_property">
-			<integer id="get_property" value="objt" />
-			<integer id="set_property" value="objt" />
-		</record>
-	</widget>
+    <!-- MATCH EVENTS AND TEAM STATS -->
+    <container>
+        <layout class="horizontal_arrange" horizontal_layout="-6,-8" horizontal_gap="8" />
 
-	<widget class="match_info_panel" id="min2" file="match/match info overview popup scorers">
-		<record id="object_property">
-			<integer id="get_property" value="objt" />
-			<integer id="set_property" value="objt" />
-		</record>
-	</widget>
+        <!-- LEFT HAND SIDE -->
+        <container>
+            <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="8"/>
 
-	</container>
+            <!-- NOTABLE EVENTS -->
+            <container class="tcs_box">
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<container>
-		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset='0' />
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true" />
+                <!-- STADIUM PIC -->
+                <container>
+                    <layout class="stick_to_sides_attachment" apply_to_children="true" inset="-100"/>
 
-		<container>
-			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8"/>
-			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                    <widget class="stadium_picture" id="STAp" image_alignment="centre_x" scale_picture="true" transparency="0.24" keep_aspect_ratio="true">
+                        <record id="object_property" get_property="objt" set_property="objt"/>
+                    </widget>
+                </container>
 
-			<container class="inner_box">
-				<translation id="title" translation_id="247439" type="use" value="Match Stats" />
+                <!-- NOTABLE EVENTS -->
+                <widget class="match_notable_events_panel" file="none" id="nota">
+                    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+                    <record id="object_property" get_property="objt" set_property="objt"/>
 
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                    <container id="NEve">
+                        <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" horizontal_inset="4" />
+                        <!-- 
+                        <widget class="text" font="title" auto_size="vertical" alignment="centre" colour="title">
+                            <translation id="text" translation_id="515063" type="use" value="Notable Events[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing notable events from the match; goals, cards etc]" />
+                        </widget> -->
 
-				<widget class="match_stats_panel" id="MSPn" file="match/match stats overview popup">
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</widget>
+                        <widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true" >
 
-			</container>
+                            <list id="column_widget_properties">
+                                <record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false" />
+                                <record index="1" icon_alignment="centre" navigation_focus_target="false" />
+                                <record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false" />
+                                <record index="3" icon_alignment="centre" navigation_focus_target="false" />
+                                <record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false" />
+                            </list>
 
-			<container navigation_container="true">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                            <list id="column_table_properties">
+                                <record index="0" id="homt" />
+                                <record index="1" id="homi" />
+                                <record index="2" id="time" />
+                                <record index="3" id="awai" />
+                                <record index="4" id="awat" />
+                            </list>
+                        </widget>
+                    </container>
 
-				<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats overview popup" team_index="0">
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</widget>
-				<widget class="match_team_stats_panel" id="afMs" file="match/match team stats overview popup" team_index="1">
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</widget>
-			</container>
-		</container>
+                </widget>
 
-		<!-- Link buttons -->
-		<container>
-			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
-			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
-			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+                <!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+                <container class="bordered_box" appearance="tcs/ro" rrep="bg lighter"/>
+            </container>
 
-			<widget class="link_appearance_button" id="cnfL" navigation_focus_target="true">
-				<!-- Confidence link requires some code -->
-				<translation id="text" translation_id="260384" type="use" value="Match Confidence[COMMENT: MATCH_SUMMARY_NEWS; button to direct user to this matches confidence]" />
-			</widget>
-		</container>
+            <!-- MATCH STATS -->
+            <container class="tcs_box">
+                <attachment_group class="vertical_arrange_autosize" />
 
-	</container>
+                <widget class="match_stats_panel" id="MSPn" file="match/match stats overview popup">
+                    <record id="object_property" get_property="objt" set_property="objt"/>
+                </widget>
+            </container>
+        </container>
 
+        <!-- RIGHT -->
+        <!-- PLAYER STATS -->
+        <container class="tcs_box">
+            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+            <!-- HOME TEAM -->
+            <widget class="match_team_stats_panel" id="hfMs" file="match/match team stats overview popup" team_index="0">
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </widget>
+
+            <!-- AWAY TEAM -->
+            <widget class="match_team_stats_panel" id="afMs" file="match/match team stats overview popup" team_index="1">
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </widget>
+        </container>
+
+    </container>
 </panel>
