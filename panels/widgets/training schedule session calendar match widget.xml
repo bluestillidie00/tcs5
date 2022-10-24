@@ -35,7 +35,7 @@
 
 			<container class="main_box" appearance="tcs/backgrounds/overlay/80" rrep="black">
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
-				<widget class="fixture_name_text" id="comp" font="text" alignment="centre" colour="title" style="bold" multiline="true" size="10" auto_size="vertical" />
+				<widget class="fixture_name_text" id="comp" font="text" alignment="centre,can_scale" colour="title" style="bold" multiline="true" size="10" auto_size="vertical" />
 				<widget class="text" id="text" colour="text" alignment="centre,can_scale" size="11" auto_size="vertical" style="bold" />
 				<widget class="text" id="scnd" colour="faded text" alignment="centre,can_scale" size="xsmall" height="14" auto_size="vertical" />
 			</container>
