@@ -7,16 +7,13 @@
 		<layout class="stick_to_sides_attachment" alignment="top,right" inset="4,6"/>
 	</widget>
 
-	<!-- ATTRIBUTE ANALYSER -->
-	<widget file="player/player attribute analyser panel" id="paAn" class="client_object_viewer_xml_panel" late_loading="true">
-		<translation id="title" translation_id="334971" type="use"/>
-	</widget>
-	
+	<record id="default_properties"  late_loading="true"/>
+
 	<!-- CAREER STATS -->
 	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
 		<translation id="title" translation_id="247605" type="use"/>
 	</widget>
-	
+
 	<!-- COMPARISON -->
 	<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison" late_loading="true">
 		<translation id="title" translation_id="420686" type="use"/>
@@ -34,21 +31,21 @@
 
 	<!-- LAST 5 GAMES -->
 	<widget class="player_additional_stats_panel" file="none" id="la5g">
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<translation id="title" translation_id="395236" type="use"/>
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" translation_id="395236" type="use"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
 		<widget class="player_form_summary_panel" file="player/tcs/selector/last 5 games">
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 	</widget>
-	
+
 	<!-- LAST 10 GAMES -->
 	<widget class="player_additional_stats_panel" file="none" id="la10">
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
-
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
+		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
 		<widget class="player_form_summary_panel" file="player/tcs/selector/last 10 games">
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
@@ -58,19 +55,19 @@
 	<widget class="player_history_injury_panel" id="tphi" late_loading="true" file="player/tcs/selector/past injury">
 		<translation id="title" translation_id="316626" type="use"/>
 	</widget>
-	
+
 	<!-- POSITIONS -->
 	<widget class="player_positions_indicator_panel" id="Ppos" file="player/tcs/selector/big/position" navigation_container="true" default_focus="true">
 		<record id="object_property" get_property="objt" set_property="objt"/>
 		<translation id="title" translation_id="333996" type="use"/>
 	</widget>
-	
+
 	<!-- PROGRESS -->
 	<widget class="client_object_viewer_xml_panel" file="widgets/client object progress graph" section="Pgrg" id="Pgrg" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
 		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/>
 	</widget>
 
-	<!-- PROS AND CONS -->
+	<!-- REPORTS -->
 	<container class="player_scout_reports_panel" id="thPC" file="player/tcs/selector/header/tcs pros cons">
 		<translation id="title" type="use" translation_id="254774"/>
 	</container>
@@ -84,7 +81,7 @@
 	<container class="player_transfer_information_panel" id="thTr" file="player/tcs/selector/header/transfer">
 		<translation id="title" type="use" translation_id="298527"/>
 	</container>
-	
+
 	<!-- PERSONAL DETAILS -->
 	<container class="player_personal_details_panel" id="tper" file="player/tcs/selector/header/ppdp">
 		<translation id="title" type="use" translation_id="292599"/>
@@ -94,4 +91,18 @@
 	<container class="player_personal_details_panel" id="tpe1" file="player/tcs/selector/header/ppdp alt">
 		<translation id="title" type="use" value="Personal Details (alt)"/>
 	</container>
+
+	<!-- POLYGONS -->
+	<!-- ATTRIBUTE ANALYSER -->
+	<widget file="player/player attribute analyser panel" id="paAn" class="client_object_viewer_xml_panel">
+		<translation id="title" translation_id="334971" type="use"/>
+		<translation id="subtitle" type="use" value="Polygons" />
+	</widget>
+
+	<!-- DNA -->
+	<widget file="player/tcs/selector/big/team dna" class="client_object_viewer_xml_panel" id="pDNA">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<translation id="title" type="use" value="DNA" />
+		<translation id="subtitle" type="use" value="Polygons" />
+	</widget>
 </panel>
