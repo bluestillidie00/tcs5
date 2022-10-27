@@ -78,7 +78,7 @@
 
 		<record id="default_properties" file="player/player overview popup selector panel" save_session_state="true" />
 
-		<container class="client_object_viewer_selector_panel" id="pus2"  file="player/player overview popup selector panel" save_session_state="true">
+		<container class="client_object_viewer_selector_panel" id="pus2" save_session_state="true">
 			<integer id="default_for_unemployed_managers" value="pscR"/>
 			<integer id="default_for_international_managers_other_team" value="pscR"/>
 			<integer id="default_for_everyone_else" value="pscR"/>

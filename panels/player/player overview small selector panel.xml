@@ -5,7 +5,7 @@
 	</container>
 
 	<widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true">
-		<layout class="stick_to_sides_attachment" alignment="right,top" inset="12,8" />
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="4,2" />
 	</widget>
 
 	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true">
