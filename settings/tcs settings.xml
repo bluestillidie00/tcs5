@@ -1,12 +1,36 @@
 <properties version="1.0">
+	<!-- THIS FILE CONTROLS THE SKIN COLOURS DISPLAYED AND WORKS TOP TO BOTTOM -->
 
-	<colour name="tcs_bg" 																			value="rgb(28,32,48)"/>
-	<colour name="tcs_bg" 																			value="rgb(28,32,48)"/>
-	<colour name="tcs_bg_lighter" 															value="rgb(40,45,57)"/>
-	
-<colour name="divider"                                    value="white"/>
+	<!-- MOD // DARK MODE 
+	<colour name="bg lighter" 																	value="rgb(42,42,43)"/>
+	<colour name="bg" 																			value="rgb(32,32,33)"/>
+	<colour name="bg darker" 																	value="rgb(24,24,25)"/>
+	<colour name="bg tertiary" 																	value="bg darker"/>
+	<colour name="bg alpha" 																	value="rgba(18,7,30,0.8)"/>
+	<colour name="bg small alpha" 																value="rgba(18,7,30,0.94)"/>
+	<colour name="bg large alpha" 																value="rgba(18,7,30,0.5)"/>
+	<colour name="bg info" 																		value="rgb(39,103,192)"/>
+	<colour name="bg alert" 																	value="rgb(0,129,138)"/>
+	<colour name="bg accent" 																	value="rgb(0,129,138)"/>
+	<colour name="bg positive" 																	value="rgb(16,165,68)"/>
+	<colour name="bg negative" 																	value="rgb(182,40,40)"/> -->
 
-	
+	<!-- MOD // WTS Legacy Ediition 
+	<colour name="bg" 																			value="rgb(48,31,103)"/>
+	<colour name="bg lighter" 																	value="rgb(53,37,108)"/>
+	<colour name="bg darker" 																	value="rgb(38,21,93)"/>
+	<colour name="bg tertiary" 																	value="bg darker"/> -->
+
+	<!-- DEFAULT BG COLOUR -->
+	<colour name="bg" 																			value="rgb(28,32,48)"/>
+	<colour name="bg lighter" 																	value="rgb(35,40,52)"/>
+
+	<!-- CUSTOM COLOURS SET UP THAT MY GRAPHICS REFERENCE. FOR COLOURS, SCROLL TO BOTTOM OF DOCUMENT -->
+	<colour name="tcs_bg" 																			value="bg"/>
+	<colour name="tcs_bg_lighter" 															value="bg lighter"/>
+
+	<colour name="divider"                                    value="white"/>
+
 	<!-- TCS PROFILE ATTRIBUTE COLOURS -->
 	<colour name="low attribute" red="169" green="169" blue="169" />
 	<colour name="normal attribute" red="241" green="241" blue="241" />
@@ -16,9 +40,10 @@
 	<colour name="normal attribute background" red="0" green="127" blue="228" alpha="200"/>
 	<colour name="good attribute background" red="0" green="120" blue="106" />
 	<colour name="excellent attribute background" red="22" green="180" blue="40" />
-	
+
 	<!-- WTS LOGO -->
 	<colour name="wts_p" 																			value="rgb(245,245,245)"/>
 	<colour name="wts_s" 																			value="rgb(255,0,132)"/>
-	
+
+
 </properties>
