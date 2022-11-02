@@ -1,11 +1,11 @@
 <panel>
 
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-	<!-- these are defaults tablet sizes, TbWs also sets min width and TbWl sets max. width -->
-	<integer id="TbWs" value="650"/>	<!-- 0 - 1350 -->
-	<integer id="TbWm" value="1010"/>	<!-- 1350 - 1910 -->
-	<integer id="TbWl" value="1560"/>	<!-- 1910 up -->
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	<!-- these are defaults tablet sizes-->
+	<integer id="TbWs" value="300"/>
+	<integer id="TbWm" value="650"/>
+	<integer id="TbWl" value="1070"/>
 
 
 	<list id="properties_to_forward">
@@ -15,98 +15,277 @@
 		<record get_property="OTfi" target="TTab" set_property="OTfi" />
 		<record get_property="HTsi" target="TTab" set_property="HTsi" />
 		<record get_property="OTsi" target="TTab" set_property="OTsi" />
-		<!-- Added by patch -->
 		<record get_property="HSMt" target="TTab" set_property="HSMt" />
-		<record get_property="ASMt" target="TTab" set_property="ASMt" />
-		
-		<record get_property="HSMt" target="Tnep" set_property="HSMt" />
-		<record get_property="ASMt" target="Tnep" set_property="ASMt" />
+		<record get_property="ASMt" target="TTab" set_property="ASMt" />		
+		<record get_property="HPMt" target="TTab" set_property="HPMt" />
+		<record get_property="APMt" target="TTab" set_property="APMt" />
 	</list>
- 
-	<container>	<!-- opens left middle panel -->
+
+	<container>
 		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0" horizontal_gap="8" />
-		
-		<container>	<!-- open left panel -->
- 
-			<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="8"/>
- 
-			<!-- Notable Events, Match stats -->
+
+		<container>
+
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+
 			<container width="342">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+				<container class="main_transparent_box" appearance="boxes/custom/match/timeline stats/paper" red_replacement="bg" >
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<container height="193"  >
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<widget class="stadium_picture" id="STAp" >
+							<layout class="stick_to_sides_attachment" inset="0"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+
+						<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.60" rrep="bg" />
+
+						<widget class="match_info_panel" id="bmin" file="file" >
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<layout class="horizontal_arrange" horizontal_layout="-1,24,-1" />
+
+							<!--  home incidents panel -->
+							<widget class="home_match_incidents_panel" id="hmip" small_version="false" file="none">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+								<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
+									<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
+								</widget>
+							</widget>
+
+							<widget class="text" alignment="centre" style="bold">
+								<translation id="text" type="use" value="V" />
+							</widget>
+
+							<!--  home incidents panel -->
+							<widget class="away_match_incidents_panel" id="amip" small_version="false" file="none">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+								<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
+									<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
+								</widget>
+							</widget>
+						</widget>
+					</container>
+
+					<widget class="weather_indicator_panel_centred" id="FxWe">
+						<record id="object_property" get_property="FxWe" />
+					</widget>
+
+					<container>
+						<global id="hidden" name="game_mode_is_console_mode" />
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+						<widget class="label" auto_size="all" size="small">
+							<translation id="text" translation_id="227993" type="use" value="Referee" />
+						</widget>
+						<widget class="person_button" auto_size="all">
+							<record id="object_property" get_property="FRef" dont_set_hint="true" />
+						</widget>
+					</container>
+											<!--competition-->
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+							<widget class="label" auto_size="all" size="small" alignment="centre_y">
+								<translation id="text" translation_id="227740" type="use" value="Competition" />
+							</widget>
+							<widget class="fixture_name_text" auto_size="all" icon_enabled="true">
+								<record id="object_property" get_property="FxNm" />
+							</widget>
+						</container>
+						<!--attendance-->
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+							<widget class="label" auto_size="all" size="small">
+								<translation id="text" translation_id="247242" type="use" value="Attendance" />
+							</widget>
+							<widget class="number_label" auto_size="all">
+								<record id="object_property" get_property="FxEA" dont_set_hint="true" />
+							</widget>
+						</container>
+				</container>
+
 				<container id="NEvp">
 					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
- 
+
 					<container class="main_transparent_box" appearance="boxes/custom/match/timeline stats/paper" red_replacement="bg">
 						<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="1.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" />
 						<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-						
+
 						<attachment class="match_ball_fade_attachment"/>
- 
-						<container class="client_object_viewer_xml_panel" file="match/match touchline tablet panel nep" id="Tnep" >
+
+						<widget class="match_notable_events_panel">
+
+							<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.6" end_mode="hold_end" />
+							<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.4" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
+
 							<record id="object_property">
 								<integer id="get_property" value="objt" />
 								<integer id="set_property" value="objt" />
 							</record>
+						</widget>
+
+
+					</container>
+
+
+					<widget class="spacer" height="47" />
+				</container>
+
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="FEEP">
+					<attachment_group class="vertical_arrange" vertical_alignment="middle,extend" vertical_offset="0" vertical_gap="0" />
+
+					<container>
+						<attachment class="test_screen_size_attachment" skip_if_false="true">
+							<list id="properties">
+								<record>
+									<flags id="alignment" value="vertical" />
+									<integer id="min_value" value="0" />
+									<integer id="max_value" value="720" />
+									<symbol id="set_property" value="height" />
+									<integer id="true_value" value="8" />
+									<integer id="false_value" value="8" />
+								</record>
+								<record>
+									<flags id="alignment" value="vertical" />
+									<integer id="min_value" value="720" />
+									<integer id="max_value" value="900" />
+									<symbol id="set_property" value="height" />
+									<integer id="true_value" value="10" />
+									<integer id="false_value" value="10" />
+								</record>
+								<record>
+									<flags id="alignment" value="vertical" />
+									<integer id="min_value" value="900" />
+									<integer id="max_value" value="10000" />
+									<symbol id="set_property" value="height" />
+									<integer id="true_value" value="20" />
+									<integer id="false_value" value="20" />
+								</record>
+							</list>
+						</attachment>
+					</container>
+
+					<container>
+
+						<attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" />
+
+						<animation class="fade_animation" start_value="0" end_value="1" duration="0.6" delay="1.4" end_mode="hold_end" />
+
+
+						<container class="main_transparent_box">
+
+							<attachment class="test_screen_size_attachment" skip_if_false="true">
+								<list id="properties">
+									<record>
+										<flags id="alignment" value="horizontal" />
+										<integer id="min_value" value="0" />
+										<integer id="max_value" value="1100" />
+										<symbol id="set_property" value="width" />
+										<integer id="true_value" value="320" />
+										<integer id="false_value" value="320" />
+									</record>
+									<record min_value="1100" max_value="1360" true_value="340"/>
+									<record min_value="1360" max_value="1410" true_value="320"/>
+									<record min_value="1410" max_value="1510" true_value="370"/>
+									<record min_value="1510" max_value="2000" true_value="410"/>
+									<record min_value="2000" max_value="10000" true_value="480"/>
+									<record>
+										<flags id="alignment" value="vertical" />
+										<integer id="min_value" value="0" />
+										<integer id="max_value" value="601" />
+										<symbol id="set_property" value="height" />
+										<integer id="true_value" value="380" />
+										<integer id="false_value" value="380" />
+									</record>
+									<record min_value="601" max_value="720" true_value="407"/>
+									<record min_value="720" max_value="850" true_value="548"/>
+									<record min_value="850" max_value="1080" true_value="635"/>
+									<record min_value="1080" max_value="1280" true_value="850"/>
+									<record min_value="1280" max_value="10000" true_value="950"/>
+								</list>
+							</attachment>
+
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8" />
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" />
+								<widget class="icon_button" appearance="" font="title" auto_size="all" alignment="centre" icon="icons/16px/dugout" icon_colour="title" navigation_focus_target="false">
+									<translation id="text" translation_id="516207" type="use" value="The Dugout[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: section title to show the manager instructions that can be given from the dugout/managerial area - subs, tactics etc]" />
+								</widget>
+							</container>
+
+							<!--match feed-->
+							<widget class="match_feed_panel" id="feed" file="match/match feed panel expanded" navigation_container="true">
+
+								<record id="object_property" get_property="objt" set_property="objt" />
+
+							</widget>
+
 						</container>
 
- 					</container>	<!-- close transparent -->
- 
-					<widget class="spacer" height="47" />
-				</container> <!-- close NEvp -->
- 
-			</container>	<!-- close notable events -->
+					</container>
 
- 
-		</container> <!-- close left panel -->
- 
-		<!-- Touchline Tablet -->
-		<container>	<!-- open tablet -->
+					<container height="52" />
+				</container>
+
+			</container>
+
+
+
+		</container>
+
+		<!--match information-->
+		<container>
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-						
-			<!-- these control max. width of panel remove 350 for nme panel -->
-			<!-- 1024, 1280, 1360/6, 1440, 1600, 1680, 1920, 2560, 3440, 3840 -->
+
 			<attachment class="test_screen_size_attachment" skip_if_false="true">
 				<list id="properties">
 					<record>
 						<flags id="alignment" value="horizontal" />
 						<integer id="min_value" value="0" />
-						<integer id="max_value" value="1350" />
+						<integer id="max_value" value="1366" />
 						<symbol id="set_property" value="width" />
-						<integer id="true_value" value="650" />
-						<integer id="false_value" value="650" />
+						<integer id="true_value" value="335" />
+						<integer id="false_value" value="335" />
 					</record>
 					<record>
 						<flags id="alignment" value="horizontal" />
-						<integer id="min_value" value="1350" />
-						<integer id="max_value" value="1910" />
+						<integer id="min_value" value="1366" />
+						<integer id="max_value" value="1920" />
 						<symbol id="set_property" value="width" />
-						<integer id="true_value" value="1010" />
-						<integer id="false_value" value="1010" />
+						<integer id="true_value" value="680" />
+						<integer id="false_value" value="680" />
 					</record>
 					<record>
 						<flags id="alignment" value="horizontal" />
-						<integer id="min_value" value="1910" />
+						<integer id="min_value" value="1920" />
 						<integer id="max_value" value="10000" />
 						<symbol id="set_property" value="width" />
-						<integer id="true_value" value="1560" />
-						<integer id="false_value" value="1560" />
+						<integer id="true_value" value="1110" />
+						<integer id="false_value" value="1110" />
 					</record>
 				</list>
 			</attachment>
-	
-			<!-- tablet content -->
+
+
 			<container class="client_object_viewer_xml_panel" file="match/match touchline tablet panel" id="TTab" >
- 
+
 				<record id="object_property">
 					<integer id="get_property" value="objt" />
 					<integer id="set_property" value="objt" />
 				</record>
- 
+
 			</container>
-		</container>	<!-- close tablet panel -->
- 
- 
-	</container>	<!-- close all panels -->
- 
+		</container>
+
+
+	</container>
+
 </panel>
