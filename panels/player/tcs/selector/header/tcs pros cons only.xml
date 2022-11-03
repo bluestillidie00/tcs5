@@ -69,29 +69,29 @@
 					</container>
 				</container>
 
-				<!-- No scout report -->
-				<container id="nsrc">
-					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+							<!-- No scout report -->
+			<container id="nsrc" class="main_box">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
 
-					<container id="nocs">
-						<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
-						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+				<container id="nocs" height="96">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 
-						<!--explanatory text-->
-						<widget class="text" alignment="left" spec="text" auto_size="vertical" style="semi" colour="fg">
-							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
-							<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
-						</widget>
-
-						<widget class="icon_button" id="sctP" click_event="sctc" auto_size="all" icon="icons/16px/search" red_replacement="fg accent" colour="fg">
-							<record id="primary_icon_properties" red_replacement="fg accent" />
-							<translation id="text" translation_id="243421" type="use" value="Scout Player" />
-							<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
-						</widget>
-					</container>
-
-					<widget id="nocn" class="label" spec="text" size="11" alignment="left" auto_size="vertical" colour="fg"/>
+					<!--explanatory text-->
+					<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+						<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+					</widget>
+					<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+						<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+					</widget>
 				</container>
+
+				<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				</widget>
+			</container>
 
 				<!-- No Coach Report-->
 				<container id="ncrc" offset="0">

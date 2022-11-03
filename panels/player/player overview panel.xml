@@ -59,7 +59,6 @@
 
 						<!-- MIDDLE -->
 						<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
-
 							<record id="object_property" get_property="objt" set_property="objt" />
 
 							<container default_height="360" priority="1">
@@ -88,8 +87,8 @@
 										<translation id="title" value="Form (Last 20 Matches)" type="use"/>
 									</widget>
 									<widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
-									<translation id="title" translation_id="385617" type="use"/>
-								</widget>
+										<translation id="title" translation_id="385617" type="use"/>
+									</widget>
 									<widget class="person_happiness_panel" file="player/tcs/selector/happiness" id="tpmr" late_loading="true" valid_for_other_team_managers="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false">
 										<translation id="title" type="use" translation_id="227840"/>
 									</widget>
@@ -674,121 +673,121 @@
 									<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-									<container draw_vertical_dividers="true">
-					<attachment_group class="horizontal_arrange" horizontal_layout="-10,-9">
-						<global id="horizontal_gap" name="ui.main_box_gap"/>
-					</attachment_group>
+										<container draw_vertical_dividers="true">
+											<attachment_group class="horizontal_arrange" horizontal_layout="-10,-9">
+												<global id="horizontal_gap" name="ui.main_box_gap"/>
+											</attachment_group>
 
-					<container class="main_box">
-						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+											<container class="main_box">
+												<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
-						<container  navigation_container="true">
-							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+												<container  navigation_container="true">
+													<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
 
-							<container >
-								<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
-								<layout class="arrange_horizontal_attachment" layout="70,-1" gap="0" offset="0" />
-								<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+													<container >
+														<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+														<layout class="arrange_horizontal_attachment" layout="70,-1" gap="0" offset="0" />
+														<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
 
-								<widget class="object_portrait_picture" id="cpic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="70" />
+														<widget class="object_portrait_picture" id="cpic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="70" />
 
-								<container class="title_link_box" id="TrRp" hide_view_menu="true">
-									<translation id="link_title" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
-									<string id="section" value="Pgrg"/>
-									<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
-									<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
-									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+														<container class="title_link_box" id="TrRp" hide_view_menu="true">
+															<translation id="link_title" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
+															<string id="section" value="Pgrg"/>
+															<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+															<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+															<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
-									<widget class="popup_button" id="vcoa" auto_tick_exclusive="true" auto_size="vertical" select_event="view" save_session_state="true" />
-								</container>
-							</container>
+															<widget class="popup_button" id="vcoa" auto_tick_exclusive="true" auto_size="vertical" select_event="view" save_session_state="true" />
+														</container>
+													</container>
 
-							<widget class="table" id="trtb" layout="20,-1" auto_size_rows="true" fixed_size_rows="false">
-								<list id="column_table_properties">
-									<record id="bull">
-										<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" />
-										<integer id="top" value="2" />
-									</record>
-									<record id="text">
-										<record id="widget_info" class="text" auto_size="vertical" />
-									</record>
-								</list>
-							</widget>
+													<widget class="table" id="trtb" layout="20,-1" auto_size_rows="true" fixed_size_rows="false">
+														<list id="column_table_properties">
+															<record id="bull">
+																<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" />
+																<integer id="top" value="2" />
+															</record>
+															<record id="text">
+																<record id="widget_info" class="text" auto_size="vertical" />
+															</record>
+														</list>
+													</widget>
 
-						</container>
-					</container>
+												</container>
+											</container>
 
-					<container class="title_link_box" id="MeRp" hide_view_menu="true" navigation_container="true">
-						<translation id="link_title" translation_id="447586" type="use" value="Medical Report[COMMENT: Panel title for when viewing medical report]" />
-						<string id="section" value="PInj"/>
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+											<container class="title_link_box" id="MeRp" hide_view_menu="true" navigation_container="true">
+												<translation id="link_title" translation_id="447586" type="use" value="Medical Report[COMMENT: Panel title for when viewing medical report]" />
+												<string id="section" value="PInj"/>
+												<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-						<container class="player_injury_panel" file="none">
-							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
-							<record id="object_property" get_property="objt" set_property="objt" />
+												<container class="player_injury_panel" file="none">
+													<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+													<record id="object_property" get_property="objt" set_property="objt" />
 
-							<container>
-								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3" horizontal_offset="0"  vertical_inset="0" />
+													<container>
+														<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3" horizontal_offset="0"  vertical_inset="0" />
 
-								<container>
-									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
-								
-									<container>
-									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
-									<widget class="label" auto_size="vertical" font="label">
-										<record id="object_property">
-											<integer id="get_property" value="PcOI" />
-											<boolean id="name" value="true"/>
-										</record>
-									</widget>
+														<container>
+															<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 
-									<widget class="client_object_property_panel" property="PcOI" height="25">
+															<container>
+																<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+																<widget class="label" auto_size="vertical" font="label">
+																	<record id="object_property">
+																		<integer id="get_property" value="PcOI" />
+																		<boolean id="name" value="true"/>
+																	</record>
+																</widget>
 
-										<record id="object_property" get_property="objt" set_property="objt" />
+																<widget class="client_object_property_panel" property="PcOI" height="25">
 
-									</widget>
+																	<record id="object_property" get_property="objt" set_property="objt" />
 
-
-								</container>
-
-								<container >
-									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
-									<widget class="label" auto_size="vertical" font="label">
-										<record id="object_property">
-											<integer id="get_property" value="PftI" />
-											<boolean id="name" value="true"/>
-										</record>
-									</widget>
-
-									<widget class="client_object_property_panel" property="PftI" height="25">
-
-										<record id="object_property" get_property="objt" set_property="objt" />
-
-									</widget>
+																</widget>
 
 
-								</container>
-								</container>
-							
+															</container>
 
-								<container class="main_box_no_margin" id="OAct" red_replacement="injury_body_colour_injured">
-									<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+															<container >
+																<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+																<widget class="label" auto_size="vertical" font="label">
+																	<record id="object_property">
+																		<integer id="get_property" value="PftI" />
+																		<boolean id="name" value="true"/>
+																	</record>
+																</widget>
 
-									<widget class="text" id="OAtl" font="label" height="15" />
-									<widget class="label" id="OAnm" size="large" style="bold" auto_size="vertical" />
-								</container>
+																<widget class="client_object_property_panel" property="PftI" height="25">
 
-							</container>
+																	<record id="object_property" get_property="objt" set_property="objt" />
 
-							<container class="scrolling_box" id="Scbx">
-								<widget class="text" id="AsQt" auto_size="vertical" />
-							</container>
+																</widget>
 
-						</container>
 
-					</container>
+															</container>
+														</container>
 
-				</container>
+
+														<container class="main_box_no_margin" id="OAct" red_replacement="injury_body_colour_injured">
+															<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+															<widget class="text" id="OAtl" font="label" height="15" />
+															<widget class="label" id="OAnm" size="large" style="bold" auto_size="vertical" />
+														</container>
+
+													</container>
+
+													<container class="scrolling_box" id="Scbx">
+														<widget class="text" id="AsQt" auto_size="vertical" />
+													</container>
+
+												</container>
+
+											</container>
+
+										</container>
 									</container>
 
 								</container>

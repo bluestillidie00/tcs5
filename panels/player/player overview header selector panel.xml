@@ -9,27 +9,25 @@
 
 	<record id="default_properties"  late_loading="true"/>
 
-	<!-- CAREER STATS -->
+	<!-- HISTORY / CAREER STATS -->
 	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
 		<translation id="title" translation_id="247605" type="use"/>
+		<translation id="subtitle" translation_id="319477" type="use"/>
 	</widget>
 
-	<!-- COMPARISON -->
-	<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison" late_loading="true">
-		<translation id="title" translation_id="420686" type="use"/>
+	<!--  HISTORY / PAST INJURIES -->
+	<widget class="player_history_injury_panel" id="tphi" late_loading="true" file="player/tcs/selector/past injury">
+		<translation id="title" translation_id="316626" type="use"/>
+		<translation id="subtitle" translation_id="319477" type="use"/>
 	</widget>
 
-	<!-- ELIGIBILTY 
-	<widget class="person_personal_information_panel" id="teli" section="PHst" file="player/tcs/selector/small/tcs eligibilty" late_loading="true">
-		<translation id="title" type="use" translation_id="260816" value="Eligbility" />
-	</widget> -->
+	<!-- HISTORY / PROGRESS -->
+	<widget class="client_object_viewer_xml_panel" file="widgets/client object progress graph" section="Pgrg" id="Pgrg" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/>
+	</widget>
 
-	<!-- ELIGIBILTY 
-	<widget class="player_personal_details_panel" id="tsPd" file="player/tcs/selector/header/per det" late_loading="true">
-		<translation id="title" type="use" translation_id="247436" value="Personal Details" />
-	</widget> -->
 
-	<!-- LAST 5 GAMES -->
+	<!-- FORM / LAST 5 GAMES -->
 	<widget class="player_additional_stats_panel" file="none" id="la5g">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 		<translation id="title" translation_id="395236" type="use"/>
@@ -40,7 +38,7 @@
 		</widget>
 	</widget>
 
-	<!-- LAST 10 GAMES -->
+	<!-- FORM / LAST 10 GAMES -->
 	<widget class="player_additional_stats_panel" file="none" id="la10">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
@@ -51,45 +49,97 @@
 		</widget>
 	</widget>
 
-	<!-- PAST INJURIES -->
-	<widget class="player_history_injury_panel" id="tphi" late_loading="true" file="player/tcs/selector/past injury">
-		<translation id="title" translation_id="316626" type="use"/>
-	</widget>
 
-	<!-- POSITIONS -->
-	<widget class="player_positions_indicator_panel" id="Ppos" file="player/tcs/selector/big/position" navigation_container="true" default_focus="true">
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<translation id="title" translation_id="333996" type="use"/>
-	</widget>
-
-	<!-- PROGRESS -->
-	<widget class="client_object_viewer_xml_panel" file="widgets/client object progress graph" section="Pgrg" id="Pgrg" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/>
-	</widget>
-
-	<!-- REPORTS -->
+	<!-- REPORTS / OVERVIEW-->
 	<container class="player_scout_reports_panel" id="thPC" file="player/tcs/selector/header/tcs pros cons">
-		<translation id="title" type="use" translation_id="254774"/>
+		<translation id="title" type="use" translation_id="321151"/>
+		<translation id="subtitle" type="use" translation_id="254774"/>
 	</container>
 
-	<!-- PROS AND CONS ONLY -->
+	<!-- REPORTS / COMPARISON -->
+	<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison" late_loading="true">
+		<translation id="title" translation_id="420686" type="use"/>
+		<translation id="subtitle" type="use" translation_id="254774"/>
+	</widget>
+
+	<!-- REPORTS / PROS AND CONS ONLY -->
 	<container class="player_scout_reports_panel" id="tPCo" file="player/tcs/selector/header/tcs pros cons only">
 		<translation id="title" type="use" value="Pros and Cons"/>
+		<translation id="subtitle" type="use" translation_id="254774"/>
 	</container>
 
-	<!-- TRANSFER STATUS -->
+	<!-- REPORTS / TRANSFER STATUS -->
 	<container class="player_transfer_information_panel" id="thTr" file="player/tcs/selector/header/transfer">
 		<translation id="title" type="use" translation_id="298527"/>
+		<translation id="subtitle" type="use" translation_id="254774"/>
 	</container>
 
+	<!-- INFORMATION -->
 	<!-- PERSONAL DETAILS -->
-	<container class="player_personal_details_panel" id="tper" file="player/tcs/selector/header/ppdp">
-		<translation id="title" type="use" translation_id="292599"/>
+	<container class="player_personal_details_panel" id="tper" file="player/tcs/selector/information/ppdp">
+		<translation id="title" type="use" translation_id="292923"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
 	</container>
 
-	<!-- PERSONAL DETAILS -->
-	<container class="player_personal_details_panel" id="tpe1" file="player/tcs/selector/header/ppdp alt">
-		<translation id="title" type="use" value="Personal Details (alt)"/>
+	<!-- PERSONAL DETAILS / ABILITY -->
+	<container class="client_object_viewer_xml_panel" id="tpAb" file="player/tcs/selector/information/ppdp abilities">
+		<translation id="title" type="use" translation_id="314426"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS / ATTRIBUTE REPORT -->
+	<container class="client_object_viewer_xml_panel" id="tpAa" file="player/tcs/selector/information/ppdp attribute analyser">
+		<translation id="title" type="use" translation_id="334971"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS / ANALYST REPORT -->
+	<container class="client_object_viewer_xml_panel" id="tpAD" file="player/tcs/selector/information/ppdp datahubgraph">
+		<translation id="title" type="use" translation_id="447607"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS / BIO -->
+	<container class="client_object_viewer_xml_panel" id="tpBi" file="player/tcs/selector/information/ppdp bio">
+		<translation id="title" type="use" translation_id="295868"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS / DNA -->
+	<container class="client_object_viewer_xml_panel" id="tpDn" file="player/tcs/selector/information/ppdp dna">
+		<translation id="title" type="use" value="DNA"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS / ELIGIBILITY -->
+	<container class="client_object_viewer_xml_panel" id="tpEl" file="player/tcs/selector/information/ppdp elig" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="title" type="use" translation_id="260816"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS / POSITIONS -->
+	<widget class="player_positions_indicator_panel" id="Ppos" file="player/tcs/alt/position" navigation_container="true" default_focus="true">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<translation id="title" translation_id="333996" type="use"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</widget>
+
+	<!-- PERSONAL DETAILS / PROGRESS -->
+	<container class="client_object_viewer_xml_panel" id="tpPr" file="player/tcs/selector/information/ppdp prog" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="title" type="use" translation_id="289978"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS / TRANSFER -->
+	<container class="client_object_viewer_xml_panel" id="tpTr" file="player/tcs/selector/information/ppdp trans" >
+		<translation id="title" type="use" translation_id="251898"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
+	<!-- PERSONAL DETAILS ALT -->
+	<container class="player_personal_details_panel" id="tpe1" file="player/tcs/selector/information/ppdp alt">
+		<translation id="title" type="use" translation_id="294341"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
 	</container>
 
 	<!-- POLYGONS -->

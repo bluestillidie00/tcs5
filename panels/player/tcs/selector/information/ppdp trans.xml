@@ -1,0 +1,200 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_layout="-6,2,-8" horizontal_gap="8" />
+
+	<!-- DETAILS TABLE -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+		<!-- TABLE -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+			<container class="tcs_table">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-1"/>
+
+				<!-- AGE LABEL-->
+				<widget class="label" auto_size="vertical" style="semi_bold" >
+					<translation id="text" type="use" translation_id="227770" value="Age"/>
+				</widget>
+
+				<widget class="age_label" id="Page" auto_size="vertical" >
+					<translation id="format" translation_id="242551" type="use" value="[%number#1] years old"/>
+					<record id="object_property" get_property="Page"/>
+				</widget>
+
+				<widget class="formatted_label" id="Pdob" auto_size="vertical" format="[%date#1-short]" size="small" colour="faded text">
+					<record id="object_property" get_property="Pdob"/>
+				</widget>					
+			</container>
+
+			<!-- DOB AND PERSONALITY -->
+			<container class="tcs_table_trans">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-1"/>
+				<widget class="label" id="PPs:" auto_size="vertical" style="semi_bold" >
+					<record id="object_property" get_property="PPst" name="true"/>
+				</widget>
+				<widget class="personality_label" id="PPst" auto_size="vertical" >
+					<record id="object_property" get_property="PPst"/>
+				</widget>
+				<widget class="player_description_text" id="Pdes" auto_size="vertical" size="small" colour="faded text" alignment="left,can_scale">
+					<record id="object_property" get_property="Pdes"/>
+				</widget>
+			</container>
+
+
+			<container class="tcs_table">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-1"/>
+
+				<widget class="label" id="vall" auto_size="vertical" style="semi_bold" >
+					<translation id="text" translation_id="227806" type="use" value="Value"/>
+				</widget>
+				<widget class="transfer_value_label" id="TrVa" auto_size="all" alignment="left, centre_y" >
+					<record id="object_property" get_property="Pdva"/>
+				</widget>
+			</container>
+
+			<!-- 		<container class="tcs_table_trans">
+		</container> -->
+		</container>
+
+		<!-- PLAYER EXTRA DETAILS (E.G. ONLOAN AT...) -->
+		<container class="tcs_table_trans" height="14">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<widget class="player_extra_details_text" size="small" colour="fg accent" alignment="centre_x,centre_y" height="14">
+				<record id="object_property" get_property="PExD" />
+			</widget>
+		</container>
+	</container>
+
+	<!-- DIVIDER -->
+	<widget class="vertical_subtle_divider" width="2"/>
+
+	<!-- ABILITY -->
+	<container class="tcs_table">
+		<layout class="stick_to_sides_attachment" apply_to_children="true" inset="2,0,0,0"/>
+
+		<!-- IF HUMAN CONTROLLED TEAM, SHOW -->
+		<container class="player_transfer_information_panel"  id="thTr" file="none">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="-4"/>
+
+				<container id="cntI" >
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" />
+							<widget class="label" font="label" auto_size="vertical">
+								<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+							</widget>
+
+							<container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2" height="20">
+								<widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" />
+								<widget class="transfer_status_label" id="TSta" font="value" auto_size="vertical" size="small" />
+							</container>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" />
+							<widget class="label" font="label" auto_size="vertical">
+								<translation id="text" translation_id="247489" type="use" value="Loan Status" />
+							</widget>
+
+							<container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2" height="20">
+								<widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" />
+								<widget class="loan_status_label" id="LSta" font="value" auto_size="vertical" size="small" multiline="true" alignment="left, centre_y" />
+							</container>
+						</container>
+
+
+
+					</container>
+
+					<widget class="label" font="label" auto_size="vertical">
+						<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+					</widget>
+					<widget class="transfer_value_label" id="TrVa" font="value" size="small" auto_size="all" alignment="left, centre_y" allow_link_to_transfer_info="false" />
+
+					<container id="GdVc">
+						<attachment_group class="vertical_arrange_autosize" />
+
+						<widget class="label" font="label" auto_size="vertical">
+							<translation id="text" translation_id="541768" type="use" value="Guide Value[COMMENT: AREA: Player Transfer Stauts; SUB-AREA: Transfer Information sup panel; FR-BN: 52771; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Heading for section to display the guide transfer value range of a player in the human team]" />
+						</widget>
+						<widget class="transfer_value_label" id="GdVa" font="value" size="small" auto_size="all" alignment="left, centre_y" />
+
+
+					</container>
+				</container>
+
+				<widget class="text" id="agnL" size="small" font="text" auto_size="vertical" colour="faded text" alignment="centre"/>
+
+			</container>
+
+		</container>
+
+		<!-- IF AI CONTROLLED TEAM, SHOW -->
+		<container class="player_transfer_information_panel"  id="thTr" file="none">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<record id="object_property" get_property="PHcr" set_property="hidn"/>
+
+		<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="-4"/>
+
+				<container id="cntI" >
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" />
+							<widget class="label" font="label" auto_size="vertical">
+								<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+							</widget>
+
+							<container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2" height="20">
+								<widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" />
+								<widget class="transfer_status_label" id="TSta" font="value" auto_size="vertical" size="small" />
+							</container>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" />
+							<widget class="label" font="label" auto_size="vertical">
+								<translation id="text" translation_id="247489" type="use" value="Loan Status" />
+							</widget>
+
+							<container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2" height="20">
+								<widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" />
+								<widget class="loan_status_label" id="LSta" font="value" auto_size="vertical" size="small" multiline="true" alignment="left, centre_y" />
+							</container>
+						</container>
+
+
+
+					</container>
+
+					<widget class="label" font="label" auto_size="vertical">
+						<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+					</widget>
+					<widget class="transfer_value_label" id="TrVa" font="value" size="small" auto_size="all" alignment="left, centre_y" allow_link_to_transfer_info="false" />
+
+
+				</container>
+
+				<widget class="text" id="agnL" size="small" font="text" auto_size="vertical" colour="faded text" alignment="centre"/>
+
+			</container>
+
+
+		</container>
+
+	</container>
+</panel>

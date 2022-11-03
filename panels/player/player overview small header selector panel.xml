@@ -52,11 +52,12 @@
 	</container> 
 
 	<!-- DEVELOPMENT -->
-	<!-- TRAINING -->
 	<widget class="client_object_viewer_xml_panel" file="player/tcs/selector/header/progress" section="Pgrg" id="Pgrg" late_loading="true">
 		<translation id="title" translation_id="289978" type="use" />
 		<translation id="subtitle" translation_id="486383" type="use" />
 	</widget>
+		
+	<!-- TRAINING -->
 	<container class="client_object_viewer_selector_panel" id="pTra" file="player/tcs/selector/header/training rating">
 		<translation id="title" type="use" translation_id="466504" />
 		<translation id="subtitle" translation_id="486383" type="use" />

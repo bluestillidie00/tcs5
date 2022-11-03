@@ -37,10 +37,8 @@
   <list id="items">
     <!-- layer 1 (there is only one) -->
     <list>
-
-      
        <record id="item">
-			<translation id="name" translation_id="227912" type="use" value="Work Rate" />
+			<translation id="name" translation_id="227911" type="use" value="Work Rate" />
         <real id="max_value" value="20" />
         <integer id="angle" value="30" />
         <colour id="colour" name="text" />
@@ -53,7 +51,7 @@
       </record>
 
       <record id="item">
-			<translation id="name" translation_id="227910" type="use" value="Teamwork" />
+			<translation id="name" translation_id="227909" type="use" value="Teamwork" />
         <real id="max_value" value="20" />
         <integer id="angle" value="90" />
         <colour id="colour" name="text" />
@@ -66,7 +64,7 @@
       </record>
       
       <record id="item">
-			<translation id="name" translation_id="227914" type="use" value="Composure" />
+			<translation id="name" translation_id="227913" type="use" value="Composure" />
         <real id="max_value" value="20" />
         <integer id="angle" value="150" />
         <colour id="colour" name="text" />

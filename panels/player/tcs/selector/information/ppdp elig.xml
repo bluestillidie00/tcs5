@@ -1,0 +1,107 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_layout="-6,2,-8" horizontal_gap="8" />
+
+	<!-- DETAILS TABLE -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+		<!-- TABLE -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+			<container class="tcs_table">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-1"/>
+
+				<!-- AGE LABEL-->
+				<widget class="label" auto_size="vertical" style="semi_bold" >
+					<translation id="text" type="use" translation_id="227770" value="Age"/>
+				</widget>
+
+				<widget class="age_label" id="Page" auto_size="vertical" >
+					<translation id="format" translation_id="242551" type="use" value="[%number#1] years old"/>
+					<record id="object_property" get_property="Page"/>
+				</widget>
+
+				<widget class="formatted_label" id="Pdob" auto_size="vertical" format="[%date#1-short]" size="small" colour="faded text">
+					<record id="object_property" get_property="Pdob"/>
+				</widget>					
+			</container>
+
+			<!-- DOB AND PERSONALITY -->
+			<container class="tcs_table_trans">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-1"/>
+				<widget class="label" id="PPs:" auto_size="vertical" style="semi_bold" >
+					<record id="object_property" get_property="PPst" name="true"/>
+				</widget>
+				<widget class="personality_label" id="PPst" auto_size="vertical" >
+					<record id="object_property" get_property="PPst"/>
+				</widget>
+			</container>
+
+			<container class="tcs_table">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-1"/>
+
+				<widget class="label" id="vall" auto_size="vertical" style="semi_bold" >
+					<translation id="text" translation_id="227806" type="use" value="Value"/>
+				</widget>
+				<widget class="transfer_value_label" id="TrVa" auto_size="all" alignment="left, centre_y" >
+					<record id="object_property" get_property="Pdva"/>
+				</widget>
+			</container>
+
+			<!-- 		<container class="tcs_table_trans">
+		</container> -->
+		</container>
+
+		<!-- PLAYER EXTRA DETAILS (E.G. ONLOAN AT...) -->
+		<container class="tcs_table_trans" height="14">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<widget class="player_extra_details_text" size="small" colour="fg accent" alignment="centre_x,centre_y" height="14">
+				<record id="object_property" get_property="PExD" />
+			</widget>
+		</container>
+	</container>
+
+	<!-- DIVIDER -->
+	<widget class="vertical_subtle_divider" width="2"/>
+
+	<!-- ABILITY -->
+	<container class="tcs_table">
+		<layout class="stick_to_sides_attachment" apply_to_children="true" inset="32,0,0,0"/>
+
+		<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+		<!-- NATIONS -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="16"/>
+
+			<widget class="label" size="small" auto_size="vertical" colour="faded text">
+				<translation id="text" translation_id="363691" type="use"  />
+			</widget>
+			<container class="simple_data_list" id="nats" set_property="objt" alignment="horizontal,fill" >
+				<record id="object_property">
+					<integer id="get_property" value="PhgN" />
+				</record>
+				<record id="widget_properties" class="client_object_viewer_xml_panel" file="player/tcs/selector/header/eligibility logo"/>
+			</container>
+		</container>
+
+		<!-- CLUBS >-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="16"/>
+
+			<widget class="label" size="small" auto_size="vertical" colour="faded text">
+				<translation id="text" translation_id="363611" type="use" />
+			</widget>
+			<container class="simple_data_list" id="clbs" set_property="objt" alignment="horizontal,fill">
+				<record id="object_property">
+					<integer id="get_property" value="PhCe" />
+				</record>
+				<record id="widget_properties" class="client_object_viewer_xml_panel" file="player/tcs/selector/header/eligibility logo"/>
+			</container>
+		</container>
+	</container>
+
+</container>
+</panel>

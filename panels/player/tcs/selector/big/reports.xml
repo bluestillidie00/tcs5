@@ -4,7 +4,7 @@
 
 	<!-- SET UP TABS -->
 	<!-- TOM TODO: ADD FAINT GRAPHIC -->
-	<container class="tcs_tabs_primary" id="tran" default_item="rep1" save_default_state="true" save_session_state="true">
+	<container class="tcs_tabs_primary" id="Repo" default_item="rep1" save_default_state="true" save_session_state="true">
 
 		<!-- OVERALL -->
 		<container id="rep1">
