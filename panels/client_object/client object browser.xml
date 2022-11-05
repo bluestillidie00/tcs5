@@ -209,8 +209,6 @@
                                 <!-- coloured actions bar image -->
                                 <widget class="main_box" id="ACTb" appearance="boxes/custom/interface/tab bar/paper" red_replacement="primary"/>
 
-
-
                                 <container>
                                     <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="2" offset="14" />
                                     <layout class="stick_to_sides_attachment" alignment="vertical" inset="1" apply_to_children="true" />
