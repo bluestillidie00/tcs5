@@ -48,6 +48,11 @@
 			<translation id="hint" translation_id="227847" type="use" value="Assists" />
 			<translation id="text" translation_id="249488" type="use" value="Asts" />
 		</record>
+				<!-- key passes-->
+		<record id="POkp" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="318357" type="use" value="Assists" />
+			<translation id="text" translation_id="318356" type="use" value="Asts" />
+		</record>
 		<!--Expected Goals-->
 		<record id="PSxG" format="[%fraction#1-2.2]">
 			<translation id="text" translation_id="514224" type="use" value="xG[COMMENT: AREA: Team Stat; SUB-AREA: Expected goals stats FR: 32708; TONE: Formal; CHARLIMIT: None NOTE: expected goals short string]" />
@@ -64,12 +69,12 @@
 			<translation id="text" translation_id="249493" type="use" value="MoM[COMMENT man of match]" />
 		</record>
 		<!-- Yellows -->
-		<record id="ycmp" format="[%fraction#1-2.0]">
+		<record id="ycmp" format="[%fraction#1-2.0]" colour="yellow card" style="bold">
 			<translation id="hint" translation_id="227869" type="use" value="Yellow cards" />
 			<translation id="text" translation_id="227868" type="use" value="Yel[COMMENT yellow cards]" />
 		</record>
 		<!-- Reds -->
-		<record id="rcmp" format="[%fraction#1-2.0]">
+		<record id="rcmp" format="[%fraction#1-2.0]" colour="red card" font="bold">
 			<translation id="hint" translation_id="227871" type="use" value="Red cards" />
 			<translation id="text" translation_id="229879" type="use" value="Red" />
 		</record>
