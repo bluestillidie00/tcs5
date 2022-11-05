@@ -183,6 +183,9 @@
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 		<container class="tcs_box">
+<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+<container>
 			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="8" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
@@ -244,6 +247,19 @@
 						<record id="object_property" get_property="Pdes" />
 					</widget>
 				</container>
+
+				<!-- Media Description 
+				<container class="tcs_table" transparency="0.8">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" auto_size="vertical" font="title" colour="text">
+						<record id="object_property" get_property="THic" name="true" />
+					</widget>
+					<widget class="player_hierarchy_widget" id="THic" auto_size="vertical" height="30" font="text">
+						<record id="object_property" get_property="THic" />
+					</widget>
+				</container> -->
+				
 			</container>
 
 			<!-- Preferred moves -->
@@ -289,6 +305,16 @@
 				</container>
 
 			</container>
+		</container>
+
+<!-- <widget class="horizontal_subtle_divider" height="2"/>
+ 		<widget file="player/tcs/selector/big/attribute analyser" class="client_object_viewer_xml_panel" height="125">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget> -->
+
+
+
+
 		</container>
 	</container>
 
