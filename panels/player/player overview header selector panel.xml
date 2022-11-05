@@ -26,7 +26,6 @@
 		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/>
 	</widget>
 
-
 	<!-- FORM / LAST 5 GAMES -->
 	<widget class="player_additional_stats_panel" file="none" id="la5g">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
