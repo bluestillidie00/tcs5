@@ -27,7 +27,7 @@
 						<container class="tcs_box" default_height="-10" priority="1">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-							<container class="client_object_viewer_selector_panel" id="csL1" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+							<container class="client_object_viewer_selector_panel" id="csLL" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 								<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="tCSR" late_loading="true">
 									<record id="object_property" get_property="Pers"/>
 									<translation id="title" translation_id="254774" type="use"/>
@@ -78,7 +78,7 @@
 							<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-								<container class="client_object_viewer_selector_panel" id="cos6" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
+								<container class="client_object_viewer_selector_panel" id="coLA" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
 									<integer id="default_for_unemployed_managers" value="pfSm"/>
 									<integer id="default_for_international_managers_other_team" value="pfSm"/>
 									<integer id="default_for_everyone_else" value="pfSm"/>
