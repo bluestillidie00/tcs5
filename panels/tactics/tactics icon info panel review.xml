@@ -1,0 +1,35 @@
+﻿<panel  use_hit_mask="true">
+	<flags id="selected_appearance" value=""/>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_inset="0"/>
+
+<!-- 	<container class="client_object_viewer_xml_panel" id="cobl" height="14">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+		<widget class="player_condition_icon_widget" id="cond" appearance="">
+			<boolean id="label_disabled" value="true" />
+			<boolean id="show_hover_popup" value="false" />
+			<boolean id="scale_picture" value="true" />
+			<integer id="width" value="16" />
+			<flags id="icon_alignment" value="centre"/>
+		</widget>
+
+		<widget class="body_language_widget" id="Pmtc" label_disabled="true" width="16" icon_alignment="centre" appearance="" navigation_focus_target="false">
+
+		</widget>
+		
+	</container> -->
+
+	<container height="1"/>
+
+	<!--rating-->
+	<widget class="match_rating_label_formatted" id="avra" size="8.5" alignment="centre,can_scale" format="[%fraction#1-2.1]" navigation_focus_target="false" appearance="labels/custom/match rating/small/label"/>
+
+	<widget class="tactical_role_label" id="role" abbt="true" size="xxsmall" auto_size="vertical" alignment="centre,can_scale" style="bold">
+		<global id="hidden" name="ui.is_fmt_controller_skin"/>
+	</widget>
+
+
+	<widget class="text" auto_size="vertical" id="name" colour="text" size="small" alignment="centre,can_scale" multiline="false" style="shadowed"/>
+
+</panel>
