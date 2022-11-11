@@ -48,11 +48,6 @@
 			<translation id="hint" translation_id="227847" type="use" value="Assists" />
 			<translation id="text" translation_id="249488" type="use" value="Asts" />
 		</record>
-				<!-- key passes-->
-		<record id="POkp" format="[%fraction#1-2.0]">
-			<translation id="hint" translation_id="318357" type="use" value="Assists" />
-			<translation id="text" translation_id="318356" type="use" value="Asts" />
-		</record>
 		<!--Expected Goals-->
 		<record id="PSxG" format="[%fraction#1-2.2]">
 			<translation id="text" translation_id="514224" type="use" value="xG[COMMENT: AREA: Team Stat; SUB-AREA: Expected goals stats FR: 32708; TONE: Formal; CHARLIMIT: None NOTE: expected goals short string]" />
@@ -110,8 +105,8 @@
 		</record>
 	</list>
 
-	<container class="icon_box" file="player/player status icon box" icon="icons/custom/icon box/stats">
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="2" apply_to_children="true" />
 
 		<!-- Set icon to only show: Yel, Sus, Una -->
 		<record id="widget_properties" type="5" />
