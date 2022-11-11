@@ -76,9 +76,17 @@
 		<translation id="subtitle" translation_id="292589" type="use" />
 	</widget>
 
+
+	<!-- ELIGIBILITY -->
+	<widget class="player_personal_details_panel" id="ppdp" file="player/tcs/selector/header/ppdp small" late_loading="true">
+		<translation id="title" type="use" translation_id="292589" />
+		<translation id="subtitle" translation_id="292589" type="use" />
+	</widget>
+
 	<!-- UNGROUPED -->	
 	<!-- CONTRACT -->
 	<widget class="player_contract_panel" id="pcon" file="player/tcs/selector/header/contract small" valid_for_unemployed_player="false" >
+		<translation id="subtitle" translation_id="292589" type="use" />
 		<translation id="title" translation_id="247576" type="use" />
 	</widget>
 

@@ -16,6 +16,10 @@
 				<widget class="player_attributes_panel" id="patt" late_loading="true" file="player/player attributes panel_popup">
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
+				
+							<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="1" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true" file="none">
+									<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+								</widget>
 			</container>
 		</container>
 

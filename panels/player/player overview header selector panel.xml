@@ -80,6 +80,12 @@
 		<translation id="subtitle" type="use" translation_id="292589"/>
 	</container>
 
+	<!-- PERSONAL DETAILS ALT -->
+	<container class="player_personal_details_panel" id="tpe1" file="player/tcs/selector/information/ppdp alt">
+		<translation id="title" type="use" translation_id="294341"/>
+		<translation id="subtitle" type="use" translation_id="292589"/>
+	</container>
+
 	<!-- PERSONAL DETAILS / ABILITY -->
 	<container class="client_object_viewer_xml_panel" id="tpAb" file="player/tcs/selector/information/ppdp abilities">
 		<translation id="title" type="use" translation_id="314426"/>
@@ -132,12 +138,6 @@
 	<!-- PERSONAL DETAILS / TRANSFER -->
 	<container class="client_object_viewer_xml_panel" id="tpTr" file="player/tcs/selector/information/ppdp trans" >
 		<translation id="title" type="use" translation_id="251898"/>
-		<translation id="subtitle" type="use" translation_id="292589"/>
-	</container>
-
-	<!-- PERSONAL DETAILS ALT -->
-	<container class="player_personal_details_panel" id="tpe1" file="player/tcs/selector/information/ppdp alt">
-		<translation id="title" type="use" translation_id="294341"/>
 		<translation id="subtitle" type="use" translation_id="292589"/>
 	</container>
 
