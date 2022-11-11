@@ -1,0 +1,225 @@
+<panel>
+	<container allow_single_bar_click="true" navigation_container="false" red_replacement="bg lighter">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" vertical_inset="8" />
+
+			<widget class="popup_button" id="spop" alignment="centre" icon="icons/16px/search" icon_alignment="left,centre_y" select_event="esms" auto_size="all" embed_in_frame="true" >
+				<list id="items">
+					<record id="0" icon="icons/16px/search" red_replacement="button_icon">
+						<translation id="text" translation_id="451321" type="use" value="No action[COMMENT: FR 21106, take no action on a scouting reminder recommendation for a competition]" />
+					</record>
+					<record id="1" icon="icons/16px/search" red_replacement="green 500">
+						<translation translation_id="450039" type="use" id="text" value="Scout match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
+					</record>
+					<record id="2" icon="icons/16px/search" red_replacement="blue 500">
+						<global id="hidden" name="platform_is_handheld"/>
+						<translation id="text" translation_id="451322" type="use" value="Attend match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<container id="FREE" />
+
+		<container id="NOFR">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+				<container class="scrolling_box">
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+						<container height="210">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+							<container height="30" class="main_box" appearance="tcs/boxes/main/cropped/top" >
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<widget class="text" id="fdep" height="40" font="title">
+									<translation id="text" translation_id="247232" type="use" value="Fixture Details" />
+								</widget>
+							</container>
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<container>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="-50" apply_to_children="true" />
+
+									<!--stadium picture-->
+									<widget class="stadium_picture" id="STAp" image_alignment="top, centre_x" scale_picture="true" keep_aspect_ratio="true">
+										<record id="object_property">
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+									</widget>
+								</container>
+
+								<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="tcs_bg" transparency="0.50" />
+
+								<!--big badge display-->
+								<container height="80" id="resB" >
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+									<widget class="fixture_full_result_text" id="FxFR" format="[%scoreline#1-result_h_a_result]" style="bold" size="24" alignment="centre" reverse_teams="false" navigation_focus_target="true">
+										<record id="object_property" get_property="FxFR" />
+									</widget>
+
+									<widget class="client_object_viewer_xml_panel" id="badg" file="team/team upcoming fixture badges no versus" >
+										<record id="object_property" get_property="objt" set_property="objt" />
+									</widget>
+
+								</container>
+
+								<container id="FXpr">
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" />
+
+									<!--opposition logo-->
+									<widget class="fixture_opponent_picture" id="fopP" scale_picture="true" height="90">
+										<boolean id="keep_aspect_ratio" value="true" />
+										<flags id="image_alignment" value="centre" />
+
+										<record id="object_property" get_property="fopP" dont_set_object="true" />
+									</widget>
+
+									<container>
+										<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+
+										<!--opponent-->
+										<widget class="fixture_opponent_team_button" id="fopt" icon_enabled="false" alignment="centre_x" size="14" font="title" auto_size="vertical">
+											<record id="object_property" get_property="fopt" />
+										</widget>
+
+										<!--opponent league position-->
+										<widget class="fixture_opponent_league_position_text" id="Ooml" icon_enabled="false" alignment="centre_x" size="large" style="bold" auto_size="vertical">
+											<record id="object_property" get_property="Ooml" />
+										</widget>
+
+										<!--venue-->
+										<widget class="fixture_venue_label" id="FxVn" alignment="centre_x" auto_size="vertical" format="1">
+											<record id="object_property" get_property="FxVn" />
+										</widget>
+									</container>
+
+								</container>
+							</container>
+						</container>
+
+						<!--fixture result container-->
+						<container id="FXre" class="tcs_box" appearance="tcs/boxes/main/cropped/bottom">
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize" />
+
+								<!--scorers-->
+								<container id="SCOR"  draw_vertical_dividers="true">
+									<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_gap="32" horizontal_offset="0" vertical_offset="0" />
+
+									<!--home scorers-->
+									<widget class="fixture_goalscorers_text" id="HMsc" team_index="0" auto_size="vertical" alignment="right,top" separate_lines="true" show_none_if_nothing_happened="true" >
+										<record id="object_property" get_property="FxCG" />
+									</widget>
+
+									<!--away scorers-->
+									<widget class="fixture_goalscorers_text" id="AWsc" team_index="1" auto_size="vertical" alignment="left,top" separate_lines="true" show_none_if_nothing_happened="true" >
+										<record id="object_property" get_property="FxCG" />
+									</widget>
+								</container>
+
+							<widget class="horizontal_subtle_divider" height="2"/>
+
+
+								<!--line up-->
+								<widget class="fixture_lineup_table" id="FxCL" auto_size="vertical">
+									<record id="GoaI" file="icons/16px/goal"/>
+									<record id="OwnI" file="icons/16px/own goal"/>
+									<record id="object_property" get_property="FxCL" />
+								</widget>
+
+							</container>
+
+						<!--rules-->
+						<widget id="FxRl" class="fixture_rules_text">
+							<record id="object_property" get_property="FxRl" />
+						</widget>
+
+						<container>
+
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<widget class="text" id="FOtl" auto_size="all" font="title" colour="text"/>
+
+							<!--odds-->
+							<widget id="FxOd" class="fixture_odds_text">
+								<record id="object_property" get_property="FxOd" />
+							</widget>
+
+						</container>
+
+						<container>
+
+							<attachment_group class="vertical_arrange_autosize"/>
+							
+							<widget class="horizontal_subtle_divider" height="2"/>
+
+							<!--home team news title-->
+							<widget class="text" id="htnt" auto_size="vertical" font="title" colour="text"/>
+
+							<!--home team news-->
+							<widget class="fixture_news_text" id="FxHN" auto_size="vertical" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false">
+								<record id="object_property" get_property="FxHN" />
+							</widget>
+
+						</container>
+
+						<container>
+
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<!--away team news title-->
+							<widget class="text" id="atnt" auto_size="vertical" font="title" colour="text"/>
+
+							<!--away team news-->
+							<widget class="fixture_news_text" id="FxAN" auto_size="vertical" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false">
+								<record id="object_property" get_property="FxAN" />
+							</widget>
+						</container>
+
+					</container>
+						</container>
+
+				</container>
+
+				<container navigation_container="true">
+					<attachment_group class="button_arrangement_right" />
+
+					<!--past meetings button-->
+					<widget class="link_appearance_button" id="psmt" auto_size="all" >
+						<translation id="text" translation_id="247248" type="use" value="Past Meetings" />
+					</widget>
+
+					<!--view match button-->
+					<widget class="link_appearance_button" id="vema" auto_size="all">
+						<translation id="text" translation_id="242332" type="use" value="View Match" />
+					</widget>
+				</container>
+
+				<container>
+					<attachment_group class="button_arrangement_right" />
+
+					<!--cancel friendly button-->
+					<widget class="button" id="cafr" click_event="caf?" auto_size="all">
+						<translation id="text" translation_id="242410" type="use" value="Cancel Friendly" />
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>
