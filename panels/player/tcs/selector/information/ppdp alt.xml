@@ -1,5 +1,5 @@
 <panel>
-	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 	<!-- PERSONAL DETAILS -->
 	<container priority="1">
@@ -8,41 +8,26 @@
 		<container class="tcs_table">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
-			<!-- AGE + DOB -->
-			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-				<!-- AGE LABEL-->
-				<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
-					<translation id="text" type="use" translation_id="227770" value="Age"/>
-				</widget>
-
-				<!-- CONTAINER USED TO SET AGE + DOB HORIZONTALLY -->
-				<container>
-					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="1"/>
-					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="2"/>
-					<!-- AGE -->
-					<widget class="editable_client_object_property_panel" id="age " height="22" auto_size="horizontal">
-						<record id="widget_info" class="formatted_label" alignment="left,top" auto_size="horizontal" size="10.5">
-							<translation id="format" translation_id="242551" type="use" value="[%number#1] years old"/>
-						</record>
-						<record id="widget_edit_info" width="0" height="0"/>
-						<record id="object_property" get_property="Page"/>
-					</widget>
-					<!-- END OF AGE + DOB -->
-				</container>
-			</container>
-
 			<!-- VALUE -->
 			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
 
-				<widget class="label" id="vall" auto_size="vertical" style="semi_bold" size="10.5">
+				<widget class="label" id="vall" auto_size="vertical" style="semi_bold" >
 					<translation id="text" translation_id="227806" type="use" value="Value"/>
 				</widget>
-				<widget class="transfer_value_label" id="TrVa" auto_size="all" alignment="left, centre_y" size="10.5">
+				<widget class="transfer_value_label" id="TrVa" auto_size="all" alignment="left, centre_y" appearance="">
 					<record id="object_property" get_property="Pdva"/>
+				</widget>
+			</container>			
+
+			<!-- PERSONALITY -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize"  vertical_gap="-2"/>
+				<widget class="label" id="PPs:" auto_size="vertical" style="semi_bold" >
+					<record id="object_property" get_property="PPst" name="true"/>
+				</widget>
+				<widget class="personality_label" id="PPst" auto_size="vertical" >
+					<record id="object_property" get_property="PPst"/>
 				</widget>
 			</container>
 		</container>
@@ -50,48 +35,73 @@
 		<container class="tcs_table_trans">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
-			<!-- DOB -->
-			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-				<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
-					<translation id="text" translation_id="230147" type="use" value="Date of Birth"/>
-				</widget>
-				<widget class="editable_client_object_property_panel" id="dobl" alignment="left,top" auto_size="vertical" size="10.5" format="[%date#1-short]">
-					<record id="widget_info" class="game_formatted_label" auto_size="vertical"/>
-					<record id="object_property" get_property="Pdob"/>
-				</widget>
-			</container>
-
 			<!-- WAGE -->
 			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
 
-				<widget class="label" id="wglb" auto_size="vertical" style="semi_bold" size="10.5">
+				<widget class="label" id="wglb" auto_size="vertical" style="semi_bold" >
 					<translation id="text" type="use" translation_id="242353" value="Wages"/>
 				</widget>
 				<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="normal" alignment="left,can_scale"/>
 			</container>
+
+			<!-- TRAINING RATING -->
+			<container>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- IF PLAYER IS HUMAN CONTROLLED -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
+
+					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+
+					<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" >
+						<translation id="text" type="use" translation_id="466504"/>
+					</widget>
+
+					<widget class="property_list_viewer_xml_panel" file="widgets/training rating with change icon" should_colour="true" id="plci" navigation_focus_target="false" auto_size="all">
+						<record id="object_property" get_property="PtWC" set_property="valu"/>
+					</widget>
+				</container>
+
+				<!-- IF PLAYER ISN'T HUMAN CONTROLLED WE HIDE ALL CODE -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
+
+					<record id="object_property" get_property="PHcr" set_property="hidn"/>
+
+					<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" >
+						<translation id="text" type="use" translation_id="319499"/>
+					</widget>
+
+					<widget class="player_description_text" auto_size="vertical">
+						<record id="object_property" get_property="Pdes"/>
+					</widget>
+				</container>
+			</container>
+
 		</container>
 
 		<container class="tcs_table">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
-			<!-- PERSONALITY -->
+			<!--  PLAYING TIME -->
 			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-1" horizontal_alignment="horizontal" horizontal_inset="0"/>
-				<widget class="label" id="PPs:" auto_size="vertical" style="semi_bold" size="10.5">
-					<record id="object_property" get_property="PPst" name="true"/>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
+
+				<widget class="label" auto_size="vertical" style="semi_bold" >
+					<translation id="text" translation_id="492001" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]"/>
 				</widget>
-				<widget class="personality_label" id="PPst" auto_size="vertical" size="10.5">
-					<record id="object_property" get_property="PPst"/>
+				<widget class="playing_time_label" id="PccV" alignment="left,top" auto_size="vertical" size="9.5">
+					<record id="object_property" get_property="Pcpt"/>
 				</widget>
 			</container>
 
 			<!-- AVERAGE RATING -->
 			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-2" />
 
-				<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" size="10.5">
+				<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" >
 					<translation id="text" type="use" translation_id="227852"/>
 				</widget>
 
@@ -103,51 +113,111 @@
 				</widget>
 			</container>
 		</container>
-
-		<container class="tcs_table_trans">
-			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-
-			<!--  PLAYING TIME -->
-			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-				<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
-					<translation id="text" translation_id="492001" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]"/>
-				</widget>
-				<widget class="playing_time_label" id="PccV" alignment="left,top" auto_size="vertical" size="9.5">
-					<record id="object_property" get_property="Pcpt"/>
-				</widget>
-			</container>
-
-			<!-- TRAINING RATING -->
-			<container>
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-				<!-- IF PLAYER IS HUMAN CONTROLLED -->
-				<container>
-					<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
-
-					<widget class="label" id="wxyz" auto_size="vertical" style="semi_bold" size="10.5">
-						<translation id="text" type="use" translation_id="466504"/>
-					</widget>
-
-					<widget class="property_list_viewer_xml_panel" file="widgets/training rating with change icon" should_colour="true" id="plci" navigation_focus_target="false" auto_size="all">
-						<record id="object_property" get_property="PtWC" set_property="valu"/>
-					</widget>
-				</container>
-
-				<!-- IF PLAYER ISN'T HUMAN CONTROLLED WE HIDE ALL CODE -->
-				<container>
-					<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-					<record id="object_property" get_property="PHcr" set_property="hidn"/>
-
-					<container/>
-				</container>
-			</container>
-		</container>
 	</container>
 
+	<!-- PLAYER EXTRA DETAILS (E.G. ONLOAN AT...) -->
+	<container class="player_scout_reports_panel" file="none">
+		<attachment_group class="vertical_arrange_autosize" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container class="tcs_table_trans" id="scou">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
+
+			<!-- CA -->
+			<container >
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1"/>
+
+				<record id="default_properties" alignment="left" auto_size="vertical"/>
+
+				<widget class="label" spec="text" colour="fg" >
+					<translation id="text" translation_id="293291" type="use" />
+				</widget>
+				<widget class="scout_stars_label" id="CAIC">
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
+				</widget>
+			</container>
+
+			<!-- PA -->
+			<container >
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1"/>
+
+				<record id="default_properties" alignment="left" auto_size="vertical"/>
+
+				<widget class="label" spec="text" colour="fg" >
+					<translation id="text" translation_id="293292" type="use" />
+				</widget>
+				<widget class="scout_stars_label" id="PAic">
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- NO SCOUT REPORT -->
+		<container id="nsrc" class="tcs_table_trans">
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<container id="nocs" height="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+				<widget class="icon_button" id="sctP" click_event="sctc" auto_size="all" icon="icons/16px/search" alignment="centre_x" >
+					<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				</widget>			
+			</container>
+		</container>
+		
+		<!-- NO COACH REPORT -->
+		<container id="ncrc" class="tcs_table_trans">
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<container id="nocs" height="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+				
+				<widget class="link_appearance_button" click_event="gtss" priority="3" auto_size="all" alignment="centre_x" >
+					<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- NO COACH REPORT -->
+		<container id="nnrc" class="tcs_table_trans">
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<container id="nocs" height="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+				
+			<widget class="button" id="sctP" click_event="sctn" auto_size="all">
+					<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- Already being scounted -->
+		<container id="Arbs">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" id="arbt" alignment="left" spec="text" auto_size="vertical">
+				<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+			</widget>
+		</container>
+
+		<!-- Already being scouted by pool -->
+		<container id="Pool">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="left" spec="text" auto_size="vertical">
+				<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+			</widget>
+		</container>
+
+		<container id="naSP">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text">
+				<translation id="text" translation_id="435189" type="use" value="Unavailable[COMMENT: no scouting report available; was ID 247303 but some languages need specific translations here]" />
+			</widget>
+		</container>
+	</container>
 </panel>

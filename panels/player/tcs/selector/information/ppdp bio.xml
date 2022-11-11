@@ -12,10 +12,47 @@
 	<container class="tcs_table">
 		<layout class="stick_to_sides_attachment" apply_to_children="true" inset="2,0,0,0"/>
 
-		<widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title" late_loading="true">
+		<widget class="person_history_biography_panel" id="phb1" file="none" late_loading="true">
 			<record id="object_property" get_property="objt" set_property="objt"/>
 			<string id="create_if" value="show_person_achievement_history"/>
 			<translation id="title" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+
+
+<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" section="PBio" auto_size="all" navigation_focus_target="true">
+				<translation id="text" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+			</widget>
+		</container>
+
+		<widget class="spacer" height="5"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container class="scrolling_box" navigation_container="true">
+				<widget class="person_bio_text" id="biot" spec="text"  auto_size="vertical" size="normal"/>
+			</container>
+
+			<!-- A label indicating why there is sometimes no biography -->
+			<container id="nbct" hidden="true">
+<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_inset="-16" />
+	
+				<widget class="text" alignment="centre" colour="faded text" auto_size="vertical" multiline="true">
+					<translation id="text" translation_id="328535" type="use" value="This person does not have a biography yet.[COMMENT: person history biography; string telling the user why the biography is not shown]" />
+				</widget>
+			</container>
+		</container>
+	</container>
+
 		</widget>  
 	</container>
 </panel>
