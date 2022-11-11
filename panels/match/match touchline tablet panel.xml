@@ -62,29 +62,6 @@
 			<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="0.5,1" trigger_id="hidden" trigger_value="false" />
 	 
 	 
-			<container>
-
-				<attachment class="test_screen_size_attachment" skip_if_false="true">
-					<list id="properties">
-						<!-- Each entry uses the previous entry as it's default/starting value so we only need to set some properties once -->
-						<record>
-							<flags id="alignment" value="vertical" />
-							<integer id="min_value" value="0" />
-							<integer id="max_value" value="601" />
-							<symbol id="set_property" value="hidden" />
-							<integer id="true_value" value="true" />
-							<integer id="false_value" value="true" />
-						</record>
-						<record min_value="601" max_value="10000" true_value="false"/>
-					</list>
-				</attachment>
-
-				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" />
-				<widget class="icon_button" appearance="" font="title" auto_size="all" alignment="centre" icon="icons/16px/show me" icon_colour="title" navigation_focus_target="false">
-					<translation id="text" translation_id="516208" type="use" value="Touchline Tablet[COMMENT: AREA: Match panel; SUB-AREA: Area where manager can pull up stats/info on demand; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: we're calling this touchline tablet as the best way to demonstrate how managers get live information while in the dugout - it's a tablet device they use]" />
-				</widget>
-			</container>
-	 
 			<!--this will have 2 rows, each can have up to 3 widgets-->
 			<container class="vertical_adaptive_container"  draw_horizontal_dividers="true" gap="12" >
 	 

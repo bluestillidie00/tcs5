@@ -1,0 +1,111 @@
+﻿<!-- custom panel for ibh review screen - heatmap and best/worst performers -->
+<panel>
+
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+
+
+
+			<!-- Team Analysis -->
+			<container class="plain_box" draw_vertical_dividers="true" >
+
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+				<!--home badge-->
+				<!-- <widget class="object_portrait_picture" image_alignment="top" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<record id="object_property" get_property="home" set_property="objt" />
+				</widget> -->
+
+				<!--home heat map-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" gap="0"/>
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+
+						<!--team name-->
+						<widget class="text" id="hTEN" auto_size="vertical" alignment="centre" >
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+						</widget>
+
+						<!--formation text-->
+						<widget class="link_button_title" id="hFOR" section="bmfs" colour="text" red_replacement="text" blue_replacement="text">
+							<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+							<record id="auto_size_restrictions">
+								<string id="type" value="widget" />
+								<flags id="target" value="prnt" />
+								<string id="limit_type" value="maximum" />
+								<string id="orientation" value="horizontal" />
+							</record>
+						</widget>
+					</container>
+
+					<!--heat map-->
+					<widget class="preselected_match_chalkboard_panel" id="pmcH" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<list id="chalkboard_events_to_display">
+							<!-- Heatmap -->
+							<integer value="42" />
+							<integer value="62" />
+						</list>
+					</widget>
+				</container>
+
+				<!--away heat map-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" gap="0"/>
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+
+						<!--team name-->
+						<widget class="text" id="aTEN" auto_size="vertical" alignment="centre">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+						</widget>
+
+						<!--formation text-->
+						<widget class="link_button_title" id="aFOR" section="bmfs" colour="text" red_replacement="text" blue_replacement="text">
+							<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+							<record id="auto_size_restrictions">
+								<string id="type" value="widget" />
+								<flags id="target" value="prnt" />
+								<string id="limit_type" value="maximum" />
+								<string id="orientation" value="horizontal" />
+							</record>
+						</widget>
+					</container>
+
+					<!--heat map-->
+					<widget class="preselected_match_chalkboard_panel" id="pmcA" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false"  wants_global_events="false"  enable_popup="false">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<list id="chalkboard_events_to_display">
+							<!-- Heatmap -->
+							<integer value="42" />
+							<integer value="62" />
+						</list>
+					</widget>
+				</container>
+
+				<!--away badge-->
+				<!-- <widget class="object_portrait_picture" image_alignment="top" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<record id="object_property" get_property="away" set_property="objt" />
+				</widget> -->
+
+			</container>
+
+
+
+		
+
+		
+
+
+
+</panel>

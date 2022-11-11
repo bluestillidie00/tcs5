@@ -1,0 +1,651 @@
+<record>
+  <list id="views">
+    <!-- Home stats -->
+    <record id="home">
+      <translation id="text" translation_id="359499" type="use" value="Home[COMMENT: league_table; use top 10 matches; category for stats relating to performance at home]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Home played -->
+        <flags id="LHpl" />
+        <!-- Home won -->
+        <flags id="LHwo" />
+        <!-- Home drawn -->
+        <flags id="LHdr" />
+        <!-- Home lost on pen -->
+        <flags id="LHlp" />
+        <!-- Home lost -->
+        <flags id="LHlo" />
+        <!-- Home for -->
+        <flags id="LHfo" />
+        <!-- Home against -->
+        <flags id="LHag" />
+        <!-- Home goal difference -->
+        <flags id="LHgd" />
+        <!-- Home points -->
+        <flags id="LHpo" />
+        <!-- Overall recent form -->
+        <flags id="Tshf" />
+        <!-- Home average points -->
+        <!--<flags id="LHap" />-->
+      </record>
+    </record>
+
+    <!-- Away stats -->
+    <record id="away">
+      <translation id="text" translation_id="359407" type="use" value="Away[COMMENT: league_table; use top 10 matches; category for stats relating to performance away from home]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Away played -->
+        <flags id="LApl" />
+        <!-- Away won -->
+        <flags id="LAwo" />
+        <!-- Away drawn -->
+        <flags id="LAdr" />
+        <!-- Away lost on pen -->
+        <flags id="LAlp" />
+        <!-- Away lost -->
+        <flags id="LAlo" />
+        <!-- Away for -->
+        <flags id="LAfo" />
+        <!-- Away against -->
+        <flags id="LAag" />
+        <!-- Away goal difference -->
+        <flags id="LAgd" />
+        <!-- Away points -->
+        <flags id="LApo" />
+        <!-- Away average points -->
+        <!--<flags id="LAap" />-->
+        <!-- Overall recent form -->
+        <flags id="Tsaf" />
+      </record>
+    </record>
+
+    <!-- 1st half of the season stats -->
+    <record id="1sth">
+      <translation id="text" translation_id="420592" type="use" value="1st half of the stage[COMMENT: league_table; category for stats relating to performance in the first half of the league stage]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Away played -->
+        <flags id="L1pl" />
+        <!-- Away won -->
+        <flags id="L1wo" />
+        <!-- Away drawn -->
+        <flags id="L1dr" />
+        <!-- Away lost on pen -->
+        <flags id="L1lp" />
+        <!-- Away lost -->
+        <flags id="L1lo" />
+        <!-- Away for -->
+        <flags id="L1fo" />
+        <!-- Away against -->
+        <flags id="L1ag" />
+        <!-- Away goal difference -->
+        <flags id="L1gd" />
+        <!-- Away points -->
+        <flags id="L1po" />
+        <!-- Away average points -->
+        <!--<flags id="L1ap" />-->
+      </record>
+    </record>
+
+    <!-- 2nd half of the season stats -->
+    <record id="2ndh">
+      <translation id="text" translation_id="420593" type="use" value="2nd half of the stage[COMMENT: league_table; category for stats relating to performance in the second half of the league stage]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Away played -->
+        <flags id="L2pl" />
+        <!-- Away won -->
+        <flags id="L2wo" />
+        <!-- Away drawn -->
+        <flags id="L2dr" />
+        <!-- Away lost on pen -->
+        <flags id="L2lp" />
+        <!-- Away lost -->
+        <flags id="L2lo" />
+        <!-- Away for -->
+        <flags id="L2fo" />
+        <!-- Away against -->
+        <flags id="L2ag" />
+        <!-- Away goal difference -->
+        <flags id="L2gd" />
+        <!-- Away points -->
+        <flags id="L2po" />
+        <!-- Away average points -->
+        <!--<flags id="L2ap" />-->
+      </record>
+    </record>
+
+    <!-- Overall stats -->
+    <record id="over">
+      <translation id="text" translation_id="359652" type="use" value="Overall[COMMENT: league_table; use top 10 matches; category for stats relating to performance at home or away]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall for -->
+        <flags id="LOfo" />
+        <!-- Overall against -->
+        <flags id="LOag" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+        <!-- Overall recent form -->
+        <flags id="Tsof" />
+      </record>
+    </record>
+
+    <!-- LAst 5 games / Form stats -->
+    <record id="form">
+      <translation id="text" translation_id="276271" type="use" value="Last 5 Games[COMMENT: heading for player form information]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall for -->
+        <flags id="LOfo" />
+        <!-- Overall against -->
+        <flags id="LOag" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+        <!-- Overall recent form -->
+        <flags id="Tsof" />
+      </record>
+    </record>
+		
+		<!-- Last 5 games stats smaller version used in INTERACTION_FEATURED_OBJECT_TEAM_FORM_PANEL -->
+    <record id="forS">
+      <translation id="text" translation_id="276271" type="use" value="Last 5 Games[COMMENT: heading for player form information]" />
+      <record id="view">
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+		<!-- Overall goal difference -->
+		<flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+    
+    <!-- Overall stats with average points-->
+    <record id="ovrA">
+      <translation id="text" translation_id="359652" type="use" value="Overall[COMMENT: league_table; use top 10 matches; category for stats relating to performance at home or away]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall for -->
+        <flags id="LOfo" />
+        <!-- Overall against -->
+        <flags id="LOag" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+        <!-- Overall average points -->
+        <flags id="LOap" />
+        <!-- Overall recent form -->
+        <flags id="Tsof" />
+      </record>
+    </record>
+
+    <!-- Overall stats for past meetings (no form widget)-->
+    <record id="ovpm">
+      <translation id="text" translation_id="359652" type="use" value="Overall[COMMENT: league_table; use top 10 matches; category for stats relating to performance at home or away]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall for -->
+        <flags id="LOfo" />
+        <!-- Overall against -->
+        <flags id="LOag" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+    <!-- Overall stats with position change-->
+    <!-- Used in the match -->
+    <record id="ovrC">
+      <translation id="text" translation_id="359652" type="use" value="Overall[COMMENT: league_table; use top 10 matches; category for stats relating to performance at home or away]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- League position change -->
+        <flags id="Lrps" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall for -->
+        <flags id="LOfo" />
+        <!-- Overall against -->
+        <flags id="LOag" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+		<!-- Overall stats with position change-->
+		<!-- Used in the post match -->
+		<record id="ovPM">
+			<translation id="text" translation_id="359652" type="use" value="Overall[COMMENT: league_table; use top 10 matches; category for stats relating to performance at home or away]" />
+			<record id="view">
+				<!-- Main league position -->
+				<flags id="Lpos" />
+				<!-- League position change -->
+				<flags id="Lrps" />
+				<!-- Team name -->
+				<flags id="Ttea" />
+				<!-- Overall played -->
+				<flags id="LOpl" />
+				<!-- Overall goal difference -->
+				<flags id="LOgd" />
+				<!-- Overall points -->
+				<flags id="LOpo" />
+			</record>
+		</record>
+
+    <!-- Combined stats view -->
+    <record id="comb">
+      <translation id="text" translation_id="242299" type="use" value="Combined" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        
+        <!-- Home won -->
+        <flags id="LHwo" />
+        <!-- Home drawn -->
+        <flags id="LHdr" />
+        <!-- Home lost on pen -->
+        <flags id="LHlp" />
+        <!-- Home lost -->
+        <flags id="LHlo" />
+        <!-- Home for -->
+        <flags id="LHfo" />
+        <!-- Home against -->
+        <flags id="LHag" />
+        
+        <!-- Away won -->
+        <flags id="LAwo" />
+        <!-- Away drawn -->
+        <flags id="LAdr" />
+        <!-- Away lost on pen -->
+        <flags id="LAlp" />
+        <!-- Away lost -->
+        <flags id="LAlo" />
+        <!-- Away for -->
+        <flags id="LAfo" />
+        <!-- Away against -->
+        <flags id="LAag" />
+        
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+    <!-- Combined stats view with average points-->
+    <record id="cobA">
+      <translation id="text" translation_id="242299" type="use" value="Combined" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Team's nation. Will be hidden if not an international club comp -->
+        <flags id="Dnat" />
+        <!-- Overall played -->
+        <flags id="LApl" />
+        <!-- Home won -->
+        <flags id="LHwo" />
+        <!-- Home drawn -->
+        <flags id="LHdr" />
+        <!-- Home lost on pen -->
+        <flags id="LHlp" />
+        <!-- Home lost -->
+        <flags id="LHlo" />
+        <!-- Home for -->
+        <flags id="LHfo" />
+        <!-- Home against -->
+        <flags id="LHag" />
+        <!-- Away won -->
+        <flags id="LAwo" />
+        <!-- Away drawn -->
+        <flags id="LAdr" />
+        <!-- Away lost -->
+        <flags id="LAlo" />
+        <!-- Away for -->
+        <flags id="LAfo" />
+        <!-- Away against -->
+        <flags id="LAag" />
+        <!-- Overall goal difference -->
+        <flags id="LAgd" />
+        <!-- Overall points -->
+        <flags id="LApo" />
+        <!-- Overall average points -->
+        <flags id="LOap" />
+      </record>
+    </record>
+
+    <!-- Offensive stats view -->
+    <record id="offn">
+      <translation id="text" translation_id="359644" type="use" value="Offensive[COMMENT: League table; name for stats view showing offensive stats]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall played -->
+        <flags id="LApl" />
+        <!-- Games won by 2 or more goals -->
+        <flags id="Lwn2" />
+        <!-- Games won by 1 goal -->
+        <flags id="Lwn1" />
+        <!-- Games drawn offensive -->
+        <flags id="LdrO" />
+        <!-- Overall lost -->
+        <flags id="LAlo" />
+        <!-- Offensive points -->
+        <flags id="Lofp" />
+      </record>
+    </record>
+
+    <!-- Overall stats for overview panel -->
+    <record id="oovr">
+      <translation id="text" translation_id="359651" type="use" value="Overall (Short)[COMMENT: league_table; view for stats relating to performance at home or away; smaller version]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+		<!-- Overall stats for versus mode end of season pack -->
+		<record id="ooVS">
+			<translation id="text" translation_id="359651" type="use" value="Overall (Short)[COMMENT: league_table; view for stats relating to performance at home or away; smaller version]" />
+			<record id="view">
+				<!-- Main league position -->
+				<flags id="Lpos" />
+				<!-- Team name -->
+				<flags id="Ttea" />
+				<!-- Overall played -->
+				<flags id="LOpl" />
+				<!-- Overall won -->
+				<flags id="LOwo" />
+				<!-- Overall drawn -->
+				<flags id="LOdr" />
+				<!-- Overall lost on pen -->
+				<flags id="LOlp" />
+				<!-- Overall lost -->
+				<flags id="LOlo" />
+				<!-- Overall goal difference -->
+				<flags id="LOgd" />
+				<!-- Overall points -->
+				<flags id="LOpo" />
+			</record>
+		</record>
+
+    <!-- Overall stats for roundup panel -->
+    <record id="oovR">
+      <translation id="text" translation_id="359651" type="use" value="Overall (Short)[COMMENT: league_table; view for stats relating to performance at home or away; smaller version]" />
+      <record id="view">
+        <!-- League position change -->
+        <flags id="Lrps" />
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+    <!-- As above but with 6 letter team name -->
+    <record id="oov6">
+      <translation id="text" translation_id="359651" type="use" value="Overall (Short)[COMMENT: league_table; view for stats relating to performance at home or away; smaller version]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Team name - 6 letters-->
+        <flags id="Tte6" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+    <!-- Overall stats for overview panel -->
+    <record id="covr">
+      <translation id="text" translation_id="364657" type="use" value="Overall (Short)[COMMENT: league_table; FMC Overview view for stats relating to performance at home or away; smaller version]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+    
+    <!-- Overall stats for overview panel -->
+    <record id="ccov">
+      <translation id="text" translation_id="359651" type="use" value="Overall (Short)[COMMENT: league_table; view for stats relating to performance at home or away; smaller version]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall played -->
+        <flags id="LOpl" />
+        <!-- Overall won -->
+        <flags id="LOwo" />
+        <!-- Overall drawn -->
+        <flags id="LOdr" />
+        <!-- Overall lost on pen -->
+        <flags id="LOlp" />
+        <!-- Overall lost -->
+        <flags id="LOlo" />
+        <!-- Overall goal difference -->
+        <flags id="LOgd" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+    <!-- Very abbreviated stats -->
+    <record id="pnts">
+      <translation id="text" translation_id="359653" type="use" value="Points Only[COMMENT: league_table; view showing points and qualification info only]" />
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Cup qualification info -->
+        <flags id="Lqin" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+
+    <!-- Group stage draw view -->
+    <record id="draw">
+      <record id="view">
+        <!-- Team name -->
+        <record id="Ttea" navigation_focus_target="false"/>
+        <!-- Team nation -->
+        <record id="Cnat" navigation_focus_target="false" />
+      </record>
+    </record>
+	
+    <!-- Champion stats inbox item view -->
+    <record id="csvw">
+      <record id="view">
+        <!-- Main league position -->
+        <flags id="Lpos" />
+        <!-- Team name -->
+        <flags id="Ttea" />
+        <!-- Overall points -->
+        <flags id="LOpo" />
+      </record>
+    </record>
+  </list>
+</record>
