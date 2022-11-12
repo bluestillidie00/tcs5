@@ -30,7 +30,7 @@
 
 			<container height="4" />
 
-			<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right" >
+			<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right" red_replacement="ucl">
 				<attachment_group class="vertical_arrange_autosize" />
 
 				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.6" end_mode="hold_end" />
@@ -58,7 +58,7 @@
 							</widget>
 						</widget>
 
-						<widget class="text" alignment="centre" >
+						<widget class="text" alignment="centre" font="champions bold" colour="fg">
 							<translation id="text" type="use" value="V" />
 						</widget>
 
@@ -88,7 +88,7 @@
 						<widget class="picture" id="icon" image_alignment="left" width="24" scale_picture="true" keep_aspect_ratio="true" />
 
 						<!-- DESCRIPTION LABEL -->
-						<widget class="label" id="desc" alignment="left,centre_y" auto_size="horizontal" />
+						<widget class="label" id="desc" alignment="left,centre_y" auto_size="horizontal"  font="champions bold" colour="fg" />
 					</container>
 				</widget>
 
@@ -96,11 +96,11 @@
 				<container>
 					<global id="hidden" name="game_mode_is_console_mode" />
 					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
-					<widget class="label" auto_size="all" size="small">
+					<widget class="label" auto_size="all" size="small" font="champions bold" colour="fg">
 						<translation id="text" translation_id="227993" type="use" value="Referee" />
 						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
 					</widget>
-					<widget class="person_button" auto_size="all" >
+					<widget class="person_button" auto_size="all" font="champions body" colour="fg">
 						<record id="object_property" get_property="FRef" dont_set_hint="true" />
 					</widget>
 				</container>
@@ -108,11 +108,11 @@
 				<!-- COMPETITION -->
 				<container>
 					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
-					<widget class="label" auto_size="all" size="small" alignment="centre_y" >
+					<widget class="label" auto_size="all" size="small" alignment="centre_y" font="champions bold" colour="fg">
 						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
 						<translation id="text" translation_id="227740" type="use" value="Competition" />
 					</widget>
-					<widget class="fixture_name_text" auto_size="all" icon_enabled="true">
+					<widget class="fixture_name_text" auto_size="all" icon_enabled="true" font="champions body" colour="fg">
 						<record id="object_property" get_property="FxNm" />
 					</widget>
 				</container>
@@ -120,11 +120,11 @@
 				<!-- REFEREE -->
 				<container>
 					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
-					<widget class="label" auto_size="all" size="small" >
+					<widget class="label" auto_size="all" size="small"  font="champions bold" colour="fg">
 						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
 						<translation id="text" translation_id="247242" type="use" value="Attendance" />
 					</widget>
-					<widget class="number_label" auto_size="all">
+					<widget class="number_label" auto_size="all"  font="champions body" colour="fg">
 						<record id="object_property" get_property="FxEA" dont_set_hint="true" />
 					</widget>
 				</container>
@@ -132,9 +132,9 @@
 
 			<!-- NOTABLE EVENTS -->
 			<container>
-				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
-				<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right">
+				<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right" red_replacement="ucl">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 					<attachment class="match_ball_fade_attachment"/>
@@ -160,7 +160,7 @@
 			<container>
 				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,50,40,64"/>
 
-				<container class="tcs_box" appearance="tcs/boxes/match/touchline tablet/base/paper" id="TTab"> 
+				<container class="tcs_box" appearance="tcs/boxes/match/touchline tablet/ucl/paper" id="TTab"> 
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 					<container class="tcs_tabs" save_default_state="true" save_session_state="true">
@@ -315,7 +315,7 @@
 						</container>
 
 
-						<!-- MATCH STATS -->
+		<!-- MATCH STATS -->
 						<container  id="STAT" draw_vertical_dividers="true">
 							<translation id="title" translation_id="291566" type="use"/>
 							<layout class="horizontal_arrange" horizontal_layout="-4,-8"  vertical_inset="8" horizontal_gap="16"/>
@@ -334,7 +334,7 @@
 								<container class="client_object_viewer_xml_panel" id="toto">
 									<attachment_group class="vertical_arrange" vertical_alignment="fill" />
 
-									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" delay="0.2" />
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" delay="0.2" />
 									<!-- Fade animation -->
 									<animation class="fade_on_hide_animation" duration="0.35"/>
 
@@ -355,14 +355,14 @@
 
 							<container class="match_stats_panel">
 								<record id="object_property" get_property="objt" set_property="objt"/>
-								<!-- Slide in from side of screen -->
-								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
-								<!-- Fade animation -->
-								<animation class="fade_on_hide_animation" duration="0.35"/>			
+																	<!-- Slide in from side of screen -->
+									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+									<!-- Fade animation -->
+									<animation class="fade_on_hide_animation" duration="0.35"/>			
 							</container>
 						</container>
 
-
+				
 						<!-- HOME -->
 						<container  id="hmtt">
 							<layout class="horizontal_arrange" horizontal_layout="-4,-8"  vertical_inset="16" horizontal_offset="8" />
@@ -412,7 +412,7 @@
 							</widget>
 						</container>
 
-						<!-- SHOT MAP -->
+					<!-- SHOT MAP -->
 						<container  id="shot">
 							<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,4,4,4"/>
 							<translation id="title" translation_id="395318" type="use"/>
@@ -423,7 +423,7 @@
 								<record id="object_property" get_property="objt" set_property="objt"/>
 								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-								<container class="subsection_box_transparent" >
+								<container class="subsection_box_transparent" rrep="ucl">
 									<translation id="title" translation_id="395318" type="use" value="Shot Accuracy[COMMENT: FR 10596, match shot analysis label]" />
 
 									<!-- prozone logo area -->
@@ -450,11 +450,11 @@
 									<container class="inner_subtle_box" navigation_container="true">
 										<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
 										<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-
-										<!-- Slide in from side of screen -->
-										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
-										<!-- Fade animation -->
-										<animation class="fade_on_hide_animation" duration="0.35"/>			
+										
+																			<!-- Slide in from side of screen -->
+									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+									<!-- Fade animation -->
+									<animation class="fade_on_hide_animation" duration="0.35"/>			
 
 										<container id="teaC">
 											<layout class="fit_children_attachment" alignment="vertical" offset="0" />
@@ -583,10 +583,10 @@
 										<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
 										<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
-										<!-- Slide in from side of screen -->
-										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
-										<!-- Fade animation -->
-										<animation class="fade_on_hide_animation" duration="0.35"/>			
+									<!-- Slide in from side of screen -->
+									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+									<!-- Fade animation -->
+									<animation class="fade_on_hide_animation" duration="0.35"/>			
 
 										<container id="radC">
 											<layout class="fit_children_attachment" alignment="vertical" offset="0" />
@@ -618,10 +618,10 @@
 										</container>
 
 										<widget class="shot_areas_panel" id="areP" mode="1" enable_popup="true">
-											<!-- Slide in from side of screen -->
-											<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" delay="0.2"/>
-											<!-- Fade animation -->
-											<animation class="fade_on_hide_animation" duration="0.35"/>			
+																			<!-- Slide in from side of screen -->
+									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" delay="0.2"/>
+									<!-- Fade animation -->
+									<animation class="fade_on_hide_animation" duration="0.35"/>			
 										</widget>
 									</container>
 

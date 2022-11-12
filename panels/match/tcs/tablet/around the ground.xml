@@ -18,6 +18,22 @@
 		</container>
 	</container>
 
+			<!--goal updates-->
+			<container class="inner_subtle_box" id="Goal" default_width="-1" minimum_width="450" priority="2">
+				<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+
+				<!-- Slide in from side of screen -->
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+		<!-- Fade animation -->
+		<animation class="fade_on_hide_animation" duration="0.35"/>
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="goal" class="match_goal_update_panel">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</container>
+			</container>
+
 	<!--latest scores-->
 	<container class="inner_subtle_box" id="Late" default_width="-1" minimum_width="450" priority="1" navigation_container="true">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
