@@ -44,6 +44,8 @@
 	<!-- WTS LOGO -->
 	<colour name="wts_p" 																			value="rgb(245,245,245)"/>
 	<colour name="wts_s" 																			value="rgb(255,0,132)"/>
-
-
+	
+	<!-- COMP COLOURS -->
+	<colour name="ucl" 																			value="rgb(0,0,75)"/>
+	
 </properties>
