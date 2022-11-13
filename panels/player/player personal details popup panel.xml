@@ -101,15 +101,15 @@
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
 
-			<container class="client_object_viewer_selector_panel" id="pus0"  file="player/player overview popup selector panel" save_session_state="true">
-				<widget class="player_personal_details_panel" id="ppdp" height="80" file="player/tcs/selector/popup/player details">
+			<container class="client_object_viewer_selector_panel" id="pus0"  file="player/player overview header selector panel" save_session_state="true">
+				<!-- <widget class="player_personal_details_panel" id="ppdp" height="80" file="player/tcs/selector/popup/player details">
 					<translation id="title" type="use" translation_id="292599"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
-				</widget>
-				<integer id="default_for_unemployed_managers" value="ppdp"/>
-				<integer id="default_for_international_managers_other_team" value="ppdp"/>
-				<integer id="default_for_everyone_else" value="ppdp"/>
-				<integer id="default_for_versus_mode" value="ppdp"/>
+				</widget> -->
+				<integer id="default_for_unemployed_managers" value="tper"/>
+				<integer id="default_for_international_managers_other_team" value="tper"/>
+				<integer id="default_for_everyone_else" value="tper"/>
+				<integer id="default_for_versus_mode" value="tper"/>
 			</container>
 		</container>
 	</container>
