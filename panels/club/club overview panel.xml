@@ -271,7 +271,15 @@
 					</container>
 
 					<!-- SOCIAL MEDIA FOLLOWERS -->
-					<container priority="3" class="supporter_profile_panel" file="none">
+					<container priority="3">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+							<translation id="text" translation_id="557873" type="use"/>
+						</widget>
+						<widget class="number_label" auto_size="vertical" size="10.5" alignment="left,can_scale">
+							<record id="object_property" get_property="CsSF"/>
+						</widget>
 					</container>
 
 					<!-- YOUTH REC. -->
