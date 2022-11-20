@@ -1,0 +1,14 @@
+<panel info_panel_type="1">
+	<layout class="arrange_horizontal_attachment" layout="-1,20,-1" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<!--  home incidents panel -->
+	<widget class="home_match_incidents_panel" id="hmip" file="match/tcs/full time/tcs match incidents left" small_version="false"/>
+
+	<widget class="text"  size="22" alignment="centre">
+		<string id="text" value="-"/>
+	</widget>
+
+	<!--  away incidents panel -->
+	<widget class="away_match_incidents_panel" id="amip" file="match/tcs/full time/tcs match incidents right" small_version="false"/>
+</panel>

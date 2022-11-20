@@ -130,7 +130,7 @@
 			<container>
 				<attachment_group class="vertical_arrange_autosize" vertical_gap="-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
-	<widget class="label" auto_size="vertical" style="semi_bold" >
+				<widget class="label" auto_size="vertical" style="semi_bold" >
 					<translation id="text" translation_id="492002" type="use" value="Value"/>
 				</widget>
 				<widget class="playing_time_label" id="Pcpt" auto_size="vertical" alignment="left, centre_y,can_scale" >

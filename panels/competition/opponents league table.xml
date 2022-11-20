@@ -1,0 +1,11 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<widget class="league_stage_panel" id="leag" league_table_heading_length="0" view="oovR">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+	</widget>
+	<widget class="text" id="notE" hidden="true" alignment="centre_x,top">
+		<translation id="text" translation_id="242495" type="use" value="Not entered yet[COMMENT: manager competitions panel: team not entered competition yet this season - but will at some point]" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="10"/>
+	</widget>
+</panel>

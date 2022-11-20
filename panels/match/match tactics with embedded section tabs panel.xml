@@ -1,0 +1,90 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="mtpd" set_property="prop" target="mtpa"/>
+	</list>
+
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+<!-- lowered height values as needlessly created a blank space above the tactics screen -->
+	<container>
+		<attachment class="test_screen_size_attachment" skip_if_false="true">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="720" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="4" />
+					<integer id="false_value" value="4" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="720" />
+					<integer id="max_value" value="900" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="4" />
+					<integer id="false_value" value="4" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="900" />
+					<integer id="max_value" value="1078" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="4" />
+					<integer id="false_value" value="4" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="1078" />
+					<integer id="max_value" value="1150" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="4" />
+					<integer id="false_value" value="4" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="1150" />
+					<integer id="max_value" value="1250" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="4" />
+					<integer id="false_value" value="4" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="1250" />
+					<integer id="max_value" value="10000" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="4" />
+					<integer id="false_value" value="4" />
+				</record>
+			</list>
+		</attachment>
+	</container>
+
+
+	<container class="main_transparent_box" appearance="boxes/main/transparent/square/paper">
+
+		<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="0.5,1"/>
+
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="4"/>
+
+		<container height="30">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend"/>
+			
+			<container class="sections_menu_strip" id="seST" navigation_container="true" default_focus="true">
+
+				</container>
+			
+			
+
+			<widget class="match_tactics_toggle_button" id="togg" />
+
+		</container>
+
+		<container id="mtpa">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		</container>
+
+
+	</container>
+</panel>

@@ -8,7 +8,7 @@
     </widget>
 
     <widget class="text" id="agnL" size="small" font="text" auto_size="vertical" />
-    
+
     <!-- Top panel with detailed contract info -->
     <container id="cntI" height="80" navigation_container="true" default_focus="true">
         <attachment_group class="horizontal_arrange" horizontal_alignment="fill" />

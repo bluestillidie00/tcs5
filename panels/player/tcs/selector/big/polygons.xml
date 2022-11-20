@@ -16,12 +16,12 @@
 
 <layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<container class="tcs_tabs" id="tclub" default_height="-1" priority="1" default_item="po01" save_default_state="true" save_session_state="true" >
+	<container class="tcs_tabs_primary" id="tclub" default_height="-1" priority="1" default_item="po01" save_default_state="true" save_session_state="true" >
 
 		<!-- ATTRIBUTES -->
 		<container id="po01" icon="tcs/icons/player/att">
 			<translation id="title" translation_id="229822" type="use" value="Attributes" />
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
 
 			<widget file="player/tcs/selector/big/attribute analyser" class="client_object_viewer_xml_panel">
 				<record id="object_property" get_property="objt" set_property="objt"/>
@@ -31,7 +31,7 @@
 		<!-- DNA -->
 		<container id="po02" icon="tcs/icons/player/dna">
 			<translation id="title" type="use" value="DNA" />
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
 
 			<widget file="player/tcs/selector/big/team dna" class="client_object_viewer_xml_panel">
 				<record id="object_property" get_property="objt" set_property="objt"/>

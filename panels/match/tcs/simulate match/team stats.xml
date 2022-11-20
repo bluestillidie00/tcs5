@@ -1,0 +1,47 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+    <!-- Starting XI Styles -->
+    <flags id="stxi" value="tables/standard/normal"/>
+
+    <!-- Subs Styles -->
+    <flags id="subs" value="tables/custom/squad/substitute/row"/>
+
+    <widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows,stripe_rows,printable">
+        <boolean id="auto_size_rows" value="true" />
+        <boolean id="fixed_size_rows" value="false" />
+        <boolean id="dont_restore_selection" value="true" />
+        <boolean id="save_session_state" value="true" />
+        <boolean id="sort_disabled" value="true" />
+
+        <flags id="default_view" value="msvw" />
+
+        <!-- default sort by playing position (primary), then picked position, then name -->
+        <list id="default_sort_column">
+            <integer value="TPRD" />
+        </list>
+
+        <list id="viws">
+            <record id="msvw">
+                <record id="view">
+                    <record id="TPRD" hidden="true"/>
+                    <flags id="Pshp" />
+                    <flags id="PinD" />
+                    <flags id="Pcar" />
+                    <flags id="PisC" />
+                    <flags id="Pnam" />
+                    
+                    <flags id="MPkp" />
+                    
+                    <flags id="PcOI" />
+                    <flags id="PftI" />
+                    <record id="MPgl" auto_hide_priority="1400" navigation_focus_target="false"/>
+                    <flags id="MPxg" />
+                    <record id="MPas" auto_hide_priority="1500"/>
+                    <flags id="MPXa" />
+                    <record id="MPrt" auto_hide_priority="1300" navigation_focus_target="false"/>
+                </record>
+            </record>
+        </list>
+
+    </widget>
+</panel>

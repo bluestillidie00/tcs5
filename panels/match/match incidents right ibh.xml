@@ -1,0 +1,53 @@
+<panel>
+<!-- MIDDLE VALUE CONTROLS KIT/LOGO WIDTH -->
+	<layout class="arrange_horizontal_attachment" layout="30,60,-1" gap="4" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<!--scores-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- score -->
+		<widget class="text" id="mits"  alignment="left,centre_y" size="normal" style="semi_bold" auto_size="vertical" multiline="false"/>
+
+		<!-- aggregate score -->
+		<widget class="text" id="mita" spec="title" alignment="left,centre_y" size="small" auto_size="vertical" multiline="false"/>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- Need to choose logo or kit, comment out the widget for the one you don't want -->
+		<!-- Logo -->
+		<!--
+		<widget class="match_team_logo_picture" id="TeLo" image_alignment="top"/>
+		<widget class="object_portrait_picture" id="Tcol" scale_picture="true" keep_aspect_ratio="true" image_alignment="top"/>
+		-->
+		<!-- Kit -->
+		<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="top" />
+	</container>
+
+	<!--team name and incidents-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- team name -->
+		<widget class="text" id="mitn"  size="normal" style="semi_bold" alignment="left,centre_y" auto_size="vertical"/>
+
+		<widget class="table" id="miit" layout="20,-1" mode="fill_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false">
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="centre" auto_size="vertical" size="small"/>
+				<record index="1" spec="text" auto_size="vertical" alignment="left,centre_y" size="small"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="icon" left="4" top="4" bottom="4" />
+				<record index="1" id="text" top="4" bottom="4" />
+			</list>
+
+		</widget>
+	</container>
+</panel>

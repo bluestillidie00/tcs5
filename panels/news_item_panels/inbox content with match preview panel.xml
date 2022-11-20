@@ -1,0 +1,232 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<flags id="ofha" value="boxes/custom/darken/rounded/no margin/paper" />
+	<flags id="ofhc" value="bg positive" />
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="250,-1" horizontal_offset="0" horizontal_gap="8" vertical_inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+				<!--dynamic image here please-->
+				<container id="ICdi" height="150">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				</container>
+				
+				<!-- Social Poll Odds -->
+				<container class="tcs_box" id="mloC">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" />
+						<widget class="news_feed_panel" id="poll" filter="Fsco" file="">
+							<attachment class="get_global_attachment" get_property="CDtc" set_property="bar_value_colour" />
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" />
+							<container id="PlPa">
+								<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" />
+
+								<widget class="text" auto_size="all" font="title">
+									<attachment class="get_global_attachment" get_property="CDtc" set_property="colour" />
+									<translation id="text" translation_id="553523" type="use" value="Most Likely Outcome[COMMENT: AREA: UI; SUB-AREA: UEFA License; FR: 34747; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: Pre-match odds news panel section title for social reactions poll result]" />
+								</widget>
+
+								<widget class="text" id="PlSt" auto_size="vertical" alignment="left, centre_y" colour="faded text" size="small" />
+
+								<widget class="spacer" height="10" />
+								<!-- poll result bar charts added in code here -->
+							</container>
+						</widget>
+				</container>
+				<!-- odds -->
+				<container class="tcs_box" id="odco">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+					<widget class="text" id="oddt" auto_size="vertical" spec="text" font="title" colour="text" alignment="centre" multiline="true">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					</widget>
+
+					<container class="inner_box_no_margin" id="hodc">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="fit_children_attachment" alignment="horizontal" offset="6" />
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+						<widget class="label" id="hodt" auto_size="all" spec="text" colour="text" alignment="centre" multiline="true" auto_size_maximum_width="175">
+							<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						</widget>
+					</container>
+
+					<widget class="label" id="dodt" auto_size="all" spec="text" colour="text" alignment="centre" multiline="true" auto_size_maximum_width="175">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+
+					<container class="inner_box_no_margin" id="aodc">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="fit_children_attachment" alignment="horizontal" offset="6" />
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+						<widget class="label" id="aodt" auto_size="all" spec="text" colour="text" alignment="centre" multiline="true" auto_size_maximum_width="175">
+							<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						</widget>
+					</container>
+				</container>
+
+				<!-- form -->
+				<container class="tcs_box" height="90">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="8" horizontal_inset="0" />
+
+					<widget class="label" auto_size="vertical" font="title" alignment="centre">
+						<attachment class="get_global_attachment" get_property="CDtc" set_property="colour" />
+						<translation id="text" translation_id="308194" type="use" value="Form[COMMENT: team form 5 games, all competitions, short version]" />
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0" />
+
+							<container class="client_object_viewer_xml_panel" id="htfw" width="50">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<widget class="team_recent_form_widget" alignment="right" navigation_focus_target="false">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="Tfrm" />
+												<integer id="set_property" value="valu" />
+											</record>
+										</list>
+									</record>
+								</widget>
+							</container>
+
+							<widget class="team_button" id="htbf" />
+						</container>
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0" />
+
+							<container class="client_object_viewer_xml_panel" id="atfw" width="50">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<widget class="team_recent_form_widget" alignment="right" navigation_focus_target="false">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="Tfrm" />
+												<integer id="set_property" value="valu" />
+											</record>
+										</list>
+									</record>
+								</widget>
+							</container>
+
+							<widget class="team_button" id="atbf" />
+						</container>
+					</container>
+				</container>
+
+				<!-- referee -->
+				<container class="tcs_box" id="refc">
+                    <string id="remove_if" value="is_fmt" />
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" auto_size="vertical" font="title" alignment="centre">
+						<attachment class="get_global_attachment" get_property="CDtc" set_property="colour" />
+						<translation id="text" translation_id="227993" type="use" value="Referee" />
+					</widget>
+
+					<widget class="client_object_label" id="rfnm" auto_size="vertical" spec="text" size="large" colour="text" alignment="centre" multiline="false" />
+					<widget class="text" id="rfma" auto_size="vertical" spec="text" colour="faded text" alignment="centre" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle" horizontal_gap="8" />
+
+						<record id="default_properties" auto_size="all" />
+
+						<widget class="picture" file="icons/16px/yellow card" image_alignment="centre" />
+						<widget class="text" id="rfye" alignment="centre" spec="text" style="bold" colour="yellow card" size="large" />
+						<widget class="picture" file="icons/16px/red card" image_alignment="centre" />
+						<widget class="text" id="rfrd" alignment="centre" spec="text" style="bold" colour="red card" size="large" />
+					</container>
+				</container>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="12" />
+
+				<!-- logos -->
+				<container height="43">
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1,40,-1" horizontal_gap="8" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="client_object_label" id="hmnm" height="25" size="large" style="bold" colour="text" alignment="right,bottom" navigation_focus_target="true" />
+
+						<container class="client_object_viewer_xml_panel" id="hmrc">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+							<widget class="text" alignment="right" colour="faded text">
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="subl" />
+											<integer id="set_property" value="valu" />
+										</record>
+									</list>
+								</record>
+							</widget>
+						</container>
+					</container>
+
+					<widget class="text" alignment="centre" colour="text" font="title" size="15">
+						<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="client_object_label" id="awnm" height="25" spec="large" style="bold" colour="text" alignment="left,bottom" navigation_focus_target="true" />
+
+						<container class="client_object_viewer_xml_panel" id="awrc">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+							<widget class="text" alignment="left" colour="faded text">
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="subl" />
+											<integer id="set_property" value="valu" />
+										</record>
+									</list>
+								</record>
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+					<widget class="comp_button" id="comp" auto_size="all" icon_enabled="true" navigation_focus_target="true">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+
+					<widget class="text" id="stda" auto_size="all" colour="faded text">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!-- main body text -->
+				<widget class="inbox_body_text" id="bdtx" />
+			</container>
+		</container>
+	</container>
+
+</panel>

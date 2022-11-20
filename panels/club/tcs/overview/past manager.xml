@@ -1,0 +1,234 @@
+<panel>
+	<colour id="manager_wins" name="team_form_win"/>
+	<colour id="manager_draws" name="grey 500"/>
+	<colour id="manager_losses" name="team_form_loss"/>
+	<boolean id="save_session_state" value="true"/>
+	
+	<attachment_group class="vertical_arrange" vertical_layout="-4,-8"/>
+
+	<!--TOP LAYER / TABLE -->
+	<container class="tcs_box" id="past">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="text" id="nomc" hidden="true" auto_size="all" spec="text" size="normal">
+			<translation id="text" translation_id="394638" type="use" value="There have been no managers for this team.[COMMENT: FR 8995, no past managers; manager history panel]"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" hidden="true"/>
+		</widget>
+
+		<container id="tblc">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+			
+			<!-- TABLE CONTAINING THE MANAGERS -->
+			<widget class="table" id="tabl" layout="-3,-2, -2, 1, -3, -2, -2" mode="fill_rows,keyboard,select_rows,show_bullets" auto_size_rows="true" fixed_size_rows="false" save_session_state="true" select_event="slrn" navigation_container="true">
+				<list id="headings">
+					<record alignment="left,centre_y" column="0" colour="text">
+						<translation id="text" translation_id="316687" type="use" value="Manager[COMMENT:team screen; history section; heading for history table - manager name]"/>
+					</record>
+					<record alignment="left,centre_y" column="1" colour="text">
+						<translation id="text" translation_id="316685" type="use" value="Date Joined[COMMENT:team screen; history section; heading for history table - date manager joined]"/>
+					</record>
+					<record alignment="left,centre_y" column="2" colour="text">
+						<translation id="text" translation_id="316686" type="use" value="Date Left[COMMENT:team screen; history section; heading for history table - date manager left]"/>
+					</record>
+					<record alignment="left,centre_y" column="3" colour="text">
+						<translation id="text" translation_id="388045" type="use" value="Duration at Team[COMMENT: FR 8065; team screen; history section; heading for history table - use top ten matches, replaced club for team]"/>
+					</record>
+					<record alignment="left,centre_y" column="4" colour="text">
+						<translation id="text" translation_id="316688" type="use" value="Reason Left[COMMENT:team screen; history section; heading for history table - why manager left]"/>
+					</record>
+					<record alignment="left,centre_y" column="5" colour="text">
+						<translation id="text" translation_id="360633" type="use" value="League Wins[COMMENT: FR 8065; team screen; history section; heading for history table - league wins]"/>
+					</record>
+					<record alignment="left,centre_y" column="6" colour="text">
+						<translation id="text" translation_id="360550" type="use" value="Cup Wins[COMMENT: FR 8065; team screen; history section; heading for history table - cup wins]"/>
+					</record>
+				</list>
+				<list id="column_table_properties">
+					<record indx="0" id="mana" left="4" sort_disabled="true"/>
+					<record indx="1" id="join" left="4" sort_disabled="true"/>
+					<record indx="2" id="left" sort_disabled="true"/>
+					<record indx="3" sort_disabled="true"/>
+					<record indx="4" id="reas"/>
+				</list>
+				<list id="column_widget_properties">
+					<record index="0" alignment="left,centre_y" spec="text"/>
+					<record index="1" alignment="left,centre_y" spec="text"/>
+					<record index="2" alignment="left,centre_y" spec="text"/>
+					<record index="3" alignment="left,centre_y" spec="text"/>
+					<record index="4" alignment="left,centre_y" spec="text"/>
+					<record index="5" alignment="left,centre_y" spec="text"/>
+					<record index="6" alignment="left,centre_y" spec="text"/>
+				</list>
+			</widget>
+			
+			<!-- HIDE CARETAKER BUTTON -->
+			<container height="30" navigation_container="true">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+				
+				<widget class="check_box" id="hcCb" select_event="hCtk" auto_size="vertical">
+					<translation id="text" translation_id="436460" type="use" value="Hide caretakers[COMMENT: filter option to hide caretaker managers from the history panel showing managerial hirings]"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+	<!-- INFORMATION AT BOTTOM -->
+	<container id="bMiP">
+		<attachment_group class="vertical_arrange" vertical_layout="-6,-4"/>
+		
+		<!-- MANGER HISTORY AND ACHIEVEMENTS -->
+		<container class="tcs_box">
+			<attachment_group class="horizontal_arrange" horizontal_layout="200,2,-1"/>
+			
+			<!-- MANAGER RECORD -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+				
+				<!-- PLAYER NAME -->
+				<!-- <widget class="person_button" id="mttn" style="semi_bold" size="xlarge" colour="accent" auto_size="vertical"/> -->
+
+				<!-- DATE JOINED -->
+				<container height="18">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+					<widget class="text" auto_size="horizontal">
+						<translation id="text" translation_id="380677" type="use" value="Joined: [COMMENT: FR 8065, manager started date - manager history screen; leave empty space after colon and re-append comment in translation]"/>
+					</widget>
+					<widget class="text" id="mstl"/>
+				</container>
+
+				<!-- DATE LEFT -->
+				<container height="18">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+					<widget class="text" auto_size="horizontal">
+						<translation id="text" translation_id="380682" type="use" value="Left: [COMMENT: FR 8065, manager left date - manager history screen; leave empty space after colon and re-append comment in translation]"/>
+					</widget>
+					<widget class="text" id="mlll"/>
+				</container>
+					
+				<!-- STILL ACTIVE IN ROLE -->
+				<container id="sacn" height="20">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+					<widget class="text" id="mdcl" auto_size="horizontal"/>
+					<widget class="text" id="sair" hidden="true" auto_size="horizontal">
+						<translation id="text" translation_id="380089" type="use" value="- Still active in role[COMMENT: FR 8065, manager is active in role - manager history screen]"/>
+					</widget>
+				</container>
+
+				<!-- PIE CHART -->
+				<container>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				
+					<widget class="pie_chart_with_guide" id="posP" file="generic/pie chart with left guide">
+						<record id="pie_chart_properties">
+							<flags id="is_donut_chart" value="true"/>
+							<integer id="donut_line_width" value="6"/>
+							<boolean id="draw_instant_hint" value="true"/>
+							<integer id="highlight_value" value="10"/>
+						</record>
+					</widget>
+				</container>
+			</container>
+
+			<!-- DIVIDER -->
+			<widget class="vertical_subtle_divider"/>
+			
+			<container class="main_box">
+				<layout class="arrange_horizontal_attachment" layout="-1, -1, -1, -1" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1, -1, -1, -1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="text" font="label" colour="faded text" alignment="centre">
+						<translation id="text" alignment="centre" translation_id="360633" type="use" value="League Wins[COMMENT: FR 8065; team screen; history section; heading for history table - league wins]"/>
+					</widget>
+					<widget class="text" id="lgtl" font="value" alignment="centre"/>
+					<widget class="text" font="label" colour="faded text" alignment="centre">
+						<translation id="text" translation_id="360550" type="use" value="Cup Wins[COMMENT: FR 8065; team screen; history section; heading for history table - cup wins]"/>
+					</widget>
+					<widget class="text" id="cpwl" font="value" alignment="centre"/>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1, -1, -1, -1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="text" font="label" colour="faded text" alignment="centre">
+						<translation id="text" translation_id="380811" type="use" value="Promotions[COMMENT: FR 8065, promotions label; manager history screen]"/>
+					</widget>
+					<widget class="text" id="mpbl" font="value" alignment="centre"/>
+					<widget class="text" font="label" colour="faded text" alignment="centre">
+						<translation id="text" translation_id="380827" type="use" value="Relegations[COMMENT: FR 8065, relegations label; manager history screen]"/>
+					</widget>
+					<widget class="text" id="mrdl" font="value" alignment="centre"/>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1, -2, -1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="text" font="label" colour="faded text" alignment="centre">
+						<translation id="text" translation_id="469788" type="use" value="Major League Honours[COMMENT: bug #176205, major league honour; manager history screen, pluralisation of string ID 380707]"/>
+					</widget>
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<widget class="comp_award_trophy_picture" id="mlhc" scale_picture="true" image_alignment="centre"/>
+					</container>
+					<widget class="text" id="mlht" style="semi_bold" alignment="centre" size="small" multiline="true"/>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1, -2, -1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="text" font="label" colour="faded text" alignment="centre">
+						<translation id="text" translation_id="469789" type="use" value="Major Cup Honours[COMMENT: bug #176205, major cup honour; manager history screen, pluralisation of string ID 380706]"/>
+					</widget>
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<widget class="comp_award_trophy_picture" id="mchc" scale_picture="true" image_alignment="centre"/>
+					</container>
+					<widget class="text" id="mcht" style="semi_bold" alignment="centre" size="small" multiline="true"/>
+				</container>
+			</container>
+
+		
+		
+		</container>
+		
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]"/>
+
+			<widget class="table" id="achi" layout="120, -1" row_spacing="0" save_session_state="true">
+				<flags id="mode" value="fill_rows, stripe_rows,printable"/>
+				<boolean id="auto_size_rows" value="true"/>
+				<boolean id="fixed_size_rows" value="false"/>
+
+				<list id="headings">
+					<record alignment="left,centre_y" column="0" colour="text">
+						<translation id="text" translation_id="289998" type="use" value="Date[COMMENT:team screen; history section; heading for history table - date of event]"/>
+					</record>
+					<record alignment="left,centre_y" column="1" colour="text">
+						<translation id="text" translation_id="289999" type="use" value="Event[COMMENT:team screen; history section; heading for history table - landmark event]"/>
+					</record>
+				</list>
+				<list id="column_table_properties">
+					<record indx="0" left="4" sort_disabled="true"/>
+					<record indx="1" sort_disabled="true"/>
+				</list>
+				<list id="column_widget_properties">
+					<record index="0" alignment="left,centre_y" spec="text"/>
+					<record index="1" alignment="left,centre_y" spec="text" colour="text"/>
+				</list>
+			</widget>
+			<widget class="text" id="mnhT" colour="faded text" alignment="centre" hidden="true">
+				<translation id="text" translation_id="436059" type="use" value="No career milestones.[COMMENT: small change to ID 391765 to be consistent with terminology]"/>
+			</widget>
+		</container>
+		
+	</container>
+</panel>

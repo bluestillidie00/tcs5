@@ -1,0 +1,128 @@
+<panel save_session_state="true">
+	<layout class="horizontal_arrange" horizontal_layout="-3,-2"  />
+
+	<container class="tcs_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<!-- Pitch -->
+		<widget class="pitch_with_player_positions" id="ppip" height="140" vertical="true" pitch_alignment="centre,can_scale" pitch_draw_goals="false" pitch_draw_markings="false" pitch_show_names="true" pitch_show_names_as_hint="false" pitch_draw_grass="false" pitch_line_colour="faded text" pitch_touchline_width_percentage="1" pitch_perspective="0.03" pitch_override_icon_size="2" pitch_length_multiplier="1.3" line_width="1.4" appearance="boxes/custom/pitch selection/paper" pitch_player_name_text_colour="white">
+			<string id="pitch_kit_icon" value="pitch/icons/dots" />
+		</widget>
+	</container>
+
+	<container class="tcs_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="inner_box">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- Position label-->
+			<widget class="text" id="posT" auto_size="vertical" font="title" size="normal"/>
+			<!-- Position strength label -->
+			<widget class="icon_button" id="posS" icon="icons/16px/circle" show_button_appearance="false" auto_size="vertical" style="semi_bold" size="large" navigation_focus_target="false"/>
+			<!-- Side preference string -->
+			<widget class="text" id="Psid" colour="faded text" auto_size="vertical" />
+		</container>
+
+		<container class="inner_box" id="posB" font="title">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="2" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!-- Info labels for when the data isn't available-->
+				<container id="inFC">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="text" id="nrLb" auto_size="vertical" hidden="true">
+						<translation id="text" translation_id="383562" type="use" value="No suitable best roles for this position[COMMENT: FR 10661; player overview positions indicator; string displayed when the player is not good enough in a position to have a 'best role' for it]" />
+					</widget>
+					<widget class="text" id="arbs" auto_size="vertical" hidden="true">
+						<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+					</widget>
+					<widget class="text" id="pool" auto_size="vertical" hidden="true">
+						<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+					</widget>
+					<widget class="button" id="scPb" click_event="sctc" auto_size="all" height="30" hidden="true">
+						<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+				</container>
+
+				<!-- Best roles for selected position -->					
+				<widget class="table" id="Rcon" layout="70, 18, -1" auto_size_rows="true" row_spacing="0" column_spacing="2">
+					<widget class="stars_range_strip" id="roS1" row="0" col="0" />
+					<widget class="info_icon_hint_text" id="hnt1" row="0" col="1" />
+					<widget class="label" id="roL1" row="0" col="2" />
+
+					<widget class="stars_range_strip" id="roS2" row="1" col="0" />
+					<widget class="info_icon_hint_text" id="hnt2" row="1" col="1" />
+					<widget class="label" id="roL2" row="1" col="2" />
+
+					<widget class="stars_range_strip" id="roS3" row="2" col="0" />
+					<widget class="info_icon_hint_text" id="hnt3" row="2" col="1" />
+					<widget class="label" id="roL3" row="2" col="2" />
+
+					<widget class="stars_range_strip" id="roS4" row="3" col="0" />
+					<widget class="info_icon_hint_text" id="hnt4" row="3" col="1" />
+					<widget class="label" id="roL4" row="3" col="2" />
+
+					<widget class="stars_range_strip" id="roS5" row="4" col="0" />
+					<widget class="info_icon_hint_text" id="hnt5" row="4" col="1" />
+					<widget class="label" id="roL5" row="4" col="2" />
+
+					<widget class="stars_range_strip" id="roS6" row="5" col="0" />
+					<widget class="info_icon_hint_text" id="hnt6" row="5" col="1" />
+					<widget class="label" id="roL6" row="5" col="2" />
+
+					<widget class="stars_range_strip" id="roS7" row="6" col="0" />
+					<widget class="info_icon_hint_text" id="hnt7" row="6" col="1" />
+					<widget class="label" id="roL7" row="6" col="2" />
+
+					<widget class="stars_range_strip" id="roS8" row="7" col="0" />
+					<widget class="info_icon_hint_text" id="hnt8" row="7" col="1" />
+					<widget class="label" id="roL8" row="7" col="2" />
+				</widget>
+
+			</container>
+
+			<widget class="horizontal_subtle_divider"/>
+
+
+			<widget class="table" layout="40, -1" auto_size="vertical" row_spacing="0" row_height="22">
+				<!-- Left foot strength -->
+				<widget class="picture" file="icons/custom/footed/left" image_alignment="centre_x,bottom" height="35" width="35" col="0" row="0" row_span="2" />
+				<widget class="label" col="1" row="0" font="label"  alignment="left,bottom">
+					<translation id="text" translation_id="230000" type="use" value="Left Foot" />
+				</widget>
+				<widget class="footedness_label" id="fotL" format="[%string#1]" col="1" row="1" alignment="left,top" font="value" size="small" >
+					<record id="object_property">
+						<integer id="get_property" value="PlfG" />
+					</record>
+				</widget>
+			</widget>
+
+			<widget class="table" layout="40, -1" row_height="22" auto_size="vertical" row_spacing="0">
+				<!-- Right foot strength -->
+				<widget class="picture" file="icons/custom/footed/right" image_alignment="centre_x,bottom" height="35" width="35" col="0" row="0" row_span="2" />
+				<widget class="label" col="1" row="0" font="label" alignment="left,bottom">
+					<translation id="text" translation_id="230001" type="use" value="Right Foot" />
+				</widget>
+				<widget class="footedness_label" id="fotR" format="[%string#1]" col="1" row="1" alignment="left,top" font="value" size="small">
+					<record id="object_property">
+						<integer id="get_property" value="PrfG" />
+					</record>
+				</widget>
+			</widget>
+
+
+		</container>
+	</container>
+
+
+</panel>

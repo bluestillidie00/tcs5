@@ -19,7 +19,7 @@
 	</container>
 
 	<!-- No scout report -->
-	<container id="nsrc" class="main_box">
+	<container id="nsrc">
 		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
 
 		<container id="nocs" height="100">

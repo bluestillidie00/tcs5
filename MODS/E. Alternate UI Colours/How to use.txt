@@ -1,0 +1,9 @@
+1. Using notepad++ (https://notepad-plus-plus.org/downloads/), find the WTCS5 folder, open the settings folder, and open tcs settings.xml
+
+2. Find the colour scheme you want to use, Dark Mode or WTS Legacy Edition, at the of the list of the line which has "<colour name="bg negative"..." you'll find an -->. 
+
+3. Select the arrow, and cut, and paste it next to the word "MODE" or edition. 
+
+4. You have now made this active. Go in game and open the preferences with Shift+P.
+
+5. In the bottom left of the preferences, click on the reset button, and press clear cache, then press Reload Skin.

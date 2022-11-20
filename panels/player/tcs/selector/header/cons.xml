@@ -33,7 +33,7 @@
 						<layout class="stick_to_sides_attachment" alignment="all" inset="3" apply_to_children="true"/>
 
 						<container class="scrolling_box">
-							<widget class="horizontal_arrange_container" id="mpro" wrap="true" gap="2" inset="4" auto_size="vertical">
+							<widget class="horizontal_arrange_container" id="mcon" wrap="true" gap="2" inset="4" auto_size="vertical">
 								<integer id="size" value="26" />
 							</widget>
 						</container>		
