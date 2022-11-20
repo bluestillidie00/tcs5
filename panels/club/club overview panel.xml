@@ -91,15 +91,30 @@
 
 					<!-- REPUTATION -->
 					<container priority="2">
-						<attachment_group class="vertical_arrange_autosize"/>
-
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+											
+					<container width="80" >
+					<layout class="vertical_arrange_autosize" />
+						
 						<widget class="label" auto_size="vertical" style="semi_bold" >
 							<translation id="text" translation_id="227963" type="use"/>
 						</widget>
-						<widget class="club_reputation_stars_label" alignment="left" icon_enabled="false" auto_size="vertical" >
+	
+						<widget class="club_reputation_stars_label" alignment="left" icon_enabled="false" auto_size="horizontal" >
 							<record id="object_property" get_property="Csta"/>
 						</widget>
-					</container>
+				</container>
+														
+<container width="30">
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<widget class="position_change_button" alignment="centre"  >
+							<record id="object_property" get_property="Crpc"/>
+						</widget>
+</container>						
+
+<container />
+				</container>
 
 					<!-- BANK BALANCE -->
 					<container priority="4">
@@ -256,15 +271,7 @@
 					</container>
 
 					<!-- SOCIAL MEDIA FOLLOWERS -->
-					<container priority="3">
-						<attachment_group class="vertical_arrange_autosize"/>
-
-						<widget class="label" auto_size="vertical" style="semi_bold" >
-							<translation id="text" translation_id="557873" type="use"/>
-						</widget>
-						<widget class="number_label" auto_size="vertical"  alignment="left,can_scale">
-							<record id="object_property" get_property="CsSF"/>
-						</widget>
+					<container priority="3" class="supporter_profile_panel" file="none">
 					</container>
 
 					<!-- YOUTH REC. -->
@@ -593,7 +600,7 @@
 				</container>
 			</container>
 
-			<container id="comp">
+<!-- 			<container id="comp">
 				<translation id="title" translation_id="227741" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -604,7 +611,7 @@
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 				</container>
-			</container>
+			</container> -->
 
 			<container id="tcfa">
 				<translation id="title" translation_id="292709" type="use"/>
@@ -614,6 +621,19 @@
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 					<container class="team_container_information_stadium_panel" id="tcfa">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				</container>
+			</container>
+
+			<container id="Hist">
+				<translation id="title" translation_id="319514" type="use"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="tcs_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container class="transfer_panel_club" id="csio" file="club/tcs/overview/recent history">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 				</container>
@@ -631,20 +651,6 @@
 					</container>
 				</container>
 			</container>
-
-
-			<!-- <container id="hipl">
-				<translation id="title" translation_id="243323" type="use"/>
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-				<container class="tcs_box">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-					<container class="club_records_master_panel" id="hipl" file="club/tcs/overview/records/master">
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</container>
-				</container>
-			</container> -->
 		</container>
 
 		<!-- RIGHT -->
