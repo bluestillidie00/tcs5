@@ -1,0 +1,119 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at03" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="inner_box" entity_layout_id="at02" id="at02" height="570" force_title_borders="true">
+		<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-0" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="pitch_with_tactics" entity_layout_id="at00" id="ptWt" width="350" name="pitch">
+			<string id="player_icon_file" value="tactics/tactics icon info panel news item" />
+			<real id="pitch_perspective" value="0.100000" />
+			<string id="icon_flags" value="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity" />
+			<string id="show_extra_details_buttons" value="true" />
+			<string id="pitch_draw_grass" value="true" />
+			<string id="pitch_base_appearance" value="" />
+			<string id="pitch_pattern" value="" />
+			<integer id="pitch_vertical_padding" value="0" />
+			<string id="vertical" value="true" />
+			<string id="pitch_alignment" value="can_scale" />
+			<real id="maximum_player_size" value="0.220000" />
+			<string id="pitch_line_colour" value="text" />
+			<string id="3958779584" value="tactics normal run" />
+			<string id="3958779616" value="tactics darkened run" />
+			<string id="3958779648" value="tactics dragged run" />
+			<integer id="pitch_touchline_width_percentage" value="20" />
+			<integer id="line_width" value="1" />
+			<boolean id="pitch_is_read_only" value="true" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main" />
+		</container>
+		<container class="client_object_list_table" entity_layout_id="at01" id="tplT" save_session_state="true" save_default_state="true">
+			<integer id="row_spacing" value="0" />
+			<integer id="column_spacing" value="0" />
+			<string id="should_force_refresh" value="true" />
+			<string id="customisation_context" value="play" />
+			<integer id="database_table_type" value="1" />
+			<string id="view_setting_name" value="stored_tactics_view" />
+			<string id="mode" value="fill_rows, stripe_rows, hide_headings, printable" />
+			<string id="popup_menu_class" value="popup_button_table_header" />
+			<integer id="row_height" value="48" />
+			<boolean id="auto_size_rows" value="false" />
+			<boolean id="fixed_size_rows" value="true" />
+			<boolean id="dont_restore_selection" value="true" />
+			<list id="default_sort_column">
+				<integer value="PXpQ" />
+			</list>
+			<list id="disallowed_view_property_ids" />
+			<list id="required_view_property_ids" />
+			<string id="default_view" value="sltn" />
+			<list id="default_sort_column">
+				<integer value="pCSp" />
+			</list>
+			<list id="views">
+				<record id="sltn">
+					<translation id="text" translation_id="326989" type="use" value="Selection Info[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+					<record id="view">
+						<record id="pCSp" width="45" appearance="buttons/custom/tactics/role picker/mid/button" minimum_width="50" priority="1">
+						</record>
+						<record id="PXpQ" width="65" appearance="buttons/custom/tactics/role picker/right/button" minimum_width="65" priority="3">
+							<string id="size" value="small" />
+							<string id="TISP" value="false" />
+							<string id="nLin" value="true" />
+							<string id="iAbs" value="true" />
+						</record>
+						<record id="port" width="-1" priority="1" minimum_width="200" />
+						<record id="pTSR" width="-1" priority="1" minimum_width="200" />
+					</record>
+				</record>
+			</list>
+
+			<list id="column_widget_properties">]
+			<record index="0" navigation_focus_target="false" />
+			<record index="1" navigation_focus_target="false" />
+			<record index="3" navigation_focus_target="false" />
+			</list>
+			<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" target="at00" />
+		</container>
+		<widget class="text" entity_layout_id="at04" alignment="centre_y,left" id="at04" auto_size="horizontal" needs_width="true" height="30" embed_in_frame="true" colour="title">
+			<string id="font" value="title" />
+			<translation id="value" translation_id="492040" type="use" value="Selection Advice[COMMENT: AREA: A Button in the tactics panel; SUB-AREA: Opening a dialog suggesting the manager a team selection; FR-BN: 27347; ; CHARLIMIT: None;]" />
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" get_side="top" set_side="top" move_side="true" target="fmin" />
+			<layout class="stick_to_object_attachment" id="align_left" embed_in_frame="true" get_side="left" set_side="left" move_side="true" target="fmin" />
+		</widget>
+		<widget class="text" entity_layout_id="at05" alignment="centre_y,left" auto_size="horizontal" id="at05" needs_width="true" height="30" embed_in_frame="true">
+			<translation id="value" translation_id="516206" type="use" value="vs[COMMENT: AREA: Prematch Header Panels; SUB-AREA: subtitle text; BN: 35843; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: short for versus, eg Team1 vs Team2]" />
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" get_side="top" set_side="top" move_side="true" target="fmin" />
+			<layout class="stick_to_object_attachment" id="align_left" embed_in_frame="true" offset="8" get_side="right" set_side="left" move_side="true" target="at04" />
+		</widget>
+		<container class="tactic_slot_tab_container" entity_layout_id="at03" file="tactics/tactic slot tab container match prep" alignment="centre_y,left" id="nxTC" width="400" height="30" embed_in_frame="true">
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" get_side="top" set_side="top" move_side="true" target="fmin" />
+			<layout class="stick_to_object_attachment" id="align_left" embed_in_frame="true" get_side="right" set_side="left" move_side="true" target="at05" />
+		</container>
+	</container>
+</panel>

@@ -10,13 +10,13 @@
 	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
 
 	<!-- Playing time panel-->
-	<container class="main_subtle_box">
-<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<container class="tcs_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 		<container class="scrolling_box">
 			<container>
 				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="4" />
-				<container id="plaC" class="inner_box" appearance="boxes/titled/compact/paper">
+				<container id="plaC" class="inner_box">
 					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="4" vertical_offset="6" />
 
 					<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
@@ -416,11 +416,57 @@
 				</container>
 
 				<!--Plans-->
-				<widget class="person_happiness_panel" file="person/person happiness plans" auto_size="vertical">
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
+				<widget class="person_happiness_panel" file="none" auto_size="vertical">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+					<container class="inner_box" >
+						<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
+
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!-- short term future / long term future -->
+						<!-- short term plans -->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="label" auto_size="vertical" alignment="left,bottom" font="title" colour="faded text">
+								<translation id="text" translation_id="251277" type="use" value="Short-term Plans[COMMENT: player happiness panel]" />
+							</widget>
+
+							<widget class="table" id="futt" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+								<list id="column_table_properties">
+									<record id="bull">
+										<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16" />
+									</record>
+									<record id="text">
+										<record id="widget_info" class="text" auto_size="vertical"/>
+									</record>
+								</list>
+							</widget>
+
+						</container>
+						<!-- Long term plans -->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="label" auto_size="vertical" alignment="left,bottom" font="title" colour="faded text">
+								<translation id="text" translation_id="251278" type="use" value="Long-term Plans[COMMENT: player happiness panel]" />
+							</widget>
+
+							<widget class="table" id="lftt" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" >
+								<list id="column_table_properties">
+									<record id="bull">
+										<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16" />
+									</record>
+									<record id="text">
+										<record id="widget_info" class="text" auto_size="vertical"/>
+									</record>
+								</list>
+							</widget>
+						</container>
+					</container>
 				</widget>
 
 			</container>
@@ -429,108 +475,109 @@
 
 	</container>
 
-<!--Squad Hierarchy-->
-		<container class="main_subtle_box" navigation_container="true" draw_horizontal_dividers="true">
-			<attachment_group class="vertical_arrange" vertical_layout="-3,-2">
-				<global id="vertical_gap" name="ui.main_box_gap" />
-			</attachment_group>
+	<!--Squad Hierarchy-->
+	<container class="tcs_box" navigation_container="true" draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_layout="-3,-2">
+			<global id="vertical_gap" name="ui.main_box_gap" />
+		</attachment_group>
 
-			<container class="inner_box" appearance="boxes/titled/compact/paper">
-				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="10" />
-				<translation id="title" translation_id="447541" type="use" value="Relationship[COMMENT: player Relationships panel; panel header title for player relationship with manager]" />
+		<container class="inner_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="10" />
+			<translation id="title" translation_id="447541" type="use" value="Relationship[COMMENT: player Relationships panel; panel header title for player relationship with manager]" />
 
-				<container height="24">
-					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
-					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
-					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<container height="24">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
-					<widget class="picture" id="hrcP" height="24" width="24" file="icons/48px/relationship" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+				<widget class="picture" id="hrcP" height="24" width="24" file="icons/48px/relationship" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
 
-					<widget class="text" id="dreL" auto_size="horizontal" alignment="left,centre_y" font="value" />
-					<widget class="relationship_label" id="relL" display_format="0" auto_size="horizontal"  alignment="left,centre_y" font="value" />
+				<widget class="text" id="dreL" auto_size="horizontal" alignment="left,centre_y" font="value" />
+				<widget class="relationship_label" id="relL" display_format="0" auto_size="horizontal"  alignment="left,centre_y" font="value" />
 
-					<widget class="picture" id="hrcl" width="16" hidden="true" file="icons/16px/up" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
-				</container>
+				<widget class="picture" id="hrcl" width="16" hidden="true" file="icons/16px/up" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+			</container>
 
-				<container class="vertical_label_value_pair" label_widget="opHd" value_widget="opiL">
-					<widget class="text" id="opHd" alignment="left">
-						<translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
-					</widget>
-					<widget class="text" id="opiL" alignment="left">
-					</widget>
-				</container>
-
-				<!--Favoured Personnel-->
-				<widget class="label" auto_size="all" alignment="left,centre_y" font="label">
-					<translation id="text" translation_id="247454" type="use" value="Favoured Personnel" />
+			<container class="vertical_label_value_pair" label_widget="opHd" value_widget="opiL">
+				<widget class="text" id="opHd" alignment="left">
+					<translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
 				</widget>
-
-				<widget class="text" id="favs" alignment="left" spec="text" auto_size="vertical">
-					<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
-				</widget>
-
-				<widget class="table" id="tabl" layout="-2,-2,-1,-1,-1" auto_size_rows="true">
-					<list id="headings">
-						<record index="0" alignment="left,centre_y" auto_hide_priority="1">
-							<translation id="text" translation_id="229689" type="use" value="Name" />
-						</record>
-						<record index="1" alignment="left,centre_y" auto_hide_priority="1">
-							<translation id="text" translation_id="447597" type="use" value="Reason[COMMENT: table heading; reason for relationship]" />
-						</record>
-						<record index="2" alignment="left,centre_y" auto_hide_priority="1">
-							<translation id="text" translation_id="248033" type="use" value="Nationality[COMMENT - Hall of fame section]" />
-						</record>
-						<record index="3" alignment="left,centre_y" auto_hide_priority="1">
-							<translation id="text" translation_id="323297" type="use" value="Club[COMMENT: Person table type name]" />
-						</record>
-						<record index="4" alignment="left,centre_y" auto_hide_priority="1">
-							<translation id="text" translation_id="227964" type="use" value="Job" />
-						</record>
-					</list>
-
-					<list id="column_table_properties">
-						<record index="0" sort_disabled="true" auto_hide_priority="1" />
-						<record index="1" sort_disabled="true" auto_hide_priority="1" />
-						<record index="2" sort_disabled="true" auto_hide_priority="1" minimum_width="300" />
-						<record index="3" sort_disabled="true" auto_hide_priority="1" minimum_width="180" />
-						<record index="4" sort_disabled="true" auto_hide_priority="1" minimum_width="90" />
-					</list>
-
-					<list id="column_widget_properties">
-						<record index="1" alignment="left,centre_y" />
-					</list>
+				<widget class="text" id="opiL" alignment="left">
 				</widget>
 			</container>
-		</container>
 
-		<!--Happiness-->
-		<container class="main_subtle_box" id="happ">
-			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6" />
-			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-			<translation id="title" translation_id="247463" type="use" value="Happiness" />
+			<!--Favoured Personnel-->
+			<widget class="label" auto_size="all" alignment="left,centre_y" font="label">
+				<translation id="text" translation_id="247454" type="use" value="Favoured Personnel" />
+			</widget>
 
-			<!--morale-->
-			<container id="mrlC">
-				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+			<widget class="text" id="favs" alignment="left" spec="text" auto_size="vertical">
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
 
-				<widget class="label" auto_size="all" alignment="left,centre_y" font="label">
-					<translation id="text" translation_id="227839" type="use" value="Morale" />
-				</widget>
-
-				<widget class="morale_label" id="resL" auto_size="all" alignment="left,centre_y" font="value">
-					<record id="object_property">
-						<integer id="get_property" value="Pmor" />
+			<widget class="table" id="tabl" layout="-2,-2,-1,-1,-1" auto_size_rows="true">
+				<list id="headings">
+					<record index="0" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="229689" type="use" value="Name" />
 					</record>
-				</widget>
+					<record index="1" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="447597" type="use" value="Reason[COMMENT: table heading; reason for relationship]" />
+					</record>
+					<record index="2" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="248033" type="use" value="Nationality[COMMENT - Hall of fame section]" />
+					</record>
+					<record index="3" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="323297" type="use" value="Club[COMMENT: Person table type name]" />
+					</record>
+					<record index="4" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="227964" type="use" value="Job" />
+					</record>
+				</list>
 
-			</container>
+				<list id="column_table_properties">
+					<record index="0" sort_disabled="true" auto_hide_priority="1" />
+					<record index="1" sort_disabled="true" auto_hide_priority="1" />
+					<record index="2" sort_disabled="true" auto_hide_priority="1" minimum_width="300" />
+					<record index="3" sort_disabled="true" auto_hide_priority="1" minimum_width="180" />
+					<record index="4" sort_disabled="true" auto_hide_priority="1" minimum_width="90" />
+				</list>
 
-			<widget class="person_happiness_panel" id="phap" file="person/person happiness relationships">
-				<record id="object_property">
-					<integer id="get_property" value="objt" />
-					<integer id="set_property" value="objt" />
-				</record>
+				<list id="column_widget_properties">
+					<record index="1" alignment="left,centre_y" />
+				</list>
 			</widget>
 		</container>
+	</container>
+
+	<!--Happiness-->
+	<container class="tcs_box" id="happ">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--morale-->
+		<container id="mrlC" class="inner_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+			<translation id="title" translation_id="227839" type="use" />
+
+
+			<widget class="label" auto_size="all" alignment="left,centre_y" font="label">
+				<translation id="text" translation_id="" type="use" value="Morale" />
+			</widget>
+
+			<widget class="morale_label" id="resL" auto_size="all" alignment="left,centre_y" font="value">
+				<record id="object_property">
+					<integer id="get_property" value="Pmor" />
+				</record>
+			</widget>
+
+		</container>
+
+		<widget class="person_happiness_panel" id="phap" file="person/person happiness relationships">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
 
 </panel>

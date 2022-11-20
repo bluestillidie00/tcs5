@@ -6,13 +6,6 @@
 
   <widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true" navigation_focus_target="true">
     <layout class="stick_to_sides_attachment" alignment="right,top" inset="2"/>
-
-    <!-- This is a bit clumsy but I can't think of a better way without using equally clumsy code -->
-    <!-- Animation to 'hide' the widget by drawing it out of the clipping area -->
-    <!--<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="100.0,0.0" end_value="100.0,0.0" duration="0.1" end_mode="hold_end" apply_to_mouse="false"/>-->
-    <!-- Animations to move it back and fade it in when moused over  -->
-    <!--<animation class="translate_animation" trigger_start="msen" trigger_end="msex" start_value="-100.0,0.0" end_value="-100.0,0.0" duration="0.01" end_mode="hold_auto_reverse" apply_to_mouse="false"/>-->
-    <!--<animation class="fade_animation" trigger_start="msen" trigger_end="msex" start_value="0.0" end_value="1.0" duration="0.4" end_mode="hold_auto_reverse"/>-->
   </widget>
 
 <!--   <widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title" late_loading="true">
@@ -57,10 +50,10 @@
         <translation id="title" translation_id="316626" type="use" />
     </widget> 
 
-    <!-- PERSONAL DETAILS -->
+    <!-- PERSONAL DETAILS 
     <widget class="player_personal_details_panel" id="pInF" file="player/tcs/selector/big/header info card" late_loading="true">
         <translation id="title" translation_id="333981" type="use" />
-    </widget> 
+    </widget>  -->
     
     <!-- PROS AND CONS -->
     <widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons" late_loading="true">

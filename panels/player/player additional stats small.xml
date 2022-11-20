@@ -64,12 +64,12 @@
 			<translation id="text" translation_id="249493" type="use" value="MoM[COMMENT man of match]" />
 		</record>
 		<!-- Yellows -->
-		<record id="ycmp" format="[%fraction#1-2.0]">
+		<record id="ycmp" format="[%fraction#1-2.0]" colour="yellow card" style="bold">
 			<translation id="hint" translation_id="227869" type="use" value="Yellow cards" />
 			<translation id="text" translation_id="227868" type="use" value="Yel[COMMENT yellow cards]" />
 		</record>
 		<!-- Reds -->
-		<record id="rcmp" format="[%fraction#1-2.0]">
+		<record id="rcmp" format="[%fraction#1-2.0]" colour="red card" font="bold">
 			<translation id="hint" translation_id="227871" type="use" value="Red cards" />
 			<translation id="text" translation_id="229879" type="use" value="Red" />
 		</record>
@@ -105,8 +105,8 @@
 		</record>
 	</list>
 
-	<container class="icon_box" file="player/player status icon box" icon="icons/custom/icon box/stats">
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="2" apply_to_children="true" />
 
 		<!-- Set icon to only show: Yel, Sus, Una -->
 		<record id="widget_properties" type="5" />

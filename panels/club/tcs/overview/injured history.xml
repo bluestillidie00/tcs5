@@ -1,0 +1,83 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+
+	<container class="main_box" id="trtb" navigation_container="true" default_focus="true">
+		<layout class="arrange_vertical_attachment" layout="-1,32" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="table" id="InjP" layout="60, -2, -1, -2, 1, 1, 1, -1" mode="fill_rows" default_sort_column="2" navigation_container="true">
+			<list id="headings">
+				<record index="0">
+					<translation id="text" translation_id="230120" type="use" value="Date"/>
+				</record>
+				<record index="1">
+					<translation id="text" translation_id="229689" type="use" value="Name"/>
+				</record>
+				<record index="2">
+					<translation id="text" translation_id="447650" type="use" value="Severity[COMMENT: FR 20159; player injury table; injury seriousness column header]"/>
+				</record>
+				<record index="3">
+					<translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]"/>
+				</record>
+				<record index="4">
+					<translation id="text" translation_id="247601" type="use" value="Received"/>
+				</record>
+				<record index="5">
+					<translation id="text" translation_id="447651" type="use" value="Fixture[COMMENT: FR 20159; player injury table; fixture injury was recieved in column header]"/>
+				</record>
+				<record index="6">
+					<translation id="text" translation_id="447652" type="use" value="Treatment[COMMENT: FR 20159; player injury table; treatment type player is receiving column header]"/>
+				</record>
+				<record index="7">
+					<translation id="text" translation_id="247527" type="use" value="Time Out[COMMENT: Player Injury time out, table header]"/>
+				</record>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="false"/>
+				</record>
+				<record index="1" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="true"/>
+				</record>
+				<record index="2" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="false"/>
+				</record>
+				<record index="3" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="true"/>
+				</record>
+				<record index="4" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="true"/>
+				</record>
+				<record index="5" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="true"/>
+				</record>
+				<record index="6" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="true"/>
+				</record>
+				<record index="7" alignment="left,centre_y">
+					<boolean id="sort_ascending" value="false"/>
+				</record>
+			</list>
+
+			<record id="default_properties" auto_size="vertical" multiline="false"/>
+		</widget>
+		
+		<container>
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0">
+				<global id="gap" name="ui.button_row_gap"/>
+			</layout>
+
+			<!-- seasons popup -->
+			<widget class="embedded_season_selection_list" id="tsbw" save_immediate_state="true" sele="tsch" width="300">
+				<global id="gap_adjustment" name="ui.split_button_row_gap"/>
+			</widget>
+
+			<widget class="embedded_filter_button" id="plsf" target="trtb" auto_size="horizontal"/>
+		</container>
+		
+	</container>
+
+</panel>

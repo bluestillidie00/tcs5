@@ -4,12 +4,13 @@
 
 	<!-- SET UP TABS -->
 	<!-- TOM TODO: ADD FAINT GRAPHIC -->
-	<container class="tcs_tabs" id="tran" default_item="rep1" save_default_state="true" save_session_state="true">
+	<container class="tcs_tabs_primary" id="Repo" default_item="rep1" save_default_state="true" save_session_state="true">
 
 		<!-- OVERALL -->
 		<container id="rep1">
 			<translation id="title" translation_id="259402" type="use"/>
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<!-- INSET // T,L,R,B -->
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
 
 			<container>
@@ -17,7 +18,7 @@
 
 				<!-- IF USER CONTROLLED -->
 				<container>
-					<layout class="vertical_arrange" vertical_layout="150,-1"/>
+					<layout class="vertical_arrange" vertical_layout="120,-1"/>
 
 					<!-- IF HUMAN CONTROLLED TEAM, SHOW -->
 					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
@@ -142,7 +143,7 @@
 									<container id="sTRS">
 										<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12"/>
 
-										<container height="60">
+										<!-- <container height="60">
 											<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="40,-1" vertical_offset="0" vertical_gap="0"/>
 
 											<widget class="text" alignment="centre" id="norp" multiline="true" colour="text" font="bold" height="32">
@@ -150,7 +151,7 @@
 											</widget>
 
 											<widget class="text" id="chRC" alignment="left,centre_y" multiline="true" style="bold" colour="text" auto_size="vertical"/>
-										</container>
+										</container> -->
 
 										<container>
 											<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6"/>
@@ -414,7 +415,7 @@
 			</container>
 		</container>
 
-		<container id="rep2">
+		<!-- <container id="rep2">
 			<translation id="title" translation_id="248428" type="use"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -422,12 +423,22 @@
 				<translation id="title" translation_id="420686" type="use"/>
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
-		</container>
+		</container> -->
+		
+<!-- 		<container id="rep2">
+			<translation id="title" translation_id="450220" type="use"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison no title" late_loading="true">
+				<translation id="title" translation_id="420686" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container> -->
 
 		<!-- PER 90 -->
 		<container id="rep5">
 			<translation id="title" translation_id="374186" type="use"/>
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 
 			<widget file="none" class="player_additional_stats_panel" id="pSta" late_loading="true">
 				<translation id="title" translation_id="420686" type="use"/>
@@ -830,7 +841,7 @@
 		<!-- ANALYST REPORT -->
 		<container id="rep4">
 			<translation id="title" translation_id="447607" type="use"/>
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 
 			<container>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>

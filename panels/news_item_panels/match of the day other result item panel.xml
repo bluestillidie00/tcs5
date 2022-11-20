@@ -1,0 +1,31 @@
+<!-- A panel that can display a single match result. Designed to be used with an XML viewer panel-->
+<panel height="40">
+  <layout class="arrange_horizontal_attachment" alignment="right, extend" offset="0" gap="3"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true"/>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="-1, 18, 40, 18, -1" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <!-- Home team name -->
+    <widget class="team_button" id="hnam" alignment="right, centre_y" icon_enabled="true" icon_alignment="right"/>
+    <!-- Result -->
+    <widget id="hres" class="label" alignment="right, centre_y" colour="fixture outcome" />
+    <!-- Score -->
+    <widget id="scor" class="text" style="bold" alignment="centre"/>
+    <!-- Result -->
+    <widget id="ares" class="label" alignment="left, centre_y" colour="fixture outcome" />
+    <!-- Away team name -->
+    <widget class="team_button" id="anam" alignment="left,centre_y"  icon_enabled="true" icon_alignment="left"/>
+  </container>
+
+  <container width="45">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <widget class="icon_button" id="vwhl" click_event="vhpu" icon="icons/custom/highlights/highlights" appearance="buttons/subtle/normal/button" auto_size="vertical">
+      <record id="primary_icon_properties" red_replacement="text" />
+      <record id="object_property" get_property="fixi" set_property="fixi" dont_set_object="true"/>
+      <translation id="hint" translation_id="227629" type="use" value="View Highlights" />
+    </widget>
+  </container>
+</panel>

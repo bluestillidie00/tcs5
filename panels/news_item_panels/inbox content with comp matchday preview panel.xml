@@ -1,0 +1,102 @@
+<panel>
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="scrolling_box">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" layout="-1, 220" gap="8"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+			<!-- MAIN BODY TEXT -->
+			<container id="mnbx">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="inbox_body_text" id="bdtx"/>
+			</container>		
+
+			<!-- RIGHT HAND PANELS -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+				<!-- DYNAMIC IMAGE -->
+				<container height="134">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!--DYNAMIC IMAGE-->
+					<container id="ICdi" height="134">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					</container>
+
+					<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+					<container class="bordered_box" appearance="tcs/ro" />
+				</container>
+
+				<!-- CURRENT HOLDERS -->
+				<container class="tcs_box" id="hlBx" >
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<!-- LOGO -->
+					<widget class="object_portrait_picture" id="hlbd" scale_picture="true" image_alignment="centre" height="100"/>
+
+					<!-- NAME -->
+					<widget class="client_object_label" id="hltx" auto_size="vertical" spec="text" size="small" font="title" colour="text" alignment="centre,bottom" multiline="false"/>
+
+					<!-- CURRENT HOLDERS LABEL -->
+					<widget class="label" auto_size="vertical" font="label" alignment="centre,top">
+						<translation id="text" translation_id="361100" type="use"/>
+					</widget>		
+				</container>
+
+				<!-- TOP CLASH -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<!-- STADIUM PIC -->
+					<container height="130">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<widget class="stadium_picture" id="hmpc" priority="1" scale_picture="true">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="-10" />
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>	  	
+						
+						<container class="tcs_box" appearance="tcs/backgrounds/overlay/80" rrep="bg" />
+						
+										<container >
+						<layout class="arrange_horizontal_attachment" alignment="middle,fill" offset="20" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="6" apply_to_children="true"/>
+
+						<container height="80">
+							<layout class="arrange_vertical_attachment" alignment="bottom,extend"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+							<widget class="object_portrait_picture" id="hmpc" scale_picture="true" image_alignment="centre" />
+							<widget class="client_object_label" id="hmnm" auto_size="vertical" spec="text" size="8" colour="text" alignment="centre"/>
+						</container>
+
+						<widget class="text" auto_size="all" alignment="centre" colour="text" style="semi_bold" size="xlarge">
+							<layout class="stick_to_sides_attachment" alignment="top" inset="8"/>
+							<translation id="text" translation_id="242324" type="use" value="v[versus]"/>
+						</widget>
+
+						<container height="80">
+							<layout class="arrange_vertical_attachment" alignment="bottom,extend"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+							<widget class="object_portrait_picture" id="awpc" scale_picture="true" image_alignment="centre"/>
+							<widget class="client_object_label" id="awnm" auto_size="vertical" spec="text" size="8" colour="text" alignment="centre"/>
+						</container>
+					</container>
+					
+						<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+						<container class="bordered_box" appearance="tcs/ro" />
+					</container>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

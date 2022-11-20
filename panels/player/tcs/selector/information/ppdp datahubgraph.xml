@@ -1,0 +1,177 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_layout="-6,2,-8" horizontal_gap="8" />
+
+	
+	<widget class="player_personal_details_panel" id="ppdo" file="player/tcs/selector/information/ppdp compact">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+	<widget class="vertical_subtle_divider" width="2"/>
+
+	<container class="tcs_table">
+		<layout class="stick_to_sides_attachment" apply_to_children="true" inset="2,0,0,0"/>
+
+		<widget class="player_scout_reports_panel" id="PrCo" file="none" late_loading="true">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<!-- IF HUMAN CONTROLLED TEAM, SHOW -->
+			<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+
+			<!--Data hub widgets-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="player_additional_stats_panel" id="staP" file="player/player additional stats mini report">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<widget class="data_analyst_visualisation_widget" id="visU" hidden="true" visualisation_type="polygon" data_type="player" category="defensive_wide_midfielder" file="nond" show_mini_visualisation_text="false">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<record id="object_property" get_property="PclC" set_property="comp"/>
+
+					<string id="use_mini_visualisation" value="true" />
+
+					<container  id="davb">
+						<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" horizontal_inset="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						<container height="40">
+							<attachment_group class="horizontal_arrange" horizontal_offset="0" horizontal_alignment="left,extend"  />
+							<widget class="icon_button" show_button_appearance="false" id="drgC" hidden="true" width="30" icon="icons/16px/draggable">
+								<string id="draggable" value="true" />
+							</widget>
+							<container>
+								<attachment_group class="vertical_arrange" vertical_offset="0" horizontal_inset="0" />
+								<widget class="text" auto_size="vertical" id="visH" size="large" font="title" style="bold" colour="fg"/>
+								<widget class="text" id="visS" auto_size="vertical">
+									<string id="colour" value="faded text" />
+								</widget>
+							</container>
+						</container>
+						<container>
+							<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="bottom,extend" horizontal_inset="0" />
+							<container id="noDa" hidden="true">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								<widget id="daTX" class="text" alignment="centre" style="semi_bold" colour="faded text">
+									<translation id="text" translation_id="515107" type="use" value="Not enough data available to create visualisation[COMMENT: AREA: Visualisation; SUB-AREA:; FR : 32932; TONE: Formal; CHARLIMIT: None; NOTE: warning to display when not enough data available to create a visualisation]" />
+								</widget>
+							</container>
+							<container class="vertical_arrange_container" inset="4" alignment="fill" id="visC" />
+							<container id="cpCO" hidden="true" height="30">
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+								<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" offset="0" />
+								<widget class="popup_button" id="cmpP" select_event="cmpC" auto_size="horizontal" />
+							</container>
+							<widget class="text" id="txtW" auto_size="vertical" />
+						</container>
+					</container>
+
+
+	<!-- 				<container id="chkC" height="25" width="20">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="top,right" inset="30,3" />
+
+						<widget class="check_box" id="preC" icon="switches/star/button" icon_alignment="centre_x,centre_y" wants_mouse_events="false" />
+					</container> -->
+
+					<container height="25" width="25" >
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="bottom,left" />
+
+						<widget class="icon_button" icon_alignment="centre_x,centre_y" id="expB" click_event="clkk" icon="icons/16px/maximise" appearance="buttons/custom/over state only/button" default_focus="true"/>
+						<widget class="icon_button" icon_alignment="centre_x,centre_y" hidden="true" id="remB" click_event="remV" icon="icons/16px/remove from list" appearance="buttons/custom/over state only/button" />
+
+					</container>
+				</widget>
+			</container>
+		</widget>
+
+	<container>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- IF NOT HUMAN CONTROLLED, SHOW -->
+				<record id="object_property" get_property="PHcr" set_property="hidn"/>
+
+				<widget class="player_data_analyst_report_panel" id="PrDa" file="none" late_loading="true">
+					<translation id="title" translation_id="420686" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+			
+								<!-- No analyst report -->
+					<container id="ndar" class="main_box">
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
+
+						<container id="nocs" height="60">
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+							<!--explanatory text-->
+							<widget class="text" id="titT" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+								<translation id="text" translation_id="447601" type="use" value="Analyst Report Required[COMMENT: shown when the user can't view player info without getting anlalyst report first]"/>
+							</widget>
+							<widget class="icon_button" id="sctP" click_event="rcar" auto_size="horizontal" height="30" icon="icons/16px/search">
+								<translation id="text" translation_id="243421" type="use" value="Scout Player"/>
+								<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+							</widget>
+						</container>
+
+						<widget id="nocn" class="label" spec="text" size="11" alignment="left" auto_size="vertical">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+						</widget>
+					</container>
+
+			
+					<container id="pctc">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="4"/>
+
+								<container class="tcs_box" rrep="fg positive" transparency="0.4">
+									<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+									<widget class="text" colour="fg positive" size="large" font="title" alignment="left,centre_y" auto_size="vertical">
+										<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
+									</widget>
+
+									<widget class="table" id="tpro" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
+										<list id="column_table_properties">
+											<record index="0" sort_ascending="false"/>
+										</list>
+									</widget>
+
+									<widget class="text" id="nPro" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+								</container>
+
+								<container class="tcs_box" rrep="fg negative" transparency="0.4">
+									<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+									<widget class="text" colour="fg negative" size="large" font="title" alignment="left,centre_y" auto_size="vertical">
+										<translation id="text" translation_id="361094" type="use" value="Pros[COMMENT: FR 8316 ]"/>
+									</widget>
+
+									<widget class="table" id="tcon" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
+										<list id="column_table_properties">
+											<record index="0" sort_ascending="false"/>
+										</list>
+									</widget>
+
+									<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+								</container>
+							</container>
+
+							<widget class="text" id="rctw" colour="faded text" auto_size="vertical" size="small"/>
+						</container>
+
+					</container>
+
+				</widget>
+			</container>
+
+	</container>
+</panel>

@@ -1,0 +1,99 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+	<boolean id="suppress_update_after_selection" value="true"/>
+
+	<container class="tcs_tabs" height="416" id="popu" default_item="oVer" save_default_state="true" save_session_state="true" >
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<!-- OVERVIEW -->
+		<container id="oVer">
+			<translation id="title" translation_id="292788" type="use" />
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<widget class="player_attributes_panel" id="patt" late_loading="true" file="player/player attributes panel_popup">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="1" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true" file="none">
+					<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- POSITIONS -->
+		<container id="Posi">
+			<translation id="title" translation_id="316727" type="use" />
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<!-- Middle row of large panels -->
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<widget class="person_information_panel" id="Ptac" late_loading="true" file="none">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<widget class="player_positions_indicator_panel" id="ppov" file="player/tcs/selector/popup/positions"> 
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</widget>
+			</container>
+		</container>
+
+		<!-- HAPPINESS -->
+		<container id="smile">
+			<translation id="title" translation_id="309189" type="use"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container id="Prel" class="person_chemistry_relationship_panel" file="player/tcs/happiness_popup">
+				<record id="object_property" get_property="Pers"/>
+			</container>
+		</container>
+
+		<!-- Player History -->
+		<container id="hist">
+			<translation id="title" translation_id="513602" type="use"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container class="client_object_viewer_selector_panel" file="none">
+				<record id="object_property" get_property="Pers"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- CAREER STATS -->
+				<container class="tcs_box">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container id="PHst" class="player_history_stats_panel">
+						<record id="object_property" get_property="Pers"/>
+					</container>
+				</container>
+
+			</container>
+		</container>
+
+	</container>
+
+	<container height="135" draw_vertical_dividers="true">
+		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true"/>
+
+		<record id="default_properties" file="player/player overview popup selector panel" save_session_state="true" />
+
+		<container class="client_object_viewer_selector_panel" id="pus2" save_session_state="true">
+			<integer id="default_for_unemployed_managers" value="pscR"/>
+			<integer id="default_for_international_managers_other_team" value="pscR"/>
+			<integer id="default_for_everyone_else" value="pscR"/>
+			<integer id="default_for_versus_mode" value="pscR"/>
+		</container>
+
+		<container class="client_object_viewer_selector_panel" id="pus3">
+			<integer id="default_for_unemployed_managers" value="tPCo"/>
+			<integer id="default_for_international_managers_other_team" value="tPCo"/>
+			<integer id="default_for_everyone_else" value="tPCo"/>
+			<integer id="default_for_versus_mode" value="tPCo"/>
+		</container>
+	</container>
+</panel>

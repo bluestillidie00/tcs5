@@ -17,7 +17,7 @@
 		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
 
 		<!-- Personal Information and Nationality information (tabbed) -->
-		<container class="tcs_tabs" id="mult" default_item="PerI" save_session_state="true">
+		<container class="tcs_tabs_primary" id="mult" default_item="PerI" save_session_state="true">
 		
 			<widget class="person_personal_information_panel" file="player/player information nationalities" id="Nati" vertical="false">
 				<translation id="title" translation_id="333939" type="use" value="Nationalities[COMMENT: Player information; section title for a box displaying information about a player's nationality, elligibility and languages spoken]" />

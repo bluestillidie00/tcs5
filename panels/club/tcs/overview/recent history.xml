@@ -1,0 +1,123 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_tabs_primary" id="hist" save_session_state="true" save_default_state="true">
+	
+		<!-- OVERVIEW -->
+		<container id="over">
+			<translation id="title" translation_id="336543" type="use"/>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+			
+			<!-- LEAGUE HISTORY  -->
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				
+				<container class="team_container_information_overview_panel" file="none">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				
+					<!--snapshot selector 2-->
+					<container class="client_object_viewer_selector_panel" id="cos2" minimum_height="300" priority="3" default_height="-3" default_item="lehi">
+					
+						<container id="lehi" default_item="true">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<translation id="title" translation_id="319446" type="use"/>
+						
+							<widget class="club_league_history_graph" id="clhg" file="club/club league history graph" default_item="true" section="cmps">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
+						</container>
+
+						<container class="team_container_records_overview_panel" id="rcrd" file="none">
+							<translation id="title" translation_id="243323" type="use"/>
+							<layout class="arrange_vertical_attachment" layout="-1, -1" gap="8"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+						
+							<container class="scrolling_box">
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+
+									<widget class="text" id="rnn1" auto_size="vertical" alignment="left,centre_y" style="bold"/>
+									<widget class="text" id="rnt1" auto_size="vertical" alignment="left,centre_y" colour="faded text"/>
+					
+									<widget class="horizontal_percentage_bar" id="rnb1" label_width="0" height="16" bar_value_colour="medium stat"/>
+								</container>
+							</container>
+
+							<container class="scrolling_box">
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+
+									<widget class="text" id="rnn2" auto_size="vertical" alignment="left,centre_y" style="bold"/>
+									<widget class="text" id="rnt2" auto_size="vertical" alignment="left,centre_y" colour="faded text"/>
+					
+									<widget class="horizontal_percentage_bar" id="rnb2" label_width="0" height="16" bar_value_colour="medium stat"/>
+								</container>
+							</container>
+
+						</container>
+
+					</container>
+				</container>
+			
+		
+			</container>
+			
+			<!-- 2ND LEVEL -->
+			<container class="main_box">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-5,-6"/>
+		
+				<!-- BIOGRAPHY -->
+				<container class="welcome_to_team_team_information_panel" file="none">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+					<container class="tcs_box">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+					
+						<widget class="text" font="title" auto_size="vertical">
+							<translation id="text" translation_id="323372" type="use"/>
+						</widget>
+
+						<container class="scrolling_box">
+							<widget class="text" id="bgtx" auto_size="vertical" clickable="false"/>
+						</container>
+
+					</container>
+				</container>
+				
+				<!-- HONOURS -->
+				<container class="tcs_box">
+					<attachment_group class="vertical_arrange" z="top,extend"/>
+					
+					<widget class="text" font="title" auto_size="vertical">
+						<translation id="text" translation_id="247607" type="use"/>
+					</widget>
+
+					<widget class="team_container_honours_panel" id="trpp" honour_subpanel_filename="human/welcome to team honours info panel" file="human/welcome to team honours panel">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<!-- COMPETITIONS -->
+		<container class="team_container_records_competitions_panel" id="cmps">
+			<translation id="title" translation_id="227741" type="use"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+		
+		<!-- COMPETITIONS -->
+		<container class="team_container_records_landmarks_panel" id="lndm">
+			<translation id="title" translation_id="320441" type="use"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+		
+		<!-- MANAGER -->
+		<container class="team_container_manager_history_panel" id="mnHi" file="club/tcs/overview/past manager">
+			<translation id="title" translation_id="316684" type="use"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+			
+	</container>
+</panel>

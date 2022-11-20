@@ -1,0 +1,65 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- Container shown when there is a next match available-->
+	<container id="nemc">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="team_upcoming_fixture_info_panel" file="game/processing upcoming fixture info panel" id="tmip" />
+	</container>
+
+	<!--container shown when there is no next match-->
+	<container id="nonm">
+		<layout class="arrange_horizontal_attachment" layout="180, 1, 99, -1" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<widget class="spacer" />
+
+		<widget class="vertical_divider"/>
+
+		<!--team badge(s)-->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="picture" width="120" id="tepi" image_alignment="left" scale_picture="true" keep_aspect_ratio="true" />
+			<widget class="picture" width="120" id="napi" image_alignment="left" scale_picture="true" keep_aspect_ratio="true" />
+		</container>
+
+		<container>
+			<!--<layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+      -->
+			<!--explanatory text-->
+			<!--
+      <widget class="text" colour="white" alignment="left,bottom" style="bold, shadowed" size="12">
+        <translation id="text" translation_id="348217" type="use" value="No matches planned[COMMENT: Game processing panel; text indicating that the manager has no upcoming matches]" />
+      </widget>
+      -->
+			<!--text describing when the next season/competition starts-->
+			<!--
+      <widget class="text" id="nmpl" colour="grey" alignment="left,top" style="bold" size="8" />-->
+		</container>
+	</container>
+
+	<!--container shown when manager is unemployed-->
+	<container id="unem">
+		<layout class="arrange_horizontal_attachment" layout="180, 1, -1" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<widget class="horizontal_divider" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="manager_text" colour="white" alignment="left,bottom" style="bold, shadowed" size="12">
+				<translation id="text" translation_id="348580" type="use" value="[%person#1-You] are currently unemployed[COMMENT: Game processing panel; punctuation changed - use top-ten matches ]" />
+			</widget>
+			<widget class="manager_text" colour="grey" alignment="left,top" style="bold" size="8">
+				<translation id="text" translation_id="348582" type="use" value="[%person#1-You] can look for available jobs in the Jobs section[COMMENT: Game processing panel; punctuation changed - use top-ten matches ]" />
+			</widget>
+		</container>
+	</container>
+</panel>

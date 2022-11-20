@@ -43,7 +43,6 @@
         <attachment class="test_multiple_globals_attachment" default_value="false">
             <list id="get_properties">
                 <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
-                <!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
                 <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
             </list>
             <integer id="set_property" value="hidn" />
@@ -68,7 +67,8 @@
         </attachment>
     </widget>
 
-        <widget class="inner_contrast_box" appearance="boxes/custom/interface/content/secondary/paper">
+<!-- ADJUST FOR TRANSPARENCY -->
+        <widget class="inner_contrast_box" appearance="boxes/custom/interface/content/secondary/paper" transparency="1.0">
         <layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="mai1"/>
         <layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="mai1"/>
         <layout class="stick_to_object_attachment" id="align_right" get_side="right" use_recursive_search="true" set_side="left" target="side"/>
@@ -78,13 +78,12 @@
         <attachment class="test_multiple_globals_attachment" default_value="false">
             <list id="get_properties">
                 <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
-                <!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
                 <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
                 <record get_property="HdBk" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
             </list>
             <integer id="set_property" value="hidn" />
         </attachment>
-    </widget>
+    </widget> 
 
     <!-- match background picture - covers entire screen -->
     <widget class="picture" id="Mbkg" scale_picture="true" keep_aspect_ratio="false">
@@ -209,8 +208,6 @@
 
                                 <!-- coloured actions bar image -->
                                 <widget class="main_box" id="ACTb" appearance="boxes/custom/interface/tab bar/paper" red_replacement="primary"/>
-
-
 
                                 <container>
                                     <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="2" offset="14" />

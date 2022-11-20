@@ -1,0 +1,7 @@
+﻿<properties>
+	<record id="image_borders" left="8" right="8" top="8" bottom="8"/>
+	<record id="image_slices" left="8" right="8" top="8" bottom="8"/>
+
+	<colour id="red_replacement" name="tcs_bg_lighter"/>	
+	<colour id="blue_replacement" name="primary"/>	
+</properties>

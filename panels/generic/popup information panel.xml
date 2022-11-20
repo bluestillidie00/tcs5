@@ -1,0 +1,60 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="tcs_box" appearance="tcs/boxes/main/outline/solid/paper" rrep="bg lighter" brep="primary">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container class="inner_box" id="pict" height="200">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container id="Pdet" class="tcs_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<widget class="player_personal_details_panel" id="deat" file="player/player personal details popup panel"  />
+				</container>
+
+				<container id="Sdet">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<widget class="non_player_personal_details_panel" id="deat" file="non_player/non player personal details popup panel"  />
+				</container>
+			</container>
+		</container>
+
+		<!-- These buttons are used for when a person has a player and a non player job  -->
+		<container id="tabs" height="40" hidden="true">
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container width="250">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+				<widget class="radio_button" id="plPr" selected="true" select_event="EPpS" type="0" colour="white" icon_enabled="false" show_button_appearance="true" appearance="tabs/standard/normal/top/button" alignment="centre">
+					<translation id="text" translation_id="491919" type="use" value="Player Profile[COMMENT: AREA: UI; SUB-AREA: Label for Player Profile screen; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short; ]" />
+				</widget>
+
+				<widget class="radio_button" id="Sfpr" selected="false" select_event="ENpS" type="0" colour="white" icon_enabled="false" show_button_appearance="true" appearance="tabs/standard/normal/top/button" alignment="centre">
+					<translation id="text" translation_id="491920" type="use" value="Staff Profile[COMMENT: AREA: UI; SUB-AREA: Label for Staff Profile screen; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short; ]" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- The profile containers are created in code -->
+		<container id="prof">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		</container>
+
+		<!-- This profile is used for when a person has a player and a non player job  -->
+		<container id="prf2">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		</container>
+
+	</container>
+
+</panel>

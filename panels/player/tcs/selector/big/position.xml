@@ -33,8 +33,6 @@
 					</widget>
 				</container>
 
-
-
 				<container>
 					<layout class="vertical_arrange" vertical_layout="-8,-12" />
 					<!-- Pitch -->
@@ -43,7 +41,6 @@
 					<container class="vertical_arrange_container" alignment="top,extend" gap="4">
 
 						<widget class="text" id="Psid" colour="faded text" auto_size="vertical" alignment="centre"/>
-
 
 						<!-- Label -->
 						<widget id="r+dl" class="text" font="title" auto_size="vertical" colour="accent">
@@ -77,7 +74,7 @@
 
 							<!-- Best roles for selected position -->
 							<container>
-								<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,0,-3,0"/>
+								<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,0,0,0"/>
 
 								<widget class="table" id="Rcon" layout="76, 14, -1" auto_size_rows="false" row_height="34" row_spacing="1" column_spacing="2" mode="select_rows,stripe_rows,dont_allow_clear_selection,dont_allow_click_unselect_single" select_event="sdst" sort_disabled="true">
 									<translation id="hint" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]"/>
@@ -88,10 +85,13 @@
 
 									<record id="table_properties">
 										<list id="column_table_properties">
+											<record index="0" left="2">
+												<record id="widget_info" alignment="centre,centre_y"/>
+											</record>
 											<record index="1" right="-3">
 												<record id="widget_info" alignment="right,centre_y"/>
 											</record>
-											<record index="2">
+											<record index="2" right="8">
 												<record id="widget_info" appearance="" font="text" alignment="left,centre_y,can_scale"/>
 											</record>
 										</list>
@@ -135,19 +135,9 @@
 							</container>
 
 						</container>
-
 					</container>
-
-
-
 				</container>
-
-
-
-
 			</container>
-
-
 
 			<container height="120" class="tcs_box">
 				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
