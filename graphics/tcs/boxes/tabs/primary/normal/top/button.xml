@@ -4,11 +4,11 @@
 	<record id="image_slices" left="8" right="8" top="8" bottom="8"/>
 
 	<record id="font_spec"> 
-		<colour id="colour" name="secondary"/>
+		<colour id="colour" name="faded text"/>
 	</record>
 	
-	<colour id="red_replacement" name="secondary"/>
+	<colour id="red_replacement" name="bg lighter"/>
 
-	<record id="primary_icon_properties" red_replacement="secondary" />
+	<record id="primary_icon_properties" red_replacement="faded text" />
 	
 </properties>
