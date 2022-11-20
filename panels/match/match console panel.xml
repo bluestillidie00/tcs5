@@ -119,7 +119,6 @@
 
 		<widget class="spacer" height="80"/>
 	
-
 	</container>
 
 		<widget class="match_caption_panel" id="MCap">

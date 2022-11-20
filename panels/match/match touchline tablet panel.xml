@@ -1,7 +1,6 @@
 ﻿<panel >
 	<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0"/>
-	
-	
+		
 		<list id="properties_to_forward">
 			<record get_property="OTfi" target="con1" set_property="dit2" />
 			<record get_property="HTsi" target="con1" set_property="dit3" />
