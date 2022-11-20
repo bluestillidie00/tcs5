@@ -13,11 +13,37 @@
 		</container>
 	</container>
 
+	<container class="club_overview_panel" file="none" id="InIn">
+		<translation id="title" translation_id="557948" type="use"/>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container class="tcs_tabs_primary" save_session_state="true" save_default_state="true" default_item="grap">
+
+			<container class="team_injuries_injuries_panel" id="grap" file="club/tcs/overview/injury overview">
+				<translation id="title" translation_id="324234" type="use"/>
+				<record id="object_property" get_property="Tftm" set_property="objt"/>
+			</container>
+		
+			<container class="team_injuries_injuries_panel" id="list" file="club/tcs/overview/injured history">
+				<translation id="title" translation_id="450787" type="use"/>
+				<record id="object_property" get_property="Tftm" set_property="objt"/>
+			</container>
+		
+			<container class="team_injuries_season_summary_panel" id="summ" file="club/tcs/overview/injury summary">
+				<translation id="title" translation_id="254555" type="use"/>
+				<record id="object_property" get_property="Tftm" set_property="objt"/>
+			</container>
+
+		</container>
+
+		<!--  -->
+	</container>
+
 	<!-- KEY EMPLOYEES -->
 	<container class="club_overview_staff_panel" id="tstf" file="club/tcs/overview/key staff">
 		<translation id="title" translation_id="328524" type="use"/>
 	</container>
-
+	
 	
 	<!-- ALL PLAYERS -->
 	<container class="club_players_panel" id="Capl">
