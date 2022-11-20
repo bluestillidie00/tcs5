@@ -50,10 +50,10 @@
         <translation id="title" translation_id="316626" type="use" />
     </widget> 
 
-    <!-- PERSONAL DETAILS -->
+    <!-- PERSONAL DETAILS 
     <widget class="player_personal_details_panel" id="pInF" file="player/tcs/selector/big/header info card" late_loading="true">
         <translation id="title" translation_id="333981" type="use" />
-    </widget> 
+    </widget>  -->
     
     <!-- PROS AND CONS -->
     <widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons" late_loading="true">
