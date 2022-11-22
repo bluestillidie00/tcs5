@@ -274,10 +274,10 @@
 					<container priority="3">
 						<attachment_group class="vertical_arrange_autosize"/>
 
-						<widget class="label" auto_size="vertical" style="semi_bold" size="10.5">
+						<widget class="label" auto_size="vertical" style="semi_bold">
 							<translation id="text" translation_id="557873" type="use"/>
 						</widget>
-						<widget class="number_label" auto_size="vertical" size="10.5" alignment="left,can_scale">
+						<widget class="number_label" auto_size="vertical" alignment="left,can_scale">
 							<record id="object_property" get_property="CsSF"/>
 						</widget>
 					</container>
