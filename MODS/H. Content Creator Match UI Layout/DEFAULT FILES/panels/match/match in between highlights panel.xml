@@ -37,12 +37,18 @@
 				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.4" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
 
 				<container height="193"  >
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="-20"/>
 
-					<widget class="stadium_picture" id="STAp" >
-						<layout class="stick_to_sides_attachment" inset="0"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
+									<widget class="stadium_picture" id="STAp" file="none">
+										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+										<widget class="picture" file="pictures/stadiums/stadium_bg" />
+										<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+										<widget class="picture" id="STPC"/>
+									</widget>
 
 					<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.60" rrep="bg" />
 
@@ -263,17 +269,37 @@
 										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
 										<animation class="fade_on_hide_animation" duration="0.35"/>
 
-										<!-- HOME FORMATION -->
-										<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="0" read_only="true">
+										<container class="match_info_panel" file="none">
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
 											<record id="object_property" get_property="objt" set_property="objt"/>
-											<translation id="title" translation_id="230056" type="use" value="Tactics" />
-										</widget>							
 
-										<!-- AWAY FORMATION -->
-										<widget class="match_formation_panel" id="amtt" file="match/tcs/tablet/formations" team_index="1" read_only="true">
+											<widget class="home_match_incidents_panel" id="hmip" file="none" height="20">
+												<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<widget class="text" id="mitn" font="title" alignment="left,centre_y" auto_size="vertical"/>
+											</widget>
+											<!-- HOME FORMATION -->
+											<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="0" read_only="true">
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<translation id="title" translation_id="230056" type="use" value="Tactics" />
+											</widget>							
+										</container>
+
+						<container class="match_info_panel" file="none">
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
 											<record id="object_property" get_property="objt" set_property="objt"/>
-											<translation id="title" translation_id="230056" type="use" value="Tactics" />
-										</widget>
+
+											<widget class="away_match_incidents_panel" id="amip" file="none" height="20">
+												<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<widget class="text" id="mitn" font="title" alignment="left,centre_y" auto_size="vertical"/>
+											</widget>
+											<!-- HOME FORMATION -->
+											<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="1" read_only="true">
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<translation id="title" translation_id="230056" type="use" value="Tactics" />
+											</widget>							
+										</container>
 									</container>
 
 									<widget class="match_analysis_panel" id="Anal" file="match/comps/eur/champions league/heatmaps">

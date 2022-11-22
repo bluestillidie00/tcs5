@@ -29,7 +29,7 @@
 			<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
 
 			<container height="4" />
-			
+		
 			<!-- NOTABLE EVENTS -->
 			<container>
 				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
@@ -163,17 +163,37 @@
 										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
 										<animation class="fade_on_hide_animation" duration="0.35"/>
 
-										<!-- HOME FORMATION -->
-										<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="0" read_only="true">
+										<container class="match_info_panel" file="none">
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
 											<record id="object_property" get_property="objt" set_property="objt"/>
-											<translation id="title" translation_id="230056" type="use" value="Tactics" />
-										</widget>							
 
-										<!-- AWAY FORMATION -->
-										<widget class="match_formation_panel" id="amtt" file="match/tcs/tablet/formations" team_index="1" read_only="true">
+											<widget class="home_match_incidents_panel" id="hmip" file="none" height="20">
+												<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<widget class="text" id="mitn" font="title" alignment="left,centre_y" auto_size="vertical"/>
+											</widget>
+											<!-- HOME FORMATION -->
+											<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="0" read_only="true">
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<translation id="title" translation_id="230056" type="use" value="Tactics" />
+											</widget>							
+										</container>
+
+						<container class="match_info_panel" file="none">
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
 											<record id="object_property" get_property="objt" set_property="objt"/>
-											<translation id="title" translation_id="230056" type="use" value="Tactics" />
-										</widget>
+
+											<widget class="away_match_incidents_panel" id="amip" file="none" height="20">
+												<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<widget class="text" id="mitn" font="title" alignment="left,centre_y" auto_size="vertical"/>
+											</widget>
+											<!-- HOME FORMATION -->
+											<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="1" read_only="true">
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<translation id="title" translation_id="230056" type="use" value="Tactics" />
+											</widget>							
+										</container>
 									</container>
 
 									<widget class="match_analysis_panel" id="Anal" file="match/comps/eur/champions league/heatmaps">

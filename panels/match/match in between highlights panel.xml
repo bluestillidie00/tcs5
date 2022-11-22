@@ -29,7 +29,113 @@
 			<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
 
 			<container height="4" />
-		
+
+			<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right" >
+				<attachment_group class="vertical_arrange_autosize" />
+
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.6" end_mode="hold_end" />
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.4" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
+
+				<container height="193"  >
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="-20"/>
+
+									<widget class="stadium_picture" id="STAp" file="none">
+										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+										<widget class="picture" file="pictures/stadiums/stadium_bg" />
+										<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+										<widget class="picture" id="STPC"/>
+									</widget>
+
+					<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.60" rrep="bg" />
+
+					<widget class="match_info_panel" id="bmin" file="file" >
+						<record id="object_property" get_property="objt" set_property="objt"/>
+						<layout class="horizontal_arrange" horizontal_layout="-1,24,-1" />
+
+						<!--  home incidents panel -->
+						<widget class="home_match_incidents_panel" id="hmip" small_version="false" file="none">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
+								<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
+							</widget>
+						</widget>
+
+						<widget class="text" alignment="centre" >
+							<translation id="text" type="use" value="V" />
+						</widget>
+
+						<!--  home incidents panel -->
+						<widget class="away_match_incidents_panel" id="amip" small_version="false" file="none">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
+								<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
+							</widget>
+						</widget>
+					</widget>
+				</container>
+
+				<!-- WEATHER FORECAST-->
+				<widget class="weather_indicator_panel_centred" id="FxWe" file="none" height="24">
+					<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+					<record id="object_property" get_property="FxWe"/>
+
+					<container>
+						<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4"/>
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+						<!-- PRETTY ICON -->
+						<widget class="picture" id="icon" image_alignment="left" width="24" scale_picture="true" keep_aspect_ratio="true" />
+
+						<!-- DESCRIPTION LABEL -->
+						<widget class="label" id="desc" alignment="left,centre_y" auto_size="horizontal" />
+					</container>
+				</widget>
+
+				<!-- REFEREE -->
+				<container>
+					<global id="hidden" name="game_mode_is_console_mode" />
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+					<widget class="label" auto_size="all" size="small">
+						<translation id="text" translation_id="227993" type="use" value="Referee" />
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+					</widget>
+					<widget class="person_button" auto_size="all" >
+						<record id="object_property" get_property="FRef" dont_set_hint="true" />
+					</widget>
+				</container>
+
+				<!-- COMPETITION -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+					<widget class="label" auto_size="all" size="small" alignment="centre_y" >
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+						<translation id="text" translation_id="227740" type="use" value="Competition" />
+					</widget>
+					<widget class="fixture_name_text" auto_size="all" icon_enabled="true">
+						<record id="object_property" get_property="FxNm" />
+					</widget>
+				</container>
+
+				<!-- REFEREE -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+					<widget class="label" auto_size="all" size="small" >
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+						<translation id="text" translation_id="247242" type="use" value="Attendance" />
+					</widget>
+					<widget class="number_label" auto_size="all">
+						<record id="object_property" get_property="FxEA" dont_set_hint="true" />
+					</widget>
+				</container>
+			</container>
+
 			<!-- NOTABLE EVENTS -->
 			<container>
 				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
