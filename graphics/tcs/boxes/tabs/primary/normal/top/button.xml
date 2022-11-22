@@ -7,7 +7,7 @@
 		<colour id="colour" name="faded text"/>
 	</record>
 	
-	<colour id="red_replacement" name="bg lighter"/>
+	<colour id="red_replacement" name="fg"/>
 
 	<record id="primary_icon_properties" red_replacement="faded text" />
 	
