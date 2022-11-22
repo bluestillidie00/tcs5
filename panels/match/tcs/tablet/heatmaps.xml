@@ -24,26 +24,6 @@
 					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 					
-					<container>
-						<layout class="arrange_vertical_attachment" alignment="top" gap="0"/>
-						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
-
-						<!--team name-->
-						<widget class="text" id="hTEN" auto_size="vertical" alignment="centre" >
-							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-						</widget>
-
-						<!--formation text-->
-						<widget class="link_button_title" id="hFOR" section="bmfs" colour="text" red_replacement="text" blue_replacement="text">
-							<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
-							<record id="auto_size_restrictions">
-								<string id="type" value="widget" />
-								<flags id="target" value="prnt" />
-								<string id="limit_type" value="maximum" />
-								<string id="orientation" value="horizontal" />
-							</record>
-						</widget>
-					</container>
 
 					<!--heat map-->
 					<widget class="preselected_match_chalkboard_panel" id="pmcH" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">
@@ -60,27 +40,7 @@
 				<container>
 					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-
-					<container>
-						<layout class="arrange_vertical_attachment" alignment="top" gap="0"/>
-						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
-
-						<!--team name-->
-						<widget class="text" id="aTEN" auto_size="vertical" alignment="centre">
-							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-						</widget>
-
-						<!--formation text-->
-						<widget class="link_button_title" id="aFOR" section="bmfs" colour="text" red_replacement="text" blue_replacement="text">
-							<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
-							<record id="auto_size_restrictions">
-								<string id="type" value="widget" />
-								<flags id="target" value="prnt" />
-								<string id="limit_type" value="maximum" />
-								<string id="orientation" value="horizontal" />
-							</record>
-						</widget>
-					</container>
+=
 
 					<!--heat map-->
 					<widget class="preselected_match_chalkboard_panel" id="pmcA" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false"  wants_global_events="false"  enable_popup="false">
