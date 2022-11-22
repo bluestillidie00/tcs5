@@ -39,16 +39,16 @@
 				<container height="193"  >
 					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="-20"/>
 
-									<widget class="stadium_picture" id="STAp" file="none">
-										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+					<widget class="stadium_picture" id="STAp" file="none">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
 
-										<record id="object_property" get_property="objt" set_property="objt"/>
-										<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+						<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
 
-										<widget class="picture" file="pictures/stadiums/stadium_bg" />
-										<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
-										<widget class="picture" id="STPC"/>
-									</widget>
+						<widget class="picture" file="pictures/stadiums/stadium_bg" />
+						<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+						<widget class="picture" id="STPC"/>
+					</widget>
 
 					<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.60" rrep="bg" />
 
@@ -285,7 +285,7 @@
 											</widget>							
 										</container>
 
-						<container class="match_info_panel" file="none">
+										<container class="match_info_panel" file="none">
 											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
 											<record id="object_property" get_property="objt" set_property="objt"/>
 
@@ -302,7 +302,7 @@
 										</container>
 									</container>
 
-									<widget class="match_analysis_panel" id="Anal" file="match/comps/eur/champions league/heatmaps">
+									<widget class="match_analysis_panel" id="Anal" file="match/tcs/tablet/heatmaps">
 										<!-- Slide in from side of screen -->
 										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
 										<animation class="fade_on_hide_animation" duration="0.35"/>
