@@ -7,7 +7,6 @@
 	</widget>
 
 	<container class="vertical_adaptive_container" gap="8" id="top">
-		<!-- <layout class="vertical_arrange" vertical_layout="-580,-170" vertical_gap="8"/> -->
 
 		<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true" default_height="-555" priority="1">
 
