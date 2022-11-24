@@ -29,7 +29,7 @@
 							<container>
 								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-<!-- STADIUM PIC -->
+								<!-- STADIUM PIC -->
 								<container>
 									<layout class="stick_to_sides_attachment" alignment="all" inset="-50" apply_to_children="true" />
 
@@ -62,7 +62,7 @@
 								</container>
 
 								<container id="FXpr">
-<attachment_group class="vertical_arrange" vertical_alignment="middle" />
+									<attachment_group class="vertical_arrange" vertical_alignment="middle" />
 
 									<!--opposition logo-->
 									<widget class="fixture_opponent_picture" id="fopP" scale_picture="true" height="100">
@@ -125,12 +125,12 @@
 									<record id="OwnI" file="icons/16px/own goal"/>
 									<record id="object_property" get_property="FxCL" />
 								</widget>
-								
+
 							</container>
-							
-										<container>
+
+							<container>
 								<attachment_group class="vertical_arrange_autosize"/>
-								
+
 								<widget class="horizontal_subtle_divider" height="2"/>
 
 
@@ -232,37 +232,37 @@
 
 				</container>
 
-		<container navigation_container="true">
+				<container navigation_container="true">
 
-						<attachment_group class="button_arrangement_right" />
+					<attachment_group class="button_arrangement_right" />
 
-						<!--past meetings button-->
-						<widget class="link_appearance_button" id="psmt" auto_size="all" >
-							<translation id="text" translation_id="247248" type="use" value="Past Meetings" />
-						</widget>
+					<!--past meetings button-->
+					<widget class="link_appearance_button" id="psmt" auto_size="all" >
+						<translation id="text" translation_id="247248" type="use" value="Past Meetings" />
+					</widget>
 
-						<!--view match button-->
-						<widget class="link_appearance_button" id="vema" auto_size="all">
-							<translation id="text" translation_id="242332" type="use" value="View Match" />
-						</widget>
+					<!--view match button-->
+					<widget class="link_appearance_button" id="vema" auto_size="all">
+						<translation id="text" translation_id="242332" type="use" value="View Match" />
+					</widget>
 
-						<widget class="popup_button" id="spop" alignment="centre" icon="icons/16px/search" icon_alignment="left,centre_y" select_event="esms" auto_size="all">
-							<list id="items">
-								<record id="0" icon="icons/16px/search" red_replacement="button_icon">
-									<translation id="text" translation_id="451321" type="use" value="No action[COMMENT: FR 21106, take no action on a scouting reminder recommendation for a competition]" />
-								</record>
-								<record id="1" icon="icons/16px/search" red_replacement="green 500">
-									<translation translation_id="450039" type="use" id="text" value="Scout match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
-								</record>
-								<record id="2" icon="icons/16px/search" red_replacement="blue 500">
-									<global id="hidden" name="platform_is_handheld"/>
-									<translation id="text" translation_id="451322" type="use" value="Attend match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
+					<widget class="popup_button" id="spop" alignment="centre" icon="icons/16px/search" icon_alignment="left,centre_y" select_event="esms" auto_size="all">
+						<list id="items">
+							<record id="0" icon="icons/16px/search" red_replacement="button_icon">
+								<translation id="text" translation_id="451321" type="use" value="No action[COMMENT: FR 21106, take no action on a scouting reminder recommendation for a competition]" />
+							</record>
+							<record id="1" icon="icons/16px/search" red_replacement="green 500">
+								<translation translation_id="450039" type="use" id="text" value="Scout match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
+							</record>
+							<record id="2" icon="icons/16px/search" red_replacement="blue 500">
+								<global id="hidden" name="platform_is_handheld"/>
+								<translation id="text" translation_id="451322" type="use" value="Attend match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
 
-								</record>
+							</record>
 
-							</list>
-						</widget>
-					</container>
+						</list>
+					</widget>
+				</container>
 
 				<container>
 					<attachment_group class="button_arrangement_right" />
