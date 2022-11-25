@@ -49,12 +49,12 @@
 	<widget class="player_bans_overview_panel" id="pbop" late_loading="true">
 		<translation id="title" translation_id="247569" type="use" value="Bans" />
 	</widget>
-	<widget class="player_scout_reports_panel" id="pscR" file="player/player scout reports small popup" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+	<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/popup/stars" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
 		<translation id="title" translation_id="248079" type="use" value="Report" />
 	</widget>
 	
 	<!-- PROS AND CONS ONLY -->
-	<container class="player_scout_reports_panel" id="tPCo" file="player/tcs/selector/header/tcs pros cons only">
+	<container class="player_scout_reports_panel" id="tPCo" file="player/tcs/selector/popup/tcs pros cons only">
 		<translation id="title" type="use" value="Pros and Cons"/>
 	</container>
 	<widget class="player_transfer_information_small_panel" id="ptri" late_loading="true">
