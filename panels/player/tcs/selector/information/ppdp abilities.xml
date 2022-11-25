@@ -158,7 +158,7 @@
 
 								<!--CA-->
 								<widget class="scout_stars_label" id="past" height="18" alignment="left, centre_y" mode="1">
-									<record id="object_property" get_property="Pcab"/>
+									<record id="object_property" get_property="Ppab"/>
 								</widget>
 
 								<widget class="text" id="prTX" auto_size="vertical" alignment="left,can_scale" colour="faded text" size="small"/>
