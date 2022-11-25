@@ -1,39 +1,25 @@
 <!-- A panel showing various bits of information about a player -->
 <panel height="170" >
 	<boolean id="should_force_refresh" value="true"/>
-	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+	<layout class="horizontal_arrange" horizontal_layout="240,-1,200"  />
 
 	<container>
 		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8"/>
 
 		<!-- CONTAINER HOLDING KIT AND PLAER PIC -->
-		<container>
-			<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="-100" />
+		<!-- KIT ICON AND PLAYER STATUS -->
+		<container >
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-			<!-- KIT ICON AND PLAYER STATUS -->
-			<container width="250">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<!-- STATUS INDICATORS -->
+			<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+				<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+				<record id="object_property" get_property="Pnfa"/>
+			</widget>
 
-				<!-- KIT ICON -->
-				<widget id="bak1" class="kit_icon" image_alignment="left" width="100" kit_zoom_level="3" priority="1" late_loading="true" >
-					<record id="object_property" get_property="Pers" set_property="objt"/>
-				</widget>
-
-				<!-- STATUS INDICATORS -->
-				<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
-					<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
-					<record id="object_property" get_property="Pnfa"/>
-				</widget>
-			</container>
-
-			<!-- PLAYER FACE -->
-			<container width="200">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-				<widget class="object_portrait_picture" id="face" width="100" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
-					<record id="object_property" get_property="objt"/>
-				</widget>
-			</container>
+			<widget class="object_portrait_picture" id="face" width="100" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
+				<record id="object_property" get_property="objt"/>
+			</widget>
 		</container>
 
 		<!-- CLUB AND NATION LOGO -->
@@ -113,5 +99,20 @@
 			</container>
 		</container>
 	</container>
+
+	<!-- Positions -->
+	<widget class="player_positions_indicator_panel" id="ppi1" file="none" navigation_container="true" default_focus="true" >
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<layout class="stick_to_sides_attachment" apply_to_children="true" inset="16,0,16,0"/>
+
+		<!-- Pitch -->
+		<widget class="pitch_with_player_positions" id="ppip" height="122" vertical="false" pitch_alignment="centre,can_scale" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4">
+
+			<!-- Set the icon to use for people on the pitch. The icon will first look for a size that matches the pitch's size, for instance 'pitch/icons/kit/tiny/kit' or 'pitch/icons/kit/medium/kit'.
+          If an icon for the size category is not found it will try the base path: pitch/icons/kit/kit. This means that if you want to use an icon on a pitch that will only ever be one size you 
+          can just provide the base and not worry about the tiny/small/medium/large size categories -->
+			<string id="pitch_kit_icon" value="pitch/icons/dots" />
+		</widget>
+	</widget>
 
 </panel>

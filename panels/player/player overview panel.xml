@@ -7,7 +7,6 @@
 	</widget>
 
 	<container class="vertical_adaptive_container" gap="8" id="top">
-		<!-- <layout class="vertical_arrange" vertical_layout="-580,-170" vertical_gap="8"/> -->
 
 		<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true" default_height="-555" priority="1">
 
@@ -139,50 +138,67 @@
 				<container class="tcs_box">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-					<widget class="data_hub_player_analytics_panel" id="Pran" file="none">
+					<widget class="data_hub_player_analytics_panel" id="Pran" file="none"> 
 						<record id="object_property" get_property="objt" set_property="objt"/>
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
 						<widget class="data_hub_splashscreen" id="spls">
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 							<container class="main_box" id="dflt">
-								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-								<!-- 		<container>
-				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="10" />
-				<container>
-					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="10" />
-					<string id="remove_if" value="is_fmt" />
-				
-					<widget class="text" alignment="centre_y,left" auto_size="all" id="cmpT" colour="faded text" />
-					<widget class="text" alignment="centre_y,left" hidden="true" auto_size="all" id="edDe" colour="faded text">
-						<translation id="text" translation_id="541472" type="use" value="Move items with the handle to re-arrange them or Remove to get rid of them[COMMENT: AREA: Data Hub; SUB-AREA: Team Analytics panel header; BUG: 50367; TONE: Formal; CHARLIMIT: None]" />
-					</widget>
-				</container>
-
-				<widget class="widget_popup_button" auto_size="all" widget_type="main_box" appearance="buttons/primary/normal/button" id="askF">
-					<layout class="stick_to_sides_attachment" alignment="right" inset="14" />
-					<string id="widget_type" value="data_hub_request_visualisation_popup" />
-					<record id="modal_popup_properties" file="modal popup panel auto sized" />
-					<translation id="text" translation_id="526852" type="use" value="Ask For[COMMENT: AREA: Data Hub; SUB-AREA: Ask for new visualisation; FR: 31585; TONE: Formal; CHARLIMIT: None]" />
-				</widget>
-			</container> -->
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="5" horizontal_inset="10" />
 
 								<container>
-									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+									<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="10" />
+									<string id="remove_if" value="is_fmt" />
+									<container>
+										<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="10" />
+
+										<widget class="text" alignment="centre_y,left" auto_size="all" id="tmAn" colour="accent" font="title" size="large">
+											<translation id="text" translation_id="515021" type="use" value="Player Analytics[COMMENT: AREA: Data Hub; SUB-AREA: Player Analytics; FR: 31585; TONE: Formal; CHARLIMIT: None]" />
+										</widget>
+
+										<widget class="text" alignment="centre_y,left" auto_size="all" id="cmpT" colour="faded text" />
+										<widget class="text" alignment="centre_y,left" hidden="true" auto_size="all" id="edDe" colour="faded text">
+											<translation id="text" translation_id="541472" type="use" value="Move items with the handle to re-arrange them or Remove to get rid of them[COMMENT: AREA: Data Hub; SUB-AREA: Team Analytics panel header; BUG: 50367; TONE: Formal; CHARLIMIT: None]" />
+										</widget>
+									</container>
+
+									<container id="ediC" navigation_container="true" auto_size="all">
+										<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="4" />
+										<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+
+										<widget class="widget_popup_button" widget_type="main_box" auto_size="all" appearance="buttons/subtle/normal/button" hidden="true" id="CViz">
+
+											<string id="widget_type" value="data_hub_category_visualisations_popup" />
+											<record id="modal_popup_properties" file="modal popup panel auto sized" />
+											<translation id="text" translation_id="551813" type="use" value="All Visuals[COMMENT: AREA: Data Hub; SUB-AREA: Ask for new visualisation; FR: 31585; TONE: Formal; CHARLIMIT: None]" />
+										</widget>
+
+										<widget class="icon_button" id="tglE" auto_size="all" appearance="buttons/subtle/normal/button" icon="icons/16px/edit" click_event="TGEM">
+											<translation id="text" translation_id="229690" type="use" value="Edit" />
+										</widget>
+
+										<widget class="widget_popup_button" widget_type="main_box" auto_size="all" appearance="buttons/primary/normal/button" id="askF">
+
+											<string id="widget_type" value="data_hub_request_visualisation_popup" />
+											<record id="modal_popup_properties" file="modal popup panel auto sized" />
+											<translation id="text" translation_id="526852" type="use" value="Ask For[COMMENT: AREA: Data Hub; SUB-AREA: Ask for new visualisation; FR: 31585; TONE: Formal; CHARLIMIT: None]" />
+										</widget>
+									</container>
+
+								</container>
+								<container>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 									<container class="scrolling_box">
-										<container class="horizontal_arrange_container" auto_size="vertical" wrap="true" gap="8" id="wcnt"/>
+										<container class="horizontal_arrange_container" auto_size="vertical" wrap="true" gap="8" id="wcnt" />
 									</container>
 									<widget id="noAn" class="text" hidden="true" alignment="centre" size="large" colour="faded text" style="semi_bold">
-										<translation id="text" translation_id="538899" type="use" value="No analytics have currently been requested[COMMENT: AREA: Data Hub; SUB-AREA: data hub Analytics ; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: warning when no analytics have been requested to show]"/>
+										<translation id="text" translation_id="538899" type="use" value="No analytics have currently been requested[COMMENT: AREA: Data Hub; SUB-AREA: data hub Analytics ; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: warning when no analytics have been requested to show]" />
 									</widget>
 								</container>
 							</container>
 						</widget>
-
 					</widget>
 
 				</container>
