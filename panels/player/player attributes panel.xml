@@ -135,7 +135,7 @@
 					<record id="object_property" get_property="Pigo" set_property="Shwn" />
 
 					<!-- Additional attributes table -->
-					<container class="player_profile_panel" id="atiT" file="none">
+					<container >
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 
