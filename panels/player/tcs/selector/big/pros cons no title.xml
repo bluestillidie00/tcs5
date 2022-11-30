@@ -6,7 +6,7 @@
 
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-<container id="norp" hidden="true">
+	<container id="norp" hidden="true">
 		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 		<!-- No scout report -->
@@ -142,7 +142,7 @@
 	</container>
 
 	<container id="scou" >
-		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="4"/>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
 
 		<container class="tcs_box" rrep="fg positive" transparency="0.4">
 			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
