@@ -401,7 +401,15 @@
 						</container>
 
 						<container id="scou">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<container width="400">
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="left" />
+
+			<widget class="icon_button" id="khtx" appearance="" icon="icons/16px/scouting" font="label" colour="fg" auto_size="all" size="medium" />
+			<widget class="label" id="rdtx" colour="disabled" auto_size="all" size="medium" />
+
+		</container>
 
 							<widget class="player_reports_overview_summary_panel" id="proS" file="player/player reports overview summary vertical scouting card" always_recolour_wage_cost_text="true" recommendation_widget_mode="0" mode="1"/>
 
