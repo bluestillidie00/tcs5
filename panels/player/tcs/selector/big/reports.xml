@@ -478,7 +478,7 @@
 			<translation id="title" type="use" value="Pros/Cons"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 
-			<widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons no title" late_loading="true" type="1">
+			<widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons no title" late_loading="true" >
 				<translation id="title" translation_id="420686" type="use" />
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
