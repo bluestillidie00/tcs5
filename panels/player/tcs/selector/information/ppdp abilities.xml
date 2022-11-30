@@ -186,7 +186,7 @@
 			<!-- IF NOT HUMAN CONTROLLED, SHOW -->
 			<record id="object_property" get_property="PHcr" set_property="hidn"/>
 
-			<widget class="player_scout_reports_panel" id="repo" file="none" late_loading="true">
+			<widget class="player_scout_reports_panel" id="repo" file="none" late_loading="true"  type="1">
 				<record id="object_property" get_property="objt" set_property="objt"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
