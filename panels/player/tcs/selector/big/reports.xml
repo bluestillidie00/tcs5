@@ -465,16 +465,16 @@
 			</container>
 		</container>
 
-		<!-- PROS AND CONS 
+		<!-- PROS AND CONS -->
 		<container id="rep3">
 			<translation id="title" type="use" value="Pros/Cons"/>
-			<layout class="stick_to_sides_attachment" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 
-			<widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons no title" late_loading="true">
+			<widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons no title" late_loading="true" type="1">
 				<translation id="title" translation_id="420686" type="use" />
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
-		</container> -->
+		</container> 
 
 		<!-- ANALYST REPORT -->
 		<container id="rep4">
@@ -562,7 +562,7 @@
 							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
 
 							<container>
-								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="4"/>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
 
 								<container class="tcs_box" rrep="fg positive" transparency="0.4">
 									<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
