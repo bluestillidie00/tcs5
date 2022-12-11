@@ -1,0 +1,63 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="32,4,4,4" apply_to_children="true"/>
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-30,-50" />
+
+		<!-- LEFT SIDE -->
+		<container class="tcs_box" >
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<container height="18">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- STADIUM NAME -->
+				<widget class="client_object_label" id="namV" font="title" auto_size="all">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+					</record>
+				</widget>		
+
+				<widget class="spacer" height="3" />
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<!-- STADIUM PICTURE -->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container >
+						<layout class="stick_to_sides_attachment" alignment="all" inset="-25" apply_to_children="true"/>
+
+						<widget class="stadium_picture" id="STAp" priority="1" alignment="centre_x,centre_y" >
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>	  	
+					</container>
+
+					<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC 
+	<container class="bordered_box" appearance="tcs/ro" /> -->
+				</container>
+
+				<widget class="picture" id="lftB" file="pictures/logos/background/default/left" image_alignment="centre_x,centre_y" scale_picture="true" keep_aspect_ratio="true">
+					<record id="object_property">
+						<integer id="get_property" value="bgnd" />
+						<integer id="set_property" value="file" />
+					</record>
+				</widget>		
+			</container>
+		</container>
+
+		<!--info-->
+		<widget class="stadium_overview_info" id="info">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+
+</panel>
