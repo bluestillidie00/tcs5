@@ -91,7 +91,7 @@
 			
 			
 				<!--condition icon-->
-				<widget class="client_object_property_panel" property="PcOI" width="16" navigation_focus_target="false" id="PcOI">
+				<widget class="player_condition_icon_widget" property="PcOI" width="16" navigation_focus_target="false" id="PcOI">
 					<record id="object_property" get_property="objt" set_property="objt" />
 					<record id="widget_properties">
 						<boolean id="label_disabled" value="true" />
