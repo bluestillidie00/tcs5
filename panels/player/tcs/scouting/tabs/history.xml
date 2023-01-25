@@ -1,0 +1,42 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="client_object_viewer_selector_panel" file="none">
+		<record id="object_property" get_property="Pers"/>
+		<layout class="horizontal_arrange" horizontal_layout="900,-1" horizontal_gap="8"/>
+
+		<!-- CAREER STATS -->
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container id="PHst" class="player_history_stats_panel">
+				<record id="object_property" get_property="Pers"/>
+			</container>
+		</container>
+
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-17,-15" vertical_gap="8"/>
+
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
+					<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]"/>
+					<record id="object_property" get_property="Pers"/>
+				</widget>
+
+			</container>
+
+			<!-- BIOGRAPHY -->
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<!-- BIOGRAPHY -->
+				<widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title">
+					<translation id="title" translation_id="295868" type="use"/>
+					<record id="object_property" get_property="Pers"/>
+
+				</widget>
+			</container>
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,62 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="competition_news_side_panel" file="none">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container class="tcs_box" id="nofx">
+			<layout class="stick_to_sides_attachment" apply_to_children="true" />
+
+			<widget class="text" alignment="centre" colour="faded text" hidden="false">
+				<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures." />
+			</widget>
+
+		</container>
+
+		<container id="fix1" class="team_training_rest_panel" file="none">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<record id="object_property" get_property="Tftm" set_property="objt" />
+
+			<container class="horizontal_adaptive_container" inset="0" offset="0" gap="4">
+
+				<record id="default_properties" maximum_items="1" set_property="objt" minimum_width="90" default_width="-1"/>
+
+				<widget class="simple_data_list" first="0" priority="1">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="Tn5f" set_property="valu" />
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+				</widget>
+
+				<widget class="simple_data_list" first="1" priority="2">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="Tn5f" set_property="valu" />
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+				</widget>
+
+				<widget class="simple_data_list" first="2" priority="3">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="Tn5f" set_property="valu" />
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+				</widget>
+
+				<widget class="simple_data_list" first="3" priority="4">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="Tn5f" set_property="valu" />
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+				</widget>
+
+				<widget class="simple_data_list" first="4" priority="5">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="Tn5f" set_property="valu" />
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+				</widget>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

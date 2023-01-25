@@ -1,0 +1,242 @@
+﻿<panel>
+	<!-- Main content always shown -->
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="2"/>
+
+	<!-- TITLE -->
+	<widget class="text" auto_size="all" style="semi_bold" font="title" size="large" colour="text">
+		<translation id="text" type="new" value="Supporter Profile[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Supporters profile title text.]" />	
+	</widget>
+
+	<!-- SUB TITLE -->
+	<widget class="text" id="sptx" display_format="1" auto_size="all" colour="faded text" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="16"/>
+
+		<!-- SUPPORTER PERCENTAGE -->
+		<container class="supporter_percentage_panel" id="spcp" pitch_inset="36,36,40,36" />
+
+		<widget class="horizontal_subtle_divider" height="2"/>
+
+		<!--  ~~~~~~~~~~~~~~~~
+NOTE 
+CRASHING FILE
+~~~~~~~~~~~~~~~~~~~ -->
+		<container class="supporter_stats_panel" id="sstp" file="none" height="200" >
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+<container>
+<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<!-- Relationship With Board -->
+	<container class="icon_box" id="rbrd">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container height="15">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+			<widget class="value_based_picture" id="rbri" scale_picture="true" image_alignment="left" keep_aspect_ratio="true" width="73" >
+				<list id="value_list">
+					<record min_value="16" max_value="10000" file="icons/custom/supporter/very high" red_replacement="white"/>
+					<record min_value="12" max_value="15" file="icons/custom/supporter/high" red_replacement="white"/>
+					<record min_value="9" max_value="11" file="icons/custom/supporter/moderate" red_replacement="white"/>
+					<record min_value="5" max_value="8" file="icons/custom/supporter/low" red_replacement="white"/>
+					<record min_value="0" max_value="7" file="icons/custom/supporter/very low" red_replacement="white"/>
+				</list>
+			</widget>
+			<widget class="text" id="sbtn" auto_size="horizontal" style="bold"/>
+		</container>
+	</container>
+
+	<!-- International Reach -->
+	<container class="icon_box" id="intr">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+			
+			<widget class="icon_button" id="sbtn" minimum_width="100" height="20" alignment="left,centre_y" appearance="buttons/text/button" navigation_focus_target="false" auto_size="horizontal"/>
+			<widget class="picture" id="ichg" scale_picture="true" auto_size="vertical" hidden="true"/>
+		</container>
+	</container>
+
+	<!-- Social Media -->
+	<container class="icon_box" id="socm">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+			
+			<widget class="icon_button" id="sbtn" minimum_width="100" height="20" alignment="left,centre_y" appearance="buttons/text/button" navigation_focus_target="false" auto_size="horizontal"/>
+			<widget class="picture" id="ichg" scale_picture="true" auto_size="vertical" hidden="true"/>
+		</container>
+	</container>
+	
+	</container>
+
+<container>
+<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<!-- Season Ticket Holders -->
+	<container class="icon_box" id="stkh">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+			
+			<widget class="icon_button" id="sbtn" minimum_width="100" height="20" alignment="left,centre_y" appearance="buttons/text/button" navigation_focus_target="false" auto_size="horizontal"/>
+			<widget class="picture" id="ichg" scale_picture="true" auto_size="vertical" hidden="true"/>
+		</container>
+	</container>
+
+	<!-- Season Ticket Waiting List -->
+	<container class="icon_box" id="stwl">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+			
+			<widget class="icon_button" id="sbtn" minimum_width="100" height="20" alignment="left,centre_y" appearance="buttons/text/button" navigation_focus_target="false" auto_size="horizontal"/>
+			<widget class="picture" id="ichg" scale_picture="true" auto_size="vertical" hidden="true"/>
+		</container>
+	</container>
+	</container>
+		
+		</container>
+
+		<!-- Last Match -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<container class="icon_box" id="lmlb" icon="icons/custom/analysis/pitch" icon_red_replacement="text" icon_blue_replacement="bg">
+				<attachment_group class="vertical_arrange_autosize" />
+				<widget class="link_button" height="26" minimum_width="100" alignment="left,centre_y" appearance="buttons/text/button" font="title" colour="text">
+					<translation id="text" translation_id="316854" type="use" value="Last Match" />
+				</widget>
+			</container>
+			<container class="property_list_viewer_xml_panel" id="lstm" file="news_item_panels/match of the day main result item panel" height="32" />
+			<widget class="table" id="lmtb" layout="-1, -1, -1" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+				<list id="headings">
+					<record>
+						<integer id="index" value="0" />
+						<translation id="text" type="new" value="Home Attendance[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Column title string for last match home attendance.]" />
+					</record>
+					<record>
+						<integer id="index" value="1" />
+						<translation id="text" type="new" value="Away Attendance[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Column title string for last match away attendance.]" />
+					</record>
+					<record>
+						<integer id="index" value="2" />
+						<translation id="text" translation_id="252902" type="use" value="Capacity[COMMENT: team stadium capacity, short title]" />
+					</record>
+				</list>
+				<list id="column_table_properties">
+					<record>
+						<integer id="index" value="0" />
+						<record id="widget_info">
+							<symbol id="class" value="number_label" />
+							<string id="font" value="bold" />
+							<string id="colour" value="text" />
+							<flags id="size" value="large" />
+						</record>
+					</record>
+					<record>
+						<integer id="index" value="1" />
+						<record id="widget_info">
+							<symbol id="class" value="number_label" />
+							<string id="font" value="bold" />
+							<string id="colour" value="text" />
+							<flags id="size" value="large" />
+						</record>
+					</record>
+					<record>
+						<integer id="index" value="2" />
+						<record id="widget_info">
+							<symbol id="class" value="number_label" />
+							<string id="font" value="bold" />
+							<string id="colour" value="text" />
+							<flags id="size" value="large" />
+						</record>
+					</record>
+				</list>
+				<list id="column_widget_properties">
+					<record alignment="centre_y,left">
+						<integer id="index" value="0" />
+					</record>
+					<record alignment="centre_y,left">
+						<integer id="index" value="1" />
+					</record>
+					<record alignment="centre_y,left">
+						<integer id="index" value="2" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<widget class="horizontal_subtle_divider" height="2"/>
+
+		<!-- Rivals -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<container class="icon_box" id="rilb" icon="icons/custom/start screen/create a club" icon_red_replacement="text" icon_blue_replacement="bg">
+				<attachment_group class="vertical_arrange_autosize" />
+				<widget class="link_button" height="26" minimum_width="100" alignment="left,centre_y" appearance="buttons/text/button" font="title" colour="text">
+					<translation id="text" type="new" value="Rivals[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: title string for rivals reason section.]" />
+				</widget>
+			</container>
+
+			<widget class="table" id="ritb" layout="-2, -1, -1" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" row_height="26" height="300">
+				<list id="headings">
+					<record>
+						<integer id="index" value="0" />
+						<translation id="text" translation_id="323297" type="use" value="Club[COMMENT: Person table type name]" />
+					</record>
+					<record>
+						<integer id="index" value="1" />
+						<translation id="text" type="new" value="Rivalry[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Column title string for rivalry.]" />
+					</record>
+					<record>
+						<integer id="index" value="2" />
+						<translation id="text" translation_id="330386" type="use" value="Reason[COMMENT: the reason why a relationship exists]" />
+					</record>
+				</list>
+				<list id="column_table_properties">
+					<record>
+						<integer id="index" value="0" />
+						<record id="widget_info">
+							<symbol id="class" value="club_button" />
+						</record>
+					</record>
+					<record>
+						<integer id="index" value="1" />
+					</record>
+					<record>
+						<integer id="index" value="2" />
+					</record>
+				</list>
+				<list id="column_widget_properties">
+					<record alignment="centre_y,left">
+						<integer id="index" value="0" />
+					</record>
+					<record alignment="centre_y,left">
+						<integer id="index" value="1" />
+					</record>
+					<record alignment="centre_y,left">
+						<integer id="index" value="2" />
+					</record>
+				</list>
+			</widget>
+		</container>
+	</container>
+</panel>

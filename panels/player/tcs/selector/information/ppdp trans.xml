@@ -1,0 +1,109 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_layout="-6,2,-8" horizontal_gap="8" />
+
+	<widget class="player_personal_details_panel" id="ppdo" file="player/tcs/selector/information/ppdp compact">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	<!-- DIVIDER -->
+	<widget class="vertical_subtle_divider" width="2"/>
+
+	<!-- RIGHT HAND SIDE -->
+	<container class="player_transfer_information_panel"  id="cntI" file="none">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<!-- TOP TABLE -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<!-- TRANSFER LISTED -->
+				<container class="tcs_table">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+					<widget class="label" auto_size="vertical" style="semi_bold" >
+						<translation id="text" translation_id="227953" type="use"/>
+					</widget>
+
+					<container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+						<widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" icon_alignment="left, centre_y"/>
+						<widget class="transfer_status_label" id="TSta" auto_size="vertical" size="small" />
+					</container>
+				</container>
+
+				<!-- LOAN STATUS -->
+				<container class="tcs_table_trans">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+					<widget class="label" auto_size="vertical" style="semi_bold" >
+						<translation id="text" translation_id="247489" type="use"/>
+					</widget>
+
+					<container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+						<widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" alignment="left, centre_y"/>
+						<widget class="loan_status_label" id="LSta" auto_size="vertical" size="small" multiline="true" alignment="left, centre_y"/>
+					</container>
+				</container>		
+
+				<!-- LOAN STATUS -->
+				<container class="tcs_table">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+				<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+
+					<widget class="label" auto_size="vertical" style="semi_bold" >
+						<translation id="text" translation_id="492001" type="use"/>
+					</widget>
+		
+		<widget class="playing_time_label" want_mouse_events="false" auto_size="vertical" >
+		<record id="object_property" get_property="PcpH"/>
+					<translation id="hint" translation_id="492002" type="use" />
+		</widget>
+		<widget class="playing_time_label" want_mouse_events="false" size="small" colour="faded text" auto_size="vertical">
+		<record id="object_property" get_property="Pctp"/>
+					<translation id="hint" translation_id="492001" type="use" />
+		</widget>
+				</container>
+			</container>
+
+			<!-- AI CONTROLLED -->
+			<container class="player_reports_overview_summary_panel" id="scou" file="none">
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+				<record id="object_property" get_property="PHcr" set_property="hidn"/>
+
+				<!-- TRANSFER INTEREST -->
+				<container class="tcs_table">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+					<widget class="label" auto_size="vertical" style="semi_bold" >
+						<translation id="text" translation_id="450790" type="use"/>
+					</widget>
+
+					<widget class="text" id="triw" style="semi_bold" auto_size="vertical" multiline="false" />
+
+				</container>
+
+				<!-- LOAN INTEREST -->
+				<container class="tcs_table_trans">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+					<widget class="label" auto_size="vertical" style="semi_bold" >
+						<translation id="text" translation_id="450791" type="use"/>
+					</widget>
+
+					<widget class="text" id="loiw" style="semi_bold" auto_size="vertical" multiline="false" />
+
+				</container>
+			</container>
+
+
+		</container>
+
+		<!-- PROVIDED BY -->
+		<widget class="text" id="agnL" size="small" font="text" auto_size="vertical" colour="tcs_accent_lighter" alignment="centre"/>
+
+	</container>
+</panel>

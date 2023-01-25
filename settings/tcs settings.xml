@@ -1,0 +1,82 @@
+<properties version="1.0">
+	<!-- THIS FILE CONTROLS THE SKIN COLOURS DISPLAYED AND WORKS TOP TO BOTTOM -->
+
+	<!-- MOD // DARK MODE 
+	<colour name="bg lighter" 																	value="rgb(42,42,43)"/>
+	<colour name="bg" 																			value="rgb(32,32,33)"/>
+	<colour name="bg darker" 																	value="rgb(24,24,25)"/>
+	<colour name="bg tertiary" 																	value="bg darker"/>
+	<colour name="bg alpha" 																	value="rgba(18,7,30,0.8)"/>
+	<colour name="bg small alpha" 																value="rgba(18,7,30,0.94)"/>
+	<colour name="bg large alpha" 																value="rgba(18,7,30,0.5)"/>
+	<colour name="bg info" 																		value="rgb(39,103,192)"/>
+	<colour name="bg alert" 																	value="rgb(0,129,138)"/>
+	<colour name="bg accent" 																	value="rgb(0,129,138)"/>
+	<colour name="bg positive" 																	value="rgb(16,165,68)"/>
+	<colour name="bg negative" 																	value="rgb(182,40,40)"/> -->
+
+	<!-- MOD // WTS Legacy Ediition 
+	<colour name="bg" 																			value="rgb(48,31,103)"/>
+	<colour name="bg lighter" 																	value="rgb(53,37,108)"/>
+	<colour name="bg darker" 																	value="rgb(38,21,93)"/>
+	<colour name="bg tertiary" 																	value="bg darker"/> -->
+
+	<!-- DEFAULT BG COLOUR -->
+	<colour name="bg" 																			value="rgb(28,32,48)"/>
+	<colour name="bg lighter" 																	value="rgb(35,40,52)"/>
+
+	<!-- ACCENT COLOURS -->
+	<colour name="tcs_accent" value="rgb(0,129,138)"/>
+	<colour name="tcs_accent_lighter" value="rgb(106,217,225)"/>
+	<colour name="accent"	value="tcs_accent" />
+	<colour name="bg accent"	value="tcs_accent" />
+	<colour name="fg accent"	value="tcs_accent_lighter" />
+
+	<!-- CUSTOM COLOURS SET UP THAT MY GRAPHICS REFERENCE. FOR COLOURS, SCROLL TO BOTTOM OF DOCUMENT -->
+	<colour name="tcs_bg" 																			value="bg"/>
+	<colour name="tcs_bg_lighter" 															value="bg lighter"/>
+
+	<colour name="divider"                                    value="white"/>
+
+	<!-- TCS PROFILE ATTRIBUTE COLOURS -->
+	<colour name="low attribute" red="169" green="169" blue="169" />
+	<colour name="normal attribute" red="241" green="241" blue="241" />
+	<colour name="good attribute" red="1" green="238" blue="255" />
+	<colour name="excellent attribute" red="255" green="235" blue="59" />
+
+	<!-- BACKGROUNDS FOR ATTRIBTUELESS -->
+	<colour name="unknown attribute background" 			value="bg darker"/>
+	<colour name="low attribute background" 				value="low attribute"/>
+	<colour name="normal attribute background" 				value="normal attribute"/>
+	<colour name="good attribute background" 				value="good attribute" />
+	<colour name="excellent attribute background" 			value="excellent attribute" />
+
+	<!-- WTS LOGO -->
+	<colour name="wts_p" 																			value="rgb(245,245,245)"/>
+	<colour name="wts_s" 																			value="rgb(255,0,132)"/>
+
+	<!-- COMP COLOURS -->
+	<colour name="ucl" 																			value="rgb(0,0,75)"/>
+
+	<!-- CONTROLS TEAM COLOUR IN UI -->
+	<colour name="human controlled" 			value="tcs_accent_lighter"/>
+
+	<!-- STAR RATINGS 
+	<colour name="star rating senior" 						value="tcs_accent_lighter"/>
+	<colour name="star rating youth" 							value="rgb(183,188,191)"/>
+	<colour name="star rating empty" 							value="fg"/>
+	<colour name="star rating unknown" 						value="rgb(247,247,247)"/>-->
+
+	<colour name="search filter active" 						value="bg accent"/>
+	<colour name="search filter inactive" 						value="bg lighter"/>
+
+	<!-- INBOX -->
+	<!-- PRESS CONFERENCE GRAPHIC -->
+	<colour name="news item" value="tcs_accent_lighter" />
+	<!-- QUOTE -->
+	<colour name="press conference summary quote" value="tcs_accent_lighter"/>
+
+	<!-- SKY SPORTS -->
+	<colour name="sky sports blue" 							value="rgb(0,38,114)"/>
+	<colour name="sky sports red" 							value="rgb(228,2,26)"/>
+</properties>

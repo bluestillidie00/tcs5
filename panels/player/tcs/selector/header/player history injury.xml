@@ -1,0 +1,44 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container id="phit" >
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+		<string id="skin_style" value="title link" />
+		<widget class="link_button" section="PHin" auto_size="horizontal" >
+			<translation id="text" translation_id="316626" type="use" value="Past Injuries" />
+		</widget>
+		
+		<widget class="table" id="phin" layout="100, -1, 100, " mode="fill_rows, stripe_rows, printable" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" navigation_container="true">
+			<!-- Title of box -->
+			<list id="headings">
+				<record index="0">
+					<translation id="text" translation_id="247181" type="use" value="Date Injured"/>
+				</record>
+        <record index="1">
+					<translation id="text" translation_id="247599" type="use" value="Type of Injury"/>
+				</record>
+        <record index="2">
+          <translation id="text" translation_id="447650" type="use" value="Severity[COMMENT: FR 20159; player injury table; injury seriousness column header]" />
+        </record>
+
+			</list>
+
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y"/>
+			</record>
+			
+			<list id="column_table_properties">
+				<record index="0" sort_disabled="false" navigation_focus_target="false"/>
+				<record index="1" sort_disabled="false"/>
+				<record index="2" sort_disabled="false"/>
+				<record index="3" sort_disabled="false"/>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" navigation_focus_target="false"/>
+			</list>
+
+
+		</widget>
+	</container>
+</panel>

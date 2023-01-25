@@ -1,0 +1,6 @@
+<record>
+	<!-- resource manager options -->
+
+	<!-- we don't preload the graphics files, but we do cache them once they've loaded -->
+	<boolean id="cache" value="true"/>
+</record>

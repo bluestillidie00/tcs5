@@ -1,0 +1,57 @@
+<!-- THIS PANEL DISPLAYS THE FOUR PLAYERS ON THE CLUB OVERVIEW PANEL -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="club_overview_staff_panel" id="cloS" file="none">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container class="vertical_adaptive_container" gap="8">
+			
+			<record id="default_properties" default_height="-1" minimum_height="100"/>
+
+			<container class="tcs_table" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<!-- CAPTAINS -->
+				<widget class="person_snapshot_club_overview_panel" id="capt" player="true" file="club/tcs/snapshots/captain">
+					<record id="object_property">
+						<integer id="get_property" value="TCap"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+
+			<!-- VICE CAPTAIN -->
+			<container class="tcs_table_trans" priority="3">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="person_snapshot_club_overview_panel" id="vice" player="true" file="club/tcs/snapshots/vice">
+					<record id="object_property">
+						<integer id="get_property" value="TVca"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+
+			<container class="tcs_table" default_height="-1" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="person_snapshot_club_overview_panel" id="KeyP" player="true" file="club/tcs/snapshots/key">
+					<record id="object_property">
+						<integer id="get_property" value="TKpL"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+
+			<container class="tcs_table_trans" priority="4">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<widget class="person_snapshot_club_overview_panel" id="HotP" player="true" file="club/tcs/snapshots/hot">
+				</widget>
+			</container>
+		</container>
+
+	</widget>
+
+</panel>

@@ -1,0 +1,30 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="mtpd" set_property="prop" target="mtpa"/>
+	</list>
+
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="main_transparent_box" red_replacement="background">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+		<container height="38" navigation_container="true" default_focus="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="4" horizontal_offset="4"/>
+			
+			<container class="sections_menu_strip" id="seST" >
+
+				</container>
+			
+
+			<widget class="match_tactics_toggle_button" id="togg" />
+
+		</container>
+
+		<container id="mtpa">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		</container>
+
+
+	</container>
+</panel>

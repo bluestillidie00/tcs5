@@ -1,0 +1,323 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<colour id="good_colour" name="bg positive" />
+	<colour id="bad_colour" name="bg negative" />
+	<boolean id="save_session_state" value="true" />
+
+	<container id="nvab" class="empty_state" header_widget="noCo">
+
+		<!--explanatory text-->
+		<widget if="noCo" class="text">
+			<translation id="text" translation_id="395313" type="use" value="Set Piece Instructions cannot be viewed without control of the team.[COMMENT: FR 9552 - explanatory text when you can't see AI team's set pieces]" />
+		</widget>
+	</container>
+
+	<container id="ntac" class="empty_state" header_widget="noTa" >
+
+		<widget class="manager_text" id="noTa">
+			<translation id="text" translation_id="395563" type="use" value="[%person#1-You] need to create a tactic before [%person#1-you] can set up set-piece routines.[COMMENT: FR 9552 - explanatory text to show that the user hasn't created a tactic yet, so can't set up any set piece routines]" />
+		</widget>
+
+		<container class="empty_state_button_container">
+			<widget class="link_button" section="tacO" auto_size="all">
+				<translation id="text" translation_id="363642" type="use" value="Go To Tactics[COMMENT: FR 8989 - text for a button to take you to the tactics page]" />
+			</widget>
+		</container>
+	</container>
+
+	<container id="CtEd" class="empty_state" header_widget="cted">
+
+		<widget class="text" id="cted">
+		</widget>
+
+		<container class="empty_state_button_container">
+			<widget class="link_button" section="tacO" auto_size="all">
+				<translation id="text" translation_id="363642" type="use" value="Go To Tactics[COMMENT: FR 8989 - text for a button to take you to the tactics page]" />
+			</widget>
+		</container>
+	</container>
+
+	<container id="vabl">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="8"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--top panel with buttons and pitch-->
+		<container class="tcs_box" id="tpbp" red_replacement="pitch_box_background">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4" vertical_offset="2" horizontal_inset="2"/>
+
+			<container class="main_transparent_box" id="tpbh" navigation_container="true" default_focus="true">
+
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="6" horizontal_inset="0" vertical_offset="0"/>
+
+				<container height="45" id="tptr">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="6"/>
+
+					<!--slot selector-->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+						<widget class="label" font="label" colour="faded text" auto_size="all">
+							<translation id="text" translation_id="260822" type="use" value="Tactic[COMMENT:]" />
+						</widget>
+						<widget class="match_preparation_slot_selector" id="mpss" height="30"  file="" text="">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+							<widget class="view_menu_popup" id="popu" colour="text" embed_in_frame="false" auto_size="vertical">
+
+							</widget>
+						</widget>
+					</container>
+
+					<!--scenario-->
+					<container>
+						<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle"/>
+						<widget class="label" font="label" colour="faded text" auto_size="all">
+							<translation id="text" translation_id="447630" type="use" value="Scenario[COMMENT: title for a box containing details of the scenario of a set piece routine that the user is setting up]" />
+						</widget>
+						<container height="30">
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="1" />
+							<widget class="radio_toggle_switch_left" id="SPSd" group="1" click_event="sptC" auto_size="all" controller_button="x_button">
+								<translation id="text" translation_id="297461" type="use" value="Defend[COMMENT: player_instructions; player duty]" />
+							</widget>
+							<widget class="radio_toggle_switch_right" id="SPSa" group="1" click_event="sptC" auto_size="all" controller_button="x_button">
+								<translation id="text" translation_id="316708" type="use" value="Attack[COMMENT: team report; header text for area of team]" />
+							</widget>
+						</container>
+					</container>
+
+					<!--location-->
+					<container>
+						<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle"/>
+						<widget class="label" font="label" colour="faded text" auto_size="all">
+							<translation id="text" translation_id="447631" type="use" value="Location[COMMENT: title for radio buttons to choose which side of the pitch a set piece routine is that the user is setting up]" />
+						</widget>
+						<container height="30">
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="1" />
+							<widget class="radio_toggle_switch_left" id="SPLl" group="2" click_event="sptC" auto_size="all" controller_button="right_stick_down">
+								<translation id="text" translation_id="229418" type="use" value="Left" />
+							</widget>
+							<widget class="radio_toggle_switch_right" id="SPLr" group="2" click_event="sptC" auto_size="all" controller_button="right_stick_down">
+								<translation id="text" translation_id="229419" type="use" value="Right" />
+							</widget>
+						</container>
+					</container>
+
+					<!--free kick selector-->
+					<container>
+						<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle"/>
+						<widget class="label" id="frTC" font="label" colour="faded text" auto_size="all">
+							<translation id="text" translation_id="447625" type="use" value="Type[COMMENT: title for a drop down to select which set piece free kick type should be displayed, direct or indirect]" />
+						</widget>
+						<widget class="popup_button" id="FrKT" select_event="stFT" height="30" auto_size="horizontal" hidden="true" auto_size_maximum_width="160">
+
+							<list id="items">
+								<record id="1">
+									<translation id="name" translation_id="447626" type="use" value="Direct[COMMENT: Popup button item; showing different types of free kick]" />
+								</record>
+								<record id="3">
+									<translation id="name" translation_id="451481" type="use" value="Direct (Small Chance of Shot)[COMMENT: Popup button item; showing different types of free kick, change from ID 447627]" />
+								</record>
+								<record id="4">
+									<translation id="name" translation_id="447628" type="use" value="Indirect (Wide)[COMMENT: Popup button item; showing different types of free kick]" />
+								</record>
+								<record id="5">
+									<translation id="name" translation_id="447629" type="use" value="Indirect (Deep)[COMMENT: Popup button item; showing different types of free kick]" />
+								</record>
+							</list>
+
+						</widget>
+					</container>
+
+					<!--routine selector-->
+					<container>
+						<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle"/>
+						<widget class="label" font="label" colour="faded text" auto_size="all">
+							<translation id="text" translation_id="388280" type="use" value="Routine[COMMENT: title for a drop down to select which set piece routine the user is setting up]" />
+						</widget>
+						<container height="30">
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="1" />
+							<widget class="popup_button" id="Rout" auto_size="horizontal" fixed="true">
+							</widget>
+						</container>
+					</container>
+
+					<!--version selector-->
+					<container id="mvde">
+						<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle"/>
+						<widget class="label" font="label" colour="faded text" auto_size="all">
+							<string id="text" value="Version (Debug)" />
+						</widget>
+						<container height="30">
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="1" />
+							<widget class="popup_button" id="defa" auto_size="horizontal" fixed="true" icon="icons/16px/gear"/>
+						</container>
+					</container>
+
+				</container>
+
+			</container>
+
+			<widget class="pitch_with_set_piece_tactics" pitch_touchline_width_percentage="50" id="pspt" pwMD="8" pitch_width_percentage="100" pitch_length_percentage="100" pitch_draw_grass="false" navigation_container="true"/>
+
+		</container>
+
+		<!--right panel with info on what's selected-->
+		<container width="290"  class="tcs_box">
+			<layout class="arrange_vertical_attachment" layout="20,-6,-14,-9" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!--taker text-->
+			<container class="inner_box" id="tkin" size="8">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			</container>
+
+			<!--taker info-->
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" layout="-1,30" offset="0" gap="6"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container id="SlIC">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+					<widget class="text" id="SlIn" auto_size="vertical" alignment="centre"/>
+				</container>
+
+				<container id="TkrC">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="button" id="Tkrs" click_event="ChTk" auto_size="vertical" />
+				</container>
+			</container>
+
+			<!--taker details-->
+			<container class="inner_box">
+				<translation id="title" translation_id="316628" type="use" value="Important Attributes[COMMENT:title for attributes panel showing which attributes are important for a tactical role]" />
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="client_object_viewer_xml_panel" id="PlIF" NOOk="true" database_table_type="1"> 
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+					<!--mugshot-->
+					<widget class="object_portrait_picture" id="ppic" image_alignment="centre" scale_picture="true" height="100">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="1"/>
+
+							<!--footedness-->
+							<widget class="label" id="PfoL" size="small" font="label" colour="faded text" alignment="centre" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Pfot" />
+									<boolean id="name" value="true" />
+								</record>
+							</widget>
+
+							<widget class="foot_label" id="PfoV" icon_alignment="left,top" alignment="centre" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Pfot" />
+								</record>
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="1"/>
+
+							<!--height-->
+							<widget class="label" id="PheL" size="small" font="label" colour="faded text" alignment="centre" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Phei" />
+									<boolean id="name" value="true" />
+								</record>
+							</widget>
+
+							<widget class="height_label" id="PheV" icon_alignment="left,top" alignment="centre" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Phei" />
+								</record>
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="1"/>
+
+							<!--weight-->
+							<widget class="label" id="PweL" size="small" font="label" colour="faded text" alignment="centre" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Pwei" />
+									<boolean id="name" value="true" />
+								</record>
+							</widget>
+
+							<widget class="weight_label" id="PweV" icon_alignment="left,top" alignment="centre" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Pwei" />
+								</record>
+							</widget>
+						</container>				
+					</container>
+
+					<widget class="horizontal_subtle_divider" height="2"/>
+
+	<container>
+
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+						<!--important attributes-->
+						<widget class="client_object_label_value_table" id="ImAt" NOOk="true">
+
+							<record id="table_properties">
+								<flags id="mode" value="fill_rows, stripe_rows, printable" />
+								<boolean id="auto_size_rows" value="false" />
+								<boolean id="fixed_size_rows" value="true" />
+								<flags id="auto_size" value="none" />
+
+								<string id="layout" value="-1,30" />
+								<integer id="row_spacing" value="0" />
+								<integer id="row_height" value="20" />
+								<list id="column_widget_properties">
+									<record indx="0" alignment="left,centre_y" spec="text" size="small" />
+									<record indx="1" alignment="right,centre_y" spec="text" size="small" style="semi_bold" />
+								</list>
+							</record>
+
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+
+						</widget>
+
+					</container>
+				</container>
+			</container>
+
+			<!--instructions-->
+			<container class="inner_box" id="InTt">
+				<translation id="text" translation_id="247610" type="use" value="Player Instructions" />
+
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--instruction popup and checkbox-->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+					<widget class="check_box" id="ovrd" auto_size="all" />
+					<widget class="popup_button" id="inst" auto_size="vertical" />
+				</container>
+
+				<widget class="horizontal_divider"/>
+
+				<!--explanatory text-->
+				<widget class="text" id="exTx">
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

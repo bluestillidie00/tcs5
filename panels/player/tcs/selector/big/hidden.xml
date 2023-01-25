@@ -1,0 +1,44 @@
+<!-- THIS PANELS SHOWS UNDER THE REPORTS PANEL IN THE BIG SELECTOR -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true" />
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+				<string id="skin_style" value="title link"/>
+
+				<!-- Header -->
+				<widget class="link_button" section="Ptac" auto_size="all" navigation_focus_target="false">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+					<translation id="text" translation_id="361135" type="use" />		
+				</widget>
+			</container>
+
+			<container class="tcs_tabs_primary" save_session_state="true" save_default_state="true">
+
+				<!-- HIDDEN -->
+				<widget file="player/tcs/selector/hidden/general" id="gene" class="client_object_viewer_xml_panel" late_loading="true">
+					<translation id="title" type="use" translation_id="248359" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+				
+				<!-- HIDDEN -->
+				<widget file="player/tcs/selector/hidden/fitness" id="fitn" class="client_object_viewer_xml_panel" late_loading="true">
+					<translation id="title" type="use" translation_id="247571" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<!-- HIDDEN -->
+				<widget file="player/tcs/selector/hidden/positions" id="posi" class="client_object_viewer_xml_panel" late_loading="true">
+					<translation id="title" type="use" translation_id="330376" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+			</container>
+	</container>		
+</panel>

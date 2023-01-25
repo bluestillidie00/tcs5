@@ -1,0 +1,335 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<!-- debug menu -->
+	<attachment class="get_global_attachment" get_property="Dmen" set_property="coni" />
+
+	<!-- Handheld background image -->
+	<widget class="picture" id="bkg1" file="main menu/background" scale_picture="true" keep_aspect_ratio="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<string id="create_if" value="platform_is_handheld" />
+	</widget>
+
+	<!-- Switch background image -->
+	<widget class="picture" id="bkg2" file="main menu/background" scale_picture="true" keep_aspect_ratio="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<string id="create_if" value="platform_is_switch" />
+	</widget>
+
+	<!-- when visible, this panel will cover the movie test panel and take gamepad events -->
+	<!-- this is visible by default, otherwise the client object system re-applies the 'hidden=true' property when it sets up sections, which may happen before the panel should be hidden -->
+	<container class="splash_movie_panel" id="spmp" movie_finish_event="spmf" navigation_container="true" default_focus="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<!-- 3D manager and scene -->
+	<container class="add_manager_panel" id="adMP" file="none" content_width_initial_panels="600" content_width_late_panels="1000">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<!-- Late loading and being hidden on handheld here is CRITICAL 
+		when we play matches outside of the game on tablet at the start and end we will briefly drop to
+		the intro panel - we need to avoid creating the add manager panel unecessarily as it will create
+		a large texture when we are at a critical memory point - creating this can tip us over the edge
+		-->
+		<boolean id="late_loading" value="true" />
+		<string id="remove_if" value="platform_is_handheld" />
+
+		<container id="CHWc">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			
+			<container class="wizard_panel" id="wzrd" nnPB="false" hidden="true">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				
+				<container file="human/add manager header panel" height="50" id="amHp" navigation_container="true">
+					<translation id="title" translation_id="538935" type="use" value="Create Manager[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading for for when the user is creating the manager, cannot be feminised]" />
+				</container>
+				
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-70,-40" offset="12" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="12" />
+
+					<container>
+						<container id="mWiC" class="main_transparent_box">
+							<attachment_group class="horizontal_arrange_autosize_all_centre_centered_in_parent" horizontal_alignment="middle" />
+
+							<container width="600" id="wWid">
+								<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+								<container>
+									<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend" />
+									
+									<container navigation_container="true">
+										<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" />
+											<widget class="tab_strip" id="amtb" auto_size="horizontal" select_event="amts" save_session_state="true" selection_dont_suppress="true" hidden="true" colour="text">
+												<flags id="appearance" value="tabs/standard" />
+												<list id="items">
+													<record>
+														<translation id="name" translation_id="538936" type="use" value="Personal Info[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when entering the personal information for the manager avatar]" />
+														<integer id="id" value="tspi" />
+													</record>
+													<record>
+														<translation id="name" translation_id="538937" type="use" value="Body[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the body type of the manager avatar]" />
+														<integer id="id" value="tsbo" />
+													</record>
+													<record>
+														<translation id="name" translation_id="538938" type="use" value="Head[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the face and hair of the manager avatar]" />
+														<integer id="id" value="tshe" />
+													</record>
+													<record>
+														<translation id="name" translation_id="538939" type="use" value="Attire[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the clothing of the manager avatar]" />
+														<integer id="id" value="tsat" />
+													</record>													
+													<record>
+														<translation id="name" translation_id="557751" type="use" value="Accessories[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR: FM-1259; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the accessories of the manager avatar]" />
+														<integer id="id" value="tacc" />
+													</record>
+												</list>
+												<integer id="selection" value="tspi" />
+											</widget>
+										</container>
+
+									<container navigation_container="true">
+										<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" />
+										
+										<widget class="icon_button" id="amrb" icon="icons/26px/transfer" auto_size="horizontal" hidden="true">
+										</widget>
+									</container>
+								</container>
+								
+								<!-- wizard panel container, the actual panels will be added here -->
+								<container id="plco">
+									<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+													
+									<container class="manager_profile_panel" id="fPan" check_profile="true" hide_manager="false">
+										<translation id="wizard_panel_title" translation_id="538936" type="use" value="Personal Info[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when entering the personal information for the manager avatar]" />
+									</container>
+									
+									<container class="manager_profile_panel" id="sPan" file="human/add manager appearance panel" check_profile="true">
+										<translation id="wizard_panel_title" translation_id="538937" type="use" value="Body[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the body type of the manager avatar]" />
+									</container>	
+									
+									<container class="manager_profile_panel" file="human/add manager head panel" check_profile="true">
+										<translation id="wizard_panel_title" translation_id="538938" type="use" value="Head[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the face and hair of the manager avatar]" />
+									</container>	
+									
+									<container class="manager_profile_panel" file="human/add manager attire panel" check_profile="true">
+										<translation id="wizard_panel_title" translation_id="538939" type="use" value="Attire[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the clothing of the manager avatar]" />
+									</container>									
+										
+									<container class="manager_profile_panel" file="human/add manager accessories panel" check_profile="true">
+										<translation id="wizard_panel_title" translation_id="557751" type="use" value="Accessories[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR: FM-1259; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the accessories of the manager avatar]" />
+									</container>
+								</container>
+				
+								<!-- row of buttons -->
+								<container id="btn" height="40" width="500" navigation_container="true">
+									<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+
+
+									<container height="30">
+										<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+										<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+										<layout class="centre_in_parent_attachment" alignment="vertical" />
+
+										<widget class="icon_button" id="ltEr" hidden="true" click_event="cPrL" auto_size="all" controller_button="b_button">
+											<translation id="text" translation_id="538940" type="use" value="Discard and Exit[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Cancel button text; Cancels and exits from the current manager creation/editing process]" />
+										</widget>
+										
+										<widget class="popup_button" id="lsmp" select_event="LoSa" auto_size="all" needs_height="true" needs_width="true" fixed="true">
+											<translation id="text" translation_id="538941" type="use" value="Load/Save Model[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Popup menu button text; Options to load an existing and save the current manager model]" />
+											<list id="items">
+												<record>
+													<translation id="text" translation_id="493401" type="use" value="Save Avatar[COMMENT: AREA: Create a Manager; SUB-AREA: Make your 3D avatar; TONE: Formal; FR-BN 27636; NOTE: prompt dialog; title; AREA: Add new manager menu]" />
+													<string id="click_event" value="svAp" />
+												</record>
+												<record>
+													<translation id="text" translation_id="493402" type="use" value="Load Avatar[COMMENT: AREA: Create a Manager; SUB-AREA: Make your 3D avatar; TONE: Formal; FR-BN 27636; NOTE: prompt dialog; title; AREA: Add new manager menu]" />
+													<string id="click_event" value="unch" />
+												</record>
+											</list>
+										</widget>
+									</container>
+									
+									
+
+									<widget class="primary_icon_button" id="nxt1" click_event="n1pa" auto_size="all" icon="icons/16px/right" icon_alignment="right" controller_button="right_trigger">
+										<layout class="centre_in_parent_attachment" alignment="vertical" />
+									</widget>
+									
+									<widget class="primary_icon_tick_button" id="fini" click_event="fNPr" hidden="true" controller_button="y_button">
+										<layout class="centre_in_parent_attachment" alignment="vertical" />
+										<translation id="text" translation_id="229918" type="use" value="Confirm" />
+									</widget>
+
+								</container>
+							</container>
+						</container>
+					</container>
+					
+					<!-- empty container for create a padding for the manager avatar -->
+					<container id="emCW" />
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<container id="mIco">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="right" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<!-- Menu -->
+			<container class="main_contrast_box" id="mPic" width="500" appearance="boxes/custom/main menu/paper">
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="37" />
+
+				<!-- Change the size of the box for switch -->
+				<attachment class="test_screen_size_attachment" skip_if_false="true">
+					<list id="properties">
+						<record>
+							<flags id="alignment" value="vertical" />
+							<integer id="min_value" value="0" />
+							<integer id="max_value" value="720" />
+							<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+							<symbol id="set_property" value="height" />
+							<integer id="true_value" value="570" />
+						</record>
+						<record min_value="721" max_value="10000" true_value="670" />
+					</list>
+				</attachment>
+				
+				<container file="game/intro panel menu" navigation_container="true" default_focus="true" />
+				
+				<!-- version label-->
+				<widget class="text" auto_size="all" colour="fg alpha" size="small">
+					<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="20,20" />
+					
+				</widget>
+
+				<!-- version label-->
+				<widget class="text" auto_size="all" colour="fg alpha" size="small">
+					<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="20,30" />
+					<translation id="text" type="use" value="WTCS5 v1.1" />
+
+				</widget>
+		
+				<!-- Quit -->
+				<container navigation_container="true">
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="4" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="right" inset="15" />
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="15" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="4" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="4" />
+
+					<!-- Add to Wishlist -->
+					<widget class="subtle_button" id="wish" click_event="wish" auto_size="all" appearance="buttons/subtle/flex/button">
+						<string id="create_if" value="is_demo_mode_and_steam" />
+						<translation id="text" translation_id="532237" type="use" value="Add to Wishlist[COMMENT: AREA: start screen; FR: 35432 TONE: Formal; CHARLIMIT: None; NOTE: used in demo mode only to open url link to add game to users wishlist;]" />
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+					</widget>
+
+					<!-- exit button -->
+					<widget class="subtle_button" id="qttx" auto_size="all" appearance="buttons/subtle/flex/button">
+						<translation id="text" translation_id="248058" type="use" value="Quit" />
+						<translation id="hint" translation_id="255120" type="use" value="Choose this option to exit [%string#1 - current name of game, e.g. FM2007] and return to the real world...[COMMENT - hint text for button to exit game]" />
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+						<record id="click_event">
+							<flags id="event_id" value="QUIT" />
+							<flags id="event_target" value="scrC" />
+						</record>
+					</widget>
+				</container>
+			</container>
+			<!-- Spacer to inset menu from right side of screen -->
+			<container height="100">
+				<attachment class="test_screen_size_attachment" skip_if_false="true">
+					<list id="properties">
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="0" />
+							<integer id="max_value" value="1299" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="80" />
+						</record>
+						<record min_value="1300" max_value="1600" true_value="180" />
+						<record min_value="1601" max_value="1900" true_value="300" />
+						<record min_value="1901" max_value="10000" true_value="360" />
+					</list>
+				</attachment>
+			</container>
+
+		</container>
+
+		<!-- Edit appearance button-->
+		<container class="icon_button" id="reeB" auto_size="all" icon="icons/16px/manager" controller_button="x_button" appearance="buttons/standard/flex/button">
+			<translation id="text" translation_id="229690" type="use" value="Edit" />
+			<layout class="stick_to_sides_attachment" alignment="top, left" inset="10" />
+			<record id="click_event" event_id="eMnG" />
+
+			<string id="remove_if" value="platform_is_handheld" />
+		</container>
+
+		<!-- Switch user button for xbox -->
+		<container class="main_transparent_box_no_margin" height="55" width="275">
+			<attachment_group class="horizontal_arrange_vertical_centre" horizontal_gap="10" horizontal_offset="8" />
+			<layout class="stick_to_sides_attachment" alignment="bottom, left" inset="10" />
+
+			<string id="create_if" value="distribution_is_ms_store" />
+
+			<!--Profile Picture-->
+			<container height="40" width="40">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="picture" id="xbGC" file="icons/26px/goal" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+			</container>
+
+			<!-- Button Text -->
+			<container width="210">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" />
+
+				<!-- User Name -->
+				<widget class="label" id="xbGT" auto_size="all" alignment="left, centre_y" style="bold" size="large" height="30" colour="text">
+					<translation id="text" translation_id="516557" type="use" value="Xbox User[COMMENT: AREA: intro panel; NOTE: label for identifying user]" />
+				</widget>
+
+				<widget class="label" auto_size="all" colour="fg alpha" size="small">
+					<translation id="text" translation_id="516558" type="use" value="Switch Profile[COMMENT: AREA: intro panel; NOTE: label for switching user profile on console]" />
+				</widget>
+
+			</container>
+
+			<!-- Button (spans across entire parent container) -->
+			<widget class="icon_button" appearance="buttons/custom/intro panel/button" focus_appearance="buttons/subtle/flex/button_controller" controller_button="y_button">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				<record id="click_event" event_id="xbCP" />
+			</widget>
+		</container>
+	</container>
+
+	<!-- when visible, this panel will cover the movie test panel and take mouse events -->
+	<!-- this is visible by default, otherwise the client object system re-applies the 'hidden=true' property when it sets up sections, which may happen before the panel should be hidden -->
+	<container class="splash_movie_panel" id="spm2">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+	
+	<container id="wiBK" class="inner_box_no_margin" background_colour="black">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="true" start_value="1.0" end_value="0.0" duration="2.0" end_mode="hold_end">
+			<record id="finished_event" event_id="FdIN" event_target="root" event_flags="7" />
+		</animation>
+		<animation class="fade_animation" trigger_start="hiMN" start_value="0.0" end_value="1.0" duration="0.2" end_mode="stop">
+			<record id="finished_event" event_id="fnHI" event_target="root" event_flags="7" />
+		</animation>
+	</container>
+
+</panel>

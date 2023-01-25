@@ -1,0 +1,91 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--popup button for choosing the user-->
+	<container id="usar">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+
+		<widget class="label" auto_size="horizontal">
+			<translation id="text" translation_id="348262" type="use" value="Preferences for[COMMENT: label for choosing the user to edit preferences for]" />
+		</widget>
+		<widget class="popup_button" id="usrP" auto_size="all" select_event="usse" />
+	</container>
+
+	<!-- News Screen -->
+	<widget class="main_box">
+		<translation id="title" translation_id="359637" type="use" value="News Screen[COMMENT: preferences: news screen screen flow section title]" />
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- Tick Box -->
+		<widget class="check_box" id="vncb" click_event="vnsa">
+			<translation id="text" translation_id="359703" type="use" value="Visit News Screen Automatically[COMMENT: preferences: user will be taken regularly to the news screen]" />
+			<translation id="hint" translation_id="359698" type="use" value="Tick to regularly visit the news screen for the top news in the football world.[COMMENT: preferences: user will be taken regularly to the news screen; hint]" />
+		</widget>
+	</widget>
+
+	<!-- force screen -->
+	<container class="main_box">
+		<translation id="text" translation_id="359435" type="use" value="Competition Screens[COMMENT: preferences; screen flow allowing choice of which competition screens to see during gameplay; title]" />
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="12" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="12" apply_to_children="true" />
+
+			<widget class="label" alignment="left,centre_y" auto_size="vertical" colour="faded text">
+				<translation id="text" translation_id="441060" type="use" value="Add competition screens that you will be taken to automatically at certain intervals.[COMMENT: Screen Flow Panel; add flow screen information text, cannot be feminised]" />
+			</widget>
+
+			<widget class="table" id="frct" bottom="25" mode="" layout="-2, -2, -1, -1, -1, 130" row_spacing="8" row_height="30">
+				<record id="default_properties" alignment="left,centre_y" />
+
+				<!--small inset from sides of table-->
+				<list id="column_table_properties">
+					<record index="0" sort_disabled="true" left="4" />
+					<record index="1" sort_disabled="true" />
+					<record index="2" sort_disabled="true" />
+					<record index="3" sort_disabled="true" />
+					<record index="4" sort_disabled="true" />
+				</list>
+
+				<list id="headings">
+					<record alignment="left,centre_y" column="0">
+						<translation id="text" translation_id="300831" type="use" value="Competition[COMMENT: team settings screen]" />
+					</record>
+					<record alignment="left,centre_y" column="1">
+						<translation id="text" translation_id="300832" type="use" value="Screen[COMMENT: team settings screen]" />
+					</record>
+					<record alignment="left,centre_y" column="2">
+						<translation id="text" translation_id="300833" type="use" value="Minimum Interval[COMMENT: team settings screen]" />
+						<translation id="hint" translation_id="496361" type="use" value="How frequently should the screen be shown as a minimum rule?[COMMENT: AREA: team settings screen; SUB-AREA: screen flow interface; FR-BN: 2381; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE; n/a]" />
+					</record>
+					<record alignment="left,centre_y" column="3">
+						<translation id="text" translation_id="300834" type="use" value="Scope[COMMENT: team settings screen]" />
+						<translation id="hint" translation_id="496362" type="use" value="How often will the chosen screen be shown?[COMMENT: AREA: team settings screen; SUB-AREA: screen flow interface; FR-BN: 2381; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE; n/a]" />
+					</record>
+					<record alignment="left,centre_y" column="4">
+						<translation id="text" translation_id="306503" type="use" value="Stop Game[COMMENT: team settings screen table heading]" />
+						<translation id="hint" translation_id="496363" type="use" value="Should game processing be stopped in order to display this screen?[COMMENT: AREA: team settings screen; SUB-AREA: screen flow interface; FR-BN: 2381; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE; n/a]" />
+					</record>
+					<record alignment="left,centre_y" column="5">
+						<translation id="text" translation_id="300835" type="use" value="Action[COMMENT: team settings screen]" />
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record index="0" appearance="buttons/standard/normal/button" />
+					<record index="1" appearance="buttons/standard/normal/button" />
+					<record index="2" appearance="buttons/standard/normal/button" />
+					<record index="3" appearance="buttons/standard/normal/button" />
+					<record index="4" appearance="buttons/standard/normal/button" />
+					<record index="5" appearance="buttons/primary/normal/button" />
+				</list>
+			</widget>
+		</container>
+	</container>
+	
+</panel>

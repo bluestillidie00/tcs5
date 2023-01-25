@@ -1,0 +1,196 @@
+<panel >
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<widget class="table" mode="fill_rows,printable,select_rows" layout="-1,-1,-1,-1,-1,-1" auto_size_rows="false" fixed_size_rows="true" row_height="42" row_spacing="4">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<list id="column_table_properties">
+			<record indx="0" left="16"/>
+			<record indx="1" right="8"/>
+		</list>
+
+		<list id="column_widget_properties">
+			<record indx="0" font="label" />
+			<record indx="1" font="label"/>
+			<record indx="2" font="label"/>
+			<record indx="3" font="label"/>
+			<record indx="4" font="label"/>
+			<record indx="5" font="label"/>
+		</list>
+
+		<list id="row_properties">
+			<!-- TODO / MORE OPAQUE -->
+			<record indx="1" appearance="tcs/boxes/tables/stag/player"/>
+			<record indx="2" appearance="tcs/boxes/tables/stag/high"/>
+			<record indx="3" appearance="tcs/boxes/tables/stag/med"/>
+			<record indx="4" appearance="tcs/boxes/tables/stag/low"/>
+		</list>
+
+		<!-- HEADERS -->
+		<list id="headings">
+			<record index="0" alignment="centre_x,centre_y" auto_hide_priority="1">
+				<translation id="text" translation_id="227849" type="use" />
+				<translation id="hint" translation_id="227849" type="use" />
+			</record>
+			<record index="1" alignment="centre_x,centre_y" auto_hide_priority="1">
+				<translation id="text" translation_id="388159" type="use" />
+				<translation id="hint" translation_id="388159" type="use" />
+			</record>
+			<record index="2" alignment="centre_x,centre_y" auto_hide_priority="1">
+				<translation id="text" translation_id="513523" type="use" />
+				<translation id="hint" translation_id="513523" type="use" />
+			</record>			
+			<record index="3" alignment="centre_x,centre_y" auto_hide_priority="1">
+				<translation id="text" translation_id="557889" type="use" />
+				<translation id="hint" translation_id="557889" type="use" />
+			</record>
+			<record index="4" alignment="centre_x,centre_y" auto_hide_priority="1">
+				<translation id="text" translation_id="249467" type="use" />
+				<translation id="hint" translation_id="249467" type="use" />
+			</record>
+			<record index="5" alignment="centre_x,centre_y" auto_hide_priority="1">
+				<translation id="text" translation_id="463705" type="use" />
+				<translation id="hint" translation_id="463705" type="use" />
+			</record>
+		</list>	
+
+		<record id="default_properties" style="semi_bold" alignment="centre_x, centre_y" colour="fg"/>
+
+		<!-- FIRST ROW / PLAYER -->
+
+		<!-- PLAYER -->
+		<widget class="label" row="0" col="0" info_popup_enabled="false" size="large" colour="fg accent" spec="text">  
+			<record id="object_property" get_property="dbnm"/>
+		</widget>
+
+		<!-- OPEN PLAY KEY PASSES -->
+		<widget class="dashed_number_label" row="0" col="1" size="large" colour="fg accent">
+			<record id="object_property" get_property="Pop9"/>
+		</widget>
+
+		<!-- PROGRESSIVE PASSES -->
+		<widget class="dashed_number_label" row="0" col="2" size="large" colour="fg accent">
+			<record id="object_property" get_property="PxA9"/>
+		</widget>
+
+		<!-- EXPECTED ASSISTS -->
+		<widget class="dashed_number_label" row="0" col="3" size="large" colour="fg accent">
+			<record id="object_property" get_property="PNx9"/>
+		</widget>
+
+		<!-- DRIBBLES -->
+		<widget class="dashed_number_label" row="0" col="4" size="large" colour="fg accent">
+			<record id="object_property" get_property="Podr"/>
+		</widget>
+
+		<!-- PASS COMP -->
+		<widget class="dashed_record_percentage_label" row="0" col="5" size="large" colour="fg accent">
+			<record id="object_property" get_property="POgS"/>
+		</widget>
+		
+		
+		
+
+
+		<!-- 2ND ROW / HIGH -->
+		<widget class="text" row="1" col="0" font="label" style="bold" >
+			<translation id="text" type="use" translation_id="396045" />
+		</widget>		
+
+		<!-- TACKLES -->
+		<widget class="text" row="1" col="1" >
+			<translation id="text" type="use" value="6.99" />
+		</widget>		
+
+		<!-- INTERCEPTIONS -->
+		<widget class="text" row="1" col="2">
+			<translation id="text" type="use" value="2.18" />
+		</widget>		
+
+		<!-- PRESSURES COMP -->
+		<widget class="text" row="1" col="3">
+			<translation id="text" type="use" value="0.59" />
+		</widget>	
+
+		<!-- CROSSES COMP -->
+		<widget class="text" row="1" col="4">
+			<translation id="text" type="use" value="2.33" />
+		</widget>		
+
+		<!-- PROGRESSIVE PASSES -->
+		<widget class="text" row="1" col="5">
+			<translation id="text" type="use" value="24%" />
+		</widget>	
+
+
+
+
+
+		<!-- 2ND ROW / HIGH -->
+		<widget class="text" row="2" col="0" font="label" style="bold" >
+			<translation id="text" type="use" translation_id="396077" />
+		</widget>	
+
+		<!-- TACKLES -->
+		<widget class="text" row="2" col="1" >
+			<translation id="text" type="use" value="5.32" />
+		</widget>		
+
+		<!-- INTERCEPTIONS -->
+		<widget class="text" row="2" col="2">
+			<translation id="text" type="use" value="1.28" />
+		</widget>		
+
+		<!-- PRESSURES COMP -->
+		<widget class="text" row="2" col="3">
+			<translation id="text" type="use" value="0.43" />
+		</widget>	
+
+		<!-- CROSSES COMP -->
+		<widget class="text" row="2" col="4">
+			<translation id="text" type="use" value="1.84" />
+		</widget>		
+
+		<!-- PROGRESSIVE PASSES -->
+		<widget class="text" row="2" col="5">
+			<translation id="text" type="use" value="17%" />
+		</widget>	
+
+
+
+
+		<!-- 2ND ROW / HIGH -->
+		<widget class="text" row="3" col="0" font="label" style="bold" >
+			<translation id="text" type="use" translation_id="433573" />
+		</widget>	
+
+		<!-- TACKLES -->
+		<widget class="text" row="3" col="1" >
+			<translation id="text" type="use" value="2.64" />
+		</widget>		
+
+		<!-- INTERCEPTIONS -->
+		<widget class="text" row="3" col="2">
+			<translation id="text" type="use" value="0.76" />
+		</widget>		
+
+		<!-- PRESSURES COMP -->
+		<widget class="text" row="3" col="3">
+			<translation id="text" type="use" value="0.27" />
+		</widget>	
+
+		<!-- CROSSES COMP -->
+		<widget class="text" row="3" col="4">
+			<translation id="text" type="use" value="1.20" />
+		</widget>		
+
+		<!-- PROGRESSIVE PASSES -->
+		<widget class="text" row="3" col="5">
+			<translation id="text" type="use" value="13%" />
+		</widget>
+
+
+
+
+	</widget>	
+</panel>

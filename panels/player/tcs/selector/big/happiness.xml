@@ -1,0 +1,149 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<string id="skin_style" value="title link"/>
+
+		<!-- Header -->
+		<widget class="link_button" section="Ptac" auto_size="all" navigation_focus_target="false">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			<translation id="text" translation_id="466580" type="use" />		
+		</widget>
+	</container>
+
+<container>			
+<layout class="vertical_arrange" vertical_layout="60,-1,-1" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-3,-4" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<widget class="label" spec="text" alignment="centre_x,centre_y,can_scale" size="9" colour="fg">
+				<translation id="text" translation_id="447645" type="use" value="Overall Happiness" />
+			</widget>
+			<widget class="person_happiness_icon_widget" alignment="centre" font="title" font_size="10" colour="fg" row="0" column="0">
+				<record id="object_property" get_property="Pohl"/>
+				<boolean id="use_morale_icon" value="false" />
+				<integer id="happiness_type" value="6" />
+			</widget>
+		</container>					
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1,-1" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-3,-4" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<widget class="label" spec="text,small" alignment="centre_x,bottom,can_scale" colour="fg">
+					<translation id="text" translation_id="227839" type="use" value="Morale" />
+				</widget>
+				<widget class="person_happiness_icon_widget" alignment="centre,can_scale" row="0" column="0">
+					<record id="object_property" get_property="PhrM"/>
+					<boolean id="use_morale_icon" value="true" />
+					<integer id="happiness_type" value="0" />
+				</widget>
+
+
+			</container>	
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-3,-4" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<widget class="label" spec="text,small" alignment="centre_x,bottom,can_scale" colour="fg">
+					<translation id="text" translation_id="447640" type="use" value="Training" />
+				</widget>
+				<widget class="person_happiness_icon_widget" alignment="centre" row="0" column="1">
+					<record id="object_property" get_property="PHtr"/>
+					<integer id="happiness_type" value="5" />
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-3,-4" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<widget class="label" spec="text,small" alignment="centre_x,bottom,can_scale" colour="fg">
+					<translation id="text" translation_id="447641" type="use" value="Treatment" />
+				</widget>
+				<widget class="person_happiness_icon_widget" alignment="centre" row="0" column="2">
+					<record id="object_property" get_property="PHmt"/>
+					<integer id="happiness_type" value="4" />
+				</widget>
+
+
+			</container>	
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-3,-4" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<widget class="label" spec="text,small" alignment="centre_x,bottom,can_scale" colour="fg">
+					<translation id="text" translation_id="447642" type="use" value="Club" />
+				</widget>
+				<widget class="person_happiness_icon_widget" alignment="centre" row="0" column="3">
+					<record id="object_property" get_property="PHct"/>
+					<integer id="happiness_type" value="2" />
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-3,-4" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<widget class="label" spec="text,small" alignment="centre_x,bottom,can_scale" colour="fg">
+					<translation id="text" translation_id="447643" type="use" value="Management" />
+				</widget>
+				<widget class="person_happiness_icon_widget" alignment="centre" row="0" column="4">
+					<record id="object_property" get_property="PHcm"/>
+					<integer id="happiness_type" value="3" />
+				</widget>
+
+
+			</container>	
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-3,-4" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<widget class="label" spec="text,small" alignment="centre_x,bottom,can_scale" colour="fg">
+					<translation id="text" translation_id="447644" type="use" value="Playing Time" />
+				</widget>
+				<widget class="person_happiness_icon_widget" alignment="centre" row="0" column="5">
+					<record id="object_property" get_property="PHpt"/>
+					<integer id="happiness_type" value="1" />
+				</widget>
+
+			</container>
+
+		</container>				
+
+			<widget class="client_object_label_value_table" id="Pmrl" auto_size="vertical">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<record id="table_properties" layout="-8, -20" mode="fill_rows, stripe_rows" >
+				<boolean id="auto_size_rows" value="false" />
+				<boolean id="fixed_size_rows" value="40" />
+				<boolean id="save_session_state" value="true" />
+				<boolean id="multiline" value="true" />
+				<boolean id="late_loading" value="true" />
+				<list id="column_properties">
+					<record indx="0" colour="fg" alignment="centre_y,left" multiline="true"  />
+					<record indx="1" font="text" alignment="centre,right" multiline="true" auto_size="vertical"/>
+				</list>
+				<list id="column_display_properties">
+					<record indx="0" alignment="left,centre_y" />
+
+				</list>
+			</record>
+			<list id="viewed_property_ids">
+
+				<integer value="PHgh" />
+				<integer value="DRsd" />
+				<integer value="THic" />
+
+			</list>
+		</widget>
+
+	</container>
+
+</panel>

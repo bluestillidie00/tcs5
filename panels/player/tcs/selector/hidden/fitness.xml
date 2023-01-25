@@ -1,0 +1,29 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
+
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" />
+			<!-- PERSONAL INFORMATION TABLE -->
+			<widget class="client_object_label_value_table" id="tPer" auto_size="vertical">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+
+				<record id="table_properties">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" auto_size_rows="true" fixed_size_rows="false" row_spacing="0"/>
+					<string id="layout" value="-3,-4" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" auto_size="vertical" style="bold" />
+						<record indx="1" alignment="left,centre_y" />
+					</list>
+				</record>
+
+				      <list id="viewed_property_ids">
+                    <integer value="Pcon" />
+                    <integer value="Pfit" />
+                    <integer value="Pjad" />
+                </list>
+			</widget>
+		</container>
+	</container>
+
+</panel>

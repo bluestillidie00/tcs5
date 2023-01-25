@@ -1,0 +1,86 @@
+<panel>
+    <container id="SUBP" class="inner_box_no_margin" >
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    </container>
+
+    <widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true" navigation_focus_target="true">
+        <layout class="stick_to_sides_attachment" alignment="right,top" inset="2"/>
+    </widget>
+
+    <!--   <widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title" late_loading="true">
+		<string id="create_if" value="show_person_achievement_history"/>
+    <translation id="title" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+  </widget> -->
+
+    <!-- POSITIONS -->
+    <widget class="player_positions_indicator_panel" id="Ppos" file="player/tcs/alt/position" navigation_container="true" default_focus="true" >
+        <record id="object_property" get_property="objt" set_property="objt"/>
+        <translation id="title" translation_id="333996" type="use" />
+    </widget>
+
+    <widget file="player/tcs/selector/big/per 90/tabbed" class="client_object_viewer_xml_panel" id="pe90" late_loading="true">
+        <translation id="title" translation_id="374186" type="use"/>
+        <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
+
+    <!-- ELIGBILITY -->
+    <widget class="person_information_panel" id="pEli" late_loading="true" file="player/tcs/selector/big/eligibility">
+        <translation id="title" translation_id="260816" type="use" />
+    </widget> 
+
+    <!-- MILESTONES -->
+    <widget class="player_history_achievements_panel" file="player/tcs/selector/big/milestones" id="tsAc"  late_loading="true">
+        <translation id="title" translation_id="435775" type="use" />
+    </widget>
+
+    <!-- BIOGRAPHY -->
+    <widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title" late_loading="true">
+        <string id="create_if" value="show_person_achievement_history"/>
+        <translation id="title" translation_id="295868" type="use"/>
+    </widget>
+
+    <!-- CAREER STATS -->
+    <widget class="playing_history_summary_panel" id="tsCS"  late_loading="true">
+        <translation id="title" translation_id="247605" type="use" />
+    </widget>
+
+    <!-- PLAYER GAMES IN POSITION -->
+    <widget class="player_games_in_position_panel" id="pgpp" file="player/tcs/selector/games in pos">
+        <translation id="title" translation_id="257322" type="use"/>
+    </widget>
+
+    <!-- PAST INJURIES -->
+    <widget class="player_history_injury_panel" id="tphi"  late_loading="true" file="player/tcs/selector/past injury" >
+        <translation id="title" translation_id="316626" type="use" />
+    </widget> 
+
+    <!-- PERSONAL DETAILS 
+    <widget class="player_personal_details_panel" id="pInF" file="player/tcs/selector/big/header info card" late_loading="true">
+        <translation id="title" translation_id="333981" type="use" />
+    </widget>  -->
+
+    <!-- PROS AND CONS -->
+    <widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons" late_loading="true">
+        <translation id="title" value="Pros/Cons" type="use"/>
+    </widget> 
+
+    <!-- COMPARISON -->
+    <widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison" late_loading="true">
+        <translation id="title" translation_id="420686" type="use" />
+    </widget> 
+
+    <!-- POLYGONS -->
+    <widget file="player/tcs/selector/big/polygons" id="paAn" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" type="use" translation_id="334971" />
+    </widget>    
+
+    <!-- POLYGONS -->
+    <widget file="player/tcs/selector/big/happiness" id="happ" class="client_object_viewer_xml_panel" late_loading="true" valid_for_other_team_managers="false">
+        <translation id="title" type="use" translation_id="466580" />
+    </widget>    
+
+    <widget class="player_scout_reports_panel" id="DaHu" file="player/tcs/selector/big/data hub polygon" late_loading="true">
+        <translation id="title" type="use" translation_id="447607" />
+    </widget>
+</panel>

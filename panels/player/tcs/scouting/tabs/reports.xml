@@ -1,0 +1,82 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+	<flags id="cham" value="tables/custom/league/champions/row" />
+
+	<!-- Start these panels as hidden or we get some early layouts that can throw asserts -->
+	<container id="prsC" hidden="true" class="tcs_table">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<widget class="label" font="title" colour="fg positive" alignment="left,centre_y" size="large" height="20" appearance="">
+			<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+		</widget>
+
+		<widget class="table" id="tpro" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_container="true" default_sort_column="0">
+			<list id="column_table_properties">
+				<record index="0" sort_ascending="false" />
+			</list>
+		</widget>
+
+		<widget class="text" id="nPro" auto_size="vertical" colour="faded text" multiline="true" hidden="true" />
+	</container>
+
+
+	<container id="cnsC" hidden="true" class="tcs_table">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+		<widget class="label" font="title" colour="fg negative" alignment="left,centre_y" size="large">
+			<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+		</widget>
+
+		<widget class="table" id="tcon" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_container="true" default_sort_column="0">
+			<list id="column_table_properties">
+				<record index="0" sort_ascending="false" />
+			</list>
+		</widget>
+
+		<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true" />
+	</container>
+	
+	<container id="sqdC" class="tcs_table">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" horizontal_inset="0" />
+
+					<widget class="link_button_title" id="sqcw" size="medium" alignment="left, centre_y">
+						<string id="remove_if" value="is_fmt" />
+					</widget>
+					<widget class="text" id="sqcw" font="title" size="medium" auto_size="vertical">
+						<string id="create_if" value="is_fmt" />
+					</widget>
+
+					<!--Ability list table-->
+					<widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="26,-5,-3,-3">
+						<list id="column_widget_properties">
+							<record indx="0" alignment="left,centre_y" colour="faded text" />
+							<record indx="1" alignment="left,centre_y" />
+							<record indx="2" alignment="left,centre_y" navigation_focus_target="false" />
+							<record indx="3" alignment="left,centre_y" navigation_focus_target="false" />
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0" sort_disabled="true" left="5" />
+							<record indx="1" sort_disabled="true">
+								<record id="column_heading">
+									<flags id="alignment" value="left,centre_y" />
+									<translation id="text" translation_id="227966" type="use" value="Player" />
+								</record>
+							</record>
+							<record indx="2" sort_disabled="true">
+								<record id="column_heading">
+									<flags id="alignment" value="left,centre_y" />
+									<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]" />
+									<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]" />
+								</record>
+							</record>
+							<record indx="3" sort_disabled="true">
+								<record id="column_heading">
+									<flags id="alignment" value="left,centre_y" />
+									<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]" />
+									<translation id="hint" translation_id="310136" type="use" value="Potential Ability[COMMENT: contract offer screen - comments table]" />
+								</record>
+							</record>
+						</list>
+					</widget>
+				</container>
+</panel>

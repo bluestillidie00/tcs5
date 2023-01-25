@@ -1,0 +1,8 @@
+<record>
+	<!-- preload the stuff in this folder -->
+	<boolean id="preload" value="true"/>
+  <!-- cache the xml files in this folder -->
+  <boolean id="cache" value="true"/>   
+  <!-- don't recurse the sub folders, as they are loaded separately in the settings manager -->
+  <boolean id="dont_recurse" value="true"/>
+</record>

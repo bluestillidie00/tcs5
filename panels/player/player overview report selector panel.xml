@@ -1,0 +1,115 @@
+<panel navigation_container="true">
+	<container id="SUBP">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="4,2" />
+	</widget>
+	
+	
+
+	<!-- FORM / LAST 5 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la5g" late_loading="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" translation_id="395236" type="use"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 5 games">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 10 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la10" late_loading="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 10 games">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 20 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la20" late_loading="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 20 Matches)"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 5 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="lb5g" late_loading="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" translation_id="395236" type="use"/>
+		<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 5 games_bar">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 10 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="lb10" late_loading="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
+		<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 10 games_bar">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 20 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="lb20" late_loading="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 20 Matches)"/>
+		<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+	
+		<!--  HISTORY / PAST INJURIES -->
+	<widget class="player_history_injury_panel" id="tphi" late_loading="true" file="player/tcs/selector/past injury">
+		<translation id="title" translation_id="316626" type="use"/>
+	</widget>
+
+	<!-- HISTORY / PROGRESS -->
+	<widget class="client_object_viewer_xml_panel" file="widgets/client object progress graph" section="Pgrg" id="Pgrg" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/>
+	</widget>
+	
+		<!-- REPORTS / PROS AND CONS ONLY -->
+	<container class="player_scout_reports_panel" id="tPCo" file="player/tcs/selector/header/tcs pros cons only" late_loading="true">
+		<translation id="title" type="use" value="Pros and Cons"/>
+	</container>
+
+	<!-- REPORTS / COMPARISON -->
+	<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison no title" late_loading="true">
+		<translation id="title" translation_id="420686" type="use"/>
+	</widget>
+
+	<!-- ATTRIBUTE ANALYSER -->
+	<widget file="player/player attribute analyser panel" id="paAn" class="client_object_viewer_xml_panel" late_loading="true">
+		<translation id="title" translation_id="334971" type="use"/>
+	</widget>
+
+	<!-- DNA -->
+	<widget file="player/tcs/selector/big/team dna" class="client_object_viewer_xml_panel" id="pDNA" late_loading="true">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<translation id="title" type="use" value="DNA" />
+	</widget>
+	
+	    <!-- ELIGBILITY -->
+    <widget class="person_information_panel" id="pEli" late_loading="true" file="player/tcs/selector/big/eligibility" >
+        <translation id="title" translation_id="260816" type="use" />
+    </widget> 
+
+</panel>

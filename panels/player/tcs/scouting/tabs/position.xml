@@ -1,0 +1,138 @@
+<!-- CREDIT TO FME FOR LARGE PORTION OF CODE -->
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="player_scout_reports_panel" file="">
+
+		<record id="object_property" get_property="objt" set_property="objt" />
+
+
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+			<string id="skin_style" value="title link"/>
+
+			<!-- Header -->
+			<widget class="link_button" section="Ptac" auto_size="all" navigation_focus_target="false">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="6"/>
+				<translation id="text" translation_id="230082" type="use" value="Positions"/>
+			</widget>
+
+			<!-- Popup menu for highlighting attributes -->
+			<widget class="popup_table_button" appearance="buttons/subtle/normal/button" id="hipo" item_file="tactics/positions indicator highlight menu" fixed="true" select_event="high" auto_size="all">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="32"/>
+				<translation id="text" translation_id="383368" type="use" value="Highlight[COMMENT: FR 10661; player overview positions panel; label for popup button displaying position highlighting options]"/>
+			</widget>
+		</container>
+
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-8,-12" />
+			<!-- Pitch -->
+			<widget class="pitch_with_player_positions" id="ppip" height="181" vertical="false" pitch_alignment="centre,can_scale" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4" appearance="boxes/custom/pitch selection/paper" pitch_base_appearance="tcs" pitch_perspective="0.05"/>
+
+			<container class="vertical_arrange_container" alignment="top,extend" gap="4">
+
+				<widget class="text" id="Psid" colour="faded text" auto_size="vertical" alignment="centre"/>
+
+				<!-- Label -->
+				<widget id="r+dl" class="text" font="title" auto_size="vertical" colour="accent">
+					<translation id="text" translation_id="363721" type="use" value="Role and Duty[COMMENT: FR 8989 - title for a panel allowing choosing of the role and duty for a player]"/>
+				</widget>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<!-- Info labels for when the data isn't available-->
+					<container id="inFC">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4"/>
+
+						<widget class="text" id="nrLb" auto_size="vertical" hidden="true">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+							<translation id="text" translation_id="383562" type="use" value="No suitable best roles for this position[COMMENT: FR 10661; player overview positions indicator; string displayed when the player is not good enough in a position to have a 'best role' for it]" />
+						</widget>
+						<widget class="text" id="arbs" auto_size="vertical" hidden="true">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+							<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]"/>
+						</widget>
+						<widget class="text" id="pool" auto_size="vertical" hidden="true">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+							<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]"/>
+						</widget>
+						<widget class="button" id="scPb" click_event="sctc" auto_size="all" height="30" hidden="true">
+							<translation id="text" translation_id="243421" type="use" value="Scout Player"/>
+							<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+						</widget>
+					</container>
+
+					<!-- Best roles for selected position -->
+					<container>
+						<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,0,0,0"/>
+
+						<widget class="table" id="Rcon" layout="76, 14, -1" auto_size_rows="false" row_height="34" row_spacing="1" column_spacing="2" mode="select_rows,stripe_rows,dont_allow_clear_selection,dont_allow_click_unselect_single" select_event="sdst" sort_disabled="true">
+							<translation id="hint" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]"/>
+
+							<record id="default_properties">
+								<translation id="hint" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]"/>
+							</record>
+
+							<record id="table_properties">
+								<list id="column_table_properties">
+									<record index="0" left="2">
+										<record id="widget_info" alignment="centre,centre_y"/>
+									</record>
+									<record index="1" right="-3">
+										<record id="widget_info" alignment="right,centre_y"/>
+									</record>
+									<record index="2" right="8">
+										<record id="widget_info" appearance="" font="text" alignment="left,centre_y,can_scale"/>
+									</record>
+								</list>
+							</record>
+
+							<!-- <flags id="selected_appearance" value="tables/custom/selected position/row" /> -->
+
+							<widget class="stars_range_strip" id="roS1" row="0" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt1" row="0" col="1"/>
+							<widget class="popup_button" id="dut1" row="0" col="2" column_span="2"/>
+
+							<widget class="stars_range_strip" id="roS2" row="1" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt2" row="1" col="1"/>
+							<widget class="popup_button" id="dut2" row="1" col="2" column_span="2"/>
+
+							<widget class="stars_range_strip" id="roS3" row="2" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt3" row="2" col="1"/>
+							<widget class="popup_button" id="dut3" row="2" col="2" column_span="2"/>
+
+							<widget class="stars_range_strip" id="roS4" row="3" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt4" row="3" col="1"/>
+							<widget class="popup_button" id="dut4" row="3" col="2" column_span="2"/>
+
+							<widget class="stars_range_strip" id="roS5" row="4" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt5" row="4" col="1"/>
+							<widget class="popup_button" id="dut5" row="4" col="2" column_span="2"/>
+
+							<widget class="stars_range_strip" id="roS6" row="5" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt6" row="5" col="1"/>
+							<widget class="popup_button" id="dut6" row="5" col="2" column_span="2"/>
+
+							<widget class="stars_range_strip" id="roS7" row="6" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt7" row="6" col="1"/>
+							<widget class="popup_button" id="dut7" row="6" col="2" column_span="2"/>
+
+							<widget class="stars_range_strip" id="roS8" row="7" col="0" image_alignment="centre"/>
+							<widget class="info_icon_hint_text" id="hnt8" row="7" col="1"/>
+							<widget class="popup_button" id="dut8" row="7" col="2" column_span="2"/>
+						</widget>
+
+					</container>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

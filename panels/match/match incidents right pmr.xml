@@ -1,0 +1,48 @@
+﻿<panel colour_team_names="true" colour_team_scores="true">
+  <!--background colour-->
+  <widget class="picture" id="bkcl" auto_size="vertical" file="boxes/custom/match/scoreboard/team/paper" cached="true" rthr="68" alignment="centre">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+    <layout class="centre_in_parent_attachment" alignment="vertical" />
+  </widget>
+
+  <container>
+<!-- LAST VALUE IS WIDTH FOR LOGO/KIT KEEP SAME OR BIGGER THAN BELOW VALUES -->
+    <layout class="arrange_horizontal_attachment" layout="40,-1,65" gap="10" offset="10"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+    <!--scores-->
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <!-- score -->
+      <widget class="text" id="mits" font="title" size="xlarge" alignment="right,centre_y" auto_size="horizontal" multiline="false"/>
+
+      <!-- aggregate score -->
+      <widget class="text" id="mita" font="title" size="large" alignment="right,centre_y" auto_size="horizontal" multiline="false"/>
+
+    </container>
+
+    <!-- team name -->
+    <widget class="text" id="mitn" font="title" size="xlarge" style="semi_bold" alignment="centre" multiline="false"/>
+
+<!-- CONTROLS SIZE OF LOGO/KIT -->
+		<container height="50" width="65" >
+<!-- If you only want either the kit or the logo rather than both delete the below line and then delete the lines for either the kit or logo-->	
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="4" />
+			<!-- Logo -->
+			<widget class="match_team_logo_picture" id="TeLo" image_alignment="right" scale_picture="true" keep_aspect_ratio="true" alignment="right">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" /> 
+			</widget>
+			<!-- Kit -->
+			<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="left" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,2,0" /> 
+			</widget>
+			
+			
+		</container>
+
+  </container>
+
+</panel>

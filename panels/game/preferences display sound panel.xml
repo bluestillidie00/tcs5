@@ -1,0 +1,262 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+	<set_var name="normal_button_table_props">
+		<record layout="-3,275" sort_disabled="true">
+			<integer id="row_spacing" value="5" />
+			<list id="column_widget_properties">
+				<record index="1" appearance="buttons/standard/normal/button" />
+			</list>
+		</record>
+	</set_var>
+	
+	<container class="main_box">
+		<translation id="text" translation_id="333864" type="use" value="Interface[COMMENT: preferences: User Interface settings section title]" />
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+		<!-- General -->
+		<container class="inner_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+			<container id="skin" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="skin" />
+				</list>
+			</container>
+
+			<container class="inner_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" />
+				<container id="clbm" file="game/colour blind settings panel">
+					<attachment_group class="vertical_arrange_autosize" />
+				</container>
+			</container>
+
+			<container id="uizl">
+				<container id="ui_zoom_level" file="game/preferences item"  >
+					<list id="viewed_property_ids">
+						<symbol value="ui_zoom_level" />
+					</list>
+				</container>
+			</container>
+
+			<container id="grap">
+				<container id="ui_zoom_level" file="game/preferences item"  >
+					<list id="viewed_property_ids">
+						<symbol value="ui_zoom_level" />
+					</list>
+				</container>
+			</container>
+
+			<container id="show_in_game_editor" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="show_in_game_editor" />
+				</list>
+			</container>
+
+			<container id="allow_note_indicator_icons" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="allow_note_indicator_icons" />
+				</list>
+			</container>
+
+			<container id="force_small_sidebar" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="force_small_sidebar" />
+				</list>
+			</container>
+
+			<container id="position_abbreviations_in_english" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="position_abbreviations_in_english" />
+				</list>
+			</container>
+
+			<container id="highlight_links_in_text" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="highlight_links_in_text" />
+				</list>
+			</container>
+
+			<container id="overview_context_customisation" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="overview_context_customisation" />
+				</list>
+			</container>
+
+			<container id="scrollbar_use_kinetic_scrolling" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="scrollbar_use_kinetic_scrolling" />
+				</list>
+			</container>
+
+			<container id="scrollbar_kinetic_delta_to_v" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="scrollbar_kinetic_delta_to_v" />
+				</list>
+			</container>
+
+			<container id="tooltip_speed" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="tooltip_speed" />
+				</list>
+			</container>
+
+			<container class="inner_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+				<attachment class="hide_empty_container_attachment" min_value="0"/>
+
+				<widget class="game_settings_viewer_panel" id="set1" concat_hint="true">
+
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<record id="table_properties" layout="-3,260">
+						<integer id="row_spacing" value="5" />
+					</record>
+					<list id="viewed_property_ids">
+						<symbol value="enable_hdr_preference" />
+					</list>
+				</widget>
+
+				<widget class="game_settings_viewer_panel" id="set1" concat_hint="true">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<record id="table_properties" layout="-3,260">
+						<integer id="row_spacing" value="5" />
+					</record>
+					<list id="viewed_property_ids">
+						<symbol value="hdr_luminance_level" />
+					</list>
+				</widget>
+
+			</container>
+
+
+		</container>
+
+		<!-- Skinning -->
+		<container class="inner_box">
+			<translation id="text" translation_id="230230" type="use" value="Skin" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+			<container id="cache_skin" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="cache_skin" />
+				</list>
+			</container>
+
+			<container id="always_reload_skin" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="always_reload_skin" />
+				</list>
+			</container>
+
+			<container id="show_unique_ids" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="show_unique_ids" />
+				</list>
+			</container>
+
+			<container id="use_colour_blind_colours" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="use_colour_blind_colours" />
+				</list>
+			</container>
+
+		</container>
+
+		<!-- Player -->
+		<container class="inner_box">
+			<translation id="text" translation_id="330320" type="use" value="Player Screen[COMMENT: preferences: player screen ui settings section title]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+			<container id="default_player_section" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="default_player_section" />
+				</list>
+				<var id="table_properties" name="normal_button_table_props" />
+			</container>
+
+			<container id="show_generated_portraits" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="show_generated_portraits" />
+				</list>
+			</container>
+
+			<container id="display_natural_positions_only" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="display_natural_positions_only" />
+				</list>
+			</container>
+
+			<container id="disable_player_browser_history" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="disable_player_browser_history" />
+				</list>
+			</container>
+
+			<container id="sort_attributes_using_english" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="sort_attributes_using_english" />
+				</list>
+			</container>
+		</container>
+
+		<!-- Team -->
+		<container class="inner_box">
+			<translation id="text" translation_id="330499" type="use" value="Team Screen[COMMENT: preferences: team screen ui settings section title]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+			<container id="default_team_club_section" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="default_team_club_section" />
+				</list>
+				<var id="table_properties" name="normal_button_table_props" />
+			</container>
+
+			<container id="info_popup_on_click" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="info_popup_on_click" />
+				</list>
+			</container>
+
+			<container id="show_shirt_names_on_tactics_panel" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="show_shirt_names_on_tactics_panel" />
+				</list>
+			</container>
+		</container>
+
+		<!-- Competition -->
+		<container class="inner_box">
+			<translation id="text" translation_id="336228" type="use" value="Competition Screen[COMMENT: preferences: club screen ui settings section title]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+			<container id="default_comp_section" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="default_comp_section" />
+				</list>
+				<var id="table_properties" name="normal_button_table_props" />
+			</container>
+		</container>
+
+		<!-- Processing -->
+		<container class="inner_box">
+			<translation id="text" translation_id="243215" type="use" value="Processing" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+			<container id="continue_game_timeout" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="continue_game_timeout" />
+				</list>
+				<var id="table_properties" name="normal_button_table_props" />
+			</container>
+
+			<container id="fast_network_game" file="game/preferences item"  >
+				<list id="viewed_property_ids">
+					<symbol value="fast_network_game" />
+				</list>
+			</container>
+		</container>
+	</container>
+
+
+
+</panel>

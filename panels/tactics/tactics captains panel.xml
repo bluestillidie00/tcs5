@@ -1,0 +1,81 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="vabl">
+		<layout class="arrange_horizontal_attachment" layout="-4, -3" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<widget class="team_squad_panel" id="tesq" file="tactics/team squad captain views" />
+
+		<container navigation_container="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container class="tcs_box" >
+				<translation id="title" translation_id="247736" type="use" value="Captains" />
+				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="12" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--  group box holding instruction table for layout purposes  -->
+				<widget class="table" id="sptt" mode="fill_custom_rows,drop_on_rows" layout="45, -1" sort_disabled="true" row_spacing="2" auto_size="vertical">
+
+					<list id="column_widget_properties">
+						<record index="0">
+							<boolean id="sort_ascending" value="false" />
+						</record>
+						<record index="1" id="Pers">
+							<boolean id="sort_ascending" value="false" />
+							<flags id="alignment" value="left,centre_y" />
+						</record>
+
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0">
+							<boolean id="sort_disabled" value="true" />
+						</record>
+						<record index="1" right="2">
+							<boolean id="sort_disabled" value="true" />
+						</record>
+					</list>
+
+					<widget class="picture" row="0" column="0" drag="false" file="icons/custom/promises/captain" image_alignment="centre" width="40">
+					</widget>
+					<widget class="popup_button" id="capp" row="0" column="1" auto_tick_exclusive="true">
+						<record id="select_event" event_id="chca" index="0" />
+					</widget>
+
+					<widget class="picture" row="1" column="0" file="icons/custom/promises/vice captain" image_alignment="centre" width="40">
+					</widget>
+					<widget class="popup_button" id="vcap" row="1" column="1" auto_tick_exclusive="true">
+						<record id="select_event" event_id="chca" index="1" />
+					</widget>
+				</widget>
+
+				<widget class="horizontal_divider" />
+
+				<container>
+					<!--<layout class="arrange_vertical_attachment" alignment="top,extend" gap="10" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />-->
+
+					<layout class="arrange_vertical_attachment" layout="25,-1,25" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+					<widget class="text" font="title" auto_size="vertical">
+						<translation id="text" translation_id="344908" type="use" value="Stand-Ins[COMMENT: title for an area to pick who you want as your stand-in captains if your regular captain and vice captain are unavailable]" />
+					</widget>
+
+					<widget class="set_piece_takers_panel" id="capt" captains="true" file="tactics/set piece takers captains" />
+
+					<widget class="check_box" id="tesC" click_event="tesE">
+						<string id="remove_if" value="disable_friendlies"/>
+						<translation id="text" translation_id="509202" type="use" value="Allow testimonial player to captain the team[COMMENT: AREA: Tactics; SUB-AREA: Captains; FR-BN: 28807; TONE: Formal; CHARLIMIT: None; NOTE: Check box label denoting whether a testimonial player will be given the captaincy for his testimonial match]" />
+					</widget>
+					
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

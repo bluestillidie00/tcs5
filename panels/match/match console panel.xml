@@ -1,0 +1,139 @@
+﻿<panel floating_container_appearance="boxes/floating/standard/paper"
+       hot_area_right_image="icons/custom/docking/right"
+       default_display_position="8,140">
+
+	<record id="docking_zone_appearance">
+		<flags id="appearance" value="boxes/main/standard/paper"/>
+		<flags id="background_colour" value="bg darker"/>
+	</record>
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<boolean id="wants_mouse_events" value="true" />
+
+	<float id="minimised_docking_zone_width" value="42.0" />
+	<float id="minimised_docking_zone_height" value="42.0" />
+
+	<!--dockable content-->
+	<list id="items">
+		<!-- Match widget - this is a document so fills the rest of the remaining screen space-->
+		<record id="hilp" content_type="1">
+			<string id="text" value="Match Highlights" />
+			<record id="widget_info">
+				<symbol id="class" value="match_highlights_panel" />
+				<string id="file" value="match/match highlights small" />
+			</record>
+		</record>
+
+		<!-- Match full window widget - this is a document so fills the rest of the remaining screen space-->
+		<record id="over" content_type="1">
+			<string id="text" value="Match Full Window Panel" />
+			<record id="widget_info">
+				<symbol id="class" value="match_full_window_panel" />
+			</record>
+		</record>
+
+	</list>
+
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="-40" horizontal_inset="0" vertical_offset="0"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<!--dockable widgets go in here-->
+				<container id="Pitc" navigation_focus_target="false">
+				</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="10" vertical_inset="0"/>
+			
+			
+				<!--match feed-->
+				<widget class="match_feed_panel" id="CnFD" width="333" hpco="true">
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="45" />
+					<record id="object_property" get_property="objt" set_property="objt" />
+		
+				</widget>
+
+				<widget class="spacer"/>
+				
+			</container>
+
+		</container>
+
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" vertical_inset="0"/>
+
+			<widget class="match_commentary_panel" id="cmif">
+
+				<attachment class="test_screen_size_attachment" skip_if_false="true">
+					<list id="properties">
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="0" />
+							<integer id="max_value" value="1200" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="650" />
+							<integer id="false_value" value="650" />
+						</record>
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="1200" />
+							<integer id="max_value" value="1366" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="775" />
+							<integer id="false_value" value="775" />
+						</record>
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="1366" />
+							<integer id="max_value" value="1600" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="900" />
+							<integer id="false_value" value="900" />
+						</record>
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="1600" />
+							<integer id="max_value" value="10000" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="1000" />
+							<integer id="false_value" value="1000" />
+						</record>
+					</list>
+				</attachment>
+
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.0" end_mode="hold_end"/>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+		</container>
+
+		<widget class="spacer" height="80"/>
+	
+	</container>
+
+		<widget class="match_caption_panel" id="MCap">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="80" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+
+
+	<!--penalty display-->
+	<widget id="PenD" class="match_penalty_shootout_display" hidden="true">
+		<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+
+
+</panel>

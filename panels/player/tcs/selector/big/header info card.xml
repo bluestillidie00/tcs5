@@ -1,0 +1,136 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <!-- THIS IS A TABLE/CARD THAT IS SHOWN ON THE PLAYER OVERVIEW PANEL-->
+    <container >
+        <layout class="vertical_arrange" vertical_layout="-11,-7,-7,-7,-7,-7" vertical_gap="0" />
+
+        <!-- TOP LINE OF INFO. IN SEPERATE CONTAINER SO WE CAN USE AN INSET -->
+        <container>
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,10" />
+
+            <!-- @@@ TOM NOTE — CHANGE BOX BORDERS. -->
+            <!-- CLUB CONTRACTED TOO -->
+            <container class="main_box">
+                <attachment class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+
+                <!-- EXTRA DETAIL -->
+                <container>
+                    <attachment class="horizontal_arrange" horizontal_layout="-7,-5" horizontal_gap="0"/>
+                    <record id="default_properties" colour="faded text" />
+                    <widget class="player_extra_details_text" id="plex" alignment="left,top">
+                        <record id="object_property">
+                            <integer id="get_property" value="PExD" />
+                        </record>
+                    </widget>		
+                </container>
+
+                <!-- CLUB AND LOGO -->
+                <container>
+                    <attachment class="horizontal_arrange" horizontal_layout="-2,-1"/>
+                    <widget class="club_button" id="Pclb" alignment="left,centre_y" icon_alignment="left">
+                        <record id="object_property" get_property="Pclb"/>
+                    </widget>
+                </container>
+            </container>
+        </container>
+
+        <!-- REPUTATION -->
+        <container class="main_subtle_box">
+            <attachment class="horizontal_arrange" horizontal_layout="-3,-2"/>
+            <widget class="label" colour="faded text">
+                <translation id="text" translation_id="227963" type="use" value="Reputation" />
+            </widget>
+            <widget class="global_reputation_stars_label" id="Prsa" alignment="right" >
+                <record id="object_property">
+                    <integer id="get_property" value="Prsa" />
+                </record>
+            </widget>
+        </container>
+
+        <!-- TRANSFER VALUE -->
+        <container class="main_box">
+            <attachment class="horizontal_arrange" horizontal_layout="-1,-2"/>
+            <widget class="label" colour="faded text">
+                <translation id="text" translation_id="227806" type="use" value="Value" />
+            </widget>
+            <widget class="value_label" id="valu" alignment="right">
+                <translation id="format" translation_id="383826" type="use" value="Valued at [%cash#1-roundsmall-short][COMMENT: FR 10661; player overview; string diaplyed a player's estimated monetary value]" />
+                <record id="object_property" get_property="Pdva" dont_set_hint="true" />
+            </widget>
+        </container>
+
+        <!-- WAGE -->
+        <container class="main_subtle_box">
+            <attachment class="horizontal_arrange" horizontal_layout="-1,-2"/>
+            <widget class="label" colour="faded text">
+                <translation id="text"  type="use"   translation_id="242353" value="Wages" />
+            </widget>
+            <widget class="link_text" id="wgex" section="Pcnr" alignment="right" />
+        </container>
+
+        <!-- TRANSFER AND LOAN STATUS -->
+        <container class="main_box" draw_vertical_dividers="true">
+            <attachment class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="30"/>
+
+            <!-- TRANSFER STATUS -->
+            <container>
+                <attachment class="horizontal_arrange" horizontal_layout="-1,-1"/>
+                <widget class="label" colour="faded text" size="normal">
+                    <translation id="text" translation_id="309185" type="use" value="Transfer " />
+                    <translation id="hint" translation_id="227953" type="use" value="Transfer Status" />
+                </widget>
+                <widget class="transfer_status_label" id="Pctr" alignment="right,can_scale"  >
+                    <record id="object_property" get_property="Pctr" />
+                </widget>
+            </container>
+
+            <!-- LOAN STATUS -->
+            <container>
+                <attachment class="horizontal_arrange" horizontal_layout="-3,-2"/>
+                <widget class="label" colour="faded text" size="normal">
+                    <translation id="text" translation_id="330195" type="use" value="Loan " />
+                    <translation id="hint" translation_id="247489" type="use" value="Loan Status" />
+                </widget>
+                <widget class="loan_status_label" id="Pcls" alignment="right,can_scale"  >
+                    <record id="object_property" get_property="Pcls" />
+                </widget>
+            </container>
+
+        </container>
+
+        <!-- AVR RATING & XG -->
+        <!-- CLEAN SHEETS ARE SUBSTITUED IN IF PLAYER IS GOALKEEPER. POTENTIALLY USE MORE -->
+        <container class="main_subtle_box" draw_vertical_dividers="true">
+            <attachment class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="30"/>
+
+            <!-- APPS -->
+            <container>
+                <attachment class="horizontal_arrange" horizontal_layout="-3,-2"/>
+                <widget class="label" colour="faded text">
+                    <translation id="text" translation_id="227845" type="use" value="Apps" />
+                    <translation id="hint" translation_id="227845" type="use" value="Appearances" />
+                </widget>
+                <widget class="appearances_label" height="25" alignment="right,centre_y" >
+                    <record id="object_property" get_property="Poap"/>
+                </widget>
+            </container>
+
+            <!-- AVR RATING -->
+            <container>
+                <attachment class="horizontal_arrange" horizontal_layout="-3,38"/>
+                <widget class="label" colour="faded text">
+                    <translation id="text" translation_id="227852" type="use" value="Average Rating" />
+                </widget>
+                <widget class="dashed_number_label" id="Poav" height="25" alignment="centre_x,centre_y" >
+                    <record id="object_property" get_property="Poav"/>
+                    <symbol id="class" value="match_rating_label_formatted" />
+                    <string id="format" value="[%fraction#1-3.2]" />
+                    <boolean id="dont_format_numeric_grouping" value="true" />
+                    <translation id="hint_if_no_value" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+                </widget>
+            </container>
+        </container>
+    </container>
+
+</panel>

@@ -1,0 +1,66 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Pfrm" auto_size="all">
+			<translation id="text" type="use" value=" Form (Last 20 Matches)" />
+		</widget>
+
+		<widget class="spacer" height="3" />
+	</container>
+
+	<!-- NO DATA -->
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>	
+
+		<!-- Stuff to show when there is no form -->
+		<container id="nofm" hidden="true" navigation_container="true" default_focus="true" navigation_container_allow_empty="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<record id="default_properties" spec="text" alignment="centre" hidden="true" colour="faded text" />
+
+			<!--explanatory text for no form being available-->
+			<widget class="text" id="nost" >
+				<translation id="text" translation_id="342459" type="use" value="Player form information is currently unavailable for this player. Add him to a shortlist to track his form.[COMMENT: Player form; Text displayed when form data is not available. Instructs the user on how to generate the data]" />
+			</widget>
+			<widget class="text" id="nodt" >
+				<translation id="text" translation_id="342781" type="use" value="This player's form is being tracked by the backroom team but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]" />
+			</widget>
+			<widget class="text" id="nobt" >
+				<translation id="text" translation_id="382400" type="use" value="This player's form is being tracked but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]" />
+			</widget>
+		</container>
+
+		<widget class="player_form_summary_panel" id="pfSm" height="220" file="none">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<widget class="graph" id="grap" draw_shadows="false" inset="0" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<record id="instant_hint">
+						<string id="format" value="[%fraction#1-3.2]"/>
+					</record>
+					<record id="default_series_properties" colour="accent" type="bar" line_width="3" point_radius="6" point_colour="accent"/>
+					<record id="x_axis" hidden="true">
+						<string id="format" value="[%fraction#1-3.0]"/>
+						<translation id="title" translation_id="242774" type="use" value="Match" />
+					</record>
+					<record id="y_axis" hidden="true">
+						<string id="format" value="[%fraction#1-3.0]"/>
+						<record id="title_font" style="vertical"/>
+						<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
+					</record>
+					<list id="grid_line_styles">
+						<record colour="graph row"/>
+						<record colour="graph row"/>
+					</list>
+				</widget>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,12 @@
+<record>
+	<string id="file_name" value="GT-America-Standard-Bold.ttf"/>
+	<real id="font_size_small" value="10" />
+	<real id="font_size_normal" value="12" />
+	<real id="font_size_large" value="13" />
+
+	<integer id="fill_colour_red" value="255" />
+	<integer id="fill_colour_green" value="255" />
+	<integer id="fill_colour_blue" value="255" />
+	<integer id="fill_colour_alpha" value="0" />
+
+</record>

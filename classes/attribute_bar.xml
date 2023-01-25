@@ -1,0 +1,25 @@
+<class class="attribute_bar" parent="position_role_duty_star_range_based_picture">
+    <list id="value_list">
+        <record value="0" file="tcs/icons/attribute bar/0" />
+        <record value="1" file="tcs/icons/attribute bar/1" />
+        <record value="2" file="tcs/icons/attribute bar/2" />
+        <record value="3" file="tcs/icons/attribute bar/3" />
+        <record value="4" file="tcs/icons/attribute bar/4" />
+        <record value="5" file="tcs/icons/attribute bar/5" />
+        <record value="6" file="tcs/icons/attribute bar/6" />
+        <record value="7" file="tcs/icons/attribute bar/7" />
+        <record value="8" file="tcs/icons/attribute bar/8" />
+        <record value="9" file="tcs/icons/attribute bar/9" />
+        <record value="10" file="tcs/icons/attribute bar/10" />
+        <record value="11" file="tcs/icons/attribute bar/11" />
+        <record value="12" file="tcs/icons/attribute bar/12" />
+        <record value="13" file="tcs/icons/attribute bar/13" />
+        <record value="14" file="tcs/icons/attribute bar/14" />
+        <record value="15" file="tcs/icons/attribute bar/15" />
+        <record value="16" file="tcs/icons/attribute bar/16" />
+        <record value="17" file="tcs/icons/attribute bar/17" />
+        <record value="18" file="tcs/icons/attribute bar/18" />
+        <record value="19" file="tcs/icons/attribute bar/19" />
+        <record value="20" file="tcs/icons/attribute bar/20" />
+    </list>
+</class>

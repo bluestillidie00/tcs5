@@ -1,0 +1,335 @@
+<panel >
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container id="norp" hidden="true">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- No scout report -->
+		<container id="csrc" class="bordered_box_no_margin">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="20" />
+
+			<widget class="spacer" height="10" />
+
+			<container id="cocs" height="70">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<!--explanatory text-->
+				<widget class="label" alignment="centre" spec="text" size="11" auto_size="vertical">
+					<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+				</widget>
+
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="button" id="sctP" click_event="sctc" alignment="centre" auto_size="horizontal" height="30">
+						<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+					</widget>
+
+				</container>
+			</container>
+
+			<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
+
+			</widget>
+			<widget class="spacer" height="10" />
+
+		</container>
+
+		<!-- No Coach Report-->
+		<container id="ccrc" class="main_box" height="150">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="label" alignment="centre" spec="text" size="large" style="semi_bold" auto_size="vertical">
+				<translation id="text" translation_id="320498" type="use" value="You need to have at least one coach at your team to compile a report on this player.[COMMENT: coach report; need staff advice]" />
+			</widget>
+			<widget class="label" auto_size="vertical" spec="text" size="large" alignment="centre" colour="faded text">
+				<translation id="text" translation_id="326089" type="use" value="You can find staff to hire via the Staff Search.[COMMENT: team report; need to scout sub advice]" />
+			</widget>
+
+			<container height="5" />
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="link_appearance_button" click_event="gtss">
+					<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
+				</widget>
+			</container>
+
+		</container>
+
+		<!-- No national report-->
+		<container id="cnrc" class="bordered_box_no_margin" height="100">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+			<widget class="spacer" height="10" />
+
+			<!--explanatory text-->
+			<widget class="label" id="info" alignment="centre" spec="text" size="11" auto_size="vertical" />
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="button" id="sctn" click_event="sctn" alignment="centre" auto_size="horizontal" height="30">
+					<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				</widget>
+
+			</container>
+
+			<widget class="spacer" height="10" />
+
+		</container>
+
+		<!-- Already being scouted -->
+		<container id="crbs" class="bordered_box_no_margin" height="80">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+			<widget class="spacer" height="15" />
+
+			<!--explanatory text-->
+			<widget class="text" id="crbt" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+			</widget>
+
+			<widget class="spacer" height="15" />
+
+		</container>
+
+		<!-- Already being scouted by pool-->
+		<container id="cool" class="bordered_box_no_margin" height="80">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+			<widget class="spacer" height="15" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+			</widget>
+
+			<widget class="spacer" height="15" />
+
+		</container>
+
+		<!-- No actions report-->
+		<container id="caSP" class="bordered_box_no_margin">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="20" />
+
+			<widget class="spacer" height="15" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="435189" type="use" value="Unavailable[COMMENT: no scouting report available; was ID 247303 but some languages need specific translations here]" />
+			</widget>
+
+			<widget class="spacer" height="15" />
+		</container>
+
+	</container>
+
+	<container draw_vertical_dividers="true" class="horizontal_adaptive_container">
+		<layout class="horizontal_arrange" horizontal_layout="-300,-600,-320"  />
+
+		<!-- LEFT -->
+		<container draw_horizontal_dividers="true" class="tcs_box" default_width="-300" priority="3" minimum_width="200">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container id="scoU" save_session_state="true" save_default_state="true" class="tcs_tabs" default_item="rep3">
+
+				<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison no title" late_loading="true">
+					<translation id="title" translation_id="248428" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<!-- PER 90 -->
+				<container id="rep5">
+					<translation id="title" value="p90" type="use"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0"/>
+
+					<container class="tcs_tabs_primary" save_default_state="true" save_session_state="true">
+
+						<widget file="player/tcs/selector/big/per 90/overall" class="player_additional_stats_panel" late_loading="true" id="pSta">
+							<translation id="title" translation_id="321151" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+
+						<widget file="player/tcs/selector/big/per 90/attacker" class="player_additional_stats_panel" late_loading="true" id="atta">
+							<translation id="title" translation_id="513775" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+
+						<widget file="player/tcs/selector/big/per 90/midfielder" class="player_additional_stats_panel" late_loading="true" id="midf">
+							<translation id="title" translation_id="513771" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+
+						<widget file="player/tcs/selector/big/per 90/defender" class="player_additional_stats_panel" late_loading="true" id="defe">
+							<translation id="title" translation_id="337861" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+
+					</container>
+				</container>
+
+				<!-- PROS AND CONS -->
+				<container id="rep3">
+					<translation id="title" type="use" value="Pros/Cons"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
+
+					<widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/pros cons no title vert" late_loading="true" >
+						<translation id="title" translation_id="420686" type="use" />
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container> 
+
+			</container>
+
+		</container>
+
+		<!-- MIDDLE -->
+		<container default_width="-600" priority="1">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<!-- ATTRIBUTES -->
+			<widget file="player/player attributes panel for scouting centre" class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true"  height="320">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<container class="tcs_tabs_primary" id="stat" save_session_state="true" save_default_state="true">
+
+				<!-- Season stats-->
+				<container priority="1" default_width="-48" navigation_container="true" id="seas">
+					<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<translation id="title" translation_id="385617" type="use" />
+					<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+						<record id="object_property">
+							<list id="get_properties">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<record id="object_property" get_property="Pila" set_property="hidn"/>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+						<record id="object_property">
+							<list id="get_properties">
+								<record id="object_property" get_property="Pila" set_property="Shwn"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<!-- FORM / LAST 5 GAMES -->
+				<widget class="player_additional_stats_panel" file="none" id="lb5g">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<translation id="title" translation_id="395236" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 5 games_bar">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</widget>
+
+				<!-- FORM / LAST 10 GAMES -->
+				<widget class="player_additional_stats_panel" file="none" id="lb10">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<translation id="title" type="use" value=" Form (Last 10)"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 10 games_bar">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</widget>
+
+				<!-- FORM / LAST 20 GAMES -->
+				<widget class="player_additional_stats_panel" file="none" id="lb0">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<translation id="title" type="use" value=" Form (Last 20)"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</widget>
+			</container>
+
+
+
+		</container>
+
+		<!-- RIGHT -->
+		<container draw_horizontal_dividers="true" default_width="-320" priority="2" minimum_width="250">
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+			<!-- POSITIONS -->
+			<widget class="player_positions_indicator_panel" id="Ppos" file="player/tcs/scouting/tabs/position" navigation_container="true" default_focus="true" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="333996" type="use" />
+			</widget>
+
+			<container class="tcs_tabs" save_session_state="true" save_default_state="true">
+
+				<!-- ATTRIBUTES -->
+				<container id="po01" icon="tcs/icons/player/att">
+					<translation id="title" translation_id="229822" type="use" value="Attributes" />
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+
+					<widget file="player/tcs/selector/big/attribute analyser" class="client_object_viewer_xml_panel">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+
+				<!-- DNA -->
+				<container id="po02" icon="tcs/icons/player/dna">
+					<translation id="title" type="use" value="DNA" />
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+
+					<widget file="player/tcs/selector/big/team dna" class="client_object_viewer_xml_panel">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+
+				<!-- ANALYST REPORT -->
+				<container id="rep4">
+					<translation id="title" translation_id="447607" type="use"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
+
+					<container>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<widget class="player_scout_reports_panel" id="PrCo" file="none" late_loading="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<!--Data hub widgets-->
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+								<widget class="player_additional_stats_panel" id="staP" file="player/player additional stats mini report">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</widget>
+
+								<widget class="data_analyst_visualisation_widget" id="visU" hidden="true" visualisation_type="polygon" data_type="player" category="defensive_wide_midfielder" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<record id="object_property" get_property="PclC" set_property="comp"/>
+								</widget>
+							</container>
+						</widget>
+					</container>
+				</container>
+
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

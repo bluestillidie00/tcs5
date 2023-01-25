@@ -1,0 +1,61 @@
+﻿<panel should_force_refresh="true" >
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_gap="-4" vertical_offset="0"/>
+
+		<container height="36">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1, 36, -1" horizontal_gap="-8"/>
+
+				<container>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container />
+
+					<!-- scored? -->
+					<widget class="picture" id="PTgs" file="icons/16px/goal" scale_picture="false" keep_aspect_ratio="true" height="16" width="16" image_alignment="right, centre_y"/>
+				</container>
+
+				<!-- squad number and icon -->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<widget class="picture" id="bsic" scale_picture="true" keep_aspect_ratio="true" file="pitch/icons/dots/large/kit" image_alignment="centre"/>
+					<widget class="label" id="bsnm" size="small" style="bold" alignment="centre"/>
+				</container>
+
+				<container >
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="16"/>
+					<layout class="stick_to_sides_attachment" alignment="top"  apply_to_children="true"/>
+					<layout class="stick_to_sides_attachment" alignment="all"/>
+
+					<record id="default_properties" image_alignment="centre" hidden="true" width="16" height="16" />
+
+					<widget class="picture" id="PTas" file="icons/16px/assist" />
+					<widget class="picture" id="PNba" file="icons/16px/yellow card" />
+					<widget class="picture" id="PHNO" file="icons/16px/debut" />
+					<widget class="picture" id="PTrt" file="icons/custom/star rating/senior/full" />
+				</container>
+
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_offset="0"/>
+
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle, extend" horizontal_gap="0"/>
+
+				<!-- name -->
+				<widget class="text" id="name" auto_size="all" alignment="centre, can_scale" multiline="false" size="small" style="bold">
+					<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+				</widget>
+
+			</container>
+		</container>
+	</container>
+</panel>

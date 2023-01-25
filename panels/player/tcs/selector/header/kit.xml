@@ -1,0 +1,29 @@
+<panel>
+	<!-- We are limiting the extend width here so our licensed kit images remain at most their maximum height of 256 so they aren't scaled -->
+	<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0">
+		<record id="auto_size_restrictions">
+			<string id="type" value="value" />
+			<integer id="value" value="256" />
+			<string id="limit_type" value="maximum" />
+			<string id="orientation" value="vertical" />
+		</record>
+	</layout>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!-- We are using a spacer here so we can limit our images size, but still remain centered in our parent -->
+	<widget class="spacer" height="1" />
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="25" horizontal_gap="0" vertical_inset="0" />
+
+		<record id="default_properties" scale_picture="true" keep_aspect_ratio="true" image_alignment="left" always_use_latest_object_list="true">
+			<record id="object_property">
+				<integer id="get_property" value="Tidx" />
+				<integer id="set_property" value="indx" />
+			</record>
+		</record>
+
+		<widget class="kit_picture" id="T_hk" kit_id="0" />
+	</container>
+
+</panel>

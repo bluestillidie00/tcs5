@@ -1,0 +1,129 @@
+<panel>
+<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="save_immediate_state" value="true" />
+
+	<integer id="transfer_row_height" value="32" />
+	<integer id="trade_row_height" value="64" />
+	<!-- main table -->
+	<container class="main_box" id="trtt" force_title_borders="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<!-- embedded buttons -->
+		<container id="btns" embed_in_frame="true" navigation_container="true">
+			<attachment_group class="title_embedded_panel_left" />
+
+			<!-- month widget (used for nation and continent views)-->
+			<widget class="embedded_left_right_list" id="mont" sele="mont" height="30" width="300" embed_in_frame="true" reverse_function="true">
+				<translation id="text" translation_id="247947" type="use" value="Month" />
+			</widget>
+
+			<!-- seasons popup -->
+			<widget class="embedded_season_selection_list" id="tsbw" save_immediate_state="true" sele="tsch" height="30" width="300" embed_in_frame="true" >
+				<global id="gap_adjustment" name="ui.split_button_row_gap" />
+			</widget>
+
+			<!-- filter button -->
+			<widget class="embedded_filter_button" id="plsf" target="trtt" auto_size="horizontal" embed_in_frame="true" />
+		</container>
+
+		<widget class="text" id="Nosi" auto_size="none" alignment="centre" hidden="true">
+			<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+		</widget>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!-- table for showing youth players and comp transfers-->
+			<widget class="table" id="tabl" save_session_state="true" save_default_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" fixed_size_rows="true" auto_size_rows="false" get_row_data_event="ustt" auto_size="none" row_height="32" >
+				<boolean id="navigation_container" value="true" />
+				<boolean id="default_focus" value="true" />
+
+				<!-- default properties adopted by every item in table -->
+				<record id="default_properties">
+					<flags id="algn" value="left,centre_y" />
+				</record>
+			</widget>
+
+			<container id="inou" draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<container class="inner_box" id="inbx" colour="fg blue" size="large">
+					<translation id="text" translation_id="260359" type="use" value="In[COMMENT: transfers section; title for box showing players in]" />
+
+					<container id="tico" embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_right" />
+
+						<widget class="text" auto_size="horizontal" height="30" size="large" colour="fg blue" embed_in_frame="true" alignment="centre">
+							<translation id="text" translation_id="242341" type="use" value="Total" />
+						</widget>
+						<widget class="text" id="tivl" auto_size="horizontal" height="30" size="large" style="bold" colour="fg blue" embed_in_frame="true" alignment="centre" />
+					</container>
+
+
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<widget class="text" id="Noin" auto_size="none" alignment="centre" hidden="true">
+							<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+						</widget>
+
+						<widget class="table" id="trin" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" auto_size_rows="false" get_row_data_event="utit" row_height="32" auto_size="none" navigation_container="true" row_spacing="2">
+							<!-- default properties adopted by every item in table -->
+							<record id="default_properties">
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</widget>
+					</container>
+
+					<widget class="icon_button" id="wati" auto_size="all" click_event="watn" controller_button="y_button">
+						<layout class="stick_to_sides_attachment" alignment="left" />
+						<translation id="text" translation_id="275840" type="use" value="Where Are They Now?" />
+					</widget>
+				</container>
+
+				<container class="inner_box" id="oubx" colour="fg yellow" size="large">
+					<translation id="text" translation_id="260360" type="use" value="Out[COMMENT: transfers section; title for box showing players out]" />
+
+					<container id="toco" embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_right" />
+
+						<widget class="text" auto_size="horizontal" size="large" colour="fg yellow" height="30" alignment="centre" embed_in_frame="true">
+							<translation id="text" translation_id="242341" type="use" value="Total" />
+						</widget>
+						<widget class="text" id="tovl" auto_size="horizontal" size="large" style="bold" colour="fg yellow" height="30" alignment="centre" embed_in_frame="true" />
+					</container>
+
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<widget class="text" id="Noou" auto_size="none" alignment="centre" hidden="true">
+							<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+						</widget>
+
+						<widget class="table" id="trou" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" auto_size_rows="true" get_row_data_event="utot" row_height="32" auto_size="none" navigation_container="true" row_spacing="2">
+							<!-- default properties adopted by every item in table -->
+							<record id="default_properties">
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</widget>
+
+					</container>
+
+					<widget class="subtle_button" id="wato" auto_size="all" click_event="watn" navigation_focus_target="true" >
+						<layout class="stick_to_sides_attachment" alignment="left" />
+						<translation id="text" translation_id="275840" type="use" value="Where Are They Now?" />
+					</widget>
+
+				</container>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

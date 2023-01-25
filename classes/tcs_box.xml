@@ -1,0 +1,3 @@
+﻿<class class="tcs_box" parent="plain_box">
+	<flags id="appearance" value="tcs/boxes/main/paper"/>
+</class>

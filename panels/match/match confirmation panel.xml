@@ -1,0 +1,98 @@
+<panel width="380">
+	<layout class="fit_children_attachment" alignment="vertical" offset="2" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="4" apply_to_children="true" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" do_not_size="true" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="14" apply_to_children="true" />
+
+		<container height="7" />
+
+		<!--warning icon and text-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" do_not_size="true"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container height="35">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" layout="26, -1" offset="0" gap="4" />
+
+				<widget class="picture" file="icons/26px/urgent" red_replacement="negative" auto_size="all" image_alignment="centre"/>
+
+				<widget class="text" size="10" multiline="true" colour="negative">
+					<translation id="text" translation_id="339576" type="use" value="Are you sure you want to leave this match to your staff?" />
+				</widget>
+			</container>
+		</container>
+
+		<widget class="spacer" height="5" />
+
+		<!--simulate match area-->
+		<container class="inner_subtle_box" id="SMCT">
+			<translation id="title" translation_id="383109" type="use" value="Simulate Match[COMMENT: button text to go through the next match leaving the result to the staff, using the full match engine to simulate the match result]" />
+
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" do_not_size="true"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="text" id="BLUB" auto_size="vertical">
+				<translation id="text" translation_id="383110" type="use" value="Simulating a match will use your currently selected tactics, along with any match plans selected below. Simulating can take up to a minute.[COMMENT: help text for choosing to use the full match engine to simulate an instant result]" />
+			</widget>
+
+			<widget class="label" id="mplb" auto_size="all">
+				<translation id="text" translation_id="339883" type="use" value="Set Match Plan[COMMENT: Match confirmation dialog; label informing user what the match plan popup does]" />
+			</widget>
+
+			<widget class="popup_button" id="pmpn" select_event="pmpn" auto_size="vertical" />
+
+			<container id="SMBC">
+				<attachment_group class="button_arrangement_right" />
+
+				<widget class="primary_button" id="conS" click_event="conS" auto_size="horizontal">
+					<translation id="text" translation_id="383109" type="use" value="Simulate Match[COMMENT: button text to go through the next match leaving the result to the staff, using the full match engine to simulate the match result]" />
+				</widget>
+			</container>
+		</container>
+
+		<widget class="spacer" height="5" id="SPAC"/>
+
+		<!--instant result area-->
+		<container class="inner_subtle_box" id="IRAR" >
+			<translation id="title" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
+
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" do_not_size="true" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" gap="4" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="text" auto_size="vertical">
+				<translation id="text" translation_id="383108" type="use" value="Instant Result will provide a quicker outcome, but your assistant will take full control of the match.[COMMENT: help text for choosing to use the quick match engine to simulate an instant result]" />
+			</widget>
+
+			<container>
+				<attachment_group class="button_arrangement_right" />
+
+				<widget class="primary_button" id="conI" click_event="conI" auto_size="horizontal">
+					<translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
+				</widget>
+			</container>
+		</container>
+
+		<widget class="spacer" height="5" />
+
+		<!--cancel button-->
+		<container>
+			<attachment_group class="button_arrangement_right" />
+
+			<widget class="primary_icon_button" id="cont" click_event="conS" width="90" auto_size="vertical" controller_button="y_button">
+				<translation id="text" translation_id="242044" type="use" value="Yes" />
+			</widget>
+			<widget class="icon_button" id="canc" click_event="canc" auto_size="all" controller_button="x_button">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

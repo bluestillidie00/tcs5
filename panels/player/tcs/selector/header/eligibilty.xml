@@ -1,0 +1,50 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Ptra" auto_size="all">
+			<translation id="text" translation_id="260816" type="use"/>
+		</widget>
+	</container>
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+		<!-- NATIONS -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<widget class="label" size="small" auto_size="vertical" colour="faded text">
+				<translation id="text" translation_id="363691" type="use"  />
+			</widget>
+			<container class="simple_data_list" id="nats" set_property="objt" alignment="horizontal,fill" >
+				<record id="object_property">
+					<integer id="get_property" value="PhgN" />
+				</record>
+				<record id="widget_properties" class="client_object_viewer_xml_panel" file="player/tcs/selector/header/eligibility logo"/>
+			</container>
+		</container>
+
+		<!-- CLUBS >-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<widget class="label" size="small" auto_size="vertical" colour="faded text">
+				<translation id="text" translation_id="363611" type="use" />
+			</widget>
+			<container class="simple_data_list" id="clbs" set_property="objt" alignment="horizontal,fill">
+				<record id="object_property">
+					<integer id="get_property" value="PhCe" />
+				</record>
+				<record id="widget_properties" class="client_object_viewer_xml_panel" file="player/tcs/selector/header/eligibility logo"/>
+			</container>
+		</container>
+	</container>
+
+</panel>

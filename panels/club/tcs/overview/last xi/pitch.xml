@@ -1,0 +1,13 @@
+﻿<panel should_force_refresh="true" >
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<widget class="pitch_with_tactics" id="pwtc" icon_flags="show_name,show_extra_details,show_number,dont_show_team_names,drop_initial_if_possible,show_preview_info_popup" player_icon_file="club/tcs/overview/last xi/player icon" pitch_draw_markings="true" pitch_line_colour="faded text" alignment="centre,can_scale">
+		<boolean id="vertical" value="true" />
+		<integer id="pitch_touchline_width_percentage" value="40" />
+		<integer id="pitch_vertical_padding" value="32" />
+		<string id="pitch_draw_grass" value="false" />
+		<string id="pitch_draw_goals" value="true" />
+		<string id="pitch_pattern" value="ui_circles" />
+		<integer id="pitch_alignment" value="centre_x,centre_y" />									
+	</widget>
+</panel>

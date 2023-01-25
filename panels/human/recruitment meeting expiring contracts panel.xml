@@ -1,0 +1,116 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="horizontal" horizontal_inset="0" vertical_offset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="inner_contrast_box" red_replacement="bg" draw_vertical_dividers="true">
+		<attachment_group class="horizontal_arrange" horizontal_layout="160, -1" vertical_alignment="vertical" horizontal_inset="0" vertical_offset="0" horizontal_gap="12" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container class="finances_summary_panel" id="WgSu" file="club/finances summary wages only panel" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend" horizontal_alignment="horizontal" horizontal_inset="8" vertical_offset="8" vertical_gap="12" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" horizontal_inset="0" vertical_offset="0" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend" horizontal_gap="8" />
+					
+					<widget class="picture" file="icons/custom/transfer deadline day/transfer status/contract offer" image_alignment="centre" scale_picture="true" height="16" width="16" red_replacement="title" />
+					<widget class="text" font="title" size="large" auto_size="vertical">
+						<translation id="text" translation_id="557785" type="use" value="Contracts expiring this season[COMMENT: AREA: UI; SUB-AREA: Recruitment meeting; FR: 4202; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: Section title for list of players who have contracts expiring over the next season]" />
+					</widget>
+				</container>
+
+				<widget class="spacer" height="4" />
+
+				<!--Tab buttons-->
+				<container id="tabc">
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_inset="0" vertical_offset="" horizontal_gap="8" />
+
+					<!-- some properties for the radio buttons to be added here for each team type -->
+					<record id="default_properties" class="radio_button" appearance="switches/recruitment focus/no normal state/button" show_button_appearance="true" icon_enabled="false" secondary_icon_enabled="true" secondary_icon="icons/26px/squad" secondary_icon_alignment="left" alignment="centre" auto_size="horizontal" />
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="client_object_list_table" id="plst" database_table_type="1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" select_event="selp" default_sort_column="Pnms" all_content_same_height="false" auto_size_rows="false" row_height="50">
+						<record id="object_property" get_property="RMex" set_property="objL" />
+
+						<list id="Spid">
+							<!-- extra properties to request that we can retrieve fromt eh player objects in the parent panel -->
+							<integer value="PcRs" />
+						</list>
+						
+						<record id="viewed_property_ids">
+							<!-- player status/info -->
+							<record id="PSpi" auto_hide_priority="4" />
+													<record id="port" auto_hide_priority="1" minimum_width="120" />
+							<!-- player name -->
+							<record id="Pnms" auto_hide_priority="1" minimum_width="110" />
+							<!-- contract expiry -->
+														<flags id="Pdva" />
+							<record id="Pcww" auto_hide_priority="3" />
+							<record id="Pced" auto_hide_priority="5" />
+							<!-- wage -->
+							<record id="Pcab" auto_hide_priority="6" />
+							<record id="Ppab" auto_hide_priority="2" minimum_width="250" />
+														<flags id="Pcpt" />
+
+							<!-- CA stars -->
+							<record id="RMea" auto_hide_priority="2" minimum_width="250" />
+							<!-- advice -->
+							<record id="RMeA" auto_hide_priority="2" />
+							<!-- apply action -->
+							<record id="RMed" auto_hide_priority="2" />
+							<!-- discuss -->
+						</record>
+					</widget>
+
+					<container id="noPc" hidden="true">
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_alignment="horizontal" horizontal_inset="0" vertical_offset="0" />
+
+						<widget class="text" id="noPt" size="large" style="bold" alignment="centre_x, centre_y" auto_size="vertical" />
+						<widget class="text" id="noPd" alignment="centre_x, centre_y" auto_size="vertical" />
+					</container>
+				</container>
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" />
+
+				<widget class="button" id="spfr" click_event="spfr" auto_size="all" disabled="true">
+					<translation id="text" translation_id="334040" type="use" value="Set For Release[COMMENT: sets the player to be released at the end of his contract]" />
+				</widget>
+				<widget class="button" id="shco" click_event="shco" auto_size="all" disabled="true">
+					<translation id="text" translation_id="557786" type="use" value="Schedule New Contract Discussions[COMMENT: AREA: Recruitment Meeting; SUB-AREA: Player status panel; FR-BN: FM-4214; NOTE: Action button label to set up contract talks with a player]" />
+				</widget>
+				<widget class="client_action_popup_button" id="trns" auto_size="all" ignore_top_level_submenus="true">
+					<translation id="text" translation_id="335505" type="use" value="Transfer[COMMENT: for all actions to do with transfers etc...]" />
+					<list id="action_id">
+						<flags value="Otcl" />
+						<flags value="staA" />
+						<flags value="Poct" />
+						<flags value="sfrp" />
+					</list>
+					<list id="HidI">
+						<flags value="stop" />
+						<flags value="psts" />
+					</list>
+				</widget>
+				<widget class="widget_popup_button" id="ResP" appearance="buttons/subtle/normal/button" icon="icons/16px/staff" auto_size="all">
+					<translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+					<string id="popup_alignment" value="centre_x, top" />
+					<string id="widget_type" value="group_responsibility_list_widget" />
+					<record id="widget_properties" file="team/staff responsibility summary popup panel" width="800" height="290" hide_multi_select_button="true" />
+					<record id="modal_popup_properties" file="modal popup panel auto sized" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

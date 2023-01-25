@@ -1,0 +1,88 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Pfrm" auto_size="all">
+			<translation id="text" translation_id="257322" type="use"/>
+		</widget>
+	</container>
+	
+		<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<!-- NO GAMES PLAYED -->
+		<widget class="label" id="nogp" alignment="centre" hidden="true" colour="faded text" />
+
+	<container class="scrolling_box">
+		<!-- games played in position table -->
+		<widget class="table" id="gpip" mode="fill_rows, stripe_rows" layout="-1,-1,-1,-1,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+			<list id="default_sort_column">
+				<integer value="club" />
+				<integer value="posi" />
+			</list>
+
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="242883" type="use" value="Pos" />
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="227845" type="use"/>
+					<translation id="text" translation_id="227844" type="use"/>
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="516212" type="use" value="Goals scored in matches for his club team[COMMENT: AREA: player development; SUB-AREA: stats per position; FR-BN: 30281; TONE: Formal/Informal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE: any other information the translator can make use of]" />
+					<translation id="text" translation_id="252894" type="use" value="Goals[COMMENT: team stat overall goals scored, short title]" />
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="516213" type="use" value="Assists in matches for his club team[COMMENT: AREA: player development; SUB-AREA: stats per position; FR-BN: 30281; TONE: Formal/Informal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE: any other information the translator can make use of]" />
+					<translation id="text" translation_id="249414" type="use" value="Assists[COMMENT: player stat: assists table label]" />
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="342768" type="use" value="Average rating in matches for his club team[COMMENT: Player's average rating across games played for his club]" />
+					<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="257325" type="use" value="Games played in this position for his national team" />
+					<translation id="text" translation_id="257324" type="use" value="Int." />
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="516214" type="use" value="Goals scored in matches for his national team[COMMENT: AREA: player development; SUB-AREA: stats per position; FR-BN: 30281; TONE: Formal/Informal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE: any other information the translator can make use of]" />
+					<translation id="text" translation_id="252894" type="use" value="Goals[COMMENT: team stat overall goals scored, short title]" />
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="516215" type="use" value="Assists in matches for his national team[COMMENT: AREA: player development; SUB-AREA: stats per position; FR-BN: 30281; TONE: Formal/Informal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE: any other information the translator can make use of]" />
+					<translation id="text" translation_id="249414" type="use" value="Assists[COMMENT: player stat: assists table label]" />
+				</record>
+				<record alignment="centre">
+					<translation id="hint" translation_id="342769" type="use" value="Average rating in matches for his national team[COMMENT: Player's average rating across games played for his nation]" />
+					<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" spec="text" />
+				<record index="1" alignment="centre, centre_y" />
+				<record index="2" alignment="centre, centre_y" />
+				<record index="3" alignment="centre, centre_y" />
+				<record index="4" alignment="centre, centre_y" />
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" left="4" id="posi" />
+				<record indx="1" id="club" sort_ascending="false" />
+				<record indx="2" id="cgol" sort_ascending="false" />
+				<record indx="3" id="cass" sort_ascending="false" />
+				<record indx="4" id="cave" sort_ascending="false" />
+
+			</list>
+		</widget>
+	</container>
+	</container>
+
+</panel>

@@ -1,0 +1,18 @@
+﻿<properties>
+	<record id="image_borders" left="8" right="8" top="1" bottom="1"/>
+	<!-- <record id="title_borders" left="8" right="8" top="28" bottom="8"/> -->
+	<record id="image_slices" left="8" right="8" top="8" bottom="8"/>
+	
+<!-- 	<integer id="text_top_inset" value="12"/>
+	<integer id="text_bottom_inset" value="0"/>
+	<integer id="text_left_inset" value="12"/>
+	<integer id="text_right_inset" value="0"/>
+ 
+	<record id="font_spec">
+		<flags id="font" value="title"/> 
+		<colour id="colr" name="title"/>
+		<flags id="size" value="normal"/>  
+	</record> -->
+	
+	<colour id="red_replacement" name="fg"/>	
+</properties>

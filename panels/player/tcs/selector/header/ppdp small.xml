@@ -1,0 +1,74 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!-- Personal Details -->
+	<container >
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<record id="icon_properties" red_replacement="bg lighter"/>
+
+		<!-- Get player status flags-->
+		<record id="object_property" get_property="Pnfo" dont_set_object="true" dont_set_hint="true"/>
+
+		<!-- Player status icon with a fitness donut as first item-->
+		<widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round" auto_size="all" alignment="bottom" offset_x="0" offset_y="4" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="top, left" inset="0" embed_in_frame="true" />
+
+			<!-- Set icon to only show: HG, Int, Hol, Trv-->
+			<integer id="type" value="0" />
+		</widget>
+
+		<!-- Nationality -->
+		<widget class="editable_client_object_property_panel" id="intc" auto_size="vertical" >
+			<record id="widget_info" class="nation_button" icon_enabled="true" auto_size="vertical" format="[%nation#1-nationality]" size="small"/>
+			<record id="widget_properties" auto_size="vertical"/>
+			<record id="object_property" dont_set_hint="true" get_property="PNat" />
+		</widget>
+
+		<!-- Age & DoB-->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="3" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+			<!-- Age -->
+			<!-- We use an editable panel here just to make it disappear when editing-->
+			<!-- fixed height as an attempt to fix 152615 -->-->
+			<widget class="editable_client_object_property_panel" id="age " height="22" auto_size="horizontal" >
+				<record id="widget_info" class="formatted_label" alignment="left,centre_y" height="22" auto_size="horizontal" size="large" style="bold" appearance="buttons/primary/normal/button">
+					<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+				</record>
+				<record id="widget_edit_info" width="0" height="0"/>
+				<record id="object_property" get_property="Page" />
+			</widget>
+
+			<!-- DoB -->
+			<widget class="editable_client_object_property_panel" id="dobl" auto_size="vertical" size="small">
+				<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="vertical" auto_size_minimum_height="22" format="([%date#1-short])"/>
+				<record id="widget_properties" height="22"/>
+				<record id="object_property" get_property="Pdob" />
+			</widget>
+		</container>
+
+		<!-- Int Caps -->
+		<widget class="international_appearances_label" id="inta" auto_size="vertical" >
+			<integer id="int_apps_label_format" value="8" />
+			<record id="object_property" dont_set_hint="true" get_property="Pist" />
+		</widget>
+
+		<!-- Youth Caps -->
+		<widget class="international_appearances_label" id="inty" auto_size="vertical" size="small">
+			<integer id="int_apps_label_format" value="9" />
+			<record id="object_property" dont_set_hint="true" get_property="Pist" />
+		</widget>
+
+		<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="small"/>
+
+<!-- 		<widget class="player_extra_details_text" size="small" auto_size="vertical" colour="fg accent"> 
+			<record id="object_property" get_property="PExD" />
+		</widget> -->
+ 
+
+	</container>
+
+</panel>

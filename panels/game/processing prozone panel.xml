@@ -1,0 +1,18 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8" />
+
+  <container class="simple_data_list" id="oBjs" set_property="objt" alignment="horizontal" auto_size="horizontal" gap="6">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="7" />
+
+    <record id="object_property" get_property="objL"/>
+    <record id="widget_properties" class="object_portrait_picture" width="35" scale_picture="true" image_alignment="centre"/>
+  </container>
+
+  <!-- Stat text -->
+  <widget class="text" id="proz" alignment="left,centre_y" colour="secondary" multiline="true" auto_size="none">
+    <!-- If you put an inset here make sure there is enough height left for 2 lines of text!-->
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+    <record id="object_property" get_property="text" set_property="text"/>
+  </widget>
+</panel>

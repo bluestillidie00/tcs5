@@ -1,0 +1,25 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<flags id="frap" value="tables/custom/fixtures/friendly/row" />
+	<flags id="cncp" value="tables/custom/fixtures/continental/row" />
+	<flags id="cpap" value="tables/custom/fixtures/cup/row" />
+
+	<widget class="table" id="upcf" mode="fill_rows, stripe_rows, printable" layout="50,25,-2,25,-1" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y" spec="text" />
+			<record index="1" alignment="centre" spec="text" colour="secondary_text" />
+			<record index="2" alignment="left,centre_y" spec="text" />
+			<record index="3" alignment="centre" spec="text" />
+			<record index="4" alignment="centre_x, centre_y" />
+		</list>
+
+		<list id="column_table_properties">
+			<record id="date" index="0" sort_disabled="true" left="5"/>
+			<record id="venu" index="1" />
+			<record id="oppo" index="2" />
+			<record id="rslt" index="3" />
+			<record id="comp" index="4" right="5"/>
+		</list>
+	</widget>
+</panel>

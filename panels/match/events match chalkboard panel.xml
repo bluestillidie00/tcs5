@@ -1,0 +1,228 @@
+<!-- added pitch change orientation code -->											
+<panel save_default_state="true">
+  <list id="views">
+    <record id="0">
+      <record id="view">
+        <!--Name, Incident, etc-->
+        <record id="InCh" />
+        <record id="Psnu" />
+        <record id="Pnam" />
+
+        <!-- Filter Popup-->
+        <record id="FilT" />
+
+        <!--Stats-->
+        <!-- Shots Gone In -->
+        <record id="sGiC" />
+        <!-- Shot missed target -->
+        <record id="MiST" />
+        <!-- Shot hit woodwork -->
+        <record id="ShWd" />
+        <!-- Shots Saved by Goalie -->
+        <record id="SSVD" />
+        <!-- Shots Blocked -->
+        <record id="SBlc" />
+        <!-- Pass Completed -->
+        <record id="PcmP" />
+        <!-- Pass Intercepted -->
+        <record id="PsIn" />
+        <!-- Received Pass -->
+        <record id="RcPs" />
+				<!-- Pass out of Pitch -->
+				<record id="POfP" />
+        <!-- Key Pass -->
+        <record id="KeYP" />
+        <!-- Chance Created -->
+        <record id="ChCr" />
+        <!-- Crosses Completed -->
+        <record id="CCPM" />
+        <!-- Crosses Intercepted -->
+        <record id="EnCi" />
+        <!-- Crosses out of Pitch -->
+        <record id="COOp" />
+        <!-- Recieved Crosses -->
+        <record id="RCCE" />
+        <!-- Headers Won -->
+        <record id="CEHW" />
+        <!-- Headers Lost -->
+        <record id="CEHL" />
+        <!-- Headers Missed -->
+        <record id="HDMS" />
+        <!-- Key Headers -->
+        <record id="CEKH" />
+        <!-- Tackles Won -->
+        <record id="CETW" />
+        <!-- Tackles Lost -->
+        <record id="CETL" />
+        <!-- Key Tackles -->
+        <record id="CEKT" />
+        <!-- Fouls Called -->
+        <record id="CEFC" />
+        <!-- Penalties Called -->
+        <record id="CEFP" />
+        <!-- Fouls Against -->
+        <record id="CEFA" />
+        <!-- Yellow Card -->
+        <record id="CEYC" />
+        <!-- Red Card -->
+        <record id="CERC" />
+        <!-- Interception -->
+        <record id="CEIN" />
+        <!-- Interception Missed -->
+        <record id="CEIM" />
+        <!-- Throw Ins -->
+        <record id="CETI" />
+        <!-- Attacking Free Kicks -->
+        <record id="CEAF" />
+        <!-- Defending Free Kicks -->
+        <record id="CEDF" />
+        <!-- Corners -->
+        <record id="CECR" />
+        <!-- Clear Cut Chances -->
+        <record id="CECc" />
+        <!-- Half Chances -->
+        <record id="CEhC" />
+        <!-- Saves Held -->
+        <record id="CESh" />
+        <!-- Saves Parried -->
+        <record id="CeSP" />
+        <!-- Saves Tipped -->
+        <record id="CESt" />
+        <!-- Offsides Called -->
+        <record id="CEOC" />
+        <!-- Dribbles -->
+        <record id="CEDr" />
+      </record>
+    </record>
+  </list>
+
+  <layout class="arrange_vertical_attachment" layout="30,19,19,-1" offset="0" gap="1" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	  <widget class="view_menu_popup_match" id="axvp" save_session_state="true" select_event="chpr" embed_in_frame="false">
+		  <list id="items">
+			  <record>
+				  <translation id="name" translation_id="232839" type="use" value="Last 5 Mins" />
+				  <integer id="id" value="0" />
+			  </record>
+			  <record>
+				  <translation id="name" translation_id="232840" type="use" value="First Half" />
+				  <integer id="id" value="1" />
+			  </record>
+			  <record>
+				  <translation id="name" translation_id="232841" type="use" value="Second Half" />
+				  <integer id="id" value="2" />
+			  </record>
+			  <record>
+				  <translation id="name" translation_id="232842" type="use" value="Extra Time" />
+				  <integer id="id" value="3" />
+			  </record>
+			  <record>
+				  <translation id="name" translation_id="232843" type="use" value="Overall" />
+				  <integer id="id" value="4" />
+			  </record>
+		  </list>
+	  </widget>
+
+    <!-- prozone logo area -->
+      <container width="100" height="30">
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="right" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="right" inset="5" />
+		  <!-- TODO:: Matt W 26/09/2019 - Bug 13328 removed prozone branding, revisit when known what replacement is-->
+        <widget class="picture" width="90" image_alignment="right,centre_y" file="" scale_picture="true" keep_aspect_ratio="true" />
+      </container>
+  </container>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal"  />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <container background_colour="shot gone in colour main" width="10">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5" />
+    </container>
+
+    <widget class="label" auto_size="horizontal" size="small" >
+      <translation id="text" translation_id="289505" type="use" value="Goal[COMMENT: Abbreviation for goal, used in goal updates on match screen]" />
+    </widget>
+
+    <container width="8"/>
+
+    <container background_colour="shot missed colour main" width="10">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5" />
+    </container>
+
+    <widget class="label" auto_size="horizontal" size="small" >
+      <translation id="text" translation_id="374162" type="use" value="Off Target[COMMENT: Player status panel; number of shots made off target]" />
+    </widget>
+
+    <container width="8"/>
+
+    <container background_colour="shot hit woodwork colour main" width="10">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5" />
+    </container>
+
+    <widget class="label" size="small" >
+      <translation id="text" translation_id="291388" type="use" value="Hit Woodwork[COMMENT - match stats; hit post or bar]" />
+    </widget>
+
+  </container>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal"  />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <container background_colour="shot saved colour main" width="10">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5" />
+    </container>
+
+    <widget class="label" auto_size="horizontal" size="small" >
+      <translation id="text" translation_id="395042" type="use" value="Saved[COMMENT: match chalkboard event type, shot saved]" />
+    </widget>
+
+    <container width="8"/>
+
+    <container background_colour="shot blocked colour main" width="10">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5" />
+    </container>
+
+    <widget class="label" size="small" >
+      <translation id="text" translation_id="394342" type="use" value="Blocked[COMMENT: FR 7486, contract offer status]" />
+    </widget>
+
+  </container>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+    
+    <widget class="chalkboard_pitch" id="Cpit" pitch_draw_ads="false" hide_linked_events="true" pitch_draw_arrows="true" pitch_keep_selected_icons="false" />
+
+    <container id="lkPC" hidden="true">
+      <animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0.0" end_value="1.0" duration="1.0" end_mode="hold_end" />
+      <animation class="fade_animation" trigger_id="hidden" trigger_value="true" start_value="1.0" end_value="0.0" duration="1.0" end_mode="hold_end" />
+
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+      <container class="bordered_box_no_margin">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+      </container>
+
+      <widget class="chalkboard_pitch" id="lnkP" pitch_draw_ads="false" hide_linked_events="true" pitch_draw_arrows="true" pitch_keep_selected_icons="false" pitch_draw_grass="false" pitch_player_icon_font="match pitch players" wants_mouse_events="true" pitch_draw_dugout="false" pitch_draw_lines="true" can_change_orientation="true" >
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+      </widget>
+
+      <widget class="icon_button" auto_size="all" icon="icons/16px/cross">
+        <event id="click_event" event_id="cLeP" event_target="lnkP" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="4" />
+        <layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+      </widget>
+      
+    </container>
+  </container>
+</panel>

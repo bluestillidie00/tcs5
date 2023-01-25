@@ -1,0 +1,1761 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<!-- FG COLOURS -->
+	<container class="scrolling_box">
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="fg colours" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg accent" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg accent" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg negative" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg negative" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg alert" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg alert" width="50">
+				</container>
+			</container>
+
+			<widget class="horizontal_subtle_divider" height="2"/>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg red" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg red" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg red darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg red darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg red lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg red lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg pink" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg pink" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg pink darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg pink darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg pink lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg pink lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg purple" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg purple" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg purple darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg purple darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg purple lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg purple lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg blue" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg blue" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg blue darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg blue darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg blue lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg blue lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg cyan" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg cyan" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg cyan darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg cyan darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg cyan lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg cyan lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg teal" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg teal" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg teal darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg teal darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg teal lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg teal lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg green" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg green" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg green darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg green darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg green lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg green lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg lime" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg lime" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg lime darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg lime darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg lime lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg lime lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg yellow" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg yellow" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg yellow darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg yellow darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg yellow lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg yellow lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg orange" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg orange" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg orange darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg orange darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg pink lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg pink lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg grey" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg grey" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg grey darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg grey darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="fg grey lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="fg grey lighter" width="50">
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+	<!-- BG COLOURS -->
+	<container class="scrolling_box">
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="bg colours" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg accent" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg accent" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg negative" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg negative" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg alert" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg alert" width="50">
+				</container>
+			</container>
+
+			<widget class="horizontal_subtle_divider" height="2"/>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg red" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg red" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg red darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg red darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg red lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg red lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg pink" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg pink" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg pink darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg pink darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg pink lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg pink lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg purple" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg purple" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg purple darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg purple darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg purple lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg purple lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg blue" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg blue" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg blue darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg blue darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg blue lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg blue lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg cyan" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg cyan" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg cyan darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg cyan darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg cyan lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg cyan lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg teal" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg teal" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg teal darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg teal darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg teal lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg teal lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg green" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg green" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg green darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg green darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg green lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg green lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg lime" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg lime" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg lime darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg lime darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg lime lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg lime lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg yellow" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg yellow" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg yellow darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg yellow darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg yellow lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg yellow lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg orange" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg orange" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg orange darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg orange darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg pink lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg pink lighter" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg grey" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg grey" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg grey darker" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg grey darker" width="50">
+				</container>
+			</container>
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="bg grey lighter" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="bg grey lighter" width="50">
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+	<!-- FG RANGE -->
+	<container class="main_box">
+		<attachment_group class="vertical_arrange_autosize" />
+		<translation id="title" type="use" value="fg range" />
+
+		<!-- FG RANGE1 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range1" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range1" width="50">
+			</container>
+		</container>		
+
+		<!-- FG RANGE2 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range2" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range2" width="50">
+			</container>
+		</container>
+
+		<!-- FG RANGE3 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range3" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range3" width="50">
+			</container>
+		</container>
+
+		<!-- FG RANGE4 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range4" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range4" width="50">
+			</container>
+		</container>
+
+		<!-- FG RANGE5 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range5" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range5" width="50">
+			</container>
+		</container>		
+
+		<!-- FG RANGE6 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range6" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range6" width="50">
+			</container>
+		</container>
+
+		<!-- FG RANGE7 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range7" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range7" width="50">
+			</container>
+		</container>
+
+		<!-- FG RANGE8-->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range8" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range8" width="50">
+			</container>
+		</container>
+
+		<!-- FG RANGE9 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range9" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range9" width="50">
+			</container>
+		</container>
+		<!-- FG RANGE10 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range10" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range10" width="50">
+			</container>
+		</container>
+
+		<!-- fg range11 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range11" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range11" width="50">
+			</container>
+		</container>		
+
+		<!-- fg range12 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range12" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range12" width="50">
+			</container>
+		</container>
+
+		<!-- fg range13 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range13" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range13" width="50">
+			</container>
+		</container>
+
+		<!-- fg range14 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range14" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range14" width="50">
+			</container>
+		</container>
+
+		<!-- fg range15 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range15" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range15" width="50">
+			</container>
+		</container>		
+
+		<!-- fg range16 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range16" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range16" width="50">
+			</container>
+		</container>
+
+		<!-- fg range17 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range17" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range17" width="50">
+			</container>
+		</container>
+
+		<!-- fg range18 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range18" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range18" width="50">
+			</container>
+		</container>
+		<!-- fg range19 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range19" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range19" width="50">
+			</container>
+		</container>
+		<!-- fg range20 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="fg range20" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="fg range20" width="50">
+			</container>
+		</container>
+
+	</container>
+
+	<!-- BG RANGE -->
+	<container class="main_box">
+		<attachment_group class="vertical_arrange_autosize" />
+		<translation id="title" type="use" value="bg range" />
+
+		<!-- bg RANGE1 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range1" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range1" width="50">
+			</container>
+		</container>		
+
+		<!-- bg RANGE2 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range2" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range2" width="50">
+			</container>
+		</container>
+
+		<!-- bg RANGE3 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range3" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range3" width="50">
+			</container>
+		</container>
+
+		<!-- bg RANGE4 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range4" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range4" width="50">
+			</container>
+		</container>
+
+		<!-- bg RANGE5 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range5" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range5" width="50">
+			</container>
+		</container>		
+
+		<!-- bg RANGE6 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range6" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range6" width="50">
+			</container>
+		</container>
+
+		<!-- bg RANGE7 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range7" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range7" width="50">
+			</container>
+		</container>
+
+		<!-- bg RANGE8-->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range8" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range8" width="50">
+			</container>
+		</container>
+
+		<!-- bg RANGE9 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range9" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range9" width="50">
+			</container>
+		</container>
+		<!-- bg RANGE10 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range10" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range10" width="50">
+			</container>
+		</container>
+
+		<!-- bg range11 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range11" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range11" width="50">
+			</container>
+		</container>		
+
+		<!-- bg range12 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range12" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range12" width="50">
+			</container>
+		</container>
+
+		<!-- bg range13 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range13" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range13" width="50">
+			</container>
+		</container>
+
+		<!-- bg range14 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range14" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range14" width="50">
+			</container>
+		</container>
+
+		<!-- bg range15 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range15" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range15" width="50">
+			</container>
+		</container>		
+
+		<!-- bg range16 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range16" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range16" width="50">
+			</container>
+		</container>
+
+		<!-- bg range17 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range17" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range17" width="50">
+			</container>
+		</container>
+
+		<!-- bg range18 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range18" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range18" width="50">
+			</container>
+		</container>
+		<!-- bg range19 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range19" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range19" width="50">
+			</container>
+		</container>
+		<!-- bg range20 -->
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<widget class="text" alignment="left,centre_y" >
+				<translation id="text" type="use" value="bg range20" />
+			</widget>
+
+			<container class="main_contrast_box" rrep="bg range20" width="50">
+			</container>
+		</container>
+	</container>
+
+	<!-- PLAYER -->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<!-- POSITION RATING -->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="Position Rating" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="poor" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="poor" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="poor_indicator" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="poor_indicator" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="awkward" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="awkward" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="unconvincing" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="unconvincing" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="competent" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="competent" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="accomplished" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="accomplished" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="natural" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="natural" width="50">
+				</container>
+			</container>		
+
+
+		</container>
+
+		<!-- TACTICS SCREEN -->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="Tactics" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="goalkeeper_line" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="goalkeeper_line" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="defender_line" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="defender_line" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="defensive_midfielder_line" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="defensive_midfielder_line" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="midfielder_line" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="midfielder_line" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="attacking_midfielder_line" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="attacking_midfielder_line" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="attacker_line" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="attacker_line" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="substitutes_line" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="substitutes_line" width="50">
+				</container>
+			</container>		
+
+
+		</container>
+
+		<!-- ATTRIBUTE HIGHLIGHTS -->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="attributes highlights" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="preferred attribute" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="preferred attribute" width="50">
+				</container>
+			</container>		
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="required attribute" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="required attribute" width="50">
+				</container>
+			</container>		
+
+		</container>
+
+	</container>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<!-- CONDITION -->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="Condition/Sharpness" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="low condition" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="low condition" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="mid condition" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="mid condition" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="high condition" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="high condition" width="50">
+				</container>
+			</container>		
+
+		</container>
+
+		<!-- RESPONSIBILITY -->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="RESPONSIBILITY" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="manager responsibility" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="manager responsibility" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="staff responsibility" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="staff responsibility" width="50">
+				</container>
+			</container>	
+
+		</container>
+
+		<!-- GRAPH -->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="SKY SPORTS" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="sky sports blue" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="sky sports blue" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="sky sports red" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="sky sports red" width="50">
+				</container>
+			</container>	
+
+		</container>
+
+		<!-- PLAYER/OBJECT COLOURS -->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" />
+			<translation id="title" type="use" value="PLAYER/OBJECT COLOURS" />
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="human controlled" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="human controlled" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="virtual player" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="virtual player" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="loan out" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="loan out" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="loan out background" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="loan out background" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="loan in" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="loan in" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="co own in" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="co own in" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="co own out" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="co own out" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="trial in" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="trial in" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="trial out" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="trial out" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="shortlisted" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="shortlisted" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="golden generation" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="golden generation" width="50">
+				</container>
+			</container>	
+
+			<container height="24">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<widget class="text" alignment="left,centre_y" >
+					<translation id="text" type="use" value="feeder club" />
+				</widget>
+
+				<container class="main_contrast_box" rrep="feeder club" width="50">
+				</container>
+			</container>	
+
+
+		</container>
+	</container>
+
+	<container class="main_box">
+	</container>
+
+	<container class="main_box">
+	</container>
+
+
+
+
+</panel>

@@ -1,0 +1,126 @@
+<panel height="60">
+	<boolean id="cancel_mouse_hide" value="true" />
+	<layout class="arrange_horizontal_attachment" alignment="left" gap="0" do_not_size="true" />
+	<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<boolean id="hide_unused_buttons" value="true" />
+
+	<container class="standard_popup_box" alignment="centre" navigation_container="true">
+
+		<layout class="arrange_horizontal_attachment" alignment="left" gap="5" offset="10" do_not_size="true" />
+		<layout class="fit_children_attachment" alignment="horizontal,fill" gap="5" offset="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+		<!--home button-->
+		<widget class="icon_button" id="homb" width="40" appearance="buttons/subtle/normal/button" icon="icons/16px/home" icon_alignment="centre">
+			<event id="click_event">
+				<flags id="event_id" value="HOME" />
+				<flags id="event_target" value="scrC" />
+			</event>
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+		</widget>
+
+		<!--Instant Result button-->
+		<widget class="icon_button" id="inst" width="40" appearance="buttons/subtle/normal/button" icon="icons/16px/whistle" icon_alignment="centre" label_disabled="true" click_event="inst">
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+			<translation id="hint" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]"/>
+		</widget>
+
+		<container class="positional_appearance_container" positional_appearance_first="buttons/subtle/split/left/button" positional_appearance_normal="buttons/subtle/split/middle/button" positional_appearance_last="buttons/subtle/split/right/button" positional_appearance_first_and_last="buttons/subtle/normal/button">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left">
+				<global id="horizontal_gap" name="ui.split_button_row_gap" />
+			</attachment_group>
+
+			<record id="default_properties" height="32" width="60" icon_alignment="centre" />
+
+			<!--previous highlight-->
+			<widget class="match_playback_control_button" id="pskp" icon="icons/26px/skip back" control_type="skip" control_direction="backward">
+				<translation id="hint" translation_id="247351" type="use" value="Previous Highlight" />
+				<record id="primary_icon_properties" red_replacement="button_icon" />
+			</widget>
+
+			<!-- rewind / nudge rewind 10s-->
+			<widget class="match_playback_control_button" id="pre1" icon="icons/26px/skip back 10" control_type="wind" control_direction="backward" control_increment="10">
+				<translation id="hint" translation_id="515064" type="use" value="Rewind 10s[COMMENT: AREA: Match; SUB-AREA: Match playback controls; FR-BN: 25605; TONE: Formal; CHARLIMIT: None; REF-ID: 289544; NOTE: option for the user to rewind the match by ten seconds]" />
+				<record id="primary_icon_properties" red_replacement="button_icon" />
+			</widget>
+
+			<!-- rewind / nudge rewind -->
+			<widget class="match_playback_control_button" id="prew" icon="icons/26px/rewind" control_type="wind" control_direction="backward">
+				<translation id="hint" translation_id="289544" type="use" value="Rewind[COMMENT - match screen; button to rewind through highlights]" />
+				<record id="primary_icon_properties" red_replacement="button_icon" />
+			</widget>
+
+			<!--replay highlight-->
+			<widget class="icon_button" id="repl" icon="icons/26px/replay">
+				<translation id="text" translation_id="247350" type="use" value="Replay" />
+				<record id="primary_icon_properties" red_replacement="button_icon" />
+			</widget>
+
+			<!-- "live" button -->
+			<widget class="icon_button" id="live" alignment="centre" auto_size="horizontal" height="32">
+				<translation id="text" translation_id="289352" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live]" />
+				<translation id="hint" translation_id="289353" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live, hint tooltip]" />
+			</widget>
+
+			<!-- fast forward / nudge forward -->
+			<widget class="match_playback_control_button" id="pff " icon="icons/26px/fast forward" control_type="wind" control_direction="forward">
+				<translation id="hint" translation_id="289545" type="use" value="Fast Forward[COMMENT - match screen; button to fast forward through highlights]" />
+				<record id="primary_icon_properties" red_replacement="button_icon" />
+			</widget>
+
+			<!-- fast forward / nudge forward 10s-->
+			<widget class="match_playback_control_button" id="pff1" icon="icons/26px/skip forward 10" control_type="wind" control_direction="forward" control_increment="10">
+				<translation id="hint" translation_id="515065" type="use" value="Fast Forward 10s[COMMENT: AREA: Match; SUB-AREA: Match playback controls; FR-BN: 25605; TONE: Formal; CHARLIMIT: None; REF-ID: 289545; NOTE: option for the user to fast forward the match by ten seconds]" />
+				<record id="primary_icon_properties" red_replacement="button_icon" />
+			</widget>
+
+			<!--next highlight-->
+			<widget class="match_playback_control_button" id="pskn" icon="icons/26px/skip forward" control_type="skip" control_direction="forward">
+				<translation id="hint" translation_id="247352" type="use" value="Next Highlight" />
+				<record id="primary_icon_properties" red_replacement="button_icon" />
+			</widget>
+
+		</container>
+
+		<container class="positional_appearance_container" positional_appearance_first="buttons/subtle/split/left/button" positional_appearance_normal="buttons/subtle/split/middle/button" positional_appearance_last="buttons/subtle/split/right/button" positional_appearance_first_and_last="buttons/subtle/normal/button">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left">
+				<global id="horizontal_gap" name="ui.split_button_row_gap" />
+			</attachment_group>
+
+			<record id="default_properties" height="32" width="60" icon_alignment="centre" />
+
+			<!--save match-->
+			<widget class="icon_button" id="svmt" click_event="svmt" icon="icons/custom/highlights/save">
+				<global id="hidden" name="platform_is_stadia" />
+				<translation id="hint" translation_id="232965" type="use" value="Save Match" />
+			</widget>
+
+			<!--leave match-->
+			<widget class="icon_button" id="LeaM" click_event="lvmt" icon="icons/custom/highlights/exit highlights">
+				<translation id="hint" translation_id="281358" type="use" value="Leave Match[COMMENT: match screen; when user is viewing a match; button to leave the match]" />
+			</widget>
+
+		</container>
+
+		<!-- DEBUG load game button -->
+		<widget class="popup_button" id="lGbu" width="100" icon_alignment="centre" text="DEBUG" fixed="true" hidden="true">
+
+			<list id="items">
+				<record id="1">
+					<translation id="text" translation_id="248149" type="use" value="Load Game" />
+					<flags id="event_id" value="OPN?" />
+					<flags id="event_target" value="glob" />
+				</record>
+				<record id="2">
+					<translation id="text" translation_id="327247" type="use" value="Quit to Start Screen[COMMENT: Menu option to exit current game and return to start screen]" />
+					<flags id="event_id" value="MAMR" />
+					<flags id="event_target" value="scrC" />
+				</record>
+			</list>
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+		</widget>
+
+	</container>
+</panel>
