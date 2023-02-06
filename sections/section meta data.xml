@@ -2562,6 +2562,21 @@ this file contains a list of all of the sections in the game
 				<symbol id="class" value="youth_development_team_overview" />
 			</record>
 		</record>
+		
+				<record id="ydSQ" section="ydSQ" SaiC="true">
+			<translation id="text" translation_id="229527" type="use" value="Squad" />
+			<record id="widget_info">
+				<symbol id="class" value="team_squad_panel" />
+				<string id="should_add_bullets" value="false" />
+			</record>
+		</record>		
+			
+		<record id="ydFi" section="ydFi" SaiC="true">
+			<translation id="text" translation_id="242258" type="use" value="Fixtures" />
+			<record id="widget_info">
+				<symbol id="class" value="fixtures_list_panel" />
+			</record>
+		</record>
 
 		<record id="ydTT" section="ydTT" SaiC="true">
 			<translation id="text" translation_id="282227" type="use" value="Tactics[COMMENT: match analysis panel; title header]" />
