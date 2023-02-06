@@ -330,7 +330,7 @@
 			</widget>
 		</container> 
 
-		<!-- ANALYST REPORT -->
+		<!-- ANALYST REPORT 
 		<container id="rep4">
 			<translation id="title" translation_id="447607" type="use"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
@@ -343,6 +343,6 @@
 				</widget>
 			</container>
 
-		</container>
+		</container> -->
 	</container>
 </panel>
