@@ -98,9 +98,10 @@
 			<record id="object_property" get_property="PGR9"/>
 		</widget>
 
+
 		<!-- 2ND ROW / HIGH -->
 		<widget class="text" row="1" col="0" font="label" style="bold" >
-			<translation id="text" type="use" value="! High" />
+			<translation id="text" type="use" translation_id="396045" />
 		</widget>		
 
 		<!-- TACKLES -->
@@ -133,10 +134,10 @@
 			<translation id="text" type="use" value="6.24" />
 		</widget>		
 
-		<!-- 3RD ROW / MEDIUM -->
-		<widget class="text" row="2" col="0" style="bold" font="label">
-			<translation id="text" type="use" value="! Medium" />
-		</widget>		
+	<!-- 2ND ROW / HIGH -->
+		<widget class="text" row="2" col="0" font="label" style="bold" >
+			<translation id="text" type="use" translation_id="396077" />
+		</widget>	
 
 		<!-- TACKLES -->
 		<widget class="text" row="2" col="1" >
@@ -168,10 +169,12 @@
 			<translation id="text" type="use" value="3.87" />
 		</widget>		
 		
-		<!-- 4TH ROW / MEDIUM -->
-		<widget class="text" row="3" col="0" style="bold" font="label">
-			<translation id="text" type="use" value="! Low" />
-		</widget>		
+
+
+		<!-- 2ND ROW / HIGH -->
+		<widget class="text" row="3" col="0" font="label" style="bold" >
+			<translation id="text" type="use" translation_id="433573" />
+		</widget>	
 	
 		<!-- TACKLES -->
 		<widget class="text" row="3" col="1" >
