@@ -219,7 +219,7 @@
 				<!-- version label-->
 				<widget class="text" auto_size="all" colour="fg alpha" size="small">
 					<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="20,30" />
-					<translation id="text" type="use" value="WTCS5 v1.1" />
+					<translation id="text" type="use" value="WTCS5 v1.3" />
 
 				</widget>
 		
