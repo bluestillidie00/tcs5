@@ -94,19 +94,33 @@
 		</container>
 	</container>
 
-	<!-- Positions -->
-	<widget class="player_positions_indicator_panel" id="Ppos" file="none" navigation_container="true" default_focus="true" >
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<layout class="stick_to_sides_attachment" apply_to_children="true" inset="16,0,16,0"/>
+	<container  class="tcs_table"> 
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-		<!-- Pitch -->
-		<widget class="pitch_with_player_positions" id="ppip" height="122" vertical="false" pitch_alignment="centre,can_scale" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4">
+		<container id="botc" class="player_profile_panel" file="none">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<widget class="label" auto_size="vertical" font="title" colour="text">
+				<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+			</widget>
 
-			<!-- Set the icon to use for people on the pitch. The icon will first look for a size that matches the pitch's size, for instance 'pitch/icons/kit/tiny/kit' or 'pitch/icons/kit/medium/kit'.
-          If an icon for the size category is not found it will try the base path: pitch/icons/kit/kit. This means that if you want to use an icon on a pitch that will only ever be one size you 
-          can just provide the base and not worry about the tiny/small/medium/large size categories -->
-			<string id="pitch_kit_icon" value="pitch/icons/dots" />
-		</widget>
-	</widget>
+			<container class="scrolling_box">
+
+				<container>
+					<layout class="vertical_arrange" vertical_alignment="top"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill"/>
+
+					<widget class="preferred_moves_panel" auto_size="vertical" file="player/player information preferred moves" id="pfmp">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+
 
 </panel>
