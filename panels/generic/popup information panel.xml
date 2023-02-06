@@ -18,8 +18,8 @@
 					<widget class="player_personal_details_panel" id="deat" file="player/player personal details popup panel"  />
 				</container>
 
-				<container id="Sdet">
-					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<container id="Sdet" class="main_contrast_box" rrep="primary">
+					<attachment_group  class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 					<widget class="non_player_personal_details_panel" id="deat" file="non_player/non player personal details popup panel"  />
 				</container>
 			</container>
