@@ -1,0 +1,184 @@
+﻿<!-- A panel showing various bits of information about a player -->
+<panel  height="170">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="main_box" id="popu">
+		<layout class="arrange_horizontal_attachment" layout="-1, 275" offset="0" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" layout="130, -1, 10, 1" offset="0" gap="0"/>
+
+			<!-- Profile picture -->
+			<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" >
+				<record id="object_property">
+					<list id="get_properties">
+						<!--Facegen data request-->
+						<record get_property="fcgn"/>
+						<!--Fake name request-->
+						<record get_property="Pfke"/>
+						<record get_property="prpc" set_property="valu"/>
+					</list>
+				</record>
+			</widget>
+
+			<!-- Personal Details -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+
+
+				<widget class="text" id="titl" auto_size="vertical" alignment="left,centre_y" multiline="false" size="large" style="semi_bold" colour="fg" />
+
+				<container id="cnts">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"  />
+				</container>
+
+				<container class="icon_box" icon="icons/26px/circle">
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<record id="icon_properties" red_replacement="primary"/>
+					<record id="object_property"/>
+					<!-- Get player status flags-->
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="Pnfo" dont_set_object="true"/>
+							<record get_property="tbcl" set_property="icRR"/>
+						</list>
+					</record>
+
+					<!-- Player status icon with a fitness donut as first item-->
+					<widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round" auto_size="all" alignment="right" offset_x="0" offset_y="0" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+						<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true"/>
+
+						<!-- Set icon to only show: HG, Int, Hol, Trv-->
+						<integer id="type" value="0"/>
+
+						<!-- National flag image -->
+						<container width="26" height="26">
+							<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true" width="18" height="18">
+								<layout class="centre_in_parent_attachment" alignment="all"/>
+								<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt"/>
+							</widget>
+						</container>
+					</widget>
+
+					<!-- Nationality -->
+					<widget class="nation_button" id="intc" auto_size="vertical" icon_enabled="false"  size="small"  colour="fg" format="[%nation#1-nationality]">
+						<record id="object_property" dont_set_hint="true" get_property="PNat"/>
+					</widget>
+				</container>
+
+				<!-- Age & DoB-->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0"/>
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="3"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+					<!-- Age -->
+					<widget class="formatted_label" id="age " alignment="left,centre_y" auto_size="all" style="semi_bold" size="large" colour="fg">
+						<translation id="format" translation_id="242551" type="use" value="[%number#1] years old"/>
+						<record id="object_property" get_property="Page"/>
+					</widget>
+
+					<!-- DoB -->
+					<widget class="game_formatted_label" id="dobl"  alignment="left,bottom" auto_size="vertical" format="([%date#1-short])" style="bold"  height="24" colour="fg">
+						<record id="object_property" get_property="Pdob"/>
+					</widget>
+				</container>
+
+				<!-- Int Caps -->
+				<widget class="international_appearances_label" id="inta" auto_size="vertical" size="small" colour="faded text">
+					<integer id="int_apps_label_format" value="8"/>
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Pist"/>
+								<boolean id="dont_set_hint" value="true"/>
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<!-- Youth Caps -->
+				<widget class="international_appearances_label" id="inty" auto_size="vertical" size="small" colour="faded text" multiline="false">
+					<integer id="int_apps_label_format" value="9"/>
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Pist"/>
+								<boolean id="dont_set_hint" value="true"/>
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!-- Contract info etc-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0"/>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="20,65" offset="40" gap="12"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+
+				<container class="icon_box" icon="icons/26px/circle" >
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<record id="icon_properties" red_replacement="primary"/>
+
+					<!-- Player status icon with club badge-->
+					<widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round"  auto_size="all" alignment="right" offset_x="0" offset_y="0" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+						<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true"/>
+
+						<!-- Club badge image -->
+						<container width="18" height="18" embed_in_frame="true">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+							<layout class="stick_to_sides_attachment" alignment="top, left" inset="4" embed_in_frame="true" />
+
+							<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true" width="14" height="14" wants_mouse_events="true">
+								<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+							</widget>
+						</container>
+					</widget>
+
+					<!--extra details (e.g. onloan at...)-->
+					<widget class="player_extra_details_text" id="plex" auto_size="vertical" size="small" multiline="false" colour="fg">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="NPxD"/>
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<!--extra details (e.g. onloan at...)-->
+					<widget class="text" id="next" auto_size="vertical" size="small" multiline="false" hidden="true " colour="fg"/>
+
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<!--Wage / Expiry date-->
+					<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" style="semi_bold" size="large" colour="faded text" />
+
+				</container>
+
+
+			</container>
+		</container>
+	</container>
+</panel>
