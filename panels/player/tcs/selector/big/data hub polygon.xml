@@ -1,18 +1,2 @@
 <panel>
-	<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,16,0,16"/>
-
-	<container>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-		<widget class="player_additional_stats_panel" id="staP" file="player/player additional stats mini report">
-			<record id="object_property" get_property="objt" set_property="objt"/>
-		</widget>
-
-		<widget class="data_analyst_visualisation_widget" id="visU" hidden="true" visualisation_type="polygon" data_type="player" category="defensive_wide_midfielder" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
-			<record id="object_property" get_property="objt" set_property="objt"/>
-			<record id="object_property" get_property="PclC" set_property="comp"/>
-		</widget>
-	</container>
-
 </panel>

@@ -577,23 +577,24 @@
 				<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-				<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
-					<record id="object_property">
-						<list id="get_properties">
-							<record id="object_property" get_property="objt" set_property="objt"/>
-							<record id="object_property" get_property="Pila" set_property="hidn"/>
-						</list>
-					</record>
-				</widget>
-
-				<widget class="player_stats_panel" id="pssp" file="player/player stats small">
-					<record id="object_property">
-						<list id="get_properties">
-							<record id="object_property" get_property="Pila" set_property="Shwn"/>
-							<record id="object_property" get_property="objt" set_property="objt"/>
-						</list>
-					</record>
-				</widget>
+					<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+							<record id="object_property">
+								<list id="get_properties">
+									<!-- Hide this panel if player is in inactive league-->
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<record id="object_property" get_property="Pila" set_property="hidn"/>
+								</list>
+							</record>
+						</widget>
+						<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+							<record id="object_property">
+								<list id="get_properties">
+									<!-- Show this panel if player is in inactive league-->
+									<record id="object_property" get_property="Pila" set_property="Shwn"/>
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</list>
+							</record>
+						</widget>
 			</container>
 
 			<container class="client_object_viewer_selector_panel" id="cos8" file="player/player overview small selector panel" minimum_width="310" default_width="-25" priority="3" navigation_container="true">
