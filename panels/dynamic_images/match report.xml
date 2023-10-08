@@ -1,0 +1,59 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- Background image -->
+	<container class="client_object_viewer_xml_panel" id="bgim">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+
+		<widget class="stadium_picture" id="STAp" priority="1" >
+							<layout class="stick_to_sides_attachment" alignment="all" inset="-10" />
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>	  	
+
+<container class="tcs_box" appearance="tcs/backgrounds/overlay/70" rrep="bg" />
+
+						<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+						<container class="bordered_box" appearance="tcs/ro" />
+	</container>
+
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-1,-3,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="spacer" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-2,-5,-1,-5,-1,-5,-2" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer" />
+			<!-- Logo/Portrait -->
+			<widget class="object_portrait_picture" id="log1" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<!-- PROP_TEAM -->
+				<record id="object_property" get_property="Ttea" set_property="objt"/>
+			</widget>
+			<widget class="spacer" />
+			<widget class="text" id="goal" alignment="centre,auto_fit" colour="white" font="match report score">
+				<colour id="link_colour" red="0" green="0" blue="0" alpha="1"/>
+				<record id="object_property">
+					<list id="get_properties">
+						<record get_property="text" set_property="text"/>
+					</list>
+				</record>
+			</widget>
+			<widget class="spacer" />
+			<!-- Logo/Portrait -->
+			<widget class="object_portrait_picture" id="log2" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<!-- PROP_OTHER_TEAM -->
+				<record id="object_property" get_property="ottm" set_property="objt"/>
+			</widget>
+			<widget class="spacer" />
+		</container>
+
+		<widget class="spacer" />
+
+	</container>
+</panel>

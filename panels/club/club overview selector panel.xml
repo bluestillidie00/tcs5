@@ -62,7 +62,7 @@
         </container>
 
     </container>
-
+    
     <container class="scrolling_box" id="rivl">
         <translation id="title" translation_id="364723" type="use" value="Rivalries" />
         <container>

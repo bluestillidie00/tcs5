@@ -1,0 +1,26 @@
+<!-- A dynamic image with single centrally aligned logo about a season and year string -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<!-- Background image -->
+	<widget class="picture" id="bgim" file="tcs/dynamic/totw" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-1,-5,-1,-5,-1" offset="10" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="spacer" />
+		<!-- Logo/Portrait -->
+		<widget class="object_portrait_picture" id="logo" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<!-- PROP_TEAM -->
+			<record id="object_property" get_property="comp" set_property="objt"/>
+		</widget>
+		<widget class="spacer" />
+		<!-- String -->
+		<widget class="text" id="text" alignment="centre,auto_fit" font="capitals_bold" colour="white" auto_size="none">
+			<!-- PROP_TEXT -->
+			<record id="object_property" get_property="text" set_property="text"/>
+		</widget>
+		<widget class="spacer" />
+
+	</container>
+</panel>

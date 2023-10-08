@@ -1,0 +1,21 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+	
+	<real id="boldness" value="0.4"/>
+	
+	<integer id="fill_colour_red" value="40"/>
+	<integer id="fill_colour_green" value="40"/>
+	<integer id="fill_colour_blue" value="40"/>
+	<integer id="fill_colour_alpha" value="255"/>
+
+	<integer id="stroke_colour_red" value="0"/>
+	<integer id="stroke_colour_green" value="0"/>
+	<integer id="stroke_colour_blue" value="0"/>
+
+	<integer id="stroke_width" value="0.2"/>
+
+
+
+
+	
+</record>

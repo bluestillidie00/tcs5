@@ -1,0 +1,9 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+
+	<integer id="fill_colour_red" value="47"/>
+	<integer id="fill_colour_green" value="102"/>
+	<integer id="fill_colour_blue" value="177"/>
+	<integer id="fill_colour_alpha" value="255"/>
+	
+</record>

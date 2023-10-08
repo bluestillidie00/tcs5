@@ -1,0 +1,78 @@
+﻿<panel width="350">
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at07" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container entity_layout_id="at00">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-16" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="client_object_viewer_xml_panel" file="widgets/person name club nationality decription widget" auto_size="vertical" entity_layout_id="at01" id="plyD" needs_height="true">
+			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+		</container>
+		<container class="client_object_viewer_xml_panel" entity_layout_id="at02" id="lnRp" height="110" name="loan report container">
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="bottom" set_side="top" move_side="true" target="at01" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<widget class="link_button_title" entity_layout_id="at0&lt;" section="Plrp" id="lnRp" needs_width="true" needs_height="true" name="loan report link button">
+				<translation id="text" translation_id="492052" type="use" value="Loan Report [COMMENT: AREA: News item link button; SUB-AREA: link to player's laon report page; FR-BN: 21268; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE; n/a]" />
+				<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main" />
+			</widget>
+			<widget class="text" entity_layout_id="at0=" alignment="centre_y,left" id="trkd" auto_size="vertical" needs_height="true" name="loan erport by text">
+				<string id="colour" value="faded text" />
+				<string id="size" value="small" />
+				<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="bottom" set_side="top" move_side="true" target="at0&lt;" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			</widget>
+			<container class="text" entity_layout_id="at0&gt;" id="sdfs" alignment="top,left" auto_size="vertical" needs_height="true" name="loan reprort points">
+				<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="bottom" set_side="top" target="at0=" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			</container>
+		</container>
+		<widget class="horizontal_divider" entity_layout_id="at03" id="at03" needs_height="true">
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="bottom" set_side="top" move_side="true" target="at02" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+		</widget>
+		<container class="client_object_viewer_xml_panel" file="widgets/development player loan details widget" entity_layout_id="at07" id="lnCo" name="loan details container">
+			
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="bottom" set_side="top" target="at03" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+		</container>
+	</container>
+</panel>

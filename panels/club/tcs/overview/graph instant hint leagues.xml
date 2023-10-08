@@ -1,0 +1,33 @@
+<panel width="290">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="property_list_viewer_xml_panel" id="hntV">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse" duration="0.6" start_value="1, 0" end_value="0, 0"/>
+
+		<container class="main_transparent_box" red_replacement="bg darker">
+			<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="5" gap="0"/>
+
+			<widget class="picture" id="tpPi" keep_aspect_ratio="true" image_alignment="centre"  width="26" height="26">
+				<animation class="fade_on_hide_animation"/>
+				<record id="object_property" get_property="topi" set_property="hidn"/>
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" id="titl" auto_size="vertical" colour="alt text" alignment="right,centre_y" multiline="true" wants_mouse_events="false">
+					<animation class="fade_on_hide_animation"/>
+					<record id="object_property" get_property="titl" set_property="text"/>
+				</widget>
+				<widget class="text" id="extI" auto_size="vertical" colour="alt text" alignment="right,centre_y" multiline="true" wants_mouse_events="false">
+					<animation class="fade_on_hide_animation"/>
+					<record id="object_property" get_property="exIN" set_property="text"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

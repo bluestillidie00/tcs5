@@ -1,0 +1,90 @@
+<record>
+	<string id="file_name" value="googlesans.ttf"/>	
+	<real id="font_size_xxsmall" value="8" />
+  <real id="font_size_xsmall" value="9" />
+	<real id="font_size_small" value="9.5" />
+	<real id="font_size_normal" value="10.5" />
+	<real id="font_size_large" value="12" />
+	<real id="font_size_xlarge" value="13.5" />
+
+	<integer id="extra_spacing" value="0.1" />
+  <real id="extra_height" value="0" /> 
+
+	<colour id="fill_colour" name="text"/>
+
+	<!-- styles -->
+  <list id="styles">
+    <!-- plain style -->
+    <record style="plain" boldness="0.2"/>
+    <!-- bold styles -->
+    <record style="very_light_bold" boldness="0.4"/>
+    <record style="light_bold" boldness="0.6"/>
+    <record style="semi_bold" boldness="0.9"/>
+    <record style="bold" file_name="googlesansbold.ttf" boldness="0"/>
+    <!-- italic styles -->
+    <record style="semi_italic" obliqueness="0.15"/>
+    <record style="italic" obliqueness="0.25"/>
+    <!-- outline style -->
+    <record style="outlined" stroke_width="1.0"/>
+    <!-- shadowed style -->
+    <record style="shadowed">
+      <list id="shadows">
+        <record>
+          <integer id="x_offset" value="0"/>
+          <integer id="y_offset" value="1"/>
+          <integer id="blur_radius" value="2"/>
+          <integer id="colour_red" value="0"/>
+          <integer id="colour_green" value="0"/>
+          <integer id="colour_blue" value="0"/>
+          <integer id="colour_alpha" value="75"/>
+        </record>
+      </list>
+    </record>
+    <!-- embossed style -->
+    <record style="embossed" light_colour="true">
+      <list id="shadows">
+        <record>
+          <integer id="x_offset" value="0"/>
+          <integer id="y_offset" value="-1"/>
+          <integer id="blur_radius" value="0"/>
+          <integer id="colour_red" value="0"/>
+          <integer id="colour_green" value="0"/>
+          <integer id="colour_blue" value="0"/>
+          <integer id="colour_alpha" value="128"/>
+        </record>
+      </list>
+    </record>
+    <record style="embossed" light_colour="false">
+      <list id="shadows">
+        <record>
+          <integer id="x_offset" value="0"/>
+          <integer id="y_offset" value="-1"/>
+          <integer id="blur_radius" value="0"/>
+          <integer id="colour_red" value="0"/>
+          <integer id="colour_green" value="0"/>
+          <integer id="colour_blue" value="0"/>
+          <integer id="colour_alpha" value="50"/>
+        </record>
+      </list>
+    </record>
+    <!-- glowing style -->
+    <record style="glowing">
+      <list id="shadows">
+        <record>
+          <integer id="x_offset" value="0"/>
+          <integer id="y_offset" value="0"/>
+          <integer id="blur_radius" value="3"/>
+          <integer id="colour_red" value="255"/>
+          <integer id="colour_green" value="255"/>
+          <integer id="colour_blue" value="255"/>
+          <integer id="colour_alpha" value="255"/>
+        </record>
+      </list>
+    </record>
+    <!-- gradient style -->
+    <record style="gradient"/>
+    <!-- vertical style -->
+    <record style="vertical" rotation_angle="90.0"/>
+  </list>
+	
+</record>

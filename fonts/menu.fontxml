@@ -1,0 +1,6 @@
+<record>
+	<string id="file_name" value="text.xml"/>
+	<real id="font_size_small" value="9" />
+	<real id="font_size_normal" value="10" />
+	<real id="font_size_large" value="12" />
+</record>

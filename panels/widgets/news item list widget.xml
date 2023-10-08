@@ -1,0 +1,39 @@
+<panel height="80">
+    <colour id="unread_headline_text_colour" name="teal"/>
+    <colour id="read_headline_text_colour" name="read headline"/>
+    <colour id="must_respond_headline_text_colour" name="pink"/>
+    <colour id="unread_category_text_colour" name="yellow2"/>
+    <colour id="read_category_text_colour" name="read category"/>
+    <colour id="read_headline_text_style" name="default"/>
+    <colour id="unread_headline_text_style" name="semi_bold"/>
+
+    <colour id="selected_headline_text_colour" name="secondary"/>
+    <colour id="selected_headline_text_style" name="semi_bold"/>
+    <colour id="selected_category_text_colour" name="secondary"/>
+
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <container class="plain_box" id="nibx">
+        <layout class="arrange_horizontal_attachment" layout="3, -1, 20, 20" offset="0" gap="6"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+        <widget class="picture" id="lccs" file="tables/custom/inbox/category/row" height="80" width="3"/>
+
+        <container>
+            <layout class="centre_in_parent_attachment" alignment="vertical"/>
+            <layout class="fit_children_attachment" alignment="vertical, fill" offset="4" gap="2"/>
+
+            <widget class="text" id="hdlw" auto_size="vertical" multiline="true" size="small">
+                <translation id="text" translation_id="248089" type="use" value="Headline"/>
+                <layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="4"/>
+            </widget>
+            <widget class="client_object_label" id="catw" size="xsmall" colour="inbox_text" auto_size="vertical" multiline="false">
+                <layout class="stick_to_sides_attachment" alignment="bottom, horizontal" inset="4"/>
+            </widget>
+        </container>
+
+        <widget class="picture" id="rdsw" auto_size="horizontal" image_alignment="right, centre_y"/>
+        <widget class="picture" id="rssw" auto_size="horizontal" image_alignment="left, centre_y"/>
+    </container>
+
+</panel>

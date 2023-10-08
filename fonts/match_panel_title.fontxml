@@ -1,0 +1,25 @@
+<record>
+	<string id="file_name" value="title.xml"/>
+	<real id="boldness" value="0.0"/>
+	
+	<list id="shadows">
+		<record>
+			<integer id="x_offset" value="0"/>
+			<integer id="y_offset" value="1"/>
+			<integer id="blur_radius" value="0"/>
+			<integer id="colour_red" value="255"/>
+			<integer id="colour_green" value="255"/>
+			<integer id="colour_blue" value="255"/>
+			<integer id="colour_alpha" value="0"/>
+		</record>
+	</list>
+
+	<integer id="fill_colour_red" value="122"/>
+	<integer id="fill_colour_green" value="174"/>
+	<integer id="fill_colour_blue" value="246"/>
+	<integer id="fill_colour_alpha" value="255"/>
+	
+	<record id="font_spec">
+		<flags id="font" value="fonts/panel_title"/> 
+	</record>
+</record>

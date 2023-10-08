@@ -27,7 +27,7 @@
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 					<!-- GAME LOADS DATA FOR COMPETITIONS -->
-					<record id="object_property" get_property="Cdiv" set_property="objt"/>
+					<record id="object_property" get_property="Pclb" set_property="objt"/>
 
 					<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="tcs_bg_lighter">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
@@ -530,83 +530,149 @@
 				</container>
 			</container>
 
-			<!-- BEST XI -->
-			<container id="beXi">
-				<translation id="title" translation_id="258247" type="use"/>
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<!-- Finances -->
+			<container id="co03" class="finances_summary_panel" file="none">
+				<translation id="title" translation_id="229821" type="use" value="Finances"/>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="8" />
 
-				<container class="tcs_box">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
 
-					<container class="tc_best_eleven_panel" id="trbe" file="none">
-						<record id="object_property" get_property="objt" set_property="objt"/>
-						<boolean id="save_session_state" value="true"/>
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<container>							
+					<layout class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
 
-						<!-- Starting XI Styles -->
-						<flags id="stxi" value="tables/standard/normal"/>
-						<!-- Subs Styles -->
-						<flags id="subs" value="tables/custom/squad/row/substitute/row"/>
-						<!-- divider row appearance -->
-						<flags id="divider_appearance" value="tables/standard/divider/row"/>
+					<!-- Overall Balance -->
+					<container class="main_subtle_box">
+						<layout class="vertical_arrange" vertical_alignment="top,extend"/>
 
-						<container id="titl">
-							<attachment_group class="vertical_arrange" vertical_layout="28, -1" horizontal_gap="0"/>
-							<!-- embedded view menu -->
-							<container id="btns" navigation_container="true" default_focus="true">
-								<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
+						<container>
+							<layout class="vertical_arrange_autosize" vertical_alignment="top,extend"/>
 
-								<!-- seasons popup -->
-								<widget class="embedded_season_selection_list" id="sesl" width="200" sele="sels" height="30"/>
-							</container>
+							<widget class="label" id="at01" auto_size="vertical" font="label" colour="accent" alignment="centre">
+								<translation id="text" translation_id="383591" type="use" value="Overall Balance[COMMENT: Finances panel]" />
+							</widget>
+
+							<widget class="cash_cell" id="obal" auto_size="vertical" font="value" alignment="centre"/>
+
+						</container>
+
+						<container class="finance_history_panel" finance_history_type="bala" show_instant_hint="true" auto_size="vertical">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					</container>														
+
+					<!-- Profit/Loss -->
+					<container class="main_subtle_box">
+						<layout class="vertical_arrange" vertical_alignment="top,extend"/>
+
+						<container>
+							<layout class="vertical_arrange_autosize" vertical_alignment="top,extend"/>
+
+							<widget class="label" id="at06" auto_size="vertical" font="label" colour="accent" alignment="centre">
+								<translation id="text" translation_id="383614" type="use" value="Profit / (Loss) This Month[COMMENT: Finances panel]" />
+							</widget>
+
+							<widget class="cash_cell" id="pltm" auto_size="vertical" font="value" alignment="centre"/>
+
+						</container>
+
+						<container class="finance_history_panel" finance_history_type="prls" show_instant_hint="true" auto_size="vertical">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					</container>
+
+
+					<container>
+						<layout class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+						<!-- Income -->
+						<container class="main_subtle_box">
+							<layout class="vertical_arrange" vertical_alignment="top,extend"/>
 
 							<container>
-								<attachment_group class="horizontal_arrange" horizontal_layout="-1" horizontal_gap="0"/>
-								<container>
-									<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
-									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+								<layout class="vertical_arrange_autosize" vertical_alignment="top,extend"/>
 
-									<widget class="client_object_list_table" id="awsl" sort_disabled="true" always_use_latest_object_list="true" should_force_refresh="true" navigation_container="true">
-										<integer id="contextual_handler_column_id" value="Pnms"/>
-										<list id="viewed_property_ids">
-											<integer value="Pers"/>
-											<integer value="Pbep"/>
-											<integer value="Pbea"/>
-											<integer value="Pbeg"/>
-											<integer value="Pbav"/>
-										</list>
-									</widget>
-
-									<container navigation_container="true">
-										<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0"/>
-										<layout class="stick_to_sides_attachment" alignment="bottom" apply_to_children="true" inset="5"/>
-										<layout class="fit_children_attachment" alignment="vertical" offset="5"/>
-
-										<widget class="icon_button" auto_size="horizontal" height="30" click_event="ecwn" controller_button="y_button">
-											<translation id="text" translation_id="275840" type="use" value="Where Are They Now?"/>
-										</widget>
-									</container>
-
-								</container>
-
-								<widget class="pitch_with_tactics" id="attp" icon_flags="show_name,use_player_kits_back" player_icon_file="tactics/tactics icon info panel" navigation_container="true">
-									<boolean id="vertical" value="true"/>
-									<boolean id="pitch_is_read_only" value="true"/>
-									<integer id="pitch_vertical_padding" value="20"/>
+								<widget class="label" id="at19" auto_size="vertical" font="label" colour="accent" alignment="centre">
+									<translation id="text" translation_id="383418" type="use" value="Income This Month[COMMENT: Finances panel]" />
 								</widget>
+
+								<widget class="cash_cell" id="incw" auto_size="vertical" font="value" alignment="centre"/>
+
+							</container>
+
+							<container class="finance_history_panel" finance_history_type="toti" show_instant_hint="true" auto_size="vertical">
+								<record id="object_property" get_property="objt" set_property="objt"/>
 							</container>
 						</container>
 
-						<!-- panel for no data available-->
-						<container class="empty_state" id="nb11" header_widget="BShe" navigation_container="true" default_focus="true">
-							<widget class="text" id="BShe">
-								<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]"/>
-							</widget>
-						</container>
+						<!-- Expenditure -->
+						<container class="main_subtle_box">
+							<layout class="vertical_arrange" vertical_alignment="top,extend"/>
 
+							<container>
+								<layout class="vertical_arrange_autosize" vertical_alignment="top,extend"/>
+
+								<widget class="label" id="at26" auto_size="vertical" font="label" colour="accent" alignment="centre">
+									<translation id="text" translation_id="383320" type="use" value="Expenditure This Month[COMMENT: Finances panel]" />
+								</widget>
+
+								<widget class="cash_cell" id="expw" auto_size="vertical" font="value" alignment="centre"/>
+
+							</container>
+
+							<container class="finance_history_panel" finance_history_type="tote" show_instant_hint="true" auto_size="vertical">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</container>
+						</container>
 					</container>
+
 				</container>
+
+<container height="120" >
+<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+
+<container class="main_subtle_box">
+<attachment_group class="vertical_arrange" />
+
+<record id="default_properties" auto_size="vertical" alignment="centre"/>
+
+<widget class="cash_cell" font="label" colour="accent" alignment="centre">
+<record id="object_property" get_property="Ctfc" name="true"/>
+</widget>
+
+<widget class="cash_cell" font="value" alignment="centre">
+<record id="object_property" get_property="Ctfc"/>
+</widget>
+
+		<widget class="text" font="text" size="small" colour="faded text" id="tbt1" />
+			<widget class="text" font="text" size="small" colour="faded text" id="tbt2" />
+</container>
+
+<container class="main_subtle_box">
+<attachment_group class="vertical_arrange" />
+
+<record id="default_properties" auto_size="vertical" alignment="centre"/>
+
+<widget class="cash_cell" font="label" colour="accent" alignment="centre">
+<record id="object_property" get_property="Cwwb" name="true"/>
+</widget>
+
+<widget class="cash_cell" font="value" alignment="centre">
+<record id="object_property" get_property="Cwwb"/>
+</widget>
+
+<widget class="text" font="text" size="small" colour="faded text" id="wbt1" />
+			<widget class="text" font="text" size="small" colour="faded text" id="wbt2" />
+			<widget class="text" font="text" size="small" colour="faded text" id="wbt4" />
+</container>
+
+
+</container>
+
+
 			</container>
+
+
 
 			<container id="comp">
 				<translation id="title" translation_id="227741" type="use"/>

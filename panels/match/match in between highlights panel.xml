@@ -118,7 +118,7 @@
 						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
 						<translation id="text" translation_id="227740" type="use" value="Competition" />
 					</widget>
-					<widget class="fixture_name_text" auto_size="all" icon_enabled="true">
+					<widget class="fixture_name_text" auto_size="all" icon_enabled="true" multiline="true">
 						<record id="object_property" get_property="FxNm" />
 					</widget>
 				</container>

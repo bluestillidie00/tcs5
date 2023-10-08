@@ -1,0 +1,65 @@
+﻿<panel wants_mouse_events="true" absorb_click_events="true">
+
+	<container navigation_container="true">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="8" vertical_inset="8" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<!--left hand side description text-->
+		<container width="180">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_alignment="left" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<widget class="text" alignment="left,top" id="txtW" />
+			</container>
+			<!--container for the logo - either scisports of fm logo for leagues not sponsored by scispoorts-->
+					<container class="client_object_viewer_xml_panel" id="sciC">
+						<attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_alignment="right" horizontal_offset="0" vertical_inset="0" />
+						<widget class="picture" image_alignment="centre" file="tcs/icons/smarterscout_smaller" id="siSp" auto_size="all">
+							<record id="object_property" get_property="phSC" set_property="hidn" />
+						</widget>
+						<widget class="picture" image_alignment="centre" file="icons/48px/fm logo" id="fmlo" hidden="true" auto_size="all" red_replacement="fg">
+							<record id="object_property" get_property="phSC" set_property="Shwn" />
+						</widget>
+					</container>
+		
+		</container>
+		<!--right hand side visualisation-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+				<!--Title and subtitle box-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right,extend" horizontal_offset="8" horizontal_gap="8" />
+
+						<container class="data_analyst_club_level_widget" id="anLv">
+				<string id="remove_if" value="is_fmt" />
+			</container>
+				</container>
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" />
+					<container id="noDa" hidden="true">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<widget id="daTX" class="text" alignment="centre" style="semi_bold" colour="faded text">
+							<translation id="text" translation_id="515107" type="use" value="Not enough data available to create visualisation[COMMENT: AREA: Visualisation; SUB-AREA:; FR : 32932; TONE: Formal; CHARLIMIT: None; NOTE: warning to display when not enough data available to create a visualisation]" />
+						</widget>
+					</container>
+					<!--container for the visualisation-->
+					<container class="vertical_arrange_container" alignment="fill" inset="10" id="visC" />
+
+					<!--container for a popup button to change competitions if desired-->
+					<container id="cpCO" hidden="true" height="30">
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+						<widget class="popup_button" select_event="cmpC" auto_size="horizontal" id="cmpP" />
+					</container>
+				</container>
+			</container>
+			<!--container for checkboxes for visualisations to be pinned to the data hub or sent to inboxes-->
+		
+		</container>
+	</container>
+
+
+
+</panel>

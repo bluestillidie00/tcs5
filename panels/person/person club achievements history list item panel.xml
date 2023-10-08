@@ -1,0 +1,35 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4" />
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="tcs_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="36">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="arrange_horizontal_attachment" layout="44, -1" offset="0" gap="4" />
+
+			<!-- Team logo -->
+			<widget class="object_portrait_picture" id="IPtl" scale_picture="true" />
+
+			<!-- Year and team name, position in home division -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="4" />
+
+				<widget class="text" id="IPgt" style="semi_bold" alignment="left,bottom" />
+				<widget class="text" id="IPdf" alignment="left,top" />
+			</container>
+		</container>
+
+		<!-- Table with achievements for that year and team -->
+		<container class="table" id="IPtb" layout="40, -1" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+			<list id="column_widget_properties">
+				<record index="0" image_alignment="centre" height="30" scale_picture="true" keep_aspect_ratio="true"/>
+				<record index="1" alignment="left,centre_y" />
+			</list>
+			<!-- Filled in code with a PICTURE in the left column for the type of achievement and a description in the second column -->
+		</container>
+	</container>
+</panel>

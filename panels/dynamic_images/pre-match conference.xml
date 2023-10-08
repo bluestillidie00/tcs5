@@ -1,0 +1,52 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <!-- Background (not really needed here?)-->
+    <widget class="picture" id="bgim" file="photos/dynamic/press conference/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+    <widget class="picture" id="othl" file="photos/dynamic/press conference/other logos" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+    <!-- Sponsor boards coloured to teams colours -->
+    <container class="client_object_viewer_xml_panel" id="spon">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <!-- PROP_TEAM -->
+        <record id="object_property" get_property="Ttea" set_property="objt"/>
+
+        <!-- Board colour-->
+        <widget class="picture" id="bak2" file="photos/dynamic/press conference/primary colours" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+            <!--PROP_BACKGROUND_COLOUR-->
+            <record id="object_property" get_property="oDCn" set_property="rrep"/>
+        </widget>
+    </container>
+
+    <!-- FM logos -->
+    <widget class="picture" id="bgim" file="photos/dynamic/press conference/white logos" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+    <!-- team badges -->
+    <container class="client_object_viewer_xml_panel">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <!-- PROP_TEAM -->
+        <record id="object_property" get_property="Ttea" set_property="objt"/>
+
+        <!-- badges image -->
+        <widget class="picture" id="bglo" file="photos/dynamic/press conference/post_conference_bg_logo" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+            <record id="object_property" get_property="oACL" set_property="rrep"/>
+        </widget>
+    </container>
+
+    <!-- Shading image -->
+    <widget class="picture" id="shad" file="photos/dynamic/press conference/lighting" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+    <container id="horC">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <!-- Logo/Portrait -->
+        <widget class="object_portrait_picture" id="logo" image_alignment="centre_x,bottom" picture_type="WPrt" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+            <!-- PROP_PERSON -->
+            <record id="object_property" get_property="Pers" set_property="objt"/>
+        </widget>
+    </container>
+
+</panel>

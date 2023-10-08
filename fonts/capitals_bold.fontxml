@@ -1,0 +1,8 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf" />
+	
+  <integer id="extra_spacing" value="0.5" />
+	
+	<string id="capitalisation" value="upper case" />
+
+</record>

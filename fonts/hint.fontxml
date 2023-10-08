@@ -1,0 +1,11 @@
+<record>
+	<string id="file_name" value="googlesans.ttf"/>
+	<real id="font_size_small" value="7" />
+	<real id="font_size_normal" value="7" />
+	<real id="font_size_large" value="7" />
+	
+	<integer id="fill_colour_red" value="220"/>
+	<integer id="fill_colour_green" value="220"/>
+	<integer id="fill_colour_blue" value="220"/>
+	<integer id="fill_colour_alpha" value="255"/>
+</record>

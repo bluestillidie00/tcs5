@@ -1,0 +1,149 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="-15,-14,-15"  horizontal_gap="8" />
+
+		<!-- right -->
+		<container class="tcs_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+			<record id="default_properties" team_index="0"/>
+
+			<!-- TEAM STATS -->
+			<widget class="match_team_stats_panel" id="HMts" file="match/tcs/full time/tcs team stats" height="700">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<!-- FORMATION -->
+			<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>
+
+		<!-- MIDDLE -->
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-10,-16" vertical_gap="8"/>
+
+			<!-- TOP -->
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>				
+
+				<!-- STADIUM PIC -->
+				<widget class="stadium_picture" id="STAp" file="none">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-80"/>
+
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+					<widget class="picture" file="pictures/stadiums/stadium_bg" />
+					<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+					<widget class="picture" id="STPC"/>
+				</widget>
+
+				<container class="tcs_box" appearance="tcs/ro" rrep="bg" />
+
+				<!-- OVERLAY ON STADIUM PIC -->
+				<container class="tcs_box" appearance="tcs/backgrounds/overlay/90" rrep="bg" />
+
+				<container class="main_box">
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,4,0"/>
+
+					<!-- OVERVIEW -->
+					<container class="match_info_panel" info_panel_type="1" file="none">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+						<record id="object_property" get_property="objt" set_property="objt"/>
+
+						<!-- COMP PICTURE -->
+						<widget class="object_portrait_picture" scale_picture="true" height="30" keep_aspect_ratio="true" image_alignment="centrre">
+							<record id="object_property" get_property="fxCo" set_property="objt"/>
+						</widget>
+
+						<!-- COMP -->
+						<widget class="fixture_name_text" auto_size="vertical" alignment="centre" font="title" colour="text">
+							<record id="object_property" get_property="FxNm"/>
+						</widget>					
+						<widget class="text" id="stad" alignment="centre_x" spec="text" size="small" auto_size="vertical" />
+
+						<!-- INFO -->
+						<widget class="match_info_panel" file="match/match info overview popup" height="120">
+							<record id="object_property" set_property="objt" get_property="objt" />
+						</widget>
+
+						<!-- DIVIDER -->
+						<widget class="horizontal_divider" height="1" />
+
+						<!-- INCIDENTS -->
+						<widget class="match_info_panel" file="match/match info overview popup scorers" id="mips">
+							<record id="object_property" set_property="objt" get_property="objt" />
+						</widget>
+
+					</container>
+				</container>
+			</container>
+
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="tcs_tabs" save_session_state="true" save_default_state="true">
+				
+				<container class="match_stats_panel" id="mtst">
+<translation id="title" type="use" value="Match Stats" />
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+
+					<!-- AS IT HAPPENED -->
+					<container class="match_notable_events_panel" file="none" id="NEve">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+						<translation id="title" type="use" value="As It Happened" />
+
+						<record id="object_property" get_property="objt" set_property="objt"/>
+
+						<widget class="text" font="title" auto_size="vertical" alignment="centre" colour="title">
+							<translation id="text" translation_id="515063" type="use" value="Notable Events[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing notable events from the match; goals, cards etc]" />
+						</widget>
+
+						<widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true" >
+							<list id="column_widget_properties">
+								<record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false" />
+								<record index="1" icon_alignment="centre" navigation_focus_target="false" />
+								<record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false" />
+								<record index="3" icon_alignment="centre" navigation_focus_target="false" />
+								<record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false" />
+							</list>
+							<list id="column_table_properties">
+								<record index="0" id="homt" />
+								<record index="1" id="homi" />
+								<record index="2" id="time" />
+								<record index="3" id="awai" />
+								<record index="4" id="awat" />
+							</list>
+						</widget>
+
+					</container>
+
+				</container>
+
+
+			</container>
+		</container>
+
+		<!-- right -->
+		<container class="tcs_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+			<record id="default_properties" team_index="1"/>
+
+			<!-- TEAM STATS -->
+			<widget class="match_team_stats_panel" id="AMts" file="match/tcs/full time/tcs team stats" height="700">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<!-- FORMATION -->
+			<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>
+	</container>
+
+</panel>

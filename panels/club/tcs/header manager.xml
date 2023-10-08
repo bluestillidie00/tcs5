@@ -7,6 +7,7 @@
 
 	<!-- IF MANAGER IS AT CLUB -->
 	<container  id="manC">
+	
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
 		<widget class="person_snapshot_club_overview_panel" id="mana" player="false" file="club/tcs/header manager snapshot">
 			<record id="object_property" get_property="TMnR" set_property="objt"/>

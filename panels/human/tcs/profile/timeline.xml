@@ -1,0 +1,126 @@
+﻿<panel navigation_container="true" circle_marker_line_offset="19" flat_marker_line_offset="8">
+
+	<record id="timestamp_props" class="button" appearance="buttons/custom/interface/notification/button" auto_size="vertical" width="80" red_replacement="fg lighter" blue_replacement="fg lighter" text_colour="bg" />
+	
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend" vertical_gap="16" vertical_offset="16" horizontal_inset="-4"/>
+	<container class="scrolling_box" fit_content_horizontal="true" scroll_value_changed_event="sclM" id="scrB">
+		<widget class="graph" id="grph" show_instant_hint="false">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+			<list id="graph_series">
+				<record id="stak" type="line" show_instant_hint="false" />
+			</list>
+			<record id="x_axis" consistent_label_width="false" auto_size="true" min_value="0" max_value="300" only_labelled_marks="true" show_labels="false" line_width="4" />
+			<record id="y_axis" show_labels="false" inset="2" hidden="false" line_width="0" max_value="1" min_value="-1" />
+		</widget>
+	</container>
+
+	<container height="35">
+		<animation class="fade_animation" start_value="0" end_value="1" duration=".5" end_mode="hold_end" tween="ease_in" />
+		<animation class="translate_animation" start_value="0, 0.5" end_value="0, 0" duration=".5" end_mode="hold_end" tween="ease_in" coord_mode="relative_to_target" />
+
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="30" horizontal_gap="5" />
+		<widget class="button" width="160" multiline="true" id="hidE" click_event="hidE" text="DEBUG: Show All Hidden Events" alignment="left">
+			<string id="create_if" value="is_debug" />
+			<string id="text" value="DEBUG: Show All Hidden Events[COMMENT: AREA: Dynamic Manager Timeline; SUB-AREA: DMT Footer; FR-BN: FM-14144; TONE: Informal; CHARLIMIT: None; REF-ID: FM-14144; NOTE: Debug title to show the hidden events]"/>
+		</widget>
+		<container id="fmft" hidden="false" disabled="true">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" />
+			<widget class="popup_button" id="ssls" appearance="buttons/subtle/flex/button" select_event="tiSe" font="title" fixed="true" auto_size="horizontal">
+				<translation id="text" translation_id="551829" type="use" value="Go To[COMMENT: AREA: Dynamic Timeline; SUB-AREA:; BN: 28738; TONE: Formal; CHARLIMIT:None; REF-ID: n/a; NOTE:Dropdown Button to go to a particular date on the timeline]" />
+			</widget>
+
+			<widget class="icon_button" appearance="buttons/subtle/flex/button" click_event="left" icon="icons/16px/left" icon_alignment="centre" width="35" />
+			<widget class="icon_button" icon="icons/16px/play alt" id="plyB" icon_alignment="centre" appearance="buttons/subtle/flex/button" click_event="plyS" width="35" />
+			<widget class="icon_button" appearance="buttons/subtle/flex/button" click_event="rght" icon="icons/16px/right" icon_alignment="centre" width="35" />
+			<widget class="spacer" width="10" />
+			<widget class="vertical_divider" />
+		</container>
+
+		<container id="fmtf" hidden="true">
+			<string id="create_if" value="is_fmt" />
+			<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" />
+			<widget class="icon_button" enabled="false" wants_mouse_events="false" navigation_focus_target="false" icon_alignment="centre" icon="icons/custom/dynamic manager timeline/timeline nav" id="fmtM" appearance="buttons/subtle/flex/button" click_event="plyS" width="70">
+				<string id="create_if" value="is_fmt" />
+			</widget>
+			<widget class="icon_button" icon="icons/16px/play alt" id="fmtP" controller_button="y_button" navigation_focus_target="true" gamepad_icon_alignment="right" icon_alignment="right" appearance="buttons/subtle/flex/button" click_event="plyS" width="70">
+				<string id="create_if" value="is_fmt" />
+			</widget>
+
+			<widget class="spacer" width="10" />
+			<widget class="vertical_divider" />
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+			<container class="horizontal_arrange_container" id="cnHi" />
+
+			<container class="main_box" width="280" height="50" alignment="right">
+				<attachment class="test_screen_size_attachment">
+					<list id="properties">
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="0" />
+							<integer id="max_value" value="1365" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="130" />
+							<integer id="false_value" value="280" />
+						</record>
+					</list>
+				</attachment>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="8" />
+					<widget class="picture" file="pictures/comp/trophy/5" scale_picture="true" keep_aspect_ratio="true" width="20" image_alignment="centre" />
+					<container>
+						<attachment_group class="horizontal_arrange_autosize" horizontal_gap="4" />
+						<widget class="formatted_label" id="trpn" auto_size="horizontal" alignment="left, centre_y" spec="text">
+							<string id="format" value="[%number#1]" />
+						</widget>
+						<widget class="text" id="trtx" alignment="left, centre_y" auto_size="horizontal">
+							<translation id="text" translation_id="549764" type="use" value="Trophies[COMMENT:AREA: Champions Stats News; SUB - AREA: Stats table; FR: FM - 1212]" />
+							<attachment class="test_screen_size_attachment">
+								<list id="properties">
+									<record>
+										<flags id="alignment" value="horizontal" />
+										<integer id="min_value" value="0" />
+										<integer id="max_value" value="1365" />
+										<symbol id="set_property" value="hidden" />
+										<integer id="true_value" value="true" />
+										<integer id="false_value" value="false" />
+									</record>
+								</list>
+							</attachment>
+						</widget>
+					</container>
+					<widget class="vertical_divider" />
+					<widget class="picture" file="icons/custom/milestones/awards" scale_picture="true" keep_aspect_ratio="true" width="20" image_alignment="centre" colour="white" />
+					<container>
+						<attachment_group class="horizontal_arrange_autosize" horizontal_gap="4" />
+						<widget class="formatted_label" id="awan" auto_size="horizontal" alignment="left, centre_y" spec="text">
+							<string id="format" value="[%number#1]" />
+						</widget>
+						<widget class="text" id="awtx" alignment="left, centre_y" auto_size="horizontal">
+							<translation id="text" translation_id="549765" type="use" value="Major Awards[COMMENT:AREA: Champions Stats News; SUB - AREA: Stats table; FR: FM - 1212]" />
+							<attachment class="test_screen_size_attachment">
+								<list id="properties">
+									<record>
+										<flags id="alignment" value="horizontal" />
+										<integer id="min_value" value="0" />
+										<integer id="max_value" value="1365" />
+										<symbol id="set_property" value="hidden" />
+										<integer id="true_value" value="true" />
+										<integer id="false_value" value="false" />
+									</record>
+								</list>
+							</attachment>
+						</widget>
+					</container>
+				</container>
+				<widget class="widget_popup_button" id="AcLs" navigation_focus_target="false" appearance="" icon="" secondary_icon="icons/16px/maximise" controller_button="x_button" popup_alignment="top,right" icon_alignment="right,centre_y">
+					<string id="widget_type" value="container" />
+					<record id="modal_popup_properties" file="modal popup panel auto sized" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,97 @@
+<!-- THIS PANELS SHOWS UNDER THE REPORTS PANEL IN THE BIG SELECTOR -->
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+	<boolean id="should_force_refresh" value="true"/>
+
+	<widget class="text" font="title" alignment="left" auto_size="vertical">
+		<translation id="text" type="use" value="Personality" />
+	</widget>
+
+	<container id="main">
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+				<widget class="text" font="title" alignment="centre" colour="fg" auto_size="vertical">
+					<translation id="text" value="Ambition" type="use" />
+				</widget>
+
+				<widget class="attribute_bar" alignment="centre" height="10">
+					<record id="object_property" get_property="Pamb" />
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+				<widget class="text" font="title" alignment="centre" colour="fg" auto_size="vertical">
+					<translation id="text" value="Big Matches" type="use" />
+				</widget>
+
+				<widget class="attribute_bar" alignment="centre" height="10">
+					<record id="object_property" get_property="Pimp" />
+				</widget>
+			</container>
+			
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+				<widget class="text" font="title" alignment="centre" colour="fg" auto_size="vertical">
+					<translation id="text" value="Consistency" type="use" />
+				</widget>
+
+				<widget class="attribute_bar" alignment="centre" height="10">
+					<record id="object_property" get_property="PCON" />
+				</widget>
+			</container>
+		</container>
+
+
+
+		<container class="tcs_table_trans">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+
+				<widget class="text" font="title" alignment="centre" colour="fg" auto_size="vertical">
+					<translation id="text" value="Personality" type="use" />
+				</widget>
+
+				<widget class="personality_label" alignment="centre" height="10">
+					<record id="object_property" get_property="PPst" />
+				</widget>
+
+			</container>
+			
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+
+				<widget class="text" font="title" alignment="centre" colour="fg" auto_size="vertical">
+					<translation id="text" value="Media Handling" type="use" />
+				</widget>
+
+				<widget class="media_handling_label" alignment="centre" height="10">
+					<record id="object_property" get_property="Pghm" />
+				</widget>
+
+			</container>
+
+		</container>
+
+
+
+
+
+
+
+
+	</container>
+
+</panel>

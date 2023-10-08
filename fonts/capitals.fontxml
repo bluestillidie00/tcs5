@@ -1,0 +1,16 @@
+<record>
+	<string id="file_name" value="googlesans.ttf" />
+	
+	<real id="font_size_xsmall" value="7.5" />
+	<real id="font_size_small" value="8" />
+	<real id="font_size_normal" value="8.5" />
+	<real id="font_size_large" value="9.5" />
+	<real id="font_size_xlarge" value="10" />
+	
+	<real id="boldness" value="0.2" />
+	
+    <integer id="extra_spacing" value="0.2" />
+	
+	<string id="capitalisation" value="upper case" />
+
+</record>

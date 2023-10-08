@@ -49,7 +49,7 @@
 						<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
 					</record>
 					<list id="grid_line_styles">
-						<record colour="graph row"/>
+						<record colour=""/>
 						<record colour="graph row"/>
 					</list>
 				</widget>

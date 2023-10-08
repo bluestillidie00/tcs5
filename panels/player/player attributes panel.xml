@@ -94,7 +94,7 @@
 					<container class="client_object_viewer_xml_panel" id="attT">
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-						<widget class="table" layout="-1, 80" mode="fill_rows, printable" row_height="22" row_spacing="0">
+						<widget class="table" layout="-1, 90" mode="fill_rows, printable" row_height="22" row_spacing="0">
 							<record id="object_property" get_property="objt" set_property="objt" />
 							<list id="column_table_properties">
 								<record index="0" left="8" sort_disabled="true"/>
@@ -117,13 +117,38 @@
 								<record id="object_property" get_property="Pwei"/>
 								<record id="widget_properties" alignment="right,centre_y" />
 							</widget>
-							<widget class="label" row="2" column="0" >
-								<record id="object_property" get_property="PgkR" name="true"/>
+					
+					<widget class="label" row="2" column="0" >
+								<record id="object_property" get_property="PcOI" name="true"/>
 							</widget>
-							<widget class="editable_client_object_property_panel" id="Pwei" row="2" column="1" style="semi_bold">
-								<record id="object_property" get_property="PgkR"/>
-								<record id="widget_properties" alignment="right,centre_y" />
+							<widget class="player_condition_icon_widget" id="PcOI" row="2" column="1" style="semi_bold">
+								<record id="object_property" get_property="PcOI"/>
+								<record id="widget_properties" alignment="right,centre_y"/>
+								<flags id="appearance" value="" />
+				<boolean id="label_disabled" value="true" />
+				<boolean id="show_hover_popup_on_focus" value="true" />
+							</widget>	
+							
+							<widget class="label" row="3" column="0" >
+								<record id="object_property" get_property="PftI" name="true"/>
 							</widget>
+							<widget class="player_match_sharpness_icon_widget" id="PftI" row="3" column="1" style="semi_bold" auto_size="horizontal">
+								<record id="object_property" get_property="PftI"/>
+								<record id="widget_properties" alignment="right,centre_y"/>
+								<flags id="appearance" value="" />
+				<boolean id="label_disabled" value="true" />
+				<boolean id="show_hover_popup_on_focus" value="true" />
+							</widget>
+					
+					
+							<widget class="label" row="4" column="0" >
+								<record id="object_property" get_property="Pjad" name="true"/>
+							</widget>
+							<widget class="player_jadedness_widget" id="Pjad" row="4" column="1" style="semi_bold">
+								<record id="object_property" get_property="Pjad"/>
+							<record id="widget_properties" alignment="right,centre_y" style="semi_bold"/>
+													</widget>
+					
 						</widget>
 					</container>
 				</container>

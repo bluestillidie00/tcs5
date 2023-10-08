@@ -1,0 +1,81 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- A random stock image if no stadium-->
+	<widget class="value_based_picture" id="bckp" rand="true" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+		<list id="value_list">
+			<record value="0" file="photos/dynamic/generic/goal" />
+			<record value="1" file="photos/dynamic/generic/pitch" />
+			<record value="2" file="photos/dynamic/generic/floodlight" />
+			<record value="3" file="photos/dynamic/generic/blue net" />
+		</list>
+		<!-- PROP_ID (for random seed)-->
+		<record id="object_property" get_property="id  " set_property="valu"/>
+	</widget>
+	
+	    <widget class="picture" id="bgim" file="tcs/dynamic/transfer" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false"/>
+
+
+	<container id="horC">
+		<layout class="arrange_horizontal_attachment" layout="-1,-15,-13,-2" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<widget class="spacer" />
+		<!-- Player Portrait -->
+		<widget class="object_portrait_picture" id="log1" image_alignment="right,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+			<!-- PROP_PERSON -->
+			<record id="object_property" get_property="Pers" set_property="objt"/>
+		</widget>
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-6,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer" />
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-6,-3" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+						<!-- From Team -->
+						<widget class="object_portrait_picture" id="log2" image_alignment="left,top" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+							<!-- PROP_TEAM -->
+							<record id="object_property" get_property="Ttea" set_property="objt"/>
+						</widget>
+
+						<widget class="spacer" />
+
+					</container>
+
+					<widget class="spacer" />
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-2,-3" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="spacer" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-3,-6" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+						<widget class="spacer" />
+						<!-- To Team -->
+						<widget class="object_portrait_picture" id="log3" image_alignment="right,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+							<!-- PROP_OTHER_TEAM -->
+							<record id="object_property" get_property="ottm" set_property="objt"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+			<widget class="spacer" />
+		</container>
+		<widget class="spacer" />
+	</container>
+</panel>

@@ -1,7 +1,7 @@
 <panel save_default_state="true">
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-	<symbol id="sidebar_secondary_colour" value="title"/>
+	<symbol id="sidebar_secondary_colour" value="fg"/>
     <symbol id="alt_sidebar_secondary_colour" value="dark text"/>
     <string id="table_selected_appearance" value="tables/custom/sidebar/selected/row"/>
     <string id="table_alt_selected_appearance" value="tables/custom/sidebar/alt selected/row"/>

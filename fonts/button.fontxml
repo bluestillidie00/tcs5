@@ -1,0 +1,9 @@
+<record>
+	<string id="file_name" value="text.xml"/>
+
+	<integer id="fill_colour_red" value="240"/>
+	<integer id="fill_colour_green" value="240"/>
+	<integer id="fill_colour_blue" value="240"/>
+	<integer id="fill_colour_alpha" value="255"/>
+	
+</record>

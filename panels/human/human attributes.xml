@@ -1,0 +1,81 @@
+<panel>
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container height="15">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<string id="skin_style" value="title link" />
+
+				<!-- Linked header -->
+				<widget class="text" font="title" id="PHac" section="PHac" auto_size="horizontal">
+<translation id="text" type="use" value="Characteristics" />
+				</widget>
+			</container>
+
+	<!--list of columns/rows to hide when not a club manager-->
+	<list id="hide_rows">
+		<integer value="4"/>
+		<integer value="5"/>
+		<integer value="6"/>
+		<integer value="7"/>
+	</list>
+
+	<widget class="table" id="know" layout="20,-2,-1" mode="fill_rows" auto_size="vertical" row_spacing="2" row_height="34">
+		<boolean id="fixed_size_rows" value="true"/>
+
+		<list id="column_table_properties">
+			<record indx="0" left="4"/>
+			<record indx="1" right="2"/>
+			<record indx="2" left="4" right="2" alignment="left,centre_y"/>
+		</list>
+
+		<!-- Reputation -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="0" id="repi"/>
+		<widget class="label" col="1" row="0" id="repu"/>
+		<widget class="horizontal_percentage_bar" id="reph" col="2" row="0" height="10"/>
+
+		<!-- Media Handling -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="1" id="medi"/>
+		<widget class="label" col="1" row="1" id="medl"/>
+		<widget class="horizontal_percentage_bar" id="medh" col="2" row="1" height="10"/>
+
+
+		<!-- Tactical Consitancy -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="2" id="taci"/>
+		<widget class="label" col="1" row="2" id="tacc"/>
+		<widget class="horizontal_percentage_bar" id="tach" col="2" row="2" height="10"/>
+
+
+		<!-- Hands On Approach -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="3" id="hani"/>
+		<widget class="label" col="1" row="3" id="hans"/>
+		<widget class="horizontal_percentage_bar" id="hanh" col="2" row="3"  height="10"/>
+
+
+		<!-- Financial control -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="4" id="fici"/>
+		<widget class="label" col="1" row="4" id="ficp"/>
+		<widget class="horizontal_percentage_bar" id="fich" col="2" row="4"  height="10"/>
+
+
+		<!-- Squad Discipline -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="5" id="sqdi"/>
+		<widget class="label" col="1" row="5" id="sqdl"/>
+		<widget class="horizontal_percentage_bar" id="sqlh" col="2" row="5"  height="10"/>
+
+
+		<!-- Loyalty To Players -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="6" id="loyi"/>
+		<widget class="label" col="1" row="6" id="loya"/>
+		<widget class="horizontal_percentage_bar" id="lplh" col="2" row="6"  height="10"/>
+
+
+		<!-- Domestic Player Bias -->
+		<widget class="info_icon_hint_text" icon_alignment="centre" col="0" row="7" id="dpbi"/>
+		<widget class="label" col="1" row="7" id="dpbp"/>
+		<widget class="horizontal_percentage_bar" id="dpbh" col="2" row="7"  height="10"/>
+
+
+	</widget>
+</panel>

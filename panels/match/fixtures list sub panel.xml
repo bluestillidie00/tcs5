@@ -17,27 +17,27 @@
 		<container class="main_box_no_margin" id="plti" alignment="left" force_title_borders="false">
 			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
-			
+
 			<!-- buttons area -->
 			<container navigation_container="true">
 				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend" />
-				
+
 				<!-- left side buttons -->		
 				<container>
 					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" />		
-					
+
 					<widget class="view_menu_label" id="TitL" embed_in_frame="false" auto_size="horizontal">
 						<translation id="text" translation_id="242258" type="use" value="Fixtures" />
 					</widget>
-				
+
 					<!-- view button -->
 					<widget class="view_menu_popup" id="plvi" sele="hofi" embed_in_frame="false" auto_size="all"/>
 				</container>
-				
+
 				<!-- right side buttons -->		
 				<container id="btna" height="31">
 					<attachment_group class="horizontal_arrange_autosize"/>
-					
+
 					<!-- seasons popup -->
 					<widget class="embedded_season_selection_list" id="fxyr" auto_size="horizontal" embed_in_frame="false">
 						<global id="gap_adjustment" name="ui.split_button_row_gap"/>
@@ -82,45 +82,47 @@
 					<record id="gene">
 						<translation id="text" value="Fixtures" translation_id="242258" type="use"/>
 						<record id="view">
-							<string id="fxdt" value=""/>
-							<string id="fxMn" value=""/>
-							<string id="FXTm" value=""/>
-							<string id="fopt" value=""/>
-							<string id="FxTV" value=""/>
-							<string id="FxVn" value=""/>
-							<string id="FxRT" value=""/>
-							<record id="FxRs"/>
-							<string id="FxNm" value=""/>
+							<string id="fxdt" />
+							<string id="fxMn" />
+							<string id="FXTm" />
+							<string id="fopt" />
+							<record id="FxNm" />
+							<record id="stad" icon_enabled="false" />
+							<record id="FxAt" />
+							<record id="FxTV" />
+							<record id="FxRT" />
+							<record id="FxRs" />
+							<record id="FxCG" />
+
 						</record>
 					</record>
 					<record id="goal">
 						<translation id="text" value="Goalscorers" translation_id="247377" type="use"/>
 						<record id="view">
-							<string id="fxdt" value=""/>
-							<string id="fxMn" value=""/>
-							<string id="FXTm" value=""/>
-							<string id="fopt" value=""/>
-							<string id="FxTV" value=""/>
-							<string id="FxVn" value=""/>
+							<string id="fxdt" />
+							<string id="fxMn" />
+							<string id="FXTm" />
+							<string id="fopt" />
+							<string id="FxTV" />
+							<string id="FxVn" />
 							<record id="FxRs"/>
 							<record id="FxCG">
 								<string id="multiline" value="false"/>
 							</record>
-							<string id="FxNm" value=""/>
+							<string id="FxNm" />
 						</record>
 					</record>
 
 					<record id="wtss">
 						<translation id="text" value="WTS Schedule View" type="use"/>
 						<record id="view">
-							<string id="fxdt" value=""/>
-							<string id="fxMn" value=""/>
-							<string id="FXTm" value=""/>
-							<string id="fopt" value=""/>
-														<string id="FxNm" value="" icon_enabled="true"/>
-							<string id="FxTV" value=""/>
-							<string id="FxVn" value=""/>
-														<string id="FxRT" value=""/>
+							<string id="fxdt" />
+							<string id="fxMn" />
+							<string id="FXTm" />
+							<string id="fopt" />
+							<string id="FxTV" />
+							<string id="FxVn" />
+							<string id="FxRT" />
 							<record id="FxRs"/>
 							<record id="ctFM" width="100"/>
 							<record id="FxCG">

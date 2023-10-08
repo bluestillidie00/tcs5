@@ -1,0 +1,24 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf" />
+
+	<integer id="gradient_upper_margin" value="30" />
+	<integer id="gradient_lower_margin" value="0" />
+	<integer id="gradient_curve" value="0" />
+	
+	<integer id="extra_spacing" value="0.75" />
+	
+	<list id="shadows">
+		<record>
+			<integer id="x_offset" value="1" />
+			<integer id="y_offset" value="1" />
+			<integer id="blur_radius" value="10" />
+			<integer id="colour_red" value="0" />
+			<integer id="colour_green" value="0" />
+			<integer id="colour_blue" value="0" />
+			<integer id="colour_alpha" value="25" />
+		</record>
+	</list>
+	
+	<string id="capitalisation" value="upper case" />
+
+</record>

@@ -1,0 +1,128 @@
+<panel maximum_items="10" ompl="true">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" section="Pfrm" auto_size="all">
+				<translation id="text" translation_id="227813" type="use" value="Form" />
+			</widget>
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="label" id="nfrm" size="11" alignment="centre" hidden="true" colour="faded text">
+				<translation id="text" translation_id="338020" type="use" value="None available[COMMENT: match ratings summary; no data available]" />
+			</widget>
+
+			<container id="cont">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<!-- graph -->
+				<container>
+
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="graph" id="grap" draw_shadows="false" inset="5" show_instant_hint="false">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+						<record id="default_series_properties" colour="accent" type="line" line_width="3" point_radius="5" point_colour="accent"/>
+						<record id="x_axis" hidden="true" >
+							<string id="format" value="[%fraction#1-3.0]"/>
+							<translation id="title" translation_id="242774" type="use" value="Match" />
+						</record>
+						<record id="y_axis" interval="2" hidden="true" show_labels="false">
+							<string id="format" value="[%fraction#1-3.0]"/>
+							<record id="title_font" style="vertical"/>
+							<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
+						</record>
+						<list id="grid_line_styles">
+							<record colour="graph row"/>
+							<record/>
+						</list>
+					</widget>
+
+				</container>
+
+				<widget class="label" id="nogp" hidden="true" colour="faded text" alignment="left,top" auto_size="vertical" >
+					<translation id="text" translation_id="330262" type="use" value="No Games Played Yet[COMMENT: player_positions_details_panel; string indicating that a player is yet to compete in any matches and as such has no positional data]" />
+				</widget>
+
+				<container id="psco">
+
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="2" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+						<widget class="picture" file="icons/16px/recommended nation" auto_size="all" image_alignment="centre" red_replacement="faded text" />
+
+						<!-- average rating -->
+						<widget class="formatted_label" id="avrt" auto_size="vertical" colour="faded text" size="small" alignment="left,centre_y" multiline="false">
+							<translation id="format" translation_id="394337" type="use" value="Av Rat: [%fraction#1-4.2][COMMENT: award panel; player stat, short version of Average Rating]" />
+						</widget>
+					</container>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+						<widget class="picture" file="icons/16px/goal" auto_size="all" image_alignment="centre" red_replacement="faded text" />
+
+						<container>
+
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="fill" vertical_offset="0" />
+
+							<!-- goals scored -->
+							<widget class="formatted_label" id="glsc" auto_size="vertical" colour="faded text" size="small" alignment="left,centre_y" multiline="false">
+								<list id="format">
+									<record value="1">
+										<translation id="format" translation_id="385425" type="use" value="1 goal[COMMENT: FR 10661; player overview form; number of goals scored by player; singular]" />
+									</record>
+									<record default_value="true">
+										<translation id="format" translation_id="327328" type="use" value="[%number#1] goals" />
+									</record>
+								</list>
+							</widget>
+							<!-- goals conceded -->
+							<widget class="formatted_label" id="glcd" auto_size="vertical" colour="faded text" size="small" alignment="left,centre_y" multiline="false">
+								<list id="format">
+									<record value="1">
+										<translation id="format" translation_id="382197" type="use" value="1 goal conceded[COMMENT: league table data popup; number of goals conceded by a team in the league]" />
+									</record>
+									<record default_value="true">
+										<translation id="format" translation_id="374433" type="use" value="[%number#1] goals conceded[COMMENT: league table data popup; number of goals conceded by a team in the league]" />
+									</record>
+								</list>
+							</widget>
+						</container>
+					</container>
+
+					<container id="noGK">
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+						<widget class="picture" file="icons/16px/assist" id="assp" auto_size="all" image_alignment="centre" red_replacement="faded text" />
+
+						<!-- assists rating -->
+						<widget class="formatted_label" id="asst" auto_size="vertical" colour="faded text" size="small" alignment="left,centre_y" multiline="false">
+							<list id="format">
+								<record value="1">
+									<translation id="format" translation_id="385424" type="use" value="1 assist[COMMENT: FR 10661; player overview form; number of assists made by player; singular]" />
+								</record>
+								<record default_value="true">
+									<translation id="format" translation_id="384051" type="use" value="[%number#1] assists[COMMENT: FR 10661; player overview form; number of assists made by player; multiple/plural]" />
+								</record>
+							</list>
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

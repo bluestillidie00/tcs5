@@ -1,0 +1,124 @@
+﻿<panel height="300" width="300">
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<!-- PLAYER FACE -->
+	<container height="140">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="8" horizontal_gap="-80" />
+
+			<!-- IF CLUB -->
+			<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true" transparency="0.6">
+				<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt"/>
+			</widget>
+
+
+			<!-- IF CLUB -->
+			<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true" transparency="0.6">
+				<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt"/>
+			</widget>
+		</container>
+
+		<!-- FACE -->
+		<widget class="picture" scale_picture="true" >
+			<layout class="stick_to_sides_attachment" />
+			<string id="image_alignment" value="centre_x" />
+			<record id="dbrp">
+				<list id="get_properties">
+					<record>
+						<string id="get_property" value="fcgn" />
+					</record>
+					<record>
+						<string id="get_property" value="Pfke" />
+					</record>
+					<record>
+						<string id="get_property" value="prpc" />
+						<string id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+	</container>
+
+	<container >
+		<attachment_group class="vertical_arrange" vertical_alignment="middle" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+
+			<!-- PLAYER NAME -->
+			<widget class="person_button" entity_layout_id="at02" id="pnmp" auto_size="all" style="bold">
+				<record id="dbrp">
+					<string id="get_property" value="PnmP" />
+					<string id="set_property" value="valu" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- DESCRIPTION -->
+		<widget class="game_formatted_label" alignment="centre" id="gmf1" height="20" size="small" colour="faded text" multiline="false">
+			<record id="fmat">
+				<translation id="text" translation_id="388547" type="use" value="[%number#1] year-old [%player_description#2][COMMENT: transfer window opening news, rumoured player moving, graphical display]" />
+				<string id="var2" value="vf_player_description" />
+			</record>
+			<record id="dbrp">
+				<list id="get_properties">
+					<record>
+						<string id="get_property" value="Page" />
+						<string id="set_property" value="var1" />
+						<string id="dont_set_object" value="true" />
+					</record>
+					<record>
+						<string id="get_property" value="Pdes" />
+						<string id="set_property" value="var2" />
+						<string id="dont_set_object" value="true" />
+					</record>
+				</list>
+			</record>
+		</widget>
+		
+		<container height="50" class="player_scout_reports_panel" file="none" id="scou">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" />
+
+<record id="object_property" get_property="objt" set_property="objt"/>
+
+						<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+							<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+						</widget>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1" />
+
+							<!--CA-->
+							<widget class="scout_stars_label" id="cast" height="18" alignment="left, centre_y" mode="1">
+								<record id="object_property" get_property="Pcab" />
+							</widget>
+
+							<!--CA label-->
+							<widget class="text" id="crTX" auto_size="vertical" alignment="left" colour="faded text"/>
+						</container>
+
+		<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+							<translation id="text" translation_id="251894" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+						</widget>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1" />
+
+							<!--CA-->
+							<widget class="scout_stars_label" id="cast" height="18" alignment="left, centre_y" mode="1">
+								<record id="object_property" get_property="Ppab" />
+							</widget>
+
+							<!--CA label-->
+							<widget class="text" id="prTX" auto_size="vertical" alignment="left" colour="faded text"/>
+						</container>
+
+<widget class="horizontal_subtle_divider" height="2"/>
+		
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,12 @@
+<record>
+		<string id="file_name" value="Sky.ttf"/>
+
+	<real id="font_size_small" value="8" />
+	<real id="font_size_normal" value="9" />
+	<real id="font_size_large" value="10" />
+	<real id="font_size_xlarge" value="11.5" />
+	<real id="font_size_xxlarge" value="16" />
+	<colour id="fill_colour" name="title"/>
+
+	<string id="capitalisation" value="upper case" />
+</record>

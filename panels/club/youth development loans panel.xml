@@ -1,0 +1,38 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<container>
+		<string id="create_if" value="fmt_completed_development_tutorial" />
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="8" horizontal_gap="8" />
+
+		<container class="main_subtle_box" id="plrC" width="400">
+<layout class="vertical_arrange" vertical_layout="-1,120,300" />
+
+			<container class="development_player_loan_report_widget" id="lndC" navigation_container="true" />
+			
+			
+
+			<container class="loan_report_panel" file="none" is_mini_loan_panel="true" id="clnO" height="120">
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="10" vertical_gap="10" horizontal_inset="0" />
+
+				<widget class="horizontal_divider" height="1" />
+
+				<container class="player_form_summary_panel" maximum_items="10" file="player/player form summary panel profile" height="200">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</container>
+			</container>
+
+		</container>
+
+		<container file="widgets/youth loans sub panel" />
+
+	</container>
+
+	<widget class="text" alignment="centre" id="noYt">
+		<string id="remove_if" value="fmt_completed_development_tutorial" />
+		<translation id="text" translation_id="551811" type="use" value="We'll go through the Development Centre together in [%number#1] days' time.[COMMENT: AREA: Induction; SUB-AREA: Block area before Induction; FR-BN: FM-3232; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Tell player they need to wait X Amount of days till induction]" />
+	</widget>
+</panel>

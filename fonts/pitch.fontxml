@@ -1,0 +1,6 @@
+<record>
+	<string id="file_name" value="googlesans.ttf"/>
+	<real id="font_size_small" value="5" />
+	<real id="font_size_normal" value="7" />
+	<real id="font_size_large" value="9" />
+</record>

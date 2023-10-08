@@ -1,0 +1,147 @@
+<panel>
+	<layout class="horizontal_arrange" horizontal_layout="300,-1"  horizontal_gap="8" />
+
+	<container >
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container class="client_object_viewer_xml_panel">
+			<record id="object_property" get_property="Pers" set_property="objt"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true"/>
+
+			<widget class="picture" file="photos/dynamic/appointment scarf/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+			<widget class="picture" file="photos/dynamic/appointment scarf/shirt" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+			<widget class="picture" file="photos/dynamic/appointment scarf/tie base" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" rrep="primary" brep="secondary" />
+
+			<widget class="picture" file="photos/dynamic/appointment scarf/tie shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+			<widget class="picture" file="photos/dynamic/appointment scarf/jacket" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+			<widget class="picture" file="photos/dynamic/appointment scarf/scarf base" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" rrep="primary" brep="secondary" />
+
+			<!-- scarf text -->
+			<container class="club_overview_panel" file="none">
+				<layout class="vertical_arrange" vertical_layout="-13, -18, -23" />
+
+				<record id="object_property" get_property="Pclb" set_property="objt"/>
+
+				<widget class="spacer"/>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_layout="-5, -30, -4" horizontal_gap="0"/>
+
+					<widget class="spacer"/>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="-4, -7" vertical_gap="0"/>
+
+						<!-- nickname -->
+						<widget class="text" id="TCnn" alignment="centre, auto_fit" font="capitals" wants_mouse_events="false" colour="secondary">
+							<record id="object_property" get_property="TCnn"/>
+						</widget>
+
+						<!-- short club name -->
+						<widget class="club_button" alignment="centre_x, auto_fit" font="capitals_bold" wants_mouse_events="false" auto_size="none" colour="secondary" icon_enabled="false">
+							<string id="format" value="[%team#1-short]"/>
+							<record id="object_property" get_property="Cref"/>
+						</widget>
+					</container>
+
+					<widget class="spacer"/>
+				</container>
+
+				<widget class="spacer"/>
+			</container>
+
+			<widget class="picture" file="photos/dynamic/appointment scarf/scarf shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+		</container>
+
+		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="bg" transparency="0.4"/>
+
+		<!-- Player Picture -->
+		<widget class="picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" />
+
+		<widget class="icon_button" show_button_appearance="false" secondary_icon_enabled="true" secondary_icon="icons/16px/edit" secondary_icon_alignment="left,top" click_event="eMan">
+			<record id="object_property" get_property="PiCh" set_property="Shwn"/>
+			<translation id="hint" translation_id="443654" type="use" value="Edit Manager Appearance[COMMENT: manager edit appearance panel; editing manager's look]" />
+		</widget>
+	</container>
+
+	<!-- LOGOS -->
+	<container width="220">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<container height="55">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+			<!-- CLUB -->
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- IF NO CLUB -->
+				<widget class="value_based_picture" scale_picture="true" file="none">
+					<list id="value_list">
+						<record value="0" file="tcs/icons/unemployed/img"/>
+					</list>
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="Pcjo" set_property="valu" dont_set_hint="true"/>
+						</list>
+					</record>
+				</widget>
+
+				<!-- IF CLUB -->
+				<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true">
+					<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt"/>
+				</widget>
+			</container>
+
+			<!-- NATION LOGO -->
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true">
+					<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt"/>
+				</widget>
+			</container>
+		</container>
+
+		<container class="tcs_box">
+			<layout class="vertical_arrange"  />
+
+			<record id="default_properties" alignment="left" auto_size="vertical"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" />
+
+				<widget class="formatted_label" size="large" style="bold" auto_size="all">
+					<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+					<record id="object_property" get_property="Page" />
+				</widget>
+
+				<!-- DoB -->
+				<widget class="editable_client_object_property_panel" id="dobl" auto_size="vertical" size="small">
+					<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="vertical" auto_size_minimum_height="22" format="([%date#1-short])"/>
+					<record id="widget_properties" height="22"/>
+					<record id="object_property" get_property="Pdob" />
+				</widget>
+			</container>
+
+			<widget class="coaching_badge_label">
+				<record id="object_property" get_property="Pcqu"/>
+			</widget>	
+
+			<widget class="global_reputation_stars_label" alignment="left,centre_y">
+				<record id="object_property" get_property="Prsa"/>
+			</widget>	
+
+			<widget class="personality_label" alignment="left,centre_y">
+				<record id="object_property" get_property="PPst"/>
+			</widget>	
+
+
+			<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="small" colour="faded text"/>
+
+		</container>
+
+	</container>
+
+	<container />
+</panel>

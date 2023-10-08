@@ -1,0 +1,7 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<!-- Story title -->
+	<widget class="icon_button" id="titl" appearance="buttons/text/button" file="tcs/boxes/tablets/website/titleitem" icon_colour="faded text" font="webtitle" size="small" alignment="left,centre_y" colour="faded text" multiline="true">
+		<record id="primary_icon_properties" red_replacement="website text"/>
+	</widget>
+</panel>

@@ -1,0 +1,38 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+
+	<container class="inner_subtle_box" id="inbX" auto_size="vertical" name="player_notable_event_subtle_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="320,-1" horizontal_offset="0" horizontal_gap="10" vertical_offset="0" />
+		
+		<container class="client_object_viewer_xml_panel" id="ppfC" file="widgets/person name club nationality decription widget" height="300" name="player_profile_container">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+		</container>
+		
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_layout="25,-1,-1,30" horizontal_alignment="left" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+
+			<widget class="link_button_title" alignment="centre_y,left" id="rlTX" auto_size="horizontal" height="25" name="report_link_text">
+				<translation id="text" translation_id="492000" type="use" value="Loan Report[COMMENT: AREA: News item link button; SUB-AREA: link to player's laon report page; FR-BN: 21268; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE; n/a]" />
+			</widget>
+
+			<widget class="text" alignment="centre_y,left" id="neMT" auto_size="vertical" name="main_text_notable_event">
+				<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+			</widget>
+
+			<container id="adeT">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+			</container>
+
+			<container class="object_action_button" no_submenus="true" vertical_alignment="top" auto_size="vertical" id="pADb" action_id="lpFB">
+				<attachment_group class="horizontal_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0" />
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</container>
+		</container>
+			
+	</container>
+</panel>

@@ -1,0 +1,6 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+	<real id="font_size_normal" value="7.5" />
+
+	<string id="capitalisation" value="upper case" />
+</record>

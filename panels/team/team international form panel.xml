@@ -1,0 +1,73 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="400,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<widget id="dpan" class="team_international_form_detail_panel">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+			</widget>
+		</container>
+
+		<container class="main_box">
+			<translation id="text" translation_id="319546" type="use" value="International Match Reports[COMMENT: Title for international match reports panel]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="client_object_list_table" id="tpan" select_event="slpf" mode="show_bullets, fill_rows, stripe_rows, select_rows, dont_allow_empty_selection" navigation_container="true" default_focus="true">
+
+				<list id="default_sort_column">
+					<integer value="PIfd" />
+					<integer id="Pers" />
+				</list>
+
+				<list id="column_widget_properties">
+					<record index="10" alignment="centre" />
+				</list>
+
+				<record id="viewed_property_ids">
+					<record id="PIps" navigation_focus_target="false" />
+					<!--Position played-->
+					<record id="PImi" navigation_focus_target="false" />
+					<!--Match incident (cards, injury etc)-->
+					<record id="Pnms" />
+					<!--Player name-->
+					<record id="PtmT" width="100" />
+					<!--Club squad-->
+					<record id="Pcab" />
+					<record id="Ppab" />
+					<record id="PPst" />
+					<record id="PInn" />
+					<!--Nation-->
+					<record id="PInt" />
+					<!--National team type played for (U19 etc)-->
+					<record id="PIsc" />
+					<!--Score-->
+					<record id="PIop" />
+					<!--Opposition-->
+					<record id="PIfd"  navigation_focus_target="false"/>
+					<!--Fixture date-->
+					<record id="PImp" width="35" />
+					<!--Minutes played-->
+					<record id="PIsb"  navigation_focus_target="false"/>
+					<!--Substituted-->
+					<record id="PIra" width="55" navigation_focus_target="false" />
+					<!--Rating-->
+					<record id="PIgo" />
+					<!--Goals-->
+				</record>
+			</widget>
+		</container>
+	</container>
+
+	<!-- panel for empty state-->
+	<container class="empty_state" id="lnop" header_widget="BShe" hidden="false" navigation_container="true" default_focus="true" navigation_container_allow_empty="true">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="319559" type="use" value="None of your players have taken part in an international match recently.[COMMENT: Text for when no players are available for international match reports]" />
+		</widget>
+	</container>
+</panel>

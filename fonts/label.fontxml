@@ -1,0 +1,12 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+	<real id="font_size_small" value="7" />
+	<real id="font_size_normal" value="7.5" />
+	<real id="font_size_large" value="8" />
+
+	<string id="capitalisation" value="upper case" />
+
+    <colour id="fill_colour" name="faded text"/>
+
+
+</record>

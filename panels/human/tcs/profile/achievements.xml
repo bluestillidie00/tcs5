@@ -1,0 +1,73 @@
+<panel>
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="0" />
+		<layout class="grid_layout_attachment" row_layout="10,32,32,40,24" mode="exact" column_layout="-2,-1,-1,-1" vertical_gap="8"/>
+
+		<record id="default_properties">
+			<flags id="alignment" value="centre" />
+			<flags id="image_alignment" value="centre" />
+		</record>
+
+		<widget class="number_label" row="0" col="1" spec="text,small">
+			<record id="value">
+				<integer id="value" value="1" />
+				<translation id="format" translation_id="242482" type="use" value="[%number#1-nth]" />
+			</record>
+		</widget>
+		<widget class="number_label" row="0" col="2" spec="text,small" >
+			<record id="value">
+				<integer id="value" value="2" />
+				<translation id="format" translation_id="242482" type="use" value="[%number#1-nth]" />
+			</record>
+		</widget>
+		<widget class="number_label" row="0" col="3" spec="text,small" >
+			<record id="value">
+				<integer id="value" value="3" />
+				<translation id="format" translation_id="242482" type="use" value="[%number#1-nth]" />
+			</record>
+		</widget>
+
+		<widget class="label" row="1" col="0" spec="text,large" alignment="left,centre_y">
+			<translation id="text" translation_id="248419" type="use" value="Personal" />
+		</widget>
+		<widget class="picture" row="1" col="1" file="icons/26px/gold medal" />
+		<widget class="picture" row="1" col="2" file="icons/26px/silver medal" />
+		<widget class="picture" row="1" col="3" file="icons/26px/bronze medal" />
+
+		<widget class="formatted_label" id="p1st" row="2" col="1" spec="text,large" style="bold" size="12">
+			<!-- PROP_PERSON_ACHIEVEMENTS_COUNT -->
+			<record id="object_property" get_property="Pact" set_property="valu"/>
+			<string id="format" value="[%number#1]"/>
+		</widget>
+		<widget class="formatted_label" id="p2nd" row="2" col="2" spec="text,large" style="bold" size="12">
+			<record id="object_property" get_property="Pact" set_property="valu"/>
+			<string id="format" value="[%number#2]"/>
+		</widget>
+		<widget class="formatted_label" id="p3rd" row="2" col="3" spec="text,large" style="bold" size="12">
+			<record id="object_property" get_property="Pact" set_property="valu"/>
+			<string id="format" value="[%number#3]"/>
+		</widget>
+
+		<widget class="label" row="3" col="0" spec="text,large" alignment="left,centre_y">
+			<translation id="text" translation_id="229408" type="use" value="Team" />
+		</widget>
+		<widget class="picture" row="3" col="1" file="icons/26px/gold trophy" />
+		<widget class="picture" row="3" col="2" file="icons/26px/silver trophy" />
+		<widget class="picture" row="3" col="3" file="icons/26px/bronze trophy" />
+
+		<widget class="formatted_label" id="t1st" row="4" col="1" spec="text,large" style="bold" size="12">
+			<record id="object_property" get_property="Pact" set_property="valu"/>
+			<string id="format" value="[%number#4]"/>
+		</widget>
+		<widget class="formatted_label" id="t2nd" row="4" col="2" spec="text,large" style="bold" size="12">
+			<record id="object_property" get_property="Pact" set_property="valu"/>
+			<string id="format" value="[%number#5]"/>
+		</widget>
+		<widget class="formatted_label" id="t3rd" row="4" col="3" spec="text,large" style="bold" size="12">
+			<record id="object_property" get_property="Pact" set_property="valu"/>
+			<string id="format" value="[%number#6]"/>
+		</widget>
+	</container>
+</panel>

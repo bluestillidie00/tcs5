@@ -1,0 +1,117 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container height="160" >
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<container class="client_object_viewer_xml_panel" id="psdt">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<container id="plyd">
+				<layout class="arrange_horizontal_attachment" layout="220, -1" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<container >
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true"/>
+
+					<widget class="object_portrait_picture" id="clul" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="120" transparency="0.8">
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+					</widget>
+
+					<widget class="object_portrait_picture"  image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"  width="160">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="person_button" info_popup_enabled="true" Pipl="true" auto_size="vertical" size="large" style="bold">
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="valu"/>
+						</record>
+					</widget>
+
+					<!-- Age -->
+					<widget class="game_formatted_label"  alignment="left,centre_y" auto_size="vertical" colour="faded text" >
+						<record id="format">
+							<translation id="text" translation_id="388547" type="use" value="[%number#1] year-old [%player_description#2][COMMENT: transfer window opening news, rumoured player moving, graphical display]"/>
+							<integer id="var2" value="vf_player_description"/>
+						</record>
+
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- age -->
+								<record get_property="Page" set_property="var1" dont_set_object="true"/>
+								<!-- description -->
+								<record get_property="Pdes" set_property="var2" dont_set_object="true"/>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="nation_button" auto_size="vertical">
+						<record id="object_property" get_property="PNat"/>
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<container class="vertical_arrange_container" id="infc" auto_size="none" gap="0" alignment="top" inset="0" offset="0"/>
+	</container>
+
+	<container class="container" id="trbx" height="200">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_alignment="middle" vertical_inset="16"/>
+		<!-- treatment information boxes will be added to this container -->
+	</container>
+
+	<!--stats title link-->
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" vertical_inset="0"/>
+
+		<widget class="link_button_title" id="sttl" auto_size="all" section="Psta">
+			<translation id="text" translation_id="348255" type="use" value="Player stats[COMMENT: Pre match stat pack panel; title of section showing a table of top players stats comparison]" />
+		</widget>
+	</container>
+	
+	<!--no player stats to show-->
+	<widget class="text" id="ncmp" multiline="true" auto_size="vertical" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+		<translation id="text" translation_id="420718" type="use" value="No competitive matches played.[COMMENT: FR13703 - string to show the player has not played any competitive matches]" />
+	</widget>
+	
+	<!-- player stats -->
+	<container class="player_stats_grid_panel" id="plst" height="80" minimum_width="150">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+		
+		<record id="object_property">
+			<integer id="get_property" value="objt"/>
+			<integer id="set_property" value="objt"/>
+		</record>
+		
+		<!--list of properties we want in addition to the standard stats properties per position-->
+		<list id="rvpi">
+			<integer value="Pcex"/>
+			<integer value="Poap"/>
+			<integer value="Pomo"/>
+			<record id="Poav">
+				<record id="value_widget_properties" fixed_appearance_alignment="left,centre_y" navigation_focus_target="false"/>
+			</record>
+		</list>
+	</container>
+
+	<!-- player loan stats -->
+	<container class="player_loan_information_panel" id="plip"/>
+	
+	<container class="team_current_injuries_panel" id="cuip" navigation_container="true"/>
+</panel>

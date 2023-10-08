@@ -1,0 +1,10 @@
+<record>
+	<string id="file_name" value="tiempos.ttf"/>
+	<real id="font_size_small" value="8" />
+	<real id="font_size_normal" value="9" />
+	<real id="font_size_large" value="10" />
+	<real id="font_size_xlarge" value="11.5" />
+	<real id="font_size_xxlarge" value="16" />
+    <record style="semi_bold" boldness="0.8"/>
+
+</record>

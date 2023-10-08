@@ -1,0 +1,5 @@
+<record>
+	<string id="file_name" value="text.xml"/>
+	<colour id="fill_colour" name="white"/>
+	<real id="extra_height" value="4.0"/>
+</record>

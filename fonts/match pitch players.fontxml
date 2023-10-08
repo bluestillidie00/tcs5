@@ -1,0 +1,7 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+	<real id="font_size_small" value="7" />
+	
+	<real id="extra_height" value="2" /> 
+
+</record>

@@ -1,0 +1,13 @@
+<record>
+	<string id="file_name" value="googlesans.ttf" />
+	<real id="boldness" value="1" />
+	
+	<integer id="extra_spacing" value="0.5" />
+	
+	<integer id="fill_colour_red" value="255"/>
+	<integer id="fill_colour_green" value="255"/>
+	<integer id="fill_colour_blue" value="255"/>
+	<integer id="fill_colour_alpha" value="50"/>
+	
+	<string id="capitalisation" value="upper case" />
+</record>

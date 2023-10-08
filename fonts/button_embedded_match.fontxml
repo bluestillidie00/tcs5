@@ -1,0 +1,22 @@
+<record>
+	<string id="file_name" value="googlesans.ttf"/>
+	<real id="boldness" value="0.6"/>
+	
+	<list id="shadows">
+		<record>
+			<integer id="x_offset" value="0"/>
+			<integer id="y_offset" value="-1"/>
+			<integer id="blur_radius" value=""/>
+			<integer id="colour_red" value="0"/>
+			<integer id="colour_green" value="0"/>
+			<integer id="colour_blue" value="0"/>
+			<integer id="colour_alpha" value="170"/>
+		</record>
+	</list>
+
+	<integer id="fill_colour_red" value="240"/>
+	<integer id="fill_colour_green" value="240"/>
+	<integer id="fill_colour_blue" value="240"/>
+	<integer id="fill_colour_alpha" value="255"/>
+
+</record>

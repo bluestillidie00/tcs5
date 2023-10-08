@@ -3,6 +3,12 @@
 
 	<container class="tcs_tabs_primary" save_session_state="true" save_default_state="true">
 		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+					
+		<!-- -->
+		<container class="client_object_viewer_xml_panel" file="player/tcs/tabs/advsta/graphs" id="grap" >
+			<translation id="title" type="use" value="Graphs" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container> 
 
 		<container class="client_object_viewer_xml_panel" file="player/tcs/tabs/advsta/player performance stats total" id="mmst" >
 			<translation id="title" type="use" translation_id="330715" value="Stats (Total)" />
@@ -13,11 +19,13 @@
 			<translation id="title" type="use" translation_id="382745" value="Stats (Per 90)" />
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</container>		
-		
-	<!-- -->	<container class="client_object_viewer_xml_panel" file="player/tcs/tabs/advsta/stag_A_base" id="Stag" >
+
+		<!-- -->
+		<container class="client_object_viewer_xml_panel" file="player/tcs/tabs/advsta/stag_A_base" id="Stag" >
 			<translation id="title" type="use" value="FM Stag Stats" />
 			<record id="object_property" get_property="objt" set_property="objt"/>
-		</container> 
+		</container>
+	
 	</container>
 
 </panel>

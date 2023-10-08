@@ -1,0 +1,8 @@
+<record>
+	<string id="file_name" value="webtext"/>
+	<real id="font_size_small" value="7" />
+	<real id="font_size_normal" value="9" />
+	<real id="font_size_large" value="10" />
+	<real id="font_size_xlarge" value="12" />
+	<real id="font_size_xxlarge" value="15" />
+</record>

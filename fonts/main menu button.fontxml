@@ -1,0 +1,11 @@
+<record>
+	<string id="file_name" value="googlesansbold.ttf"/>
+
+  <real id="font_size_normal" value="9" /> 
+
+	<integer id="fill_colour_red" value="255"/>
+	<integer id="fill_colour_green" value="255"/>
+	<integer id="fill_colour_blue" value="255"/>
+	<integer id="fill_colour_alpha" value="255"/>
+	
+</record>

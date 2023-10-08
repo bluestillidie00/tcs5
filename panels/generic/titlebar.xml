@@ -90,11 +90,19 @@
                     </widget>
                 </container>
 
-                <!--in game editor edit object button-->
+               
+            </container>
+        </container>
+
+        <!-- Group of buttons in the top right -->
+        <container>
+            <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="4" horizontal_offset="12" vertical_offset="0"/>
+
+ <!--in game editor edit object button-->
                 <container>
                     <attachment class="test_global_attachment" get_property="gset" value="false" set_property="hidn" />
                     <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="0" vertical_offset="0"/>
-                    <widget class="edit_object_icon_button" id="edit" fixed="true" icon="icons/16px/edit" icon_alignment="centre" appearance="chrome/buttons/items/button" auto_size="none" multiline="false" width="44" height="44" secondary_icon_enabled="false">
+                    <widget class="edit_object_icon_button" id="edit" fixed="true" icon="icons/16px/edit" icon_alignment="centre" appearance="chrome/buttons/items/button" auto_size="all" multiline="false" width="44" height="44" secondary_icon_enabled="false">
                         <record id="primary_icon_properties" red_replacement="fg" />
                         <attachment class="flash_colour_attachment" auto_start="false" rate="850">
                             <colour id="first_colour" red="49" green="52" blue="63" />
@@ -103,12 +111,6 @@
                         </attachment>
                     </widget>
                 </container>
-            </container>
-        </container>
-
-        <!-- Group of buttons in the top right -->
-        <container>
-            <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="4" horizontal_offset="12" vertical_offset="0"/>
 
             <!-- World dropdown -->
             <widget class="world_popup_button" id="wrld" width="44" height="44" icon="icons/26px/world" appearance="chrome/buttons/items/button" secondary_icon_enabled="false" icon_alignment="centre" alignment="centre" >
@@ -122,7 +124,7 @@
             </widget>
 
             <!-- FM button -->
-            <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="tcs/icons/ui/wts" width="50" height="50" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
+            <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/menu" width="50" height="50" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
                 <event id="click_notification_event" event_id="FM" item="NULL" />
                 <event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
                 <record id="items" file="menus/game" />
