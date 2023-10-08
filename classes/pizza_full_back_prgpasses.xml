@@ -1,0 +1,15 @@
+<class class="pizza_full_back_prgpasses" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="3.03" appearance="mustermann/pizza/30/0" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.03" max_value="3.52" appearance="mustermann/pizza/30/10" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.52" max_value="3.95" appearance="mustermann/pizza/30/20" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.95" max_value="4.41" appearance="mustermann/pizza/30/30" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="4.41" max_value="4.84" appearance="mustermann/pizza/30/40" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="4.84" max_value="5.32" appearance="mustermann/pizza/30/50" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="5.32" max_value="5.85" appearance="mustermann/pizza/30/60" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="5.85" max_value="6.48" appearance="mustermann/pizza/30/70" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="6.48" max_value="7.41" appearance="mustermann/pizza/30/80" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="7.41" max_value="13.12" appearance="mustermann/pizza/30/90" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="13.12" max_value="1000" appearance="mustermann/pizza/30/100" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+	</list>
+</class>

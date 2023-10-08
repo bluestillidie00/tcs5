@@ -1,0 +1,6 @@
+<class class="archetype_filter_blank" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="1.74" appearance="boxes/contrast/standard/middle/paper" image_alignment="centre_x,centre_y" red_replacement="bg" colour="" hidden="false"/>
+		<record min_value="1.74" max_value="10000" appearance="" image_alignment="centre_x,centre_y" red_replacement="bg" colour="" hidden="false"/>
+	</list>
+</class>

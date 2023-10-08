@@ -1,0 +1,15 @@
+<class class="pizza_all_posswon" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="5.49" appearance="mustermann/pizza/30/0" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="5.49" max_value="6.95" appearance="mustermann/pizza/30/10" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="6.95" max_value="8.14" appearance="mustermann/pizza/30/20" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="8.14" max_value="9.37" appearance="mustermann/pizza/30/30" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="9.37" max_value="10.86" appearance="mustermann/pizza/30/40" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="10.86" max_value="12.54" appearance="mustermann/pizza/30/50" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="12.54" max_value="14.19" appearance="mustermann/pizza/30/60" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="14.19" max_value="15.97" appearance="mustermann/pizza/30/70" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="15.97" max_value="18.23" appearance="mustermann/pizza/30/80" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="18.23" max_value="30.78" appearance="mustermann/pizza/30/90" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="30.78" max_value="1000" appearance="mustermann/pizza/30/100" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+	</list>
+</class>

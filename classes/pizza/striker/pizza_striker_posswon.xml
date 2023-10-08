@@ -1,0 +1,15 @@
+<class class="pizza_striker_posswon" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="3.48" appearance="mustermann/pizza/30/0" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.48" max_value="3.99" appearance="mustermann/pizza/30/10" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.99" max_value="4.34" appearance="mustermann/pizza/30/20" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="4.34" max_value="4.70" appearance="mustermann/pizza/30/30" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="4.70" max_value="5.06" appearance="mustermann/pizza/30/40" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="5.06" max_value="5.39" appearance="mustermann/pizza/30/50" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="5.39" max_value="5.83" appearance="mustermann/pizza/30/60" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="5.83" max_value="6.33" appearance="mustermann/pizza/30/70" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="6.33" max_value="7.13" appearance="mustermann/pizza/30/80" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="7.13" max_value="10.76" appearance="mustermann/pizza/30/90" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="10.76" max_value="1000" appearance="mustermann/pizza/30/100" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+	</list>
+</class>

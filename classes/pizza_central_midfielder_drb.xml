@@ -1,0 +1,15 @@
+<class class="pizza_central_midfielder_drb" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="0.37" appearance="mustermann/pizza/60/0" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="0.37" max_value="0.51" appearance="mustermann/pizza/60/10" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="0.51" max_value="0.62" appearance="mustermann/pizza/60/20" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="0.62" max_value="0.73" appearance="mustermann/pizza/60/30" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="0.73" max_value="0.84" appearance="mustermann/pizza/60/40" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="0.84" max_value="0.98" appearance="mustermann/pizza/60/50" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="0.98" max_value="1.13" appearance="mustermann/pizza/60/60" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="1.13" max_value="1.34" appearance="mustermann/pizza/60/70" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="1.34" max_value="1.72" appearance="mustermann/pizza/60/80" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="1.72" max_value="3.95" appearance="mustermann/pizza/60/90" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.95" max_value="1000" appearance="mustermann/pizza/60/100" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+	</list>
+</class>

@@ -1,0 +1,15 @@
+<class class="pizza_striker_npxg" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="0.21" appearance="mustermann/pizza/30/0" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.21" max_value="0.25" appearance="mustermann/pizza/30/10" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.25" max_value="0.30" appearance="mustermann/pizza/30/20" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.30" max_value="0.34" appearance="mustermann/pizza/30/30" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.34" max_value="0.37" appearance="mustermann/pizza/30/40" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.37" max_value="0.42" appearance="mustermann/pizza/30/50" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.42" max_value="0.46" appearance="mustermann/pizza/30/60" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.46" max_value="0.52" appearance="mustermann/pizza/30/70" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.52" max_value="0.63" appearance="mustermann/pizza/30/80" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.63" max_value="1.34" appearance="mustermann/pizza/30/90" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="1.34" max_value="1000" appearance="mustermann/pizza/30/100" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+	</list>
+</class>

@@ -1,0 +1,25 @@
+<class class="bars_indicator_shot_expected" parent="match_rating_label" font="bold" size="small" should_recolour="false" fixed_appearance_alignment="left" appearance="tcs/icons/metrics/med">
+  <list id="value_list">
+    <record min_value="-1" max_value="0" red_replacement="red" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/0" hidden="false"/>
+    <record min_value="0.001" max_value="0.079" red_replacement="deep orange 200" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/1" hidden="false"/>
+     <record min_value="0.0800" max_value="0.099" red_replacement="deep orange 300" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/2" hidden="false"/>
+     <record min_value="0.1000" max_value="0.1029" red_replacement="deep orange 400" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/3" hidden="false"/>
+     <record min_value="0.1030" max_value="0.1059" red_replacement="deep orange 500" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/4" hidden="false"/>
+     <record min_value="0.1060" max_value="0.1079" red_replacement="amber 50" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/5" hidden="false"/>
+     <record min_value="0.1080" max_value="0.1119" red_replacement="amber 100" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/6" hidden="false"/>
+     <record min_value="0.1120" max_value="0.1149" red_replacement="amber 100" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/7" hidden="false"/>
+    <record min_value="0.1150" max_value="0.1169" red_replacement="amber 200" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/8" hidden="false"/>
+    <record min_value="0.1170" max_value="0.1189" red_replacement="amber 200" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/9" hidden="false"/>
+    <record min_value="0.1190" max_value="0.1201" red_replacement="amber 300" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/10" hidden="false"/>
+    <record min_value="0.1202" max_value="0.1219" red_replacement="amber 300" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/11" hidden="false"/>
+     <record min_value="0.1220" max_value="0.1239" red_replacement="green 100" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/12" hidden="false"/>
+     <record min_value="0.1240" max_value="0.1269" red_replacement="green 100" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/13" hidden="false"/>
+     <record min_value="0.1270" max_value="0.1289" red_replacement="green 200" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/14" hidden="false"/>
+     <record min_value="0.1290" max_value="0.1329" red_replacement="green 300" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/15" hidden="false"/>
+     <record min_value="0.1330" max_value="0.1399" red_replacement="green 400" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/16" hidden="false"/>
+    <record min_value="0.1400" max_value="0.1429" red_replacement="green 500" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/17" hidden="false"/>
+    <record min_value="0.1430" max_value="0.1499" red_replacement="green 600" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/18" hidden="false"/>
+    <record min_value="0.1500" max_value="0.1599" red_replacement="green 700" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/19" hidden="false"/>
+    <record min_value="0.1600" max_value="1.00" red_replacement="fg positive" blue_replacement="bg lighter"  appearance="tcs/icons/metrics/20" hidden="false"/>
+  </list>
+</class>

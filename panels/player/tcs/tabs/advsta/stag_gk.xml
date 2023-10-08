@@ -45,7 +45,7 @@
 				<translation id="hint" translation_id="227849" type="use" value="Name" />
 			</record>
 			<record index="4" alignment="centre_x,centre_y" auto_hide_priority="1">
-				<translation id="text" translation_id="227849" type="use" value="Name" />
+				<translation id="text" translation_id="227863" type="use" value="Name" />
 				<translation id="hint" translation_id="227863" type="use" value="Name" />
 			</record>
 		</list>	

@@ -1,0 +1,15 @@
+<class class="pizza_centre_back_posswon" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="13.97" appearance="mustermann/pizza/30/0" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="13.97" max_value="15.11" appearance="mustermann/pizza/30/10" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="15.11" max_value="15.89" appearance="mustermann/pizza/30/20" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="15.89" max_value="16.67" appearance="mustermann/pizza/30/30" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="16.67" max_value="17.45" appearance="mustermann/pizza/30/40" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="17.45" max_value="18.24" appearance="mustermann/pizza/30/50" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="18.24" max_value="19.15" appearance="mustermann/pizza/30/60" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="19.15" max_value="20.25" appearance="mustermann/pizza/30/70" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="20.25" max_value="21.88" appearance="mustermann/pizza/30/80" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="21.88" max_value="30.78" appearance="mustermann/pizza/30/90" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="30.78" max_value="1000" appearance="mustermann/pizza/30/100" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+	</list>
+</class>

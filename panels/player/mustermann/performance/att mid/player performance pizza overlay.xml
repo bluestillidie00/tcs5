@@ -1,0 +1,246 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<!--ATTACKING MIDFIELDER-->
+	<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" id="mmpo4" late_loading="true">
+		<translation id="title" translation_id="297442" type="use" value="Attacking Midfielder"/>
+	
+		<container default_height="-1" minimum_height="1"/>
+		
+		<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally" default_height="300">
+			
+			<container default_width="-1" minimum_width="1"/>
+
+			<container default_width="300">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.25" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						
+						<widget class="pizza_attacking_midfielder_xa">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="PxA9"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.3" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="pizza_attacking_midfielder_npxg">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>							
+							<record id="object_property" get_property="PNx9"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.35" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="pizza_attacking_midfielder_gls">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="POgg"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.4" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150" >
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="90"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_shot">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="POsg"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.45" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150" >
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="90"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_hrs">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POHg"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.5" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150" >
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="90"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_pressa">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PRS9"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.55" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="180"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_tck">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="Pota"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="180"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_posswon">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.05" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="180"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_posslost">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="POL9"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.1" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="270"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_passes">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="POpc"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.15" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="270"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_prgpasses">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="PGR9"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<container class="transformation_container" height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />	
+						
+						<list id="transformations">
+							<record type="rotation" value="270"/>
+						</list>
+
+						<widget class="pizza_attacking_midfielder_drb">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+							<record id="object_property" get_property="Podr"/>
+						</widget>
+					</container>
+				</container>
+				
+				<container>
+					<container height="50" width="50">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="125"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="125"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						
+						<widget class="picture" file="mustermann/pizza/hole" red_replacement="bg" scale_picture="false" image_alignment="centre">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+						</widget>
+					
+					</container>
+				</container>
+				
+			
+			</container>			
+			
+			<container default_width="-1" minimum_width="1"/>
+		
+		</container>
+		
+		<container default_height="-1" minimum_height="1"/>
+	
+	</container>
+
+	
+</panel>	

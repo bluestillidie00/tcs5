@@ -1,0 +1,15 @@
+<class class="pizza_centre_back_posslost" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="34.11" max_value="1000" appearance="mustermann/pizza/60/0" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="11.85" max_value="34.11" appearance="mustermann/pizza/60/10" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="10.38" max_value="11.85" appearance="mustermann/pizza/60/20" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="9.48" max_value="10.38" appearance="mustermann/pizza/60/30" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="8.81" max_value="9.48" appearance="mustermann/pizza/60/40" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="8.25" max_value="8.81" appearance="mustermann/pizza/60/50" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="7.76" max_value="8.25" appearance="mustermann/pizza/60/60" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="7.20" max_value="7.76" appearance="mustermann/pizza/60/70" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="6.68" max_value="7.20" appearance="mustermann/pizza/60/80" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="5.95" max_value="6.68" appearance="mustermann/pizza/60/90" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="-1" max_value="5.95" appearance="mustermann/pizza/60/100" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+	</list>
+</class>

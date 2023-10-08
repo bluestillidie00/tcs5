@@ -1,0 +1,15 @@
+<class class="pizza_attacking_midfielder_npxg" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="0.07" appearance="mustermann/pizza/30/0" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.07" max_value="0.11" appearance="mustermann/pizza/30/10" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.11" max_value="0.14" appearance="mustermann/pizza/30/20" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.14" max_value="0.16" appearance="mustermann/pizza/30/30" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.16" max_value="0.19" appearance="mustermann/pizza/30/40" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.19" max_value="0.22" appearance="mustermann/pizza/30/50" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.22" max_value="0.25" appearance="mustermann/pizza/30/60" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.25" max_value="0.29" appearance="mustermann/pizza/30/70" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.29" max_value="0.36" appearance="mustermann/pizza/30/80" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.36" max_value="0.73" appearance="mustermann/pizza/30/90" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+		<record min_value="0.73" max_value="1000" appearance="mustermann/pizza/30/100" image_alignment="bottom" red_replacement="pizza_attack" colour="" hidden="false"/>
+	</list>
+</class>

@@ -1,0 +1,15 @@
+<class class="pizza_full_back_drb" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="0.50" appearance="mustermann/pizza/60/0" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="0.05" max_value="1.28" appearance="mustermann/pizza/60/10" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="1.28" max_value="1.79" appearance="mustermann/pizza/60/20" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="1.79" max_value="2.13" appearance="mustermann/pizza/60/30" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="2.13" max_value="2.42" appearance="mustermann/pizza/60/40" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="2.42" max_value="2.71" appearance="mustermann/pizza/60/50" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="2.71" max_value="3.04" appearance="mustermann/pizza/60/60" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.04" max_value="3.42" appearance="mustermann/pizza/60/70" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="3.42" max_value="4.00" appearance="mustermann/pizza/60/80" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="4.00" max_value="7.71" appearance="mustermann/pizza/60/90" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+		<record min_value="7.71" max_value="1000" appearance="mustermann/pizza/60/100" image_alignment="bottom" red_replacement="pizza_possess" colour="" hidden="false"/>
+	</list>
+</class>
