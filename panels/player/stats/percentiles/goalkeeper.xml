@@ -1,0 +1,169 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+<container class="contrast_box" red_replacement="bg lighter">
+<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="1"/>
+
+		<widget class="label" auto_size="vertical" alignment="top,centre_x" font="title" size="14" colour="statman" >
+			<translation id="text"  type="use" value="Goalkeepers" />
+		</widget>
+
+<!--TABLE HEADERS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="statman" font="title" style="bold" size="10" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Stat" />
+</widget>
+<widget class="text" colour="statman" font="title" style="bold" size="10" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Per 90" />
+</widget>
+<widget class="text" colour="statman" font="title" style="bold" size="10" alignment="centre_y,left,can_scale" >
+<translation id="text" type="use" value="Percentile Rank" />
+</widget>
+</container>
+
+
+<!--MINS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Minutes per Game" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POmg"/>
+</widget>
+<widget class="bars_indicator_mins_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.2"/>
+<record id="object_property" get_property="POmg" />
+</widget>
+</container>
+
+<!--CLEAN SHEETS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Clean Sheets" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POg9"/>
+</widget>
+<widget class="bars_indicator_cln_sheet_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.22"/>
+<record id="object_property" get_property="POg9" />
+</widget>
+</container>
+
+
+<!--GOALS CONCEDED-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Goals Conceded" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POcg"/>
+</widget>
+<widget class="bars_indicator_goal_conc_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.24"/>
+<record id="object_property" get_property="POcg" />
+</widget>
+</container>
+
+<!--SAVE RATIO-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Save Ratio (%)" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POs%"/>
+</widget>
+<widget class="bars_indicator_save_cmp_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.26"/>
+<record id="object_property" get_property="POs%" />
+</widget>
+</container>
+
+<!--CLEARANCES-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Clearances" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POc9"/>
+</widget>
+<widget class="bars_indicator_clear_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.28"/>
+<record id="object_property" get_property="POc9" />
+</widget>
+</container>
+
+<!--PASS COMP-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Passes Completed (%)" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="Popa"/>
+</widget>
+<widget class="bars_indicator_pass_cmp_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.3"/>
+<record id="object_property" get_property="Popa" />
+</widget>
+</container>
+
+<!--POSS LOST-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Possession Lost" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POL9"/>
+</widget>
+<widget class="bars_indicator_poss_lost_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.32"/>
+<record id="object_property" get_property="POL9" />
+</widget>
+</container>
+
+<!--PROGRESSIVE PASSES-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Progressive Passes" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="PGR9"/>
+</widget>
+<widget class="bars_indicator_prog_pass_gk" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.34"/>
+<record id="object_property" get_property="PGR9" />
+</widget>
+</container>
+
+
+<!--AXIS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property=""/>
+</widget>
+<widget class="picture" file="profile/axis"  red_replacement="white" scale_picture="true">
+<translation id="text" type="use" value="" />
+</widget>
+
+</container>
+
+
+
+</container>
+
+
+
+</panel>

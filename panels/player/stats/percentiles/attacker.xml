@@ -1,0 +1,169 @@
+<panel>
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+
+<container class="contrast_box" red_replacement="bg lighter">
+<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="1"/>
+
+		<widget class="label" auto_size="vertical" alignment="top,centre_x" font="title" size="14" colour="statman" >
+			<translation id="text"  type="use" value="Fowards" />
+		</widget>
+
+<!--TABLE HEADERS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="statman" font="title" style="bold" size="10" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Stat" />
+</widget>
+<widget class="text" colour="statman" font="title" style="bold" size="10" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Per 90" />
+</widget>
+<widget class="text" colour="statman" font="title" style="bold" size="10" alignment="centre_y,left,can_scale" >
+<translation id="text" type="use" value="Percentile Rank" />
+</widget>
+</container>
+
+
+<!--MINS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Minutes per Game" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POmg"/>
+</widget>
+<widget class="bars_indicator_mins" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.2"/>
+<record id="object_property" get_property="POmg" />
+</widget>
+</container>
+
+<!--SHOTS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Shots" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POsg"/>
+</widget>
+<widget class="bars_indicator_shots" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.22"/>
+<record id="object_property" get_property="POsg" />
+</widget>
+</container>
+
+<!--GOALS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Goals" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POgg"/>
+</widget>
+<widget class="bars_indicator_goals" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.24"/>
+<record id="object_property" get_property="POgg" />
+</widget>
+</container>
+
+<!--NON PEN XG-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Non Penalty xG" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="PNx9"/>
+</widget>
+<widget class="bars_indicator_non_pen" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.26"/>
+<record id="object_property" get_property="PNx9" />
+</widget>
+</container>
+
+<!--SHOT XG-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Shot xG" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="PxGs"/>
+</widget>
+<widget class="bars_indicator_shot_expected" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.28"/>
+<record id="object_property" get_property="PxGs" />
+</widget>
+</container>
+
+<!--CONVERSION-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Coversion Rate (%)" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POgS"/>
+</widget>
+<widget class="bars_indicator_conv" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.3"/>
+<record id="object_property" get_property="POgS" />
+</widget>
+</container>
+
+
+<!--ASSISTS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Assists" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="POag"/>
+</widget>
+<widget class="bars_indicator_assist_att" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.32"/>
+<record id="object_property" get_property="POag" />
+</widget>
+</container>
+
+<!--X ASSISTS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="Expected Assists" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property="PxA9"/>
+</widget>
+<widget class="bars_indicator_exp_assist_att" alignment="left,centre_y">
+<animation class="slide_in_left_animation" duration="0.3" delay="0.34"/>
+<record id="object_property" get_property="PxA9" />
+</widget>
+</container>
+
+<!--AXIS-->
+<container class="inner_box" red_replacement="bg lighter">
+<layout class="horizontal_arrange" horizontal_layout="100,50,-6" horizontal_gap="5" />
+<widget class="text" colour="white" font="title" style="bold" size="9" alignment="centre_y,right,can_scale" >
+<translation id="text" type="use" value="" />
+</widget>
+<widget class="dashed_number_label" alignment="centre_y">
+<record id="object_property" get_property=""/>
+</widget>
+<widget class="picture" file="profile/axis"  red_replacement="white" scale_picture="true">
+<translation id="text" type="use" value="" />
+</widget>
+
+</container>
+
+
+</container>
+
+
+
+</panel>

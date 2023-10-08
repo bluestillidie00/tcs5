@@ -1,0 +1,83 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+<container class="contrast_box" red_replacement="bg">
+<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="2"/>
+
+<container >
+<attachment_group class="vertical_arrange" vertical_layout="45,-1" vertical_gap="3"/>
+<!-- PLAYER NAME-->
+<container class="inner_box_no_margin" height="45" >
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+<widget class="text"  alignment="top,centre_x,can_scale" font="title" style="bold" size="20" colour="white">
+<record id="object_property" get_property="titl" set_property="text"/>
+</widget>
+</container>
+
+<container >
+<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" vertical_gap="0"/>
+<!--PLAYER INFO-->
+		<container class="bordered_box" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+    <widget class="player_additional_stats_panel" id="Plgm" file="player/stats/percentiles/info card" width="-1" priority="1">
+      <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
+		</container>
+
+
+<!-- PLAYER PIC AND BG -->
+<container class="main_contrast_box" red_replacement="bg lighter" >
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+<container>
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+<widget class="kit_icon" id="kitV" file="generic/pitch number profile" scale_picture="false" keep_aspect_ratio="false" image_alignment="top" kit_zoom_level="1" >
+<layout class="centre_in_parent_attachment" alignment="top" offset="0" priority="1"/>
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" priority="1"/>
+<record id="object_property">
+<list id="get_properties">
+<record>
+<integer id="get_property" value="Pers" />
+<integer id="set_property" value="Pers" />
+</record>
+<record>
+<integer id="get_property" value="Pctx" />
+<integer id="set_property" value="Pcte" />
+</record>
+</list>
+</record>
+</widget>
+
+ <widget class="player_status_all_button" id="psAB" maximised="true" auto_size="horizontal" alignment="bottom" gap="0" max_items_per_row_or_column="6">
+                            <layout class="stick_to_sides_attachment" alignment="top,right" inset="0"/>
+                            <record id="object_property" get_property="Pnfa"/>
+                        </widget>
+
+
+
+</container>
+
+<container >
+<attachment_group class="vertical_arrange" vertical_layout="-1,30" horizontal_gap="0"/>
+<!-- PROFILE PICTURE -->
+<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,bottom" >
+<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="1"/>
+<record id="object_property">
+<list id="get_properties">
+<record get_property="fcgn" />
+<record get_property="Pfke" />
+<record get_property="prpc" set_property="valu" />
+</list>
+</record>
+</widget>
+
+
+
+
+</container>
+
+</container>
+</container>
+
+</container>
+</container>
+</panel>

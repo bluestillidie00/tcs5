@@ -1,0 +1,196 @@
+<panel>
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+    <attachment class="vertical_arrange_autosize"/>
+    <container height="340">
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+	<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
+
+
+	<!--PERSONAL: AGE-->
+	<container id="Page" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="419420" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Age" />
+			</widget>
+		<widget class="formatted_label" font="title" alignment="right,centre_y" colour="text">
+			<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+			<record id="object_property" get_property="Page" />
+		</widget>		
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>														
+	</container>
+
+	<!--PERSONAL: DOB-->
+	<container id="Pdob" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="230147" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Date of Birth" />
+			</widget>
+		<widget class="game_formatted_label" font="title" alignment="right,centre_y,can_scale" colour="text">
+			<integer id="format" value="[%date#1-short]"/>
+			<record id="object_property" get_property="Pdob" />
+		</widget>	
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+	<!--PERSONAL: NATIONALITY-->
+	<container id="PNat" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="227841" type="use" />
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Nationality" />
+			</widget>
+		<widget class="editable_client_object_property_panel" id="intc" alignment="right,centre_y,can_scale" font="title" colour="text">
+			<record id="widget_info" class="nation_button" icon_enabled="true" icon_alignment="right" colour="fg" format="[%nation#1-nationality]"/>
+			<record id="widget_properties"/>
+			<record id="object_property" dont_set_hint="true" get_property="PNat"/>
+		</widget>	
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+	<!--PERSONAL: COB-->
+	<container id="Pcob" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" value="City of Birth" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,25,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Place of Birth" />
+			</widget>
+		<widget class="client_object_label" font="title" alignment="right,centre_y,can_scale" colour="text">
+			<record id="object_property" get_property="Pcob" />
+		</widget>	
+                    <widget class="nation_button" alignment="centre_y" font="title" size="small">
+                        <record id="object_property" get_property="Pnob" />
+				<flags id="use_format" value="very_short" />
+            </widget>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+	<!--PERSONAL: AGENT-->
+	<container id="Pist" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="243964" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Agent" />
+			</widget>
+                <widget class="person_button" font="title" colour="white" alignment="right,centre_y,can_scale" icon_alignment="right">
+                    <record id="object_property" get_property="Pagn" />
+                </widget>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+
+
+
+
+	<!--PERSONAL: INTERNATIONAL APPEARANCES-->
+	<container id="Pist" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="243964" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Caps" />
+			</widget>
+		<widget class="international_appearances_label" id="inta" font="title" alignment="right,centre_y,can_scale" colour="text">
+			<integer id="int_apps_label_format" value="10" />
+			<record id="object_property" dont_set_hint="true" get_property="Pist" />
+		</widget>	
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+
+	<!--PLAYING: POSITION-->
+	<container id="Ppos" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" value="Position" type="use"/>
+		<translation id="subtitle" value="Playing" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Position" />
+			</widget>
+                <widget class="position_label" font="title" alignment="right,centre_y,can_scale" colour="text">
+				<record id="object_property" get_property="PpsC" />
+			</widget>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>																
+	</container>
+
+
+
+	<!--PERSONAL: TEAM HONOURS-->
+ <container class="main_box">
+            <attachment class="horizontal_arrange" horizontal_layout="-1,-2,-1,-2,-1,-2"/>
+             <widget class="picture" file="icons/26px/gold trophy" scale_picture="true">
+              				<translation id="text" type="use" value="" />
+        					</widget>
+             <widget class="formatted_label" id="p1st" row="2" col="1" alignment="centre_y">
+						<record id="object_property" get_property="Pact" set_property="valu"/>
+						<string id="format" value="[%number#4]"/>
+						</widget>
+ 	<widget class="picture" file="icons/26px/silver trophy" scale_picture="true">
+              				<translation id="text" type="use" value="" />
+        					</widget>
+             <widget class="formatted_label" id="p2nd" row="2" col="1" alignment="centre_y">
+						<record id="object_property" get_property="Pact" set_property="valu"/>
+						<string id="format" value="[%number#5]"/>
+						</widget>
+ 	<widget class="picture" file="icons/26px/bronze trophy" scale_picture="true">
+              				<translation id="text" type="use" value="" />
+        					</widget>
+             <widget class="formatted_label" id="p3rd" row="2" col="1" alignment="centre_y">
+						<record id="object_property" get_property="Pact" set_property="valu"/>
+						<string id="format" value="[%number#6]"/>
+						</widget>
+		
+        </container>
+
+	<!--PERSONAL: INDIVIDUAL HONOURS-->
+  <container class="main_subtle_box">
+            <attachment class="horizontal_arrange" horizontal_layout="-1,-2,-1,-2,-1,-2"/>
+             <widget class="picture" file="icons/26px/gold medal" scale_picture="true">
+              				<translation id="text" type="use" value="" />
+        					</widget>
+             <widget class="formatted_label" id="p1st" row="2" col="1" alignment="centre_y">
+						<record id="object_property" get_property="Pact" set_property="valu"/>
+						<string id="format" value="[%number#1]"/>
+						</widget>
+ 	<widget class="picture" file="icons/26px/silver medal" scale_picture="true">
+              				<translation id="text" type="use" value="" />
+        					</widget>
+             <widget class="formatted_label" id="p2nd" row="2" col="1" alignment="centre_y">
+						<record id="object_property" get_property="Pact" set_property="valu"/>
+						<string id="format" value="[%number#2]"/>
+						</widget>
+ 	<widget class="picture" file="icons/26px/bronze medal" scale_picture="true">
+              				<translation id="text" type="use" value="" />
+        					</widget>
+             <widget class="formatted_label" id="p3rd" row="2" col="1" alignment="centre_y">
+						<record id="object_property" get_property="Pact" set_property="valu"/>
+						<string id="format" value="[%number#3]"/>
+						</widget>
+		
+        </container>
+
+
+	
+	</container>
+
+</panel>

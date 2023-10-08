@@ -1,0 +1,93 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container default_height="500">
+		<layout class="arrange_horizontal_attachment" layout="50,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,40,40,40,40,40,40,-1" offset="0" gap="24	"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container/>
+			<widget class="client_object_viewer_selector_panel" file="player/icon_link/metric bars/metric button 1"/>
+			<widget class="client_object_viewer_selector_panel" file="player/icon_link/metric bars/metric button 2"/>
+			<widget class="client_object_viewer_selector_panel" file="player/icon_link/metric bars/metric button 3"/>
+			<widget class="client_object_viewer_selector_panel" file="player/icon_link/metric bars/metric button 4"/>
+			<widget class="client_object_viewer_selector_panel" file="player/icon_link/metric bars/metric button 5"/>
+			<widget class="client_object_viewer_selector_panel" file="player/icon_link/metric bars/metric button 6"/>					
+			<container/>
+
+		</container>
+
+		<container class="contrast_box_no_margin" red_replacement="bg">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container class="contrast_box" red_replacement="bg lighter" id="gk" hidn="false">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<animation class="slide_in_right_animation"/>
+				<container class="horizontal_adaptive_container" gap="10" mode="distribute_equally" id="per90">
+					<widget class="player_additional_stats_panel" file="player/stats/percentiles/goalkeeper">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+			</container>
+
+
+			<container class="contrast_box" red_replacement="bg lighter" id="fb" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<animation class="slide_in_right_animation"/>
+				<container class="horizontal_adaptive_container" gap="10" mode="distribute_equally" id="per90">
+					<widget class="player_additional_stats_panel" file="player/stats/percentiles/full back">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+			</container>
+
+			<container class="contrast_box" red_replacement="bg lighter" id="cb" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<animation class="slide_in_right_animation"/>
+				<container class="horizontal_adaptive_container" gap="10" mode="distribute_equally" id="per90">
+					<widget class="player_additional_stats_panel" file="player/stats/percentiles/centre back">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+			</container>
+
+			<container class="contrast_box" red_replacement="bg lighter" id="dm" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<animation class="slide_in_right_animation"/>
+				<container class="horizontal_adaptive_container" gap="10" mode="distribute_equally" id="per90">
+					<widget class="player_additional_stats_panel" file="player/stats/percentiles/def mid">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+			</container>
+
+			<container class="contrast_box" red_replacement="bg lighter" id="am" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<animation class="slide_in_right_animation"/>
+				<container class="horizontal_adaptive_container" gap="10" mode="distribute_equally" id="per90">
+					<widget class="player_additional_stats_panel" file="player/stats/percentiles/att mid">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+			</container>
+
+			<container class="contrast_box" red_replacement="bg lighter" id="st" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<animation class="slide_in_right_animation"/>
+				<container class="horizontal_adaptive_container" gap="10" mode="distribute_equally" id="per90">
+					<widget class="player_additional_stats_panel" file="player/stats/percentiles/attacker">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+			</container>
+
+
+
+		</container>
+
+
+	</container>		
+</panel>

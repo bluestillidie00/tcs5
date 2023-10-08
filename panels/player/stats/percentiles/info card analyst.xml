@@ -1,0 +1,135 @@
+<panel>
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+    <attachment class="vertical_arrange_autosize"/>
+    <container height="330">
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+	<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
+
+
+	<!--PERSONAL: AGE-->
+	<container id="Page" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="419420" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Age" />
+			</widget>
+		<widget class="formatted_label" font="title" alignment="right,centre_y" colour="text">
+			<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+			<record id="object_property" get_property="Page" />
+		</widget>		
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>														
+	</container>
+
+	<!--PERSONAL: NATIONALITY-->
+	<container id="PNat" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="227841" type="use" />
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Nationality" />
+			</widget>
+		<widget class="editable_client_object_property_panel" id="intc" alignment="right,centre_y,can_scale" font="title" colour="text">
+			<record id="widget_info" class="nation_button" icon_enabled="true" icon_alignment="right" colour="fg" format="[%nation#1-nationality]"/>
+			<record id="widget_properties"/>
+			<record id="object_property" dont_set_hint="true" get_property="PNat"/>
+		</widget>	
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+	<!--PERSONAL: COB-->
+	<container id="Pcob" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" value="City of Birth" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,25,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Place of Birth" />
+			</widget>
+		<widget class="client_object_label" font="title" alignment="right,centre_y,can_scale" colour="text">
+			<record id="object_property" get_property="Pcob" />
+		</widget>	
+                    <widget class="nation_button" alignment="centre_y" font="title" size="small">
+                        <record id="object_property" get_property="Pnob" />
+				<flags id="use_format" value="very_short" />
+            </widget>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+	<!--PERSONAL: PERSONALITY-->
+	<container id="PPst" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="251873" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Personality" />
+			</widget>
+		<widget class="personality_label" font="title" alignment="right,centre_y,can_scale" colour="text">
+			<record id="object_property" get_property="PPst" />
+		</widget>	
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+	<!--PLAYING: POSITION-->
+	<container id="Ppos" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" value="Position" type="use"/>
+		<translation id="subtitle" value="Playing" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Position" />
+			</widget>
+                <widget class="position_label" font="title" alignment="right,centre_y,can_scale" colour="text">
+				<record id="object_property" get_property="PpsC" />
+			</widget>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>																
+	</container>
+	
+
+	<!--PLAYING: BEST ROLE-->
+	<container id="Pbrc" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="383263" type="use"/>
+		<translation id="subtitle" value="Playing" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Best Role" />
+			</widget>
+		<widget class="tactical_role_label" font="title" alignment="right,centre_y,can_scale" colour="text">
+			<record id="object_property" get_property="Pbrc" />
+		</widget>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>																
+	</container>
+
+
+	<!--PERSONAL: DESCRIPTION-->
+	<container id="Pdes" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" value="Description" type="use"/>
+		<translation id="subtitle" value="Personal" type="use"/>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-2,20" offset="0" inset="0" gap="0"/>
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="Description" />
+			</widget>
+                <widget class="player_description_text" font="title" alignment="right,centre_y,can_scale" colour="white">
+				<record id="object_property" get_property="Pdes" />
+          			</widget>	
+			<widget class="label" size="10" font="title" colour="faded text" multiline="true" alignment="left,centre_y,can_scale" >
+				<translation id="text" type="use" value="" />
+			</widget>															
+	</container>
+
+
+
+	</container>
+
+</panel>
