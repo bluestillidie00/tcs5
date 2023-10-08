@@ -1,0 +1,119 @@
+<record>
+	<!-- resource manager options -->
+
+	<!-- dont preload anything in this folder -->
+	<boolean id="preload" value="false"/>
+
+	<!-- logo mappings -->
+	<!-- the following XML maps pictures inside this folder into other positions
+		 in the resource system, which allows this folder to be dropped into any
+		 place in the graphics folder and still have the game pick up the graphics
+		 files from the correct places
+	-->
+	
+	<list id="maps">
+	
+		<record from="0" to="graphics/pictures/kits/2D/numbers/large/0"/>
+		<record from="1" to="graphics/pictures/kits/2D/numbers/large/1"/>
+		<record from="2" to="graphics/pictures/kits/2D/numbers/large/2"/>
+		<record from="3" to="graphics/pictures/kits/2D/numbers/large/3"/>
+		<record from="4" to="graphics/pictures/kits/2D/numbers/large/4"/>
+		<record from="5" to="graphics/pictures/kits/2D/numbers/large/5"/>
+		<record from="6" to="graphics/pictures/kits/2D/numbers/large/6"/>
+		<record from="7" to="graphics/pictures/kits/2D/numbers/large/7"/>
+		<record from="8" to="graphics/pictures/kits/2D/numbers/large/8"/>
+		<record from="9" to="graphics/pictures/kits/2D/numbers/large/9"/>
+		<record from="10" to="graphics/pictures/kits/2D/numbers/large/10"/>
+		<record from="11" to="graphics/pictures/kits/2D/numbers/large/11"/>
+		<record from="12" to="graphics/pictures/kits/2D/numbers/large/12"/>
+		<record from="13" to="graphics/pictures/kits/2D/numbers/large/13"/>
+		<record from="14" to="graphics/pictures/kits/2D/numbers/large/14"/>
+		<record from="15" to="graphics/pictures/kits/2D/numbers/large/15"/>
+		<record from="16" to="graphics/pictures/kits/2D/numbers/large/16"/>
+		<record from="17" to="graphics/pictures/kits/2D/numbers/large/17"/>
+		<record from="18" to="graphics/pictures/kits/2D/numbers/large/18"/>
+		<record from="19" to="graphics/pictures/kits/2D/numbers/large/19"/>
+		<record from="20" to="graphics/pictures/kits/2D/numbers/large/20"/>
+		<record from="21" to="graphics/pictures/kits/2D/numbers/large/21"/>
+		<record from="22" to="graphics/pictures/kits/2D/numbers/large/22"/>
+		<record from="23" to="graphics/pictures/kits/2D/numbers/large/23"/>
+		<record from="24" to="graphics/pictures/kits/2D/numbers/large/24"/>
+		<record from="25" to="graphics/pictures/kits/2D/numbers/large/25"/>
+		<record from="26" to="graphics/pictures/kits/2D/numbers/large/26"/>
+		<record from="27" to="graphics/pictures/kits/2D/numbers/large/27"/>
+		<record from="28" to="graphics/pictures/kits/2D/numbers/large/28"/>
+		<record from="29" to="graphics/pictures/kits/2D/numbers/large/29"/>
+		<record from="30" to="graphics/pictures/kits/2D/numbers/large/30"/>
+		<record from="31" to="graphics/pictures/kits/2D/numbers/large/31"/>
+		<record from="32" to="graphics/pictures/kits/2D/numbers/large/32"/>
+		<record from="33" to="graphics/pictures/kits/2D/numbers/large/33"/>
+		<record from="34" to="graphics/pictures/kits/2D/numbers/large/34"/>
+		<record from="35" to="graphics/pictures/kits/2D/numbers/large/35"/>
+		<record from="36" to="graphics/pictures/kits/2D/numbers/large/36"/>
+		<record from="37" to="graphics/pictures/kits/2D/numbers/large/37"/>
+		<record from="38" to="graphics/pictures/kits/2D/numbers/large/38"/>
+		<record from="39" to="graphics/pictures/kits/2D/numbers/large/39"/>
+		<record from="40" to="graphics/pictures/kits/2D/numbers/large/40"/>
+		<record from="41" to="graphics/pictures/kits/2D/numbers/large/41"/>
+		<record from="42" to="graphics/pictures/kits/2D/numbers/large/42"/>
+		<record from="43" to="graphics/pictures/kits/2D/numbers/large/43"/>
+		<record from="44" to="graphics/pictures/kits/2D/numbers/large/44"/>
+		<record from="45" to="graphics/pictures/kits/2D/numbers/large/45"/>
+		<record from="46" to="graphics/pictures/kits/2D/numbers/large/46"/>
+		<record from="47" to="graphics/pictures/kits/2D/numbers/large/47"/>
+		<record from="48" to="graphics/pictures/kits/2D/numbers/large/48"/>
+		<record from="49" to="graphics/pictures/kits/2D/numbers/large/49"/>
+		<record from="50" to="graphics/pictures/kits/2D/numbers/large/50"/>
+		<record from="51" to="graphics/pictures/kits/2D/numbers/large/51"/>
+		<record from="52" to="graphics/pictures/kits/2D/numbers/large/52"/>
+		<record from="53" to="graphics/pictures/kits/2D/numbers/large/53"/>
+		<record from="54" to="graphics/pictures/kits/2D/numbers/large/54"/>
+		<record from="55" to="graphics/pictures/kits/2D/numbers/large/55"/>
+		<record from="56" to="graphics/pictures/kits/2D/numbers/large/56"/>
+		<record from="57" to="graphics/pictures/kits/2D/numbers/large/57"/>
+		<record from="58" to="graphics/pictures/kits/2D/numbers/large/58"/>
+		<record from="59" to="graphics/pictures/kits/2D/numbers/large/59"/>
+		<record from="60" to="graphics/pictures/kits/2D/numbers/large/60"/>
+		<record from="61" to="graphics/pictures/kits/2D/numbers/large/61"/>
+		<record from="62" to="graphics/pictures/kits/2D/numbers/large/62"/>
+		<record from="63" to="graphics/pictures/kits/2D/numbers/large/63"/>
+		<record from="64" to="graphics/pictures/kits/2D/numbers/large/64"/>
+		<record from="65" to="graphics/pictures/kits/2D/numbers/large/65"/>
+		<record from="66" to="graphics/pictures/kits/2D/numbers/large/66"/>
+		<record from="67" to="graphics/pictures/kits/2D/numbers/large/67"/>
+		<record from="68" to="graphics/pictures/kits/2D/numbers/large/68"/>
+		<record from="69" to="graphics/pictures/kits/2D/numbers/large/69"/>
+		<record from="70" to="graphics/pictures/kits/2D/numbers/large/70"/>
+		<record from="71" to="graphics/pictures/kits/2D/numbers/large/71"/>
+		<record from="72" to="graphics/pictures/kits/2D/numbers/large/72"/>
+		<record from="73" to="graphics/pictures/kits/2D/numbers/large/73"/>
+		<record from="74" to="graphics/pictures/kits/2D/numbers/large/74"/>
+		<record from="75" to="graphics/pictures/kits/2D/numbers/large/75"/>
+		<record from="76" to="graphics/pictures/kits/2D/numbers/large/76"/>
+		<record from="77" to="graphics/pictures/kits/2D/numbers/large/77"/>
+		<record from="78" to="graphics/pictures/kits/2D/numbers/large/78"/>
+		<record from="79" to="graphics/pictures/kits/2D/numbers/large/79"/>
+		<record from="80" to="graphics/pictures/kits/2D/numbers/large/80"/>
+		<record from="81" to="graphics/pictures/kits/2D/numbers/large/81"/>
+		<record from="82" to="graphics/pictures/kits/2D/numbers/large/82"/>
+		<record from="83" to="graphics/pictures/kits/2D/numbers/large/83"/>
+		<record from="84" to="graphics/pictures/kits/2D/numbers/large/84"/>
+		<record from="85" to="graphics/pictures/kits/2D/numbers/large/85"/>
+		<record from="86" to="graphics/pictures/kits/2D/numbers/large/86"/>
+		<record from="87" to="graphics/pictures/kits/2D/numbers/large/87"/>
+		<record from="88" to="graphics/pictures/kits/2D/numbers/large/88"/>
+		<record from="89" to="graphics/pictures/kits/2D/numbers/large/89"/>
+		<record from="90" to="graphics/pictures/kits/2D/numbers/large/90"/>
+		<record from="91" to="graphics/pictures/kits/2D/numbers/large/91"/>
+		<record from="92" to="graphics/pictures/kits/2D/numbers/large/92"/>
+		<record from="93" to="graphics/pictures/kits/2D/numbers/large/93"/>
+		<record from="94" to="graphics/pictures/kits/2D/numbers/large/94"/>
+		<record from="95" to="graphics/pictures/kits/2D/numbers/large/95"/>
+		<record from="96" to="graphics/pictures/kits/2D/numbers/large/96"/>
+		<record from="97" to="graphics/pictures/kits/2D/numbers/large/97"/>
+		<record from="98" to="graphics/pictures/kits/2D/numbers/large/98"/>
+		<record from="99" to="graphics/pictures/kits/2D/numbers/large/99"/>
+		
+	</list>
+	
+</record>
