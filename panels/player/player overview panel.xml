@@ -248,22 +248,6 @@
 						</container>
 					</container>
 
-
-
-					<!-- ADVANCED STATISTICS -->
-					<container id="Adva" >
-						<translation id="title" value="Advanced Statistics" type="use"/>
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-						<container class="tcs_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<widget class="client_object_viewer_xml_panel" id="stat" file="player/tcs/tabs/advsta/per 90">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</widget>
-						</container>
-					</container>
-
 					<!-- ANALYSIS -->
 					<container id="data">	
 						<translation id="title" translation_id="334959" type="use"/>
