@@ -1,6 +1,0 @@
-<class class="archetype_builder_pressures_attempted" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
-	<list id="value_list">
-		<record min_value="-1" max_value="12.88" appearance="mustermann/archetypes/builder_disabled" image_alignment="centre_x,centre_y" red_replacement="bg" green_replacement="bg" blue_replacement="bg darker" colour="" hidden="false"/>
-		<record min_value="12.88" max_value="10000" appearance="" image_alignment="centre_x,centre_y" red_replacement="bg" colour="" hidden="false"/>
-	</list>
-</class>
