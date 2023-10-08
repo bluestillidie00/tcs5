@@ -452,29 +452,9 @@
 			</container>
 		</container>
 
-		<!-- <container id="rep2">
-			<translation id="title" translation_id="248428" type="use"/>
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-			<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison no title" late_loading="true">
-				<translation id="title" translation_id="420686" type="use"/>
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</widget>
-		</container> -->
-
-		<!-- 		<container id="rep2">
-			<translation id="title" translation_id="450220" type="use"/>
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-			<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison no title" late_loading="true">
-				<translation id="title" translation_id="420686" type="use"/>
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</widget>
-		</container> -->
-
 		<!-- PER 90 -->
 		<container id="rep5">
-			<translation id="title" translation_id="374186" type="use"/>
+			<translation id="title" translation_id="323124" type="use"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0"/>
 
 			<widget file="player/tcs/selector/big/per 90/tabbed" class="client_object_viewer_xml_panel" id="pe90" late_loading="true">

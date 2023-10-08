@@ -14,7 +14,7 @@
 		</widget>
 
 		<widget file="player/tcs/selector/big/per 90/midfielder" class="player_additional_stats_panel" late_loading="true" id="midf">
-			<translation id="title" translation_id="513771" type="use"/>
+			<translation id="title" translation_id="439385" type="use"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 

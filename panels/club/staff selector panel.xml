@@ -41,7 +41,7 @@
 
 	<!-- KEY EMPLOYEES -->
 	<container class="club_overview_staff_panel" id="tstf" file="club/tcs/overview/key staff">
-		<translation id="title" translation_id="328524" type="use"/>
+		<translation id="title" translation_id="257300" type="use"/>
 	</container>
 	
 	
