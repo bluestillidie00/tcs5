@@ -1,7 +1,0 @@
-<properties>
-	<record id="image_borders" />
-	<record id="image_slices" />
-	<colour id="red_replacement" name="wts_p"/>
-	<colour id="green_replacement" name="fg blue lighter"/>
-	<colour id="blue_replacement" name="fg"/>
-</properties>
