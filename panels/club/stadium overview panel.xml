@@ -42,12 +42,12 @@
 	<container class="bordered_box" appearance="tcs/ro" /> -->
 				</container>
 
-				<widget class="picture" id="lftB" file="pictures/logos/background/default/left" image_alignment="centre_x,centre_y" scale_picture="true" keep_aspect_ratio="true">
+	<!-- 			<widget class="picture" id="lftB" file="pictures/logos/background/default/left" image_alignment="centre_x,centre_y" scale_picture="true" keep_aspect_ratio="true">
 					<record id="object_property">
 						<integer id="get_property" value="bgnd" />
 						<integer id="set_property" value="file" />
 					</record>
-				</widget>		
+				</widget>		 -->
 			</container>
 		</container>
 
