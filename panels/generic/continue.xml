@@ -1,12 +1,13 @@
 <panel>
 
 	<!-- Continue Button -->
-	<widget class="icon_button" id="GCNT" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="secondary" multiline="true" red_replacement="primary" blue_replacement="white">
-		<translation id="text" translation_id="243222" type="use" value="Continue" />
+	<widget class="icon_button" id="GCNT" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue FMT" secondary_icon_alignment="centre_right, centre_y" colour="secondary" font="extendedblack" size="xsmall" multiline="true" red_replacement="primary" blue_replacement="primary" green_replacement="primary" offset="6">
+		<translation id="text" translation_id="243222" type="use" value="Continue"/>
         <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
         
         <record id="secondary_icon_properties" red_replacement="secondary"/>
 		<record id="click_event" event_id="CONT" event_target="glob" />
+
 		
 		<!-- We adjust the continue colour in code in some scenarios, the default colour is defined as 'continue colour' and can be adjusted in the global colour definitions 
 		<attachment class="get_global_attachment" get_property="ctcl" set_property="colour"/>
@@ -33,7 +34,7 @@
 
 		<attachment class="get_global_attachment" get_property="UsrL" set_property="Flas" skip_if_null="false"/>
 		<attachment class="flash_colour_attachment" auto_start="false">
-			<colour id="first_colour" name="fg"/>
+			<colour id="first_colour" name="text"/>
 			<colour id="second_colour" red="212" green="88" blue="64"/>
 			<list id="colour_property">
 				<flags value="rrep"/>
@@ -43,8 +44,8 @@
 	</widget>
 
 	<!-- Must do stuff Button -->
-	<widget class="icon_button" id="MDSB" appearance="chrome/buttons/continue/button" alignment="centre" font="title" secondary_icon_enabled="true" secondary_icon="icons/16px/urgent" secondary_icon_alignment="centre_right, centre_y" colour="bg" red_replacement="fg negative" blue_replacement="white"  controller_button="right_trigger">
-		<record id="secondary_icon_properties" red_replacement="bg"/>
+	<widget class="icon_button" id="MDSB" appearance="chrome/buttons/continue/button" alignment="centre" font="extendedblack" size="xsmall" secondary_icon_enabled="true" secondary_icon="icons/16px/urgent" secondary_icon_alignment="centre_right, centre_y" colour="bg darker" red_replacement="fg negative" blue_replacement="bg negative" green_replacement="black" controller_button="right_trigger">
+		<record id="secondary_icon_properties" red_replacement="bg darker"/>
 		<translation id="text" translation_id="295226" type="use" value="Must Respond[COMMENT: text to indicate that there is a news item the user must respond to before continuing the game]" />
 
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
@@ -67,7 +68,7 @@
 	</widget>
 
 	<!-- back to match Button -->
-	<widget class="icon_button" id="BTMB" appearance="chrome/buttons/continue/button" alignment="centre" font="title" controller_button="right_trigger" secondary_icon_enabled="true" secondary_icon="icons/16px/ball" secondary_icon_alignment="centre_right, centre_y" red_replacement="fg negative" colour="bg" blue_replacement="white">
+	<widget class="icon_button" id="BTMB" appearance="chrome/buttons/continue/button" alignment="centre" font="title" controller_button="right_trigger" secondary_icon_enabled="true" secondary_icon="icons/16px/ball" secondary_icon_alignment="centre_right, centre_y" colour="bg darker" red_replacement="fg negative" blue_replacement="negative" green_replacement="black">
 		<record id="secondary_icon_properties" red_replacement="bg"/>
 		<translation id="text" translation_id="258584" type="use" value="Match[COMMENT - continue button text when match screen is next screen to appear]" />
 

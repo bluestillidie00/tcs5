@@ -1,0 +1,20 @@
+<properties version="1.0">
+
+	<!-- DEFAULT BOX COLOUR -->
+	<colour name="bg lighter" 																value="rgb(43,43,43)"/>
+	<colour name="bg" 																			value="rgb(34,34,34)"/>
+
+	<!-- TCS Colours -->
+	<!-- BOXES -->
+	<colour name="tcs_bg" 																			value="bg"/>
+	<colour name="tcs_bg_lighter" 															value="bg lighter"/>
+
+	<!-- GOLD -->
+	<colour name="tcs_accent" value="rgb(207,181,59)" />
+	<colour name="tcs_accent_ligher" value="rgb(246,198,0)" />
+
+	<!-- TCS Edits -->
+	<colour name="title" 																				value="tcs_accent" /> 
+	<colour name="human controlled" 															value="tcs_accent"/>
+
+</properties>

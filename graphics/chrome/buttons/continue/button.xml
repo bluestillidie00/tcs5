@@ -4,14 +4,20 @@
 	<!-- image borders -->
 	<!-- these determine how many pixels any content is inset from each side of the image -->
 	<!-- (for example, in the case of a button, the content would be the text label) -->
-	<record id="image_borders" left="8" right="8" top="8" bottom="8"/>
+	<record id="image_borders" left="12" right="12" top="5" bottom="9"/>
 
 	<!-- image slices determine the points at which the image will be sliced to enable scaling -->
 	<!-- the image will only slice in the directions slicing values are provided for-->
-	<record id="image_slices" left="300" right="350" top="400" bottom="5"/>
+	<record id="image_slices" left="15" right="15"/>
 
 	<colour id="red_replacement" name="primary"/>
-	<colour id="green_replacement" name="bg"/>
+	<colour id="green_replacement" name="bg darker"/>
 	<colour id="blue_replacement" name="primary"/>
+
+	<record id="primary_icon_properties" red_replacement="fg" />
+	<record id="secondary_icon_properties" red_replacement="fg" />
+
+	<symbol id="focus_appearance" value="chrome/buttons/continue/button_controller" />
+
 	
 </properties>
