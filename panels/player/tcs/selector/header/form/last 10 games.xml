@@ -1,4 +1,4 @@
-﻿<panel maximum_items="10" ompl="true">
+﻿<panel maximum_items="10">
 
 	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
@@ -49,8 +49,8 @@
 						<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
 					</record>
 					<list id="grid_line_styles">
-						<record colour="graph row"/>
 						<record/>
+						<record colour="graph row"/>
 					</list>
 				</widget>
 				<widget class="label" id="nogp" hidden="true" colour="faded text">

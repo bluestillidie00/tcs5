@@ -1,4 +1,4 @@
-﻿<panel maximum_items="10" ompl="true">
+﻿<panel maximum_items="10">
 
 	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
@@ -11,7 +11,7 @@
 
 		<!-- Linked header -->
 		<widget class="link_button" section="Pfrm" auto_size="all">
-        <translation id="text" type="use" value=" Form (Last 10 Matches)" />
+			<translation id="text" type="use" value=" Form (Last 10 Matches)" />
 		</widget>
 
 		<widget class="spacer" height="3" />
@@ -25,7 +25,7 @@
 		</widget>
 
 		<container id="cont">
-		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 			<!-- graph -->
 			<container>
@@ -49,8 +49,8 @@
 						<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
 					</record>
 					<list id="grid_line_styles">
+						<record colour=""/>
 						<record colour="graph row"/>
-						<record/>
 					</list>
 				</widget>
 				<widget class="label" id="nogp" hidden="true" colour="faded text">
@@ -62,7 +62,7 @@
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 				<container>
-<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
 
 					<container>
 						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
