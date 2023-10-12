@@ -45,11 +45,6 @@
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
 	
-	
-		<widget file="player/tcs/selector/big/match report" class="player_match_report_small_panel" id="maRe" late_loading="true" >
-				<translation id="title" translation_id="420686" type="use" />
-			</widget>
-	
 	<!-- FORM / LAST 5 GAMES -->
 	<widget class="player_additional_stats_panel" file="none" id="la5g">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
