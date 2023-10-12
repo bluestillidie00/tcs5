@@ -39,24 +39,8 @@
 										<integer id="default_for_international_managers_other_team" value="Ppos"/>
 										<integer id="default_for_everyone_else" value="Ppos"/>
 										<integer id="default_for_versus_mode" value="Ppos"/>
-
-										<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="repo" late_loading="true">
-											<translation id="title" translation_id="254774" type="use"/>
-										</widget>
 									</container>
 								</container>
-
-								<!-- BOTTOM 
-					<container class="tcs_box" default_height="-6" priority="2" minimum_height="160">
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-						<container class="client_object_viewer_selector_panel" id="csL2" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
-							<integer id="default_for_unemployed_managers" value="pscR"/>
-							<integer id="default_for_international_managers_other_team" value="pscR"/>
-							<integer id="default_for_everyone_else" value="pscR"/>
-							<integer id="default_for_versus_mode" value="pscR"/>
-						</container> 
-					</container> -->
 							</container>
 
 							<!-- MIDDLE AND RIGHT -->
@@ -68,21 +52,21 @@
 								<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
 									<record id="object_property" get_property="objt" set_property="objt" />
 
-										<container  default_height="350" priority="1">
-											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-											<translation id="title" translation_id="292808" type="use" />
+									<container  default_height="350" priority="1">
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+										<translation id="title" translation_id="292808" type="use" />
 
-											<!-- ATTRIBUTES -->
-											<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true" >
-												<record id="object_property" get_property="objt" set_property="objt"/>
-											</widget>
+										<!-- ATTRIBUTES -->
+										<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true" >
+											<record id="object_property" get_property="objt" set_property="objt"/>
+										</widget>
 
-											<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="1" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true" file="none">
-												<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
-											</widget>
-										</container>
-					
-					<!-- BOTTOM -->
+										<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="1" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true" file="none">
+											<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+										</widget>
+									</container>
+
+									<!-- BOTTOM -->
 									<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -91,9 +75,9 @@
 											<integer id="default_for_international_managers_other_team" value="pfSm"/>
 											<integer id="default_for_everyone_else" value="pfSm"/>
 											<integer id="default_for_versus_mode" value="pfSm"/>
-																<widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
+										<!-- 	<widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
 												<translation id="title" translation_id="385617" type="use"/>
-											</widget>
+											</widget> -->
 										</container>
 									</container>
 
@@ -135,7 +119,7 @@
 					</container>
 
 
-<container id="ovrA" class="player_profile_panel" file="none">
+					<container id="ovrA" class="player_profile_panel" file="none">
 						<translation id="title" value="No Attributes" type="use"/>
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -185,15 +169,14 @@
 								<container default_width="-1" priority="1" minimum_width="650" class="vertical_adaptive_container" gap="8">
 									<record id="object_property" get_property="objt" set_property="objt" />
 
-								<container class="client_object_viewer_selector_panel" default_height="360" priority="1" id="Paat" file="player/player overview att selector panel" save_session_state="true" dont_set_embedded_title="true">
+									<container class="client_object_viewer_selector_panel" default_height="360" priority="1" id="Paat" file="player/player overview att selector panel" save_session_state="true" dont_set_embedded_title="true">
 										<integer id="default_for_unemployed_managers" value="patp"/>
 										<integer id="default_for_international_managers_other_team" value="patp"/>
 										<integer id="default_for_everyone_else" value="patp"/>
 										<integer id="default_for_versus_mode" value="patp"/>
+									</container>
 
-													</container>
-					
-					<!-- BOTTOM -->
+									<!-- BOTTOM -->
 									<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -202,12 +185,7 @@
 											<integer id="default_for_international_managers_other_team" value="pfSm"/>
 											<integer id="default_for_everyone_else" value="pfSm"/>
 											<integer id="default_for_versus_mode" value="pfSm"/>
-											<widget class="player_form_panel" id="pfSm" late_loading="true" file="player/tcs/selector/big/form 20">
-												<translation id="title" value="Form (Last 20 Matches)" type="use"/>
-											</widget>
-											<widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
-												<translation id="title" translation_id="385617" type="use"/>
-											</widget>
+								
 										</container>
 									</container>
 
@@ -532,12 +510,12 @@
 						</container>
 					</container>
 
-					<!-- NOTEBOOK -->
+					<!-- TRANSFER INFO -->
 					<container id="note">
-						<translation id="title" translation_id="230332" type="use"/>
+						<translation id="title" translation_id="251898" type="use"/>
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<container id="Pnot" class="filterable_notes_panel" file="player/tcs/tabs/notes">
+						<container id="Pnot" class="player_transfer_information_panel">
 							<record id="object_property" get_property="Pers"/>
 						</container>
 					</container>
@@ -561,24 +539,24 @@
 				<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-					<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
-							<record id="object_property">
-								<list id="get_properties">
-									<!-- Hide this panel if player is in inactive league-->
-									<record id="object_property" get_property="objt" set_property="objt"/>
-									<record id="object_property" get_property="Pila" set_property="hidn"/>
-								</list>
-							</record>
-						</widget>
-						<widget class="player_stats_panel" id="pssp" file="player/player stats small">
-							<record id="object_property">
-								<list id="get_properties">
-									<!-- Show this panel if player is in inactive league-->
-									<record id="object_property" get_property="Pila" set_property="Shwn"/>
-									<record id="object_property" get_property="objt" set_property="objt"/>
-								</list>
-							</record>
-						</widget>
+				<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+					<record id="object_property">
+						<list id="get_properties">
+							<!-- Hide this panel if player is in inactive league-->
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<record id="object_property" get_property="Pila" set_property="hidn"/>
+						</list>
+					</record>
+				</widget>
+				<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+					<record id="object_property">
+						<list id="get_properties">
+							<!-- Show this panel if player is in inactive league-->
+							<record id="object_property" get_property="Pila" set_property="Shwn"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</list>
+					</record>
+				</widget>
 			</container>
 
 			<container class="client_object_viewer_selector_panel" id="cos8" file="player/player overview small selector panel" minimum_width="310" default_width="-25" priority="3" navigation_container="true">
