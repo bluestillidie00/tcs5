@@ -27,7 +27,7 @@
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 					<!-- GAME LOADS DATA FOR COMPETITIONS -->
-					<record id="object_property" get_property="Pclb" set_property="objt"/>
+					<record id="object_property" get_property="Cdiv" set_property="objt"/>
 
 					<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="tcs_bg_lighter">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
