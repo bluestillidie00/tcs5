@@ -8,7 +8,7 @@
 		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 
 		<!-- PLAYER INFO -->
-		<container class="tcs_box" width="520" appearance="tcs/boxes/main/outline/paper" rrep="bg lighter" brep="primary">
+		<container class="tcs_box" width="520" appearance="tcs/boxes/main/outline/alt/paper" rrep="bg lighter" brep="primary">
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<container>
