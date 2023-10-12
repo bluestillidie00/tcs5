@@ -10,7 +10,7 @@
 
 			<record id="default_properties" width="200"/>
 
-			<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="tcs_bg_lighter" brep="primary">
+			<container class="tcs_box" appearance="tcs/boxes/main/outline/alt/paper" rrep="tcs_bg_lighter" brep="primary">
 				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8"/>
 
 				<!-- CLUB LOGO -->
@@ -29,7 +29,7 @@
 					<!-- GAME LOADS DATA FOR COMPETITIONS -->
 					<record id="object_property" get_property="Cdiv" set_property="objt"/>
 
-					<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="tcs_bg_lighter">
+					<container class="tcs_box" appearance="tcs/boxes/main/outline/alt/paper" rrep="tcs_bg_lighter">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 						<!-- USES PREVIOUSLY LOADED DATA TO GET PRIMARY COLOUR FOR COMP -->
