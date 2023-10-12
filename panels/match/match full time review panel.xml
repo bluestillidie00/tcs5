@@ -1,24 +1,9 @@
 ﻿<panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
+
 	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-15,-14,-15"  horizontal_gap="8" />
+		<layout class="horizontal_arrange" horizontal_layout="-14,-15,-15"  horizontal_gap="8" />
 
-		<!-- right -->
-		<container class="tcs_box">
-			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
-
-			<record id="default_properties" team_index="0"/>
-
-			<!-- TEAM STATS -->
-			<widget class="match_team_stats_panel" id="HMts" file="match/tcs/full time/tcs team stats" height="700">
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</widget>
-
-			<!-- FORMATION -->
-			<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</container>
-		</container>
 
 		<!-- MIDDLE -->
 		<container>
@@ -86,11 +71,11 @@
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<container class="tcs_tabs" save_session_state="true" save_default_state="true">
-				
-				<container class="match_stats_panel" id="mtst">
-<translation id="title" type="use" value="Match Stats" />
-				<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
+
+					<container class="match_stats_panel" id="mtst">
+						<translation id="title" type="use" value="Match Stats" />
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
 
 					<!-- AS IT HAPPENED -->
 					<container class="match_notable_events_panel" file="none" id="NEve">
@@ -128,22 +113,104 @@
 			</container>
 		</container>
 
-		<!-- right -->
+		<!-- MIDDLE -->
 		<container class="tcs_box">
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
-			<record id="default_properties" team_index="1"/>
-
 			<!-- TEAM STATS -->
-			<widget class="match_team_stats_panel" id="AMts" file="match/tcs/full time/tcs team stats" height="700">
+			<widget class="match_team_stats_panel" id="HMts" file="match/tcs/full time/tcs team stats" team_index="0" >
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</widget>
 
-			<!-- FORMATION -->
-			<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
-				<record id="object_property" get_property="objt" set_property="objt"/>
+			<container height="400" draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+				<record id="default_properties" team_index="0"/>
+
+				<!-- FORMATION -->
+				<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+
+				<!--HOME HEATMAP & PASSMAP-->
+				<container default_width="-1">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true"/>
+
+					<widget class="preselected_match_chalkboard_panel" id="mhhm" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-10" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+
+						<list id="chalkboard_events_to_display">
+							<integer value="42"/>  
+						</list>
+					</widget>
+
+					<container class="tcs_box" transparency="0.8">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</container>
+
+					<widget class="preselected_match_chalkboard_panel" id="mhpm" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+
+						<list id="chalkboard_events_to_display">
+							<integer value="63"/>  
+						</list>
+					</widget>
+
+				</container>
 			</container>
 		</container>
+		
+		<!-- RIGHT -->
+		<container class="tcs_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+			<!-- TEAM STATS -->
+			<widget class="match_team_stats_panel" id="AMts" file="match/tcs/full time/tcs team stats" team_index="1" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<container height="400" draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+				<record id="default_properties" team_index="1"/>
+
+				<!-- FORMATION -->
+				<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+
+				<!--HOME HEATMAP & PASSMAP-->
+				<container default_width="-1">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true"/>
+
+					<widget class="preselected_match_chalkboard_panel" id="mhhm" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-10" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+
+						<list id="chalkboard_events_to_display">
+							<integer value="42"/>  
+						</list>
+					</widget>
+
+					<container class="tcs_box" transparency="0.8">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</container>
+
+					<widget class="preselected_match_chalkboard_panel" id="mhpm" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+
+						<list id="chalkboard_events_to_display">
+							<integer value="63"/>  
+						</list>
+					</widget>
+
+				</container>
+			</container>
+		</container>
+
 	</container>
 
 </panel>
