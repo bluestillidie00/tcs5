@@ -94,7 +94,7 @@
 					<container class="client_object_viewer_xml_panel" id="attT">
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-						<widget class="table" layout="-1, 90" mode="fill_rows, printable" row_height="22" row_spacing="0">
+						<widget class="table" layout="-1, 90" mode="fill_rows, printable" row_height="22" row_spacing="4">
 							<record id="object_property" get_property="objt" set_property="objt" />
 							<list id="column_table_properties">
 								<record index="0" left="8" sort_disabled="true"/>
@@ -140,14 +140,14 @@
 				<boolean id="show_hover_popup_on_focus" value="true" />
 							</widget>
 					
-					
+				<!-- 	
 							<widget class="label" row="4" column="0" >
 								<record id="object_property" get_property="Pjad" name="true"/>
 							</widget>
 							<widget class="player_jadedness_widget" id="Pjad" row="4" column="1" style="semi_bold">
 								<record id="object_property" get_property="Pjad"/>
 							<record id="widget_properties" alignment="right,centre_y" style="semi_bold"/>
-													</widget>
+													</widget> -->
 					
 						</widget>
 					</container>
