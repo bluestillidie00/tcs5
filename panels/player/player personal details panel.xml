@@ -16,21 +16,17 @@
 
 				<!-- CONTAINER HOLDING KIT AND PLAER PIC -->
 				<container width="280">
-					<attachment_group class="horizontal_arrange" horizontal_gap="-125"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-					<container width="250">
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="default_properties" save_session_state="true" dont_set_embedded_title="true" >
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</record>
 
-						<widget id="cKit" class="kit_icon" width="170" image_alignment="centre" scale_picture="true" kit_path="zoomed/large" kit_number_path="large" >
-							<record id="object_property" get_property="Pers" set_property="objt"/>
-						</widget>
-
-						<!-- Status Indicators -->
-						<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
-							<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
-							<record id="object_property" get_property="Pnfa"/>
-						</widget>
-					</container>
+					<!-- STADIUM SELECTOR 
+					<widget file="player/tcs/selector/header/playerpic/stadium_sel" id="STAD" class="client_object_viewer_selector_panel"  default_item="STAp" /> -->
+					
+					<!-- FACE SELECTOR -->
+					<widget file="player/tcs/selector/header/playerpic/selector" id="FACE" class="client_object_viewer_selector_panel"  default_item="defa" />
 				</container>
 
 				<!-- LOGOS AND EXTRA DETAILS -->
@@ -86,19 +82,6 @@
 				</container>
 			</container>
 
-			<!-- PLAYER FACE -->
-			<container>
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
-
-				<container width="120"/>
-
-				<widget class="object_portrait_picture" id="face" width="180" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
-					<record id="object_property" get_property="objt"/>
-				</widget>
-
-				<container/>
-
-			</container>
 		</container>
 
 		<container class="horizontal_adaptive_container" gap="8" id="left">

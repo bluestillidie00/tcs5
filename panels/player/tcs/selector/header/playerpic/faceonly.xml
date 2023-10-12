@@ -1,0 +1,16 @@
+<!-- PANEL THAT SHOWS AT THE TOP OF THE PLAYER OVERVIEW -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- Status Indicators -->
+	<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+		<record id="object_property" get_property="Pnfa"/>
+	</widget>
+
+	<widget class="object_portrait_picture" id="face" width="180" image_alignment="middle_x,bottom" scale_picture="true" keep_aspect_ratio="true">
+		<record id="object_property" get_property="objt"/>
+	</widget>
+
+</panel>

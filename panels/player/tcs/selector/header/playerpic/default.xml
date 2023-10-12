@@ -1,0 +1,30 @@
+<!-- PANEL THAT SHOWS AT THE TOP OF THE PLAYER OVERVIEW -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<widget id="cKit" class="kit_icon" width="170" image_alignment="centre" scale_picture="true" kit_path="zoomed/large" kit_number_path="large" >
+		<record id="object_property" get_property="Pers" set_property="objt"/>
+	</widget>
+
+	<!-- Status Indicators -->
+	<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+		<record id="object_property" get_property="Pnfa"/>
+	</widget>
+
+	<!-- PLAYER FACE -->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+		<container width="100"/>
+
+		<widget class="object_portrait_picture" id="face" width="180" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property" get_property="objt"/>
+		</widget>
+
+		<container/>
+
+	</container>
+
+</panel>
