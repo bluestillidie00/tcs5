@@ -16,5 +16,7 @@
 	<!-- TCS Edits -->
 	<colour name="title" 																				value="tcs_accent" /> 
 	<colour name="human controlled" 															value="tcs_accent"/>
-
+	<colour name="fg accent" value="tcs_accent"/>
+	<colour name="bg accent" value="tcs_accent"/>
+		
 </properties>
