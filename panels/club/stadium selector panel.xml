@@ -18,4 +18,8 @@
 		<translation id="title" translation_id="466547" type="use" />
 	</container>
 
+	<container class="client_object_viewer_xml_panel" file="club/tcs/overview/stadium_only" id="spic">
+		<translation id="title" value="Only" type="use" />
+	</container>
+
 </panel>
