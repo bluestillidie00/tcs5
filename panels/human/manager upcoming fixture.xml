@@ -2,7 +2,7 @@
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	
-	<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="primary" brep="tcs_accent" draw_vertical_dividers="true">
+	<container class="tcs_box" appearance="tcs/boxes/main/outline/header/paper" rrep="primary" brep="tcs_accent" draw_vertical_dividers="true">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 		<string id="skin_style" value="contrast box" />
 
