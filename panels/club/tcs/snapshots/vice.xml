@@ -44,7 +44,7 @@
 
                     <!-- LABEL -->
                     <widget class="label" font="title">
-                        <translation id="text" translation_id="260928" type="use" value="VC" />
+                        <translation id="text" translation_id="300014" type="use" value="VC" />
                     </widget>
 
                     <!-- NAME -->
