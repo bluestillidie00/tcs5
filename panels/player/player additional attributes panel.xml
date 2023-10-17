@@ -57,7 +57,7 @@
 					<container height="20">
 						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 
-						<widget class="value_based_picture" file="tcs/icons/footedness/footedness" width="24">
+						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
 							<list id="value_list">
 								<record min_value="1" max_value="4" red_replacement="bg red" brep="white"/>
 								<record min_value="5" max_value="8" red_replacement="bg range4" brep="white"/>
@@ -87,7 +87,7 @@
 					<container height="20">
 						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 
-						<widget class="value_based_picture" file="tcs/icons/footedness/footedness" width="24">
+						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
 							<list id="value_list">
 								<record min_value="1" max_value="4" red_replacement="bg red" brep="white"/>
 								<record min_value="5" max_value="8" red_replacement="bg range4" brep="white"/>
