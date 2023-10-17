@@ -7,7 +7,7 @@
 		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 		<!-- Stats -->
-		<container class="tcs_box"  height="120">
+		<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" height="120">
 			<layout class="stick_to_sides_attachment" alignment="all" inset="2,5" apply_to_children="true"/>
 
 			<container class="horizontal_adaptive_container" inset="0" offset="0" mode="distribute_equally">
@@ -106,7 +106,7 @@
 		<layout class="horizontal_arrange" horizontal_layout="-1,-2" horizontal_gap="8"/>
 
 		<!-- Match descriptions -->
-		<container class="tcs_box">
+		<container class="tcs_box" appearance="tcs/boxes/main/outline/paper">
 			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
 			<widget class="text" auto_size="vertical" font="title">
@@ -168,7 +168,7 @@
 		</container>
 
 		<!-- Match results -->
-		<container class="tcs_box" id="ftcn" >
+		<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" id="ftcn" >
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" />
 
 			<!-- tabbed container below 400 px -->
@@ -198,8 +198,8 @@
 			</container>
 
 			<!-- side by side above 500 px -->
-			<container id="sbsc">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8" />
+			<container id="sbsc" draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="16" />
 
 				<container class="tcs_box">
 					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
