@@ -18,5 +18,11 @@
 	<colour name="human controlled" 															value="tcs_accent"/>
 	<colour name="fg accent" value="tcs_accent"/>
 	<colour name="bg accent" value="tcs_accent"/>
-		
+
+	<!-- TCS PROFILE ATTRIBUTE COLOURS -->
+	<colour name="low attribute" red="169" green="169" blue="169" />
+	<colour name="normal attribute" red="241" green="241" blue="241" />
+	<colour name="good attribute" red="1" green="238" blue="255" />
+	<colour name="excellent attribute" red="255" green="235" blue="59" />
+
 </properties>
