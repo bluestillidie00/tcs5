@@ -1,0 +1,5 @@
+<properties>
+	<colour id="red_replacement" name="fg"/>
+	<colour id="green_replacement" name="secondary"/>
+	<colour id="blue_replacement" name="grey 900"/>
+</properties>
