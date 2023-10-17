@@ -1,0 +1,34 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		
+	<container>
+
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+
+		<widget class="text" auto_size="vertical" id="FAMI" font="label" colour="secondary" navigation_focus_target="false" >
+			<translation id="text" translation_id="447620" type="use" value="Familiarity[COMMENT: match preparation training tactics; label to indicate how well the squad as a whole is versed in a tactic which they're working upon]" />
+			<translation id="hint" translation_id="447621" type="use" value="Tactic Familiarity[COMMENT: match preparation training tactics; label to indicate how well the squad as a whole is versed in a tactic which they're working upon]" />
+		</widget>
+
+		<container class="inner_box" height="18" id="fmiL"  appearance="boxes/custom/tactic fam/paper">
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<widget class="horizontal_percentage_bar" bar_value_colour="tactical_familiarity_colour_1" id="fami" label_width="0" appearance="charts/bar/custom/tactics">
+
+			</widget>
+
+			<!--This is a button overlay to make the horizontal percentage bar look more like you can click on it -->
+			<container id="FamB">
+				<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</container>
+
+		</container>
+
+
+	</container>
+
+</panel>
