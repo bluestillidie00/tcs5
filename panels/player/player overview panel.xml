@@ -23,7 +23,9 @@
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 						<record id="object_property" get_property="objt" set_property="objt"/>
-
+						
+						<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary" >
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 						<!-- OVERVIEW -->
 						<container class="horizontal_adaptive_container" gap="8" >
 
@@ -31,7 +33,7 @@
 							<container class="vertical_adaptive_container" default_width="420" priority="2" gap="8">
 
 								<!-- TOP -->
-								<container class="tcs_box" default_height="-10" priority="1" appearance="tcs/boxes/main/top left">
+								<container default_height="-10" priority="1" >
 									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 									<container class="client_object_viewer_selector_panel" id="csLL" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
@@ -114,6 +116,7 @@
 									</container>
 								</container>
 
+							</container>
 							</container>
 						</container>
 					</container>
