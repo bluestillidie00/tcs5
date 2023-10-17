@@ -114,7 +114,7 @@
                 </widget>
                                 <!--instant match button-->
                 <widget class="icon_button" id="INST" appearance="chrome/buttons/continue/button" icon="icons/26px/whistle" width="180" style="bold" alignment="centre" icon_alignment="centre_right, centre_y" font="title" colour="text" height="60" >
-                    <record id="primary_icon_properties" red_replacement="text" />
+                    <record id="primary_icon_properties" red_replacement="secondary" />
                     <translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
                     <record id="click_event" event_id="INST" event_target="glob" />
 
