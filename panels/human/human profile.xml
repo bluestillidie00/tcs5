@@ -606,6 +606,12 @@
 						<widget class="manager_relationships_panel" id="Mrel">
 							<translation id="title" translation_id="308474" type="use" />
 							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>	
+
+						<!-- RELATIONSHIPS -->
+						<widget class="manager_targets_panel" id="Mtar">
+							<translation id="title" translation_id="386838" type="use" />
+							<record id="object_property" get_property="objt" set_property="objt"/>
 						</widget>
 
 					</container>

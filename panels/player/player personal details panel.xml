@@ -4,11 +4,11 @@
 	<boolean id="should_force_refresh" value="true"/>
 
 	<!-- MAIN CONTAINER -->
-	<container>
+	<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="primary" brep="tcs_accent" draw_vertical_dividers="true">
 		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 
 		<!-- PLAYER INFO -->
-		<container class="tcs_box" width="520" appearance="tcs/boxes/main/outline/alt/paper" rrep="bg lighter" brep="primary">
+		<container width="520">
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<container>
@@ -26,7 +26,7 @@
 					<widget file="player/tcs/selector/header/playerpic/stadium_sel" id="STAD" class="client_object_viewer_selector_panel"  default_item="STAp" /> -->
 					
 					<!-- FACE SELECTOR -->
-					<widget file="player/tcs/selector/header/playerpic/selector" id="FACE" class="client_object_viewer_selector_panel"  default_item="defa" />
+					<widget file="player/tcs/selector/header/playerpic/selector" id="FACE" class="client_object_viewer_selector_panel"  default_item="defa" /> 
 				</container>
 
 				<!-- LOGOS AND EXTRA DETAILS -->
@@ -84,12 +84,12 @@
 
 		</container>
 
-		<container class="horizontal_adaptive_container" gap="8" id="left">
+		<container class="horizontal_adaptive_container" gap="16" id="left" draw_vertical_dividers="true">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
 			<record id="default_properties" default_width="-1" minimum_width="340"/>
 
-			<container priority="1" class="tcs_box">
+			<container priority="1">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<container class="client_object_viewer_selector_panel" id="tcHl" file="player/player overview header selector panel" save_session_state="true">
 					<integer id="default_for_unemployed_managers" value="tpAb"/>
@@ -99,7 +99,7 @@
 				</container>
 			</container>
 
-			<container priority="2" class="tcs_box">
+			<container priority="2">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<container class="client_object_viewer_selector_panel" id="tcHm" file="player/player overview header selector panel" save_session_state="true">
 					<integer id="default_for_unemployed_managers" value="tPCo"/>
@@ -109,7 +109,7 @@
 				</container>
 			</container>
 
-			<container priority="3" class="tcs_box">
+			<container priority="3">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<container class="client_object_viewer_selector_panel" id="tcHR" file="player/player overview header selector panel" save_session_state="true">
 					<integer id="default_for_unemployed_managers" value="Pcrs"/>
