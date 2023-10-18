@@ -181,32 +181,32 @@
 			<container>
 			<layout class="stick_to_sides_attachment" />
 
-			<widget class="value_based_picture" id="vbp1" width="15" height="15" scale_picture="true" transparency="1">
-				<layout class="stick_to_sides_attachment" alignment="left" inset="12"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="15"/>
+			<widget class="value_based_picture" id="vbp1" width="17" height="17" scale_picture="true" transparency="1">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="13"/>
 				<list id="value_list">
-					<record min_value="1" max_value="4" file="tcs/icons/footedness/left" red_replacement="fg range1" brep="white"/>
-					<record min_value="5" max_value="8" file="tcs/icons/footedness/left" red_replacement="fg range5" brep="white" />
-					<record min_value="9" max_value="11" file="tcs/icons/footedness/left" red_replacement="fg range8" brep="white"/>
-					<record min_value="12" max_value="14" file="tcs/icons/footedness/left" red_replacement="fg range12" brep="white"/>
-					<record min_value="15" max_value="17" file="tcs/icons/footedness/left" red_replacement="fg range15" brep="white" />
-					<record min_value="18" max_value="20" file="tcs/icons/footedness/left" red_replacement="fg range20" brep="white"/>
+					<record min_value="1" max_value="4" file="tcs/icons/footedness/left" red_replacement="fg red"/>
+					<record min_value="5" max_value="8" file="tcs/icons/footedness/left" red_replacement="fg range4" />
+					<record min_value="9" max_value="11" file="tcs/icons/footedness/left" red_replacement="fg range8"/>
+					<record min_value="12" max_value="14" file="tcs/icons/footedness/left" red_replacement="fg range12"/>
+					<record min_value="15" max_value="17" file="tcs/icons/footedness/left" red_replacement="fg range16" />
+					<record min_value="18" max_value="20" file="tcs/icons/footedness/left" red_replacement="fg green"/>
 				</list>
 				<record id="object_property">
 					<integer id="get_property" value="Plft" />
 				</record>
 			</widget>
 
-			<widget class="value_based_picture" id="vbp1" width="15" height="15" scale_picture="true" transparency="1">
-				<layout class="stick_to_sides_attachment" alignment="right" inset="12"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="15"/>
+			<widget class="value_based_picture" id="vbp1" width="17" height="17" scale_picture="true" transparency="1">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="10"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="13"/>
 				<list id="value_list">
-					<record min_value="1" max_value="4" file="tcs/icons/footedness/right" red_replacement="fg range1" brep="white"/>
-					<record min_value="5" max_value="8" file="tcs/icons/footedness/right" red_replacement="fg range5" brep="white"/>
-					<record min_value="9" max_value="11" file="tcs/icons/footedness/right" red_replacement="fg range8" brep="white"/>
-					<record min_value="12" max_value="14" file="tcs/icons/footedness/right" red_replacement="fg range12" brep="white"/>
-					<record min_value="15" max_value="17" file="tcs/icons/footedness/right" red_replacement="fg range15" brep="white"/>
-					<record min_value="18" max_value="20" file="tcs/icons/footedness/right" red_replacement="bg green" brep="white"/>
+					<record min_value="1" max_value="4" file="tcs/icons/footedness/right" red_replacement="fg red"/>
+					<record min_value="5" max_value="8" file="tcs/icons/footedness/right" red_replacement="fg range4" />
+					<record min_value="9" max_value="11" file="tcs/icons/footedness/right" red_replacement="fg range8" />
+					<record min_value="12" max_value="14" file="tcs/icons/footedness/right" red_replacement="fg range12" />
+					<record min_value="15" max_value="17" file="tcs/icons/footedness/right" red_replacement="fg range16" />
+					<record min_value="18" max_value="20" file="tcs/icons/footedness/right" red_replacement="fg green" />
 				</list>
 				<record id="object_property">
 					<integer id="get_property" value="Prft" />
