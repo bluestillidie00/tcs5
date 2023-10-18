@@ -1,5 +1,5 @@
 <properties>
-	<colour id="red_replacement" name="bg red"/>
-	<colour id="green_replacement" name="white"/>
-	<colour id="blue_replacement" name="bg lighter"/>
+	<colour id="red_replacement" name="fg"/>
+	<colour id="green_replacement" name="secondary"/>
+	<colour id="blue_replacement" name="grey 900"/>
 </properties>
