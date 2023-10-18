@@ -37,7 +37,7 @@
 						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
 						<!-- CLUB -->
-						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper">
+						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="primary" brep="primary">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 							<!-- IF NO CLUB -->
@@ -59,7 +59,7 @@
 						</container>
 
 						<!-- NATION LOGO -->
-						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper">
+						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="primary" brep="primary">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 							<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true">
