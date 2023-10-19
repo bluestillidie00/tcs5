@@ -29,7 +29,7 @@
 			<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
 
 			<container height="4" />
-		
+
 			<!-- NOTABLE EVENTS -->
 			<container>
 				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
@@ -179,7 +179,7 @@
 											</widget>							
 										</container>
 
-						<container class="match_info_panel" file="none">
+										<container class="match_info_panel" file="none">
 											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
 											<record id="object_property" get_property="objt" set_property="objt"/>
 
@@ -196,7 +196,7 @@
 										</container>
 									</container>
 
-									<widget class="match_analysis_panel" id="Anal" file="match/comps/eur/champions league/heatmaps">
+									<widget class="match_analysis_panel" id="Anal" file="match/tcs/tablet/heatmaps">
 										<!-- Slide in from side of screen -->
 										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
 										<animation class="fade_on_hide_animation" duration="0.35"/>
