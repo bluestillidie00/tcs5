@@ -4,10 +4,10 @@
 
     <!-- IF WE DO HAVE THE CONTENT -->
     <container>
-        <layout class="horizontal_arrange" horizontal_layout="170,-3,-4" horizontal_gap="16" />
+        <layout class="horizontal_arrange" horizontal_layout="-375,-350,-380" horizontal_gap="16" />
 
         <!-- CONTAINER HOLDING KIT AND PLAER PIC -->
-        <container width="280" >
+        <container width="280">
             <attachment_group class="horizontal_arrange" horizontal_gap="-125"/>
 
             <container width="160">
