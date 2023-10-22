@@ -4,7 +4,7 @@
 
 	<boolean id="should_force_refresh" value="true" />
 
-	<container class="tcs_box" appearance="tcs/boxes/main/outline/solid/paper" rrep="bg lighter" brep="primary">
+	<container class="tcs_box" appearance="tcs/boxes/main/outline/solid/paper" rrep="bg lighter" brep="tcs_accent">
 		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 		<container class="tcs_table" id="pict" height="200">
