@@ -12,13 +12,13 @@
 	<!-- HISTORY / CAREER STATS -->
 	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
 		<translation id="title" translation_id="247605" type="use"/>
-		<translation id="subtitle" translation_id="319477" type="use"/>
+		<translation id="subtitle" translation_id="513602" type="use"/>
 	</widget>
 
 	<!--  HISTORY / PAST INJURIES -->
 	<widget class="player_history_injury_panel" id="tphi" late_loading="true" file="player/tcs/selector/past injury">
 		<translation id="title" translation_id="316626" type="use"/>
-		<translation id="subtitle" translation_id="319477" type="use"/>
+		<translation id="subtitle" translation_id="513602" type="use"/>
 	</widget>
 
 	<!-- HISTORY / PROGRESS -->
