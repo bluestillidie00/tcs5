@@ -7,7 +7,7 @@
     <boolean id="should_force_refresh" value="true" />
 
     <container class="bordered_box" appearance="boxes/custom/full screen header/paper">
-        <attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="15" vertical_alignment="top" />
+        <attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="12" vertical_alignment="top" />
 
         <!-- Back Button -->
         <widget class="screen_history_button" id="back" fixed="true" width="50" height="50" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre" controller_button="b_button">
@@ -93,7 +93,7 @@
             <widget class="spacer" />
 
             <container>
-                <attachment_group class="horizontal_arrange_autosize" horizontal_gap="6" />
+                <attachment_group class="horizontal_arrange_autosize" horizontal_gap="2" />
 
                 <!-- FM button -->
                 <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="58" height="39" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
@@ -111,10 +111,11 @@
                         </list>
                     </attachment>
                 </widget>
-                <!--instant match button-->
-                <widget class="icon_button" id="INST" appearance="chrome/buttons/continue/button" icon="icons/26px/whistle" width="180" style="bold" alignment="centre" icon_alignment="centre_right, centre_y" font="title" colour="secondary" height="60" >
+                                <widget class="icon_button" id="INST" width="180" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/26px/whistle" secondary_icon_alignment="centre_right, centre_y" colour="secondary" font="extendedblack" size="xsmall" multiline="true" red_replacement="primary" blue_replacement="primary" green_replacement="primary" offset="6">
+                <!--instant match button
+                <widget class="icon_button" appearance="chrome/buttons/continue/button" icon="icons/26px/whistle" width="180" style="bold" alignment="centre" icon_alignment="centre_right, centre_y" font="title" colour="secondary" height="60" >-->
                     <record id="primary_icon_properties" red_replacement="secondary" />
-                    <translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
+                    <translation id="text" translation_id="383109" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
                     <record id="click_event" event_id="INST" event_target="glob" />
 
                     <attachment class="test_global_attachment" get_property="section" mode="1" set_property="hidden">
