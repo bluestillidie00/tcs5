@@ -1,17 +1,17 @@
 <panel>
-<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
 	<container height="15">
-				<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
-				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
-				<string id="skin_style" value="title link" />
+		<string id="skin_style" value="title link" />
 
-				<!-- Linked header -->
-				<widget class="text" font="title" id="PHac" section="PHac" auto_size="horizontal">
-<translation id="text" type="use" value="Characteristics" />
-				</widget>
-			</container>
+		<!-- Linked header -->
+		<widget class="text" font="title" id="PHac" section="PHac" auto_size="horizontal">
+			<translation id="text" type="use" value="Characteristics" />
+		</widget>
+	</container>
 
 	<!--list of columns/rows to hide when not a club manager-->
 	<list id="hide_rows">
