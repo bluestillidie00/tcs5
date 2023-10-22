@@ -35,19 +35,12 @@
 						<integer id="true_value" value="30"/>
 					</record>
 					<record min_value="868" max_value="1260" true_value="50"/>
-					<record min_value="1260" max_value="9999" true_value="85"/>
+					<record min_value="1260" max_value="9999" true_value="50"/>
 				</list>
 			</attachment>
 
 			<widget class="fixture_opponent_picture" id="fopP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
 				<record id="object_property" get_property="fopP"/>
-			</widget>
-
-			<widget class="fixture_opponent_team_button" icon_enabled="false" label_disabled="false" show_button_appearance="false" size="9999" font="capitals" colour="text">
-				<record id="object_property" dont_set_hint="true">
-					<integer id="get_property" value="fopt"/>
-					<integer id="set_property" value="valu"/>
-				</record>
 			</widget>
 
 		</container>

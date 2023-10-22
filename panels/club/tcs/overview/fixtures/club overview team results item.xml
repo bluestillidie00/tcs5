@@ -16,10 +16,6 @@
 		<layout class="vertical_arrange" vertical_alignment="middle"/>
 
 		<widget class="fixture_opponent_picture" id="oppi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
-			<record id="object_property" get_property="fopP"/>
-		</widget>
-
-		<widget class="fixture_opponent_picture" id="oppi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
 
 			<record id="object_property">
 				<list id="get_properties">
@@ -44,7 +40,7 @@
 						<integer id="true_value" value="30" />
 					</record>
 					<record min_value="868" max_value="1260" true_value="50"/>
-					<record min_value="1260" max_value="9999" true_value="85"/>
+					<record min_value="1260" max_value="9999" true_value="50"/>
 				</list>
 			</attachment>
 
@@ -55,9 +51,9 @@
 
 			<record id="default_properties" spec="text" size="small" alignment="centre" auto_size="all" />
 
-	           <widget class="fixture_opponent_venue_text" style="semi_bold" size="small" alignment="centre" auto_size="vertical">
-                <record id="object_property" get_property="fOpV" />
-            </widget>
+			<widget class="fixture_opponent_venue_text" style="semi_bold" size="small" alignment="centre" auto_size="vertical">
+				<record id="object_property" get_property="fOpV" />
+			</widget>
 
 			<!--opponent league position
 			<widget class="fixture_opponent_league_position_text" id="Ooml" >

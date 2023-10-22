@@ -26,31 +26,31 @@
 				<widget class="simple_data_list" first="0" priority="1">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<record id="object_property" get_property="Tn5f" set_property="valu" />
-					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/overview/fixtures/club overview team fixtures item"/>
 				</widget>
 
 				<widget class="simple_data_list" first="1" priority="2">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<record id="object_property" get_property="Tn5f" set_property="valu" />
-					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/overview/fixtures/club overview team fixtures item"/>
 				</widget>
 
 				<widget class="simple_data_list" first="2" priority="3">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<record id="object_property" get_property="Tn5f" set_property="valu" />
-					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/overview/fixtures/club overview team fixtures item"/>
 				</widget>
 
 				<widget class="simple_data_list" first="3" priority="4">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<record id="object_property" get_property="Tn5f" set_property="valu" />
-					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/overview/fixtures/club overview team fixtures item"/>
 				</widget>
 
 				<widget class="simple_data_list" first="4" priority="5">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<record id="object_property" get_property="Tn5f" set_property="valu" />
-					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/club overview team fixtures item"/>
+					<record id="widget_properties" class="team_upcoming_fixture_widget" file="club/tcs/overview/fixtures/club overview team fixtures item"/>
 				</widget>
 
 			</container>

@@ -332,11 +332,11 @@
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<container class="vertical_arrange_container" alignment="fill" gap="4">
 
-					<container class="club_overview_team_results_panel" file="club/tcs/club overview team calendar results">
+					<container class="club_overview_team_results_panel" file="club/tcs/overview/fixtures/club overview team calendar results">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 
-					<container class="club_overview_team_results_panel" file="club/tcs/club overview team calendar fixtures">
+					<container class="club_overview_team_results_panel" file="club/tcs/overview/fixtures/club overview team calendar fixtures">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 				</container>
