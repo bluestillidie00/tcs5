@@ -6,6 +6,10 @@
 	<colour id="prVr" name="rival relationship" />
 	<colour id="pAdv" name="adversary relationship" />
 	<colour id="pCds" name="distant relationship" />
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+							<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary" >
+
 
 	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
 
@@ -578,6 +582,7 @@
 				<integer id="set_property" value="objt" />
 			</record>
 		</widget>
+	</container>
 	</container>
 
 </panel>

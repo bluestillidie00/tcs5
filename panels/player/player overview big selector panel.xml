@@ -20,7 +20,7 @@
     </widget>
 
     <widget file="player/tcs/selector/big/per 90/tabbed" class="client_object_viewer_xml_panel" id="pe90" late_loading="true">
-        <translation id="title" translation_id="374186" type="use"/>
+        <translation id="title" value="Per 90 Minutes" type="use"/>
         <record id="object_property" get_property="objt" set_property="objt"/>
     </widget>
 
