@@ -22,12 +22,73 @@
 			</container>
 
 
-			<container class="tcs_box">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<container class="tcs_table">
+<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 				<widget class="player_positions_indicator_panel" id="ppik" file="player/player positions indicator small horizontal" width="-1" priority="1" navigation_container="true" default_focus="true">
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>	
+				
+						<!-- Preferred Foot-->
+				<container class="tcs_table" transparency="0.8">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" id="PlfG" auto_size="vertical" font="title" colour="text">
+						<record id="object_property" get_property="PlfG" name="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,20" />
+					</widget>
+
+					<container height="20">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+
+						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
+							<list id="value_list">
+								<record min_value="1" max_value="4" red_replacement="bg red"/>
+								<record min_value="5" max_value="8" red_replacement="bg range4"/>
+								<record min_value="9" max_value="11" red_replacement="bg range8"/>
+								<record min_value="12" max_value="14" red_replacement="bg range12"/>
+								<record min_value="15" max_value="17" red_replacement="bg range16"/>
+								<record min_value="18" max_value="20" red_replacement="bg green"/>
+							</list>
+							<record id="object_property" get_property="PlfG"/>
+						</widget>
+
+						<widget class="footedness_label" id="PlfG" auto_size="vertical">
+							<record id="object_property" get_property="PlfG" />
+						</widget>
+					</container>
+				</container>
+
+				<!-- Preferred Foot-->
+				<container class="tcs_table" transparency="0.8">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" id="PlfG" auto_size="vertical" font="title" colour="text">
+						<record id="object_property" get_property="PrfG" name="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,20" />
+					</widget>
+
+					<container height="20">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+
+						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
+							<list id="value_list">
+								<record min_value="1" max_value="4" red_replacement="bg red"/>
+								<record min_value="5" max_value="8" red_replacement="bg range4"/>
+								<record min_value="9" max_value="11" red_replacement="bg range8"/>
+								<record min_value="12" max_value="14" red_replacement="bg range12"/>
+								<record min_value="15" max_value="17" red_replacement="bg range16"/>
+								<record min_value="18" max_value="20" red_replacement="bg green"/>
+							</list>
+							<record id="object_property" get_property="PrfG"/>
+						</widget>
+
+						<widget class="footedness_label" id="PrfG" auto_size="vertical">
+							<record id="object_property" get_property="PrfG" />
+						</widget>
+					</container>
+				</container>
+				
 			</container>
 		</container>		
 
@@ -45,7 +106,7 @@
 			</container>
 		</container>
 
-		<!-- ADVANCED STATISTICS -->
+		<!-- ADVANCED STATISTICS 
 		<container id="Adva" >
 			<translation id="title" value="Advanced Statistics" type="use"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
@@ -57,7 +118,7 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 			</container>
-		</container>
+		</container> -->
 
 
 		<!-- POSITIONS -->
