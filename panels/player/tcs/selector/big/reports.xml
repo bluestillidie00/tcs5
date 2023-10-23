@@ -404,7 +404,7 @@
 								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" />
 
 								<list id="properties_to_forward">
-									<record get_property="recommendation_widget_mode" set_property="recommendation_mode" target="RCic" /> <!-- Changed id from sriW to RCic to match the value of my fix -->
+									<record get_property="recommendation_widget_mode" set_property="recommendation_mode" target="RCic" /> <!-- Changed id from sriW to RCic to match the value of my fix, not sure if this is needed -->
 									<record get_property="showing_in_list" set_property="showing_in_list" target="RCic" />
 								</list>
 
