@@ -24,7 +24,7 @@
 
 						<record id="object_property" get_property="objt" set_property="objt"/>
 
-						<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary" >
+						<container class="tcs_box" appearance="tcs/boxes/main/fade/top left/paper" rrep="bg lighter" brep="primary" >
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 							<!-- OVERVIEW -->
 							<container class="horizontal_adaptive_container" gap="8" >
