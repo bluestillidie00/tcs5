@@ -72,14 +72,8 @@
 										<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-											<container class="client_object_viewer_selector_panel" id="coLA" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" save_session_state="true">
-												<integer id="default_for_unemployed_managers" value="pfSm"/>
-												<integer id="default_for_international_managers_other_team" value="pfSm"/>
-												<integer id="default_for_everyone_else" value="pfSm"/>
-												<integer id="default_for_versus_mode" value="pfSm"/>
-												<!-- 	<widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
-												<translation id="title" translation_id="385617" type="use"/>
-											</widget> -->
+											<container class="client_object_viewer_selector_panel" id="seoB" file="player/player overview bottom selector panel" minimum_width="310" default_width="-1" priority="3" save_session_state="true" dont_set_embedded_title="true">
+											
 											</container>
 										</container>
 
@@ -168,20 +162,16 @@
 											</container>
 										</container>
 
+								
 										<!-- BOTTOM -->
 										<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-											<container class="client_object_viewer_selector_panel" id="clLA" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" save_session_state="true">
-												<integer id="default_for_unemployed_managers" value="pfSm"/>
-												<integer id="default_for_international_managers_other_team" value="pfSm"/>
-												<integer id="default_for_everyone_else" value="pfSm"/>
-												<integer id="default_for_versus_mode" value="pfSm"/>
-												<!-- 	<widget class="client_object_viewer_xml_panel" id="tcSS" late_loading="true" file="player/tcs/selector/season stats">
-												<translation id="title" translation_id="385617" type="use"/>
-											</widget> -->
+											<container class="client_object_viewer_selector_panel" id="cALA" file="player/player overview bottom selector panel" minimum_width="310" default_width="-1" priority="3" save_session_state="true" dont_set_embedded_title="true">
+									
 											</container>
 										</container>
+
 
 									</container>
 
