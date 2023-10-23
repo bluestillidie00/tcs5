@@ -139,7 +139,7 @@
 									<container default_height="-10" priority="1" >
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-										<container class="client_object_viewer_selector_panel" id="csLL" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+										<container class="client_object_viewer_selector_panel" id="cAlL" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 											<integer id="default_for_unemployed_managers" value="Ppos"/>
 											<integer id="default_for_international_managers_other_team" value="Ppos"/>
 											<integer id="default_for_everyone_else" value="Ppos"/>
@@ -160,7 +160,7 @@
 										<container  default_height="350" priority="1">
 											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 											<translation id="title" translation_id="292808" type="use" />
-											<container class="client_object_viewer_selector_panel" id="csnA" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+											<container class="client_object_viewer_selector_panel" id="cslA" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 												<integer id="default_for_unemployed_managers" value="Ppos"/>
 												<integer id="default_for_international_managers_other_team" value="Ppos"/>
 												<integer id="default_for_everyone_else" value="Ppos"/>
@@ -172,7 +172,7 @@
 										<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
 											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-											<container class="client_object_viewer_selector_panel" id="coLA" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" save_session_state="true">
+											<container class="client_object_viewer_selector_panel" id="clLA" file="player/player overview small selector panel" minimum_width="310" default_width="-1" priority="3" save_session_state="true">
 												<integer id="default_for_unemployed_managers" value="pfSm"/>
 												<integer id="default_for_international_managers_other_team" value="pfSm"/>
 												<integer id="default_for_everyone_else" value="pfSm"/>
@@ -191,7 +191,7 @@
 										<container class="tcs_box" default_height="-14" priority="1">
 											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-											<container class="client_object_viewer_selector_panel" id="cLRT" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" default_item="tCSR">
+											<container class="client_object_viewer_selector_panel" id="ALRT" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" default_item="tCSR">
 												<integer id="default_for_unemployed_managers" value="tCSR"/>
 												<integer id="default_for_international_managers_other_team" value="tCSR"/>
 												<integer id="default_for_everyone_else" value="tCSR"/>
@@ -206,7 +206,7 @@
 										<container class="tcs_box" default_height="-6" priority="2">
 											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-											<container class="client_object_viewer_selector_panel" id="CLRB" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
+											<container class="client_object_viewer_selector_panel" id="ALRB" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
 												<integer id="default_for_unemployed_managers" value="pscR"/>
 												<integer id="default_for_international_managers_other_team" value="pscR"/>
 												<integer id="default_for_everyone_else" value="pscR"/>
