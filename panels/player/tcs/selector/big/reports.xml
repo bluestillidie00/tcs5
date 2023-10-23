@@ -387,6 +387,7 @@
 							</widget>
 						</container>
 
+						<!-- Already scouted -->
 						<container id="scou">
 							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
@@ -403,8 +404,8 @@
 								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" />
 
 								<list id="properties_to_forward">
-									<record get_property="recommendation_widget_mode" set_property="recommendation_mode" target="sriW" />
-									<record get_property="showing_in_list" set_property="showing_in_list" target="sriW" />
+									<record get_property="recommendation_widget_mode" set_property="recommendation_mode" target="RCic" /> <!-- Changed id from sriW to RCic to match the value of my fix -->
+									<record get_property="showing_in_list" set_property="showing_in_list" target="RCic" />
 								</list>
 
 								<container navigation_container="true">		
@@ -412,11 +413,16 @@
 
 									<container id="stBX" class="main_contrast_box">
 										<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" vertical_offset="0" vertical_gap="0" />
-
+										<!-- FOUND THE BUG HERE
 										<widget class="player_scout_recommendation_widget" id="sriW" width="40" height="32" show_knowledge_bar="false">
 											<record id="object_property" get_property="Psrk" set_property="objt" />
-										</widget>
+										</widget>-->
 
+										<!-- FIX FOR NO GRADE UNDER SCOUT REPORT WITHIN PLAYER PROFILE -->
+										<widget class="player_scout_recommendation_widget" id="RCic" width="40" height="32" show_knowledge_bar="false"> 
+											<record id="object_property" get_property="Psrk" set_property="objt"/>
+										</widget>
+													
 										<widget class="text" id="recw" alignment="left,centre_y" multiline="true" style="bold" auto_size="vertical" />
 
 									</container>
@@ -434,7 +440,6 @@
 											<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="2" vertical_offset="0" vertical_gap="2" />
 											<container>
 												<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3" />
-
 												<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
 													<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
 												</widget>
