@@ -65,7 +65,7 @@
 		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 	</widget>
-	<container class="main_contrast_box_no_margin" entity_layout_id="it15" wants_mouse_events="true" inset="0" red_replacement="bg lighter" width="800" name="green background" navigation_container="true">
+	<container class="main_contrast_box_no_margin" entity_layout_id="it15" id="bakC" wants_mouse_events="true" inset="0" red_replacement="pitch_box_background" width="890" name="green background" navigation_container="true">
 		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
 		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
@@ -198,8 +198,8 @@
 			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 		</container>
 	</container>
-  <widget class="icon_button" entity_layout_id="it01" id="MaMi" appearance="buttons/standard/flex/button" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" width="50" height="34" name="expand button" controller_button="x_button" navigation_focus_target="false" gamepad_icon_alignment="centre_left" secondary_icon_colour="white" font="title" colour="white">
-    <string id="red_replacement" value="teal 900"/>
+  <widget class="icon_button" entity_layout_id="it01" id="MaMi" appearance="buttons/standard/flex/button" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" width="50" height="34" name="expand button" controller_button="x_button" navigation_focus_target="false" gamepad_icon_alignment="centre_left" secondary_icon_colour="primary" font="title" colour="white">
+    <string id="red_replacement" value="secondary"/>
     <string id="click_event" value="tsdP"/>
     <string id="secondary_icon" value="icons/16px/expand"/>
     <string id="secondary_icon_alignment" value="centre_right"/>
