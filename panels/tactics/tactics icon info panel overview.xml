@@ -107,10 +107,13 @@
 		<layout class="arrange_vertical_attachment" layout="-1, 42" offset="0" gap="2"/>
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-
+		
+		<container>
+<layout class="stick_to_sides_attachment" alignment="all" inset="16" apply_to_children="true"/>
 		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_right="0" number_inset_top="0" number_height="50">
 		</widget>
 
+		</container>
 		<container class="spacer" id="kitS"/>
 	</container>
 
@@ -126,8 +129,8 @@
 		<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
 
 		<!-- PLAYER PICTURE -->
-		<widget class="object_portrait_picture" id="pict" scale_picture="true" wants_mouse_events="false" >
-			<layout class="stick_to_sides_attachment" alignment="right" inset="-10" />
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" wants_mouse_events="false" image_alignment="centre">
+			<layout class="stick_to_sides_attachment" alignment="centre_x" />
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="49" />
 			<record id="object_property">
 				<integer id="get_property" value="objt"/>
