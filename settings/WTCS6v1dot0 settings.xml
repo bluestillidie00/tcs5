@@ -25,4 +25,7 @@
 	<colour name="good attribute" red="1" green="238" blue="255" />
 	<colour name="excellent attribute" red="255" green="235" blue="59" />
 
+	<colour name="pitch_box_background" 					value="bg"/>
+	<colour name="style_background" 						value="bg lighter"/>
+
 </properties>
