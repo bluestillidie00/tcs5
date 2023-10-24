@@ -1,6 +1,11 @@
 ﻿<panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 	
+	<!-- Fix Transparency Issue #36 added the following container to add shadow -->
+	<container class="tcs_box" transparency="0.8">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
 	<!-- THE PITCH -->
 	<widget	class="pitch_with_tactics" id="pwtc" icon_flags="show_name,show_extra_details,drop_initial_if_possible" >
 		<boolean id="vertical" value="true"/>
