@@ -183,7 +183,7 @@
 				</container>
 
 				<!--match continue button-->
-				<widget class="icon_button" id="IMBu" appearance="chrome/buttons/continue/button" rrep="tcs_gold" controller_button="right_trigger" width="200" alignment="centre" secondary_icon_enabled="true" secondary_icon_alignment="centre_right, centre_y" font="title" colour="fg">
+				<widget class="icon_button" id="IMBu" appearance="chrome/buttons/continue/button" rrep="tcs_gold" controller_button="right_trigger" width="200" alignment="centre" secondary_icon_enabled="true" secondary_icon_alignment="centre_right, centre_y" font="title" colour="secondary">
 					<record id="click_event" event_id="CONT" event_target="glob" />
 
 					<attachment class="test_global_attachment" get_property="cont" set_property="hidden" mode="not_equal">
