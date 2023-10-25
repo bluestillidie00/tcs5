@@ -5,7 +5,8 @@
     <!-- Subs Styles -->
     <flags id="subs" value="tables/custom/squad/substitute/row"/>
 
-    <container class="subsection_box" appearance="tcs/boxes/main/trans/paper" >
+    <!-- Fix Transparency Issue #36 changed apperance from tcs/boxes/main/trans/paper to tcs/boxes/main/match/paper -->
+    <container class="subsection_box" appearance="tcs/boxes/main/match/paper" >
         <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
         <container embed_in_frame="true">
