@@ -218,8 +218,8 @@
 										<!-- category-->
 										<record id="Pdva" auto_hide_priority="9"/>
 										<!-- value -->
-										<record id="PsRK" auto_hide_priority="3" minimum_width="70"/>
-										<!-- recommended -->
+										<record id="PRpo" auto_hide_priority="3" minimum_width="70"/>
+										<!-- recommended changed id from PsRK to PRpo -->
 										<record id="PsKL" auto_hide_priority="9" minimum_width="150"/>
 										<!-- knowledge -->
 									</record>
