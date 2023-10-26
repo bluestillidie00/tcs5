@@ -12,7 +12,7 @@
 
 	<container id="fixt" class="horizontal_adaptive_container" gap="4">
 
-		<record id="default_properties" file="club/tcs/overview/fixtures/club overview team results item" minimum_width="90" default_width="-1"/>
+		<record id="default_properties" file="club/tcs/fm24/overview/fixtures/club overview team results item" minimum_width="90" default_width="-1"/>
 
 		<container class="client_object_viewer_xml_panel" id="res0" priority="1"/>
 		<container class="client_object_viewer_xml_panel" id="res1" priority="2"/>

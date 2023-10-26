@@ -1,0 +1,262 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+
+	<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary" >
+		<layout class="horizontal_arrange" horizontal_layout="-14,-14,-10"  horizontal_gap="8" />
+
+		<!-- FIXTURES AND RESULT -->
+		<container class="tcs_box" draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="24"/>
+			<translation id="title" translation_id="247326" type="use" value="Fixtures &amp; Results"/>
+
+			<container class="manager_upcoming_fixtures_panel" id="upfx" file="club/tcs/fm24/overview/fixtures/club overview upcoming fixtures">
+				<record id="object_property" get_property="TCsf" set_property="objt"/>
+			</container>
+
+			<container class="tcs_box" appearance="tcs/boxes/main/trans/no margin/paper" height="160">
+				<translation id="title" value="Upcoming Fixtures" type="use"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<container class="club_overview_team_results_panel" file="club/tcs/fm24/overview/fixtures/club overview team calendar fixtures" >
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+			</container>
+		</container>
+
+		<!-- LEAGUE TABLE -->
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" translation_id="242904" type="use" />
+
+			<!-- LEAGUE TABLE -->
+			<container id="lgbt">
+				<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+				<container class="competition_news_panel" file="none">
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<container class="competition_overview_panel" file="none">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+						<record id="object_property" get_property="Cdiv" set_property="objt"/>
+
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1,-2" horizontal_offset="0" vertical_inset="0">
+							<global id="horizontal_gap" name="ui.main_contrast_box_gap"/>
+						</attachment_group>
+
+						<container id="cost" navigation_container="true" default_focus="false">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<widget class="competition_stage_panel" file="none">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+								<!-- the group box that is the main container for the competition stage panel
+			this container holds whatever league or cup panel we need to create -->
+								<container class="main_box" id="stse" force_title_borders="true">
+
+									<!-- buttons area -->
+									<container embed_in_frame="true" id="emdb" navigation_container="true" default_focus="true">
+										<attachment_group class="title_embedded_panel_left"/>
+
+										<!-- 	<widget class="view_menu_label" id="labl">
+				<translation id="text" translation_id="247175" type="use" value="Stages" />
+			</widget> -->
+
+										<!-- the stages menu: visible if more than one stage/substage -->
+										<widget class="view_menu_popup" id="stpb" sele="acsm" display_full_item_path="true"/>
+
+										<!-- the view menu: league/cup specific view items -->
+										<widget class="view_menu_popup" id="vmpb" sele="acvm" />
+									</container>
+
+									<!-- menu bar area -->
+									<container id="stba" embed_in_frame="true" navigation_container="true">
+
+										<attachment_group class="title_embedded_panel_right"/>
+
+
+										<!-- the year menu: visible if more than one year stored -->
+										<widget class="embedded_season_selection_list" id="yrpb" auto_size="horizontal" sele="acyr" height="30" reverse_function="true" embed_in_frame="true" />
+									</container>
+
+
+									<!-- bottom row of the stage panel is used to store cup draw buttons -->
+									<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+									<!-- No game panel-->
+									<container id="nots" hidden="true">
+										<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+										<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="200"/>
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+										<widget class="spacer" height="50" />
+
+										<widget class="text" id="nost" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical" />
+									</container>
+
+									<!-- group box for stage to go into -->
+									<container id="stgb">
+										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+										<record id="default_properties" hidden="true" />
+
+										<!--league stage panel-->
+										<widget class="league_stage_panel" id="lspn" save_session_state="true" should_force_refresh="true"/>
+
+										<!--competition rules panel-->
+										<widget class="rules_panel" id="rupa" />
+
+										<!--cup stage_panel-->
+										<widget class="cup_stage_panel" id="cstp" save_session_state="true" />
+
+										<!--cup tree panel-->
+										<widget class="cup_tree_panel" id="ctpn" save_session_state="true" />
+
+										<!--group stage scrolling box (to be filled in code)-->
+										<widget class="scrolling_box" id="gscb" save_session_state="true" navigation_container="true" navigation_container_allow_empty="true"/>
+
+										<!-- media prediction -->
+										<container class="media_predicition_league_table_panel" id="odds" />
+									</container>
+
+									<!--xG table for league-->
+									<widget class="client_object_list_table"  hidden="true"  id="xgtb" mode="fill_rows, stripe_rows">
+										<list id="default_sort_column">
+											<integer value="sxGP" />
+										</list>
+
+										<list id="column_widget_properties">
+											<record index="10" alignment="centre" />
+										</list>
+
+										<record id="viewed_property_ids">
+											<record id="Tpos" alignment="centre"/>
+											<record id="xGPo" />
+											<record id="xPOd" />
+											<record id="Ttea" />
+											<record id="svxG" />
+											<record id="sxGA" />
+											<record id="sxGP" />
+										</record>
+									</widget>
+
+									<container navigation_container="true">
+
+										<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+										<!-- The exceptions so point deductions in the league etc-->
+										<widget class="table" layout="-1" id="exta" auto_size="vertical" row_height="22" hidden="true" mode="fill_rows" />
+
+										<!-- group box for buttons -->
+										<container id="stbt" >
+											<layout class="fit_children_attachment" alignment="vertical" offset="2" />
+											<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+											<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+											<record id="default_properties" auto_size="all" />
+
+											<!-- 4 cup action buttons -->
+											<widget class="button" id="dnte" click_event="dnte">
+												<translation id="text" translation_id="247176" type="use" value="Draw Next Team" />
+											</widget>
+											<widget class="icon_button" id="datm" click_event="datm" controller_button="y_button">
+												<translation id="text" translation_id="247177" type="use" value="Draw All Teams" />
+											</widget>
+											<widget class="icon_button" id="audr" click_event="audr" controller_button="x_button">
+												<translation id="text" translation_id="247178" type="use" value="Automatic Draw" />
+											</widget>
+											<widget class="icon_button" id="sadr" click_event="sadr" controller_button="x_button">
+												<translation id="text" translation_id="247179" type="use" value="Stop Automatic Draw" />
+											</widget>
+										</container>
+
+									</container>
+
+
+
+								</container>
+
+								<!-- teams left to draw for a cup stage -->
+								<widget class="comp_teams_to_draw_panel" id="ctdp" hidn="true" />
+
+								<!-- league stage fixtures-->
+								<widget class="competition_fixtures_panel" id="cmfp" height="370" display_mode="1" group_sort_human_fixtures="false" show_view_stage_link="false">
+									<attachment class="test_screen_size_attachment" skip_if_false="true">
+										<list id="properties">
+											<record>
+												<flags id="alignment" value="vertical" />
+												<integer id="min_value" value="0" />
+												<integer id="max_value" value="768" />
+												<symbol id="set_property" value="height" />
+												<integer id="true_value" value="285" />
+												<integer id="false_value" value="370" />
+											</record>
+										</list>
+									</attachment>
+								</widget>
+
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+
+		</container>
+
+		<!-- LAST KNOWN LINE UP -->
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container class="tcs_tabs_primary" id="tSta" default_item="csio" save_default_state="true" save_session_state="true">
+
+				<!-- LAST XI -->
+				<container class="team_container_information_overview_panel" id="csio" file="club/tcs/fm24/overview/last xi/pitch">
+					<translation id="title" translation_id="447658" type="use" />
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+
+				<!-- PLAYER STATS -->
+				<container class="team_container_information_overview_panel" file="none" id="pssp">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<translation id="title" translation_id="248440" type="use" value="Player Stats"/>
+
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<container>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<record id="default_properties" default_width="-1" minimum_width="250"/>
+
+						<!--snapshot selector 1-->
+						<container class="client_object_viewer_selector_panel" file="club/tcs/fm24/overview/fixtures/dummysel_2" id="cos1" priority="1" default_widget="pssp" late_loading="true" save_session_state="true" dont_set_embedded_title="true"/>
+					</container>
+				</container>
+
+				<!-- TEAM STATS -->
+				<container class="team_container_information_overview_panel" file="none" id="tssp">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+        <translation id="title" translation_id="247393" type="use" value="Team Stats"/>
+
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<container >
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<record id="default_properties" default_width="-1" minimum_width="250"/>
+
+						<!--snapshot selector 1-->
+						<container class="client_object_viewer_selector_panel" file="club/tcs/fm24/overview/fixtures/dummysel_1" id="cos1" priority="1" default_widget="pssp" late_loading="true" save_session_state="true" dont_set_embedded_title="true"/>
+					</container>
+				</container>
+
+
+			</container>
+		</container>
+
+
+	</container>
+</panel>

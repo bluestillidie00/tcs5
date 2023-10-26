@@ -1,18 +1,18 @@
 ﻿<panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-    
+
 	<container>
 		<layout class="stick_to_sides_attachment" alignment="all" inset="-70" apply_to_children="true" transparency="0.4"/>
-					<widget class="stadium_picture" id="STAp" file="none">
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+		<widget class="stadium_picture" id="STAp" file="none">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
 
-						<record id="object_property" get_property="objt" set_property="objt"/>
-						<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
 
-						<widget class="picture" file="pictures/stadiums/stadium_bg" />
-						<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
-						<widget class="picture" id="STPC"/>
-					</widget>
+			<widget class="picture" file="pictures/stadiums/stadium_bg" />
+			<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+			<widget class="picture" id="STPC"/>
+		</widget>
 
 		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="bg" transparency="0.64"/>
 	</container>
@@ -53,7 +53,7 @@
 			</widget>
 
 			<widget class="text" id="time" spec="text" style="bold" alignment="centre" multiline="true" auto_size="vertical" size="small"/>
-            
+
 			<widget class="fixture_name_text" id="FxNm" alignment="centre_x" auto_size="vertical" size="xxsmall" multi_line="true">
 				<record id="object_property" get_property="FxNm"/>
 			</widget>

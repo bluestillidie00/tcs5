@@ -1,0 +1,66 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-70" apply_to_children="true" transparency="0.4"/>
+		<widget class="stadium_picture" id="STAp" file="none">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+			<widget class="picture" file="pictures/stadiums/stadium_bg" />
+			<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+			<widget class="picture" id="STPC"/>
+		</widget>
+
+		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="bg" transparency="0.64"/>
+	</container>
+
+	<container class="plain_box" appearance="tcs/ro"/>
+
+	<container class="tcs_box">
+		<layout class="vertical_arrange" vertical_alignment="middle"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="vertical"/>
+						<integer id="min_value" value="0"/>
+						<integer id="max_value" value="868"/>
+						<symbol id="set_property" value="height"/>
+						<integer id="true_value" value="30"/>
+					</record>
+					<record min_value="868" max_value="1260" true_value="50"/>
+					<record min_value="1260" max_value="9999" true_value="50"/>
+				</list>
+			</attachment>
+
+			<widget class="fixture_opponent_picture" id="fopP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+				<record id="object_property" get_property="fopP"/>
+			</widget>
+
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="2"/>
+
+			<widget class="fixture_opponent_venue_text" style="semi_bold" size="small" alignment="centre" auto_size="vertical">
+				<record id="object_property" get_property="fOpV"/>
+			</widget>
+
+			<widget class="text" id="time" spec="text" style="bold" alignment="centre" multiline="true" auto_size="vertical" size="small"/>
+
+			<widget class="fixture_name_text" id="FxNm" alignment="centre_x" auto_size="vertical" size="xxsmall" multi_line="true">
+				<record id="object_property" get_property="FxNm"/>
+			</widget>
+
+
+		</container>
+
+	</container>
+
+</panel>

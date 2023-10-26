@@ -1,0 +1,31 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+
+	<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary" >
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container class="tcs_tabs_primary" id="tSta" default_item="Capl" save_default_state="true" save_session_state="true">
+
+			<!-- ALL STAFF -->
+			<container  id="tcsp">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8,0,0,0" apply_to_children="true"/>
+				<translation id="title" type="use" value="All Staff"/>
+
+				<widget class="team_container_staff_details_panel" id="tcsp">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+			<!-- ALL PLAYERS -->
+			<container  id="Capl">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8,0,0,0" apply_to_children="true"/>
+				<translation id="title" translation_id="229527" type="use"/>
+
+				<container class="club_players_panel">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+			</container>
+		</container>
+
+	</container>
+</panel>

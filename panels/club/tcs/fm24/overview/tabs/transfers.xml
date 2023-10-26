@@ -1,0 +1,202 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+
+
+
+	<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary" >
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend">
+			<global id="vertical_gap" name="ui.main_contrast_box_gap"/>
+		</attachment_group>
+
+		<boolean id="should_force_refresh" value="true" />
+		<boolean id="save_immediate_state" value="true" />
+
+		<container class="main_box" navigation_container="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="12"/>
+
+			<widget class="text" auto_size="vertical" font="title" size="large">
+				<translation id="text" translation_id="351069" type="use" value="Transfer History[COMMENT: team screen section; panel for showing completed transfers]" />
+			</widget>
+
+			<!-- buttons area -->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
+
+				<container>
+					<attachment_group class="title_embedded_panel_left" horizontal_gap="24" />
+
+					<!-- filter popup button -->
+					<widget class="popup_button" id="filt" select_event="thfc" appearance="" font="title" size="large" colour="text" auto_size="all" auto_tick_exclusive="true" multiline="false" red_replacement="text" icon="icons/16px/club" embed_in_frame="true" />
+
+					<widget class="horizontal_divider"/>
+
+					<!-- view button -->
+					<widget class="view_menu_popup" id="tsvm" sele="tchv" auto_size="all">
+						<list id="items">
+							<record id="7">
+								<translation id="name" translation_id="348767" type="use" value="All Trades[COMMENT: team transfer section; List of MLS type trades]" />
+							</record>
+							<record id="0">
+								<translation id="name" translation_id="316767" type="use" value="All Transfers[COMMENT: team transfers section; a list of players who have joined or left the club]" />
+							</record>
+							<record id="1">
+								<translation id="name" translation_id="316768" type="use" value="Cash / Claused Transfers[COMMENT: team transfers section; a list of players who have joined or left the club]" />
+							</record>
+							<record id="2">
+								<translation id="name" translation_id="316769" type="use" value="Loan Deals[COMMENT: team transfers section; Players moved on laon]" />
+							</record>
+							<record id="3">
+								<translation id="name" translation_id="315823" type="use" value="Free Transfers[COMMENT: team transfers section; Players moved for free]" />
+							</record>
+							<record id="4">
+								<translation id="name" translation_id="316770" type="use" value="Released Players[COMMENT: team transfers section; Players who get released]" />
+							</record>
+							<record id="5">
+								<translation id="name" translation_id="316771" type="use" value="Part Exchange Transfers[COMMENT: team transfers section; Players who moved in part exchange deals]" />
+							</record>
+							<record id="8">
+								<translation id="name" translation_id="326998" type="use" value="Waived [COMMENT: team transfer section; List of players waived (MLS)]" />
+							</record>
+							<record id="----" />
+							<record id="6">
+								<translation id="name" translation_id="316773" type="use" value="Player Trials[COMMENT: team transfers section; a list of players who have had trials at the club]" />
+							</record>
+							<record id="11">
+								<translation id="name" translation_id="260358" type="use" value="Staff[COMMENT: team transfers section; a list of staff who have joined or left the club]" />
+							</record>
+							<record id="----" />
+							<record id="12">
+								<translation id="name" translation_id="248405" type="use" value="Future Transfers" />
+							</record>
+							<record id="13">
+								<translation id="name" translation_id="297746" type="use" value="Leading Transfers[COMMENT: transfers section; a list of record-breaking transfers]" />
+							</record>
+							<record id="----" />
+							<record id="9">
+								<translation id="name" translation_id="316774" type="use" value="Youth Intake[COMMENT: Players who have joined clubs youth team]" />
+							</record>
+							<record id="10">
+								<translation id="name" translation_id="316775" type="use" value="Youth Departures[COMMENT: Youth players who haven't been retained]" />
+							</record>
+						</list>
+						<flags id="slct" value="0" />
+					</widget>
+
+					<!-- seasons popup -->
+					<widget class="embedded_season_selection_list" id="tsbw" save_immediate_state="true" sele="tsch" auto_size="all" embed_in_frame="true">
+						<global id="gap_adjustment" name="ui.split_button_row_gap" />
+					</widget>
+				</container>
+
+				<container>
+					<attachment_group class="title_embedded_panel_right"/>
+
+					<widget class="icon_button" id="GTog" click_event="toggle_graph" icon="icons/16px/up" show_button_appearance="false" auto_size="horizontal" embed_in_frame="true"/>
+				</container>
+			</container>
+
+			<widget class="horizontal_divider" />
+		</container>
+
+		<!-- main table -->
+		<container class="main_box" id="trtt" force_title_borders="false">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+			<!-- embedded buttons -->
+			<container id="btns" embed_in_frame="true" navigation_container="true">
+				<attachment_group class="title_embedded_panel_left" />
+
+				<!-- month widget (used for nation and continent views)-->
+				<widget class="embedded_left_right_list" id="mont" sele="mont" auto_size="all" embed_in_frame="true" reverse_function="true">
+					<translation id="text" translation_id="247947" type="use" value="Month" />
+				</widget>
+
+				<!-- filter button -->
+				<widget class="embedded_filter_button" id="plsf" target="trtt" auto_size="horizontal" embed_in_frame="true" />
+			</container>
+
+			<widget class="text" id="Nosi" auto_size="none" alignment="centre" hidden="true">
+				<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+				<!-- table for showing youth players and comp transfers-->
+				<widget class="table" id="tabl" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" fixed_size_rows="true" auto_size_rows="false" get_row_data_event="ustt" auto_size="none" row_height="32">
+					<boolean id="navigation_container" value="true" />
+					<boolean id="default_focus" value="true" />
+
+					<!-- default properties adopted by every item in table -->
+					<record id="default_properties">
+						<flags id="algn" value="left,centre_y" />
+					</record>
+				</widget>
+
+				<container id="inou" draw_vertical_dividers="true">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill">
+						<global id="horizontal_gap" name="ui.inner_box_gap"/>
+					</attachment_group>
+
+					<container class="inner_box" id="inbx" colour="fg positive" size="12">
+						<translation id="text" translation_id="491862" type="use" value="Transfers In[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for summary overview of confidence regarding transfers into the club]" />
+
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+						<widget class="text" id="tivl" auto_size="all" size="14" style="bold" />
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0" vertical_offset="0" horizontal_inset="0" />
+
+							<widget class="text" id="Noin" alignment="centre" hidden="true">
+								<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+							</widget>
+
+							<widget class="table" id="trin" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" auto_size_rows="false" get_row_data_event="utit" row_height="32" navigation_container="true" msov="itSL" msex="itUL" row_highlighted_event="itSL">
+								<!-- default properties adopted by every item in table -->
+								<record id="default_properties">
+									<flags id="alignment" value="left,centre_y" />
+								</record>
+							</widget>
+
+							<widget class="icon_button" id="wati" auto_size="all" click_event="watn" controller_button="y_button">
+								<layout class="stick_to_sides_attachment" alignment="left" />
+								<translation id="text" translation_id="275840" type="use" value="Where Are They Now?" />
+							</widget>
+						</container>
+					</container>
+
+					<container class="inner_box" id="oubx" colour="fg negative" size="12">
+						<translation id="text" translation_id="491863" type="use" value="Transfers Out[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for summary overview of confidence regarding transfers out of the club]" />
+
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+						<widget class="text" id="tovl"  auto_size="all" size="14" style="bold" />
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0" vertical_offset="0" horizontal_inset="0" />
+
+							<widget class="text" id="Noou" alignment="centre" hidden="true">
+								<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+							</widget>
+
+							<widget class="table" id="trou" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" auto_size_rows="false" get_row_data_event="utot" row_height="32" navigation_container="true" msov="itSL" msex="itUL" row_highlighted_event="itSL">
+								<!-- default properties adopted by every item in table -->
+								<record id="default_properties">
+									<flags id="alignment" value="left,centre_y" />
+								</record>
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<widget class="subtle_button" id="wato" auto_size="all" click_event="watn" navigation_focus_target="true">
+				<layout class="stick_to_sides_attachment" alignment="right" />
+				<translation id="text" translation_id="275840" type="use" value="Where Are They Now?" />
+			</widget>
+
+		</container>
+	</container>
+
+</panel>

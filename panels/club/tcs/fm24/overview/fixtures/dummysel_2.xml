@@ -1,0 +1,21 @@
+<panel>
+    <container id="SUBP" class="inner_box_no_margin" >
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8,0,0,0" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    </container>
+
+    <widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true" navigation_focus_target="true" icon="">
+        <layout class="stick_to_sides_attachment" alignment="right,top" inset="-100"/>
+    </widget>
+
+    <container class="club_overview_panel" file="none" id="pssp">
+        <translation id="title" translation_id="248440" type="use" value="Player Stats"/>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <container class="player_stats_summary_panel">
+            <record id="object_property" get_property="Tftm" set_property="objt"/>
+        </container>
+
+    </container>
+
+</panel>
