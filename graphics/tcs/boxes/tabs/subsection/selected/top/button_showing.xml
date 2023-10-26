@@ -1,14 +1,16 @@
-<properties>
-
+<properties transparency="1">
 	<record id="image_borders" left="8" right="8" top="0" bottom="0"/>
 	<record id="image_slices" left="8" right="8" top="8" bottom="8"/>
-	
+
 	<record id="font_spec"> 
-		<colour id="colour" name="text"/>
+		<colour id="colour" name="fg"/>
+		<!-- <colour id="font" name="semibold"/> -->
 	</record>
-	
-	<colour id="red_replacement" name="white"/>
+
+	<colour id="red_replacement" name="red"/>
+	<colour id="green_replacement" name="black"/>
+	<colour id="blue_replacement" name="primary"/>
 
 	<record id="primary_icon_properties" red_replacement="text" />
-	
+
 </properties>
