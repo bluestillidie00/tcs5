@@ -30,7 +30,7 @@
 							<container class="horizontal_adaptive_container" gap="8" >
 
 								<!-- LEFT SIDE -->
-								<container class="vertical_adaptive_container" default_width="420" priority="2" gap="8">
+								<container class="vertical_adaptive_container" default_width="350" priority="2" gap="8">
 
 									<!-- TOP -->
 									<container default_height="-10" priority="1" >
@@ -80,7 +80,7 @@
 									</container>
 
 									<!-- PER 90	-->
-									<container default_width="520" priority="2" class="vertical_adaptive_container" gap="8">
+									<container default_width="450" priority="2" class="vertical_adaptive_container" gap="8">
 
 										<container class="tcs_box" default_height="-14" priority="1">
 											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
