@@ -215,7 +215,7 @@
 
 				<!-- version label-->
 				<widget class="text" value="WTCS Gold v1.2" auto_size="all" colour="fg alpha" size="small">
-					<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="49,22" />
+					<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="49,30" />
 				</widget>
 
 				<!-- version label-->
@@ -271,7 +271,7 @@
 		</container>
 
 		<!-- Edit appearance button-->
-		<container class="icon_button" id="reeB" auto_size="all" icon="icons/16px/manager" controller_button="x_button" appearance="buttons/standard/flex/button" rrep="tcs_accent">
+		<container class="icon_button" id="reeB" auto_size="all" icon="icons/16px/manager" controller_button="x_button" appearance="buttons/standard/flex/button" rrep="tcs_accent" colour="bg" icon_colour="bg">
 			<translation id="text" translation_id="229690" type="use" value="Edit" />
 			<layout class="stick_to_sides_attachment" alignment="top, left" inset="10" />
 			<record id="click_event" event_id="eMnG" />

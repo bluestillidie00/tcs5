@@ -2,7 +2,7 @@
 	<attachment_group class="vertical_arrange_autosize" vertical_gap="16" vertical_offset="12" horizontal_inset="12" />
 
 	<container>
-		<attachment_group class="vertical_arrange_autosize_horizontal_centre" vertical_alignment="top" horizontal_offset="0" vertical_gap="16" vertical_inset="4" />
+		<attachment_group class="vertical_arrange_autosize_horizontal_centre" vertical_alignment="top" horizontal_offset="0" vertical_gap="0" vertical_inset="4" />
 
 		<!-- Logos for different SKUs and Platforms -->
 		<!-- FM -->
@@ -62,9 +62,9 @@
 
 	<!-- Most recent game -->
 	<container class="inner_box" id="MRsC" height="70" appearance="boxes/custom/main menu/most recent/paper">
-		<attachment_group class="horizontal_arrange" horizontal_gap="40" horizontal_offset="16" />
+		<attachment_group class="horizontal_arrange" horizontal_gap="28" horizontal_offset="4" />
 
-		<container height="40" width="40">
+		<container height="60" width="60">
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 			<!--Club image-->
 			<widget class="picture" id="resp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
@@ -75,7 +75,7 @@
 			<attachment_group class="vertical_arrange_autosize" vertical_offset="16" />
 
 			<!-- Header Text -->
-			<widget class="label" id="morl" auto_size="all" alignment="left, centre_y" font="title" size="xlarge" height="40" colour="text">
+			<widget class="label" id="morl" auto_size="all" alignment="left, centre_y" font="title" size="xlarge" height="40" colour="tcs_accent">
 				<translation id="text" translation_id="420632" type="use" value="Most Recent[COMMENT: FR 16138, main menu text to load the most recent saved game, the saved game name itself will be displayed in parentheses below this]" />
 			</widget>
 
