@@ -1,0 +1,9 @@
+1. Go into the folder for your mod of choice
+
+2. Copy the folder (graphics/panels), go to the root folder (WTCS Gold v1.2),
+
+3. Paste, it should ask to overwrite, press yes
+
+4. In FM, go to preferences, clear cache in bottom corner
+
+5. Press the reload skin button.

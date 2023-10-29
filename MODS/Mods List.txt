@@ -1,0 +1,12 @@
+A. Round Status Icons
+ - Uses the Round Status icons from Touch versions of the game instead of rectangles
+B. Removes Instant Result for people who don't like to use it
+ - Removes instant result buttons in skin (Match day header and dropdown to skip mid-match)
+C. Adds player faces to default squad views
+ - See preview image in folder
+D. Alternate Captains Armband Icons
+ - Adds alternate icons for the captain's armband shown on the squad list in games.
+E. WTCS5 Player Photo
+ - Adds the old player photo positioning in WTCS 5, which is more to the right of the default panel.
+F. Alternate Kits on Club Overview
+ - Adds kit colour boxes underneath kit graphics on Club Overview screen
