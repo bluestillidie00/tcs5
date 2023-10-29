@@ -1,0 +1,63 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!--Outstanding Performer -->
+	<container class="inner_box_no_margin" id="titl" colour="text" force_title_borders="true" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<container id="perC">
+			<attachment_group class="vertical_arrange" vertical_layout="56,-1" vertical_offset="0"/>
+
+			<container class="main_transparent_box_no_margin" appearance="switches/custom/team picker/button_showing" id="bkgr" >
+				<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="55,-1, -1" horizontal_offset="0" vertical_offset="-1"/>
+
+					<widget class="picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x" height="55" >
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="4"/>
+					</widget>
+
+
+				<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<container height="50">
+				<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-1,-1" horizontal_gap="0"/>
+
+				<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+					<widget class="person_button" id="plnm" info_popup_enabled="true" person_is_player="true" auto_size="all" font="bold" colour="text" navigation_focus_target="true" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="6"/>
+
+						<widget class="text" auto_size="all" font="text" colour="faded text" size="small">
+						<translation id="text" translation_id="466504" type="use" value="Training Rating[COMMENT: a rating of how well the player is getting on in training]" />
+						</widget>
+
+						<widget class="property_list_viewer_xml_panel" file="widgets/training rating with change icon" id="plci" should_colour="true"  auto_size="all"  navigation_focus_target="false" />
+
+					</container>
+
+				</container>
+
+				<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_gap="0"/>
+					<widget class="icon_button" id="Dbut" appearance="buttons/standard/normal/button" red_replacement="fg" icon="icons/16px/speech bubble" label_disabled="true" click_event="Hdis" auto_size="all" colour="white"  navigation_focus_target="true">
+					<record id="primary_icon_properties" red_replacement="white" />
+					</widget>
+				</container>
+
+				</container>
+					
+			</container>
+
+
+			</container>
+
+			<!-- Other players -->
+			<widget class="table" id="ptbl" mode="fill_rows,stripe_rows,hide_headings" layout="-1, 50" auto_size="none" />
+		</container>
+		<widget class="text" id="noBD" alignment="centre" hidden="true">
+			<translation id="text" translation_id="469534" type="use" value="There have been no bad performances worth noting in training this week[Comment: Training fix for bug 188141 - situation where there are no bad training performers to display]" />
+		</widget>
+	</container>
+</panel>
