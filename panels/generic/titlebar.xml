@@ -183,7 +183,7 @@
             <widget class="transfer_deadline_day_countdown_widget" id="DDcd" height="44"/>
 
             <!-- continue button -->
-            <container id="ctnu" file="generic/continue" height="46" width="160"/>
+            <container id="ctnu" file="generic/tcs/ui/continue" height="46" width="160"/>
         </container>
     </container>
 </panel>

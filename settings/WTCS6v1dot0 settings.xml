@@ -12,6 +12,7 @@
 	<!-- GOLD -->
 	<colour name="tcs_accent" value="rgb(207,181,59)" />
 	<colour name="tcs_accent_ligher" value="rgb(246,198,0)" />
+	<colour name="tcs_accent_darker" value="rgb(135,116,27)" />
 
 	<!-- TCS Edits -->
 	<colour name="title" 																				value="tcs_accent" /> 
