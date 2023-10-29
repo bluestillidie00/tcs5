@@ -4,7 +4,7 @@
 
     <!-- IF WE DO HAVE THE CONTENT -->
     <container>
-        <layout class="horizontal_arrange" horizontal_layout="-375,-350,-380" horizontal_gap="16" />
+        <layout class="horizontal_arrange" horizontal_layout="-390,-350,-380" horizontal_gap="16" />
 
         <!-- CONTAINER HOLDING KIT AND PLAER PIC -->
         <container>
@@ -42,10 +42,22 @@
                     <!-- DEFAULT PROPERTIES SO WE DON'T  HAVE TO DEFINE THE SAME CODE EVERY TIME -->
                     <record id="default_properties" alignment="left" auto_size="vertical"/>
 
-                    <!-- LABEL -->
-                    <widget class="label" font="title" alignment="left,bottom">
-                        <translation id="text" translation_id="300013" type="use" value="Captain" />
-                    </widget>
+                    <!-- NAME AND CAPTAINS ARMBAND LOGO -->
+                    <container>
+                        <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle,extend" vertical_inset="4"/>
+
+                        <!-- LABEL -->
+                        <widget class="label" font="title" alignment="left" auto_size="horizontal">
+                            <translation id="text" translation_id="300013" type="use" value="Captain" />
+                        </widget>
+
+                        <widget class="picture" file="tcs/icons/captain/captain" width="12" height="12" keep_aspect_ratio="true" scale_picture="true" image_alignment="middle,left" >
+                        <layout class="stick_to_sides_attachment" alignment="top" inset="5"/>
+                        </widget>
+
+                        <container/>
+
+                    </container>
 
                     <!-- NAME -->
                     <widget class="person_button" style="semi_bold" alignment="left,centre_y" info_popup_enabled="true" person_is_player="true" colour="fg">

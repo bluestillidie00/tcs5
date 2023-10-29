@@ -151,7 +151,7 @@
 		<!-- MIDDLE -->
 		<!-- OVERVIEW -->
 		<container id="over" default_width="-600" priority="1" minimum_width="500">
-			<layout class="vertical_arrange" vertical_layout="360,-1,-1" vertical_gap="8"/>
+			<layout class="vertical_arrange" vertical_layout="360,-1" vertical_gap="8"/>
 			<translation id="title" translation_id="336543" type="use"/>
 
 			<!-- BOTTOM SELECTOR -->
@@ -171,21 +171,40 @@
 
 			</container>
 
-			<!-- BOTTOM SELECTOR -->
-			<container class="team_container_information_overview_panel" file="none">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<container class="vertical_adaptive_container" gap="8">
 
-				<record id="object_property" get_property="objt" set_property="objt"/>
-
-				<container class="tcs_box" gap="8" draw_vertical_dividers="true" priority="1">
+				<!-- BOTTOM SELECTOR -->
+				<container class="team_container_information_overview_panel" file="none" default_height="-1">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-					<record id="default_properties" default_width="-1" minimum_width="250"/>
 
-					<!--snapshot selector 1-->
-					<container class="client_object_viewer_selector_panel" file="club/club overview selector panel" id="cos2" priority="1" default_widget="upfx" late_loading="true" save_session_state="true"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<container class="tcs_box" gap="8" draw_vertical_dividers="true" priority="1">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<record id="default_properties" default_width="-1" minimum_width="250"/>
+
+						<!--snapshot selector 1-->
+						<container class="client_object_viewer_selector_panel" file="club/club overview selector panel" id="cos2" priority="1" default_widget="upfx" late_loading="true" save_session_state="true"/>
+
+					</container>
 
 				</container>
+				<!-- BOTTOM SELECTOR -->
+				<container class="team_container_information_overview_panel" file="none" default_height="-1" minimum_height="200">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<container class="tcs_box" gap="8" draw_vertical_dividers="true" priority="1">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<record id="default_properties" default_width="-1" minimum_width="250"/>
+
+						<!--snapshot selector 1-->
+						<container class="client_object_viewer_selector_panel" file="club/club overview selector panel" id="cos3" priority="1" default_widget="upfx" late_loading="true" save_session_state="true"/>
+
+					</container>
+
+				</container>
 			</container>
 		</container>
 
@@ -193,19 +212,20 @@
 		<container default_width="-560" priority="2" minimum_width="400"> 
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-			<!-- KEY EMPLOYEES -->
-			<container id="st01">
-				<translation id="title" translation_id="257300" type="use"/>
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<container class="vertical_adaptive_container" gap="8">
 
-				<!-- BOTTOM SELECTOR -->
-				<container class="team_container_information_overview_panel" file="none">
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- KEY EMPLOYEES -->
+				<container class="club_overview_staff_panel" id="tstf" file="club/tcs/overview/key staff" default_height="-1" minimum_height="550" priority="1">
+					<translation id="title" translation_id="257300" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
-
-					<!--snapshot selector 1-->
-					<container class="client_object_viewer_selector_panel" file="club/staff selector panel" id="cos1" priority="1" default_widget="tstf" late_loading="true" save_session_state="true"/>
 				</container>
+
+				<widget class="staff_numbers_table" id="sta1" default_height="200" priority="2">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
 			</container>
 
 
