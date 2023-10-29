@@ -19,6 +19,13 @@
 		</widget>
 	</container>
 
+	<!-- Added the following container to provide a background to the dropdown arrow - Fix Issue #34 -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="12" horizontal_inset="32"/>
+
+		<container class="tcs_box" appearance="tcs/boxes/stadium/paper" rrep="bg" height="42" width="46"/>			
+	</container>
+
 	<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
 	<container class="bordered_box" appearance="tcs/ro" />
 </panel>
