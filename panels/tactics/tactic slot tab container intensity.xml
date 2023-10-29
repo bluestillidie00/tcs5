@@ -6,7 +6,7 @@
 
 		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
 
-	    <widget class="icon_button" auto_size="vertical" id="itxt" icon="" appearance="none" font="label" colour="secondary" navigation_focus_target="false">
+	    <widget class="icon_button" auto_size="vertical" id="itxt" icon="" appearance="none" font="label" colour="fg" navigation_focus_target="false">
 			<translation id="text" translation_id="441106" type="use" value="Intensity[COMMENT: representing the physical intensity of user's tactics]" />
 		</widget>
 

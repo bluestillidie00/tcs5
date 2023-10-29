@@ -77,7 +77,7 @@
 			<boolean id="exclude_from_find" value="true"/>
 			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
 		</widget>
-    	<container class="main_contrast_box_no_margin" red_replacement="primary" entity_layout_id="at01" id="at01" sub_group_id="NULL_ID" name="top bar" height="38">
+    	<container class="main_contrast_box_no_margin" red_replacement="bg lighter" entity_layout_id="at01" id="at01" sub_group_id="NULL_ID" name="top bar" height="38">
 			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
 			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main"/>
 			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
@@ -90,7 +90,7 @@
 				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
 			</widget>
 			<widget class="picture" entity_layout_id="at09" file="icons/16px/tactics" id="at09" width="20" height="30" name="tactics icon">
-				<string id="red_replacement" value="secondary"/>
+				<string id="red_replacement" value="fg"/>
 				<string id="image_alignment" value="centre"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_left" offset="60" get_side="left" set_side="left" move_side="true" target="main"/>
@@ -98,7 +98,7 @@
 			<widget class="text" entity_layout_id="at03" alignment="centre_y,left" id="at03" auto_size="horizontal" needs_width="true" height="30" name="tactic title">
 				<string id="always_hide" value="false"/>
 				<string id="font" value="title"/>
-				<string id="colour" value="secondary"/>
+				<string id="colour" value="fg"/>
 				<translation id="text" value="Tactics" translation_id="230056" type="use"/>
 				<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main"/>
 				<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="right" set_side="left" move_side="true" target="at09"/>
@@ -198,8 +198,8 @@
 			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
 		</container>
 	</container>
-  <widget class="icon_button" entity_layout_id="it01" id="MaMi" appearance="buttons/standard/flex/button" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" width="50" height="34" name="expand button" controller_button="x_button" navigation_focus_target="false" gamepad_icon_alignment="centre_left" secondary_icon_colour="primary" font="title" colour="white">
-    <string id="red_replacement" value="secondary"/>
+  <widget class="icon_button" entity_layout_id="it01" id="MaMi" appearance="buttons/standard/flex/button" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" width="50" height="34" name="expand button" controller_button="x_button" navigation_focus_target="false" gamepad_icon_alignment="centre_left" secondary_icon_colour="fg" font="title" colour="fg">
+    <string id="red_replacement" value="bg darker"/>
     <string id="click_event" value="tsdP"/>
     <string id="secondary_icon" value="icons/16px/expand"/>
     <string id="secondary_icon_alignment" value="centre_right"/>
