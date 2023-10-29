@@ -58,7 +58,18 @@
 				<container>
 					<layout class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="8"  />
 
-						<container class="main_box" appearance="tcs/boxes/main/outline/alt/paper" brep="bg positive">
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="0"/>
+
+						<container class="main_box" appearance="tcs/boxes/pc/paper1" width="18" >
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+							<widget class="label" spec="text,small" alignment="centre" colour="white" font="label" style="vertical">
+								<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+							</widget>
+						</container>
+
+						<container class="main_box" appearance="tcs/boxes/pc/paper" >
 							<layout class="stick_to_sides_attachment" alignment="all" inset="3" apply_to_children="true"/>
 
 							<container class="scrolling_box">
@@ -67,9 +78,21 @@
 								</widget>
 							</container>		
 						</container>
+					</container>
 
 
-						<container class="main_box" appearance="tcs/boxes/main/outline/alt/paper" brep="bg negative">
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="0"/>
+
+						<container class="main_box" appearance="tcs/boxes/pc/paper1" width="18" red_replacement="con high">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+							<widget class="label" spec="text,small" alignment="centre" colour="white" font="label" style="vertical" >
+								<translation id="text" translation_id="361094" type="use" value="Pros[COMMENT: FR 8316 ]" />
+							</widget>
+						</container>
+
+						<container class="main_box" appearance="tcs/boxes/pc/paper" red_replacement="bg" green_replacement="con high">
 							<layout class="stick_to_sides_attachment" alignment="all" inset="3" apply_to_children="true"/>
 
 							<container class="scrolling_box">
@@ -77,6 +100,7 @@
 									<integer id="size" value="26" />
 								</widget>
 							</container>		
+						</container>
 					</container>
 				</container>
 			</container>
