@@ -29,8 +29,8 @@
 			<!--Alternate UI mode-->
 			<integer id="alSM" value="0" />
 		</container>
-
 		<widget class="spacer"/>
+
 
 		<container height="50">
 			<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" vertical_gap="0" />
@@ -170,7 +170,7 @@
 					</attachment>
 				</widget>
 
-				<container id="ctnu" file="generic/continue" height="60" width="150">
+				<container id="ctnu" file="generic/1continue" height="60" width="150">
 					<attachment class="test_global_attachment" get_property="cont" set_property="hidden">
 						<list id="value">
 							<integer value="-16" />
@@ -183,8 +183,9 @@
 				</container>
 
 				<!--match continue button-->
-				<widget class="icon_button" id="IMBu" appearance="chrome/buttons/continue/button" rrep="tcs_gold" controller_button="right_trigger" width="200" alignment="centre" secondary_icon_enabled="true" secondary_icon_alignment="centre_right, centre_y" font="title" colour="secondary">
-					<record id="click_event" event_id="CONT" event_target="glob" />
+	  <!--match continue button-->
+                <widget class="icon_button" id="IMBu" appearance="chrome/buttons/continue/button" controller_button="right_trigger" width="200" alignment="centre" secondary_icon_enabled="true" secondary_icon_alignment="centre_right, centre_y" font="title" colour="text">
+                    <record id="click_event" event_id="CONT" event_target="glob" />
 
 					<attachment class="test_global_attachment" get_property="cont" set_property="hidden" mode="not_equal">
 						<list id="value">
