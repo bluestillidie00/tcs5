@@ -359,6 +359,12 @@ DOESNT WORK
 			<record id="object_property" get_property="objt" set_property="objt"/>			
 		</container>
 
+		<!-- HISTORY TAB -->
+		<container id="hist" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/tabs/history">
+			<translation id="title" value="History" type="use" />
+			<record id="object_property" get_property="objt" set_property="objt"/>			
+		</container>
+
 		<!-- SQUAD TAB -->
 		<container id="squa" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/tabs/squad">
 			<translation id="title" translation_id="511340" type="use" />

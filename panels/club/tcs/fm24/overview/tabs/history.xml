@@ -1,0 +1,29 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+
+	<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary" >
+		<layout class="horizontal_arrange" horizontal_layout="-10,-14,-10" horizontal_gap="8" />
+
+		<!-- FIXTURES AND RESULT -->
+		<container class="tcs_box" draw_horizontal_dividers="true">
+
+		</container>
+
+		<!-- LEAGUE TABLE -->
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container class="team_container_records_overview_panel" >
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+
+		</container>
+
+		<!-- LAST KNOWN LINE UP -->
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		</container>
+
+	</container>
+</panel>

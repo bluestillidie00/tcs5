@@ -13,13 +13,13 @@
 				<record id="object_property" get_property="TCsf" set_property="objt"/>
 			</container>
 
-			<container class="tcs_box" appearance="tcs/boxes/main/trans/no margin/paper" height="160">
+			<!-- <container class="tcs_box" appearance="tcs/boxes/main/trans/no margin/paper" height="160">
 				<translation id="title" value="Upcoming Fixtures" type="use"/>
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-				<container class="club_overview_team_results_panel" file="club/tcs/fm24/overview/fixtures/club overview team calendar fixtures" >
+				<container class="club_overview_team_results_panel" file="club/tcs/fm24/overview/fixtures/club overview team calendar fixtures_alt" >
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</container>
-			</container>
+			</container> -->
 		</container>
 
 		<!-- LEAGUE TABLE -->
@@ -240,7 +240,7 @@
 				<!-- TEAM STATS -->
 				<container class="team_container_information_overview_panel" file="none" id="tssp">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-        <translation id="title" translation_id="247393" type="use" value="Team Stats"/>
+					<translation id="title" translation_id="247393" type="use" value="Team Stats"/>
 
 					<record id="object_property" get_property="objt" set_property="objt"/>
 
