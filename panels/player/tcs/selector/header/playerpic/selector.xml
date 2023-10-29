@@ -11,7 +11,7 @@
 	<record id="default_properties" late_loading="true"/>
 
 	<!-- DEFAULT -->
-	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/default" id="defa">
+	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/default" id="defa" >
 		<translation id="title" type="use" value="Back of Kit (Zoomed)" />
 	</container>
 
@@ -21,12 +21,12 @@
 	</container>
 
 	<!-- BACK ZOOMED OUT -->
-	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/backzoomed" id="bkzm">
+	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/backzoomed" id="bkzm" valid_for_unemployed_player="false" >
 		<translation id="title" type="use" value="Back of Kit (Full)" />
 	</container>
 
 	<!-- BACK ZOOMED OUT -->
-	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/frontkit" id="fron">
+	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/frontkit" id="fron" valid_for_unemployed_player="false" >
 		<translation id="title" type="use" value="Front" />
 	</container>
 	
