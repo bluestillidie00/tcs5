@@ -4,15 +4,6 @@
 		<layout class="stick_to_sides_attachment" alignment="all" inset="2,0,0,0"/>
 	</container>
 
-	<container class="club_overview_panel" file="none" id="pssp">
-		<translation id="title" translation_id="248440" type="use" value="Player Stats"/>
-		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-		<container class="player_stats_summary_panel">
-			<record id="object_property" get_property="Tftm" set_property="objt"/>
-		</container>
-	</container>
-
 	<container class="club_overview_panel" file="none" id="InIn">
 		<translation id="title" translation_id="557948" type="use"/>
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>

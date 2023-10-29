@@ -1,0 +1,76 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="240, -1" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="team_container_honours_panel" id="hons" navigation_container="true">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+
+	<container  navigation_container="true" default_focus="true">
+		<layout class="arrange_horizontal_attachment" layout=" -4, -3" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<container class="main_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container class="tabbed_container" id="lghs">
+				<widget class="club_league_history_graph" id="clhg">
+					<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+				</widget>
+
+				<widget class="team_container_information_background_panel" id="cbak">
+					<translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+				</widget>
+			</container>
+
+			<widget class="fifa_ranking_history_panel" id="fifr" show_all_dates="false">
+				<translation id="title" translation_id="321111" type="use" value="World Ranking History[COMMENT: title for the world ranking history]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+			</widget>
+
+			<container class="main_box" id="nfif">
+				<translation id="title" translation_id="321111" type="use" value="World Ranking History[COMMENT: title for the world ranking history]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+				<widget class="label" auto_size="all" spec="text" size="large" style="bold">
+					<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+					<layout class="stick_to_sides_attachment" alignment="top" inset="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="12" />
+				</widget>
+			</container>
+		</container>
+
+		<container class="main_box" id="rcrd">
+			<translation id="title" translation_id="243323" type="use" value="Records" />
+			<layout class="arrange_vertical_attachment" layout="-1, -1" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<container class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+					<widget class="text" id="rnn1" auto_size="vertical" alignment="left,centre_y" style="bold" />
+					<widget class="text" id="rnt1" auto_size="vertical" alignment="left,centre_y" colour="faded text"/>
+					
+					<widget class="horizontal_percentage_bar" id="rnb1" label_width="0" height="16" bar_value_colour="medium stat" />
+				</container>
+			</container>
+
+			<container class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+					<widget class="text" id="rnn2" auto_size="vertical" alignment="left,centre_y" style="bold" />
+					<widget class="text" id="rnt2" auto_size="vertical" alignment="left,centre_y" colour="faded text"/>
+					
+					<widget class="horizontal_percentage_bar" id="rnb2" label_width="0" height="16" bar_value_colour="medium stat" />
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

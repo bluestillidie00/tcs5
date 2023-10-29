@@ -1,0 +1,97 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_tabs_primary" save_session_state="true" save_default_state="true" default_item="over">
+
+		<container id="over">
+			<translation id="title" translation_id="321151" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+			<layout class="vertical_arrange" vertical_layout="240,-1," />
+
+			<!-- TROPHIES WON -->
+			<widget class="team_container_honours_panel" id="hons" navigation_container="true">
+				<record id="object_property" get_property="objt" set_property="objt"/>	
+			</widget>
+
+			<!-- OVERVIEW -->
+			<container draw_horizontal_dividers="true" class="tcs_tabs_primary" save_session_state="true" save_default_state="true" default_item="hist">
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<container class="tcs_box" appearance="tcs/boxes/main/trans/paper" id="hist">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+
+					<widget class="club_league_history_graph" id="clhg">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+
+				<container class="tcs_box" appearance="tcs/boxes/main/trans/paper" id="back">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+
+					<widget class="team_container_information_background_panel" id="cbak">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+
+				<container class="tcs_box" appearance="tcs/boxes/main/trans/paper" id="rcrd">
+					<translation id="title" translation_id="243323" type="use" value="Records" />
+					<layout class="arrange_vertical_attachment" layout="-1, -1" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<container class="scrolling_box">
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+							<widget class="text" id="rnn1" auto_size="vertical" alignment="left,centre_y" style="bold" />
+							<widget class="text" id="rnt1" auto_size="vertical" alignment="left,centre_y" colour="faded text"/>
+
+							<widget class="horizontal_percentage_bar" id="rnb1" label_width="0" height="16" bar_value_colour="medium stat" />
+						</container>
+					</container>
+
+					<container class="scrolling_box">
+						<container class="tcs_box">
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+							<widget class="text" id="rnn2" auto_size="vertical" alignment="left,centre_y" style="bold" />
+							<widget class="text" id="rnt2" auto_size="vertical" alignment="left,centre_y" colour="faded text"/>
+
+							<widget class="horizontal_percentage_bar" id="rnb2" label_width="0" height="16" bar_value_colour="medium stat" />
+						</container>
+					</container>
+				</container>
+
+			</container>
+		</container>
+
+		<container id="comp">
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+				<translation id="title" translation_id="227741" type="use" />
+
+			<container class="team_container_records_competitions_panel" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>	
+		
+		<container id="land">
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+				<translation id="title" translation_id="248354" type="use" />
+
+			<container class="team_container_records_landmarks_panel" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>	
+
+		<container id="mana">
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+				<translation id="title" translation_id="335174" type="use" />
+
+			<container class="team_container_manager_history_panel" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>	
+
+	</container>
+
+</panel>
