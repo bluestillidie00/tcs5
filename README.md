@@ -6,7 +6,7 @@ In this document, we'll walk you through the process of installing of this skin 
 
 ## Prerequisites
 
-Before we begin, make sure you have the following:
+Before we begin, make sure you have the skin:
 
 You can download our skin from [FMScout](https://www.fmscout.com/a-wtcs-fm24-skin.html) or the official [Sports Interactive Forums](https://community.sigames.com/forums/topic/568501-fm23skin-wtcs5-by-bluestillidie00-and-workthespace-v12-released-20230118-new-attributeless-version/).
 
