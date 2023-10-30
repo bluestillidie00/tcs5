@@ -20,14 +20,14 @@ THIS SKIN IS RECOMMENDED FOR USE AT 1920X1080 OR ABOVE, ANYTHING UNDER IT ISN'T 
 
    - On Windows, the default installation directory is usually `C:\Users\<yoursusername>\Documents\Sports Interactive\Football Manager 2024`.
 
-2. **Check if you have the skin folder:**
+2. **Check if you have the skins folder:**
 
    - On the previous located folder, check if you already have a skins folder
      - If you do not have it, make sure to create your **skins** folder.
 
 3. **Install the WTCS Gold Skin:**
 
-   - Open the skin file you downloaded.
+   - Go the place where your skin file is downloaded.
    - Extract it, and copy\cut the entire folder.
    - Paste it inside the skins folder `C:\Users\<yoursusername>\Documents\Sports Interactive\Football Manager 2024\skins`.
 
@@ -46,6 +46,8 @@ THIS SKIN IS RECOMMENDED FOR USE AT 1920X1080 OR ABOVE, ANYTHING UNDER IT ISN'T 
 
 1. **Backup your skin folder/files before applying any mod.**
 
+   - This will ensure you can revert back any of the changes you are going to apply.
+
 2. **Go into the folder for your mod of choice.**
 
 3. **Copy the folder (graphics/panels), go to the root folder of your WTCS Gold skin (e.g., WTCS Gold v1.2).**
@@ -61,7 +63,7 @@ THIS SKIN IS RECOMMENDED FOR USE AT 1920X1080 OR ABOVE, ANYTHING UNDER IT ISN'T 
 If you encounter any issues during the installation or if the skin doesn't work as expected, consider the following:
 
 - Make sure you've placed the skin in the correct "skins" folder within your Football Manager 2024 directory.
-- Ensure the skin is you have downloaded is the WTCS Gold.
+- Ensure the skin you have downloaded is the WTCS Gold, and up to date.
 - You are using a supported resolution.
 
 ## Bugs or Feedback
@@ -70,19 +72,22 @@ In case you encounter any bug, or want to share feedback, please feel free to sh
 
 ## How to report a bug, or share feedback
 
-1. **Before opening any item, please validate if there is already something similar or equal to what you are reporting open.**
+1. **Before opening any item, please validate if there is already something similar or equal to what you are reporting open, and that you are using the latest version of the skin.**
 
    - Reporting the same issue will only create noise.
 
 2. **Detail it as much as possible.**
 
-   - E.g., I found this issue under the player profile, or when mousing over this information in the stadium screen the information is not readable.
+   - E.g., I found this issue under the player profile, or when I mouse over this information in the stadium screen the information is not readable.
 
-3. **Share whitch resolution you are using.**
+3. **Share whitch resolution you are using, and zoom value.**
+
+   - E.g., I'm using 2560x1440 with 100% zoom.
 
 4. **Classify if it is a bug or feedback on the title of the issue you are opening.**
 
    - This will help us make sure we can prioritize things properly, and help you with what we can.
+   - E.g., Bug - Player name text isn't readable in the jersey. 
 
 5. **If you are opening a bug, provide screenshots.**
 
