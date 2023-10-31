@@ -125,7 +125,7 @@
 		</container>
 
 		<!-- Join Online Game Button-->
-		<container id="netb" class="icon_button" appearance="boxes/custom/main menu/start/paper" alignment="left, centre_y" font="title" size="xlarge" height="40" icon="icons/26px/world" icon_colour="tcs_accent">
+		<container id="netb" class="icon_button" appearance="boxes/custom/main menu/start/paper" alignment="left, centre_y" font="title" size="xlarge" height="40" icon="tcs/icons/mainmenu/world" icon_colour="tcs_accent">
 			<translation id="text" translation_id="339054" type="use" value="Join Online Game[COMMENT: intro panel button text to join a network game]" />
 			<translation id="hint" translation_id="338948" type="use" value="Choose this option to join an online game.[COMMENT: game start screen, hint text for Join Online Game button, use top ten matches as this string is only slightly altered to remove references to starting a game]" />
 
@@ -249,10 +249,10 @@
 			<widget class="icon_button" id="fmfc" click_event="FMFC" icon="icons/custom/fmfc/logo small" appearance="buttons/subtle/flex/button" font_colour="disabled" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" icon_spacing="10" />
 		</container>
 
-		<!-- FMFC Login/Sign up -->
-		<container height="65">
+		<!-- SI FORUMS -->
+		<container>
 			<attachment_group class="vertical_arrange_autosize" />
-			<widget class="icon_button" id="sifo" appearance="buttons/subtle/flex/button" font_colour="disabled" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" icon_spacing="10" icon="tcs/icons/partners/sportsinteractive">
+			<widget class="icon_button" id="sifo" appearance="buttons/subtle/flex/button" font_colour="disabled" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" icon_spacing="10" icon="tcs/icons/mainmenu/sportsinteractive">
 				<record id="click_event" event_id="OURL" url="https://community.sigames.com/forums/topic/578542-fm24skin-wtcs-gold-v11-bug-fix-out-22102023/" />
 				<translation id="text" type="use" value="Found a bug? Report it on the SI Forums" />
 			</widget>
