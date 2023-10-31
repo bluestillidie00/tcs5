@@ -31,9 +31,9 @@
 						<!-- Cons / pro count and % scouted text. Links to Coach report/scout report 
 							<widget class="link_text" id="pc%t" auto_size="vertical" style="semi_bold" alignment="left,centre_y" hidden="true" /> -->
 
+							<!-- Recommendation text -->
 						<container>
 							<attachment_group class="vertical_arrange_autosize" vertical_gap="-2"/>
-							<!-- Recommendation text -->
 							<widget class="text" id="SMtx" auto_size="vertical" style="semi_bold" size="xsmall" alignment="left,centre_y" />
 
 							<widget class="label" id="ktxt" auto_size="vertical" size="small" colour="faded text" />
@@ -47,10 +47,10 @@
 
 						<record id="object_property" get_property="PHcr" set_property="Shwn"/>
 
-						<!-- SUMMARY -->
+						<!-- SUMMARY 
 						<widget class="text" id="chRC" alignment="left,centre_y" multiline="true" size="small" colour="faded text" auto_size="vertical"/>
 						
-						<container height="2" />
+						<container height="2" /> -->
 
 					</container>
 				</container>
