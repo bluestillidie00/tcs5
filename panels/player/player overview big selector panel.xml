@@ -80,7 +80,7 @@
         <translation id="title" type="use" translation_id="466580" />
     </widget>    
 
-<!--     <widget class="player_scout_reports_panel" id="DaHu" file="player/tcs/selector/big/data hub polygon" late_loading="true">
+    <widget class="player_scout_reports_panel" id="DaHu" file="player/tcs/selector/big/data hub polygon" late_loading="true">
         <translation id="title" type="use" translation_id="447607" />
-    </widget> -->
+    </widget>
 </panel>

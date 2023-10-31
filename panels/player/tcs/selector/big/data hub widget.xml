@@ -1,0 +1,58 @@
+﻿<panel height="280" width="280">
+	<string id="use_mini_visualisation" value="true" />
+
+	<container class="main_subtle_box" id="davb">
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" horizontal_inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<container >
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_offset="0" horizontal_alignment="left,extend"  />
+			<widget class="icon_button" show_button_appearance="false" id="drgC" hidden="true" width="30" icon="icons/16px/draggable">
+				<string id="draggable" value="true" />
+			</widget>
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0,0,0,40" />
+					<widget class="text" auto_size="vertical" id="visH" size="large" font="title" colour="fg"/>
+				</container>
+				<widget class="text" id="visS" auto_size="vertical">
+					<string id="colour" value="faded text" />
+				</widget>
+			</container>
+		</container>
+		<container>
+			<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="bottom,extend" horizontal_inset="0" />
+			<container id="noDa" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				<widget id="daTX" class="text" alignment="centre" style="semi_bold" colour="faded text">
+					<translation id="text" translation_id="515107" type="use" value="Not enough data available to create visualisation[COMMENT: AREA: Visualisation; SUB-AREA:; FR : 32932; TONE: Formal; CHARLIMIT: None; NOTE: warning to display when not enough data available to create a visualisation]" />
+				</widget>
+			</container>
+			<container class="vertical_arrange_container" inset="4" alignment="fill" id="visC" />
+			<container id="cpCO" hidden="true" height="30">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" offset="0" />
+				<widget class="popup_button" id="cmpP" select_event="cmpC" auto_size="horizontal" />
+			</container>
+			<widget class="text" id="txtW" auto_size="vertical" />
+		</container>
+	</container>
+
+
+	<container id="chkC" height="25" width="20">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="30,3" />
+
+		<widget class="check_box" id="preC" icon="switches/star/button" icon_alignment="centre_x,centre_y" wants_mouse_events="false" />
+	</container>
+
+	<container height="25" width="25" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="3" />
+
+		<widget class="icon_button" icon_alignment="centre_x,centre_y" id="expB" click_event="clkk" icon="icons/16px/maximise" appearance="buttons/custom/over state only/button" default_focus="true"/>
+		<widget class="icon_button" icon_alignment="centre_x,centre_y" hidden="true" id="remB" click_event="remV" icon="icons/16px/remove from list" appearance="buttons/custom/over state only/button" />
+
+	</container>
+</panel>
