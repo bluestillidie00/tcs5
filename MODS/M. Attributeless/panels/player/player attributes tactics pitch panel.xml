@@ -1,0 +1,36 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true"/>
+	<layout class="arrange_horizontal_attachment" alignment="fill" offset="4" gap="1"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable, select_rows" layout="-1, 60" row_height="20" row_spacing="1" default_sort_column="name" >
+
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="5" >
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" size="small" colour="white"/>
+			</record>
+			<!-- Attribute value -->
+			<record index="1" id="val " sort_disabled="true" column_alignment="centre" right="4">
+				<record id="widget_info" class="attribute_bar" alignment="right,centre_y" style="semi_bold" size="small" />
+			</record>
+		</list>
+	</record>
+
+	<!-- Technical Table -->
+	<widget class="table" id="pltt" layout="-1">
+	</widget>
+	<!-- Goalkeeping Table -->
+	<widget class="table" id="plgk" layout="-1">
+	</widget>
+	<!-- Mental Table -->
+	<widget class="table" id="plmt" layout="-1">
+	</widget>
+	<!-- Physical Table -->
+	<widget class="table" id="plpt" layout="-1">
+	</widget>
+</panel>
