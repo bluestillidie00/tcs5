@@ -56,282 +56,263 @@
 
 				</container>
 			</container>	
+	<container class="tcs_box" default_width="-1" minimum_width="300" priority="2">
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
 
-			<container class="tcs_box" default_width="-1" minimum_width="300" priority="2">
-				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+			<!-- TOP ROW -->
+			<container class="tcs_table" >
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-				<!-- TOP ROW -->
-				<container class="tcs_table" >
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<container class="horizontal_adaptive_container" gap="8">
 
-					<container class="horizontal_adaptive_container" gap="8">
+					<record id="default_properties" default_width="-1" minimum_width="130"/>
 
-						<record id="default_properties" default_width="-1" minimum_width="130"/>
+					<!-- NATION -->
+					<container priority="1">
+						<attachment_group class="vertical_arrange_autosize"/>
 
-						<!-- NATION -->
-						<container priority="1">
-							<attachment_group class="vertical_arrange_autosize"/>
+						<widget class="label" auto_size="vertical" style="semi_bold">
+							<translation id="text" translation_id="292796" type="use"/>
+						</widget>
+						<widget class="nation_button" auto_size="vertical" >
+							<record id="object_property" get_property="Cnat"/>
+						</widget>
+					</container>
 
-							<widget class="label" auto_size="vertical" style="semi_bold">
-								<translation id="text" translation_id="292796" type="use"/>
-							</widget>
-							<widget class="nation_button" auto_size="vertical" >
-								<record id="object_property" get_property="Cnat"/>
-							</widget>
-						</container>
+					<!-- SQUAD PERSONALITY -->
+					<container priority="3">
+						<attachment_group class="vertical_arrange_autosize"/>
 
-						<!-- SQUAD PERSONALITY -->
-						<container priority="3">
-							<attachment_group class="vertical_arrange_autosize"/>
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="319583" type="use"/>
+						</widget>
+						<widget class="club_squad_character_label" alignment="left" icon_enabled="false" auto_size="vertical" >
+							<record id="object_property" get_property="Csca"/>
+						</widget>
+					</container>
 
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="319583" type="use"/>
-							</widget>
-							<widget class="club_squad_character_label" alignment="left" icon_enabled="false" auto_size="vertical" >
-								<record id="object_property" get_property="Csca"/>
-							</widget>
-						</container>
+					<!-- REPUTATION -->
+					<container priority="2">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
 
-						<!-- REPUTATION -->
-						<container priority="2">
-							<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
-
-							<container width="80" >
-								<layout class="vertical_arrange_autosize" />
-
-								<widget class="label" auto_size="vertical" style="semi_bold" >
-									<translation id="text" translation_id="227963" type="use"/>
-								</widget>
-
-								<widget class="club_reputation_stars_label" alignment="left" icon_enabled="false" auto_size="horizontal" >
-									<record id="object_property" get_property="Csta"/>
-								</widget>
-							</container>
-
-							<container width="30">
-								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-								<widget class="position_change_button" alignment="centre"  >
-									<record id="object_property" get_property="Crpc"/>
-								</widget>
-							</container>						
-
-							<container />
-						</container>
-
-						<!-- BANK BALANCE -->
-						<container priority="4">
-							<attachment_group class="vertical_arrange_autosize"/>
+						<container width="80" >
+							<layout class="vertical_arrange_autosize" />
 
 							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="255029" type="use"/>
+								<translation id="text" translation_id="227963" type="use"/>
 							</widget>
-							<widget class="cash_cell" auto_size="vertical" >
-								<record id="object_property" get_property="Ccba"/>
+
+							<widget class="club_reputation_stars_label" alignment="left" icon_enabled="false" auto_size="horizontal" >
+								<record id="object_property" get_property="Csta"/>
 							</widget>
 						</container>
 
+						<container width="30">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<widget class="position_change_button" alignment="centre"  >
+								<record id="object_property" get_property="Crpc"/>
+							</widget>
+						</container>						
+
+						<container />
+					</container>
+
+					<!-- BANK BALANCE -->
+					<container priority="4">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="255029" type="use"/>
+						</widget>
+						<widget class="cash_cell" auto_size="vertical" >
+							<record id="object_property" get_property="Ccba"/>
+						</widget>
 					</container>
 
 				</container>
 
-				<!-- 2nd ROW -->
-				<container class="tcs_table_trans" >
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			</container>
 
-					<container class="horizontal_adaptive_container" gap="8">
+			<!-- 2nd ROW -->
+			<container class="tcs_table_trans" >
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<record id="default_properties" default_width="-1" minimum_width="130"/>
+				<container class="horizontal_adaptive_container" gap="8">
 
-						<!-- LEAGUE POS -->
-						<container priority="1">
-							<attachment_group class="vertical_arrange_autosize"/>
+					<record id="default_properties" default_width="-1" minimum_width="130"/>
 
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="242479" type="use"/>
-							</widget>
-							<widget class="division_position_button" alignment="left" auto_size="vertical" >
-								<record id="object_property" get_property="Cmai"/>
-							</widget>
-						</container>
+					<!-- LEAGUE POS -->
+					<container priority="1">
+						<attachment_group class="vertical_arrange_autosize"/>
 
-						<!-- PRO STATUS -->
-						<container priority="3">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="319581" type="use"/>
-							</widget>
-							<widget class="professional_status_label" auto_size="vertical" >
-								<record id="object_property" get_property="Cprs"/>
-							</widget>
-						</container>
-
-						<!-- YOUTH FACILTIES -->
-						<container priority="2">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="229395" type="use"/>
-							</widget>
-							<widget class="training_facilities_stars_label" auto_size="vertical"  alignment="left">
-								<record id="object_property" get_property="Ctf*"/>
-							</widget>
-						</container>
-
-						<!-- ESTIMATED VALUE -->
-						<container priority="4">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="251300" type="use"/>
-							</widget>
-							<widget class="club_value_description_text" auto_size="vertical"  alignment="left,can_scale">
-								<record id="object_property" get_property="CovD"/>
-							</widget>
-						</container>
-
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="242479" type="use"/>
+						</widget>
+						<widget class="division_position_button" alignment="left" auto_size="vertical" >
+							<record id="object_property" get_property="Cmai"/>
+						</widget>
 					</container>
-				</container>
 
-				<!-- 3rd ROW -->
-				<container class="tcs_table" >
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<!-- PRO STATUS -->
+					<container priority="3">
+						<attachment_group class="vertical_arrange_autosize"/>
 
-					<container class="horizontal_adaptive_container" gap="8">
-
-						<record id="default_properties" default_width="-1" minimum_width="130"/>
-
-						<!-- MEDIA EXPECTATION -->
-						<container priority="1">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="243509" type="use"/>
-							</widget>
-							<widget class="media_expectation_text" alignment="left" auto_size="vertical" >
-								<record id="object_property" get_property="CmeD"/>
-							</widget>
-						</container>
-
-						<!-- CONT COMP -->
-						<container priority="3">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="319580" type="use"/>
-							</widget>
-							<widget class="comp_button" auto_size="vertical"  alignment="left,can_scale" icon_alignment="top,left">
-								<record id="object_property" get_property="Ccon"/>
-							</widget>
-						</container>
-
-						<!-- ACADEMY RATING
-DOESNT WORK 
-					<container class="team_container_information_overview_panel" file="none" id="pssp">
-						<translation id="title" translation_id="248440" type="use" value="Player Stats"/>
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-						<container class="club_team_list_panel" file="none">
-							<record id="object_property" get_property="Tftm" set_property="objt"/>
-							<attachment_group class="vertical_arrange_autosize"/>
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="595325" type="use"/>
-							</widget>
-							<widget class="youth_academy_rating_widget" auto_size="vertical"  alignment="left,centre_y">
-								<record id="object_property" get_property="Tysc"/>
-							</widget>
-						</container>
-					</container> -->
-
-						<!-- YOUTH FACILTIES -->
-						<container priority="2">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="229395" type="use"/>
-							</widget>
-							<widget class="training_facilities_stars_label" auto_size="vertical"  alignment="left">
-								<record id="object_property" get_property="Ctf*"/>
-							</widget>
-						</container>
-
-						<!-- FINANCIAL STATUS -->
-						<container priority="4">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="229821" type="use"/>
-							</widget>
-							<widget class="club_finances_description_text" auto_size="vertical" >
-								<record id="object_property" get_property="CfiD"/>
-							</widget>
-						</container>
-
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="319581" type="use"/>
+						</widget>
+						<widget class="professional_status_label" auto_size="vertical" >
+							<record id="object_property" get_property="Cprs"/>
+						</widget>
 					</container>
-				</container>
 
-				<!-- 4th ROW -->
-				<container class="tcs_table_trans" >
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<!-- YOUTH FACILTIES -->
+					<container priority="2">
+						<attachment_group class="vertical_arrange_autosize"/>
 
-					<container class="horizontal_adaptive_container" gap="8">
-
-						<record id="default_properties" default_width="-1" minimum_width="130"/>
-
-						<!-- MEDIA EXPECTATION -->
-						<container priority="1">
-							<attachment_group class="vertical_arrange_autosize" vertical_gap="-4"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="344664" type="use"/>
-							</widget>
-							<widget class="team_recent_form_widget" alignment="left,top">
-								<record id="object_property" get_property="Tfrm"/>
-							</widget>
-						</container>
-
-						<!-- SOCIAL MEDIA FOLLOWERS -->
-						<container priority="3">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="557873" type="use"/>
-							</widget>
-							<widget class="number_label" auto_size="vertical"  alignment="left,can_scale">
-								<record id="object_property" get_property="CsSF"/>
-							</widget>
-						</container>
-
-						<!-- YOUTH REC. -->
-						<container priority="2">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="308084" type="use"/>
-							</widget>
-							<widget class="youth_facilities_stars_label" auto_size="vertical"  alignment="left">
-								<record id="object_property" get_property="Crcb"/>
-							</widget>
-						</container>
-
-						<!-- CHAIRMAN STATUS -->
-						<container priority="4">
-							<attachment_group class="vertical_arrange_autosize"/>
-
-							<widget class="label" auto_size="vertical" style="semi_bold" >
-								<translation id="text" translation_id="394525" type="use"/>
-							</widget>
-							<widget class="chairman_status_text" alignment="left,can_scale" auto_size="vertical" >
-								<record id="object_property" get_property="CStT"/>
-							</widget>
-						</container>
-
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="229395" type="use"/>
+						</widget>
+						<widget class="training_facilities_stars_label" auto_size="vertical"  alignment="left">
+							<record id="object_property" get_property="Ctf*"/>
+						</widget>
 					</container>
+
+					<!-- ESTIMATED VALUE -->
+					<container priority="4">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="251300" type="use"/>
+						</widget>
+						<widget class="club_value_description_text" auto_size="vertical"  alignment="left,can_scale">
+							<record id="object_property" get_property="CovD"/>
+						</widget>
+					</container>
+
 				</container>
 			</container>
 
-			<!-- KITS -->
+			<!-- 3rd ROW -->
+			<container class="tcs_table" >
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="horizontal_adaptive_container" gap="8">
+
+					<record id="default_properties" default_width="-1" minimum_width="130"/>
+
+					<!-- MEDIA EXPECTATION -->
+					<container priority="1">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="243509" type="use"/>
+						</widget>
+						<widget class="media_expectation_text" alignment="left" auto_size="vertical" >
+							<record id="object_property" get_property="CmeD"/>
+						</widget>
+					</container>
+
+					<!-- CONT COMP -->
+					<container priority="3">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="319580" type="use"/>
+						</widget>
+						<widget class="comp_button" auto_size="vertical"  alignment="left,can_scale" icon_alignment="top,left">
+							<record id="object_property" get_property="Ccon"/>
+						</widget>
+					</container>
+
+					<!-- YOUTH FACILITIES -->
+					<container priority="2">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="255008" type="use"/>
+						</widget>
+						<widget class="youth_facilities_stars_label" auto_size="vertical"  alignment="left">
+							<record id="object_property" get_property="Cfc*"/>
+						</widget>
+					</container>
+
+					<!-- FINANCIAL STATUS -->
+					<container priority="4">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="229821" type="use"/>
+						</widget>
+						<widget class="club_finances_description_text" auto_size="vertical" >
+							<record id="object_property" get_property="CfiD"/>
+						</widget>
+					</container>
+
+				</container>
+			</container>
+
+			<!-- 4th ROW -->
+			<container class="tcs_table_trans" >
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="horizontal_adaptive_container" gap="8">
+
+					<record id="default_properties" default_width="-1" minimum_width="130"/>
+
+					<!-- MEDIA EXPECTATION -->
+					<container priority="1">
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="-4"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="344664" type="use"/>
+						</widget>
+						<widget class="team_recent_form_widget" alignment="left,top">
+							<record id="object_property" get_property="Tfrm"/>
+						</widget>
+					</container>
+
+					<!-- SOCIAL MEDIA FOLLOWERS -->
+					<container priority="3">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="557873" type="use"/>
+						</widget>
+						<widget class="number_label" auto_size="vertical"  alignment="left,can_scale">
+							<record id="object_property" get_property="CsSF"/>
+						</widget>
+					</container>
+
+					<!-- YOUTH REC. -->
+					<container priority="2">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="308084" type="use"/>
+						</widget>
+						<widget class="youth_facilities_stars_label" auto_size="vertical"  alignment="left">
+							<record id="object_property" get_property="Crcb"/>
+						</widget>
+					</container>
+
+					<!-- CHAIRMAN STATUS -->
+					<container priority="4">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<widget class="label" auto_size="vertical" style="semi_bold" >
+							<translation id="text" translation_id="394525" type="use"/>
+						</widget>
+						<widget class="chairman_status_text" alignment="left,can_scale" auto_size="vertical" >
+							<record id="object_property" get_property="CStT"/>
+						</widget>
+					</container>
+
+				</container>
+			</container>
+		</container>
+
+		<!-- KITS -->
 			<container default_width="550" priority="3">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<translation id="title" translation_id="" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]"/>
