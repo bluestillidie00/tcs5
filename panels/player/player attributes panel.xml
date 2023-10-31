@@ -138,7 +138,7 @@
 
 							<!-- Physical Condition -->
 							<widget class="label" row="2" column="0">
-								<record id="object_property" get_property="PcOI" name="true" />
+								<translation id="text" translation_id="227793" type="use" />
 							</widget>
 							<!-- Changed the class type editable_client_object_property_panel to match the other working elements -->
 							<widget class="editable_client_object_property_panel" id="PcOI" row="2"
@@ -155,8 +155,9 @@
 
 							<!-- Match Sharpness -->
 							<widget class="label" row="3" column="0">
-								<record id="object_property" get_property="PftI" name="true" />
+								<translation id="text" translation_id="395316" type="use" />
 							</widget>
+
 							<!-- Changed the class type editable_client_object_property_panel to match the other working elements -->
 							<widget class="editable_client_object_property_panel" id="PftI" row="3"
 								column="1" style="semi_bold" auto_size="horizontal">
