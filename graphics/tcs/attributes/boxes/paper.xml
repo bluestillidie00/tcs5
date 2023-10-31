@@ -1,5 +1,5 @@
 <!-- image properties -->
-<properties>
+<properties transparency="0.6">
 
 	<!-- image borders -->
 	<!-- these determine how many pixels any content is inset from each side of the image -->
