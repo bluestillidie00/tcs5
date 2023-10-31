@@ -4,13 +4,22 @@
 	<boolean id="should_force_refresh" value="true"/>
 
 	<!-- Status Indicators -->
-	<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
-		<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
-		<record id="object_property" get_property="Pnfa"/>
-	</widget>
+	<!-- Fix Issue #47, Added containers to both widgets, and give them the horizontal alignment to make them properly aligned -->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+		<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+			<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+			<record id="object_property" get_property="Pnfa"/>
+		</widget>
+	</container>
 
-	<widget class="object_portrait_picture" id="face" width="180" image_alignment="middle_x,bottom" scale_picture="true" keep_aspect_ratio="true">
-		<record id="object_property" get_property="objt"/>
-	</widget>
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="25" horizontal_gap="0" vertical_inset="0" />
 
+		<widget class="object_portrait_picture" id="face" width="180" image_alignment="middle_x,bottom" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property" get_property="objt"/>
+		</widget>
+	</container>
+
+	
 </panel>

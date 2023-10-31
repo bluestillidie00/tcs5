@@ -11,15 +11,19 @@
 		<container >
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-			<!-- STATUS INDICATORS -->
-			<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
-				<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
-				<record id="object_property" get_property="Pnfa"/>
-			</widget>
-
+			<!-- PLAYER PICTURE -->
 			<widget class="object_portrait_picture" id="face" width="100" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
 				<record id="object_property" get_property="objt"/>
 			</widget>
+
+			<!-- STATUS INDICATORS-->
+			<!-- Fix Issue #46 changed order, and added a container to give it the right placeholder, and maintain the picture as clickable -->
+			<container>
+				<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+					<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+					<record id="object_property" get_property="Pnfa"/>
+				</widget>
+			</container>
 		</container>
 
 		<!-- CLUB AND NATION LOGO -->
