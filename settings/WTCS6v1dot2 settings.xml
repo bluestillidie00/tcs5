@@ -28,9 +28,9 @@
 
 	<!-- ATTRIBUTE BOXES MOD -->
 	<colour name="unknown attribute background" 			value="bg darker"/>
-	<colour name="low attribute background" 				value="low attribute"/>
-	<colour name="normal attribute background" 				value="normal attribute"/>
-	<colour name="good attribute background" 				value="good attribute" />
+	<colour name="low attribute background" 				value="rgb(65,23,23)" />
+	<colour name="normal attribute background" 					value="rgb(80,80,80)"/>
+	<colour name="good attribute background" 				value="rgb(14,135,144)" />
 	<colour name="excellent attribute background" 			value="excellent attribute" />
 
 	<!-- TACTICS PITCH -->
