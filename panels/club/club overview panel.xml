@@ -366,7 +366,7 @@ DOESNT WORK
 
 		<!-- SQUAD TAB -->
 		<container id="squa" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/tabs/squad">
-			<translation id="title" translation_id="511340" type="use" />
+			<translation id="title" value="Personnel" type="use" />
 			<record id="object_property" get_property="objt" set_property="objt"/>			
 		</container>
 
