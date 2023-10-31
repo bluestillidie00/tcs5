@@ -26,6 +26,14 @@
 	<colour name="good attribute" red="1" green="238" blue="255" />
 	<colour name="excellent attribute" red="255" green="235" blue="59" />
 
+	<!-- ATTRIBUTE BOXES MOD -->
+	<colour name="unknown attribute background" 			value="bg darker"/>
+	<colour name="low attribute background" 				value="low attribute"/>
+	<colour name="normal attribute background" 				value="normal attribute"/>
+	<colour name="good attribute background" 				value="good attribute" />
+	<colour name="excellent attribute background" 			value="excellent attribute" />
+
+	<!-- TACTICS PITCH -->
 	<colour name="pitch_box_background" 					value="bg"/>
 	<colour name="style_background" 						value="bg lighter"/>
 
