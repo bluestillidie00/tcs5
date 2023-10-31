@@ -8,14 +8,14 @@
 		<record id="object_property" get_property="Ttea" set_property="objt"/>
 
 		<widget class="stadium_picture" id="STAp" priority="1" >
-							<layout class="stick_to_sides_attachment" alignment="all" inset="-10" />
-							<record id="object_property" get_property="objt" set_property="objt"/>
-						</widget>	  	
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-10" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>	  	
 
-<container class="tcs_box" appearance="tcs/backgrounds/overlay/70" rrep="bg" />
+		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0,7" rrep="bg" />
 
-						<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
-						<container class="bordered_box" appearance="tcs/ro" />
+		<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+		<container class="bordered_box" appearance="tcs/ro" />
 	</container>
 
 

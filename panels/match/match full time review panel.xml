@@ -27,7 +27,7 @@
 				<container class="tcs_box" appearance="tcs/ro" rrep="bg" />
 
 				<!-- OVERLAY ON STADIUM PIC -->
-				<container class="tcs_box" appearance="tcs/backgrounds/overlay/90" rrep="bg" />
+				<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.9" rrep="bg" />
 
 				<container>
 					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />

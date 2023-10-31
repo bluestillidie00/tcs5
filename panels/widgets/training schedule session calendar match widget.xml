@@ -33,7 +33,7 @@
 			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-1" horizontal_alignment="horizontal" horizontal_inset="0" />
 			<layout class="centre_in_parent_attachment" alignment="vertical" />
 
-			<container class="main_box" appearance="tcs/backgrounds/overlay/80" rrep="black">
+			<container class="main_box" appearance="tcs/backgrounds/overlay/100" transparency="0.8" rrep="black">
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
 				<widget class="fixture_name_text" id="comp" font="text" alignment="centre,can_scale" colour="title" style="bold" multiline="true" size="10" auto_size="vertical" />
 				<widget class="text" id="text" colour="text" alignment="centre,can_scale" size="11" auto_size="vertical" style="bold" />
