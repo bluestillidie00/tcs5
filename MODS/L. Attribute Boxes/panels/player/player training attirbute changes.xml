@@ -1,0 +1,197 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="player_attributes_panel" show_attribute_offsets="true" file="none" id="patt" save_session_state="true">
+
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</list>
+		</record>
+
+		<flags id="required_attribute_row_appearance" value="tables/standard/row/selected/row" />
+		<flags id="preferred_attribute_row_appearance" value="tables/standard/row/selected/row" />
+		<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row" />
+
+		<!-- Table properties to use for all attribute tables -->
+		<record id="table_properties" select_event="mATS" mode="fill_rows, stripe_rows, printable, select_multiple" layout="25,-1, 40, 40, 30" row_height="22" row_spacing="1" default_sort_column="name">
+
+			<list id="column_table_properties">
+				<!-- bullet -->
+				<record index="0" id="grGu" left="8" top="4">
+					<record id="widget_info" class="picture" alignment="left,centre_y" multiline="false" navigation_focus_target="true"/>
+				</record>
+				<!-- Attribute name -->
+				<record index="1" id="name" left="8" top="4">
+					<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" />
+				</record>
+				<!-- Attribute training improvement offset -->
+				<record index="2" id="offs" sort_disabled="true">
+					<record id="widget_info" class="training_improvement" />
+				</record>
+				<!-- Attribute value -->
+				<record index="3" id="val " sort_disabled="true" column_alignment="centre" right="8">
+					<record id="widget_info" class="attribute_label" alignment="centre_x,centre_y" style="semi_bold" multiline="false" use_attribute_colour_as_bg="true" appearance="tcs/attributes/boxes/paper"/>
+				</record>
+				<!-- Attribute edit widget -->
+				<record index="4" id="edit" sort_disabled="true">
+					<record id="widget_info" class="editable_client_object_property_panel" />
+				</record>
+			</list>
+		</record>
+
+		<layout class="arrange_vertical_attachment" layout="-1, 470">
+			<global id="gap" name="ui.main_contrast_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<container class="main_subtle_box" >
+
+			<container id="proC" >
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<container>
+					<attachment_group class="title_embedded_panel_right" horizontal_offset="0" vertical_inset="2"/>
+
+					<widget class="label" id="asda" auto_size="horizontal" height="30" colour="alt text" embed_in_frame="true" >
+						<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+					</widget>
+					<widget class="stars_range_strip" id="prPA" width="80" height="30" embed_in_frame="true" navigation_focus_target="false" />
+				</container>
+
+				<widget class="progress_graph_panel" file="player/progress graph full panel" id="Pgra"/>
+
+			</container>
+
+			<container id="attC" hidden="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<container navigation_container="true">
+					<attachment_group class="title_embedded_panel_right" horizontal_offset="0" vertical_inset="2"/>
+
+					<widget class="label" id="rMpl" auto_size="horizontal" height="30" colour="alt text" embed_in_frame="true" >
+						<translation id="text" translation_id="466501" type="use" value="Compare Attribute Changes Since[COMMENT: label for a date selector where you can compare a player's attributes now to a given point in the past]" />
+					</widget>
+
+					<widget class="subtle_popup_button" id="rMpo" select_event="rMCh" auto_size="all" embed_in_frame="true"/>
+
+					<widget class="player_roles_popup_button" id="pHbu" auto_size="all" fixed="true" show_selected_role="true" embed_in_frame="true" appearance="buttons/subtle/normal/button">
+						<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+					</widget>
+
+				</container>
+
+
+				<!-- box containing attributes history panel -->
+				<container class="player_attribute_history_panel" id="athp" >
+					<translation id="title" translation_id="229822" type="use" value="Attributes" />
+				</container>
+			</container>
+
+			<container id="tabs" height="32" navigation_container="true" >
+				<!--tabs-->
+				<attachment_group class="horizontal_arrange" vertical_alignment="top" horizontal_alignment="left" horizontal_gap="0" vertical_inset="0">
+					<global id="horizontal_gap" name="ui.split_button_row_gap" />
+				</attachment_group>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0">
+					<global id="gap" name="ui.split_button_row_gap" />
+				</layout>
+				<layout class="stick_to_sides_attachment" alignment="top,left" inset="0"/>
+
+				<widget class="radio_button" id="Pact" select_event="SelP" selected="true" auto_size="all" icon="" show_button_appearance="true"  appearance="switches/toggle/left/button">
+					<translation id="text" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
+				</widget>
+				<widget class="radio_button" id="Ppup" select_event="SelA" auto_size="all" icon="" show_button_appearance="true" appearance="switches/toggle/right/button" text="test">
+					<translation id="text" translation_id="229822" type="use" value="Attributes" />
+				</widget>
+			</container>
+		</container>
+
+		<container class="main_box">
+
+			<translation id="title" translation_id="229822" type="use" value="Attributes" />
+
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+			<layout class="arrange_horizontal_attachment" alignment="fill" />
+
+			<container class="inner_box" id="tscn" navigation_container="false">
+				<attachment_group class="vertical_arrange" vertical_layout="350,70" />
+				<!-- Technical Table -->
+				<widget class="table" id="pltt" layout="-1">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+							<translation id="text" translation_id="229413" type="use" value="Technical" />
+						</record>
+					</list>
+				</widget>
+
+				<container class="inner_subtle_box">
+					<translation id="title" translation_id="247971" type="use" value="Summary" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="icon_button" id="tSlb" show_button_appearance="false" primary_use_icon_app_rep_colour="false" font="text" />
+				</container>
+			</container>
+
+			<container class="inner_box" id="gscn" navigation_container="true">
+				<attachment_group class="vertical_arrange" vertical_layout="350,70" />
+				<!-- Goalkeeping Table -->
+				<widget class="table" id="plgk" layout="-1">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+							<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+						</record>
+					</list>
+				</widget>
+
+				<container class="inner_subtle_box">
+					<translation id="title" translation_id="247971" type="use" value="Summary" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="icon_button" id="gSlb" show_button_appearance="false" primary_use_icon_app_rep_colour="false" font="text" />
+				</container>
+			</container>
+
+			<container class="inner_box" navigation_container="false">
+				<attachment_group class="vertical_arrange" vertical_layout="350,70" />
+				<!-- Mental Table -->
+				<widget class="table" id="plmt" layout="-1">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+							<translation id="text" translation_id="230106" type="use" value="Mental" />
+						</record>
+					</list>
+				</widget>
+
+				<container class="inner_subtle_box">
+					<translation id="title" translation_id="247971" type="use" value="Summary" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="icon_button" id="mSlb" show_button_appearance="false" primary_use_icon_app_rep_colour="false" font="text" navigation_focus_target="false" />
+				</container>
+			</container>
+
+			<container class="inner_box" navigation_container="false">
+				<attachment_group class="vertical_arrange" vertical_layout="350,70" />
+
+				<!-- Physical Table -->
+				<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+							<translation id="text" translation_id="230003" type="use" value="Physical" />
+						</record>
+					</list>
+				</widget>
+
+				<container class="inner_subtle_box">
+					<translation id="title" translation_id="247971" type="use" value="Summary" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="icon_button" id="pSlb" show_button_appearance="false" primary_use_icon_app_rep_colour="false" font="text" />
+				</container>
+			</container>
+		</container>
+
+	</container>
+</panel>

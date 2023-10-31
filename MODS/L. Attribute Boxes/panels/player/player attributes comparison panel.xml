@@ -1,0 +1,218 @@
+<panel navigation_container="true">
+	<attachment_group class="vertical_arrange" vertical_layout="30, 420, 6, 22" offset="0" gap="2" horizontal_inset="8" />
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right" offset="0" gap="0" vertical_inset="0" />
+
+		<widget class="player_roles_popup_button" id="skpa" show_clear_item="true"  alignment="right,centre_y" appearance="buttons/subtle/normal/button" show_selected_role="true" auto_size="all" navigation_container="true">
+			<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]"/>
+		</widget>
+	</container>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1,42,-1,42" row_height="24" row_spacing="1" fixed_row_height="30" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="8" top="2">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false"/>
+			</record>
+			<!-- Attribute value -->
+			<record index="1" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" alignment="centre_x,centre_y" style="semi_bold" multiline="false" use_attribute_colour_as_bg="true" appearance="tcs/attributes/boxes/paper"/>
+			</record>
+			<!-- Attribute comparison as a bar -->
+			<record index="2" id="cbar" sort_disabled="true" left="2" right="2" top="2" bottom="2">
+				<!--the positive/negative stuff is not a typo!!!-->
+				<record id="widget_info" class="attribute_label" alignment="centre_x,centre_y" style="semi_bold" multiline="false" use_attribute_colour_as_bg="true" appearance="tcs/attributes/boxes/paper"/>
+			</record>
+			<!-- Attribute value -->
+			<record index="3" id="val2" sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" alignment="centre_x,centre_y" style="semi_bold" multiline="false" use_attribute_colour_as_bg="true" appearance="tcs/attributes/boxes/paper"/>
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_alignment="top" />
+
+
+		<container height="410">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- Technical Table -->
+			<container id="cntT">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="table" id="pltt" layout="-1">
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="4" style="semi_bold" colour="accent" hide_sorting="true" disabled="true" >
+							<translation id="text" translation_id="285379" type="use" value="Technical[COMMENT: player profile, overview panel polygon category title]" />
+						</record>
+					</list>
+				</widget>
+
+				<widget class="horizontal_divider" />
+
+				<!--Technical Average-->
+				<widget class="table" id="pltA" layout="-1" height="24"/>
+			</container>
+
+			<!-- Goalkeeping Table -->
+			<container id="cntG">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<widget class="table" id="plgk" layout="-1">
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="4" style="semi_bold" colour="accent"  hide_sorting="true" disabled="true" >
+							<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+						</record>
+					</list>
+				</widget>
+				<widget class="horizontal_divider" />
+				<!--Goalkeeping Average-->
+				<widget class="table" id="plgA" layout="-1" height="24"/>
+			</container>
+
+			<!-- Mental Table -->
+			<container id="cntM">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="table" id="plmt" layout="-1" height="375">
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="4" style="semi_bold" colour="accent"  hide_sorting="true" disabled="true" >
+							<translation id="text" translation_id="285381" type="use" value="Mental[COMMENT: player profile, overview panel polygon category title]" />
+						</record>
+					</list>
+				</widget>
+				<widget class="horizontal_divider" />
+				<!--Mental Average-->
+				<widget class="table" id="plmA" layout="-1" height="24"/>
+			</container>
+
+			<!-- Physical Table -->
+			<container id="cntP">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="table" id="plpt" layout="-1">
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="4" style="semi_bold" colour="accent"  hide_sorting="true" disabled="true" >
+							<translation id="text" translation_id="285375" type="use" value="Physical[COMMENT: player profile, overview panel polygon category title]" />
+						</record>
+					</list>
+				</widget>
+				<widget class="horizontal_divider" />
+				<!--Physical Average-->
+				<widget class="table" id="plpA" layout="-1" height="24"/>
+			</container>
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<!--Footedness comparison-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-2,-3" horizontal_offset="8" horizontal_gap="2" vertical_offset="0" />
+
+				<!--Footedness-->
+				<widget class="label" id="PfoL" alignment="left,bottom" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Pfot" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<!--Footedness comparison-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,5,-1" horizontal_offset="0" horizontal_gap="4" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="foot_label" id="PfoV" colour="comp person bar 1" spec="text" icon_alignment="left,top" alignment="right,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Pfot" />
+						</record>
+					</widget>
+
+					<widget class="label" alignment="centre" auto_size="vertical">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+
+					<widget class="foot_label" id="PfV2" colour="comp person bar 2" spec="text" icon_alignment="left,top" alignment="left,centre_y" auto_size="vertical"/>
+				</container>
+
+			</container>
+
+			<!--height comparison-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-2,-3" horizontal_offset="8" horizontal_gap="2" vertical_offset="0" />
+
+				<!--height-->
+				<widget class="label" id="PheL" alignment="left,bottom" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Phei" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+
+
+				<!--height comparison-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,5,-1" horizontal_offset="0" horizontal_gap="4" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="height_label" id="PheV" colour="comp person bar 1" icon_alignment="right,centre_y" alignment="right,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Phei" />
+						</record>
+					</widget>
+
+					<widget class="label" alignment="centre" auto_size="vertical">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+
+					<widget class="height_label" id="PhV2" colour="comp person bar 2" icon_alignment="left,centre" alignment="left,centre_y" auto_size="vertical"/>
+
+				</container>
+
+
+			</container>
+
+			<!--weight comparison-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-2,-3" horizontal_offset="8" horizontal_gap="2" vertical_offset="0" />
+
+				<!--weight-->
+				<widget class="label" id="PweL" alignment="left,bottom" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Pwei" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+
+				<!--weight comparison-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,5,-1" horizontal_offset="0" horizontal_gap="4" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="weight_label" id="PweV" colour="comp person bar 1" icon_alignment="right,centre_y" alignment="right,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Pwei" />
+						</record>
+					</widget>
+
+					<widget class="label" alignment="centre" auto_size="vertical">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+
+					<widget class="weight_label" id="PwV2" colour="comp person bar 2" icon_alignment="left,centre_y" alignment="left,centre_y" auto_size="vertical"/>
+				</container>
+
+
+			</container>
+		</container>
+	</container>
+</panel>
