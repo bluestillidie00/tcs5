@@ -270,15 +270,6 @@
 
 		</container>
 
-		<!-- Edit appearance button-->
-		<container class="icon_button" id="reeB" auto_size="all" icon="icons/16px/manager" controller_button="x_button" appearance="buttons/standard/flex/button" rrep="tcs_accent" colour="bg" icon_colour="bg">
-			<translation id="text" translation_id="229690" type="use" value="Edit" />
-			<layout class="stick_to_sides_attachment" alignment="top, left" inset="10" />
-			<record id="click_event" event_id="eMnG" />
-
-			<string id="remove_if" value="platform_is_handheld" />
-		</container>
-
 		<!-- Switch user button for xbox -->
 		<container class="main_transparent_box_no_margin" height="55" width="275">
 			<attachment_group class="horizontal_arrange_vertical_centre" horizontal_gap="10" horizontal_offset="8" />
