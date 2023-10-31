@@ -27,7 +27,7 @@
 			<!-- Attribute comparison as a bar -->
 			<record index="2" id="cbar" sort_disabled="true" left="2" right="2" top="2" bottom="2">
 				<!--the positive/negative stuff is not a typo!!!-->
-				<record id="widget_info" class="attribute_label" alignment="centre_x,centre_y" style="semi_bold" multiline="false" use_attribute_colour_as_bg="true" appearance="tcs/attributes/boxes/paper"/>
+				<record id="widget_info" class="horizontal_split_value_bar" negative_colour="comp person bar 1" positive_colour="comp person bar 2" max_value="19" min_value="-19" />
 			</record>
 			<!-- Attribute value -->
 			<record index="3" id="val2" sort_disabled="true" column_alignment="centre" right="8">
