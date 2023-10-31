@@ -83,4 +83,10 @@
     <widget class="player_scout_reports_panel" id="DaHu" file="player/tcs/selector/big/data hub polygon" late_loading="true">
         <translation id="title" type="use" translation_id="447607" />
     </widget>
+    
+    
+												<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="repo" late_loading="true">
+													<translation id="title" translation_id="254774" type="use"/>
+												</widget>
+    
 </panel>

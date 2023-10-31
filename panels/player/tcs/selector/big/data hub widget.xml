@@ -1,7 +1,7 @@
 ﻿<panel height="280" width="280">
 	<string id="use_mini_visualisation" value="true" />
 
-	<container class="main_subtle_box" id="davb">
+	<container id="davb">
 		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" horizontal_inset="0" />
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 		<container >
@@ -42,14 +42,14 @@
 
 	<container id="chkC" height="25" width="20">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-		<layout class="stick_to_sides_attachment" alignment="top,right" inset="30,3" />
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="34,3" />
 
 		<widget class="check_box" id="preC" icon="switches/star/button" icon_alignment="centre_x,centre_y" wants_mouse_events="false" />
 	</container>
 
 	<container height="25" width="25" >
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-		<layout class="stick_to_sides_attachment" alignment="top,right" inset="3" />
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="60,3" />
 
 		<widget class="icon_button" icon_alignment="centre_x,centre_y" id="expB" click_event="clkk" icon="icons/16px/maximise" appearance="buttons/custom/over state only/button" default_focus="true"/>
 		<widget class="icon_button" icon_alignment="centre_x,centre_y" hidden="true" id="remB" click_event="remV" icon="icons/16px/remove from list" appearance="buttons/custom/over state only/button" />

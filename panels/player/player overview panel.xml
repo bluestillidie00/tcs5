@@ -90,10 +90,6 @@
 												<integer id="default_for_international_managers_other_team" value="tCSR"/>
 												<integer id="default_for_everyone_else" value="tCSR"/>
 												<integer id="default_for_versus_mode" value="tCSR"/>
-
-												<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="repo" late_loading="true">
-													<translation id="title" translation_id="254774" type="use"/>
-												</widget>
 											</container>
 										</container>
 
@@ -187,9 +183,9 @@
 												<integer id="default_for_everyone_else" value="tCSR"/>
 												<integer id="default_for_versus_mode" value="tCSR"/>
 
-												<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="repo" late_loading="true">
+												<!-- <widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="repo" late_loading="true">
 													<translation id="title" translation_id="254774" type="use"/>
-												</widget>
+												</widget> -->
 											</container>
 										</container>
 
