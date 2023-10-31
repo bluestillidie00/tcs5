@@ -8,7 +8,7 @@
 			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="8" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
-			<container height="16" />
+			<container height="12" />
 
 			<container id="topc">
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
