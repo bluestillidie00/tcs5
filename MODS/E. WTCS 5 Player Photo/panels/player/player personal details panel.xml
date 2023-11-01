@@ -15,7 +15,7 @@
 				<attachment_group class="horizontal_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
 
 				<!-- CONTAINER HOLDING KIT AND PLAER PIC -->
-				<container width="280">
+				<container width="290">
 					<attachment_group class="horizontal_arrange" horizontal_gap="-125"/>
 
 					<container width="250">
