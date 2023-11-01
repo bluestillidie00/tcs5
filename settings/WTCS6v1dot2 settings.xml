@@ -34,10 +34,10 @@
 	<colour name="excellent attribute background" 			value="excellent attribute" />
 
 	<!-- ORIGINAL TCS ORIGINAL ATTRIBUTE BAR MOD COLOURS 
-	<colour name="low attribute bar" red="169" green="169" blue="169" />
-	<colour name="normal attribute bar" red="241" green="241" blue="241" />
-	<colour name="good attribute bar" red="1" green="238" blue="255" />
-	<colour name="excellent attribute bar" red="255" green="235" blue="59" /> -->
+	<colour name="low attribute bar" value="low attribute"/>
+	<colour name="normal attribute bar" value="normal attribute"/>
+	<colour name="good attribute bar" value="good attribute"/>
+	<colour name="excellent attribute bar" value="excellent attribute"/> -->
 
 	<!-- ORIGINAL TCS ATTRIBUTE BAR MOD COLOURS -->
 	<colour name="low attribute bar" value="tcs_accent"/>
