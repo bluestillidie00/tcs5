@@ -16,7 +16,7 @@
 			</record>
 			<!-- Attribute value -->
 			<record index="1" id="val " sort_disabled="true" column_alignment="centre" right="4">
-				<record id="widget_info" class="attribute_bar" alignment="right,centre_y" style="semi_bold" size="small" />
+				<record id="widget_info" class="attributeless" alignment="right,centre_y" style="semi_bold" size="small" />
 			</record>
 		</list>
 	</record>

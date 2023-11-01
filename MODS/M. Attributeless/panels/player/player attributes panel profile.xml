@@ -19,7 +19,7 @@
 			</record>
 			<!-- Attribute value -->
 			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
-				<record id="widget_info" class="attribute_bar" alignment="right,centre_y" style="semi_bold" multiline="false"/>
+				<record id="widget_info" class="attributeless" alignment="right,centre_y" style="semi_bold" multiline="false"/>
 			</record>
 			<!-- Attribute edit widget -->
 			<record index="3" id="edit" sort_disabled="true">

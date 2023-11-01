@@ -1,0 +1,25 @@
+<class class="attribute_bar" parent="position_role_duty_star_range_based_picture">
+    <list id="value_list">
+        <record value="0" file="0" />
+        <record value="1" file="1" />
+        <record value="2" file="2" />
+        <record value="3" file="3" />
+        <record value="4" file="4" />
+        <record value="5" file="5" />
+        <record value="6" file="6" />
+        <record value="7" file="7" />
+        <record value="8" file="8" />
+        <record value="9" file="9" />
+        <record value="10" file="10" />
+        <record value="11" file="11" />
+        <record value="12" file="12" />
+        <record value="13" file="13" />
+        <record value="14" file="14" />
+        <record value="15" file="15" />
+        <record value="16" file="16" />
+        <record value="17" file="17" />
+        <record value="18" file="18" />
+        <record value="19" file="19" />
+        <record value="20" file="20" />
+    </list>
+</class>
