@@ -1,6 +1,54 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<!-- No scout report -->
+						<container id="nsrc" class="main_box">
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
 
+							<container id="nocs" height="100">
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+								<!--explanatory text-->
+								<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+									<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]"/>
+								</widget>
+
+								<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="40" icon="icons/16px/search">
+									<translation id="text" translation_id="243421" type="use" value="Scout Player"/>
+									<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+								</widget>
+							</container>
+
+							<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+							</widget>
+						</container>
+
+						<!-- Already being scounted -->
+						<container id="Arbs" class="main_box">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+							<!--explanatory text-->
+							<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+								<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]"/>
+							</widget>
+						</container>
+
+						<!-- Already being scouted by pool -->
+						<container id="Pool" class="main_box">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+							<!--explanatory text-->
+							<widget class="text" alignment="centre" spec="text" colour="attention">
+								<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]"/>
+							</widget>
+						</container>
+	
+	<container id="scou">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
 	<!--Data hub widgets-->
 	<container id="dhbW">
 		<string id="remove_if" value="is_fmt"/>
@@ -24,5 +72,6 @@
 			<record id="object_property" get_property="objt" set_property="objt" />
 			<record id="object_property" get_property="PclC" set_property="comp" />
 		</widget>
+	</container>
 	</container>
 </panel>
