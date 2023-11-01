@@ -1,0 +1,71 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="save_session_state" value="true"/>
+
+	<!-- main area -->
+	<container id="aopn">
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<container class="main_box" appearance="none">
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="8"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+			
+		<!-- 	<container height="30" navigation_container="true">
+				<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<widget class="label" alignment="left,centre_y" auto_size="horizontal" font="title" colour="fg">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+					<translation id="text" translation_id="229822" type="use" value="Attributes"/>
+				</widget>
+
+				<widget class="subtle_button" id="attr" auto_size="horizontal">
+					<string id="create_if" value="is_fmt"/>
+					<translation id="hint" translation_id="321116" type="use" value="Show the full list of attributes that your search can be narrowed by[COMMENT: player search; button label hint for attribute chooser]"/>
+					<translation id="text" translation_id="247188" type="use" value="Pick"/>
+					<record id="click_event">
+						<flags id="event_id" value="attr"/>
+					</record>
+				</widget>				
+				
+				<widget class="button" id="attr" auto_size="horizontal">
+					<string id="remove_if" value="is_fmt"/>
+					<translation id="hint" translation_id="321116" type="use" value="Show the full list of attributes that your search can be narrowed by[COMMENT: player search; button label hint for attribute chooser]"/>
+					<translation id="text" translation_id="247188" type="use" value="Pick"/>
+					<record id="click_event">
+						<flags id="event_id" value="attr"/>
+					</record>
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right">
+           				<global id="horizontal_gap" name="ui.button_row_gap" />
+         			</attachment_group>
+
+         			<container>
+         			<attachment_group class="horizontal_arrange_autosize">
+           				<global id="horizontal_gap" name="ui.split_button_row_gap" />
+         			</attachment_group>
+
+					<widget class="icon_button" id="att-" alignment="centre" icon_enabled="true" icon_alignment="centre" click_event="at-e" width="35" icon="icons/16px/minus" height="30" appearance="buttons/subtle/split/left/button">
+						<record id="primary_icon_properties" red_replacement="normal_icon"/>
+					</widget>
+					<widget class="icon_button" id="att+" alignment="centre" icon_alignment="centre" click_event="at+e" width="35" icon="icons/16px/plus" height="30" appearance="buttons/subtle/split/right/button">
+						<record id="primary_icon_properties" red_replacement="normal_icon"/>
+					</widget>
+
+					</container>
+					<widget class="subtle_popup_button" id="atmw" select_event="atme" width="140"/>
+				</container>
+			</container>
+
+			<widget class="horizontal_divider" /> -->
+
+			<!-- table containing filter compare rules -->
+			<widget class="filter_table" id="fcrt" file="filter_panels/filter table search dialog attributes"  auto_update_filter="true" mode="fill_rows" row_spacing="2" show_move_buttons="false" show_operator_buttons="false" show_enabled_column="true" allow_filter_editing="true" using_vertical_plus_minus="false"/>
+		</container>
+	</container>
+
+</panel>
