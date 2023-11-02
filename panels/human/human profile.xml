@@ -632,11 +632,11 @@
 							<record id="object_property" get_property="objt" set_property="objt"/>
 						</widget>	
 
-						<!-- RELATIONSHIPS -->
+						<!-- RELATIONSHIPS 
 						<widget class="manager_targets_panel" id="Mtar">
 							<translation id="title" translation_id="386838" type="use" />
 							<record id="object_property" get_property="objt" set_property="objt"/>
-						</widget>
+						</widget> -->
 
 					</container>
 				</container>
