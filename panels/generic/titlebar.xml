@@ -46,7 +46,7 @@
 
                         <!-- Primary Logo -->
                         <widget class="picture" id="lgtF" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="36">
-                            <layout class="stick_to_sides_attachment" alignment="vertical" inset="6" />
+                            <layout class="stick_to_sides_attachment" alignment="vertical" inset="2" />
 
                             <attachment class="test_setting_attachment" get_setting="show_badges" default_value="true" set_property="hidden">
                                 <boolean id="value" value="false" />

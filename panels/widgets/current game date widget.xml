@@ -12,6 +12,4 @@
 
   <widget class="button" appearance="chrome/buttons/date/fm23/button" id="actn" click_event="opcl" height="42"  focus_appearance="chrome/buttons/date/button_controller"/>
 
-
-
 </panel>

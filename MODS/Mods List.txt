@@ -10,3 +10,9 @@ E. WTCS5 Player Photo
  - Adds the old player photo positioning in WTCS 5, which is more to the right of the default panel.
 F. Alternate Kits on Club Overview
  - Adds kit colour boxes underneath kit graphics on Club Overview screen
+H. Content Creator Match UI Layout
+ - Removes extra information on left hand side of match screen to prevent content being covered by facecams. Also pushes the player ratings to right to ensure nothing is being covered
+I. Instant Result
+ - Not usable yet.
+J. New Tactics Icons
+ - An alternate icon to be used on the tactic screen
