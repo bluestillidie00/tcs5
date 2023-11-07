@@ -1,0 +1,1003 @@
+<!--
+this file contains a list of all of the sections in the game
+--><properties>
+	<string id="text" value="Sidebar" />
+	<list id="items">
+
+		<!--home section-->
+		<record id="home">
+			<list id="items">
+				<!--home-->
+				<record id="Psnp" human_object_type="HOTh" />
+				<!--my profile-->
+				<record id="MyPr">
+					<translation id="text" translation_id="381645" type="use" value="[%person#1-My] Profile[COMMENT: FR 8973 - title for human profile section]" />
+					<list id="items">
+						<!--profile-->
+						<record id="Phum" human_object_type="HOTh" />
+						<!--information-->
+						<record id="Ppin" human_object_type="HOTh" />
+						<record id="----" />
+						<!--actions-->
+						<!--Coaching Course suggestion (Club)-->
+						<record id="ccra" item_type="ACTT" human_object_type="HOTh" />
+						<!--retire-->
+						<record id="Pret" item_type="ACTT" human_object_type="HOTh" />
+						<!--go on holiday-->
+						<record id="PGoH" item_type="ACTT" human_object_type="HOTh" />
+						<!--Force Continue-->
+						<record id="forc" item_type="ACTT" human_object_type="HOTh" />
+						<!--Force Holiday-->
+						<record id="forh" item_type="ACTT" human_object_type="HOTh" />
+						<!--Kick User-->
+						<record id="kick" item_type="ACTT" human_object_type="HOTh" />
+						<!--Ban User-->
+						<record id="bane" item_type="ACTT" human_object_type="HOTh" />
+						<!--Message other human-->
+						<record id="mooh" item_type="ACTT" human_object_type="HOTh" />
+						<!--relinquish control-->
+						<record id="PRLQ" item_type="ACTT" human_object_type="HOTh" />
+					</list>
+				</record>
+				<!--my contract-->
+				<record id="MyCo">
+					<translation id="text" translation_id="381643" type="use" value="[%person#1-My] Contract[COMMENT: FR 8973 - title for human contract section]" />
+					<list id="items">
+						<!--contract info-->
+						<record id="Pcnr" human_object_type="HOTh" />
+						<!--contract offer-->
+						<record id="PctO" human_object_type="HOTh" />
+						<record id="----" />
+						<!--actions-->
+						<!--resign-->
+						<record id="Hres" item_type="ACTT" human_object_type="HOTh" />
+					</list>
+				</record>
+				<!--promises-->
+				<record id="Mpro" human_object_type="HOTh" />
+				<!--targets-->
+				<record id="Mtar" human_object_type="HOTh" />
+				<!--relationships-->
+				<record id="Mrel" human_object_type="HOTh" />
+				<!--my history-->
+				<record id="MyHi">
+					<translation id="text" translation_id="381644" type="use" value="[%person#1-My] History[COMMENT: FR 8973 - title for human contract section]" />
+					<list id="items">
+						<!--history overview-->
+						<record id="Pmhr" human_object_type="HOTh" />
+						<!--club history-->
+						<record id="Mchp" human_object_type="HOTh" />
+						<!--My Manager Timeline-->
+						<record id="mDyT" human_object_type="HOTh" />
+						<!--biography-->
+						<record id="PBio" human_object_type="HOTh" />
+						<!--conversations-->
+						<record id="PHme" human_object_type="HOTh" />
+						<!--press conferences-->
+						<record id="PHpc" human_object_type="HOTh" />
+						<!--debug-->
+						<record id="PHdb" human_object_type="HOTh" />
+						<record id="----" />
+						<!--Keep data about person when he retires -->
+						<record id="krpd" item_type="ACTT" />
+					</list>
+				</record>
+				<!--notebook-->
+				<record id="Pntb" human_object_type="HOTh" />
+				<!-- welcome to club -->
+				<record id="Twtc" human_object_type="HOTt" />
+				<!--debug-->
+				<record id="MyDe" ISda="true">
+					<string id="text" value="Debug" />
+					<list id="items">
+						<!--debug-->
+						<record id="Pdbg" human_object_type="HOTh" />
+						<!--debug processing-->
+						<record id="Prcp" human_object_type="HOTh" />
+                        <!--debug processing - deadline day-->
+                        <record id="Prdd" human_object_type="HOTh" />
+						<!--debug dynamic images-->
+						<record id="Pdyn" human_object_type="HOTh" />
+						<!--narratives-->
+						<record id="Psdn" human_object_type="HOTh" />
+						<!--debug relationships-->
+						<record id="PRel" human_object_type="HOTh" />
+						<record id="----" />
+						<!--actions-->
+						<!--Debug-->
+						<record id="debp" item_type="ACTT" human_object_type="HOTh" ISda="true" />
+					</list>
+				</record>
+				<record id="TspL" />
+
+			</list>
+		</record>
+
+        <!-- transfer deadline day section -->
+        <record id="TDDy">
+            <list id="items">
+                <!--Transfer Deadline Day Overview-->
+                <record id="Ptdd" human_object_type="HOTh" />
+                <!--Transfer Deadline Day News (opted in)-->
+                <record id="Ptwd" human_object_type="HOTh" />
+            </list>
+        </record>
+
+		<!--inbox section-->
+		<record id="inbo">
+			<list id="items">
+				<!--inbox-->
+				<record id="Pibx" human_object_type="HOTh" />
+				<!-- news feed -->
+				<record id="Pnfd" human_object_type="HOTh" />
+				<!--press conferences-->
+				<record id="PprC" human_object_type="HOTh" />
+				<!--recruitment meetings-->
+				<record id="PrMD" human_object_type="HOTh" />
+				<!--backroom advice meeting-->
+				<record id="PBAm" human_object_type="HOTh" />
+				<!--end of season review-->
+				<record id="PesR" human_object_type="HOTh" />
+				<!--press conference summary-->
+				<record id="PrCS" human_object_type="HOTh" />
+				<!--world news-->
+				<record id="Pnws" human_object_type="HOTh" />
+				<!--leagues overview-->
+				<record id="Pnlf" human_object_type="HOTh" />
+				<!--continent overview-->
+				<record id="Pnwd" human_object_type="HOTh" />
+                <!--Transfer Deadline Day News (opted out)-->
+                <record id="Ptwo" human_object_type="HOTh" />
+			</list>
+		</record>
+
+		<!--schedule section-->
+		<record id="sche">
+			<list id="items">
+				<!--full schedule-->
+				<record id="Pcal" human_object_type="HOTh" />
+				<!--calendar filtered events-->
+				<record id="PcEv" human_object_type="HOTh" />
+				<!--calendar filtered reminders-->
+				<record id="PcRe" human_object_type="HOTh" />
+				<!--add team fixtures here-->
+			</list>
+		</record>
+
+		<!--job centre section-->
+		<record id="jobc">
+			<list id="items">
+				<!--job centre-->
+				<record id="Pjjc" human_object_type="HOTh" />
+			</list>
+		</record>
+
+		<!--job security section-->
+		<record id="jobs">
+			<list id="items">
+				<!--job centre-->
+				<record id="Pjjs" human_object_type="HOTh" />
+			</list>
+		</record>
+
+		<!--squad section (club)-->
+		<record id="squC">
+			<list id="items">
+				<!--players-->
+				<record id="Play">
+					<translation id="text" translation_id="257300" type="use" value="Overview[COMMENT: Overview menu item on the notes view menu]" />
+					<list id="items">
+						<!--player list-->
+						<record id="TeSq" human_object_type="HOTt" />
+						<!--numbers-->
+						<record id="TeSN" human_object_type="HOTt" />
+						<!--registration-->
+						<record id="*ssl" human_object_type="HOTt" />
+						<!--all player list-->
+						<record id="Capl" human_object_type="HOTc" type="15" />
+						<record id="----" />
+						<!--actions-->
+						<!--Export-->
+						<record id="TExa" item_type="ACTT" human_object_type="HOTt" />
+					</list>
+				</record>
+				<!--international-->
+				<record id="Inte">
+					<translation id="text" translation_id="227820" type="use" value="International" />
+					<list id="items">
+						<!--match reports-->
+						<record id="tifp" human_object_type="HOTc" />
+						<!--availability-->
+						<record id="TCii" human_object_type="HOTc" />
+					</list>
+				</record>
+				<!--group unhappiness-->
+				<record id="Trgu" item_type="ACTT" human_object_type="HOTt" />
+				<record id="----" />
+				<!--actions-->
+				<!--debug-->
+				<record id="TDbg" item_type="ACTT" human_object_type="HOTt" ISda="true" />
+			</list>
+		</record>
+
+		<!--squad planner section-->
+		<record id="plaC">
+			<list id="items">
+				<!--squad planner-->
+				<record id="TeSP" human_object_type="HOTt" />
+				<!--squad planner national teams-->
+				<record id="TSPn" human_object_type="HOTt" />
+				<!--experience matrix-->
+				<record id="trxm" human_object_type="HOTt" />
+				<!--report-->
+				<record id="anaL">
+					<translation id="text" translation_id="335267" type="use" value="Report[COMMENT: scout report panel box heading]" />
+					<list id="items">
+						<!-- best xi-->
+						<record id="bsxi" human_object_type="HOTt" />
+						<!--squad depth-->
+						<record id="sddh" human_object_type="HOTt" />
+						<!--assistant manager report-->
+						<record id="TrAM" human_object_type="HOTt" />
+						<!--stats-->
+						<record id="tcis" human_object_type="HOTt" />
+						<!--facts-->
+						<record id="tcif" human_object_type="HOTt" />
+						<!--form-->
+						<record id="tcfo" human_object_type="HOTt" />
+						<!--comparison-->
+						<record id="atan" human_object_type="HOTt" />
+					</list>
+				</record>
+			</list>
+		</record>
+
+		<!--Injuries section-->
+		<record id="Inju">
+			<list id="items">
+				<!--overview-->
+				<record id="InOv" human_object_type="HOTt" />
+				<!--risk assesment-->
+				<record id="InRA" human_object_type="HOTt" />
+				<!-- current injuries -->
+				<record id="InCI" human_object_type="HOTt" />
+				<!--historical injuries -->
+				<record id="InIn" human_object_type="HOTt" />
+				<!--season summary-->
+				<record id="InSS" human_object_type="HOTt" />
+			</list>
+		</record>
+
+		<!--squad section (nation)-->
+		<record id="squN">
+			<list id="items">
+				<!--players-->
+				<record id="Play">
+					<translation id="text" translation_id="232113" type="use" value="Players" />
+					<list id="items">
+						<!--player list-->
+						<record id="TeSq" human_object_type="HOTt" />
+						<!--numbers-->
+						<record id="TeSN" human_object_type="HOTt" />
+						<!--registration-->
+						<record id="*ssl" human_object_type="HOTt" />
+						<!--all player list-->
+						<record id="Capl" human_object_type="HOTc" type="15" />
+						<record id="----" />
+						<!--actions-->
+						<!--Export-->
+						<record id="TExa" item_type="ACTT" human_object_type="HOTt" />
+					</list>
+				</record>
+				<record id="anaL">
+					<translation id="text" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+					<list id="items">
+						<!--stats-->
+						<record id="tcis" human_object_type="HOTt" />
+						<!--facts-->
+						<record id="tcif" human_object_type="HOTt" />
+						<!--form-->
+						<record id="tcfo" human_object_type="HOTt" />
+						<!--comparison-->
+						<record id="atan" human_object_type="HOTt" />
+					</list>
+				</record>
+				<!--assistant manager report-->
+				<record id="TrAM" human_object_type="HOTt" />
+				<!--squad depth-->
+				<record id="sddh" human_object_type="HOTt" />
+				<!--team meeting-->
+				<record id="TeMt" human_object_type="HOTt" />
+				<!-- team meeting summary -->
+				<record id="TeMS" human_object_type="HOTt" />
+				<record id="----" />
+				<!--actions-->
+				<!--debug-->
+				<record id="TDbg" item_type="ACTT" human_object_type="HOTt" ISda="true" />
+			</list>
+		</record>
+
+		<!--tactics section-->
+		<record id="tact">
+			<list id="items">
+				<!--overview-->
+				<record id="tacO" human_object_type="HOTt" />
+				<!--team instructions-->
+				<record id="tacT" human_object_type="HOTt" />
+				<!--player instructions-->
+				<record id="tacP" human_object_type="HOTt" />
+				<!--set pieces-->
+				<record id="tcSP" human_object_type="HOTt" />
+				<!--penalties-->
+				<record id="tacN" human_object_type="HOTt" />
+				<!--captains-->
+				<record id="tacC" human_object_type="HOTt" />
+				<!--match plans-->
+				<record id="tacW" />
+				<!--opposition instructions-->
+				<record id="tacI" human_object_type="HOTt" />
+				<!--debug team selector-->
+				<record id="tTaD" human_object_type="HOTt" />
+				<record id="TacD" human_object_type="HOTt" />
+			</list>
+		</record>
+		<!--training section-->
+		<record id="trai">
+			<list id="items">
+				<!--overview-->
+				<record id="TeOv" human_object_type="HOTt" />
+				<!--Calendar-->
+				<record id="ttcP" human_object_type="HOTt" />
+				<!--Schedule-->
+				<record id="TtSh" human_object_type="HOTt" />
+				<!--Units-->
+				<record id="TeUn" human_object_type="HOTt" />
+				<!--Match Preparation-->
+				<record id="TeMP" human_object_type="HOTt" />
+				<!--Mentoring-->
+				<record id="TeMn" human_object_type="HOTt" />
+
+				<!--individual-->
+				<record id="TeTi" human_object_type="HOTt" />
+				<!--rest-->
+				<record id="TeTR" human_object_type="HOTt" />
+
+				<!--coach assignments-->
+				<record id="TeTc" human_object_type="HOTt" />
+			</list>
+		</record>
+
+		<!--Chemistry section-->
+		<record id="dyna">
+			<list id="items">
+				<!--Dressing Room Overview-->
+				<record id="tHOv" human_object_type="HOTt" />
+
+				<!--Team Hierarchy-->
+				<record id="tHie" human_object_type="HOTt" />
+				<!--Team Social Groups-->
+				<record id="tHSg" human_object_type="HOTt" />
+				<!--Team Happiness-->
+				<record id="tHap" human_object_type="HOTt" />
+				<!--Fines summary-->
+				<record id="tFin" human_object_type="HOTc" />
+				<!--team meeting-->
+				<record id="TeMt" human_object_type="HOTt" />
+				<!-- team meeting summary -->
+				<record id="TeMS" human_object_type="HOTt" />
+				<!--assistant team talk feedback-->
+				<record id="tAsF" human_object_type="HOTt" />
+				
+				<!--debug-->
+				<record id="Debu" ISda="true">
+					<string id="text" value="Debug" />
+					<list id="items">
+						<!--Code of Conduct-->
+						<record id="cocs" human_object_type="HOTc" />
+					</list>
+				</record>
+				
+			</list>
+		</record>
+
+		<!--Data Hub section-->
+		<record id="datH">
+			<list id="items">
+				<!--Data Hub Overview-->
+				<record id="DHtO" human_object_type="HOTt" />
+
+				<!--Data Hub Team Analytics-->
+				<record id="dhTe">
+					<translation id="text" translation_id="243484" type="use" value="Team[COMMENT:player history screen heading]" />
+					<list id="items">
+						<record id="DHtA" human_object_type="HOTt" />
+						<!--analyst report-->
+						<record id="TrAr" human_object_type="HOTt" />
+						<!--shots-->
+						<record id="shan" human_object_type="HOTt" />
+					</list>
+				</record>
+				<!--Data Hub Player Analytics-->
+				<record id="DHpA" human_object_type="HOTt" />
+
+				<record id="matc">
+					<translation id="text" translation_id="257238 " type="use" value="Matches" />
+					<list id="items">
+						<!--Last Match Overview-->
+						<record id="DHLM" human_object_type="HOTt" />
+						<!--last 5 match analysis-->
+						<record id="TeRM" human_object_type="HOTt" />
+					</list>
+				</record>
+				<record id="oppo">
+					<translation id="text" translation_id="336506" type="use" value="Next Opponent[COMMENT: sections.xml, sub section of the Fixtures page, displays the team's next opponent]" />
+					<list id="items">
+						<!--opposition overview-->
+						<record id="Tpor" human_object_type="HOTt" />
+						<!--Opposotion Analytics-->
+						<record id="DHoA" human_object_type="HOTt" />
+						<!--scout report-->
+						<record id="tpsr" human_object_type="HOTt" />
+						<!--analyst report-->
+						<record id="tPha" human_object_type="HOTt" />
+						<!--stats pack-->
+						<record id="tSTP" human_object_type="HOTt" />
+					</list>
+				</record>
+				<!--Past Meetings-->
+				<record id="TePM" human_object_type="HOTt" />
+			</list>
+		</record>
+		<!--competitions section-->
+		<record id="Comp">
+			<list id="items">
+				<!--overview -->
+				<record id="comp" human_object_type="HOTt" />
+			</list>
+		</record>
+
+		<!--scouting section (unemployed)-->
+		<record id="scoU">
+			<list id="items">
+				<!--search players-->
+				<record id="srpl" human_object_type="HOTh" />
+				<!--search staff-->
+				<record id="srst" human_object_type="HOTh" />
+				<!--shortlist-->
+				<record id="shtl" human_object_type="HOTh" />
+				<!--staff shortlist-->
+				<record id="pssh" human_object_type="HOTh" />
+			</list>
+		</record>
+
+		<!--scouting section (club)-->
+		<record id="scoC">
+			<list id="items">
+
+				<!--Overview-->
+				<record id="tsov" human_object_type="HOTh" />
+				
+				<!--Scouting Centre-->
+				<record id="tssc" human_object_type="HOTc" />
+
+				<record id="play">
+					<translation id="text" translation_id="232113" type="use" value="Players" />
+					<list id="items">
+						<!--player search-->
+						<record id="plas" human_object_type="HOTc" />
+						<!--scouted players-->
+						<record id="sasp" human_object_type="HOTc" />
+					</list>
+				</record>
+
+				<!--draft player search-->
+				<record id="drfS" human_object_type="HOTc" />
+				
+				<record id="assi">
+					<translation id="text" translation_id="509169" type="use" value="Recruitment Focus[COMMENT: AREA: Scouting/Recruitment; SUB-AREA:Recruitment focus dialog; FR-BN: 24174; NOTE: Recruitment focus dialog title]" />
+					<list id="items">
+						<!--Recruitment Focus-->
+						<record id="rcfc" human_object_type="HOTh" />
+						<!--scout queue (club)-->
+						<record id="tspo" human_object_type="HOTc" />
+					</list>
+				</record>
+
+
+				<!--Scouting Coverage-->
+				<record id="tscv">
+					<translation id="text" translation_id="557615" type="use" value="Scouting Coverage[COMMENT: AREA: Scouting; SUB-AREA: Scouting Coverage; FR-BN: FM-4038; NOTE: section title for the new Scouting Coverage area, which merges Scout Assignments and Knowledge]" />
+					<list id="items">
+						<!--Scouting Coverage-->
+						<record id="tkno" human_object_type="HOTc" />
+						<!--Match and Team Analysis-->
+						<record id="tmta" human_object_type="HOTc" />
+						<!--team report queue (club)-->
+						<record id="trpo" human_object_type="HOTc" />
+					</list>
+				</record>
+
+				<!--Shortlist-->
+				<record id="shls">
+					<translation id="text" translation_id="227994" type="use" value="Shortlist" />
+					<list id="items">
+						<!--shortlist-->
+						<record id="ssht" human_object_type="HOTc" />
+						<!--discard list-->
+						<record id="tsdl" human_object_type="HOTc" />
+					</list>
+				</record>
+
+			</list>
+		</record>
+
+		<!--scouting section (nation)-->
+		<record id="scoN">
+			<list id="items">
+				<!--scouting centre-->
+				<record id="tssc" human_object_type="HOTc" />
+
+				<record id="play">
+					<translation id="text" translation_id="232113" type="use" value="Players" />
+					<list id="items">
+						<!--player search-->
+						<record id="plas" human_object_type="HOTc" />
+						<!--scouted players-->
+						<record id="sasp" human_object_type="HOTc" />
+						<!--analyzed players-->
+						<record id="saap" human_object_type="HOTc" />
+						<!--discard list-->
+						<record id="tsdl" human_object_type="HOTc" />
+						<!--recent-->
+						<record id="rcnt" human_object_type="HOTc" />
+					</list>
+				</record>
+
+				<record id="assi">
+					<translation id="text" translation_id="251956" type="use" value="Assignments[COMMENT - team screen section; Scouting; title; current assignments]" />
+					<list id="items">
+						<!--assignments-->
+						<record id="tstp" human_object_type="HOTc" />
+						<!--scout queue (club)-->
+						<record id="tspo" human_object_type="HOTc" />
+						<!--team report queue (club)-->
+						<record id="trpo" human_object_type="HOTc" />
+					</list>
+				</record>
+			</list>
+		</record>
+
+		<!--transfers section-->
+		<record id="tran">
+			<list id="items">
+				<!--overview-->
+				<record id="trcn" human_object_type="HOTc" />
+				<!--director of football-->
+				<record id="cdof">
+					<translation id="text" translation_id="227972" type="use" value="Director of Football" />
+					<list id="items">
+						<record id="tarl" human_object_type="HOTh" />
+						<record id="unwl" human_object_type="HOTh" />
+						<record id="devl" human_object_type="HOTh" />
+						<record id="----" />
+						<!--actions-->
+						<record id="Cdof" item_type="ACTT" human_object_type="HOTh" />
+					</list>
+				</record>
+				<!--clauses-->
+				<record id="tcft" human_object_type="HOTc" />
+				<!--transfer history-->
+				<record id="tctp" human_object_type="HOTc" />
+				<!--trade-->
+				<record id="mlsT" human_object_type="HOTc" />
+				<!--draft allocations-->
+				<record id="tdra" human_object_type="HOTc" />
+				<!--offer to MLS clubs-->
+				<record id="offM" human_object_type="HOTc" />
+
+				<!-- debug Transfers -->
+				<record id="cdtr" human_object_type="HOTc" />
+			</list>
+		</record>
+
+		<!--club section-->
+		<record id="club">
+			<list id="items">
+				<!--overview-->
+				<record id="tciG" human_object_type="HOTc" />
+				<!--information-->
+				<record id="csio" human_object_type="HOTc" />
+				<!--headlines-->
+				<record id="clnw" human_object_type="HOTc" />
+				<!--facilities-->
+				<record id="tcfa" human_object_type="HOTc" />
+				<!--affiliates-->
+				<record id="Affi">
+					<translation id="text" translation_id="339559" type="use" value="Affiliates[COMMENT: News item category (type) in 'Inbox']" />
+					<list id="items">
+						<!--affiliated clubs-->
+						<record id="tafi" human_object_type="HOTc" />
+						<!--proposals-->
+						<record id="fepr" human_object_type="HOTc" />
+					</list>
+				</record>
+				<!--history-->
+				<record id="Hist">
+					<translation id="text" translation_id="229719" type="use" value="History" />
+					<list id="items">
+						<!--overview-->
+						<record id="trov" human_object_type="HOTc" />
+						<!--competitions-->
+						<record id="cmps" human_object_type="HOTc" />
+						<!--landmarks-->
+						<record id="ldmk" human_object_type="HOTc" />
+						<!--past managers-->
+						<record id="mhis" human_object_type="HOTc" />
+						<!--records-->
+						<record id="Recs" human_object_type="HOTc" />
+						<!--best XI-->
+						<record id="trbe" human_object_type="HOTc" />
+						<!--Past players-->
+						<record id="hipl" human_object_type="HOTc" />
+						<!--notes-->
+						<record id="Tnot" human_object_type="HOTc" />
+
+					</list>
+				</record>
+				<!--debug-->
+				<record id="Debu" ISda="true">
+					<string id="text" value="Debug" />
+					<list id="items">
+						<!--kits-->
+						<record id="tcdk" human_object_type="HOTc" />
+						<!--debug-->
+						<record id="tcdp" human_object_type="HOTc" />
+						<!--shortlist-->
+						<record id="cshd" human_object_type="HOTc" />
+						<!--target-->
+						<record id="tctd" human_object_type="HOTc" />
+						<!--transfer value-->
+						<record id="tctv" human_object_type="HOTc" />
+						<!--finances debug-->
+						<record id="tcfd" human_object_type="HOTc" />
+						<!--sponsorship debug-->
+						<record id="tcds" human_object_type="HOTc" />
+						<record id="----" />
+						<!--actions-->
+						<!--debug-->
+						<record id="ClDb" item_type="ACTT" />
+					</list>
+				</record>
+			</list>
+		</record>
+
+		<!--staff section-->
+		<record id="staf">
+			<list id="items">
+				<!--staff members-->
+				<record id="Memb">
+					<translation id="text" translation_id="247414" type="use" value="Overview" />
+					<list id="items">
+						<record id="tcso" human_object_type="HOTc" />
+						<record id="tcsc" human_object_type="HOTt" />
+						<record id="tcsm" human_object_type="HOTt" />
+						<record id="tcSS" human_object_type="HOTt" />
+						<record id="tcsp" human_object_type="HOTc" />
+					</list>
+				</record>
+
+				<!--responsibilities-->
+				<record id="mnop">
+					<translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+					<list id="items">
+						<record id="mnrO" human_object_type="HOTc" />
+						<record id="mnbl" human_object_type="HOTc" />
+						<record id="mnst" human_object_type="HOTc" />
+						<record id="mnar" human_object_type="HOTc" />
+						<record id="mtar" human_object_type="HOTc" />
+						<record id="mnsc" human_object_type="HOTc" />
+						<record id="mntc" human_object_type="HOTc" />
+						<record id="mnme" human_object_type="HOTc" />
+						<record id="mntr" human_object_type="HOTc" />
+						<record id="mnta" human_object_type="HOTc" />
+						<record id="mnma" human_object_type="HOTc" />
+						<record id="mnsp" human_object_type="HOTc" />
+					</list>
+				</record>
+
+				<!--staff search-->
+				<record id="stfs" human_object_type="HOTc" />
+				<!--staff shortlist-->
+				<record id="stsh" human_object_type="HOTc" />
+				<!--job centre-->
+				<record id="Pjjc" human_object_type="HOTh" />
+				<!--job security-->
+				<record id="Pjjs" human_object_type="HOTh" />
+			</list>
+		</record>
+
+		<!--board section-->
+		<record id="boar">
+			<list id="items">
+                <record id="tcbr" human_object_type="HOTc" />
+                
+				<record id="Cono">
+					<translation id="text" translation_id="491844" type="use" value="Performance[COMMENT: AREA: Boardroom; SUB-AREA: Appraisal of Performance; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short, one word; REF-ID: n/a; NOTE: this is replacing Confidence as the singular term relating to the Boardroom and the evaluation of managerial performance]" />
+					<list id="items">
+						<!-- club confidence -->
+						<record id="tcon" human_object_type="HOTc" />
+						<!-- nation confidence -->
+						<record id="ncon" human_object_type="HOTc" />
+						<!-- nation competition performance -->
+						<record id="tccp" human_object_type="HOTc" />
+						<!-- club match performance -->
+						<record id="tcma" human_object_type="HOTc" />
+						<!-- nation match performance -->
+						<record id="ncma" human_object_type="HOTc" />
+						<!-- club transfer activity -->
+						<record id="tctc" human_object_type="HOTc" />
+						<!-- club tactics performance -->
+						<record id="tacc" human_object_type="HOTc" />
+						<!-- nation tactics performance -->
+						<record id="nacc" human_object_type="HOTc" />
+						<!-- club squad performance -->
+						<record id="tsqc" human_object_type="HOTc" />
+					</list>
+				</record>
+				
+				<record id="Supp">
+					<translation id="text" translation_id="447646" type="use" value="Supporters[COMMENT:Team Dynamics: header for the supporters' take on the manager's level of support within the squad]" />
+					<list id="items">
+						<!--Supporter Profile-->
+						<record id="supp" human_object_type="HOTc" />
+						<!--International Supporters-->
+						<record id="gsup" human_object_type="HOTc" />
+					</list>
+				</record>
+
+        <record id="BoPr" human_object_type="HOTc" />
+
+				<record id="sppo" human_object_type="HOTc" />
+
+				<!-- club ambitions meeting -->
+				<record id="Cvim" human_object_type="HOTc" />
+
+				<!-- debug club ambitions -->
+				<record id="cdam" human_object_type="HOTc" />
+
+				<!--meeting-->
+				<record id="breq" human_object_type="HOTc" />
+				<!-- meeting summary -->
+				<record id="brqS" human_object_type="HOTc" />
+
+        <!--actions-->
+        <!--Buy 3rd DP Slot (Club)-->
+        <record id="Cxdp" item_type="ACTT" human_object_type="HOTc" />
+			</list>
+		</record>
+
+		<!--finances section-->
+		<record id="fina">
+			<translation id="text" translation_id="229821" type="use" value="Finances" />
+			<list id="items">
+				<!--overview-->
+				<record id="tfin" human_object_type="HOTc" />
+				<!--income-->
+				<record id="tFii" human_object_type="HOTc" />
+				<!--expenditure-->
+				<record id="tFie" human_object_type="HOTc" />
+				<!--salary-->
+				<record id="Salm">
+					<translation id="text" translation_id="242353" type="use" value="Wages" />
+					<list id="items">
+						<!--salary summary-->
+						<record id="tFis" human_object_type="HOTc" />
+						<!--salary commitments-->
+						<record id="tFSC" human_object_type="HOTc" />
+						<!--Fines summary-->
+						<record id="cFin" human_object_type="HOTc" />
+					</list>
+				</record>
+
+				<!--financial fair play-->
+				<record id="FFPm">
+					<translation id="text" translation_id="383321" type="use" value="FFP[COMMENT:Financial Fair Play (FFP) label]" />
+					<list id="items">
+						<!--financial fair play summary-->
+						<record id="tFfp" human_object_type="HOTc" />
+						<!--financial fair play salary-->
+						<record id="tFpS" human_object_type="HOTc" />
+					</list>
+				</record>
+
+				<!--debt and Loans-->
+				<record id="tFid" human_object_type="HOTc" />
+				<!--sponsors-->
+				<record id="tFiS" human_object_type="HOTc" />
+				<!--projection-->
+				<record id="tFip" human_object_type="HOTc" />
+				<!--league specific-->
+				<record id="tFls" human_object_type="HOTc" />
+
+			</list>
+		</record>
+
+		<!--national pool section-->
+		<record id="pool">
+			<list id="items">
+				<!--national pool-->
+				<record id="tcnp" human_object_type="HOTc" />
+				<!--national pool reports-->
+				<record id="ncfp" human_object_type="HOTc" />
+			</list>
+		</record>
+
+		<!--nation section-->
+		<record id="nati">
+			<list id="items">
+				<!--profile-->
+				<record id="NovP" human_object_type="HOTc" />
+				<!--general-->
+				<record id="nsio" human_object_type="HOTc" />
+				<!--facilities-->
+				<record id="tcfa" human_object_type="HOTc" />
+				<!--clubs-->
+				<record id="Club">
+					<translation id="text" translation_id="336223" type="use" value="Clubs[COMMENT: title for a panel displaying all club sides in a given nation]" />
+					<list id="items">
+						<!--clubs-->
+						<record id="tccl" human_object_type="HOTc" />
+						<!--finances-->
+						<record id="Nfin" human_object_type="HOTc" />
+						<!--transfers-->
+						<record id="natr" human_object_type="HOTc" />
+					</list>
+				</record>
+				<!--awards-->
+				<record id="Awar">
+					<translation id="text" translation_id="292587" type="use" value="Awards[COMMENT: title for top level Awards menu]" />
+					<list id="items">
+						<!--winners-->
+						<record id="tcaw" human_object_type="HOTc" />
+						<!--voting-->
+						<record id="tcav" human_object_type="HOTc" />
+					</list>
+				</record>
+				<!-- News -->
+				<record id="News">
+					<translation id="text" translation_id="230330" type="use" value="News" />
+					<list id="items">
+						<!--news-->
+						<record id="nsnw" human_object_type="HOTc" />
+						<!--league overview-->
+						<record id="nslo" human_object_type="HOTc" />
+					</list>
+				</record>
+				<!--season summary-->
+				<record id="tcss" />
+				<!--history-->
+				<record id="Hist">
+					<translation id="text" translation_id="229719" type="use" value="History" />
+					<list id="items">
+						<!--overview-->
+						<record id="trov" human_object_type="HOTc" />
+						<!--competitions-->
+						<record id="cmps" human_object_type="HOTc" />
+						<!--landmarks-->
+						<record id="ldmk" human_object_type="HOTc" />
+						<!--past managers-->
+						<record id="mhis" human_object_type="HOTc" />
+						<!--records-->
+						<record id="NRec" human_object_type="HOTc" />
+						<!--fifa rankings-->
+						<record id="fifa" human_object_type="HOTc" />
+						<!--best XI-->
+						<record id="trbe" human_object_type="HOTc" />
+						<!--notes-->
+						<record id="Tnot" human_object_type="HOTc" />
+					</list>
+				</record>
+				<!--debug-->
+				<record id="Debu" ISda="true">
+					<string id="text" value="Debug" />
+					<list id="items">
+						<!--kits-->
+						<record id="tcdk" human_object_type="HOTc" />
+						<!--debug-->
+						<record id="tcdp" human_object_type="HOTc" />
+						<!--transfer value-->
+						<record id="tctv" human_object_type="HOTc" />
+						<!--shortlist debug-->
+						<record id="nshd" human_object_type="HOTc" />
+						<!--squad selection debug-->
+						<record id="nssd" human_object_type="HOTc" />
+						<record id="----" />
+						<!--actions-->
+						<!--debug-->
+						<record id="NDbg" item_type="ACTT" />
+					</list>
+				</record>
+			</list>
+		</record>
+
+		<!--Youth development Centre section-->
+		<record id="yDcT">
+			<list id="items">
+				<!--Youth Development Centre Overview-->
+				<record id="ythD" human_object_type="HOTc" />
+				<!-- Youth Development loans-->
+				<record id="ytLp" human_object_type="HOTc" />
+				<!-- Youth Development youth candidates-->
+				<record id="ytYc" human_object_type="HOTc" />
+
+
+				<record id="staf">
+					<translation id="text" translation_id="229528" type="use" value="Staff" />
+					<list id="items">
+					</list>
+				</record>
+			</list>
+		</record>
+		<!--next match section-->
+		<record id="nxma">
+			<list id="items">
+				<record id="phmT" collapsed="false">
+					<translation id="text" translation_id="330036" type="use" value="Home Team Selection[COMMENT: sections.xml; match screen indicator text, matchday squad selection]" />
+					<list id="items">
+						<!--overview-->
+						<record id="phtc" human_object_type="HOTm" />
+						<!--team-->
+						<record id="PhcT" human_object_type="HOTm" />
+						<!--player-->
+						<record id="PhcP" human_object_type="HOTm" />
+						<!--Opposition-->
+						<record id="phOI" human_object_type="HOTm" />
+						<!--takers-->
+						<record id="PhcS" human_object_type="HOTm" />
+						<!--penalties-->
+						<record id="PhcN" human_object_type="HOTm" />
+						<!--captains-->
+						<record id="PhcC" human_object_type="HOTm" />
+						<!--squad numbers-->
+						<record id="phsn" human_object_type="HOTm" />
+					</list>
+				</record>
+				<record id="pamT" collapsed="false">
+					<translation id="text" translation_id="329730" type="use" value="Away Team Selection[COMMENT: sections.xml; match screen indicator text, matchday squad selection]" />
+					<list id="items">
+						<!--overview-->
+						<record id="patc" human_object_type="HOTm" />
+						<!--team-->
+						<record id="PacT" human_object_type="HOTm" />
+						<!--player-->
+						<record id="PacP" human_object_type="HOTm" />
+						<!--Opposition-->
+						<record id="paOI" human_object_type="HOTm" />
+						<!--takers-->
+						<record id="PacS" human_object_type="HOTm" />
+						<!--penalties-->
+						<record id="PacN" human_object_type="HOTm" />
+						<!--captains-->
+						<record id="PacC" human_object_type="HOTm" />
+						<!--squad numbers-->
+						<record id="pasn" human_object_type="HOTm" />
+					</list>
+				</record>
+
+				<!-- pre match briefings -->
+				<record id="phBR" human_object_type="HOTm" />
+				<!-- pre match briefings -->
+				<record id="paBR" human_object_type="HOTm" />
+
+				<!-- pre match briefings -->
+				<record id="phTA" human_object_type="HOTm" />
+				<!-- pre match briefings -->
+				<record id="paTA" human_object_type="HOTm" />
+
+				<!--stat pack-->
+				<record id="pmms" human_object_type="HOTm" />
+			</list>
+		</record>
+	</list>
+
+</properties>
