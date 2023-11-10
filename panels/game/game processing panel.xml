@@ -138,7 +138,7 @@
 			<container class="processing_bar" id="prog" hidden="true"/>
 
 			<!-- Ticker with stats -->
-			<container bkcl="primary" id="tikC" height="50">
+			<container bkcl="bg darker" id="tikC" height="50">
 				<layout class="arrange_horizontal_attachment" layout="24,120,24,4,-1" offset="0" gap="" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
@@ -151,7 +151,7 @@
 				<container />
 
 				<widget class="animated_wipe_fade_container" id="tick" wipe_data_trigger_id="objt" >
-					<record id="widget_info" class="property_list_viewer_xml_panel" file="game/processing prozone panel" alignment="left,centre_y" colour="secondary"/>
+					<record id="widget_info" class="property_list_viewer_xml_panel" file="game/processing prozone panel" alignment="left,centre_y" colour="white"/>
 				</widget>
 			</container>
 
