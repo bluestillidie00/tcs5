@@ -480,7 +480,7 @@
 									<widget class="horizontal_subtle_divider" height="5" />
 
 									<container>
-										<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" />
+										<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" />
 
 										<widget class="label" font="title" alignment="left,centre_y" height="20">
 											<translation id="text" translation_id="539030" type="use" value="Other Information[COMMENT: AREA: Scouting; SUB-AREA: Scouting card/report header; FR-BN: 36081; NOTES: title for area showing player transfer info]" />
