@@ -1,151 +1,226 @@
 <panel>
-    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-    <boolean id="save_session_state" value="true" />
-    <boolean id="save_default_state" value="true" />
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="save_default_state" value="true"/>
 
-    <container id="main" class="main_contrast_box" appearance="boxes/custom/inbox attachment/fm23/secondary/paper">
-        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
-        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	<container id="main" class="main_contrast_box" appearance="boxes/custom/inbox attachment/fm23/secondary/paper">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
-        <container id="MnCt">
-            <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
-            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+		<container id="MnCt">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true"/>
 
-            <container height="124" navigation_container="true">
-                <attachment_group class="vertical_arrange" vertical_gap="0" />
+            <container height="120" navigation_container="true" class="client_object_viewer_xml_panel" id="snpc">
+				<attachment_group class="vertical_arrange" vertical_gap="0"/>
 
-                <container class="inner_box_no_margin" height="120">
-                    <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="4" offset="6" />
-                    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<container class="inner_box_no_margin" height="120">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="4" offset="6"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 
-                    <!-- sender picture -->
-                    <container width="180">
-                        <layout class="arrange_horizontal_attachment" alignment="middle,extend" gap="10" />
-                        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<!-- sender picture -->
+					<container width="180">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+							<widget class="object_portrait_picture" id="sncl" scale_picture="true" image_alignment="left,centre_y" width="60">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="10"/>
+							</widget>
+					
+							<container/>
+						</container>
+						
+						<container>
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<widget class="object_portrait_picture" id="snpc" scale_picture="true" image_alignment="right,centre_y" width="60">
+								<layout class="stick_to_sides_attachment" alignment="all"/>
+															<record id="object_property" get_property="objt" set_property="objt" />
 
-                        <widget class="object_portrait_picture" id="sncl" scale_picture="true" image_alignment="left,centre_y" width="60">
-                            <layout class="stick_to_sides_attachment" alignment="all" inset="10" />
-                        </widget>
+							</widget>
 
-                        <widget class="object_portrait_picture" id="snpc" scale_picture="true" image_alignment="right,centre_y" width="60">
-                            <layout class="stick_to_sides_attachment" alignment="all" />
-                        </widget>
-                    </container>
+<!-- BUTTON TO SHOW THE ID -->
+					<widget class="button" appearance="tcs/buttons/text/button" id="cID1">
+				
+						<event id="click_event" event_id="TuiD"/>
+					
+						<!-- THIS EVENT HIDES THE ID BUTTON PANEL -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="cID1"/>
+							</record>
+						</attachment>
 
-                    <container>
-                        <attachment_group class="vertical_arrange" vertical_alignment="middle" />
+						<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="cID2"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="ibID"/>
+							</record>
+						</attachment>
+					</widget>
 
-                        <container>
-                            <attachment_group class="vertical_arrange_autosize" vertical_gap="-1"/>
+					<!-- BUTTON TO CLOSE THE ID -->
+					<widget class="button" appearance="tcs/buttons/text/button" id="cID2" hidn="true">
+				
+						<event id="click_event" event_id="TuiD"/>
+					
+						<!-- THIS EVENT HIDES THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="cID2"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS BUTTON SHOWS THE OPEN ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="cID1"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS BUTTON CLOSES THE ID -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="ibID"/>
+							</record>
+						</attachment>
+					</widget>
+						</container>
+						
+					</container>
 
-                            <record id="default_properties" alignment="left, centre_y"  auto_size="vertical" />
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
 
-                            <container id="ctco">
-                                <attachment_group class="vertical_arrange_autosize" />
-                                <record id="default_properties" alignment="left, centre_y"  auto_size="vertical" />
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="-1"/>
 
-                                <!-- TIME 
+							<record id="default_properties" alignment="left, centre_y" auto_size="vertical"/>
+
+							<container id="ctco">
+								<attachment_group class="vertical_arrange_autosize"/>
+								<record id="default_properties" alignment="left, centre_y" auto_size="vertical"/>
+
+								<!-- TIME 
                                 <widget class="text" id="time" colour="inbox_text" size="xsmall" /> -->
 
-                                <!-- CATEGORY -->
-                                <widget class="icon_button" id="catw" show_button_appearance="false" icon="icons/16px/tag" hidden="true" navigation_focus_target="false"/>
-                            </container>
+								<!-- CATEGORY -->
+								<widget class="icon_button" id="catw" show_button_appearance="false" icon="icons/16px/tag" hidden="true" navigation_focus_target="false"/>
+							</container>
                             
-                            <container height="4" />
+							<container height="4"/>
 
-                            <container>
-                                <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" />
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
                                 
-                                <record id="default_properties" style="semibold" />
+								<record id="default_properties" style="semibold"/>
 
-                                <widget class="person_button" id="snob" dolour="inbox_text" enforce_style="true" navigation_focus_target="false"  auto_size="all" alignment="left,centre_y" multiline="false" >
-                                    <record id="secondary_icon_properties" red_replacement="inbox_text" />
-                                </widget>
-                                <widget class="label" id="sjob" multiline="false" colour="inbox_text" alignment="left,centre_y" auto_size="all" />
+								<widget class="person_button" id="snob" dolour="inbox_text" enforce_style="true" navigation_focus_target="false" auto_size="all" alignment="left,centre_y" multiline="false">
+									<record id="secondary_icon_properties" red_replacement="inbox_text"/>
+								</widget>
+								<widget class="label" id="sjob" multiline="false" colour="inbox_text" alignment="left,centre_y" auto_size="all"/>
 
-                                <container height="20" id="tdco">
-                                    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5" />
-                                    <layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true" />
-                                    <widget class="text" text="-" alignment="left,top" size="small" auto_size="horizontal" colour="inbox_text" style="semibold" />
-                                    <widget class="text" id="ftim" alignment="left,top" size="small" auto_size="horizontal" colour="inbox_text" style="semibold" />
-                                </container>
-                            </container>
+								<container height="20" id="tdco">
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5"/>
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true"/>
+									<widget class="text" text="-" alignment="left,top" size="small" auto_size="horizontal" colour="inbox_text" style="semibold"/>
+									<widget class="text" id="ftim" alignment="left,top" size="small" auto_size="horizontal" colour="inbox_text" style="semibold"/>
+								</container>
+							</container>
                                                         
-                                <!-- headline -->
-                                <widget class="text" id="nwhd" auto_size="vertical" size="large" alignment="left,centre_y" colour="inbox_text" style="bold" multiline="false" />
+							<!-- headline -->
+							<widget class="text" id="nwhd" auto_size="vertical" size="large" alignment="left,centre_y" colour="inbox_text" style="bold" multiline="false"/>
+							
+							<!-- UNIQUE ID -->
+							<widget class="edit_box" width="100" height="16" select_on_focus="true" alignment="left,centre_y" navigation_focus_target="false" wants_mouse_events="true" auto_size="all" appearance="tcs/boxes/uniqueid/box" id="ibID" hidn="true">
+													<animation class="slide_in_left_animation"/>
+								<record id="object_property" get_property="id" set_property="valu"/>
+							</widget>
+						</container>
 
-                        </container>
 
+					</container>
+				</container>
 
-                    </container>
-                </container>
+				<widget class="horizontal_divider" red_replacement="inbox_text" height="1"/>
+			</container>
 
-                <widget class="horizontal_divider" red_replacement="inbox_text" height="1" />
-            </container>
+			<!-- the news item content -->
+			<container id="nwit" navigation_container="true" default_focus="true" navigation_preferred_left_target="indb" navigation_container_allow_empty="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-            <!-- the news item content -->
-            <container id="nwit" navigation_container="true" default_focus="true" navigation_preferred_left_target="indb" navigation_container_allow_empty="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<!-- inbox content panel gets added here -->
+			</container>
+		</container>
 
-                <!-- inbox content panel gets added here -->
-            </container>
-        </container>
+		<container navigation_container="true" id="boCo">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_inset="8"/>
 
-        <container navigation_container="true" id="boCo">
-            <attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_inset="8"/>
+			<!-- news effects -->
+			<container id="NEcn">
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
 
-            <!-- news effects -->
-            <container id="NEcn">
-                <attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+				<!-- effects panels added here -->
+			</container>
 
-                <!-- effects panels added here -->
-            </container>
+			<!--  response button containers -->
+			<container id="ResC" class="inner_contrast_box_no_margin" red_replacement="bg tertiary" hidden="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="4">
+					<global id="horizontal_gap" name="ui.button_row_gap"/>
+				</attachment_group>
 
-            <!--  response button containers -->
-            <container id="ResC" class="inner_contrast_box_no_margin" red_replacement="bg tertiary" hidden="true">
-                <attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="4">
-                    <global id="horizontal_gap" name="ui.button_row_gap" />
-                </attachment_group>
+				<container id="mrcn" hidden="true">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0">
+						<global id="gap" name="ui.button_row_gap"/>
+					</layout>
 
-                <container id="mrcn" hidden="true">
-                    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
-                    <layout class="arrange_horizontal_attachment" alignment="right" offset="0">
-                        <global id="gap" name="ui.button_row_gap" />
-                    </layout>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
 
-                    <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+					<string id="skin_style" value="inbox text"/>
+				</container>
 
-                    <string id="skin_style" value="inbox text" />
-                </container>
+				<container id="abcn" hidden="true">
+					<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0"/>
+					<layout class="arrange_horizontal_attachment" alignment="right" wrap="true" offset="0">
+						<global id="gap" name="ui.button_row_gap"/>
+					</layout>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+				</container>
 
-                <container id="abcn" hidden="true">
-                    <layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
-                    <layout class="arrange_horizontal_attachment" alignment="right" wrap="true" offset="0">
-                        <global id="gap" name="ui.button_row_gap" />
-                    </layout>
-                    <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
-                </container>
+				<container id="lbcn" hidden="true">
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right">
+						<global id="horizontal_gap" name="ui.button_row_gap"/>
+					</attachment_group>
 
-                <container id="lbcn" hidden="true">
-                    <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right">
-                        <global id="horizontal_gap" name="ui.button_row_gap" />
-                    </attachment_group>
+					<widget class="button" id="socn" auto_size="all" fixed="true" hidden="true" appearance="buttons/custom/inbox/button">
+						<translation id="text" translation_id="316579" type="use" value="Social Networks[COMMENT: Button where user can select social networks]"/>
+						<translation id="hint" translation_id="316580" type="use" value="Update Social Networks[COMMENT: Button where user can update social networks]"/>
+					</widget>
+				</container>
 
-                    <widget class="button" id="socn" auto_size="all" fixed="true" hidden="true" appearance="buttons/custom/inbox/button">
-                        <translation id="text" translation_id="316579" type="use" value="Social Networks[COMMENT: Button where user can select social networks]" />
-                        <translation id="hint" translation_id="316580" type="use" value="Update Social Networks[COMMENT: Button where user can update social networks]" />
-                    </widget>
-                </container>
+				<container height="30" id="sbcn" hidden="true">
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0">
+						<global id="gap" name="ui.button_row_gap"/>
+					</layout>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+				</container>
+			</container>
 
-                <container height="30" id="sbcn" hidden="true">
-                    <layout class="arrange_horizontal_attachment" alignment="right" offset="0">
-                        <global id="gap" name="ui.button_row_gap" />
-                    </layout>
-                    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-                </container>
-            </container>
-
-        </container>
-    </container>
+		</container>
+	</container>
 </panel>
