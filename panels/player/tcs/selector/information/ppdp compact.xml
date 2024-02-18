@@ -53,11 +53,11 @@
 		</container> -->
 	</container>
 
-	<!-- PLAYER EXTRA DETAILS (E.G. ONLOAN AT...) -->
+	<!-- PLAYER EXTRA DETAILS (E.G. ONLOAN AT...) 
 	<container class="tcs_table_trans" height="14">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 		<widget class="player_extra_details_text" size="small" colour="fg accent" alignment="centre_x,centre_y" height="14">
 			<record id="object_property" get_property="PExD" />
 		</widget>
-	</container>
+	</container> -->
 </panel>
