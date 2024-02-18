@@ -1,0 +1,148 @@
+<!-- A panel allowing the user to choose any active league and get an overview of it's current state -->
+<panel save_session_state="true" navigation_container="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top, extend"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+		<container class="horizontal_arrange_container" alignment="right,extend" inset="0" gap="0" offset="0" auto_size="vertical" stick_embedded="top">
+			<widget class="comp_button" id="comp" style="bold" auto_size="vertical">
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+			</widget>
+			<widget class="popup_button" id="popu" height="30" width="30" auto_tick_exclusive="true" fixed="true" appearance="buttons/custom/over state only/button"/>
+		</container>
+
+		<container class="horizontal_arrange_container" alignment="fill" inset="0" gap="20" offset="0">
+		<!-- 	<container class="competition_news_panel" id="news" file="none" maximum_items="8" parent="LiFP">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<container id="none" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10"/>
+
+					<widget class="text" multiline="true" alignment="centre" colour="faded text">
+						<translation id="text" translation_id="395483" type="use" value="There is currently no news to display for this competition.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]"/>
+					</widget>
+				</container>
+
+				<container id="NwLt" class="vertical_adaptive_container" mode="dont_distribute" inset="0" gap="0" offset="0">
+
+					<container class="horizontal_arrange_container" alignment="left" inset="0" gap="0" offset="0" index="0" auto_size="vertical" priority="1">
+						<string id="skin_style" value="title link"/>
+
+						<widget class="link_button" section="csnw" auto_size="all" >
+							<translation id="text" translation_id="320583" type="use" value="Headlines[COMMENT: major news stories from competition]"/>
+						</widget>
+					</container>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="1" height="48" priority="2"/>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="2" height="48" priority="3"/>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="3" height="48" priority="4"/>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="4" height="48" priority="5"/>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="5" height="48" priority="6"/>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="6" height="48" priority="7"/>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="7" height="48" priority="8"/>
+					<container class="competition_news_item_panel" file="competition/competition news item league overview" index="8" height="48" priority="9"/>
+				</container>
+			</container> -->
+
+			<container class="vertical_arrange_container" alignment="top,extend" inset="0" gap="0" offset="0">
+
+				<container class="horizontal_arrange_container" alignment="left" inset="0" gap="0" offset="0" auto_size="vertical">
+
+					<string id="skin_style" value="title link"/>
+
+					<widget class="link_button" section="cssp" auto_size="all">
+						<translation id="text" translation_id="242904" type="use" value="League Table[COMMENT - competition stage panel: title for league table]"/>
+					</widget>
+				</container>
+
+				<widget class="competition_stage_panel" file="none" id="leag" overview_version="true">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<!-- No game panel-->
+					<container id="nots" hidden="true">
+						<layout class="stick_to_sides_attachment" alignment="vertical"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+						<widget class="text" id="nost" alignment="centre" colour="faded text" auto_size="vertical"/>
+					</container>
+
+					<!-- group box for stage to go into -->
+					<container id="stgb">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+						<!--league stage panel-->
+						<widget class="league_stage_panel" id="lspn" hidden="true" view="over" league_table_heading_length="0"/>
+						<!--cup stage_panel-->
+						<widget class="cup_stage_panel" id="cstp" hidden="true" save_session_state="true">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset ="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+							<widget class="fixture_name_text" id="fxnm" auto_size="vertical"/>
+
+							<widget class="table" id="tabl" column_spacing="0">
+								<translation id="title" translation_id="247184" type="use" value="Cup Stage Panel"/>
+								<!-- normal table properties -->
+								<flags id="mode" value="fill_custom_rows, fill_rows, stripe_rows, keyboard, dont_ask_for_focus"/>
+								<flags id="layout" value="1, -1, 1, 1, 22, 4, 22, 1, 1, -1, 1"/>
+
+								<!-- auto size rows and save current state -->
+								<boolean id="auto_size_rows" value="true"/>
+								<boolean id="fixed_size_rows" value="false"/>
+								<boolean id="save_session_state" value="true"/>
+
+								<!-- default properties for various columns -->
+								<list id="column_widget_properties">
+									<record indx="1">
+										<flags id="alignment" value="left,centre_y"/>
+										<flags id="spec" value="text"/>
+									</record>
+									<record indx="4">
+										<flags id="alignment" value="centre"/>
+										<flags id="spec" value="text"/>
+										<colour id="colour" name="result score"/>
+									</record>
+									<record indx="5">
+										<flags id="alignment" value="centre"/>
+										<colour id="colour" name="fixture score separator"/>
+									</record>
+									<record indx="6">
+										<flags id="alignment" value="centre"/>
+										<flags id="spec" value="text"/>
+										<colour id="colour" name="result score"/>
+									</record>
+									<record indx="9">
+										<flags id="alignment" value="right,centre_y"/>
+										<flags id="spec" value="text"/>
+									</record>
+								</list>
+
+								<!-- column display properties -->
+								<list id="column_table_properties">
+									<record indx="1">
+										<flags id="id" value="htea"/>
+									</record>
+									<record indx="4">
+										<flags id="id" value="hsco"/>
+									</record>
+									<record indx="5">
+										<flags id="id" value="midc"/>
+									</record>
+									<record indx="6">
+										<flags id="id" value="asco"/>
+									</record>
+									<record indx="9">
+										<flags id="id" value="atea"/>
+									</record>
+								</list>
+							</widget>
+						</widget>
+						
+						<!--group stage scrolling box (to be filled in code)-->
+						<widget class="scrolling_box" id="gscb" hidden="true" save_session_state="true"/>
+					</container>
+				</widget>
+
+			</container>
+		</container>
+	</container>
+</panel>

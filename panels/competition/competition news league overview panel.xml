@@ -1,0 +1,60 @@
+<!-- A panel with selectors that can be costomised to give the user an overview of any active league -->
+<panel id="LiFP">
+	<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4"/>
+
+	<!-- LAYS THE PANEL OUT HORIZONTALLY -->
+	<container class="horizontal_adaptive_container" gap="8">
+
+		<!-- "MAIN" PANEL. FULL LEAGUE TABLE WITH NEWS UNDERNEATH -->
+		<container class="tcs_box" default_width="-10">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container class="competition_news_league_overview_selector_panel" id="pan1" index="0" priority="1"  file="competition/tcs/leagues in focus/main" >
+				<record id="object_property" get_property="objt" set_property="Nnat"/>
+			</container>
+		</container>
+
+		<!-- RIGHT HAND SIDE -->
+		<!-- PANEL IS LAID OUT VERTICALLY, THEN SPLITS INTO HORIZONTAL CONTAINERS -->
+		<container class="vertical_adaptive_container" inset="0" offset="0" mode="distribute_equally" id="Pnlf" draw_horizontal_dividers="true" default_width="-24">
+			<global id="gap" name="ui.main_box_gap"/>
+
+			<!-- TOP ROW, SHOWING TWO LEAGUE TABLES -->
+			<container class="horizontal_adaptive_container" inset="0" offset="0" minimum_height="100" priority="1" mode="distribute_equally" draw_vertical_dividers="true">
+				<global id="gap" name="ui.main_box_gap"/>
+
+				<record id="default_properties" file="competition/leagues in focus overview selector panel" minimum_width="470">
+					<record id="object_property" get_property="objt" set_property="Nnat"/>
+				</record>
+				<container class="competition_news_league_overview_selector_panel" id="pan2" index="0" priority="1" />
+				<container class="competition_news_league_overview_selector_panel" id="pan3" index="1" priority="2" />
+			</container>
+
+			<!-- MIDDLE ROW, SHOWING THREE LEAGUE TABLES -->
+			<container class="horizontal_adaptive_container" inset="0" offset="0" minimum_height="100" priority="2" mode="distribute_equally" draw_vertical_dividers="true">
+				<global id="gap" name="ui.main_box_gap"/>
+
+				<record id="default_properties" file="competition/leagues in focus overview selector panel" minimum_width="470">
+					<record id="object_property" get_property="objt" set_property="Nnat"/>
+				</record>
+				<container class="competition_news_league_overview_selector_panel" id="pan4" index="2" priority="1" />
+				<container class="competition_news_league_overview_selector_panel" id="pan5" index="3" priority="1" />
+				<container class="competition_news_league_overview_selector_panel" id="pan6" index="4" priority="3" />
+			</container>
+
+			<!-- BOTTOM ROW, SHOWING TWO LEAGUE TABLES -->
+			<container class="horizontal_adaptive_container" inset="0" offset="0" minimum_height="100" priority="3" mode="distribute_equally" draw_vertical_dividers="true">
+				<global id="gap" name="ui.main_box_gap"/>
+
+				<record id="default_properties" file="competition/leagues in focus overview selector panel" minimum_width="470">
+					<record id="object_property" get_property="objt" set_property="Nnat"/>
+				</record>
+
+				<container class="competition_news_league_overview_selector_panel" id="pan7" index="6" priority="1" />
+				<container class="competition_news_league_overview_selector_panel" id="pan8" index="7" priority="2" />
+			</container>
+		</container>
+		
+	</container>
+
+</panel>
