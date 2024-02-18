@@ -21,7 +21,7 @@
 	</container>
 
 	<!-- BACK ZOOMED OUT -->
-	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/backzoomed" id="bkzm" valid_for_unemployed_player="false" >
+	<container class="client_object_viewer_xml_panel" file="player/tcs/selector/header/playerpic/back_full_dummy" id="bkzm" valid_for_unemployed_player="false" >
 		<translation id="title" type="use" value="Back of Kit (Full)" />
 	</container>
 

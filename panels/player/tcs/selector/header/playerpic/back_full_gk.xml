@@ -1,0 +1,23 @@
+<panel>
+	<!--the main background-->
+	<widget class="picture" id="bSHR" image_alignment="centre"  scale_picture="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget> 
+	
+	<!--Name of the player: This is hidden on the player stats panel-->
+	<!-- the font size reduces one size when the name is bigger than 16 characters -->
+	<widget class="label" id="bNAM" size="10" alignment="top,can_scale" font="fonts/kit name">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="18" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2"/>
+	</widget>
+	
+	<!-- player number  -->
+	<widget class="picture" id="bNUM" image_alignment="centre" scale_picture="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="40,5,65,5" />
+	</widget>
+
+	<!--overlay effect -->
+	<widget class="picture" id="sdff" file="tcs/icons/goalkeeper/overlay" image_alignment="centre" scale_picture="true" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget> 
+</panel>
