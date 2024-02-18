@@ -35,25 +35,114 @@
 			</container>
 
 		</widget>
-	
+		
+	<!-- STATUS INDICATORS -->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
 
-	<!-- Status Indicators -->
-	<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
-		<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
-		<record id="object_property" get_property="Pnfa"/>
-	</widget>
+		<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6" width="32">
+			<layout class="stick_to_sides_attachment" alignment="top,left" inset="0,2"/>
+			<record id="object_property" get_property="Pnfa"/>
+		</widget>
+	</container>
 
 	<!-- PLAYER FACE -->
 	<container>
-		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-		<container width="110"/>
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
 
-		<widget class="object_portrait_picture" id="face" width="180" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
-			<record id="object_property" get_property="objt"/>
-		</widget>
+			<!-- SPACER -->
+			<container width="110"/>
+		
+			<!-- FACE -->
+			<container width="180">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-		<container/>
+				<widget class="object_portrait_picture" id="face" image_alignment="centre,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<record id="object_property" get_property="objt"/>
+				</widget>
+		
+				<!-- BUTTON TO SHOW THE ID -->
+				<widget class="button" appearance="tcs/buttons/text/button" id="tID1">
+				
+					<event id="click_event" event_id="TuiD"/>
+					
+					<!-- THIS EVENT HIDES THE ID BUTTON PANEL -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="tID1"/>
+						</record>
+					</attachment>
+
+					<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="tID2"/>
+						</record>
+					</attachment>
+					
+					<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="plID"/>
+						</record>
+					</attachment>
+				</widget>
+
+				<!-- BUTTON TO CLOSE THE ID -->
+				<widget class="button" appearance="tcs/buttons/text/button" id="tID2" hidn="true">
+				
+					<event id="click_event" event_id="TuiD"/>
+					
+					<!-- THIS EVENT HIDES THE CLOSE ID BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="tID2"/>
+						</record>
+					</attachment>
+					
+					<!-- THIS BUTTON SHOWS THE OPEN ID BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="tID1"/>
+						</record>
+					</attachment>
+					
+					<!-- THIS BUTTON CLOSES THE ID -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="plID"/>
+						</record>
+					</attachment>
+				</widget>
+				
+			</container>
+
+			<!-- SPACER -->
+			<container/>
+		</container>
+		
+		<container id="plID" hidn="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
+			<animation class="slide_in_bottom_animation"/>
+
+			<container width="160">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>
+			
+				<widget class="edit_box" width="150" height="16" select_on_focus="true" alignment="centre,centre_y" navigation_focus_target="false" wants_mouse_events="true" auto_size="vertical" appearance="tcs/boxes/uniqueid/box">
+					<record id="object_property" get_property="id" set_property="valu"/>
+				</widget>
+			</container>
+			
+		</container>
 
 	</container>
 
