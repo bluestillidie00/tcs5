@@ -1,34 +1,43 @@
 <!-- A panel showing various bits of information about a player -->
-<panel height="170" >
+<panel height="170">
 	<boolean id="should_force_refresh" value="true"/>
-	<layout class="horizontal_arrange" horizontal_layout="240,-1,200"  />
+	<layout class="horizontal_arrange" horizontal_layout="240,-1,200"/>
 
 	<container>
 		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8"/>
 
 		<!-- CONTAINER HOLDING KIT AND PLAER PIC -->
 		<!-- KIT ICON AND PLAYER STATUS -->
-		<container >
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-			<!-- PLAYER PICTURE -->
-			<widget class="object_portrait_picture" id="face" width="100" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
-				<record id="object_property" get_property="objt"/>
-			</widget>
-
-			<!-- STATUS INDICATORS-->
-			<!-- Fix Issue #46 changed order, and added a container to give it the right placeholder, and maintain the picture as clickable -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+		
 			<container>
-				<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
-					<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
-					<record id="object_property" get_property="Pnfa"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- PLAYER PICTURE -->
+				<widget class="object_portrait_picture" id="face" width="100" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
+					<record id="object_property" get_property="objt"/>
 				</widget>
+
+				<!-- STATUS INDICATORS-->
+				<!-- Fix Issue #46 changed order, and added a container to give it the right placeholder, and maintain the picture as clickable -->
+				<container>
+					<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+						<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+						<record id="object_property" get_property="Pnfa"/>
+					</widget>
+				</container>
 			</container>
+			
+			<widget class="person_button" auto_size="vertical" font="title" colour="fg" alignment="centre">
+			<record id="object_property" get_property="dref" />
+			</widget>
+			
 		</container>
 
 		<!-- CLUB AND NATION LOGO -->
 		<container width="70">
-			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
 
 			<container>
 				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="4"/>
@@ -65,16 +74,16 @@
 				</container>
 			</container>
 
-			<container >
-				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0"/>
 
-				<record id="default_properties"  appearance="" label_disabled="true" show_hover_popup_on_focus="true" auto_size="vertical" alignment="centre_x" />
+				<record id="default_properties" appearance="" label_disabled="true" show_hover_popup_on_focus="true" auto_size="vertical" alignment="centre_x"/>
 
-				<widget class="player_condition_icon_widget" id="PcOI" >
+				<widget class="player_condition_icon_widget" id="PcOI">
 					<record id="object_property" get_property="PcOI"/>
 				</widget>
 
-				<widget class="player_match_sharpness_icon_widget" id="Pfit" >
+				<widget class="player_match_sharpness_icon_widget" id="Pfit">
 					<record id="object_property" get_property="Pfit"/>
 				</widget>
 
@@ -98,15 +107,15 @@
 		</container>
 	</container>
 
-	<container  class="tcs_table"> 
+	<container class="tcs_table">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 		<container id="botc" class="player_profile_panel" file="none">
-			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" />
-			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true" />
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
 			<widget class="label" auto_size="vertical" font="title" colour="text">
-				<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+				<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]"/>
 			</widget>
 
 			<container class="scrolling_box">
@@ -116,7 +125,7 @@
 					<layout class="fit_children_attachment" alignment="vertical,fill"/>
 
 					<widget class="preferred_moves_panel" auto_size="vertical" file="player/player information preferred moves" id="pfmp">
-						<record id="object_property" get_property="objt" set_property="objt" />
+						<record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 
 				</container>
