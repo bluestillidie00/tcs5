@@ -1,14 +1,16 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<container>
+<!-- 	<container>
 		<layout class="stick_to_sides_attachment" alignment="all" inset="-70" apply_to_children="true" transparency="0.4"/>
 		<widget class="stadium_picture" id="STAp" image_alignment="centre_ycentre_x" keep_aspect_ratio="true">
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 
 		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="bg" transparency="0.64"/>
-	</container>
+	</container> -->
+	
+	<container class="main_subtle_box" />
 
 	<container class="plain_box" appearance="tcs/ro"/>
 
