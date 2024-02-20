@@ -238,7 +238,7 @@
 
 					<!--past meetings button-->
 					<widget class="link_appearance_button" id="psmt" auto_size="all" >
-						<translation id="text" translation_id="247248" type="use" value="Past Meetings" />
+						<translation id="text" translation_id="308590" type="use" value="Past Meetings" />
 					</widget>
 
 					<!--view match button-->
