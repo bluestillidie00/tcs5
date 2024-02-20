@@ -123,7 +123,7 @@
 			<widget class="spacer" />
 
 			<container>
-				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="6" />
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" />
 
 				<!-- FM button -->
 				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="58" height="39" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
@@ -143,9 +143,9 @@
 				</widget>
 
 				<!--instant match button-->
-				<widget class="icon_button" id="INST" appearance="chrome/buttons/continue/button" rrep="FM purple continue" icon="icons/26px/whistle" width="180" style="bold" alignment="centre" icon_alignment="centre_right, centre_y" font="title" colour="fg" height="60" >
+				<widget class="icon_button" id="INST" appearance="chrome/buttons/continue/button" rrep="FM purple continue" brep="FM purple" grep="shadow" icon="icons/26px/whistle" width="180" style="bold" alignment="centre" icon_alignment="centre_right, centre_y" font="title" colour="fg" height="60" offset="6">
 					<record id="primary_icon_properties" red_replacement="fg" />
-					<translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
+					<translation id="text" translation_id="383109" type="use"/>
 					<record id="click_event" event_id="INST" event_target="glob" />
 
 					<attachment class="test_global_attachment" get_property="section" mode="1" set_property="hidden">
@@ -170,7 +170,7 @@
 					</attachment>
 				</widget>
 
-				<container id="ctnu" file="generic/1continue" height="60" width="150">
+				<container id="ctnu" file="generic/continue" height="60" width="150">
 					<attachment class="test_global_attachment" get_property="cont" set_property="hidden">
 						<list id="value">
 							<integer value="-16" />
