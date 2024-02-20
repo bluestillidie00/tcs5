@@ -1,37 +1,37 @@
 <properties version="1.0">
 
 	<!-- DEFAULT BOX COLOUR -->
-	<colour name="bg lighter" 																value="rgb(43,43,43)"/>
-	<colour name="bg" 																			value="rgb(34,34,34)"/>
+	<colour name="bg lighter" value="rgb(43,43,43)"/>
+	<colour name="bg" value="rgb(34,34,34)"/>
 
 	<!-- TCS Colours -->
 	<!-- BOXES -->
-	<colour name="tcs_bg" 																			value="bg"/>
-	<colour name="tcs_bg_lighter" 															value="bg lighter"/>
+	<colour name="tcs_bg" value="bg"/>
+	<colour name="tcs_bg_lighter" value="bg lighter"/>
 
 	<!-- GOLD -->
-	<colour name="tcs_accent" value="rgb(207,181,59)" />
-	<colour name="tcs_accent_ligher" value="rgb(246,198,0)" />
-	<colour name="tcs_accent_darker" value="rgb(135,116,27)" />
+	<colour name="tcs_accent" value="rgb(207,181,59)"/>
+	<colour name="tcs_accent_ligher" value="rgb(246,198,0)"/>
+	<colour name="tcs_accent_darker" value="rgb(135,116,27)"/>
 
 	<!-- TCS Edits -->
-	<colour name="title" value="tcs_accent" /> 
+	<colour name="title" value="tcs_accent"/>
 	<colour name="human controlled" value="tcs_accent"/>
 	<colour name="fg accent" value="tcs_accent"/>
 	<colour name="bg accent" value="tcs_accent"/>
 
 	<!-- TCS PROFILE ATTRIBUTE COLOURS -->
-	<colour name="low attribute" red="169" green="169" blue="169" />
-	<colour name="normal attribute" red="241" green="241" blue="241" />
-	<colour name="good attribute" red="1" green="238" blue="255" />
-	<colour name="excellent attribute" red="255" green="235" blue="59" />
+	<colour name="low attribute" red="169" green="169" blue="169"/>
+	<colour name="normal attribute" red="241" green="241" blue="241"/>
+	<colour name="good attribute" red="1" green="238" blue="255"/>
+	<colour name="excellent attribute" red="255" green="235" blue="59"/>
 
 	<!-- ATTRIBUTE BOXES MOD -->
-	<colour name="unknown attribute background" 			value="bg darker"/>
-	<colour name="low attribute background" 				value="rgb(65,23,23)" />
-	<colour name="normal attribute background" 					value="rgb(80,80,80)"/>
-	<colour name="good attribute background" 				value="rgb(14,135,144)" />
-	<colour name="excellent attribute background" 			value="excellent attribute" />
+	<colour name="unknown attribute background" value="bg darker"/>
+	<colour name="low attribute background" value="rgb(65,23,23)"/>
+	<colour name="normal attribute background" value="rgb(80,80,80)"/>
+	<colour name="good attribute background" value="rgb(14,135,144)"/>
+	<colour name="excellent attribute background" value="excellent attribute"/>
 
 	<!-- ORIGINAL TCS ORIGINAL ATTRIBUTE BAR MOD COLOURS 
 	<colour name="low attribute bar" value="low attribute"/>
@@ -46,7 +46,12 @@
 	<colour name="excellent attribute bar" value="tcs_accent"/>
 
 	<!-- TACTICS PITCH -->
-	<colour name="pitch_box_background" 					value="bg"/>
-	<colour name="style_background" 						value="bg lighter"/>
+	<colour name="pitch_box_background" value="bg"/>
+	<colour name="style_background" value="bg lighter"/>
+	
+	<!-- NEWS -->
+	<colour name="browser header" value="rgb(32,33,36)"/><!-- #202124 -->
+	<colour name="browser url bar" value="rgb(87,87,87)"/> <!-- #575757 --> 
+	<colour name="browser url" value="rgb(64,62,65)"/> <!-- #403e41 --> 
 
 </properties>

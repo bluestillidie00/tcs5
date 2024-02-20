@@ -1,227 +1,102 @@
-<!-- SOCIAL MEDIA PAGE. WE'VE PUT IT IN THE TABLET -->
 <panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-	<!-- UNUSUAL LAYOUT LETS US SET A MANUAL HEIGHT AND WIDTH -->
-	<layout class="stick_to_sides_attachment"/>
-	<layout class="centre_in_parent_attachment" alignment="horizontal,vertical" apply_to_children="true" />
-
-	<!-- TELLS THE PANEL HOW TO BEHAVE -->
+	<!-- IMPORTANT Need to keep this synced up with number of panels or we won't fill them all, we use this to minimise the amount of data the panel needs to request -->
+	<integer id="number_of_stories_to_request" value="75"/>
+	<boolean id="show_daily_news_request" value="true"/>
+	<boolean id="show_related_news" value="true"/>
 	<boolean id="save_session_state" value="true"/>
-	<boolean id="save_immediate_state" value="false"/>
-	<boolean id="save_default_state" value="true"/>
-	<boolean id="should_force_refresh" value="true"/>
 
-	<container class="main_subtle_box" width="1200" height="800" appearance="tcs/boxes/tablets/website/paper">
-		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
-
-		<container height="70">
-			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
-
-			<!-- DATE. // UPDATE TO ADD STATUS ICONS -->
-			<container>
-				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
-
-				<!-- CALENDAR AT TOP -->
-				<widget class="current_game_date_widget" id="cgdw" height="20" file="human/tcs/twitter/date" width="200">
-					<record id="object_property" get_property="objt" set_property="objt"/>
-					<attachment class="test_global_attachment" get_property="cont" set_property="disa">
-						<list id="value">
-							<integer value="-5" />
-						</list>
-					</attachment>
-				</widget>
-			</container>
-
-			<!-- LOGO -->
-			<container height="50">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="24" horizontal_offset="24"/>
-				<record id="default_properties" auto_size="horizontal" alignment="left,centre_y" colour="fg"/>
-
-				<container>
-					<attachment_group class="horizontal_arrange_autosize" />
-					<record id="default_properties" auto_size="horizontal" alignment="left,centre_y" colour="fg"/>
-
-					<widget class="picture" file="icons/48px/whistle" colour="white" width="50" height="50" scale_picture="true" alignment="centre_y" />
-
-					<widget class="text" text="The AthleTCS" font="web-condensed" size="30"/>
-				</container>
-				<widget class="vertical_divider" width="2"/>
-
-				<widget class="text" text="Access sports reporting that sets the standard " font="web-condensed" alignment="left, centre_y" colour="fg" size="12"/>
-			</container>
-		</container>
+	<!-- Note that the id is important so that the league selector panels have their popups display correctly -->
+	<container class="horizontal_adaptive_container" id="Pnlf" inset="0" offset="0">
+		<global id="gap" name="ui.main_box_gap"/>
 
 		<container default_width="-1" minimum_width="675" priority="1">
-			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
-			<layout class="arrange_vertical_attachment" alignment="top, extend"/>
-
-			<!--multiplayer human news only-->
-			<widget class="check_box" id="NGhn" auto_size="all" select_event="NGht" colour="text">
-				<translation id="text" translation_id="466403" type="use" value="Show human-related news only[COMMENT: FR 11210; Competition news panel; check box to allow filtering of news to only include news related to other humans in a multiplayer game]"/>
-			</widget>
-
-			<widget class="formatted_label" auto_size="none" id="noLB" multiline="true" alignment="centre" colour="website text" size="xxlarge" hidden="true">
-
-				<!-- Choose string based on object type -->
-				<list id="format">
-					<record value="3">
-						<translation id="format" translation_id="395482" type="use" value="There is currently no news to display for this club.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]"/>
-					</record>
-					<record value="5">
-						<translation id="format" translation_id="395484" type="use" value="There is currently no news to display for this continent.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]"/>
-					</record>
-					<record value="9">
-						<translation id="format" translation_id="395485" type="use" value="There is currently no news to display for this nation.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]"/>
-					</record>
-					<record value="25">
-						<translation id="format" translation_id="395483" type="use" value="There is currently no news to display for this competition.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]"/>
-					</record>
-					<record default_value="true">
-						<translation id="format" translation_id="388376" type="use" value="There is currently no news to display.[COMMENT:FMC competition news; String displayed when there is not yet any news to display to user in the currently selected category]"/>
-					</record>
-				</list>
-			</widget>
-
-			<container class="scrolling_box" id="ScrB" navigation_container="true">
-				<flags id="scroll_bar_class" value="scroll_bar_vertical_inbox"/>
-				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-
-				<container>
-					<attachment_group class="vertical_arrange_autosize">
-						<global id="vertical_gap" name="ui.main_box_gap"/>
-					</attachment_group>
-
-					<!-- TAB NEWS ITEM -->
-					<container bkcl="bg lighter" height="32" draw_vertical_dividers="true" class="main_box">
-						<attachment_group class="horizontal_arrange" horizontal_alignment="left">
-							<global id="vertical_gap" name="ui.main_box_gap"/>
-						</attachment_group>
-
-						<record id="default_properties" file="competition/tcs/website/header item"/>
-
-						<container class="competition_news_item_panel" index="24"/>
-					</container>
-
-					<!-- TOP SECTION -->
-					<container height="380" draw_vertical_dividers="true">
-						<layout class="horizontal_arrange" horizontal_layout="-5,-5,-4"  horizontal_gap="16" />
-
-						<!-- LEFT // MAIN ARTICLE -->
-						<container class="main_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<container class="competition_news_item_panel" index="0" file="competition/tcs/website/item_l">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</container>
-						</container>
-
-						<!-- MIDDLE SECTION -->
-						<container class="main_box" draw_horizontal_dividers="true">
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
-
-							<record id="default_properties" file="competition/tcs/website/item_m">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="1" />
-							<container class="competition_news_item_panel" index="2" />
-							<container class="competition_news_item_panel" index="3" />
-							<container class="competition_news_item_panel" index="4" />
-						</container>
-
-						<!-- RIGHT -->
-						<container >
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
-
-							<record id="default_properties" file="competition/tcs/website/item title">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="5" />
-							<container class="competition_news_item_panel" index="6" />
-							<container class="competition_news_item_panel" index="7" />
-							<container class="competition_news_item_panel" index="8" />
-							<container class="competition_news_item_panel" index="9" />
-						</container>
-					</container>
-					
-					<widget class="horizontal_subtle_divider" height="2"/>
-					
-					<!-- MIDDLE SECTION -->
-					<container height="380" draw_vertical_dividers="true">
-						<layout class="horizontal_arrange" horizontal_layout="-5,-5"  horizontal_gap="16" />
-
-						<!-- LEFT // MAIN ARTICLE -->
-						<container class="main_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<container class="competition_news_item_panel" index="10" file="competition/tcs/website/item_l_alt">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</container>
-						</container>
-												
-						<!-- MIDDLE SECTION -->
-						<container class="main_box" draw_horizontal_dividers="true">
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
-
-							<record id="default_properties" file="competition/tcs/website/item_m_alt">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="11" />
-							<container class="competition_news_item_panel" index="12" />
-							<container class="competition_news_item_panel" index="13" />
-							<container class="competition_news_item_panel" index="14" />
-						</container>
-				</container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+			<container>
+				<layout class="vertical_arrange" vertical_layout="42,52,-1" vertical_gap="0"/>
 			
-									<!-- BOTTOM SECTION -->
-					<container height="380" draw_vertical_dividers="true">
-						<layout class="horizontal_arrange" horizontal_layout="-5,-5,-4"  horizontal_gap="16" />
-
-						<!-- LEFT // MAIN ARTICLE -->
-						<container class="main_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<container class="competition_news_item_panel" index="15" file="competition/tcs/website/item_l">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</container>
-						</container>
-
-						<!-- MIDDLE SECTION -->
-						<container class="main_box" draw_horizontal_dividers="true">
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
-
-							<record id="default_properties" file="competition/tcs/website/item_m">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="16" />
-							<container class="competition_news_item_panel" index="17" />
-							<container class="competition_news_item_panel" index="18" />
-							<container class="competition_news_item_panel" index="19" />
-						</container>
-
-						<!-- RIGHT -->
-						<container >
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
-
-							<record id="default_properties" file="competition/tcs/website/item title">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="20" />
-							<container class="competition_news_item_panel" index="21" />
-							<container class="competition_news_item_panel" index="22" />
-							<container class="competition_news_item_panel" index="23" />
-							<container class="competition_news_item_panel" index="24" />
-						</container>
-					</container>
-				</container>
+				<container class="main_box" appearance="tcs/boxes/news/top/paper" rrep="browser header"/>
+				<container class="main_box" appearance="tcs/boxes/news/middle/paper" rrep="browser url bar"/>
 
 			</container>
+		
+			<container class="browser_tabs" save_session_state="true" default_item="athT">
+		
+				<widget class="client_object_viewer_xml_panel" id="athT" file="competition/tcs/website/athletcs/base">
+					<translation id="title" value="Athletcs" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<widget class="client_object_viewer_xml_panel" id="QQQQ">
+					<translation id="title" value="FotMob" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+		
+			<container/>
+	
 		</container>
 
+		<container id="sid2" minimum_width="340" priority="3">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
+			<container class="main_box" navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<translation id="title" translation_id="395260" type="use" value="Leagues in Focus[COMMENT: FR 11005; title for panel showing overview of leagues from across the game]"/>
+
+				<container class="vertical_adaptive_container" id="ocmp" inset="0" offset="0" mode="distribute_equally" draw_horizontal_dividers="true">
+					<global id="gap" name="ui.main_box_gap"/>
+					<record id="default_properties" news="false" minimum_height="250"/>
+
+					<container class="competition_news_league_overview_selector_panel" id="lif1" index="0" priority="1" navigation_container="true"/>
+					<container class="competition_news_league_overview_selector_panel" id="lif2" index="1" priority="2" navigation_container="true"/>
+					<container class="competition_news_league_overview_selector_panel" id="lif3" index="2" priority="3" navigation_container="true"/>
+					<container class="competition_news_league_overview_selector_panel" id="lif4" index="3" priority="4" navigation_container="true"/>
+				</container>
+
+				<widget class="competition_stage_panel" file="none" id="cosg">
+					<boolean id="overview_version" value="true"/>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<container id="stse">
+						<!-- bottom row of the stage panel is used to store cup draw buttons -->
+						<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+						<!-- No game panel-->
+						<container id="nots" hidden="true">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+							<widget class="spacer" height="10"/>
+							<widget class="text" id="nost" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical"/>
+						</container>
+
+						<!-- group box for stage to go into -->
+						<container id="stgb">
+							<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+							<!--league stage panel-->
+							<widget class="league_stage_panel" id="lspn" hidden="true" view="oovr" league_table_heading_length="0"/>
+							<!--cup stage_panel-->
+							<widget class="cup_stage_panel" file="competition/cup overview stage" id="cstp" hidden="true" save_session_state="true"/>
+							<!--group stage scrolling box (to be filled in code)-->
+							<widget class="scrolling_box" id="gscb" hidden="true" save_session_state="true"/>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+							<!-- The exceptions so point deductions in the league etc-->
+							<widget class="table" layout="-1" id="exta" auto_size="vertical" row_height="15" hidden="true" mode="fill_rows"/>
+						</container>
+					</container>
+				</widget>
+			</container>
+		</container>
 	</container>
 </panel>

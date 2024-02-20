@@ -1,0 +1,13 @@
+<class class="browser_tabs" parent="multi_box" contents_kind="plain_box" top_kind="tab_strip" appearance="tcs/boxes/main/trans/no margin/paper" dont_set_title_text="true">
+
+	<flags id="top_layout" value="horizontal"/>
+
+	<record id="top_properties">
+		<flags id="appearance" value="tcs/boxes/news/tabs"/>
+		<flags id="auto_size" value="vertical"/>
+		<flags id="alignment" value="top"/>
+		<flags id="navigation_container" value="true" />
+		<boolean id="use_alt_end_tab_appearances" value="false"/>
+	</record>
+
+</class>
