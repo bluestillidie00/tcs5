@@ -64,7 +64,7 @@
 							</widget>
 						</widget>
 
-						<widget class="text" alignment="centre" >
+						<widget class="text" alignment="centre" style="bold">
 							<translation id="text" type="use" value="V" />
 						</widget>
 
