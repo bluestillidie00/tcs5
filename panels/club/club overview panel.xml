@@ -399,7 +399,7 @@
 		</container>
 	</container>
 
-	<container class="tcs_tabs" id="popt" default_item="over" save_default_state="true" save_session_state="true">
+	<container class="tcs_tabs" default_item="over" save_default_state="true" save_session_state="true">
 
 		<!-- OVERVIEW TAB ~ STILL NEED TO MOVE FILES ACROSS -->
 		<container id="over" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/tabs/overview">
@@ -412,6 +412,12 @@
 			<translation id="title" translation_id="247326" type="use"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</container>
+
+<!-- FINANCES TAB -->
+		<container id="fina" class="finances_summary_panel" file="club/tcs/fm24/overview/tabs/finances">
+			<translation id="title" translation_id="251859" type="use"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>			
 
 		<!-- HISTORY TAB -->
 		<container id="hist" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/tabs/history">
