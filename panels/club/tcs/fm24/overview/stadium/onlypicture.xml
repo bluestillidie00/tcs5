@@ -1,0 +1,24 @@
+<!-- THIS IS THE PANEL THAT SHOWS ON THE CLUB OVERVIEW SCREEN -->
+<panel>
+	<!-- STICK TO SIDES ALL USED TO LAYER ELEMENTS ON TOP OF OTHERS -->
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+
+	<!-- STADIUM PICTURE -->
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture" >
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</container>
+
+	<!-- Added the following container to provide a background to the dropdown arrow - Fix Issue #34 -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="12" horizontal_inset="32"/>
+
+		<container class="tcs_box" appearance="tcs/boxes/stadium/paper" rrep="bg" height="42" width="46"/>			
+	</container>
+
+	<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+	<container class="bordered_box" appearance="tcs/ro" />
+</panel>

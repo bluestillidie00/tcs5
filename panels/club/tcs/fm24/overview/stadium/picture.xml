@@ -1,31 +1,14 @@
-<!-- THIS IS THE PANEL THAT SHOWS ON THE CLUB OVERVIEW SCREEN -->
 <panel>
-	<!-- STICK TO SIDES ALL USED TO LAYER ELEMENTS ON TOP OF OTHERS -->
-	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/> 
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<!-- STADIUM PICTURE -->
-	<container>
-		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<widget class="stadium_picture" id="STAp" file="none">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
 
-		<widget class="stadium_picture" id="STAp" file="none">
-			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
 
-			<record id="object_property" get_property="objt" set_property="objt"/>
-			<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
-
-			<widget class="picture" file="pictures/stadiums/stadium_bg" />
-			<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
-			<widget class="picture" id="STPC"/>
-		</widget>
-	</container>
-
-	<!-- Added the following container to provide a background to the dropdown arrow - Fix Issue #34 -->
-	<container>
-		<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="12" horizontal_inset="32"/>
-
-		<container class="tcs_box" appearance="tcs/boxes/stadium/paper" rrep="bg" height="42" width="46"/>			
-	</container>
-
-	<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
-	<container class="bordered_box" appearance="tcs/ro" />
+		<widget class="picture" file="pictures/stadiums/stadium_bg"/>
+		<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+		<widget class="picture" id="STPC"/>
+	</widget>
 </panel>

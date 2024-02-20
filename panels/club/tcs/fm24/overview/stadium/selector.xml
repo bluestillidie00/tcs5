@@ -21,7 +21,7 @@
 	</container>
 
 	<!-- PICTURE -->
-	<container class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture_dummy" id="spic">
+	<container class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/onlypicture_dummy" id="spic">
 		<translation id="title" value="Only" type="use"/>
 	</container>
 
