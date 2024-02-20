@@ -11,7 +11,7 @@
             <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
             <!-- Back Button -->
-            <widget class="screen_history_button" id="back" fixed="true" width="50" appearance="buttons/custom/interface/navigation bar/button" icon="icons/custom/header/left" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+            <widget class="screen_history_button" id="back" fixed="true" width="50" appearance="chrome/buttons/items/button" icon="icons/custom/header/left" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
                 <attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
                 <record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
                 <string id="controller_button" value="left_shoulder" />
@@ -19,7 +19,7 @@
             </widget>
 
             <!-- Next Button -->
-            <widget class="screen_history_button" id="forw" fixed="true" width="30" appearance="buttons/custom/interface/navigation bar/button" icon="icons/custom/header/right" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+            <widget class="screen_history_button" id="forw" fixed="true" width="30" appearance="chrome/buttons/items/button" icon="icons/custom/header/right" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
                 <attachment class="get_global_attachment" get_property="hnit" set_property="itms" />
                 <record id="click_event" event_id="GOTO" event_target="brow" scin="-2" />
                 <string id="controller_button" value="right_shoulder" />
