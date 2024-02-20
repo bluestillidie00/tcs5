@@ -165,7 +165,7 @@
 					<record id="default_properties" default_width="-1" minimum_width="250"/>
 
 					<!--snapshot selector 1-->
-					<container class="client_object_viewer_selector_panel" file="club/stadium selector panel" id="cos1" priority="1" default_widget="staD" late_loading="true" save_session_state="true"/>
+					<container class="client_object_viewer_selector_panel" file="club/tcs/fm24/overview/stadium/selector" id="cos1" priority="1" default_widget="staD" late_loading="true" save_session_state="true"/>
 
 				</container>
 
