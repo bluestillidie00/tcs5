@@ -292,8 +292,8 @@
 													<flags id="event_id" value="show"/>
 													<flags id="event_target" value="boBK"/>
 												</record>
-											</attachment>				
-										</widget>									
+											</attachment>
+										</widget>
 									</container>
 									
 									<container width="8"/>
@@ -319,16 +319,20 @@
 								
 								<!-- BOOKMARKS -->
 								<container id="bkmk" hidn="true">
-		<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="12" horizontal_inset="32"/>
-								 	<animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse" />
+									<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="12" horizontal_inset="32"/>
+									
+									<!-- FADE ANIMATION -->
+									<animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse"/>
 										
-										<container class="standard_popup_box" height="450" width="720">
-											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+									<!-- POPUP BOX -->
+									<container class="standard_popup_box" height="450" width="720">
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-											<widget class="bookmarks_menu_panel" id="book">
-												<record id="object_property" get_property="objt" set_property="objt"/>
-											</widget>										
-										</container>
+										<!-- BOOKMARKS -->
+										<widget class="bookmarks_menu_panel" id="book">
+											<record id="object_property" get_property="objt" set_property="objt"/>
+										</widget>
+									</container>
 									
 								</container>
 								
