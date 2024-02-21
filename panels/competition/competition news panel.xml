@@ -29,8 +29,8 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 
-				<widget class="client_object_viewer_xml_panel" id="QQQQ">
-					<translation id="title" value="FotMob" type="use"/>
+				<widget class="client_object_viewer_xml_panel" id="QQQQ" file="competition/tcs/website/fotmob/base">
+					<translation id="title" value="Football Manager" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 			</container>
