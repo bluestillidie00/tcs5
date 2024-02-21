@@ -45,9 +45,9 @@
 	<colour name="good attribute bar" value="tcs_accent"/>
 	<colour name="excellent attribute bar" value="tcs_accent"/>
 
-	<!-- TACTICS PITCH -->
+	<!-- TACTICS PITCH 
 	<colour name="pitch_box_background" value="bg"/>
-	<colour name="style_background" value="bg lighter"/>
+	<colour name="style_background" value="bg lighter"/> -->
 	
 	<!-- NEWS -->
 	<colour name="browser header" value="rgb(32,33,36)"/><!-- #202124 -->
