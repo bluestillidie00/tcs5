@@ -11,6 +11,72 @@
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 	</container>
+	
+	<container>
+	 <attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+	
+		<!-- BUTTON TO SHOW THE ID -->
+					<widget class="button" appearance="tcs/buttons/text/button" id="stO1" rrep="red">
+				
+						<event id="click_event" event_id="TsSl"/>
+					
+						<!-- THIS EVENT HIDES THE STADIUM OPEN BUTTON PANEL -->
+						<attachment class="event_relay_attachment" event_id="TsSl">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="stO1"/>
+							</record>
+						</attachment>
+
+						<!-- THIS EVENT HIDES THE STADIUM OPEN BUTTON PANEL -->
+						<attachment class="event_relay_attachment" event_id="TsSl">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="stO2"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+						<attachment class="event_relay_attachment" event_id="TsSl">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="TCSs"/>
+							</record>
+						</attachment>
+					</widget>
+
+					<!-- BUTTON TO SHOW THE ID -->
+					<widget class="button" appearance="tcs/buttons/text/button" id="stO2" rrep="blue">
+				
+						<event id="click_event" event_id="TsFS"/>
+					
+						<!-- THIS EVENT HIDES THE STADIUM OPEN BUTTON PANEL -->
+						<attachment class="event_relay_attachment" event_id="TsFS">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="stO1"/>
+							</record>
+						</attachment>
+								
+						<!-- THIS EVENT HIDES THE STADIUM OPEN BUTTON PANEL -->
+						<attachment class="event_relay_attachment" event_id="TsFS">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="stO2"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+						<attachment class="event_relay_attachment" event_id="TsFS">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="TCsF"/>
+							</record>
+						</attachment>
+					</widget>
+
+	
+	</container>
 
 	<!-- INFORMATION -->
 	<container>

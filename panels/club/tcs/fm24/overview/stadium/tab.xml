@@ -1,0 +1,242 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="32,4,4,4" apply_to_children="true"/>
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-80,-50"/>
+
+		<!-- LEFT SIDE -->
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<!-- STADIUM PICTURE -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<!-- STADIUM PICTURE -->
+				<container>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+
+				<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+				<container class="bordered_box" appearance="tcs/ro"/>
+			</container>
+			
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+															
+				<container width="400">
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>
+								
+					<container height="180" class="contrast_box" rrep="bg lighter" draw_horizontal_dividers="true">
+						<layout class="vertical_arrange" vertical_layout="22,20,20,20,20,20,-1"/>
+					
+						<widget class="stadium_button" font="title" colour="fg" alignment="left" icon_enabled="false" size="large">
+							<record id="object_property" get_property="stad"/>
+						</widget>
+					
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					 
+							<widget class="text" alignment="left">
+								<record id="object_property" get_property="SctI" name="true"/>
+							</widget>
+					 
+							<widget class="city_label" alignment="left">
+								<record id="object_property" get_property="SctI"/>
+							</widget>
+						</container>
+					
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					 
+							<widget class="text" alignment="left">
+								<record id="object_property" get_property="Scpy" name="true"/>
+							</widget>
+					 
+							<widget class="dashed_number_label" alignment="left">
+								<record id="object_property" get_property="Scpy"/>
+							</widget>
+						</container>
+					
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					 
+							<widget class="text" alignment="left">
+								<record id="object_property" get_property="Sbdy" name="true"/>
+							</widget>
+					 
+							<widget class="dashed_number_label" NumF="0" alignment="left">
+								<record id="object_property" get_property="Sbdy"/>
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					 
+							<widget class="text" alignment="left">
+								<record id="object_property" get_property="Srby" name="true"/>
+							</widget>
+					 
+							<widget class="dashed_number_label" NumF="0" alignment="left">
+								<record id="object_property" get_property="Srby"/>
+							</widget>
+						</container>
+					
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					 
+							<widget class="text" alignment="left">
+								<record id="object_property" get_property="Sown" name="true"/>
+							</widget>
+					 
+							<widget class="club_button" NumF="0" alignment="left">
+								<record id="object_property" get_property="Sown"/>
+							</widget>
+						</container>
+					</container>
+								
+								
+				</container>
+								
+								
+			</container>
+
+		</container>
+
+		<!-- INFO -->
+		<widget class="stadium_overview_info" id="info" file="none">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			
+			<!-- STADIUM INFO LABEL -->
+			<widget class="text" font="title" auto_size="all">
+				<translation id="text" translation_id="395324" type="use"/>
+			</widget>
+
+			<!-- STADIUM INFO TABLE -->
+			<container class="scrolling_box" id="tttt" height="160">
+						
+				<widget class="client_object_label_value_table">
+							
+					<record id="object_property" get_property="objt" set_property="objt"/>
+							
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" font="label"/>
+						<record indx="1" alignment="left,centre_y" auto_size="vertical"/>
+					</list>
+
+					<record id="table_properties" mode="fill_rows, stripe_rows" auto_size_rows="true" row_height="24" row_spacing="4"/>
+
+					<list id="viewed_property_ids">
+						<!--	<record id="Snat"/> Nation-->
+						<!--<record id="SctI"/> City-->
+						<record id="SblC"/><!--Cost of new stadium-->
+						<record id="Scpy"/><!--Capacity-->
+						<record id="Sscy"/><!--Seated Capacity-->
+						<!--	<record id="Sucy"/> Used Capacity-->
+						<record id="Secy"/><!--Expansion capacity-->
+						<!--<record id="Sown"/> Owning club-->
+						<record id="SsfT"/><!--Surface type-->
+						<record id="Sdcy"/><!--Stadium condition-->
+						<record id="Sush"/><!--Under soil heating-->
+						<record id="Scov"/><!--Roof-->
+					</list>
+				</widget>
+			</container>
+
+			<!-- TABBED CONTAINER AT BOTTOM -->
+			<container class="tcs_tabs_primary" save_session_state="true" default_item="matc">
+			
+				<!-- RECENT FIXTURES -->
+				<container class="tcs_box" id="matc">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+					<translation id="title" translation_id="251247" type="use"/>
+					
+					<widget class="client_object_list_table" id="FixL" database_table_type="53" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, printable, store_sort_state">
+						<record id="object_property">
+							<integer id="get_property" value="Slym"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+
+						<!-- default sort -->
+						<list id="default_sort_column">
+							<integer value="fxdt"/>
+						</list>
+
+						<!--default view from the view list-->
+						<flags id="default_view" value="gene"/>
+
+						<!--list of all available views-->
+						<record id="viewed_property_ids">
+							<flags id="fxdt"/>
+							<flags id="home"/>
+							<flags id="FxRs"/>
+							<flags id="away"/>
+						</record>
+
+					</widget>
+				</container>
+		
+				<!-- COMPETITION AND TEAMS USING THE STADIUM -->
+				<container id="team">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					<translation id="title" translation_id="296559" type="use"/>
+		
+					<!-- WE NESTED IT IN ANOTHER CONTAINER SO WE CAN STILL HAVE THE BORDER BUT DON'T HAVE TO DEAL WITH THE TITLE -->
+					<container class="main_box">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+						<!-- COMPETITIONS -->
+						<container id="comp" class="tcs_box">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+						
+							<!-- Linked header -->
+							<widget class="text" font="title" auto_size="all">
+								<translation id="text" translation_id="227741" type="use"/>
+							</widget>
+
+							<widget class="client_object_list_table" id="CmPs" database_table_type="55" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" mode="fill_rows, stripe_rows, printable, store_sort_state">
+								<record id="object_property">
+									<integer id="get_property" value="Scom"/>
+									<integer id="set_property" value="objt"/>
+								</record>
+								<record id="viewed_property_ids">
+									<record id="dref"/>
+								</record>
+							</widget>
+						</container>
+
+						<!--teams-->
+						<container class="tcs_box">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+						
+							<!-- Linked header -->
+							<widget class="text" font="title" auto_size="all">
+								<translation id="text" translation_id="229362" type="use"/>
+							</widget>
+						
+							<container class="scrolling_box" id="team">
+								<container class="simple_data_list" id="tems" set_property="objt" auto_size="vertical" gap="6">
+									<record id="object_property">
+										<integer id="get_property" value="Susr"/>
+									</record>
+									<record id="widget_properties" class="client_object_viewer_xml_panel" file="team/team item panel"/>
+								</container>
+							</container>
+						</container>
+
+					</container>
+				</container>
+		
+			</container>
+
+
+		</widget>
+	</container>
+
+</panel>
