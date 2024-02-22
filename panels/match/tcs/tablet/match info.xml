@@ -1,0 +1,72 @@
+<container>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!-- STADIUM PIC -->
+	<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.72" rrep="bg"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+
+		<!-- WEATHER FORECAST-->
+		<widget class="weather_indicator_panel_centred" id="FxWe" file="none" height="24">
+			<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<record id="object_property" get_property="FxWe"/>
+
+			<container>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4"/>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+				<!-- PRETTY ICON -->
+				<widget class="picture" id="icon" image_alignment="left" width="24" scale_picture="true" keep_aspect_ratio="true"/>
+
+				<!-- DESCRIPTION LABEL -->
+				<widget class="label" id="desc" alignment="left,centre_y" auto_size="horizontal"/>
+			</container>
+		</widget>
+
+		<!-- REFEREE -->
+		<container>
+			<global id="hidden" name="game_mode_is_console_mode"/>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle"/>
+			<widget class="label" auto_size="all" size="small">
+				<translation id="text" translation_id="227993" type="use" value="Referee"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+			</widget>
+			<widget class="person_button" auto_size="all">
+				<record id="object_property" get_property="FRef" dont_set_hint="true"/>
+			</widget>
+		</container>
+
+		<!-- COMPETITION -->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle"/>
+			<widget class="label" auto_size="all" size="small" alignment="centre_y">
+				<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+				<translation id="text" translation_id="227740" type="use" value="Competition"/>
+			</widget>
+			<widget class="fixture_name_text" auto_size="all" icon_enabled="true" multiline="true">
+				<record id="object_property" get_property="FxNm"/>
+			</widget>
+		</container>
+
+		<!-- ATTENDNACE -->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle"/>
+			<widget class="label" auto_size="all" size="small">
+				<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+				<translation id="text" translation_id="247242" type="use" value="Attendance"/>
+			</widget>
+			<widget class="number_label" auto_size="all">
+				<record id="object_property" get_property="FxEA" dont_set_hint="true"/>
+			</widget>
+		</container>
+
+	</container>
+</container>
