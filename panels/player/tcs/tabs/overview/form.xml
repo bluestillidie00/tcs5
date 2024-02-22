@@ -1,0 +1,157 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+	<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container id="Pfom" class="player_form_panel" file="none">
+			<record id="object_property" get_property="Pers"/>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<!-- Stuff to show when there is no form -->
+			<container id="nofm" hidden="true" navigation_container="true" default_focus="true" navigation_container_allow_empty="true">
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+				<!--explanatory text for no form being available-->
+				<widget class="text" id="nost" spec="text" size="large" alignment="centre" hidden="true">
+					<translation id="text" translation_id="342459" type="use" value="Player form information is currently unavailable for this player. Add him to a shortlist to track his form.[COMMENT: Player form; Text displayed when form data is not available. Instructs the user on how to generate the data]"/>
+				</widget>
+				<widget class="text" id="nodt" spec="text" size="large" alignment="centre" hidden="true">
+					<translation id="text" translation_id="342781" type="use" value="This player's form is being tracked by the backroom team but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]"/>
+				</widget>
+				<widget class="text" id="nobt" spec="text" size="large" alignment="centre" hidden="true">
+					<translation id="text" translation_id="382400" type="use" value="This player's form is being tracked but no data is available yet.[COMMENT: Player form; Text displayed when form data is not available but the player is on a shortlist and data will be available in the future]"/>
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!-- Actual data panel -->
+				<container class="main_box" id="titl" navigation_container="true">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<!--This box contains the two popups-->
+					<container embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_right" horizontal_offset="0" vertical_inset="0"/>
+
+						<container class="embedded_popup_button" id="ptea" auto_tick_exclusive="true" embed_in_frame="true" save_session_state="true" fixed="false" auto_size="vertical">
+							<translation id="text" translation_id="243480" type="use" value="Team[COMMENT - team menu text for player form section]"/>
+							<flags id="appearance" value="buttons/subtle/normal/button"/>
+							<flags id="auto_size" value="all"/>
+						</container>
+
+						<container class="embedded_popup_button" id="pcom" auto_tick_exclusive="true" embed_in_frame="true" save_session_state="true" fixed="false" auto_size="vertical">
+							<translation id="text" translation_id="243481" type="use" value="Competition[COMMENT - competition menu text for player form section]"/>
+							<flags id="appearance" value="buttons/subtle/normal/button"/>
+							<flags id="auto_size" value="all"/>
+						</container>
+					</container>
+
+					<container id="pfot">
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0">
+							<global id="gap" name="ui.main_contrast_box_gap"/>
+						</layout>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+						<!-- group box containing graph and summary-->
+						<widget class="player_form_summary_panel" id="pfSm" height="220"/>
+
+						<container class="inner_box" force_title_borders="true" navigation_container="true">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+
+							<!-- buttons area -->
+							<container embed_in_frame="true">
+								<attachment_group class="title_embedded_panel_left" horizontal_offset="0" vertical_inset="2"/>
+
+
+								<widget class="view_menu_label" id="TitL">
+									<translation id="text" translation_id="257238" type="use" value="Matches"/>
+								</widget>
+								<widget class="view_menu_popup" id="visc" sele="stsc" save_session_state="true" save_default_state="true">
+									<list id="items">
+										<record id="Mfrm">
+											<translation id="name" translation_id="337915" type="use" value="Form[COMMENT: player form; title of a view displaying per match statistics about a player's performance]"/>
+										</record>
+										<record id="Mfee">
+											<translation id="name" translation_id="337896" type="use" value="Feedback[COMMENT: player form; title of a view displaying comments made by the assistant manager after matches]"/>
+										</record>
+									</list>
+									<flags id="slct" value="Mfrm"/>
+								</widget>
+							</container>
+
+							<!-- Player form stats -->
+							<widget class="table" id="pftb" mode="fill_rows,select_rows,stripe_rows,printable,keyboard" layout="28, 60, 18, 45, -1, -2, 45, 35, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 38, 28" row_spacing="0" auto_size_rows="true" select_event="selr" navigation_focus_target="true">
+
+								<list id="headings">
+									<record>
+										<translation id="text" translation_id="451565" type="use" value="#[COMMENT: character used to denote a number, used as a header on the match form screen where ID 339772 is used as the title; use the appropriate character for your locale as per bug 165978]"/>
+										<translation id="hint" translation_id="339772" type="use" value="Match form details[COMMENT: Hint text for table column showing the match form number]"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="230120" type="use" value="Date"/>
+										<translation id="hint" translation_id="242658" type="use" value="Match Date"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="242659" type="use" value="C.[COMMENT - cards]"/>
+										<translation id="hint" translation_id="232993" type="use" value="Cards"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="242883" type="use" value="Pos"/>
+										<translation id="hint" translation_id="319547" type="use" value="Position played in match[COMMENT: column hint text]"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]"/>
+										<translation id="hint" translation_id="412465" type="use" value="Role played in match[COMMENT: column hint text]"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="242660" type="use" value="Opposition"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="232992" type="use" value="Inf."/>
+										<translation id="hint" translation_id="232994" type="use" value="Info"/>
+									</record>
+								</list>
+
+								<list id="column_widget_properties">
+									<record indx="0" alignment="left,centre_y"/>
+									<record indx="1" alignment="left,centre_y"/>
+									<record indx="3" alignment="left,centre_y" navigation_focus_target="false"/>
+									<record indx="4" alignment="left,centre_y"/>
+									<record indx="5" alignment="left,centre_y"/>
+								</list>
+
+								<record id="default_properties" alignment="centre"/>
+							</widget>
+
+							<!-- Player match feedback-->
+							<widget class="table" id="pfed" mode="fill_rows, stripe_rows,printable,keyboard" layout="200, 80, 70, -1" row_spacing="0" auto_size_rows="true" save_session_state="true">
+
+								<list id="headings">
+									<record>
+										<translation id="text" translation_id="319504" type="use" value="Opponent[COMMENT: player match feedback history; panel header text above a list of opponents]"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="319505" type="use" value="Date[COMMENT: stage type for menu]"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="247233" type="use" value="Venue"/>
+									</record>
+									<record>
+										<translation id="text" translation_id="319506" type="use" value="Assistant's Comment[COMMENT: match team talk; text preceding the assistant manager's advice on what to say in the team talk]"/>
+									</record>
+								</list>
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+		</container>
+
+	</container>
+		
+</panel>
