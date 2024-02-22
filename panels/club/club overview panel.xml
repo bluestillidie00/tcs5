@@ -450,7 +450,7 @@
 
 			</container>
 	
-			<container class="standard_popup_box" hidn="true" id="TCSs">
+			<!-- <container class="standard_popup_box" hidn="true" id="TCSs">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<animation class="slide_in_right_animation"/>
 
@@ -458,12 +458,12 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 			</container>
-		</container>
+		</container> -->
 	
 	</container>
 
 
-	<container  hidn="true" id="TCsF">
+<!-- 	<container  hidn="true" id="TCsF">
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 	
 	    <container class="modal_sheet" id="mods" />
@@ -482,8 +482,8 @@
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 		</container>
-		</container>
-	</container>
+		</container> -->
+	</container> 
 
 
 </panel>
