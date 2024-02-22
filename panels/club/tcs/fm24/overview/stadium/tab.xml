@@ -26,7 +26,7 @@
 			</container>
 			
 			<container>
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
 															
 				<container width="400">
 					<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>

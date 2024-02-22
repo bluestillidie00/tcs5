@@ -1,8 +1,11 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 	
+	<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+	
 	<!-- VALUE BASED PICTURE FOR GENERIC STADIUMS -->
-	<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" default_height="-1" wants_mouse_events="false">
+	<widget class="value_based_picture" wants_mouse_events="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-50"/>
 		<list id="value_list">
 			<record min_value="0" max_value="999" file="tcs/pictures/stadiums/generic/1"/>
 			<record min_value="1000" max_value="4999" file="tcs/pictures/stadiums/generic/2"/>
@@ -19,7 +22,7 @@
 	</widget>
 
 
-	<widget class="stadium_picture" id="STAp" image_alignment="centre" priority="1">
+	<widget class="stadium_picture" id="STAp" priority="1">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="-50"/>
 		<record id="object_property" get_property="objt" set_property="objt"/>
 	</widget>
