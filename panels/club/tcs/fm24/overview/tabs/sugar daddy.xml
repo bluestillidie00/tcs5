@@ -1,0 +1,34 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" gap="8">
+	
+		<container default_width="-4" class="finances_summary_panel" file="none">
+			<layout class="vertical_arrange" vertical_layout="-4,-10"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+
+			<!-- BUDGETS -->
+			<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/finances/budgets">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+			
+			<!-- BALANCE GRAPH -->
+			<container default_width="-4" priority="1" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/finances/balance">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		
+		
+		</container>
+
+		<container class="tcs_box" default_width="-4">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" translation_id="248354" type="use"/>
+
+			<container class="team_container_records_landmarks_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>
+
+	</container>
+	
+</panel>
