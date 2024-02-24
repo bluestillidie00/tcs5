@@ -433,7 +433,7 @@
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</container>
 
-			<!-- TRANSFER TAB -->
+			<!-- STADIUM TAB -->
 			<container id="stad" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/tab_dummy">
 				<translation id="title" translation_id="309191" type="use"/>
 				<record id="object_property" get_property="objt" set_property="objt"/>
@@ -444,13 +444,6 @@
 				<translation id="title" translation_id="351069" type="use"/>
 				<record id="object_property" get_property="objt" set_property="objt"/>
 			</container>
-
-			<!-- TRANSFER TAB -->
-			<container id="suga" class="transfer_history_panel" file="club/tcs/fm24/overview/tabs/transfers">
-				<translation id="title" value="Sugar Daddy Finder" type="use"/>
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</container>
-
 		</container>
 	
 	</container>
