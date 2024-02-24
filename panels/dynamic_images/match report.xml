@@ -7,10 +7,9 @@
 		<!-- PROP_TEAM -->
 		<record id="object_property" get_property="Ttea" set_property="objt"/>
 
-		<widget class="stadium_picture" id="STAp" priority="1" >
-			<layout class="stick_to_sides_attachment" alignment="all" inset="-10" />
+	<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture" >
 			<record id="object_property" get_property="objt" set_property="objt"/>
-		</widget>	  	
+		</widget>
 
 		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0,7" rrep="bg" />
 
