@@ -1,350 +1,48 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-4,-3" horizontal_gap="8"/>
-
-		<container>
-			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+	<container class="horizontal_adaptive_container" gap="8">
 	
-			<!-- OVERALL BALANCE -->
-			<container class="tcs_box">
-				<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
-			
-				<!-- OVERALL BALANCE TITLE -->
-				<widget class="label" font="title" auto_size="vertical">
-					<translation id="text" translation_id="383591" type="use"/>
-				</widget>
-			
-				<!-- OVERALL BALANCE -->
-				<widget class="cash_cell" auto_size="vertical" font="value" id="obal"/>
-
-				<!-- FINANCE GRAPH -->
-				<container class="finance_history_panel" id="obag">
-					<string id="finance_history_type" value="bala"/>
-					<string id="show_instant_hint" value="true"/>
-					<record id="dbrp">
-						<list id="get_properties">
-							<record>
-								<string id="get_property" value="objt"/>
-								<string id="set_property" value="objt"/>
-							</record>
-						</list>
-					</record>
-				</container>
-			</container>
-			
-			<!-- PROFIT LOSS THIS MONTH -->
-			<container class="tcs_box">
-				<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
-				
-				<!-- TITLE-->
-				<container height="18">
-					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-											
-					<!-- PROFIT LOSS THIS MONTH TITLE -->
-					<widget class="label" font="title" alignment="left">
-						<translation id="text" translation_id="383614" type="use"/>
-					</widget>
-					
-					<!-- THIS SEASON AND LAST SEASON -->
-					<container>
-						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-					
-						<record id="default_properties" font="title" alignment="left"/>
-						<!-- THIS SEASON -->
-						<widget class="label">
-							<translation id="text" translation_id="232145" type="use"/>
-						</widget>
-					
-						<!-- LAST SEASON -->
-						<widget class="label">
-							<translation id="text" translation_id="247212" type="use"/>
-						</widget>
-					</container>
-				</container>
-
-				<!-- TITLE-->
-				<container height="22">
-					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-											
-					<!-- PROFIT LOSS THIS MONTH TITLE -->
-					<widget class="cash_cell" font="value" alignment="left" id="pltm"/>
-					
-					<!-- THIS SEASON AND LAST SEASON -->
-					<container>
-						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-					
-						<record id="default_properties" font="value" alignment="left"/>
-						
-						<!-- THIS SEASON -->
-						<widget class="cash_cell" id="plts"/>
-					
-						<!-- LAST SEASON -->
-						<widget class="cash_cell" id="plls"/>
-					</container>
-				</container>
-
-				<!-- PROFIT LOSS GRAPH -->
-				<container class="finance_history_panel" id="plog">
-					<string id="finance_history_type" value="prls"/>
-					<boolean id="show_instant_hint" value="true"/>
-					<record id="dbrp">
-						<list id="get_properties">
-							<record>
-								<string id="get_property" value="objt"/>
-								<string id="set_property" value="objt"/>
-							</record>
-						</list>
-					</record>
-				</container>
-			</container>
-			
-			<!-- INCOME AND EXPENDITURE THIS MONTH -->
-			<container>
-				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
-			
-				<!-- INCOME THIS MONTH -->
-				<container class="tcs_box">
-					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-				 
-					<!-- INCOME THIS MONTH GRAPH -->
-					<container>
-						<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
-				 
-						<!-- INCOME MONTH TITLE -->
-						<widget class="label" font="title" auto_size="vertical">
-							<translation id="text" translation_id="383418incw" type="use"/>
-						</widget>
-			
-						<!-- INCOME THIS MONTH -->
-						<widget class="cash_cell" auto_size="vertical" font="value" id="incw"/>
-				
-						<container class="finance_history_panel" id="incg">
-							<string id="finance_history_type" value="toti"/>
-							<string id="show_instant_hint" value="true"/>
-							<record id="dbrp">
-								<list id="get_properties">
-									<record>
-										<string id="get_property" value="objt"/>
-										<string id="set_property" value="objt"/>
-									</record>
-								</list>
-							</record>
-						</container>
-					</container>
-				 
-					<!-- INCOME THIS MONTH TABLE -->
-					<container class="table" id="inct" layout="1,-1,100">
-						<integer id="row_height" value="20"/>
-						<list id="headings">
-							<record alignment="centre_y,left">
-								<integer id="index" value="0"/>
-								<integer id="column_span" value="3"/>
-								<translation id="text" translation_id="383267" type="use" value="Breakdown[COMMENT: Finances panel]"/>
-							</record>
-						</list>
-						<list id="column_table_properties">
-							<record>
-								<integer id="index" value="0"/>
-								<string id="sort_disabled" value="true"/>
-							</record>
-							<record id="bDes">
-								<integer id="index" value="1"/>
-								<string id="sort_disabled" value="false"/>
-							</record>
-							<record id="toto">
-								<integer id="index" value="2"/>
-								<string id="sort_ascending" value="false"/>
-							</record>
-						</list>
-						<list id="column_widget_properties">
-							<record>
-								<integer id="index" value="1"/>
-								<string id="colour" value="faded text"/>
-								<string id="size" value="small"/>
-							</record>
-							<record alignment="centre_y,right">
-								<integer id="index" value="2"/>
-								<string id="colour" value="faded text"/>
-								<string id="size" value="small"/>
-							</record>
-						</list>
-						<list id="default_sort_column"/>
-					</container>
-				</container>
-			
-				<!-- EXPENDITURE THIS MONTH -->
-				<container class="tcs_box">
-					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-				 
-					<!-- EXPENDITURE GRAPH -->
-					<container>
-						<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
-								 
-						<!-- EXPENDITURE MONTH TITLE -->
-						<widget class="label" font="title" auto_size="vertical">
-							<translation id="text" translation_id="383320" type="use"/>
-						</widget>
-			
-						<!-- EXPENDITURE THIS MONTH -->
-						<widget class="cash_cell" auto_size="vertical" font="value" id="expw"/>
-				
-						<container class="finance_history_panel" id="expg">
-							<string id="finance_history_type" value="tote"/>
-							<string id="show_instant_hint" value="true"/>
-							<record id="dbrp">
-								<list id="get_properties">
-									<record>
-										<string id="get_property" value="objt"/>
-										<string id="set_property" value="objt"/>
-									</record>
-								</list>
-							</record>
-						</container>
-					</container>
-				 
-					<!-- EXPENDITURE TABLE -->
-					<container class="table" entity_layout_id="at29" id="expt" layout="1,-1,100">
-						<integer id="row_height" value="20"/>
-						<list id="headings">
-							<record alignment="centre_y,left">
-								<integer id="index" value="0"/>
-								<integer id="column_span" value="3"/>
-								<translation id="text" translation_id="383267" type="use" value="Breakdown[COMMENT: Finances panel]"/>
-							</record>
-						</list>
-						<list id="column_table_properties">
-							<record>
-								<integer id="index" value="0"/>
-								<string id="sort_disabled" value="true"/>
-							</record>
-							<record id="bDes">
-								<integer id="index" value="1"/>
-								<string id="sort_disabled" value="false"/>
-								<string id="locked" value="true"/>
-							</record>
-							<record id="toto">
-								<integer id="index" value="2"/>
-								<string id="sort_ascending" value="false"/>
-							</record>
-						</list>
-						<list id="column_widget_properties">
-							<record>
-								<integer id="index" value="1"/>
-								<string id="colour" value="faded text"/>
-								<string id="size" value="small"/>
-							</record>
-							<record alignment="centre_y,right">
-								<integer id="index" value="2"/>
-								<string id="colour" value="faded text"/>
-								<string id="size" value="small"/>
-							</record>
-						</list>
-						<list id="default_sort_column"/>
-					</container>
-				</container>
-			</container>
-			
+		<!-- BALANCE GRAPH -->
+		<container default_width="-4" priority="1" class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/finances/balance">
+			<record id="object_property" get_property="objt" set_property="objt"/>
 		</container>
 
-		<container>
-			<layout class="vertical_arrange" vertical_layout="200, -1" vertical_gap="8"/>
+		<!-- RIGHT -->
+		<container class="vertical_adaptive_container" gap="8" default_width="-3" priority="2" minimum_width="500">
+				
+			<!-- BUDGETS -->
+			<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/finances/budgets" default_height="-6" priority="1">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
 		
-			<!-- LEAGUE HISTORY -->
-			<container class="tcs_box">
-				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+			<container class="tcs_tabs" save_session_state="true" default_item="tFip" default_height="-14" priority="2" minimum_height="350">
 				
-				<container>
-					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-				
-					<container>
-						<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="1" horizontal_inset="0"/>
-						<record id="default_properties" auto_size="vertical"/>
-
-						<widget class="text" font="label" colour="accent" size="small">
-							<translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]"/>
-						</widget>
-						<widget class="cash_cell" id="tfbg" alignment="left" size="large" colour="text"/>
-						<widget class="text" font="text" size="small" colour="faded text" id="tbt1"/>
-						<widget class="text" font="text" size="small" colour="faded text" id="tbt2"/>
-						<widget class="text" font="text" size="small" colour="faded text" id="tbt4"/>
-					</container>
-
-					<!--Wage Budget-->
-					<container>
-						<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="1" horizontal_inset="0"/>
-
-						<record id="default_properties" auto_size="vertical"/>
-
-						<widget class="text" font="label" colour="accent" size="small">
-							<translation id="text" translation_id="242605" type="use" value="Wage Budget"/>
-						</widget>
-
-						<widget class="wage_label" id="wagl" alignment="left" size="large" colour="text"/>
-
-						<widget class="text" font="text" size="small" colour="faded text" id="wbt1"/>
-						<widget class="text" font="text" size="small" colour="faded text" id="wbt2"/>
-						<widget class="text" font="text" size="small" colour="faded text" id="wbt4"/>
-					</container>
-				</container>
-				
-				<container>
-				<attachment_group class="vertical_arrange_autosize"/>
-				
-				<record id="default_properties" auto_size="vertical" alignment="left"/>
-				
-				<!-- REPUTATION -->
-				<widget class="label" font="label" >
-				<record id="object_property" get_property="Chsd" name="true" />
+				<!-- DEBTS AND LOANS -->
+				<widget class="finances_debt_loan_panel" id="tFid">
+					<translation id="title" translation_id="383295" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
-				
-				<widget class="formatted_label">
-								<record id="object_property" get_property="Chsd"/>
-								<list id="format">
-									<record value="0" format="None"/>
-									<record value="1" format="Foreground"/>
-									<record value="2" format="Background"/>
-									<record value="3" format="Underwriter"/>
-								</list>
-							</widget>
-				
-				</container>
-			
-			</container>
-			
-			<!-- TABS -->
-			<container class="tcs_box">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-				<container class="tcs_tabs" save_session_state="true" default_item="tFip">
-				
-					<!-- DEBTS AND LOANS -->
-					<widget class="finances_debt_loan_panel" id="tFid">
-						<translation id="title" translation_id="383295" type="use"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
-
-					<!-- PROJECTION -->
-					<widget class="finances_projection_panel" id="tFip">
-						<translation id="title" translation_id="331947" type="use"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
+				<!-- PROJECTION -->
+				<widget class="finances_projection_panel" id="tFip">
+					<translation id="title" translation_id="331947" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
 	
-					<!-- FFP -->
-					<widget class="finances_ffp_panel" id="tFfp">
-						<translation id="title" translation_id="324456" type="use"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
+				<!-- FFP -->
+				<widget class="finances_ffp_panel" id="tFfp" file="club/tcs/fm24/overview/finances/ffp">
+					<translation id="title" translation_id="383321" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
 
-					<!-- SPONSOR -->
-					<widget class="finances_sponsors_panel" id="tFiS">
-						<translation id="title" translation_id="396455" type="use"/>
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
-				</container>
+				<!-- SPONSOR -->
+				<widget class="finances_sponsors_panel" id="tFiS">
+					<translation id="title" translation_id="396455" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
 			</container>
 		</container>
 	</container>
-
+	
 </panel>

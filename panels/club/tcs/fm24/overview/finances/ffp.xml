@@ -1,0 +1,14 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<widget class="text" text="No FFP Data Available" alignment="left"/>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="8"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<widget class="property_list_viewer_xml_panel" file="club/finances ffp comp box" id="ffp1"/>
+
+		<widget class="property_list_viewer_xml_panel" file="club/finances ffp comp box" id="ffp2"/>
+	</container>
+</panel>

@@ -1,0 +1,65 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<container class="tcs_box" >
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+				
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+				
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="1" horizontal_inset="0"/>
+				<record id="default_properties" auto_size="vertical"/>
+
+				<widget class="text" font="label" colour="accent" size="small">
+					<translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]"/>
+				</widget>
+				<widget class="cash_cell" id="tfbg" alignment="left" size="large" colour="text"/>
+				<widget class="text" font="text" size="small" colour="faded text" id="tbt1"/>
+				<widget class="text" font="text" size="small" colour="faded text" id="tbt2"/>
+				<widget class="text" font="text" size="small" colour="faded text" id="tbt4"/>
+			</container>
+
+			<!--Wage Budget-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="1" horizontal_inset="0"/>
+
+				<record id="default_properties" auto_size="vertical"/>
+
+				<widget class="text" font="label" colour="accent" size="small">
+					<translation id="text" translation_id="242605" type="use" value="Wage Budget"/>
+				</widget>
+
+				<widget class="wage_label" id="wagl" alignment="left" size="large" colour="text"/>
+
+				<widget class="text" font="text" size="small" colour="faded text" id="wbt1"/>
+				<widget class="text" font="text" size="small" colour="faded text" id="wbt2"/>
+				<widget class="text" font="text" size="small" colour="faded text" id="wbt4"/>
+			</container>
+		</container>
+				
+		<!-- RICH BENEFACTOR -->
+		<container class="tcs_table">
+			<attachment_group class="vertical_arrange_autosize"/>
+				
+			<record id="default_properties" auto_size="vertical" alignment="left"/>
+				
+			<!-- REPUTATION -->
+			<widget class="label" font="label">
+				<record id="object_property" get_property="Chsd" name="true"/>
+			</widget>
+				
+			<widget class="formatted_label">
+				<record id="object_property" get_property="Chsd"/>
+				<list id="format">
+					<record value="0" format="None"/>
+					<record value="1" format="Foreground"/>
+					<record value="2" format="Background"/>
+					<record value="3" format="Underwriter"/>
+				</list>
+			</widget>
+				
+		</container>
+			
+	</container>
+</panel>

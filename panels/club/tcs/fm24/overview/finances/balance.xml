@@ -1,0 +1,247 @@
+<panel>
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<container default_width="-4" priority="1" class="vertical_adaptive_container">
+	
+		<record id="default_properties" default_height="-1" minimum_height="160"/>
+	
+		<!-- OVERALL BALANCE -->
+		<container class="tcs_box" priority="1">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+			
+			<!-- OVERALL BALANCE TITLE -->
+			<widget class="label" font="title" auto_size="vertical">
+				<translation id="text" translation_id="383591" type="use"/>
+			</widget>
+			
+			<!-- OVERALL BALANCE -->
+			<widget class="cash_cell" auto_size="vertical" font="value" id="obal"/>
+
+			<!-- FINANCE GRAPH -->
+			<container class="finance_history_panel" id="obag">
+				<string id="finance_history_type" value="bala"/>
+				<string id="show_instant_hint" value="true"/>
+				<record id="dbrp">
+					<list id="get_properties">
+						<record>
+							<string id="get_property" value="objt"/>
+							<string id="set_property" value="objt"/>
+						</record>
+					</list>
+				</record>
+			</container>
+		</container>
+			
+		<!-- PROFIT LOSS THIS MONTH -->
+		<container class="tcs_box" priority="2">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+				
+			<!-- TITLE-->
+			<container height="18">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+											
+				<!-- PROFIT LOSS THIS MONTH TITLE -->
+				<widget class="label" font="title" alignment="left">
+					<translation id="text" translation_id="383614" type="use"/>
+				</widget>
+					
+				<!-- THIS SEASON AND LAST SEASON -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					
+					<record id="default_properties" font="title" alignment="left"/>
+					<!-- THIS SEASON -->
+					<widget class="label">
+						<translation id="text" translation_id="232145" type="use"/>
+					</widget>
+					
+					<!-- LAST SEASON -->
+					<widget class="label">
+						<translation id="text" translation_id="247212" type="use"/>
+					</widget>
+				</container>
+			</container>
+
+			<!-- TITLE-->
+			<container height="22">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+											
+				<!-- PROFIT LOSS THIS MONTH TITLE -->
+				<widget class="cash_cell" font="value" alignment="left" id="pltm"/>
+					
+				<!-- THIS SEASON AND LAST SEASON -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					
+					<record id="default_properties" font="value" alignment="left"/>
+						
+					<!-- THIS SEASON -->
+					<widget class="cash_cell" id="plts"/>
+					
+					<!-- LAST SEASON -->
+					<widget class="cash_cell" id="plls"/>
+				</container>
+			</container>
+
+			<!-- PROFIT LOSS GRAPH -->
+			<container class="finance_history_panel" id="plog">
+				<string id="finance_history_type" value="prls"/>
+				<boolean id="show_instant_hint" value="true"/>
+				<record id="dbrp">
+					<list id="get_properties">
+						<record>
+							<string id="get_property" value="objt"/>
+							<string id="set_property" value="objt"/>
+						</record>
+					</list>
+				</record>
+			</container>
+		</container>
+			
+		<!-- INCOME AND EXPENDITURE THIS MONTH -->
+		<container priority="3">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+			
+			<!-- INCOME THIS MONTH -->
+			<container class="tcs_box">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+				 
+				<!-- INCOME THIS MONTH GRAPH -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+				 
+					<!-- INCOME MONTH TITLE -->
+					<widget class="label" font="title" auto_size="vertical">
+						<translation id="text" translation_id="383418incw" type="use"/>
+					</widget>
+			
+					<!-- INCOME THIS MONTH -->
+					<widget class="cash_cell" auto_size="vertical" font="value" id="incw"/>
+				
+					<container class="finance_history_panel" id="incg">
+						<string id="finance_history_type" value="toti"/>
+						<string id="show_instant_hint" value="true"/>
+						<record id="dbrp">
+							<list id="get_properties">
+								<record>
+									<string id="get_property" value="objt"/>
+									<string id="set_property" value="objt"/>
+								</record>
+							</list>
+						</record>
+					</container>
+				</container>
+				 
+				<!-- INCOME THIS MONTH TABLE -->
+				<container class="table" id="inct" layout="1,-1,100">
+					<integer id="row_height" value="20"/>
+					<list id="headings">
+						<record alignment="centre_y,left">
+							<integer id="index" value="0"/>
+							<integer id="column_span" value="3"/>
+							<translation id="text" translation_id="383267" type="use" value="Breakdown[COMMENT: Finances panel]"/>
+						</record>
+					</list>
+					<list id="column_table_properties">
+						<record>
+							<integer id="index" value="0"/>
+							<string id="sort_disabled" value="true"/>
+						</record>
+						<record id="bDes">
+							<integer id="index" value="1"/>
+							<string id="sort_disabled" value="false"/>
+						</record>
+						<record id="toto">
+							<integer id="index" value="2"/>
+							<string id="sort_ascending" value="false"/>
+						</record>
+					</list>
+					<list id="column_widget_properties">
+						<record>
+							<integer id="index" value="1"/>
+							<string id="colour" value="faded text"/>
+							<string id="size" value="small"/>
+						</record>
+						<record alignment="centre_y,right">
+							<integer id="index" value="2"/>
+							<string id="colour" value="faded text"/>
+							<string id="size" value="small"/>
+						</record>
+					</list>
+					<list id="default_sort_column"/>
+				</container>
+			</container>
+			
+			<!-- EXPENDITURE THIS MONTH -->
+			<container class="tcs_box">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+				 
+				<!-- EXPENDITURE GRAPH -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+								 
+					<!-- EXPENDITURE MONTH TITLE -->
+					<widget class="label" font="title" auto_size="vertical">
+						<translation id="text" translation_id="383320" type="use"/>
+					</widget>
+			
+					<!-- EXPENDITURE THIS MONTH -->
+					<widget class="cash_cell" auto_size="vertical" font="value" id="expw"/>
+				
+					<container class="finance_history_panel" id="expg">
+						<string id="finance_history_type" value="tote"/>
+						<string id="show_instant_hint" value="true"/>
+						<record id="dbrp">
+							<list id="get_properties">
+								<record>
+									<string id="get_property" value="objt"/>
+									<string id="set_property" value="objt"/>
+								</record>
+							</list>
+						</record>
+					</container>
+				</container>
+				 
+				<!-- EXPENDITURE TABLE -->
+				<container class="table" entity_layout_id="at29" id="expt" layout="1,-1,100">
+					<integer id="row_height" value="20"/>
+					<list id="headings">
+						<record alignment="centre_y,left">
+							<integer id="index" value="0"/>
+							<integer id="column_span" value="3"/>
+							<translation id="text" translation_id="383267" type="use" value="Breakdown[COMMENT: Finances panel]"/>
+						</record>
+					</list>
+					<list id="column_table_properties">
+						<record>
+							<integer id="index" value="0"/>
+							<string id="sort_disabled" value="true"/>
+						</record>
+						<record id="bDes">
+							<integer id="index" value="1"/>
+							<string id="sort_disabled" value="false"/>
+							<string id="locked" value="true"/>
+						</record>
+						<record id="toto">
+							<integer id="index" value="2"/>
+							<string id="sort_ascending" value="false"/>
+						</record>
+					</list>
+					<list id="column_widget_properties">
+						<record>
+							<integer id="index" value="1"/>
+							<string id="colour" value="faded text"/>
+							<string id="size" value="small"/>
+						</record>
+						<record alignment="centre_y,right">
+							<integer id="index" value="2"/>
+							<string id="colour" value="faded text"/>
+							<string id="size" value="small"/>
+						</record>
+					</list>
+					<list id="default_sort_column"/>
+				</container>
+			</container>
+		</container>
+			
+	</container>
+</panel>
