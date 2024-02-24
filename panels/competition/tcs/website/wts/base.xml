@@ -135,14 +135,14 @@
 								<widget class="text" multiline="true" text="Daily Football Manager 2024 videos full of tangents and god-awful pronunciations. On YouTube my job is pretending to do a much more serious job in an entertaining manner... Sometimes it goes well."/>
 							</container>
 					
-							<container class="main_box" appearance="tcs/boxes/news/url/paper" rrep="subscribe_button" height="32" >
-							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+							<container class="main_box" appearance="tcs/boxes/news/url/paper" rrep="subscribe_button" height="32">
+								<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
 							
-														<widget class="picture" file="tcs/boxes/news/wts/bell" rrep="fg" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="32"/>
+								<widget class="picture" file="tcs/boxes/news/wts/bell" rrep="fg" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="32"/>
 														
-														<widget class="text" text="Subscribed" auto_size="horizontal" />
+								<widget class="text" text="Subscribed" auto_size="horizontal"/>
 														
-																												<widget class="picture" file="icons/16px/down" rrep="fg" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="24"/>
+								<widget class="picture" file="icons/16px/down" rrep="fg" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="24"/>
 
 							</container>
 							

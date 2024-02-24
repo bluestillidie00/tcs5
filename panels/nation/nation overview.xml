@@ -1,0 +1,309 @@
+<panel should_force_refresh="true">
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+	<container class="collapsable_box" appearance="tcs/boxes/main/trans/paper">
+		<attachment_group class="vertical_arrange_autosize"/>
+
+		<!-- HEADER -->
+		<container class="horizontal_adaptive_container" gap="8" height="200">
+
+			<!-- LEAGUE AND COMP LOGO -->
+			<container priority="1">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="8"/>
+
+				<record id="default_properties" width="200"/>
+
+				<container class="tcs_box" appearance="tcs/boxes/main/outline/alt/paper" rrep="tcs_bg_lighter" brep="primary">
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8"/>
+
+					<!-- CLUB LOGO -->
+					<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+										
+					<!-- BUTTON TO SHOW THE ID -->
+					<widget class="button" appearance="tcs/buttons/text/button" id="cID1">
+				
+						<event id="click_event" event_id="TuiD"/>
+					
+						<!-- THIS EVENT HIDES THE ID BUTTON PANEL -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="cID1"/>
+							</record>
+						</attachment>
+
+						<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="cID2"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="clID"/>
+							</record>
+						</attachment>
+					</widget>
+
+					<!-- BUTTON TO CLOSE THE ID -->
+					<widget class="button" appearance="tcs/buttons/text/button" id="cID2" hidn="true">
+				
+						<event id="click_event" event_id="TuiD"/>
+					
+						<!-- THIS EVENT HIDES THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="cID2"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS BUTTON SHOWS THE OPEN ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="cID1"/>
+							</record>
+						</attachment>
+					
+						<!-- THIS BUTTON CLOSES THE ID -->
+						<attachment class="event_relay_attachment" event_id="TuiD">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="clID"/>
+							</record>
+						</attachment>
+					</widget>
+					
+					<container id="clID" hidn="true">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+						<animation class="slide_in_bottom_animation"/>
+
+						<container width="160">
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>
+			
+							<widget class="edit_box" width="150" height="16" select_on_focus="true" alignment="centre,centre_y" navigation_focus_target="false" wants_mouse_events="true" auto_size="vertical" appearance="tcs/boxes/uniqueid/box">
+								<record id="object_property" get_property="id" set_property="valu"/>
+							</widget>
+						</container>
+			
+					</container>
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!-- CONTAINER TO MAKE THE GAME LOAD EXTERNAL DETAILS -->
+					<container class="client_object_viewer_xml_panel" file="none">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<!-- GAME LOADS DATA FOR COMPETITIONS -->
+						<record id="object_property" get_property="Ncni" set_property="objt"/>
+
+						<container class="tcs_box" appearance="tcs/boxes/main/outline/alt/paper" rrep="tcs_bg_lighter">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<!-- USES PREVIOUSLY LOADED DATA TO GET PRIMARY COLOUR FOR COMP -->
+							<!-- THEN SETS IT AS THE BLUE_REPLACEMENT FIGURE -->
+							<record id="object_property">
+								<list id="get_properties">
+									<record get_property="tbcl" set_property="brep"/>
+								</list>
+							</record>
+						</container>
+					</container>
+
+					<!-- ANOTHER CONTAINER SO WE CAN APPLY AN 8px INSET -->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true"/>
+						<!-- CLUB LOGO -->
+						<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+							<record id="object_property" get_property="Ncni"/>
+						</container>
+					</container>
+
+				</container>
+			</container>
+			
+			<container class="team_container_information_overview_panel" default_width="-1" minimum_width="300" priority="2" id="fdlv" file="none">
+				<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+<record id="object_property" get_property="objt" set_property="objt"/>
+
+				<!-- TOP ROW -->
+				<container class="tcs_table">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="horizontal_adaptive_container" gap="8">
+
+						<record id="default_properties" default_width="-1" minimum_width="130"/>
+
+						<!-- NATION -->
+						<container priority="1">
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<record id="object_property" get_property="Ncni" name="true"/>
+							</widget>
+							<widget class="continent_button" auto_size="vertical">
+								<record id="object_property" get_property="Ncni"/>
+							</widget>
+						</container>
+						
+						<!-- WORLD RANKING -->
+						<container priority="2" id="wora">
+								<layout class="vertical_arrange_autosize"/>
+
+								<widget class="label" auto_size="vertical" style="semi_bold">
+									<record id="object_property" get_property="Nffr" name="true"/>
+								</widget>
+
+								<widget class="fifa_ranking_label" alignment="left" id="wnum" icon_enabled="false" auto_size="vertical">
+									<record id="object_property" get_property="Nffr"/>
+								</widget>
+							</container>
+					</container>
+
+				</container>
+
+				<!-- 2nd ROW -->
+				<container class="tcs_table_trans">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="horizontal_adaptive_container" gap="8">
+
+						<record id="default_properties" default_width="-1" minimum_width="130"/>
+
+						<!-- LEAGUE POS -->
+						<container priority="1">
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<translation id="text" translation_id="319435" type="use"/>
+							</widget>
+							<widget class="text" alignment="left" auto_size="vertical">
+								<record id="object_property" get_property="TCnn"/>
+							</widget>
+						</container>
+
+										<!-- YOUTH FACILTIES -->
+						<container priority="2">
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<record id="object_property" get_property="NYRt" name="true"/>
+							</widget>
+							<widget class="TEXT" auto_size="vertical" alignment="left">
+								<record id="object_property" get_property="NYRt"/>
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<!-- 3rd ROW -->
+				<container class="tcs_table">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="horizontal_adaptive_container" gap="8">
+
+						<record id="default_properties" default_width="-1" minimum_width="130"/>
+
+						<!-- MEDIA EXPECTATION -->
+						<container priority="1">
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<translation id="text" translation_id="257209" type="use"/>
+							</widget>
+							<widget class="region_label" alignment="left" auto_size="vertical">
+								<record id="object_property" get_property="NrgR"/>
+							</widget>
+						</container>
+
+						<!-- YOUTH FACILITIES -->
+						<container priority="2">
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<translation id="text" translation_id="255008" type="use"/>
+							</widget>
+							<widget class="languages_text" auto_size="vertical" alignment="left" show_fluency="false">
+								<record id="object_property" get_property="Nlan*"/>
+							</widget>
+						</container>
+
+
+					</container>
+				</container>
+
+				<!-- 4th ROW -->
+				<container class="tcs_table_trans">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="horizontal_adaptive_container" gap="8">
+
+						<record id="default_properties" default_width="-1" minimum_width="130"/>
+
+						<!-- MEDIA EXPECTATION -->
+						<container priority="1">
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="-4"/>
+
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<translation id="text" value="Recent Form" type="use"/>
+							</widget>
+							<widget class="team_recent_form_widget" alignment="left,top">
+								<record id="object_property" get_property="Tfrm"/>
+							</widget>
+						</container>
+
+						<!-- YOUTH REC. -->
+						<container priority="2">
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<translation id="text" value="Capital" type="use"/>
+							</widget>
+							<widget class="city_label" auto_size="vertical" alignment="left">
+								<record id="object_property" get_property="Ncac"/>
+							</widget>
+						</container>
+
+					</container>
+				</container>
+			</container>
+
+			
+			<container default_width="800" priority="3">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]"/>
+
+		    <widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/trophy info" file="club/trophies" section="trov">
+        <translation id="title" translation_id="321147" type="use" value="Trophies Won" />
+        <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
+
+			</container>
+
+		</container>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<container class="tcs_tabs" default_item="over" save_default_state="true" save_session_state="true">
+
+			<!-- OVERVIEW TAB ~ STILL NEED TO MOVE FILES ACROSS -->
+			<container id="over" class="client_object_viewer_xml_panel" file="nation/tcs/overview/tabs/overview">
+				<translation id="title" translation_id="450832" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+
+		</container>
+	
+	</container>
+
+</panel>

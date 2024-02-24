@@ -1,0 +1,25 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container >
+		<!-- MANAGER PROFILE AND STAFF -->
+		<layout class="vertical_arrange" vertical_layout="90,2,-1"  vertical_gap="4"/>
+
+		<!-- MANAGER INFO -->
+		<widget class="club_overview_staff_panel" id="tStM" file="nation/tcs/overview/staff/manager" >
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>	
+		
+		<widget class="horizontal_subtle_divider" height="2"/>
+
+		<!-- REST OF STAFF -->
+		<container class="client_object_viewer_xml_panel" file="nation/tcs/overview/staff/players" id="ctao" >
+			<translation id="title" type="use" value="Overview" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+	</container>
+
+</panel>
