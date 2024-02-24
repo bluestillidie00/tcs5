@@ -51,7 +51,8 @@
 	
 	<!-- NEWS -->
 	<colour name="browser header" value="rgb(32,33,36)"/><!-- #202124 -->
-	<colour name="browser url bar" value="rgb(87,87,87)"/> <!-- #575757 --> 
-	<colour name="browser url" value="rgb(64,62,65)"/> <!-- #403e41 --> 
+	<colour name="browser url bar" value="rgb(87,87,87)"/><!-- #575757 -->
+	<colour name="browser url" value="rgb(64,62,65)"/><!-- #403e41 -->
+	<colour name="news_youtube" value="rgb(15,15,15)"/><!-- #0f0f0f -->
 
 </properties>

@@ -24,13 +24,18 @@
 		
 			<container class="browser_tabs" save_session_state="true" default_item="athT">
 		
-				<widget class="client_object_viewer_xml_panel" id="athT" file="competition/tcs/website/athletcs/base">
+				<widget class="client_object_viewer_xml_panel" id="athT" file="competition/tcs/website/athletcs/base" icon="icons/16px/whistle">
 					<translation id="title" value="Athletcs" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 
-				<widget class="client_object_viewer_xml_panel" id="QQQQ" file="competition/tcs/website/fotmob/base">
+				<widget class="client_object_viewer_xml_panel" id="QQQQ" file="competition/tcs/website/fotmob/base"  icon="icons/16px/fm" icon_colour="fg">
 					<translation id="title" value="Football Manager" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<widget class="client_object_viewer_xml_panel" id="WTSG" file="competition/tcs/website/wts/base"  icon="icons/16px/youtube" icon_colour="fg">
+					<translation id="title" value="WorkTheSpace Guides" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 			</container>

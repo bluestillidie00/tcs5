@@ -1,11 +1,11 @@
 ﻿<properties>
-	<record id="image_borders" left="20" right="20" top="8" bottom="8"/>
-	<record id="title_borders" left="8" right="8" top="28" bottom="8"/>
+	<record id="image_borders" left="24" right="24" top="8" bottom="8"/>
+	<record id="title_borders" left="12" right="12" top="28" bottom="8"/>
 	<record id="image_slices" left="30" right="30" />
 	
 	<record id="font_spec">
-		<flags id="font" value="title"/> 
-		<colour id="colr" name="title"/>
+		<flags id="font" value="text"/> 
+		<colour id="colr" name="text"/>
 		<flags id="size" value="normal"/>  
 	</record>
 	
