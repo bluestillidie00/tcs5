@@ -4,7 +4,7 @@
 	<container class="main_box">
 		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
-		<container>
+		<container class="tcs_table">
 			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
 			<container height="40">
@@ -20,9 +20,11 @@
 					</widget>
 				</container>
 
+<!-- MATCH REPORT BUTTON -->
 				<widget class="popup_button" entity_layout_id="at0D" id="at0D" name="loan_match_report_select_match_popup" auto_size="horizontal" />
 			</container>
 
+<!-- MATCH REPORT -->
 			<container>
 				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
 
@@ -32,8 +34,7 @@
 
 		</container>
 
-
-
+<!-- WE IGNORE THIS MESS -->
 		<container entity_layout_id="at08" id="at08" name="match_goals_assists_container" height="120">
 			<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" target="at07" />
 			<layout class="stick_to_object_attachment" id="align_bottom" offset="-1" get_side="bottom" set_side="bottom" target="main" />
