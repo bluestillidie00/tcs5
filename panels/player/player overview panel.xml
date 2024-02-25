@@ -86,7 +86,7 @@
 									</container>
 								</container>
 
-								<container class="tcs_box" default_height="-6" priority="2">
+								<container class="tcs_box" default_height="-6" minimum_height="120" priority="2">
 									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 									<container class="client_object_viewer_selector_panel" id="CLRB" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true">
