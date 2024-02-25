@@ -9,7 +9,7 @@
   </container>
 
   <!-- Stat text -->
-  <widget class="text" id="proz" alignment="left,centre_y" colour="secondary" multiline="true" auto_size="none">
+  <widget class="text" id="proz" alignment="left,centre_y" colour="fg" multiline="true" auto_size="none">
     <!-- If you put an inset here make sure there is enough height left for 2 lines of text!-->
     <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
 
