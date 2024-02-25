@@ -1,0 +1,80 @@
+<!-- THIS IS THE RESULTS ICON THAT SHOWS ON THE NATION OVERVIEW PANEL -->
+<!-- SAME PANEL BUT WITH A TRANSPARENT BACKGROUND -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<container class="tcs_table_trans">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="8" horizontal_gap="8"/>
+		
+		<!-- LOGO, TEAM AND COMPETITION -->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+			 
+			<!-- OPPOSITION LOGO -->
+			<widget class="fixture_opponent_picture" id="oppi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="50">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="fopP"/>
+							<boolean id="dont_set_object" value="true"/>
+						</record>
+						<record>
+							<integer id="get_property" value="text"/>
+							<string id="set_property" value="hint"/>
+						</record>
+					</list>
+				</record>
+			</widget>
+			
+			<!-- NAME AND COMP -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+		
+				<record id="default_properties" alignment="left" auto_size="vertical"/>
+
+				<!-- NAME -->
+				<widget class="fixture_opponent_venue_text" style="semi_bold">
+					<record id="object_property" get_property="fOpV"/>
+				</widget>
+			
+				<!-- COMP -->
+				<widget class="fixture_name_text" id="FxNm" auto_size="vertical" size="small">
+					<record id="object_property" get_property="FxNm"/>
+				</widget>
+			</container>
+		</container>
+		
+		<!-- RESULT AND WHEN? -->
+		<container>
+			<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" vertical_gap="0"/>
+		
+			<!-- RESULT -->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right"/>
+
+				<record id="default_properties" auto_size="all" alignment="right,centre"/>
+
+				<!-- RESULT ICON -->
+				<widget class="fixture_result_icon" wants_mouse_events="false">
+					<record id="object_property" get_property="FxRs"/>
+				</widget>
+
+				<!-- RESULT -->
+				<widget class="fixture_full_result_text" spec="text" style="bold" multiline="false" format="[%scoreline#1-result_h_a_result]">
+					<record id="object_property" get_property="FxFR"/>
+				</widget>
+			</container>
+		
+			<!--xx DAYS AGO -->
+			<widget class="relative_date_label" alignment="right" auto_size="all" size="small" colour="faded text">
+				<record id="object_property" get_property="fdRE"/>
+			</widget>
+		</container>
+		
+		<!-- COMP LOGO -->
+		<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="30" keep_aspect_ratio="true" image_alignment="centre">
+			<record id="object_property" get_property="fxCo" set_property="objt"/>
+		</widget>
+	</container>
+
+</panel>

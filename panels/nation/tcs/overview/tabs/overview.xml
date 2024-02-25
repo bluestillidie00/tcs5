@@ -6,20 +6,17 @@
 
 		<!-- LEFT -->
 		<!-- LEAGUE TABLE AND RESULTS -->
-		<container default_width="-560" priority="3" minimum_width="400"  class="vertical_adaptive_container"> 
+		<container default_width="-560" priority="3" minimum_width="400" class="vertical_adaptive_container">
 
 			<!-- RESULTS AND FIXTURES -->
-			<container  default_height="255" priority="2">
+			<container default_height="255" priority="2">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<container class="vertical_arrange_container" alignment="fill" gap="4">
 
-					<container class="club_overview_team_results_panel" file="club/tcs/fm24/overview/fixtures/club overview team calendar results">
+					<container class="club_overview_team_results_panel" file="nation/tcs/overview/fixtures/results">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 
-					<container class="club_overview_team_results_panel" file="club/tcs/fm24/overview/fixtures/club overview team calendar fixtures">
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</container>
 				</container>
 			</container>
 
@@ -61,7 +58,7 @@
 					</widget>
 
 					<container class="competition_news_panel" file="none">
-						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
 
 						<record id="object_property" get_property="objt" set_property="objt"/>
 
@@ -160,7 +157,7 @@
 
 				<record id="object_property" get_property="objt" set_property="objt"/>
 
-				<container class="tcs_box" >
+				<container class="tcs_box">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<record id="default_properties" default_width="-1" minimum_width="250"/>
 
@@ -209,22 +206,35 @@
 		</container>
 
 		<!-- RIGHT -->
-		<container default_width="-560" priority="2" minimum_width="400"> 
+		<container default_width="-560" priority="2" minimum_width="400">
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<container class="vertical_adaptive_container" gap="8">
 
-
 				<!-- KEY EMPLOYEES -->
-				<container class="club_overview_staff_panel" id="tstf" file="nation/tcs/overview/staff/overview" default_height="-1" minimum_height="550" priority="1">
+				<container class="club_overview_staff_panel" id="tstf" file="nation/tcs/overview/staff/overview" default_height="-1" minimum_height="360" priority="1">
 					<translation id="title" translation_id="257300" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</container>
+				
+				<container default_height="150" priority="2" class="tcs_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+                        <translation id="title" translation_id="297306" type="use" />
+					
+					<widget class="person_list_text" alignment="top,left">
+												<record id="object_property" get_property="CmpM"/>
+					</widget>
+				</container>
+				
+				<container default_height="150" priority="3" class="tcs_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+                        <translation id="title" translation_id="281393" type="use" />
+										
+					<widget class="person_list_text" alignment="top,left">
+												<record id="object_property" get_property="TLeg"/>
+					</widget>
+				</container>
 
-				<widget class="staff_numbers_table" id="sta1" default_height="200" priority="2">
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</widget>
 
 			</container>
 

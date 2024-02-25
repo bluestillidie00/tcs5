@@ -81,6 +81,7 @@
 						</attachment>
 					</widget>
 					
+					<!-- ID -->
 					<container id="clID" hidn="true">
 						<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
 						<animation class="slide_in_bottom_animation"/>
@@ -96,6 +97,7 @@
 					</container>
 				</container>
 
+				<!-- COMPEITION LOGO -->
 				<container>
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
@@ -133,7 +135,7 @@
 			
 			<container class="team_container_information_overview_panel" default_width="-1" minimum_width="300" priority="2" id="fdlv" file="none">
 				<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
-<record id="object_property" get_property="objt" set_property="objt"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
 
 				<!-- TOP ROW -->
 				<container class="tcs_table">
@@ -157,18 +159,17 @@
 						
 						<!-- WORLD RANKING -->
 						<container priority="2" id="wora">
-								<layout class="vertical_arrange_autosize"/>
+							<layout class="vertical_arrange_autosize"/>
 
-								<widget class="label" auto_size="vertical" style="semi_bold">
-									<record id="object_property" get_property="Nffr" name="true"/>
-								</widget>
+							<widget class="label" auto_size="vertical" style="semi_bold">
+								<record id="object_property" get_property="Nffr" name="true"/>
+							</widget>
 
-								<widget class="fifa_ranking_label" alignment="left" id="wnum" icon_enabled="false" auto_size="vertical">
-									<record id="object_property" get_property="Nffr"/>
-								</widget>
-							</container>
+							<widget class="fifa_ranking_label" alignment="left" id="wnum" icon_enabled="false" auto_size="vertical">
+								<record id="object_property" get_property="Nffr"/>
+							</widget>
+						</container>
 					</container>
-
 				</container>
 
 				<!-- 2nd ROW -->
@@ -191,7 +192,7 @@
 							</widget>
 						</container>
 
-										<!-- YOUTH FACILTIES -->
+						<!-- YOUTH FACILTIES -->
 						<container priority="2">
 							<attachment_group class="vertical_arrange_autosize"/>
 
@@ -236,8 +237,6 @@
 								<record id="object_property" get_property="Nlan*"/>
 							</widget>
 						</container>
-
-
 					</container>
 				</container>
 
@@ -272,36 +271,228 @@
 								<record id="object_property" get_property="Ncac"/>
 							</widget>
 						</container>
-
 					</container>
 				</container>
 			</container>
-
 			
-			<container default_width="800" priority="3">
+			<!-- TROPHIES -->
+			<container default_width="600" priority="3">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<translation id="title" translation_id="" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]"/>
 
-		    <widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/trophy info" file="club/trophies" section="trov">
-        <translation id="title" translation_id="321147" type="use" value="Trophies Won" />
-        <record id="object_property" get_property="objt" set_property="objt"/>
-    </widget>
+				<widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/trophy info" file="club/trophies" section="trov">
+					<translation id="title" translation_id="321147" type="use" value="Trophies Won"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
 
 			</container>
 
 		</container>
 	</container>
 
+	<!-- REST OF CONTENT -->
 	<container>
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-		<container class="tcs_tabs" default_item="over" save_default_state="true" save_session_state="true">
 
-			<!-- OVERVIEW TAB ~ STILL NEED TO MOVE FILES ACROSS -->
-			<container id="over" class="client_object_viewer_xml_panel" file="nation/tcs/overview/tabs/overview">
-				<translation id="title" translation_id="450832" type="use"/>
-				<record id="object_property" get_property="objt" set_property="objt"/>
+		<!-- BOTTOM -->
+		<container class="horizontal_adaptive_container" gap="8">
+
+			<!-- LEFT -->
+			<!-- LEAGUE TABLE AND RESULTS -->
+			<container default_width="-560" priority="3" minimum_width="400" class="vertical_adaptive_container">
+
+				<!-- RESULTS -->
+				<container default_height="-200" priority="3" minimum_height="140">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+					<container class="club_overview_team_results_panel" file="nation/tcs/overview/fixtures/results">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				</container>
+			
+				<!-- UPCOMING FIXTURES -->
+				<container class="tcs_box" default_height="-220" priority="2" minimum_height="180">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					
+					<container class="title_link_box" hide_view_menu="true" format="date_and_days" section="TeFi">
+						<translation id="link_title" translation_id="247353" type="use" value="Next Match"/>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<widget class="team_upcoming_fixture_info_panel" id="tmip" file="team/team upcoming fixture info nation profile">
+							<record id="object_property" get_property="NnfP" set_property="valu"/>
+						</widget>
+
+						<!-- NO UPCOMING FIXTURES -->
+						<widget class="label" id="NoFi" alignment="left,top">
+							<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures."/>
+						</widget>
+					</container>
+				</container>
+				
+				<!-- TABS -->
+				<container class="tcs_box" default_height="-300" priority="1">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container class="tcs_tabs" save_session_state="true" default_item="MPsp">
+					
+						<!-- COMPETITIONS -->
+						<widget class="league_ranking_snapshot_panel" id="LRsp" priority="2" default_width="-1" minimum_width="300" navigation_container="true">
+							<translation id="title" translation_id="258711" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+						
+						<!-- KEY PLAYERS -->
+						<container class="client_object_viewer_xml_panel" file="nation/major players snapshot" id="MPsp" priority="1" default_width="-1" minimum_width="300" navigation_container="true">
+							<translation id="title" translation_id="308470" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+
+						<!-- MAJOR CLUBS -->
+						<widget class="major_clubs_snapshot_panel" id="MCsp" priority="1" default_width="-1" minimum_width="300" navigation_container="true">
+							<translation id="title" translation_id="242897" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+		
+						<!-- TRANSFERS -->
+						<widget class="transfer_snapshot_panel" id="TTsp" navigation_container="true">
+							<translation id="title" translation_id="258713" type="use"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+				
+					</container>
+				</container>
 			</container>
 
+			<!-- MIDDLE -->
+			<container default_width="-600" priority="1" minimum_width="500">
+				<translation id="title" translation_id="336543" type="use"/>
+				<layout class="vertical_arrange" vertical_layout="360,-1" vertical_gap="8"/>
+
+				<!-- STADIUM -->
+				<container class="tcs_box">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!--STADIUM INFORMATION NOT AVAILABLE -->
+					<widget class="text" id="NoSt" alignment="centre_x,centre_y" style="bold">
+						<translation id="text" translation_id="436452" type="use"/>
+						<record id="object_property" get_property="TsHA" set_property="hidn"/>
+					</widget>
+					
+					<!-- IF ONLY ONE STADIUM -->
+					<container id="NatC">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			
+						<record id="object_property" get_property="TISC" set_property="hidn"/>
+			
+						<widget class="client_object_viewer_xml_panel" id="NatS" file="nation/tcs/overview/stadium">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="TsHA"/>
+										<integer id="set_property" value="Shwn"/>
+									</record>
+									<record>
+										<integer id="get_property" value="TsFI"/>
+										<integer id="set_property" value="objt"/>
+									</record>
+								</list>
+							</record>
+						</widget>
+					</container>
+		
+					<!-- MORE THAN ONE STADIUM -->
+					<container id="NatW">
+						<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="64" horizontal_inset="48"/>
+						<record id="object_property" get_property="TsHO" set_property="Shwn"/>
+
+						<container class="tcs_box" appearance="tcs/boxes/stadium/paper" rrep="bg" height="25">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+							<widget class="text" id="NatO" alignment="centre_x,centre_y" auto_size="horizontal">
+								<translation id="text" translation_id="336888" type="use" value="Various other stadiums are used for home matches.[COMMENT: line of text saying when a national team uses various stadiums for home games]"/>
+							</widget>
+						</container>
+
+					</container>
+					
+				</container>
+
+				<!-- TOP PLAYERS AND LEGENDS -->
+				<container class="vertical_adaptive_container" gap="8">
+			
+					<!-- KITS -->
+					<widget class="club_overview_kits_panel" id="cloK" gap="8" default_height="-1" priority="1">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				
+					<!-- TOP PLAYERS -->
+					<container default_height="-1" priority="2" class="tcs_box" minimum_height="150">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+						<translation id="title" translation_id="297306" type="use"/>
+					
+						<widget class="person_list_text" alignment="top,left">
+							<record id="object_property" get_property="CmpM"/>
+						</widget>
+					</container>
+				
+					<!-- LEGENDS -->
+					<container default_height="-1" priority="3" class="tcs_box" minimum_height="150">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+						<translation id="title" translation_id="281393" type="use"/>
+										
+						<widget class="person_list_text" alignment="top,left">
+							<record id="object_property" get_property="TLeg"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<!-- RIGHT -->
+			<container default_width="-560" priority="2" minimum_width="400" class="vertical_adaptive_container" gap="8">
+
+				<!-- KEY EMPLOYEES -->
+				<container class="club_overview_staff_panel" id="tstf" file="nation/tcs/overview/staff/overview" default_height="-1" minimum_height="360" priority="1">
+					<translation id="title" translation_id="257300" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+				
+				<!-- WORLD RANKING -->
+				<container id="fifc" default_height="200" minimum_height="60" class="tcs_box" priority="1">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<widget class="fifa_ranking_history_panel" id="fifr">
+						<translation id="title" translation_id="321111" type="use" value="World Ranking History[COMMENT: title for the world ranking history]"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+					<container class="main_box" id="norn">
+						<translation id="title" translation_id="321112" type="use" value="World Ranking History[COMMENT: title for world ranking history section when not being shown]"/>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+						<widget class="spacer" height="10"/>
+
+						<!--explanatory text-->
+						<widget class="text" id="nort" alignment="centre" spec="text" size="large" style="semi_bold" auto_size="vertical">
+							<translation id="text" translation_id="321113" type="use" value="There is no world ranking history available at the current time[COMMENT: message explaining why user can't see any ranking history]"/>
+						</widget>
+						<widget class="text" id="nore" alignment="centre" spec="text" size="large" style="semi_bold" auto_size="vertical">
+							<translation id="text" translation_id="321114" type="use" value="This nation is not included in the world rankings[COMMENT: message explaining why user can't see any ranking history]"/>
+						</widget>
+
+						<!--buttons-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+							<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="5"/>
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+							<widget class="link_appearance_button" id="wrbt">
+								<translation id="text" translation_id="321115" type="use" value="View Current World Rankings[COMMENT:label for displaying all nations' world rankings]"/>
+							</widget>
+						</container>
+					</container>
+				</container>
+				
+			</container>
 		</container>
 	
 	</container>
