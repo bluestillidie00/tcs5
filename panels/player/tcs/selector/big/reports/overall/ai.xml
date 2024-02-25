@@ -173,7 +173,7 @@
 						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="2" vertical_offset="0" vertical_gap="2"/>
 
 						<container>
-							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3"/>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2"/>
 
 							<widget class="text" font="label" colour="text" auto_size="vertical">
 								<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]"/>
@@ -183,7 +183,7 @@
 						</container>
 
 						<container>
-							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3"/>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2"/>
 
 							<widget class="text" font="label" colour="text" auto_size="vertical">
 								<translation id="text" translation_id="450789" type="use" value="Estimated Wage[COMMENT: FR 21116, scout report panel label]"/>
