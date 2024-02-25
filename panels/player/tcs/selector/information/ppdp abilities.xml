@@ -266,49 +266,10 @@
 							<widget class="text" id="prTX" auto_size="vertical" alignment="left" colour="faded text"/>
 						</container>
 					</container> 
-
-
-					<container>
-						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" />
-
-
-						<!-- Recommendation -->
-						<widget class="player_scout_recommendation_widget" file="widgets/player scout recommendation widget compact" id="RCic" alignment="left,centre_y" auto_size="none" click_event="ltms" show_knowledge_bar="false" width="32" height="32" recommendation_mode="2" should_recolour_recommendation_value="true" /> 
-
-						<!-- Cons / pro count and % scouted text. Links to Coach report/scout report 
-							<widget class="link_text" id="pc%t" auto_size="vertical" style="semi_bold" alignment="left,centre_y" hidden="true" /> -->
-
-						<container>
-							<attachment_group class="vertical_arrange_autosize" />
-
-							<widget class="horizontal_subtle_divider" height="2"/>
-
-
-							<!-- Recommendation text -->
-							<widget class="text" id="SMtx" auto_size="vertical" style="semi_bold" size="xsmall" alignment="left,centre_y" />
-
-							<widget class="label" id="ktxt" auto_size="vertical" size="small" colour="faded text" />
-
-
-						</container>
-					</container>
 				</container> 
-
-
 
 			</widget>
 
 		</container>
-
-
-
-
-
-
-
-
-
-
-
 	</container>
 </panel>
