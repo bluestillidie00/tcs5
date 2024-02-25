@@ -104,7 +104,7 @@
 				</container>
 			
 					<!-- BOTTOM SECTION -->
-				<container draw_vertical_dividers="true" default_height="-160" priority="2" minimum_height="160" class="horizontal_adaptive_container">
+				<container draw_vertical_dividers="true" default_height="-160" priority="2" minimum_height="140" class="horizontal_adaptive_container">
 
 					<container class="client_object_viewer_selector_panel" id="cos7" file="player/player overview small selector panel" minimum_width="310" default_width="-25" priority="2" navigation_container="true">
 						<integer id="default_for_unemployed_managers" value="Pgrg"/>
