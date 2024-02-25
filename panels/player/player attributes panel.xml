@@ -109,7 +109,7 @@
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0"
 							apply_to_children="true" />
 
-						<widget class="table" layout="-1, 90" mode="fill_rows, printable"
+						<widget class="table" layout="-1, 90" mode="fill_rows, printable,stripe_rows"
 							row_height="22" row_spacing="4">
 							<record id="object_property" get_property="objt" set_property="objt" />
 							<list id="column_table_properties">
@@ -196,7 +196,7 @@
 							apply_to_children="true" />
 						<record id="object_property" get_property="objt" set_property="objt" />
 
-						<widget class="table" layout="-1, 80" mode="fill_rows, printable"
+						<widget class="table" layout="-1, 80" mode="fill_rows, printable,stripe_rows"
 							row_height="22" row_spacing="0">
 							<record id="object_property" get_property="objt" set_property="objt" />
 							<list id="column_table_properties">
