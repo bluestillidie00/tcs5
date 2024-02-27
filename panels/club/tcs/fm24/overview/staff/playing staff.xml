@@ -14,7 +14,7 @@
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 				<!-- CAPTAINS -->
-				<widget class="person_snapshot_club_overview_panel" id="capt" player="true" file="club/tcs/snapshots/captain">
+				<widget class="person_snapshot_club_overview_panel" id="capt" player="true" file="club/tcs/fm24/overview/staff/snapshots/captain">
 					<record id="object_property">
 						<integer id="get_property" value="TCap"/>
 						<integer id="set_property" value="objt"/>
@@ -26,7 +26,7 @@
 			<container class="tcs_table_trans" priority="3">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-				<widget class="person_snapshot_club_overview_panel" id="vice" player="true" file="club/tcs/snapshots/vice">
+				<widget class="person_snapshot_club_overview_panel" id="vice" player="true" file="club/tcs/fm24/overview/staff/snapshots/vice">
 					<record id="object_property">
 						<integer id="get_property" value="TVca"/>
 						<integer id="set_property" value="objt"/>
@@ -37,7 +37,7 @@
 			<container class="tcs_table" default_height="-1" priority="2">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-				<widget class="person_snapshot_club_overview_panel" id="KeyP" player="true" file="club/tcs/snapshots/key">
+				<widget class="person_snapshot_club_overview_panel" id="KeyP" player="true" file="club/tcs/fm24/overview/staff/snapshots/key">
 					<record id="object_property">
 						<integer id="get_property" value="TKpL"/>
 						<integer id="set_property" value="objt"/>
@@ -47,7 +47,7 @@
 
 			<container class="tcs_table_trans" priority="4">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-				<widget class="person_snapshot_club_overview_panel" id="HotP" player="true" file="club/tcs/snapshots/hot">
+				<widget class="person_snapshot_club_overview_panel" id="HotP" player="true" file="club/tcs/fm24/overview/staff/snapshots/hot">
 				</widget>
 			</container>
 		</container>

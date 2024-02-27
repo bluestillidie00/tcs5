@@ -27,23 +27,8 @@
     <widget class="team_snapshot_injury_panel" id="tsin" late_loading="true" valid_for_unemployed_manager="false">
         <translation id="title" translation_id="298734" type="use" value="Team Injuries[COMMENT:title for a box containing a list of a team's injuries]" />
     </widget>
-<!-- 
-    <container class="legend_list_table" id="TLeg">
-        <translation id="title" translation_id="281393" type="use" value="Legends[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
-        <record id="object_property" get_property="TLeg" />
-    </container>
-
-    <container class="legend_list_table" id="Csvp">
-        <translation id="title" translation_id="289355" type="use" value="Icons[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
-        <record id="object_property" get_property="Csvp" />
-    </container>
-
-    <container class="legend_list_table" id="Cfap">
-        <translation id="title" translation_id="247454" type="use" value="Favoured Personnel" />
-        <record id="object_property" get_property="Cfap" />
-    </container>
- -->
-    <widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/trophy info" file="club/trophies" section="trov">
+	
+    <widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/tcs/fm24/overview/history/trophy info" file="club/tcs/fm24/overview/history/trophies" section="trov">
         <translation id="title" translation_id="321147" type="use" value="Trophies Won" />
         <record id="object_property" get_property="objt" set_property="objt"/>
     </widget>
@@ -57,7 +42,7 @@
         <translation id="title" translation_id="247326" type="use" value="Fixtures &amp; Results"/>
         <layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-        <container class="manager_upcoming_fixtures_panel" id="upfx" file="club/club overview upcoming fixtures">
+        <container class="manager_upcoming_fixtures_panel" id="upfx" file="club/tcs/fm24/overview/club overview upcoming fixtures">
             <record id="object_property" get_property="TCsf" set_property="objt"/>
         </container>
 

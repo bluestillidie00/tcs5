@@ -184,7 +184,7 @@
 						<record id="default_properties" default_width="-1" minimum_width="250"/>
 
 						<!--snapshot selector 1-->
-						<container class="client_object_viewer_selector_panel" file="club/club overview selector panel" id="cos2" priority="1" default_widget="upfx" late_loading="true" save_session_state="true"/>
+						<container class="client_object_viewer_selector_panel" file="club/tcs/fm24/overview/club overview selector panel" id="cos2" priority="1" default_widget="upfx" late_loading="true" save_session_state="true"/>
 
 					</container>
 
@@ -200,7 +200,7 @@
 						<record id="default_properties" default_width="-1" minimum_width="250"/>
 
 						<!--snapshot selector 1-->
-						<container class="client_object_viewer_selector_panel" file="club/club overview selector panel" id="cos3" priority="1" default_widget="upfx" late_loading="true" save_session_state="true"/>
+						<container class="client_object_viewer_selector_panel" file="club/tcs/fm24/overview/club overview selector panel" id="cos3" priority="1" default_widget="upfx" late_loading="true" save_session_state="true"/>
 
 					</container>
 
@@ -214,9 +214,8 @@
 
 			<container class="vertical_adaptive_container" gap="8">
 
-
 				<!-- KEY EMPLOYEES -->
-				<container class="club_overview_staff_panel" id="tstf" file="club/tcs/overview/key staff" default_height="-1" minimum_height="550" priority="1">
+				<container class="club_overview_staff_panel" id="tstf" file="club/tcs/fm24/overview/staff/key staff" default_height="-1" minimum_height="550" priority="1">
 					<translation id="title" translation_id="257300" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</container>

@@ -17,12 +17,6 @@
 			<container width="150">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-				<!-- PRESS CONFERENCE BACKGROUND -->
-				<container class="client_object_viewer_xml_panel" file="club/tcs/overview/header pc bg" >
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
-
 				<!-- PLAYER FACE -->
 				<widget class="object_portrait_picture" id="face" image_alignment="centre_x, centre_y" scale_picture="true" wants_mouse_events="false">
 					<record id="object_property" get_property="objt" set_property="objt" />
