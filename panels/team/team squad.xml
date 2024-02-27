@@ -128,12 +128,12 @@
 									<flags id="Pnat"/><!-- person nationality -->
 									<flags id="Ptrt"/><!-- training rating -->
 								</record>
-							</record>		
+							</record>
 							
 							<record id="WusV">
 								<record id="view_table_properties">
-				<integer id="row_height" value="38" />
-			</record>
+									<integer id="row_height" value="38"/>
+								</record>
 								<translation id="name" type="use" value="WorkTheSpace Ultimate Squad View Alternate"/>
 								<!-- Define attributes/properties to view in this view type on the panel.
 								 Any properties not defined here will be hidden for this view. -->
@@ -160,7 +160,7 @@
 									<flags id="Pnat"/><!-- person nationality -->
 									<flags id="Ptrt"/><!-- training rating -->
 								</record>
-							</record>							
+							</record>
 							
 							<record id="Wspv">
 								<translation id="name" type="use" value="WorkTheSpace's FM24 Squad Profile View"/>
@@ -169,14 +169,14 @@
 								<record id="view">
 									<flags id="PtsL"/><!-- picked info -->
 									<flags id="Pnfo"/><!-- player status/info -->
-																		<flags id="Pnat"/><!-- person nationality -->
+									<flags id="Pnat"/><!-- person nationality -->
 									<flags id="Page"/><!-- person age -->
-																		<flags id="Pnms"/><!-- person name -->
-<record id="PpsC" width="80"/><!-- person position -->
+									<flags id="Pnms"/><!-- person name -->
+									<record id="PpsC" width="80"/><!-- person position -->
 									<flags id="Pcab"/><!-- current ability -->
 									<flags id="Ppab"/><!-- potential -->
 									<flags id="PPst"/><!-- personality -->
-																<flags id="THic"/> <!-- hierachy -->
+									<flags id="THic"/><!-- hierachy -->
 									<flags id="Pcpt"/><!-- potential -->
 									<flags id="Ppth"/><!-- potential -->
 									<flags id="Pohl"/><!-- potential -->
@@ -201,8 +201,8 @@
 									<flags id="PtsL"/><!-- picked info -->
 									<flags id="Pnfo"/><!-- player status/info -->
 									<flags id="Page"/><!-- person age -->
-																		<flags id="Pnms"/><!-- person name -->
-<record id="PpsC" width="80"/><!-- person position -->
+									<flags id="Pnms"/><!-- person name -->
+									<record id="PpsC" width="80"/><!-- person position -->
 									<flags id="Pcab"/><!-- current ability -->
 									<flags id="Ppab"/><!-- potential -->
 									<flags id="PTif"/><!-- potential -->
@@ -220,6 +220,77 @@
 						</list>
 					</record>
 				
+					<record id="othV">
+						<translation id="text" type="use" value="Other Squad Views"/>
+						
+						<list id="items">
+							<!-- GENERAL VIEW -->
+							<record id="tsGe">
+								<record id="view_table_properties">
+									<integer id="row_height" value="35"/>
+								</record>
+								<translation id="name" type="use" value="TCS General Squad View"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<record id="Pnat" width="22"/>
+									<flags id="Pnfo"/>
+									<flags id="PPDW"/>
+									<flags id="PpsC"/>
+									<flags id="PPst"/>
+									<flags id="Pcac"/>
+									<flags id="Ppab"/>
+									<flags id="Pdet"/>
+									<flags id="Pwkr"/>
+									<flags id="Ptwr"/>
+									<flags id="PcOI"/>
+									<flags id="PftI"/>
+									<flags id="Pmor"/>
+									<flags id="Poap"/>
+									<flags id="POmg"/>
+									<flags id="Pgls"/>
+									<flags id="POgg"/>
+									<flags id="PNxg"/>
+									<flags id="PNx9"/>
+									<flags id="Pfrm"/>
+									<flags id="Poav"/>
+									<flags id="LMrt"/>
+									<flags id="Ptrt"/>
+									<flags id="Pdva"/>
+									<flags id="Pcww"/>
+								</record>
+							</record>
+								
+							<!-- TRAINING -->
+							<record id="tsTr">
+								<record id="view_table_properties">
+									<integer id="row_height" value="35"/>
+								</record>
+								<translation id="name" type="use" value="TCS Training Squad View"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<record id="Pnat" width="22"/>
+									<flags id="Pnfo"/>
+									<flags id="PPDW"/>
+									<flags id="PpsC"/>
+									<flags id="PPst"/>
+									<flags id="Pcac"/>
+									<flags id="Ppab"/>
+									<flags id="PcOI"/>
+									<flags id="PftI"/>
+									<flags id="Ptrt"/>
+									<flags id="PTif"/>
+									<flags id="PTaf"/>
+									<flags id="PTpm"/>
+									<flags id="PpAH"/>
+									<flags id="PTWl"/>
+									<flags id="Piaw"/>
+								</record>
+							</record>
+						</list>
+					</record>
+					
+					<record id="----"/>
+
 					<record id="geni">
 
 						<translation id="name" translation_id="247410" type="use" value="General Info"/>
