@@ -1,0 +1,123 @@
+<panel should_force_refresh="true">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" gap="8">
+
+		<container default_width="320">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+			<container class="scrolling_box">
+				<container class="tcs_fade" height="500">
+					<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="4" vertical_gap="16"/>
+
+					<!-- LOGO AND HOME KIT -->
+					<container height="160">
+						<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,25,0,25"/>
+						
+						<!-- CLUB LOGO -->
+						<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="left">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<layout class="stick_to_sides_attachment" alignment="left" inset="70"/>
+						</container>
+					
+						<!-- HOME KIT -->
+						<widget class="club_overview_kits_panel" id="cloK" file="team/tcs/club info/kits">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+					
+					<!-- FULL NAME -->
+					<container height="40">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+							<widget class="label" font="label">
+								<record id="object_property" get_property="Cnam" name="true"/>
+							</widget>
+					
+							<widget class="text" size="large" font="title" colour="fg">
+								<record id="object_property" get_property="Cnam"/>
+							</widget>
+						</container>
+					</container>
+
+					<container height="32" >
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					
+						<!-- NICKNAME -->
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+							<widget class="label" font="label">
+								<record id="object_property" get_property="TCnn" name="true"/>
+							</widget>
+					
+							<widget class="text">
+								<record id="object_property" get_property="TCnn"/>
+							</widget>
+						</container>
+						
+						<!-- FOUNDED -->
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+							<widget class="label" font="label">
+								<record id="object_property" get_property="Cyfn" name="true"/>
+							</widget>
+					
+							<widget class="dashed_number_label">
+								<boolean id="NumF" value="0"/>
+								<record id="object_property" get_property="Cyfn"/>
+							</widget>
+						</container>
+					</container>
+					
+					<container height="32" >
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					
+						<!-- NICKNAME -->
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+							<widget class="label" font="label">
+								<record id="object_property" get_property="SctI" name="true"/>
+							</widget>
+					
+							<widget class="city_label">
+								<record id="object_property" get_property="SctI"/>
+							</widget>
+						</container>
+						
+						<!-- FOUNDED -->
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+							<widget class="label" font="label">
+								<record id="object_property" get_property="NrgR" name="true"/>
+							</widget>
+					
+							<widget class="region_label">
+								<record id="object_property" get_property="NrgR"/>
+							</widget>
+						</container>
+					</container>
+
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

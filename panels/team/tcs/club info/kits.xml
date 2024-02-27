@@ -1,0 +1,18 @@
+<panel>
+<layout class="stick_to_sides_attachment" apply_to_children="true" />
+
+	<container id="kitH">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="" />
+
+		<record id="default_properties" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre,bottom" always_use_latest_object_list="true">
+			<record id="object_property">
+				<integer id="get_property" value="Tidx" />
+				<integer id="set_property" value="indx" />
+			</record>
+		</record>
+
+<container />
+		<widget class="kit_picture" id="T_hk" kit_id="0" />
+	</container>
+
+</panel>
