@@ -1,0 +1,70 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_layout="-7" vertical_inset="4">
+		<global id="horizontal_gap" name="ui.main_box_gap" />
+	</attachment_group>
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="6" />
+
+		<container class="plain_box" file="club/club vision board selling panel">
+			<record id="object_property" get_property="Clts" set_property="Shwn" />
+		</container>
+
+		<container class="plain_box" file="club/club vision takeover in progress panel">
+			<record id="object_property" get_property="Ciit" set_property="Shwn" />
+		</container>
+
+
+		<container class="club_vision_viewer_panel" id="cvis" file="team/tcs/club info/board_culture_widget" club_vision_view_type="0" show_culture="true" show_objective_type="true" show_objective_importance="true" show_objective_status="true" use_performance_data="true" />
+	</container>
+
+	<!--Manager Performance-->
+	<container class="inner_subtle_box" id="mnbx">
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="6" horizontal_inset="8" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" />
+
+			<widget class="radio_button" id="BdTb" appearance="tabs/subsection/normal/top/button" click_event="vchd" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/26px/board" secondary_icon_alignment="left" auto_size="horizontal" style="bold" size="large" colour="performance board tag" secondary_icon_colour="performance board tag" red_replacement="performance board tag">
+				<translation id="text" translation_id="337816" type="use" value="Board[COMMENT: club screen - title for a board related activities submenu]" />
+				<event id="click_event">
+					<flags id="event_id" value="vchd" />
+					<flags id="mode" value="0" />
+				</event>
+			</widget>
+			<widget class="radio_button" id="SuTb" appearance="tabs/subsection/normal/top/button" click_event="vchd" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/26px/fans" secondary_icon_alignment="left" auto_size="horizontal" style="bold" size="large" colour="performance fans tag" secondary_icon_colour="performance fans tag" red_replacement="performance fans tag">
+				<translation id="text" translation_id="447646" type="use" value="Supporters[COMMENT:Team Dynamics: header for the supporters' take on the manager's level of support within the squad]" />
+				<event id="click_event">
+					<flags id="event_id" value="vchd" />
+					<flags id="mode" value="1" />
+				</event>
+			</widget>
+
+			<widget class="board_request_popup_button_panel" id="brpu" height="33" auto_size="horizontal">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			</widget>
+		</container>
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+				<widget class="board_confidence_panel" id="BoPe" file="club/board confidence snapshot autosize" type="0" auto_size="vertical" />
+				<widget class="board_confidence_panel" id="SuPe" file="club/board confidence snapshot autosize" type="1" auto_size="vertical" />
+
+				<widget class="horizontal_divider" />
+
+				<widget class="link_button" id="bdlk" auto_size="all" section="BoPr" alignment="left, centre_y">
+					<translation id="text" translation_id="557628" type="use" value="Board Profile[COMMENT: AREA: Club vision panel; SUB-AREA: Club vision section; FR-BN: 3266; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Link button label]" />
+				</widget>
+
+				<widget class="link_button" id="splk" auto_size="all" section="sppo" alignment="left, centre_y">
+					<translation id="text" translation_id="447646" type="use" value="Supporters[COMMENT:Team Dynamics: header for the supporters' take on the manager's level of support within the squad]" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

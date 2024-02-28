@@ -1,0 +1,8 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<container class="scrolling_box" fit_content_horizontal="false" fit_content_vertical="true">
+		<container class="container" id="hnrs">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+		</container>
+	</container>
+</panel>

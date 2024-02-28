@@ -1,0 +1,57 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+
+	<colour id="landmark_text_colour" name="text" />
+	<colour id="landmark_icon_red_replacement_colour" name="normal_icon" />
+	<colour id="landmark_icon_blue_replacement_colour" name="bg" />
+
+	<widget class="table" id="tltb" layout="-1, 110, 110, 160, 16, 16, 4" row_height="19" height="19" column_spacing="12" drop_disabled="true" fixed_size_rows="true" sort_disabled="true">
+		<container row="0" col="0">
+			<attachment_group class="horizontal_arrange" horizontal_gap="2" horizontal_offset="0" />
+			
+			<widget class="text" id="titl" font="title" auto_size="horizontal" height="16" alignment="left, centre_y" />
+			<widget class="spacer" width="4" />
+			<widget class="picture" id="expi" file="icons/16px/urgent" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x, top" width="16" height="16" red_replacement="accent" hidden="true" />
+			<widget class="text" id="expt" auto_size="all" alignment="left, centre_y" colour="accent" hidden="true" style="bold">
+				<translation id="text" translation_id="495543" type="use" value="Minimum expectations. To be negotiated later.[COMMENT: AREA: Club vision meeting panel; SUB-AREA: Current season objectives heading; BN: 19150; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Informational text indicating that any competition expectation objectives listed under the upcoming season are not negotiable now but later as a seperate negotiation]" />
+			</widget>
+		</container>
+
+		<container row="0" col="1">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="picture" id="impi" image_alignment="centre" file="icons/custom/vision/priority/empty" scale_picture="false" hidden="true" red_replacement="text">
+				<translation id="hint" translation_id="491858" type="use" value="Importance[COMMENT: AREA: Club vision panel; SUB-AREA: Objectives list column heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Column heading to indicate the importance of each objective]" />
+			</widget>
+
+			<widget class="text" id="imtl" font="table_heading" colour="faded text" alignment="left, centre_y">
+				<translation id="text" translation_id="491858" type="use" value="Importance[COMMENT: AREA: Club vision panel; SUB-AREA: Objectives list column heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Column heading to indicate the importance of each objective]" />
+			</widget>
+		</container>
+
+		<widget class="text" id="tytl" font="table_heading" colour="faded text" alignment="left, centre_y" row="0" col="2">
+			<translation id="text" translation_id="316794" type="use" value="Type[COMMENT: default properties.xml; list header to describe the type of game object shown - a game object is anything the user can interact with]" />
+		</widget>
+
+		<widget class="text" id="sttl" font="table_heading" colour="faded text" alignment="left, centre_y" row="0" col="3">
+			<translation id="text" translation_id="242853" type="use" value="Status" />
+		</widget>
+
+		<widget class="picture" id="mvhd" file="icons/16px/delay" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="16" red_replacement="disabled" row="0" col="4" />
+		<widget class="picture" id="cllp" file="icons/16px/down" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="16" colour="text" row="0" col="5">
+			<string id="remove_if" value="ui.is_fmt_controller_skin" />
+		</widget>
+
+		<list id="column_table_properties">
+			<record index="0" default_width="220" minimum_width="220" auto_hide_priority="100" />
+			<record index="1" default_width="110" minimum_width="110" auto_hide_priority="1000" />
+			<record index="2" default_width="110" minimum_width="110" auto_hide_priority="2000" />
+			<record index="3" default_width="160" minimum_width="160" auto_hide_priority="200" />
+		</list>
+	</widget>
+
+	<container id="lstc">
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+		<!-- items added here -->
+	</container>
+</panel>

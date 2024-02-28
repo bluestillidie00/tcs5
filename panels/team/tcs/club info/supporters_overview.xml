@@ -1,0 +1,63 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" vertical_offset="4" />
+
+	<!-- Logo, Title, Report Compiled By -->
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" vertical_inset="0" horizontal_offset="0" />
+
+		<widget class="object_portrait_picture" id="sglo" height="40" width="40" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+			<widget class="text" id="sgtt" auto_size="all" font="title" size="large" colour="text" />
+			<widget class="text" id="sgct" display_format="1" size="medium" height="18" colour="faded text" />
+		</container>
+	</container>
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+		<container>
+			<!-- Main content always shown -->
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="6" horizontal_inset="0" />
+
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" />
+				
+				<widget class="text" id="sgtx" auto_size="vertical" />
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, 200" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" vertical_offset="12" />
+
+					<widget class="text" auto_size="all" style="semi_bold" font="title" size="large" colour="text">
+						<translation id="text" translation_id="557710" type="use" value="Supporter Profile[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Supporters profile title text.]" />	
+					</widget>
+					<widget class="text" id="sptx" display_format="1" auto_size="all" colour="text" />
+				</container>
+
+				<widget id="gslb" class="link_button" auto_size="all" section="gsup" navigation_focus_target="true">
+					<layout class="stick_to_sides_attachment" alignment="right, bottom" inset="10" />
+					<translation id="text" translation_id="557711" type="use" value="Global Supporters[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Global supporters button text.]" />
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2, 16, -1" vertical_inset="0" horizontal_offset="12"  horizontal_gap="8"/>
+
+				<container class="supporter_percentage_panel" id="spcp" pitch_inset="36,36,40,36" />
+
+				<widget class="vertical_divider" width="2" height="236" image_alignment="centre_x" />
+
+				<container class="supporter_stats_panel" id="sstp" />
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

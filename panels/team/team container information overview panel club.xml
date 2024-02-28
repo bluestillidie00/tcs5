@@ -3,120 +3,311 @@
 
 	<container class="horizontal_adaptive_container" gap="8">
 
-		<container default_width="320">
-			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+		<!-- LEFT -->
+		<container default_width="320" class="vertical_adaptive_container" gap="8">
 
-			<container class="scrolling_box">
-				<container class="tcs_fade" height="500">
-					<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="4" vertical_gap="16"/>
+			<!-- CLUB INFO -->
+			<container class="tcs_fade" default_height="-1" priority="1" minimum_height="300">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				
+				<container class="scrolling_box">
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="12"/>
 
-					<!-- LOGO AND HOME KIT -->
-					<container height="160">
-						<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,25,0,25"/>
+						<!-- LOGO AND HOME KIT -->
+						<container height="160">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+										
+							<!-- STADIUM PICTURE -->
+							<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
+		
+							<!-- ROUNDED EDGES -->
+							<container class="tcs_box" appearance="tcs/ro" rrep="bg"/>
+
+							<!-- OVERLAY ON STADIUM PIC -->
+							<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.6" rrep="bg"/>
+
+							<container>
+								<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,25,4,25"/>
+												
+								<!-- CLUB LOGO -->
+								<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="left">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<layout class="stick_to_sides_attachment" alignment="left" inset="70"/>
+								</container>
+					
+								<!-- HOME KIT -->
+								<widget class="club_overview_kits_panel" id="cloK" file="team/tcs/club info/kits">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</widget>
+							</container>
+						</container>
+					
+						<!-- FULL NAME -->
+						<container height="40">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+								<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+								<widget class="label" font="label">
+									<record id="object_property" get_property="Cnam" name="true"/>
+								</widget>
+					
+								<widget class="text" size="large" font="title" colour="fg">
+									<record id="object_property" get_property="Cnam"/>
+								</widget>
+							</container>
+						</container>
+
+						<container height="32">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+					
+							<!-- NICKNAME -->
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+								<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+								<widget class="label" font="label">
+									<record id="object_property" get_property="TCnn" name="true"/>
+								</widget>
+					
+								<widget class="text">
+									<record id="object_property" get_property="TCnn"/>
+								</widget>
+							</container>
 						
-						<!-- CLUB LOGO -->
-						<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="left">
-							<record id="object_property" get_property="objt" set_property="objt"/>
-							<layout class="stick_to_sides_attachment" alignment="left" inset="70"/>
+							<!-- FOUNDED -->
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					
+								<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+								<widget class="label" font="label">
+									<record id="object_property" get_property="Cyfn" name="true"/>
+								</widget>
+					
+								<widget class="dashed_number_label">
+									<boolean id="NumF" value="0"/>
+									<record id="object_property" get_property="Cyfn"/>
+								</widget>
+							</container>
 						</container>
 					
-						<!-- HOME KIT -->
-						<widget class="club_overview_kits_panel" id="cloK" file="team/tcs/club info/kits">
-							<record id="object_property" get_property="objt" set_property="objt"/>
-						</widget>
-					</container>
+						<container height="32">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 					
-					<!-- FULL NAME -->
-					<container height="40">
-						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+							<!-- CITY -->
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
 					
-						<container>
-							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+								<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
 					
-							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+								<widget class="label" font="label">
+									<record id="object_property" get_property="SctI" name="true"/>
+								</widget>
 					
-							<widget class="label" font="label">
-								<record id="object_property" get_property="Cnam" name="true"/>
-							</widget>
-					
-							<widget class="text" size="large" font="title" colour="fg">
-								<record id="object_property" get_property="Cnam"/>
-							</widget>
-						</container>
-					</container>
-
-					<container height="32" >
-						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-					
-						<!-- NICKNAME -->
-						<container>
-							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
-					
-							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
-					
-							<widget class="label" font="label">
-								<record id="object_property" get_property="TCnn" name="true"/>
-							</widget>
-					
-							<widget class="text">
-								<record id="object_property" get_property="TCnn"/>
-							</widget>
-						</container>
+								<widget class="city_label">
+									<record id="object_property" get_property="SctI"/>
+								</widget>
+							</container>
 						
-						<!-- FOUNDED -->
-						<container>
-							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+							<!-- REGION -->
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
 					
-							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+								<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
+					
+								<widget class="label" font="label">
+									<record id="object_property" get_property="NrgR" name="true"/>
+								</widget>
+					
+								<widget class="region_label">
+									<record id="object_property" get_property="NrgR"/>
+								</widget>
+							</container>
+						</container>
+					
+						<!-- DERBIES -->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre"/>
 					
 							<widget class="label" font="label">
-								<record id="object_property" get_property="Cyfn" name="true"/>
+								<record id="object_property" get_property="TDer" name="true"/>
 							</widget>
-					
-							<widget class="dashed_number_label">
-								<boolean id="NumF" value="0"/>
-								<record id="object_property" get_property="Cyfn"/>
-							</widget>
-						</container>
-					</container>
-					
-					<container height="32" >
-						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
-					
-						<!-- NICKNAME -->
-						<container>
-							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
-					
-							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
-					
-							<widget class="label" font="label">
-								<record id="object_property" get_property="SctI" name="true"/>
-							</widget>
-					
-							<widget class="city_label">
-								<record id="object_property" get_property="SctI"/>
+							
+							<widget class="team_derbies_text" size="small">
+								<record id="object_property" get_property="TDer"/>
 							</widget>
 						</container>
-						
-						<!-- FOUNDED -->
-						<container>
-							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
-					
-							<record id="default_properties" auto_size="vertical" alignment="centre,can_scale"/>
-					
-							<widget class="label" font="label">
-								<record id="object_property" get_property="NrgR" name="true"/>
-							</widget>
-					
-							<widget class="region_label">
-								<record id="object_property" get_property="NrgR"/>
-							</widget>
-						</container>
-					</container>
 
+						<!-- FIERCE RIVALRIES -->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre"/>
+					
+							<widget class="label" font="label">
+								<record id="object_property" get_property="Cfmr" name="true"/>
+							</widget>
+							
+							<widget class="club_rivalries_list_text" size="small">
+								<record id="object_property" get_property="Cfmr"/>
+							</widget>
+						</container>
+					
+						<!-- OTHER RIVALRIES -->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+					
+							<record id="default_properties" auto_size="vertical" alignment="centre"/>
+					
+							<widget class="label" font="label">
+								<record id="object_property" get_property="Cfrt" name="true"/>
+							</widget>
+							
+							<widget class="club_rivalries_list_text" size="small">
+								<record id="object_property" get_property="Cfrt"/>
+							</widget>
+						</container>
+					</container>
 				</container>
 			</container>
+			
+			<!-- TROPHIES -->
+			<container class="tcs_box" default_height="-1" priority="2">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="321147" type="use" value="Trophies Won"/>
+
+				<widget class="team_container_honours_panel" id="tchp" file="team/tcs/club info/trophies" honour_subpanel_filename="team/tcs/club info/trophy_widget">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+				
 		</container>
+
+		<container default_width="-1" class="vertical_adaptive_container" gap="8">
+
+			<!-- TOP - LEGENDS ICONS AND FAVOURED PERSONNEL -->
+			<container default_height="-180" minimum_height="100" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+				<!-- LEGENDS -->
+				<container class="tcs_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+					<translation id="title" translation_id="281393" type="use" value="Legends[COMMENT: heading; team_information_panel; list of legends persons to current club]"/>
+
+					<container class="legend_list_table" id="TLeg">
+						<record id="object_property">
+							<string id="get_property" value="TLeg"/>
+						</record>
+						<list id="column_widget_properties">
+							<record indx="0" navigation_focus_target="false"/>
+						</list>
+					</container>
+				</container>
+
+				<container class="tcs_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+					<translation id="title" translation_id="289355" type="use" value="Icons[COMMENT: heading; team_information_panel; list of legends persons to current club]"/>
+
+					<container class="legend_list_table" id="Csvp">
+						<record id="object_property">
+							<string id="get_property" value="Csvp"/>
+						</record>
+						<list id="column_widget_properties">
+							<record indx="0" navigation_focus_target="false"/>
+						</list>
+					</container>
+				</container>
+
+				<container class="tcs_box">
+					<translation id="title" translation_id="247454" type="use" value="Favoured Personnel"/>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+					<container class="legend_list_table" id="Cfap">
+						<record id="object_property">
+							<string id="get_property" value="Cfap"/>
+						</record>
+						<list id="column_widget_properties">
+							<record indx="0" navigation_focus_target="false"/>
+						</list>
+					</container>
+				</container>
+
+			</container>
+
+			<!-- MIDDLE SECTION -->
+			<container default_height="-555" class="horizontal_adaptive_container" gap="8" minimum_height="400" priority="2">
+
+				<!-- HISTORY TABS -->
+				<container default_width="-1" class="tcs_tabs_primary" save_session_state="true" default_item="land" >
+
+					<!-- CLUB BACKGROUND -->
+					<widget class="team_container_information_background_panel" id="Cbac" section="trov">
+						<translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+					
+					<!-- COMPETITIONS -->
+					<container id="comp">
+						<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+						<translation id="title" translation_id="227741" type="use"/>
+
+						<container class="team_container_records_competitions_panel">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					</container>
+		
+					<!-- LANDMARKS -->
+					<container id="land">
+						<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+						<translation id="title" translation_id="248354" type="use"/>
+
+						<container class="team_container_records_landmarks_panel">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					</container>
+				</container>
+
+				<container default_width="-1" class="tcs_tabs_primary" save_session_state="true" default_item="sppo">
+					
+					<widget class="board_room_panel" id="tcbr" file="team/tcs/club info/board">
+						<translation id="title" translation_id="557776" type="use"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+					
+					<widget class="board_room_panel" id="bdcl" file="team/tcs/club info/board_culture">
+						<translation id="title" translation_id="491859" type="use"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+					<widget class="supporter_profile_panel" id="sppo" file="team/tcs/club info/supporters_overview">
+						<translation id="title" translation_id="447646" type="use"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+				</container>
+
+			</container>
+
+			<!-- LEAGUE HISTORY -->
+			<container default_height="-250" class="tcs_box" priority="3">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="319446" type="use"/>
+		
+				<widget class="club_league_history_graph" id="clhg" file="club/club league history graph no buttons" section="cmps">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+		</container>
+
 
 	</container>
 

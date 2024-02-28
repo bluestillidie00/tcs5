@@ -1,0 +1,40 @@
+<panel height="90">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_box">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+ 
+		<!-- TROPHY PICTURE -->
+		<container class="tcs_table" width="80">
+			<layout class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0"/>
+
+			<!-- SHADING -->
+			<widget class="picture" id="" file="pictures/trophies/default/shadow" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+
+			<!-- TROPHY PICTURE -->
+			<widget class="object_portrait_picture" id="trop" scale_picture="true">
+				<integer id="property" value="trop"/>
+				<boolean id="keep_aspect_ratio" value="true"/>
+				<boolean id="comp_use_trophy_icon" value="true"/>
+				<flags id="image_alignment" value="centre_x,bottom"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+			</widget>
+		</container>
+ 
+		<!-- INFORMATION -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+
+			<record id="default_properties" alignment="left" auto_size="vertical"/>
+
+			<!-- TIMES WON -->
+			<widget class="text" id="wcnt" size="large" style="bold"/>
+			
+			<!-- COMPETITION -->
+			<widget class="text" id="cmpn" multiline="true" size="small"/>
+		</container>
+
+	</container>
+</panel>

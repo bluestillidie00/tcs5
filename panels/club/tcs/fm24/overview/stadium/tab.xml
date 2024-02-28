@@ -113,11 +113,14 @@
 
 			<record id="object_property" get_property="objt" set_property="objt"/>
 			
+		<container class="main_box">
+<attachment_group class="vertical_arrange_autosize" horizontal_inset="8"/>
+
 			<!-- STADIUM INFO LABEL -->
 			<widget class="text" font="title" auto_size="all">
 				<translation id="text" translation_id="395324" type="use"/>
 			</widget>
-
+			
 			<!-- STADIUM INFO TABLE -->
 			<container class="scrolling_box" id="tttt" height="160">
 						
@@ -126,7 +129,7 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 							
 					<list id="column_widget_properties">
-						<record indx="0" alignment="left,centre_y" font="label"/>
+						<record indx="0" alignment="left,centre_y" font="label" inset="8"/>
 						<record indx="1" alignment="left,centre_y" auto_size="vertical"/>
 					</list>
 
@@ -147,6 +150,7 @@
 						<record id="Scov"/><!--Roof-->
 					</list>
 				</widget>
+			</container>
 			</container>
 
 			<!-- TABBED CONTAINER AT BOTTOM -->

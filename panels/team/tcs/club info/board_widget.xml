@@ -1,0 +1,28 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend" vertical_offset="0" vertical_gap="8"/>
+
+		<widget class="text" id="emTX" auto_size="horizontal" height="40" alignment="centre" hidden="true">
+			<layout class="arrange_vertical_attachment" alignment="top"/>
+			<layout class="centre_in_parent_attachment" alignment="all"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+			<translation id="text" translation_id="516725" type="use" value="No relevant club vision items to show[COMMENT: AREA: Recruitment meeting; SUB-AREA:Recruitment meeting intro panel (Club Vision); FR-BN: 32765; NOTE: Fallback string to show, if human club has no recruitment-related club vision items]"/>
+		</widget>
+
+		<container class="scrolling_box" id="sclP" navigation_container="true">
+			<container draw_horizontal_dividers="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="10"/>
+
+				<!-- club culture -->
+                <container class="club_vision_objective_list_panel" id="ccbx" table_title_colour="text"/> 
+
+					</container>
+		</container>
+
+			</container>
+
+</panel>

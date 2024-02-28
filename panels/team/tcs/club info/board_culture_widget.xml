@@ -1,0 +1,99 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend" vertical_offset="0" vertical_gap="8"/>
+
+		<widget class="text" id="emTX" auto_size="horizontal" height="40" alignment="centre" hidden="true">
+			<layout class="arrange_vertical_attachment" alignment="top"/>
+			<layout class="centre_in_parent_attachment" alignment="all"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+			<translation id="text" translation_id="516725" type="use" value="No relevant club vision items to show[COMMENT: AREA: Recruitment meeting; SUB-AREA:Recruitment meeting intro panel (Club Vision); FR-BN: 32765; NOTE: Fallback string to show, if human club has no recruitment-related club vision items]"/>
+		</widget>
+
+		<container class="scrolling_box" id="sclP" navigation_container="true">
+			<container draw_horizontal_dividers="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="10"/>
+
+				<!-- club culture 
+                <container class="club_vision_objective_list_panel" id="ccbx" table_title_colour="text"/> -->
+
+				<container id="ltcv">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+                    <!-- actionable 
+                    <container class="inner_box">
+                        <attachment_group class="vertical_arrange_autosize"/>
+
+                        <container class="club_vision_objective_list_panel" id="acbx" title_colour="faded text"/>
+                    </container> -->
+
+                    <!-- informational 
+                    <container class="inner_box">
+                        <attachment_group class="vertical_arrange_autosize"/>
+
+                        <container class="club_vision_objective_list_panel" id="inbx" title_colour="faded text"/>
+                    </container>
+
+					<widget class="horizontal_subtle_divider"/> -->
+
+                                     <container class="tabbed_container" id="PlTa" default_item="csbx"> <!-- id indicates this container is the bounding area for dragging objectives, do not change! -->
+                        <attachment_group class="vertical_arrange_autosize"/>
+
+                        <!-- current season -->
+                        <container class="club_vision_objective_list_panel" id="csbx" table_title_colour="faded text"/>
+
+						<!-- current season + 1 -->
+                        <container class="club_vision_objective_list_panel" id="s1bx" table_title_colour="faded text"/>
+
+						<!-- current season + 2 -->
+                        <container class="club_vision_objective_list_panel" id="s2bx" table_title_colour="faded text"/>
+
+						<!-- current season + 3 -->
+                        <container class="club_vision_objective_list_panel" id="s3bx" table_title_colour="faded text"/>
+
+						<!-- current season + 4 -->
+                        <container class="club_vision_objective_list_panel" id="s4bx" table_title_colour="faded text"/>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<container id="btns" height="35" navigation_container="true" hidden="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, fill" horizontal_offset="0" vertical_inset="0"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left">
+					<global id="horizontal_gap" name="ui.button_row_gap"/>
+				</attachment_group>
+
+				<widget class="popup_button" id="adob" select_event="adob" fixed="true" auto_size="all" icon="icons/16px/plus">
+					<translation id="text" translation_id="491860" type="use" value="Add Competition Objective[COMMENT: AREA: Club vision meeting panel; SUB-AREA: action button area; FR-BN: 16574; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Menu button label for user to choose a new competition objective to add to the club vision during a meeting]"/>
+				</widget>
+
+				<widget class="subtle_button" id="revt" click_event="revt" auto_size="all">
+					<translation id="text" translation_id="344717" type="use" value="Revert"/>
+				</widget>
+
+				<widget class="subtle_button" id="undo" click_event="UNDO" auto_size="all">
+					<translation id="text" translation_id="230251" type="use" value="Undo"/>
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="button_arrangement_right"/>
+
+				<widget class="primary_icon_button" id="sgtm" click_event="SuVC" controller_button="x_button">
+					<translation id="text" translation_id="347325" type="use" value="Suggest"/>
+				</widget>
+
+				<widget class="primary_icon_tick_button" id="set " click_event="set " controller_button="y_button">
+					<translation id="text" translation_id="229918" type="use" value="Confirm"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>
