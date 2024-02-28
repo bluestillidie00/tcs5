@@ -1,0 +1,57 @@
+<!-- A panel used for displaying a ranked list of stats about players in a competition -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Header with stat type string and stat selector button -->
+		<container height="26">
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<string id="skin_style" value="title link" />
+
+			<widget class="link_button" id="stit" alignment="left,centre_y" auto_size="all">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+			</widget>
+			<widget class="popup_button" id="view" mode="1" fixed="true" auto_tick_exclusive="true" auto_size="all" appearance="none">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			</widget>
+		</container>
+
+    <widget class="text" id="nomt" alignment="centre_x,top" hidden="true">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="20" />
+			<translation id="text" translation_id="562633" type="use" value="No match stats available[COMMENT: AREA: Scouting; SUB-AREA: Player stats panel/widget; FR-BN: FM-11536; NOTE: Fallback string, when the stats widget is hidden due to stats not being available - either player has not played any games yet, or has only played friendlies, where stats are not tracked]" />
+    </widget>
+
+		<!-- Table showing the data-->
+		<widget class="object_list_table" id="stat" mode="hide_headings, stripe_rows, no_scrolling" row_height="21" fixed_size_rows="true" row_spacing="0">
+			<list id="column_table_properties">
+				<record id="csRS" width="30" left="5">
+					<record id="widget_info" class="sortable_text" alignment="left,centre_y"/>
+				</record>
+				<!-- Team badge-->
+				<record id="badg" width="100">
+					<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" wants_mouse_events="true" clickable="true" />
+				</record>
+				<!-- Team name -->
+				<record id="Ttea" width="-1" dont_set_object="true" left="15">
+					<record id="widget_info" class="team_button" icon_enabled="true" />
+				</record>
+					<!-- Short stat value -->
+				<record id="csSS" width="80" right="5">
+					<record id="widget_info" class="label" size="large" style="bold" alignment="right,centre_y"/>
+				</record>
+			</list>
+
+			<record id="viewed_property_ids">
+				<record id="csRS" />
+				<!-- <record id="badg" /> -->
+				<record id="Ttea" />
+				<record id="csSS" />
+			</record>
+		</widget>
+
+	</container>
+</panel>

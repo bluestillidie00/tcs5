@@ -1,0 +1,56 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="vertical_adaptive_container" gap="8">
+
+		<container class="tcs_box" height="100" priority="1">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<!--BG -->
+			<widget class="picture" file="photos/dynamic/ticker 1/ticker" image_alignment="centre" scale_picture="true" transparency="0.35" rrep="primary" brep="secondary">
+			</widget>
+				
+			<!-- CURRENT HOLDERS -->
+			<container default_width="-300">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+				<container width="300" class="main_box">
+					<attachment_group class="horizontal_arrange" horizontal_layout="100,-1" horizontal_gap="16"/>
+
+					<!-- TROPHY PIC -->
+					<widget class="object_portrait_picture" id="trop" scale_picture="true">
+						<integer id="property" value="trop"/>
+						<boolean id="keep_aspect_ratio" value="true"/>
+						<boolean id="comp_use_trophy_icon" value="true"/>
+						<flags id="image_alignment" value="right"/>
+					</widget>
+
+					<container>
+						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+							<!-- CURRENT HOLDER LABEL-->
+							<widget class="label" alignment="left" spec="text" font="label" style="bold" auto_size="vertical">
+								<translation id="text" translation_id="416340" type="use" value="Title Holders[COMMENT - Competition Overview Title Holders]"/>
+							</widget>
+
+							<!-- TEAM NAME -->
+							<widget class="team_button" spec="text" size="xlarge" id="nnat" style="bold" icon_enabled="true" auto_size="vertical" alignment="left,centre_y" display_format="3" navigation_focus_target="true"/>
+						</container>
+					</container>
+				</container>
+			</container>
+
+		</container>
+		
+		<!-- LEAGUE TABLE -->
+		<widget class="competition_stage_panel" file="competition/competition overview stage" id="cosg" default_height="-1" priority="1">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+	</container>
+
+</panel>
