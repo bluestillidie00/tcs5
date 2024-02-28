@@ -1,0 +1,45 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<!-- Default stat type to select -->
+	<integer id="default_value" value="15"/>
+
+	<!-- panel for no data available-->
+	<container class="empty_state" id="nost" header_widget="BShe" hidden="true">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+		</widget>
+	</container>
+	<!-- Adaptive rows of little stat boxes-->
+	<container class="vertical_adaptive_container" inset="0" offset="0"  mode="distribute_equally">
+
+		<record id="default_properties" inset="0" offset="0"  minimum_height="160" mode="distribute_equally">
+			<record id="default_properties" file="competition/tcs/overview/team stats_widget" maximum_items="7" minimum_width="230" store_config_id="tmSC" />
+		</record>
+		
+		<container class="horizontal_adaptive_container"  priority="1">
+			<!-- CCS_FORM -->
+			<container class="competition_team_stats_panel" id="sta1" type="5" priority="1" option="true"/>
+			<!-- CCS_GAMES_WITHOUT_LOSING -->
+			<container class="competition_team_stats_panel" id="sta2" type="10" priority="2" option="true"/>
+			<!-- CCS_GAMES_WITHOUT_WINNING -->
+			<container class="competition_team_stats_panel" id="sta3" type="11" priority="3" option="true"/>
+			<!-- CCS_GAMES_WITHOUT_CONCEDING -->
+			<container class="competition_team_stats_panel" id="sta4" type="12" priority="4" option="true"/>
+		</container>
+
+		<container class="horizontal_adaptive_container" priority="2">
+			<!-- CCS_AVERAGE_ATTENDANCE -->
+			<container class="competition_team_stats_panel" id="sta5" type="2" priority="2" option="true"/>
+			<!-- CCS_RED_CARDS -->
+			<container class="competition_team_stats_panel" id="sta6" type="25" priority="4" option="true"/>
+			<!-- CCS_NET_TRANSFER_SPEND -->
+			<container class="competition_team_stats_panel" id="sta7" type="27" priority="1" option="true"/>
+			<!-- CCS_SALARY_PER_ANNUM -->
+			<container class="competition_team_stats_panel" id="sta8" type="28" priority="3" option="true"/>
+		</container>
+	</container>
+</panel>

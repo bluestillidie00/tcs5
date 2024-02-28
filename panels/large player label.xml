@@ -1,0 +1,14 @@
+<!-- Just a person and their team -->
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+	
+	<record id="default_properties" alignment="left,centre_y" auto_size="vertical" colour="fg"/>
+
+	<widget class="person_button" info_popup_enabled="false" Pipl="true" colour="fg">
+		<record id="object_property" get_property="Pers" dont_set_object="true"/>
+	</widget>
+	<widget class="team_button" icon_enabled="false" size="small" >
+		<record id="object_property" get_property="Ttea" dont_set_object="true"/>
+	</widget>
+</panel>

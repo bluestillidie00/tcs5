@@ -1,0 +1,12 @@
+<panel navigation_container="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="SUBP" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+	
+	<!-- Make sure everything is late loading! -->
+
+	<widget class="competition_rules_panel" id="botc" file="competition/competition rules panel" late_loading="true"/>
+</panel>

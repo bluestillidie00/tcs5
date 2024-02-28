@@ -1,0 +1,53 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<container class="inner_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+		<!-- Table showing the data-->
+		<widget class="object_list_table" id="stat" mode="hide_headings, no_scrolling" row_height="42" fixed_size_rows="true" row_spacing="0" column_spacing="5">
+			<list id="column_table_properties">
+				<!-- Ranking -->
+				<record id="csRS" width="40" left="5">
+					<record id="widget_info" class="sortable_text" style="bold" alignment="left,centre_y" />
+				</record>
+				<!-- Team -->
+				<record id="Ttea" width="20" dont_set_object="true">
+					<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" />
+				</record>
+				<!-- Person portrait -->
+				<record id="Pers" width="40">
+					<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" />
+				</record>
+				<!-- Person and team stacked labels -->
+				<record id="PTIf" width="-1" dont_set_object="true">
+					<record id="widget_info" class="property_list_viewer_xml_panel" file="competition/player and team label panel" />
+				</record>
+				<!-- Short stat value -->
+				<record id="csSS" width="35">
+					<record id="widget_info" class="label" style="bold" alignment="right,centre_y" />
+				</record>
+			</list>
+
+			<record id="viewed_property_ids">
+				<record id="csRS" />
+				<record id="Ttea" />
+				<record id="Pers" />
+				<record id="PTIf" />
+				<record id="csSS" />
+			</record>
+		</widget>
+
+		<widget class="text" id="nomt" alignment="centre_x,top" hidden="true">
+			<translation id="text" translation_id="562633" type="use" value="No match stats available[COMMENT: AREA: Scouting; SUB-AREA: Player stats panel/widget; FR-BN: FM-11536; NOTE: Fallback string, when the stats widget is hidden due to stats not being available - either player has not played any games yet, or has only played friendlies, where stats are not tracked]" />
+		</widget>
+		
+		<widget class="text" id="nory" alignment="centre_x,top" hidden="true">
+			<translation id="text" translation_id="447506" type="use" value="No records set yet[COMMENT comp player stats panel: no records set but matches have started: title]" />
+		</widget>
+		
+	</container>
+</panel>
