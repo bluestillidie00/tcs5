@@ -1,14 +1,15 @@
 <panel>
-	<layout class="horizontal_arrange" horizontal_layout="-1,450" horizontal_gap="8" />
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+<container class="horizontal_adaptive_container" gap="8" >
 
 	<!-- LEFT -->
-	<container>
+	<container default_width="-1000" priority="1">
 		<layout class="vertical_arrange" vertical_layout="200,-1" vertical_gap="8"/>
 
-		<container>
-			<layout class="horizontal_arrange" horizontal_layout="560,-1,-1"  horizontal_gap="8" />
-
-			<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="bg lighter" brep="primary" width="520">
+		<container class="horizontal_adaptive_container" gap="8">
+			
+			<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="bg lighter" brep="primary" default_width="520" priority="1">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<!--Top Part-->
@@ -17,7 +18,7 @@
 				</container>
 			</container>
 
-			<container width="400" class="tcs_box">
+			<container default_width="-1" class="tcs_box" priority="2" minimum_width="250">
 				<layout class="vertical_arrange" vertical_layout="50,-1" />
 
 				<!-- W/D/L RECORD -->
@@ -197,7 +198,7 @@
 				</container>
 			</container>
 
-			<container width="400" class="tcs_box">
+			<container default_width="400" class="tcs_box" priority="3" minimum_width="250">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<widget class="client_object_viewer_xml_panel" file="human/tcs/profile/achievements" id="pacs" auto_size="vertical">
@@ -209,11 +210,10 @@
 		</container>
 
 		<!-- BOTTOM -->
-		<container >
-			<layout class="horizontal_arrange" horizontal_layout="420,-1" horizontal_gap="8"  />	
+		<container class="horizontal_adaptive_container" gap="8">
 
 			<!-- LEFT -->
-			<container class="tcs_box">
+			<container class="tcs_box" default_width="420" priority="2">
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
 				<container height="15">
@@ -274,7 +274,7 @@
 
 				<widget class="horizontal_subtle_divider" height="2"/>
 
-				<container class="tcs_tabs_primary" save_session_state="true" save_default_state="true" default_item="nptp">
+				<container class="tcs_tabs_primary" save_session_state="true" save_default_state="true" default_item="nptp" >
 
 					<!-- INFORMATION -->
 					<container id="info">
@@ -392,10 +392,9 @@
 			</container>
 
 			<!-- RIGHT -->
-			<container >
-				<layout class="vertical_arrange" vertical_layout="370,-1" vertical_gap="8"/>
+			<container default_width="-1" minimum_width="720" priority="1" class="vertical_adaptive_container" gap="8" >
 
-				<container>
+				<container default_height="-12" minimum_height="300" priority="1">
 					<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
 
 					<!-- ATTRIBUTES AND CHARICTERISTICS -->
@@ -603,7 +602,7 @@
 
 				</container>
 
-				<container class="tcs_box">
+				<container class="tcs_box"  default_height="-10" minimum_height="10" priority="2">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 					<container class="tcs_tabs" save_session_state="true" save_default_state="true" default_item="Pcal">
@@ -647,7 +646,8 @@
 
 	</container>
 
-	<container >
+<!-- RIGHT -->
+	<container default_width="-330" priority="2" minimum_width="400">
 		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 
 		<!-- MANAGER TIMELINE -->
@@ -680,6 +680,7 @@
 				<record id="object_property" get_property="objt" set_property="objt"/>		
 			</widget>
 		</container>
+	</container>
 	</container>
 
 </panel>
