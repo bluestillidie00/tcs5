@@ -85,8 +85,8 @@
 				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="4"/>
 
 				<!-- DEFAULT PROPERTIES SO WE DON'T  HAVE TO DEFINE THE SAME CODE EVERY TIME -->
-				<record id="default_properties" alignment="left" auto_size="vertical"/>
-
+				<record id="default_properties" alignment="left,centre_y" auto_size="vertical"/>
+				
 				<container/>
 
 				<!-- VALUE -->
@@ -97,12 +97,10 @@
 				</widget>
 
 				<!-- NATIONALITY -->
-				<widget class="wage_label" id="pcww">
-					<record id="object_property">
-						<integer id="get_property" value="Pcww"/>
-					</record>
-				</widget>
 
+				<widget class="club_button" icon_alignment="left,centre_y">
+					<record id="object_property" get_property="Pclb"/>
+				</widget>
 				<!-- POSITION -->
 				<widget class="global_reputation_stars_label" id="prsa" alignment="centre_y">
 					<record id="object_property">
