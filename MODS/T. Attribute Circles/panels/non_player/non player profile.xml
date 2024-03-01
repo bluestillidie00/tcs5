@@ -1,0 +1,522 @@
+<panel should_force_refresh="true">
+	<layout class="arrange_vertical_attachment" layout="95, -1" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="main_subtle_box">
+		<layout class="arrange_horizontal_attachment" layout="-1, 1, -1, 1, -1" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="90,-1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- Profile picture -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!-- Club Logo -->
+				<widget class="picture" id="rgtF" transparency="0.1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+				<!-- Player Picture -->
+				<widget class="picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+			</container>
+
+			<!-- Personal Details -->
+			<container class="icon_box" icon="">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<record id="icon_properties" red_replacement="bg accent" />
+
+				<!-- Get player status flags-->
+				<record id="object_property" get_property="Pnfo" dont_set_object="true" dont_set_hint="true" />
+
+				<!-- Player status icon with a fitness donut as first item-->
+				<widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round" auto_size="all" alignment="bottom" offset_x="0" offset_y="4" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true" />
+
+					<!-- Set icon to only show: HG, Int, Hol, Trv-->
+					<integer id="type" value="0" />
+
+					<!-- National flag image -->
+					<container width="26" height="26" embed_in_frame="true">
+						<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true" width="18" height="18" wants_mouse_events="true" embed_in_frame="true">
+							<layout class="centre_in_parent_attachment" alignment="all" embed_in_frame="true" />
+							<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+						</widget>
+					</container>
+				</widget>
+
+				<!-- Age & DoB-->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="3" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<!-- Age -->
+					<!-- We use an editable panel here just to make it disappear when editing-->
+					<widget class="editable_client_object_property_panel" id="age " auto_size="all">
+						<record id="widget_info" class="formatted_label" alignment="left,centre_y" auto_size="all">
+							<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+						</record>
+						<record id="widget_properties" width="0" height="0" />
+						<record id="object_property" get_property="Page" />
+					</widget>
+
+					<!-- DoB -->
+					<widget class="editable_client_object_property_panel" id="dobl" auto_size="vertical">
+						<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="vertical" format="([%date#1-short])" />
+						<record id="widget_properties" height="24" />
+						<record id="object_property" get_property="Pdob" />
+					</widget>
+				</container>
+
+				<!-- Nationality -->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="3" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<widget class="editable_client_object_property_panel" id="intc" auto_size="all">
+						<record id="widget_info" class="nation_button" icon_enabled="false" auto_size="all" size="small" />
+						<record id="widget_properties" auto_size="all" />
+						<record id="object_property" dont_set_hint="true" get_property="PNat">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="Pers" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<!-- Gender -->
+				<widget class="gender_label" id="gDLs" auto_size="vertical" size="small">
+					<record id="object_property" dont_set_hint="true" get_property="Pife" />
+				</widget>
+
+				<!-- Int Caps -->
+				<widget class="international_appearances_label" id="inta" auto_size="vertical" size="small">
+					<integer id="int_apps_label_format" value="10" />
+					<record id="object_property" dont_set_hint="true" get_property="Pist" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- Vertical separator line -->
+		<widget class="vertical_divider" />
+
+		<!-- Contract info etc-->
+		<container class="vertical_arrange_container" inset="0" offset="0" gap="0">
+
+			<container class="icon_box" id="CJIc" icon="">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<record id="icon_properties" red_replacement="bg accent" />
+
+				<!-- Get player status flags-->
+				<record id="object_property" get_property="Pnfo" dont_set_object="true" dont_set_hint="true" />
+
+				<!-- Player status icon with club badge-->
+				<widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round" auto_size="horizontal" alignment="bottom" offset_x="0" offset_y="4" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true" />
+
+					<!-- Set icon to only show: Wnt, Bid, Trn, Lst, Loa, Yth, Wp-->
+					<integer id="type" value="1" />
+
+					<!-- Club badge image -->
+					<container width="26" height="26" embed_in_frame="true">
+						<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true" width="26" height="26" embed_in_frame="true">
+							<layout class="centre_in_parent_attachment" alignment="vertical" embed_in_frame="true" offset="0" />
+							<layout class="centre_in_parent_attachment" alignment="horizontal" embed_in_frame="true" offset="0" />
+							<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+						</widget>
+					</container>
+				</widget>
+
+				<!--Non Player extra details (e.g. onloan at...)-->
+				<widget class="player_extra_details_text" id="plex" auto_size="vertical" size="small">
+					<record id="object_property" get_property="NPxD" />
+				</widget>
+
+				<!--Job-->
+				<widget class="label" id="pcjo" auto_size="vertical" style="semi_bold" size="large" />
+
+				<!--Wage / Expiry date-->
+				<container height="24" id="wged">
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="editable_client_object_property_panel" id="Pcww">
+						<record id="object_property" get_property="Pcww" />
+					</widget>
+					<widget class="editable_client_object_property_panel" id="Pcex">
+						<record id="object_property" get_property="Pcex" />
+					</widget>
+				</container>
+				<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="normal" />
+			</container>
+
+			<!-- international job-->
+			<container class="icon_box" id="NJIc" icon="icons/26px/circle" hidden="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<record id="icon_properties" red_replacement="secondary" />
+
+				<!-- Player status icon with club badge-->
+				<widget class="player_status_all_button" appearance="buttons/custom/status round" auto_size="all" alignment="bottom" offset_x="0" offset_y="4" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true" />
+
+					<!-- Set icon to only show: Wnt, Bid, Trn, Lst, Loa, Yth, Wp-->
+					<integer id="type" value="1" />
+
+					<!-- Club badge image -->
+					<container id="pnjC" width="26" height="26" embed_in_frame="true">
+						<widget class="object_portrait_picture" id="pnji" image_alignment="centre" scale_picture="true" width="14" height="14" embed_in_frame="true">
+							<layout class="centre_in_parent_attachment" alignment="all" embed_in_frame="true" />
+							<record id="object_property" dont_set_hint="true" get_property="Pnte" set_property="objt" />
+						</widget>
+					</container>
+				</widget>
+
+				<!--Job-->
+				<widget class="text" id="pnjo" auto_size="vertical" size="small" alignment="left,centre_y" />
+			</container>
+		</container>
+
+		<!-- Vertical separator line -->
+		<widget class="vertical_divider" />
+
+		<!-- Reputation and badge related infos -->
+		<container class="icon_box" icon="icons/custom/icon box/report">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="vertical">
+				<translation id="text" translation_id="227963" type="use" value="Reputation" />
+			</widget>
+			<widget class="global_reputation_stars_label" id="pReP" auto_size="vertical" style="semi_bold" size="large" alignment="left" subject_is_person="true">
+				<record id="object_property" get_property="Prsa" dont_set_hint="true" />
+			</widget>
+		</container>
+	</container>
+
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-3, -1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- MAIN AREA -->
+		<container class="horizontal_adaptive_container" offset="0" inset="0">
+
+			<!-- main box -->
+			<container default_width="-4" priority="1">
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container class="main_box">
+					<layout class="arrange_horizontal_attachment" offset="0" layout="-1,-3" gap="12" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="non_player_roles_panel" id="nprp" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" offset="0" alignment="bottom,extend" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<container>
+							<layout class="arrange_horizontal_attachment" offset="0" layout="-2,-1" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container>
+								<layout class="arrange_vertical_attachment" offset="0" layout="40,-1" gap="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+								<container navigation_container="true">
+									<layout class="arrange_horizontal_attachment" offset="0" alignment="left,extend,as_needed" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+									<widget class="radio_button" id="MgtW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/manager" secondary_icon_alignment="left">
+										<translation id="text" translation_id="447595" type="use" value="Managerial[COMMENT:Attribute Category;to show only managerial related attributes]" />
+										<event id="click_event">
+											<flags id="event_id" value="eAtH" />
+											<flags id="mode" value="1" />
+										</event>
+									</widget>
+									<widget class="radio_button" id="CctW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/training" secondary_icon_alignment="left">
+										<translation id="text" translation_id="230043" type="use" value="Coaching" />
+										<event id="click_event">
+											<flags id="event_id" value="eAtH" />
+											<flags id="mode" value="2" />
+										</event>
+									</widget>
+									<widget class="radio_button" id="SctW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/scouting" secondary_icon_alignment="left">
+										<translation id="text" translation_id="248356" type="use" value="Scouting" />
+										<event id="click_event">
+											<flags id="event_id" value="eAtH" />
+											<flags id="mode" value="3" />
+										</event>
+									</widget>
+									<widget class="radio_button" id="MdtW" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/16px/medical" secondary_icon_alignment="left">
+										<translation id="text" translation_id="422164" type="use" value="Medical[COMMENT:Job Centre- Medical team sub-section]" />
+										<event id="click_event">
+											<flags id="event_id" value="eAtH" />
+											<flags id="mode" value="4" />
+										</event>
+									</widget>
+								</container>
+								<container class="non_player_attributes_panel" id="patp" />
+							</container>
+
+							<container>
+								<layout class="arrange_vertical_attachment" offset="0" alignment="top,extend" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+
+								<widget class="label" font="fonts/title" colour="accent" auto_size="vertical">
+									<translation id="text" translation_id="251873" type="use" value="Personality[COMMENT - person list view column heading]" />
+								</widget>
+
+								<!-- personality_label -->
+								<widget class="personality_label" auto_size="vertical">
+									<record id="object_property" dont_set_hint="true" get_property="PPst" />
+								</widget>
+
+								<widget class="horizontal_divider" />
+								
+									<widget class="label" id="coTi" font="fonts/title" colour="accent" auto_size="vertical">
+										<translation id="text" translation_id="329843" type="use" value="Coaching Qualifications[COMMENT: non-player profile; coaching qualification]" />
+									</widget>
+
+									<!--Coaching Qualifications-->
+									<widget class="label" id="coaq" auto_size="all" />
+
+									<widget class="label" id="coco" auto_size="all" />
+
+									<widget class="client_action_icon_button" id="SeCC" HiIA="true" auto_size="all" auto_size_maximum_width="230" click_event="GTss">
+										<string id="force_display_text" value="true" />
+										<string id="action_id" value="ccra" />
+										<record id="object_property">
+											<string id="set_property" value="objt" />
+											<string id="get_property" value="objt" />
+										</record>
+									</widget>
+								<widget id="coHD" class="horizontal_divider" />
+
+								<container>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<widget class="non_player_knowledge_panel" id="npkn" />
+
+									<container class="scrolling_box" id="nptp">
+										<container class="non_player_tendencies_panel" should_force_refresh="true" file="none">
+											<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+											<!-- Property setting the path to use for 'high' tendencies (>10) -->
+											<string id="higT" value="icons/16px/tendency up" />
+
+											<!-- Property setting the path to use for 'low' tendencies (<=10) -->
+											<string id="lowT" value="icons/16px/tendency down" />
+
+											<widget class="horizontal_divider" />
+
+											<widget class="label" font="fonts/title" colour="accent" auto_size="vertical">
+												<translation id="text" translation_id="395653" type="use" value="Tends to[COMMENT: non player tendencies label, lists a person's tendencies below]" />
+											</widget>
+
+											<widget class="table" id="tend" mode="fill_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" default_sort_column="pict" row_spacing="2" auto_size="vertical">
+
+												<list id="column_widget_properties">
+													<record index="0" alignment="left,centre_y" />
+												</list>
+
+												<list id="column_table_properties">
+													<record index="0" id="pict" sort_disabled="true" left="0" />
+												</list>
+											</widget>
+
+											<widget class="horizontal_divider" />
+
+											<widget class="label" font="fonts/title" colour="accent" auto_size="vertical">
+												<translation id="text" translation_id="395652" type="use" value="Tends not to[COMMENT: non player tendencies label, lists a person's non-tendencies below]" />
+											</widget>
+
+											<widget class="table" id="nten" mode="fill_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" default_sort_column="pict" row_spacing="2" auto_size="all">
+
+												<list id="column_widget_properties">
+													<record index="0" alignment="left,centre_y" />
+												</list>
+
+												<list id="column_table_properties">
+													<record index="0" id="pict" sort_disabled="true" left="0" />
+												</list>
+											</widget>
+
+											<record id="object_property">
+												<integer id="set_property" value="objt" />
+												<integer id="get_property" value="objt" />
+											</record>
+										</container>
+									</container>
+
+									<container class="scrolling_box" id="npSB">
+
+										<widget class="container" id="npSP">
+											<attachment_group class="vertical_arrange_autosize" />
+
+											<list id="properties_to_forward">
+												<record get_property="SPdt" set_property="text" target="deli" />
+												<record get_property="SPpd" set_property="text" target="defp" />
+												<record get_property="SPaf" set_property="text" target="aimf" />
+												<record get_property="SPDm" set_property="text" target="defm" />
+												<record get_property="SPan" set_property="text" target="attn" />
+												<record get_property="SPdn" set_property="text" target="defn" />
+												<record get_property="Spdl" set_property="text" target="defl" />
+											</list>
+
+											<!--Title-->
+											<widget class="label" font="title" auto_size="vertical">
+												<translation id="text" translation_id="596039" type="use" value="Set Piece Preferences[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching details; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of set piece]" />
+											</widget>
+											
+											<!--Delivery-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="468238" type="use" value="Delivery[COMMENT: training session calendar name for Set Piece Delivery, keep short 16 letters or under]" />
+											</widget>
+											<widget class="label" id="deli" auto_size="vertical">
+												<translation id="hint" translation_id="596038" type="use" value="Indicates whether the coach prefers corner-takers who can bend the ball towards or away from goal on the initial delivery[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece delivery]" />
+											</widget>
+											
+											<!--Defending Posts-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596028" type="use" value="Defending Posts[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defending posts in a set piece]" />
+											</widget>
+											<widget class="label" id="defp" auto_size="vertical">
+												<translation id="hint" translation_id="596034" type="use" value="This is the tendency for the coach to place defenders on both posts, one post, or not at all.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defending posts]" />
+											</widget>
+											
+											<!--Aim For-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596026" type="use" value="Aim For[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of aiming a set piece]" />
+											</widget>
+											<widget class="label" id="aimf" auto_size="vertical">
+												<translation id="hint" translation_id="597244" type="use" value="When taking attacking corners and crossing free kicks, this is where the coach prefers the initial delivery to be aimed[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece aimed delivery]" />
+											</widget>
+											
+											<!--Defensive Marking-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596030" type="use" value="Defensive Marking[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defensive marking during a set piece]" />
+											</widget>
+											<widget class="label" id="defm" auto_size="vertical">
+												<translation id="hint" translation_id="596036" type="use" value="This indicates whether the coach prefers to mark zonally, player-to-player, or a hybrid of the two approaches in a defensive set piece scenario.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defensive marking]" />
+											</widget>
+											
+											<!--Attacking Numbers-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596027" type="use" value="Attacking Numbers[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of attacking setup during a set piece]" />
+											</widget>
+											<widget class="label" id="attn" auto_size="vertical">
+												<translation id="hint" translation_id="596033" type="use" value="For attacking set pieces, this is the coach's willingness to commit players forward as part of the offensive.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece attacking numbers]" />
+											</widget>
+											
+											<!--Defensive Numbers-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596031" type="use" value="Defensive Numbers[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defensive setup during a set piece]" />
+											</widget>
+											<widget class="label" id="defn" auto_size="vertical">
+												<translation id="hint" translation_id="596037" type="use" value="Indicates the coach's approach to counter attacking scenarios resulting from an opposition set piece.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defensive numbers]" />
+											</widget>
+											
+											<!--Defensive Line-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596032" type="use" value="Defensive Line[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23622; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defensive line depth during a set piece]" />
+											</widget>
+											<widget class="label" id="defl" auto_size="vertical">
+												<translation id="hint" translation_id="596035" type="use" value="This is the coach's preference for the defensive line height of the team when facing a opposition set piece.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defensive line depth]" />
+											</widget>
+
+										</widget>
+									</container>
+								</container>
+							</container>
+						</container>
+
+						<container height="60">
+							<translation id="title" translation_id="230056" type="use" value="Tactics" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+							<widget class="table" mode="fill_rows, printable" id="nptt" layout="150,150,150,150" auto_size_rows="true" auto_size="vertical" row_spacing="0">
+								<record id="default_properties" alignment="left,top" />
+
+								<list id="column_table_properties">
+									<record indx="0" auto_hide_priority="1" sort_disabled="true" />
+									<record indx="1" auto_hide_priority="2" sort_disabled="true" />
+									<record indx="2" auto_hide_priority="3" sort_disabled="true" />
+									<record indx="3" auto_hide_priority="4" sort_disabled="true" />
+								</list>
+							</widget>
+						</container>
+					</container>
+
+				</container>
+			</container>
+
+			<container class="main_box" minimum_width="300" default_width="-1" priority="2" red_replacement="light_box_background">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="person_history_biography_panel" file="person/person history biography no title" id="biog" navigation_container="true">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+			</container>
+		</container>
+
+		<container id="cskr" class="horizontal_adaptive_container" offset="0" inset="0">
+
+			<container class="main_box" minimum_width="300" default_width="-1" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_history_achievements_panel" id="pac1" file="non_player/non player history" navigation_container="true">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!-- Happiness -->
+			<container class="main_box" id="phhp" minimum_width="300" default_width="-1" priority="2" navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="person_happiness_panel" file="person/person happiness profile">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!-- Plans -->
+			<container class="main_box" minimum_width="300" default_width="-1" priority="3" navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="person_happiness_panel" id="phap" file="person/person happiness profile plans">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

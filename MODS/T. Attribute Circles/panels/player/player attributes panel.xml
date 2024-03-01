@@ -6,7 +6,7 @@
 	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row" />
 
 	<!-- Table properties to use for all attribute tables -->
-	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 14, 80, 33"
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 15, 45, 30"
 		row_height="21" row_spacing="1" default_sort_column="name">
 		<list id="column_table_properties">
 			<!-- Attribute name -->
