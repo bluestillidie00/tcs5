@@ -22,7 +22,7 @@
 			</record>
 			<!-- Attribute value -->
 			<record index="1" id="val " sort_disabled="true" column_alignment="centre" right="8">
-				<record id="widget_info" class="attribure_circle" alignment="right,centre_y" style="semi_bold" multiline="false"/>
+				<record id="widget_info" class="attribute_circle" alignment="right,centre_y" style="semi_bold" multiline="false"/>
 			</record>
 			<!-- Attribute comparison as a bar -->
 			<record index="2" id="cbar" sort_disabled="true" left="2" right="2" top="2" bottom="2">
@@ -31,7 +31,7 @@
 			</record>
 			<!-- Attribute value -->
 			<record index="3" id="val2" sort_disabled="true" column_alignment="centre" right="8">
-				<record id="widget_info" class="attribure_circle" alignment="right,centre_y" style="semi_bold" multiline="false"/>
+				<record id="widget_info" class="attribute_circle" alignment="right,centre_y" style="semi_bold" multiline="false"/>
 			</record>
 		</list>
 	</record>
