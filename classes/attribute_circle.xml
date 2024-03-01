@@ -1,0 +1,8 @@
+<class class="attribute_circle" parent="position_role_duty_star_range_based_picture">
+    <list id="value_list">
+        <record min_value="1" max_value="5" file="walks2k/attributes/low" />
+		<record min_value="6" max_value="10" file="walks2k/attributes/average" />
+		<record min_value="11" max_value="15" file="walks2k/attributes/good" />
+		<record min_value="16" max_value="20" file="walks2k/attributes/excellent" />
+    </list>
+</class>

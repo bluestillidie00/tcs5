@@ -1,0 +1,6 @@
+﻿<properties>
+	<!-- <record id="image_slices" left="25" right="25" top="25" bottom="25"/> -->
+	<colour id="red_replacement" name="excellent attribute"/>
+	<colour id="blue_replacement" name="bg"/>
+	<colour id="green_replacement" name="bg"/>
+</properties>
