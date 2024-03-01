@@ -19,6 +19,29 @@
 			</widget>
 
 			<!-- CONSOLE -->
+			<container class="inner_box" appearance="boxes/contrast/no margin/top middle/paper" red_replacement="bg" height="30" width="35">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2" />
+				<widget class="menu_strip_popup_button" id="form" icon="icons/16px/formation" secondary_icon_enabled="false" popup_alignment="left,top" appearance="buttons/custom/over state only/button" font="transparent" colour="transparent" size="0" auto_size="vertical" auto_size_maximum_width="250" alignment="centre">
+					<record id="modal_popup_properties" dcep="true" />
+					<record id="widget_properties">
+						<integer id="width" value="380" />
+						<flags id="auto_size" value="vertical" />
+						<flags id="alignment" value="top" />
+						<symbol id="appearance" value="boxes/popup/standard/titled/paper" />
+						<symbol id="default_widget_type" value="hint_text_button" />
+						<symbol id="submenu_type" value="subtle_popup_button" />
+						<symbol id="separator_type" value="picture" />
+						<record id="default_widget_properties" />
+						<record id="submenu_properties" fixed="true">
+							<event id="click_notification_event" event_id="DMCN" item="NULL" />
+							<event id="menu_layout_notification_event" event_id="MLNO" />
+						</record>
+						<record id="separator_properties" file="dividers/standard/vertical/line" auto_size="vertical" />
+					</record>
+					<string id="mpmF" value="generic/modal popup panel match" />
+				</widget>
+			</container>
+
 			<container class="inner_box" appearance="boxes/contrast/no margin/middle/paper" red_replacement="bg" height="30">
 				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_gap="2" />
 

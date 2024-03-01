@@ -1,0 +1,68 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+	<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable, select_rows" layout="-1, 60" row_height="20" row_spacing="1" default_sort_column="name" >
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="5" >
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" />
+			</record>
+			<!-- Attribute value -->
+			<record index="1" id="val " sort_disabled="true" column_alignment="centre" right="4">
+				<record id="widget_info" class="attribure_circle" alignment="right,centre_y" style="semi_bold" size="small"/>
+			</record>
+		</list>
+	</record>
+
+	<!-- Technical Table -->
+	<widget class="table" id="pltt" layout="-1">
+	</widget>
+	<!-- Goalkeeping Table -->
+	<widget class="table" id="plgk" layout="-1">
+	</widget>
+	<!-- Mental Table -->
+	<widget class="table" id="plmt" layout="-1">
+	</widget>
+	<!-- Physical Table -->
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="5"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+    
+    <widget class="table" id="plpt" layout="-1" auto_size="vertical">
+    </widget>
+    <!-- More attribute stuff-->
+    <container class="client_object_viewer_xml_panel" id="atT2" file="none">
+
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <container id="topc">
+        <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="4" />
+
+        <!-- Preferred Foot-->
+        <container>
+          <attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+          <widget class="label" id="Pfo:" auto_size="vertical" font="title" colour="accent">
+            <record id="object_property" get_property="Pfot" name="true" />
+          </widget>
+          <widget class="foot_label" id="Pfot" auto_size="vertical">
+            <record id="object_property" get_property="Pfot" />
+          </widget>
+        </container>
+      </container>
+
+    </container>
+  </container>
+
+
+
+
+</panel>

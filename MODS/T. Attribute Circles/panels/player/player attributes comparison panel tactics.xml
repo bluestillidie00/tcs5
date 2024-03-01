@@ -1,0 +1,284 @@
+<panel is_tactics_comparison="true">
+	<boolean id="is_small_version" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<flags id="required_attribute_row_appearance" value="none" />
+	<flags id="preferred_attribute_row_appearance" value="none" />
+	<flags id="not_important_attribute_row_appearance" value="none" />
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="22, 60, 15, 22, 60, 15" row_height="22" row_spacing="1" column_spacing="0" default_sort_column="name" fixed_size_rows="true">
+		<list id="column_table_properties">
+
+			<record index="0" id="name">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" colour="disabled" />
+			</record>
+
+			<record index="1" id="val " sort_disabled="true">
+				<record id="widget_info" class="attribure_circle" ignore_attribute_colours="true" alignment="centre" multiline="false" />
+			</record>
+
+			<record index="2" id="DifV" sort_disabled="true">
+				<record id="widget_info" class="text" alignment="centre" style="bold" />
+			</record>
+
+			<!--mirroed rows-->
+
+			<record index="3" id="nam2">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" colour="disabled" column_spacing="0" />
+			</record>
+
+			<record index="4" id="va2 " sort_disabled="true">
+				<record id="widget_info" class="attribure_circle" ignore_attribute_colours="true" alignment="centre" multiline="false" />
+			</record>
+
+			<record index="5" id="Dif2" sort_disabled="true">
+				<record id="widget_info" class="text" alignment="centre" style="bold" />
+			</record>
+
+		</list>
+	</record>
+
+	<container class="main_contrast_box" id="pcom" red_replacement="style_background">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="5" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="text" id="COti" auto_size="vertical" alignment="centre" font="title" size="large" colour="faded white">
+			<translation id="text" translation_id="248428" type="use" value="Comparison" />
+		</widget>
+
+		<container class="main_box" appearance="boxes/custom/tactics/comparison/subsection/paper">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="main_box" id="bX02" appearance="boxes/custom/tactics/comparison/player/paper">
+
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" layout="-1,20" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="person_button" id="pN02" alignment="left,centre_y" font="title" colour="white" />
+					<widget class="picture" file="icons/16px/left" image_alignment="centre" red_replacement="white" />
+				</container>
+
+				<container height="30" id="eX01">
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+
+					<container class="morale_label" id="pOm2" ShTx="false" scale_picture="false" width="20" />
+
+					<container width="80">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="1" />
+
+						<container class="pie_condition_label" id="pOC2" file="widgets/pie condition label mixed pitch">
+							<flags id="mode" value="2" />
+						</container>
+					</container>
+				</container>
+
+			</container>
+
+			<container height="4" />
+
+			<container class="tactical_role_label" id="tR02" auto_size="vertical" use_alternate_text="true" alignment="centre" style="semi_bold" colour="white" />
+
+			<container height="25">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container class="coach_stars_label" id="pS02" width="80" />
+			</container>
+
+
+		</container>
+
+		<container class="main_box" appearance="boxes/custom/tactics/comparison/subsection/paper">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="main_box" id="bX01" appearance="boxes/custom/tactics/comparison/player/paper" red_replacement="positive dark">
+
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" layout="-1,20" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="person_button" id="pN01" alignment="left,centre_y" font="title" colour="white" />
+					<widget class="picture" file="icons/16px/right" image_alignment="centre" red_replacement="white" />
+				</container>
+
+				<container height="30" id="eX02">
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+
+					<container class="morale_label" id="pOm1" scale_picture="false" ShTx="false" width="20" />
+
+					<container width="80">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="1" />
+
+						<container class="pie_condition_label" id="pOC1" file="widgets/pie condition label mixed pitch">
+							<flags id="mode" value="2" />
+						</container>
+					</container>
+
+
+				</container>
+
+			</container>
+
+			<widget class="spacer" height="4" />
+
+			<container class="tactical_role_label" id="tR01" auto_size="vertical" use_alternate_text="true" alignment="centre" style="semi_bold" colour="white" />
+
+			<container height="25">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container class="coach_stars_label" id="pS01" width="80" />
+			</container>
+
+			<widget class="text" id="imAT" auto_size="vertical" alignment="centre" font="title" colour="faded white">
+				<translation id="text" translation_id="316628" type="use" value="Important Attributes[COMMENT:title for attributes panel showing which attributes are important for a tactical role]" />
+			</widget>
+
+			<widget class="spacer" height="4" />
+
+			<!-- Technical Table -->
+			<container id="cntT">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="6" />
+
+				<widget class="table" id="pltt" layout="-1" auto_size="vertical">
+					<record id="default_properties" spec="text" />
+				</widget>
+
+				<widget class="horizontal_divider" />
+			</container>
+
+			<!-- Goalkeeping Table -->
+			<container id="cntG">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="6" />
+
+				<widget class="table" id="plgk" layout="-1" auto_size="vertical">
+					<record id="default_properties" spec="text" />
+				</widget>
+
+				<widget class="horizontal_divider" />
+			</container>
+
+			<!-- Mental Table -->
+			<container id="cntM">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="6" />
+
+				<widget class="table" id="plmt" layout="-1" auto_size="vertical">
+					<record id="default_properties" spec="text" />
+				</widget>
+
+				<widget class="horizontal_divider" />
+
+			</container>
+
+			<!-- Physical Table -->
+			<container id="cntP">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="6" />
+
+				<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					<record id="default_properties" spec="text" />
+				</widget>
+
+				<widget class="horizontal_divider" />
+
+
+			</container>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="spacer" />
+
+			<container id="eX03" height="100">
+				<layout class="grid_layout_attachment" row_layout="-1,-1,-1,-1" mode="auto" vertical_gap="0" vertical_offset_start="0" vertical_offset_end="0">
+					<list id="column_layout">
+						<record>
+							<string id="column_layout" value="40,-1,40" />
+							<integer id="horizontal_offset" value="0" />
+							<integer id="horizontal_gap" value="0" />
+						</record>
+						<record>
+							<string id="column_layout" value="40,-1,40" />
+							<integer id="horizontal_offset" value="0" />
+							<integer id="horizontal_gap" value="0" />
+						</record>
+						<record>
+							<string id="column_layout" value="40,-1,40" />
+							<integer id="horizontal_offset" value="0" />
+							<integer id="horizontal_gap" value="0" />
+						</record>
+						<record>
+							<string id="column_layout" value="40,-1,40" />
+							<integer id="horizontal_offset" value="0" />
+							<integer id="horizontal_gap" value="0" />
+						</record>
+					</list>
+				</layout>
+
+				<record id="default_properties" alignment="centre" />
+
+				<widget class="text" auto_size="vertical" font="title" colour="faded white">
+				</widget>
+
+				<widget class="text" auto_size="vertical" font="title" colour="faded white">
+					<translation id="text" translation_id="247412" type="use" value="Stats" />
+				</widget>
+
+				<widget class="text" auto_size="vertical" font="title" colour="faded white">
+				</widget>
+
+
+				<container class="appearances_label" id="pAP1" colour="faded white" />
+
+				<widget class="text" alignment="centre" colour="white">
+					<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+				</widget>
+
+				<container class="appearances_label" id="pAP2" colour="faded white" />
+
+				<container class="dashed_number_label" id="aSi1" colour="faded white" />
+
+				<widget class="text" colour="white">
+					<translation id="text" translation_id="227847" type="use" value="Assists" />
+				</widget>
+
+				<container class="dashed_number_label" id="aSi2" colour="faded white" />
+
+				<container class="dashed_formatted_label" id="aVR1" colour="faded white">
+					<string id="format" value="[%fraction#1-3.2]" />
+					<translation id="hint_if_no_value" translation_id="562633" type="use" value="No match stats available[COMMENT: AREA: Scouting; SUB-AREA: Player stats panel/widget; FR-BN: FM-11536; NOTE: Fallback string, when the stats widget is hidden due to stats not being available - either player has not played any games yet, or has only played friendlies, where stats are not tracked]" />
+				</container>
+
+				<widget class="text" colour="white">
+					<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+				</widget>
+
+
+				<container class="dashed_formatted_label" id="aVR2" colour="faded white">
+					<string id="format" value="[%fraction#1-3.2]" />
+					<translation id="hint_if_no_value" translation_id="562633" type="use" value="No match stats available[COMMENT: AREA: Scouting; SUB-AREA: Player stats panel/widget; FR-BN: FM-11536; NOTE: Fallback string, when the stats widget is hidden due to stats not being available - either player has not played any games yet, or has only played friendlies, where stats are not tracked]" />
+				</container>
+			</container>
+		</container>
+
+
+	</container>
+
+	<container class="main_box" id="EMTX" appearance="boxes/custom/tactics/comparison/background/paper">
+		<widget class="text" alignment="centre" auto_size="all" colour="faded white">
+			<layout class="centre_in_parent_attachment" alignment="all" />
+			<translation id="text" translation_id="441099" type="use" value="No Comparison Available[COMMENT player comparison side panel; comparing two players in terms of attributes and role suitability]" />
+
+		</widget>
+	</container>
+
+</panel>
