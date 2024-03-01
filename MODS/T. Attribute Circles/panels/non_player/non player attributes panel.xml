@@ -15,7 +15,7 @@
 				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend"/>
 
 				<!--Medical Table-->
-				<widget class="table" id="npme" mode="fill_rows, printable" layout="-4, 30" auto_size="vertical" row_spacing="1" row_height="30">
+				<widget class="table" id="npme" mode="fill_rows, printable" layout="-4, 22" auto_size="vertical" row_spacing="1" row_height="20">
 					<list id="headings">
 						<record alignment="left,centre_y" column_span="2">
 							<translation id="text" translation_id="422164" type="use" value="Medical[COMMENT:Job Centre- Medical team sub-section]" />
@@ -35,7 +35,7 @@
 				</widget>
 
 				<!--Data Analyst Table-->
-				<widget class="table" id="npdt" mode="fill_rows, printable" layout="-4, 30" auto_size="vertical" row_spacing="1" row_height="30">
+				<widget class="table" id="npdt" mode="fill_rows, printable" layout="-4, 22" auto_size="vertical" row_spacing="1" row_height="20">
 					<list id="headings">
 						<record alignment="left,centre_y" column_span="2">
 							<translation id="text" translation_id="515099" type="use" value="Analysis[COMMENT: AREA: Non-player profile; SUB-AREA: Attributes header; FR-BN: 28060; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: Term to refer to attributes related to performance and recruitment analysis]" />
@@ -55,7 +55,7 @@
 				</widget>
 
 				<!--Coaching Table-->
-				<widget class="table" id="npct" mode="fill_rows, printable" layout="-4, 20, 30" auto_size="vertical" row_spacing="1" row_height="30">
+				<widget class="table" id="npct" mode="fill_rows, printable" layout="-4, 20, 22" auto_size="vertical" row_spacing="1" row_height="20">
 					<list id="headings">
 						<record alignment="left,centre_y" column_span="2">
 							<translation id="text" translation_id="230043" type="use" value="Coaching" />
@@ -79,7 +79,7 @@
 				</widget>
 
 				<!--GK Coaching Table-->
-				<widget class="table" id="npgt" mode="fill_rows, printable" layout="-4, 20, 30" auto_size="vertical" row_spacing="1" row_height="30">
+				<widget class="table" id="npgt" mode="fill_rows, printable" layout="-4, 20, 22" auto_size="vertical" row_spacing="1" row_height="20">
 					<list id="headings">
 						<record alignment="left,centre_y" column_span="2">
 							<translation id="text" translation_id="447594" type="use" value="GK Coaching[COMMENT:Attributes header; attributes relevant to goalkeeper coaching]" />
@@ -109,7 +109,7 @@
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
-			<widget class="table" id="npmt" mode="fill_rows, printable" layout="-4, 20, 30" auto_size="vertical" row_spacing="1" row_height="30">
+			<widget class="table" id="npmt" mode="fill_rows, printable" layout="-4, 20, 22" auto_size="vertical" row_spacing="1" row_height="20">
 				<list id="headings">
 					<record alignment="left,centre_y" column_span="2">
 						<translation id="text" translation_id="230106" type="use" value="Mental" />
@@ -132,7 +132,7 @@
 				</list>
 			</widget>
 
-			<widget class="table" id="npkt" mode="fill_rows, printable" layout="-4, 20, 30" auto_size="vertical" row_spacing="1" row_height="30">
+			<widget class="table" id="npkt" mode="fill_rows, printable" layout="-4, 20, 22" auto_size="vertical" row_spacing="1" row_height="20">
 				<list id="headings">
 					<record alignment="left,centre_y" column_span="2">
 						<translation id="text" translation_id="251861" type="use" value="Knowledge[COMMENT: non player profile panel; title of panel showing scouting knowledge]" />
