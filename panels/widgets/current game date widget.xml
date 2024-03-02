@@ -1,4 +1,4 @@
-<panel height="44" width="122">
+<panel height="44" width="140">
   <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 	<container>
