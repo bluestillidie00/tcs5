@@ -26,12 +26,12 @@
 			</container>
 			
 			<container>
-				<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="10"/>
 															
 				<container width="400">
-					<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom" vertical_offset="10"/>
 								
-					<container height="180" class="contrast_box" rrep="bg lighter" draw_horizontal_dividers="true">
+					<container height="180" class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="tcs_bg_lighter" brep="primary" draw_horizontal_dividers="true">
 						<layout class="vertical_arrange" vertical_layout="22,20,20,20,20,20,-1"/>
 					
 						<widget class="stadium_button" font="title" colour="fg" alignment="left" icon_enabled="false" size="large">

@@ -209,18 +209,18 @@
 		</container>
 
 		<!-- RIGHT -->
-		<container default_width="-560" priority="2" minimum_width="400"> 
+		<container default_width="-560" priority="2" minimum_width="360"> 
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 			<container class="vertical_adaptive_container" gap="8">
 
 				<!-- KEY EMPLOYEES -->
-				<container class="club_overview_staff_panel" id="tstf" file="club/tcs/fm24/overview/staff/key staff" default_height="-1" minimum_height="550" priority="1">
+				<container class="club_overview_staff_panel" id="tstf" file="club/tcs/fm24/overview/staff/key staff" default_height="-1" minimum_height="400" priority="1">
 					<translation id="title" translation_id="257300" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</container>
 
-				<widget class="staff_numbers_table" id="sta1" default_height="200" priority="2">
+				<widget class="staff_numbers_table" id="sta1" default_height="300" priority="2">
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
