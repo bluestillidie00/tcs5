@@ -1,0 +1,35 @@
+<panel>
+
+	<!--This panel is for the mini overview stats we get on the match overview page-->
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<boolean id="show_bars" value="false"/>
+
+	<list id="preset_stats_list">
+		<record id="m_sg"/>
+		<record id="m_on"/>
+		<record id="m_xg"/>
+		<record id="m_cr"/>
+		<record id="m_fl"/>
+		<record id="m_yc"/>
+		<record id="m_pc"/>
+		<record id="m_ps"/>
+	</list>
+
+	<widget class="table" id="mstn" layout="5,-2,-6,-2,5" mode="printable" row_spacing="2" row_height="22" fixed_size_rows="true" auto_size="vertical">
+
+		<list id="column_widget_properties">
+			<record indx="1" alignment="left,centre_y" colour="text" style="bold"/>
+			<record indx="2" alignment="centre" colour="text"/>
+			<record indx="3" alignment="right,centre_y" colour="text" style="bold"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record indx="1" id="home" sort_disabled="true"/>
+			<record indx="2" id="labl" sort_disabled="true"/>
+			<record indx="3" id="away" sort_disabled="true"/>
+		</list>
+
+	</widget>
+
+</panel>

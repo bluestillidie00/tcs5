@@ -1,0 +1,148 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<list id="properties_to_forward">
+		<record get_property="default_item" target="nep2" set_property="default_item"/>
+		<record get_property="cfID" target="nep2" set_property="cfID"/>
+		<!-- added by patch -->
+		<record get_property="HSMt" target="hfSM" set_property="WdgP"/>
+		<record get_property="ASMt" target="afSM" set_property="WdgP"/>
+	</list>
+ 
+	<!--IN-BETWEEN HIGHLIGHTS SUMMARY PANEL-->
+	<widget class="match_view_selector_panel" id="nep2" pause_match_on_menu_opening="false" default_item="mStO" file="client_object/client object viewer selector match" colour="match accent" alignment="left" navigation_container="true">
+		<boolean id="save_session_state" value="true"/>
+		<boolean id="save_default_state" value="true"/>
+		<record id="object_property">
+			<integer id="get_property" value="objt"/>
+			<integer id="set_property" value="objt"/>
+		</record>
+ 
+		<!-- MATCH INFORMATION FOLDER -->
+		<!-- MATCH INFO -->
+		<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/matchinfo/match info" id="mIn1">
+			<translation id="title" translation_id="233151" type="use"/>
+			<translation id="subtitle" translation_id="233151" type="use"/>
+		</container>
+
+		<!-- NOTABLE EVENTS -->
+		<widget class="match_notable_events_panel" file="match/tcs/tablet/selectors/matchinfo/notable events" id="NEve">
+			<translation id="title" translation_id="515063" type="use"/>
+			<translation id="subtitle" translation_id="233151" type="use"/>
+		</widget>
+						
+		<!-- OVERVIEW -->
+		<widget class="match_info_panel" id="bmin" file="match/tcs/tablet/selectors/matchinfo/small">
+			<translation id="title" value="Match Info (Wozzie)" type="use"/>
+			<translation id="subtitle" translation_id="233151" type="use"/>
+		</widget>
+		
+		<!-- MATCH OVERVIEW -->
+		<widget class="match_info_panel" id="bin2" auto_size="vertical" file="match/tcs/tablet/selectors/matchinfo/match info wozzie">
+			<translation id="title" type="use" value="Match Overview Wozzie"/>
+			<translation id="subtitle" translation_id="233151" type="use"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+		<!-- END OF MATCH INFORMATION FOLDER -->
+						
+		<!-- MATCH STATS FOLDER -->
+		<!-- OVERVIEW -->
+		<widget class="match_stats_panel" id="mStO" file="match/tcs/tablet/selectors/match stats/overview">
+			<translation id="title" translation_id="247414" type="use"/>
+			<translation id="subtitle" translation_id="247439" type="use" value="Match Stats"/>
+		</widget>
+
+		<!-- BARS -->
+		<widget class="match_stats_panel" id="mSt1" file="match/match stats floating">
+			<translation id="title" type="use" value="Bars"/>
+			<translation id="subtitle" translation_id="247439" type="use" value="Match Stats"/>
+		</widget>
+		
+		<!-- DEFAULT -->
+		<widget class="match_stats_panel" id="mSt2" file="match/match stats overview">
+			<translation id="title" type="use" value="Default"/>
+			<translation id="subtitle" translation_id="247439" type="use" value="Match Stats"/>
+		</widget>
+		<!-- END OF MATCH STATS FOLDER -->
+				
+		<!-- THE DUGOUT / ADVICE -->
+		<widget class="match_feed_panel" id="feed" file="match/match feed panel expanded" navigation_container="true">
+			<translation id="title" type="use" translation_id="516207"/>
+		</widget>
+				
+		<!-- AROUND THE GROUNDS FOLDER -->
+		<!-- LATEST SCORES -->
+		<widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+			<translation id="title" translation_id="243219" type="use" value="Latest Scores"/>
+			<translation id="subtitle" translation_id="515055" type="use" value="League Table"/>
+		</widget>
+		
+		<!-- LATEST EVENTS -->
+		<widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+			<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]"/>
+			<translation id="subtitle" translation_id="515055" type="use" value="League Table"/>
+		</widget>
+		
+		<!-- LEAGUE TABLE -->
+		<widget class="match_league_table_panel" id="mltp" MLTs="true">
+			<translation id="title" translation_id="248082" type="use" value="League Table"/>
+			<translation id="subtitle" translation_id="515055" type="use" value="League Table"/>
+		</widget>
+		<!-- END OF AROUND THE GROUNDS -->
+		
+		<!-- FORMATION -->
+		<!-- HOME TEAM -->
+		<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/selectors/formations/match formation panel review ibh" team_index="0" read_only="true">
+			<translation id="title" translation_id="230056" type="use" value="Tactics"/>
+			<translation id="subtitle" translation_id="230056" type="use" value="Tactics"/>
+		</widget>
+		
+		<!-- HOME TEAM W GRASS -->
+		<widget class="match_formation_panel" id="hmtG" file="match/tcs/tablet/selectors/formations/match formation panel review ibh_grass" team_index="0" read_only="true">
+			<translation id="title" type="use" value="Home Team Tactics (Grass)"/>
+			<translation id="subtitle" translation_id="230056" type="use" value="Tactics"/>
+		</widget>
+		
+		<!-- AWAY TEAM -->
+		<widget class="match_formation_panel" id="amtt" file="match/tcs/tablet/selectors/formations/match formation panel review ibh" team_index="1" read_only="true">
+			<translation id="title" translation_id="230056" type="use" value="Tactics"/>
+			<translation id="subtitle" translation_id="230056" type="use" value="Tactics"/>
+		</widget>
+		
+		<!-- AWAY TEAM W GRASS -->
+		<widget class="match_formation_panel" id="amtG" file="match/tcs/tablet/selectors/formations/match formation panel review ibh_grass" team_index="1" read_only="true">
+			<translation id="title" type="use" value="Aome Team Tactics (Grass)"/>
+			<translation id="subtitle" translation_id="230056" type="use" value="Tactics"/>
+		</widget>
+		
+		<!-- BOTH FORMATIONS H -->
+		<widget class="both_match_formation_panels" title="Both Formations" file="match/tcs/tablet/selectors/formations/match both formations ibh_h" id="bmfs">
+			<translation id="subtitle" translation_id="230056" type="use" value="Tactics"/>
+		</widget>
+		<!-- END OF FORMATION -->
+
+		<!-- Standard views no alts -->
+		<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
+			<translation id="title" translation_id="247381" type="use" value="Shots"/>
+			<translation id="subtitle" translation_id="296334" type="use" value="Tactics"/>
+		</widget>
+		<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+			<translation id="title" translation_id="247327" type="use" value="Action Zones"/>
+			<translation id="subtitle" translation_id="296334" type="use" value="Tactics"/>
+			<colour id="ptlc" name="white"/>
+		</widget>
+		<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+			<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]"/>
+			<translation id="subtitle" translation_id="296334" type="use" value="Tactics"/>
+		</widget>
+		<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="momentum" data_type="fixture" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<translation id="title" translation_id="535500" type="use"/>
+			<translation id="subtitle" translation_id="296334" type="use" value="Tactics"/>
+		</widget>
+		
+		
+ 
+	</widget><!-- end selector panel -->
+	
+</panel>

@@ -5,52 +5,53 @@
 	<integer id="TbWm" value="1010"/>
 	<integer id="TbWl" value="1430"/>
 
-
 	<list id="properties_to_forward">
-		<record get_property="HNEp" target="NEvp" set_property="hidn"/>
-		<record get_property="HFep" target="FEEP" set_property="hidn"/>
-		<record get_property="HTtp" target="TTab" set_property="hidn"/>
-		<record get_property="OTfi" target="TTab" set_property="OTfi"/>
-		<record get_property="HTsi" target="TTab" set_property="HTsi"/>
-		<record get_property="OTsi" target="TTab" set_property="OTsi"/>
-		<record get_property="HSMt" target="TTab" set_property="HSMt"/>
-		<record get_property="ASMt" target="TTab" set_property="ASMt"/>
-		<record get_property="HPMt" target="TTab" set_property="HPMt"/>
-		<record get_property="APMt" target="TTab" set_property="APMt"/>
+		<record get_property="HNEp" target="NEvp" set_property="hidn"/><record get_property="HFep" target="FEEP" set_property="hidn"/><record get_property="HTtp" target="TTab" set_property="hidn"/><record get_property="OTfi" target="TTab" set_property="OTfi"/><record get_property="HTsi" target="TTab" set_property="HTsi"/><record get_property="OTsi" target="TTab" set_property="OTsi"/><record get_property="HSMt" target="TTab" set_property="HSMt"/><record get_property="ASMt" target="TTab" set_property="ASMt"/><record get_property="HPMt" target="TTab" set_property="HPMt"/><record get_property="APMt" target="TTab" set_property="APMt"/><list id="properties_to_forward">
+			<record get_property="HSMt" target="nep1" set_property="HSMt"/>
+			<record get_property="HSMt" target="nep2" set_property="HSMt"/>
+			<record get_property="ASMt" target="nep1" set_property="ASMt"/>
+			<record get_property="ASMt" target="nep2" set_property="ASMt"/>
+		</list>
 	</list>
 
-	<container>
-		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
-
-		<container width="342" id="NEvp" >
+	<!-- SPLIT CONTAINER TO MAKE THE LEFT PANEL WIDER OR THINNER -->
+	<container class="vertical_split_container" id="bott" starting_layout="272,-1" min_width_left="1" save_session_state="true" save_default_state="true">
+		
+		<container id="NEvp">
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
 
 			<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right">
-				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="1.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top"/>
 				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false"/>
 			
-				<container height="193" class="client_object_viewer_xml_panel" file="match/tcs/tablet/match info">
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
-				
-				<widget class="horizontal_subtle_divider" height="2" />
-				
-					<widget class="match_notable_events_panel">
-							<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="2" end_mode="hold_end"/>
-							<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.8" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
-							<record id="object_property">
-								<integer id="get_property" value="objt"/>
-								<integer id="set_property" value="objt"/>
-							</record>
-						</widget>
+				<container class="horizontal_split_container" starting_layout="155, -1" save_session_state="true" save_default_state="true">
+							
+					<!-- TOP SELECTOR -->
+					<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep1_dummy">
+						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
+
+					<container class="horizontal_split_container" starting_layout="206, -1" save_session_state="true" save_default_state="true" min_height_top="1">
+					
+						<!-- MIDDLE SELECTOR -->
+						<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep2_dummy">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+
+						<!-- BOTTOM SELECTOR -->
+						<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep3_dummy">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					</container>
+				</container>
+			
+			</container>
 	
-				<widget class="spacer" height="47"/>
+			<widget class="spacer" height="47"/>
 
 		</container>
-
 
 		<container class="tcs_box" appearance="tcs/boxes/main/trans/paper">
 			<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>

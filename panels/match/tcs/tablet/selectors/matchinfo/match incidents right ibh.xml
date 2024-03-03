@@ -1,0 +1,41 @@
+<panel>
+<!-- MIDDLE VALUE CONTROLS KIT/LOGO WIDTH -->
+	<layout class="arrange_horizontal_attachment" layout="30,-1" gap="4" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<!--scores-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- score -->
+		<widget class="text" id="mits"  alignment="left,centre_y" size="normal" font="title" colour="fg" auto_size="vertical" multiline="false"/>
+
+		<!-- aggregate score -->
+		<widget class="text" id="mita" spec="title" alignment="left,centre_y" font="title" colour="fg" size="small" auto_size="vertical" multiline="false"/>
+	</container>
+
+
+	<!--team name and incidents-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- team name -->
+		<widget class="text" id="mitn"  size="normal" font="title" colour="fg" alignment="left,centre_y" auto_size="vertical"/>
+		<widget class="table" id="miit" layout="20,-1" mode="fill_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false">
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="centre" auto_size="vertical" size="small"/>
+				<record index="1" spec="text" auto_size="vertical" alignment="left,centre_y" size="small"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="icon" left="4" top="4" bottom="4" />
+				<record index="1" id="text" top="4" bottom="4" />
+			</list>
+
+		</widget>
+
+	</container>
+</panel>

@@ -1,0 +1,56 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+    <container>
+        <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="0" vertical_offset="0" />
+
+        <widget class="popup_button" id="mspe" select_event="mspe" auto_size="all">
+            <list id="items">
+                <record id="msOV">
+                    <translation id="name" translation_id="247337" type="use" value="Full Match" />
+                </record>
+                <record id="msFH">
+                    <translation id="name" translation_id="232840" type="use" value="First Half" />
+                </record>
+                <record id="msSH">
+                    <translation id="name" translation_id="232841" type="use" value="Second Half" />
+                </record>
+            </list>
+            <integer id="selection" value="msOV" />
+        </widget>
+    </container>
+
+	<boolean id="show_bars" value="false"/>
+	<boolean id="show_highlights" value="true"/>
+
+	<list id="preset_stats_list">
+		<record id="m_sg"/>
+		<record id="m_on"/>
+		<record id="m_xg"/>
+		<record id="m_cr"/>
+		<record id="m_fl"/>
+		<record id="m_yc"/>
+		<record id="m_pc"/>
+		<record id="m_ps"/>
+	</list>
+
+	<widget class="table" id="mstn" layout="5,-2,-6,-2,5" mode="printable" row_spacing="2" row_height="22" fixed_size_rows="true" auto_size="vertical">
+
+		<list id="column_widget_properties">
+			<record indx="0" alignment="left,centre_y"/>
+			<record indx="1" alignment="left,centre_y"/>
+			<record indx="2" alignment="centre"/>
+			<record indx="3" alignment="right,centre_y"/>
+			<record indx="4" alignment="right,centre_y"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record indx="0" id="higl" sort_disabled="true"/>
+			<record indx="1" id="home" sort_disabled="true"/>
+			<record indx="2" id="labl" sort_disabled="true"/>
+			<record indx="3" id="away" sort_disabled="true"/>
+			<record indx="4" id="higr" sort_disabled="true"/>
+		</list>
+	</widget>
+
+</panel>
