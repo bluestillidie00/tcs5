@@ -51,12 +51,14 @@
 					<layout class="horizontal_arrange" horizontal_alignment="right"/>
 
 					<record id="object_property" get_property="objt" set_property="objt"/>
+					
+					<record id="default_properties"  appearance="buttons/primary/normal/button" auto_size="horizontal" colour="fg" icon_colour="fg"/>
 
-					<widget class="icon_button" icon="icons/16px/thumbs up" appearance="buttons/primary/normal/button" red_replacement="bg positive" id="ptbn" click_event="ptev" auto_size="horizontal">
+					<widget class="icon_button" icon="icons/16px/thumbs up" rrep="bg positive" id="ptbn" click_event="ptev" >
 						<layout class="centre_in_parent_attachment" alignment="vertical" />
 					</widget>
 
-					<widget class="icon_button" icon="icons/16px/thumbs down" appearance="buttons/primary/normal/button" red_replacement="bg negative" id="ctbn" click_event="ctev" auto_size="horizontal">
+					<widget class="icon_button" icon="icons/16px/thumbs down" rrep="bg negative" id="ctbn" click_event="ctev" >
 						<layout class="centre_in_parent_attachment" alignment="vertical" />
 					</widget>
 
