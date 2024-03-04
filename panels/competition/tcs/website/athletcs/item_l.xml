@@ -8,37 +8,30 @@
 		<attachment class="hide_empty_container_attachment"/>
 
 		<container id="wcon">
-			<layout class="vertical_arrange" vertical_layout="200,-1" vertical_gap="8" />
+			<layout class="vertical_arrange" vertical_layout="240,-1" vertical_gap="8" />
 
 			<container>
 				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 				<!-- News image -->
-				<container id="CNdi" height="200">
+				<container id="CNdi" height="240">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 				</container>
 			</container>
 
 			<!-- News item -->
 			<container > 
-				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_alignment="horizontal" vertical_gap="2"/>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_alignment="horizontal" vertical_gap="-2"/>
+				
 				<record id="default_properties" style="bold" multiline="true" auto_size="vertical" font="webtitle"/>
 
 				<!-- Main object -->
 				<!-- Story title (max 2 lines of text)-->
 				<widget class="text" id="brif" size="small" colour="faded text"/>
 				<widget class="text" id="titl" size="xxlarge" colour="website headline" />
-				
-					<!-- Related news -->
-					<container>
-						<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-4" />
-						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
-
-						<!-- Related items, first is match link -->
-						<container class="competition_news_item_panel" file="competition/competition news item title only" related_news_index="0" matR="true" />
-						<container class="competition_news_item_panel" file="competition/competition news item title only" related_news_index="1"/>
-					</container>
+			<widget class="text" id="date" alignment="left,bottom" colour="faded text" multiline="false" />
+		
 			</container>
 		</container>
 	</container>

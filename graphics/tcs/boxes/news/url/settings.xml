@@ -1,0 +1,5 @@
+﻿<properties>
+
+	<colour id="red_replacement" name="browser url bar"/>	
+	<colour id="blue_replacement" name="fg"/>	
+</properties>

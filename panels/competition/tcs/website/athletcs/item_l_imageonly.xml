@@ -1,0 +1,43 @@
+<!-- NOTE: The property 'usoc' used on elements tells the panel to recolour them based on object colours -->
+<panel navigation_focus_target="true">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container usoc="true" class="main_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<attachment class="hide_empty_container_attachment"/>
+
+		<container id="wcon">
+			<layout class="vertical_arrange" vertical_layout="280,-1" vertical_gap="8"/>
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!-- News image -->
+				<container id="CNdi" height="290">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0,50,0,50" apply_to_children="true"/>
+				</container>
+			</container>
+
+			<!-- News item -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top"/>
+				
+				<widget class="text" id="titl" size="large" colour="website headline" style="bold" multiline="true" auto_size="vertical" font="webtitle" alignment="centre"/>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="24"/>
+
+					<record id="default_properties" alignment="centre" auto_size="all" style="bold" multiline="true" font="webtitle" size="small" colour="faded text"/>
+
+					<widget class="text" id="brif"/>
+
+					<widget class="text" id="date"/>
+				</container>
+		
+			</container>
+		</container>
+	</container>
+
+</panel>
