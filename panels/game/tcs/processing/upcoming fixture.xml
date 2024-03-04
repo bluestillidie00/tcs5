@@ -1,0 +1,134 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- CONTAINER SHOWN WHEN THERE IS A NEXT MATCH AVAILABLE -->
+	<container id="nemc">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+		<container class="horizontal_adaptive_container" gap="15" inset="0" offset="0" mode="distribute_equally">
+
+			<string id="skin_style" value="subtle box"/>
+
+			<container default_width="-3" priority="1" minimum_width="600">
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+				<!-- Info about next fixture -->
+				<widget class="team_upcoming_fixture_info_panel" file="game/tcs/processing/team upcoming fixture info manager home" id="tmip" omit_prefix="true"/>
+			</container>
+
+			<!--News for next fixture -->
+			<container class="property_list_viewer_xml_panel" id="fixN" minimum_width="300" priority="3" default_width="-2">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Nnmf"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</list>
+				</record>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<container class="scrolling_box" navigation_container="true">
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+
+							<!--home team news title-->
+							<widget class="team_button" id="htnt" font="title" alignment="left,centre_y">
+								<translation id="format" translation_id="331482" type="use" value="[%team#1-short] team news[COMMENT: title for a panel showing team news for one of the teams playing in a fixture]"/>
+								<record id="object_property" get_property="home"/>
+							</widget>
+
+							<!--home team news-->
+							<widget class="fixture_news_text" id="FxHN" auto_size="vertical" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" icon_alignment="right">
+								<record id="object_property" get_property="FxHN"/>
+
+								<list id="column_table_properties">
+									<record index="0" top="5" bottom="5" alignment="left,centre_y"/>
+									<record index="1" top="5" bottom="5" alignment="left,centre_y"/>
+								</list>
+							</widget>
+
+							<widget class="horizontal_divider"/>
+
+							<!--away team news title-->
+							<widget class="team_button" id="atnt" font="title" alignment="left,centre_y">
+								<translation id="format" translation_id="331482" type="use" value="[%team#1-short] team news[COMMENT: title for a panel showing team news for one of the teams playing in a fixture]"/>
+								<record id="object_property" get_property="away"/>
+							</widget>
+							<!--away team news-->
+							<widget class="fixture_news_text" id="FxAN" auto_size="vertical" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" icon_alignment="right">
+								<record id="object_property" get_property="FxAN"/>
+
+								<list id="column_table_properties">
+									<record index="0" top="5" bottom="5" alignment="left,centre_y"/>
+									<record index="1" top="5" bottom="5" alignment="left,centre_y"/>
+								</list>
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<!-- Future fixtures list -->
+			<container minimum_width="285" priority="2" default_width="-2">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="manager_upcoming_fixtures_panel" id="mufp" row_count="5" file="human/manager upcoming fixtures fixed"/>
+			</container>
+		</container>
+	</container>
+
+	<!--container shown when there is no next match-->
+	<container id="nonm">
+		<layout class="arrange_horizontal_attachment" layout="24, 1, 500, -1" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<widget class="spacer"/>
+
+		<widget class="vertical_divider"/>
+
+		<!--team badge(s)-->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="picture" width="120" id="tepi" image_alignment="left" scale_picture="true" keep_aspect_ratio="true"/>
+			<widget class="picture" width="120" id="napi" image_alignment="left" scale_picture="true" keep_aspect_ratio="true"/>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+     
+			
+			<widget class="text" colour="white" alignment="left,bottom" style="bold, shadowed" size="12">
+				<translation id="text" translation_id="348217" type="use" value="No matches planned[COMMENT: Game processing panel; text indicating that the manager has no upcoming matches]"/>
+			</widget>
+	  
+			<widget class="text" id="nmpl" colour="grey" alignment="left,top" style="bold" size="8"/>
+		</container>
+	</container>
+
+	<!--container shown when manager is unemployed-->
+	<container id="unem">
+		<layout class="arrange_horizontal_attachment" layout="180, 1, -1" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<widget class="horizontal_divider"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<widget class="manager_text" colour="white" alignment="left,bottom" style="bold, shadowed" size="12">
+				<translation id="text" translation_id="348580" type="use" value="[%person#1-You] are currently unemployed[COMMENT: Game processing panel; punctuation changed - use top-ten matches ]"/>
+			</widget>
+			<widget class="manager_text" colour="grey" alignment="left,top" style="bold" size="8">
+				<translation id="text" translation_id="348582" type="use" value="[%person#1-You] can look for available jobs in the Jobs section[COMMENT: Game processing panel; punctuation changed - use top-ten matches ]"/>
+			</widget>
+		</container>
+	</container>
+</panel>
