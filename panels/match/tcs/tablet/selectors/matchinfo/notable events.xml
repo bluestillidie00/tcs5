@@ -1,0 +1,27 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container id="NEve">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true">
+
+			<list id="column_widget_properties">
+				<record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false"/>
+				<record index="1" icon_alignment="centre" navigation_focus_target="false"/>
+				<record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false"/>
+				<record index="3" icon_alignment="centre" navigation_focus_target="false"/>
+				<record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="homt"/>
+				<record index="1" id="homi"/>
+				<record index="2" id="time"/>
+				<record index="3" id="awai"/>
+				<record index="4" id="awat"/>
+			</list>
+		</widget>
+	</container>
+	
+</panel>

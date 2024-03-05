@@ -1,0 +1,131 @@
+<panel>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<container  class="main_subtle_box_no_margin" red_replacement="bg lighter" >
+		</container>
+			
+		<!-- Comp name, stadium details and weather-->
+		<container>
+
+			<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_inset="140" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_offset="0" vertical_gap="3" horizontal_inset="0" />
+
+				<container id="titl" height="38">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<widget class="label" id="titT" font="title" auto_size="vertical" alignment="centre">
+						<translation id="text" translation_id="308589" type="use" value="Next Match[COMMENT: Text on match preparation fixture tab]" />
+					</widget>
+
+					<widget class="label" id="nMat" format="date_and_days" alignment="centre"/>
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<!-- Team names. Need lots of vertical space here as for cup matches there could be 2 teams on the right-->
+					<widget class="text" id="fixt" size="xlarge" style="bold" auto_size="vertical" alignment="centre"/>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_inset="0" />
+
+						<!-- team relative positions -->
+						<widget class="text" id="temp" colour="secondary_text" auto_size="vertical" alignment="centre"/>
+
+						<!--competition-->
+						<widget class="text" id="comp" auto_size="vertical" multiline="false" alignment="centre"/>
+
+						<!-- stadium name & weather-->
+						<container height="22" id="zzzz">
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="10" vertical_offset="0" />
+
+							<widget class="stadium_button" id="stad" alignment="centre" auto_size="all" navigation_focus_target="false">
+								<translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+								<string id="format" value="[%stadium#1-short]" />
+								<record id="auto_size_restrictions">
+									<string id="type" value="widget_percent" />
+									<string id="limit_type" value="maximum" />
+									<string id="orientation" value="horizontal" />
+									<string id="target" value="parent" />
+									<real id="value" value="0.54" />
+								</record>
+							</widget>
+
+							<container class="weather_indicator_panel_horizontal" id="weat" file="match/weather indicator horizontal auto sized" text_colour="text">
+								<boolean id="show_weather_label" value="true" />
+								<boolean id="show_weather_icon" value="true" />
+								<boolean id="show_temperature_on_icon" value="true" />
+								<boolean id="weather_icon_size" value="10" />
+							</container>
+						</container>
+					</container>
+				</container>
+
+				<container id="extI">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+					<widget class="horizontal_divider" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="8" horizontal_gap="4" vertical_inset="0" />
+
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<!--opposition manager-->
+							<widget class="label" alignment="centre" font="label" auto_size="vertical" colour="faded text">
+								<translation id="text" translation_id="227980" type="use" value="Manager[COMMENT - manager, short text]" />
+							</widget>
+							<widget class="person_button" id="mang" spec="text" size="normal" height="22" alignment="centre" navigation_focus_target="true">
+								<translation id="no_object_text" translation_id="424586" type="use" value="None[COMMENT: string indicating a club has no manager, different to the previously used ID 227487 so translate accordingly if needed]" />
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize_horizontal_centre" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<!--previous meetings-->
+							<widget class="label" font="label" auto_size="all" colour="faded text">
+								<translation id="text" translation_id="344616" type="use" value="Previous Meetings[COMMENT: title for a box containing information on previous meetings between two sides]" />
+							</widget>
+							<widget class="team_recent_form_widget" id="pmet" show_no_form_on_empty="true" height="22" auto_size="horizontal">
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container id="othF" hidden="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+				<widget class="horizontal_divider" />
+
+				<widget class="label" font="title" colour="text" auto_size="vertical" alignment="centre">
+					<translation id="text" translation_id="435777" type="use" value="Other fixtures on that date[COMMENT: title for manage home section showing youth fixtures that are on the same date as the first team fixture]" />
+				</widget>
+
+				<!-- Team names. Need lots of vertical space here as for cup matches there could be 2 teams on the right-->
+				<widget class="text" id="fix2" auto_size="vertical" alignment="centre" />
+
+				<!--competition-->
+				<widget class="text" id="com2" auto_size="vertical" colour="faded text" multiline="false" size="small" alignment="centre"/>
+
+			</container>
+		</container>
+
+		<!--<widget class="picture" file="backgrounds/pattern home left" scale_picture="true" keep_aspect_ratio="true" image_alignment="left,top" red_replacement="text" depth="-1.5" ignore_error_detection="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-50"/>
+		</widget>
+
+		<widget class="picture" file="backgrounds/pattern home right" scale_picture="true" keep_aspect_ratio="true" image_alignment="right,top" red_replacement="text" depth="-1.5" ignore_error_detection="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-50"/>
+		</widget>-->
+
+		<container class="client_object_viewer_xml_panel" file="game/tcs/processing/team upcoming fixture badges manager home" id="tmbp"  />
+
+</panel>

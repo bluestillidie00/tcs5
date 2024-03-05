@@ -220,10 +220,10 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</container>
 
-				<widget class="staff_numbers_table" id="sta1" default_height="300" priority="2">
+			<!-- 	<widget class="staff_numbers_table" id="sta1" default_height="200" priority="2">
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 					<record id="object_property" get_property="objt" set_property="objt"/>
-				</widget>
+				</widget> -->
 
 			</container>
 

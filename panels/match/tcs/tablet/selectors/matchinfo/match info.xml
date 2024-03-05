@@ -8,11 +8,10 @@
 
 	<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.72" rrep="bg"/>
 
-	<container>
-		<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
-
+	<container class="vertical_adaptive_container" alignment="middle" gap="8">
+		
 		<!-- WEATHER FORECAST-->
-		<widget class="weather_indicator_panel_centred" id="FxWe" file="none" height="24">
+		<widget class="weather_indicator_panel_centred" id="FxWe" file="none" height="24" priority="2">
 			<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true"/>
 			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 
@@ -32,38 +31,43 @@
 		</widget>
 
 		<!-- REFEREE -->
-		<container>
-			<global id="hidden" name="game_mode_is_console_mode"/>
-			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle"/>
-			<widget class="label" auto_size="all" size="small">
-				<translation id="text" translation_id="227993" type="use" value="Referee"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+		<container priority="4">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+			<record id="default_properties" auto_size="vertical" alignment="centre"/>
+
+			<widget class="label" font="label">
+				<translation id="text" translation_id="227993" type="use"/>
 			</widget>
-			<widget class="person_button" auto_size="all">
+			<widget class="person_button">
 				<record id="object_property" get_property="FRef" dont_set_hint="true"/>
 			</widget>
 		</container>
 
 		<!-- COMPETITION -->
-		<container>
-			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle"/>
-			<widget class="label" auto_size="all" size="small" alignment="centre_y">
-				<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
-				<translation id="text" translation_id="227740" type="use" value="Competition"/>
+		<container priority="1">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+			<record id="default_properties" auto_size="vertical" alignment="centre"/>
+
+			<widget class="label" font="label">
+				<translation id="text" translation_id="227740" type="use"/>
 			</widget>
-			<widget class="fixture_name_text" auto_size="all" icon_enabled="true" multiline="true">
+			<widget class="fixture_name_text" multiline="true">
 				<record id="object_property" get_property="FxNm"/>
 			</widget>
 		</container>
 
 		<!-- ATTENDNACE -->
-		<container>
-			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle"/>
-			<widget class="label" auto_size="all" size="small">
-				<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+		<container priority="3">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+			<record id="default_properties" auto_size="vertical" alignment="centre"/>
+
+			<widget class="label" font="label">
 				<translation id="text" translation_id="247242" type="use" value="Attendance"/>
 			</widget>
-			<widget class="number_label" auto_size="all">
+			<widget class="number_label">
 				<record id="object_property" get_property="FxEA" dont_set_hint="true"/>
 			</widget>
 		</container>

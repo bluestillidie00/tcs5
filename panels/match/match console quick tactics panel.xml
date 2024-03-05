@@ -57,7 +57,7 @@
 
 					<!--MAKE SUB-->
 					<widget class="icon_button" id="qsub" icon="icons/16px/refresh"  appearance="buttons/custom/over state only/button" auto_size="horizontal" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" >
-						<translation id="text" translation_id="454740" type="use" value="Make Sub[COMMENT: match tactics shortcuts, change tactics dialog title, Sub is an abbreviation for Substitution]" />
+						<translation id="text" translation_id="323103" type="use" value="Make Sub[COMMENT: match tactics shortcuts, change tactics dialog title, Sub is an abbreviation for Substitution]" />
 					</widget>	
 
 					<!-- MENTALITY -->

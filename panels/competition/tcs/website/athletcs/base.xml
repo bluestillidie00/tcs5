@@ -1,20 +1,54 @@
 <panel>
-<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+	<integer id="number_of_stories_to_request" value="100"/>
 
-	<container height="52">
+	<!-- FAKE BROWSER HEADER -->
+	<container height="56">
+		<!-- LAYOUT HAS THE BOOKMARKS ICON STATIC, THEN EVERYTHING ELSE IS PUSHED TO THE LEFT -->
 		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8"/>
 		
+		<!-- REST OF HEADER -->
 		<container class="main_box">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 		
-			<container width="100" bkcl="yellow"/>
-		
+			<!-- BACK BUTTON -->
+			<widget class="screen_history_button" id="back" fixed="true" width="30" appearance="chrome/buttons/items/button" icon="icons/26px/back" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+				<attachment class="get_global_attachment" get_property="hnpt" set_property="itms"/>
+				<record id="click_event" event_id="GOTO" event_target="brow" scin="-3"/>
+				<string id="controller_button" value="left_shoulder"/>
+				<attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true"/>
+			</widget>
+
+			<!-- NEXT BUTTON -->
+			<widget class="screen_history_button" id="forw" fixed="true" width="30" appearance="chrome/buttons/items/button" icon="icons/26px/forward" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+				<attachment class="get_global_attachment" get_property="hnit" set_property="itms"/>
+				<record id="click_event" event_id="GOTO" event_target="brow" scin="-2"/>
+				<string id="controller_button" value="right_shoulder"/>
+				<attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true"/>
+			</widget>
+			
+			<!-- URL BAR -->
 			<container class="tcs_box" rrep="browser url" appearance="tcs/boxes/news/url/paper">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="8"/>
 				
-				<container width="30" bkcl="red"/>
+				<!-- FAKE SETTINGS BUTTON -->
+				<container width="20" class="tcs_box" appearance="tcs/boxes/news/url/settings"/>
+				
+				<!-- URL -->
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
  
-				<widget class="text" text="www.athletcs.com/home" auto_size="horizontal"/>
+					<record id="default_properties" auto_size="horizontal">
+					</record>
+ 
+					<widget class="text" text="www.athletcs.com">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+					</widget>
+
+					<widget class="text" text="/home" colour="grey">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+					</widget>
+				</container>
  
 			</container>
 		</container>
@@ -85,42 +119,48 @@
 				</attachment>
 			</widget>
 		</container>
-									
 	</container>
 	
 	<!-- CONTENT -->
 	<container class="tcs_box" appearance="tcs/boxes/news/bottom/paper">
-		<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
 					
-		<!-- LOGO -->
-					<container height="50" bkcl="bg darker">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="24" horizontal_offset="24"/>
+		<!-- PAGE HEADER -->
+		<container height="50" bkcl="bg darker">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="24" horizontal_offset="24"/>
+			<record id="default_properties" auto_size="horizontal" alignment="left,centre_y" colour="fg"/>
+
+			<!-- LOGO AND TAG LINE -->
+			<container>
+				<attachment_group class="horizontal_arrange_autosize"/>
+				
+				<!-- DEFAULT PROPERTIES SO WE DON'T HAVE TO DEFINE EVERY TIME -->
 				<record id="default_properties" auto_size="horizontal" alignment="left,centre_y" colour="fg"/>
 
-				<container>
-					<attachment_group class="horizontal_arrange_autosize" />
-					<record id="default_properties" auto_size="horizontal" alignment="left,centre_y" colour="fg"/>
+				<!-- ICON -->
+				<widget class="picture" file="icons/48px/whistle" colour="white" width="50" height="50" scale_picture="true" alignment="centre_y"/>
 
-					<widget class="picture" file="icons/48px/whistle" colour="white" width="50" height="50" scale_picture="true" alignment="centre_y" />
-
-					<widget class="text" text="The AthleTCS" font="web-condensed" size="30"/>
-				</container>
-				<widget class="vertical_divider" width="2"/>
-
-				<widget class="text" text="Access sports reporting that sets the standard " font="web-condensed" alignment="left, centre_y" colour="fg" size="12"/>
+				<!-- TITLE -->
+				<widget class="text" text="The AthleTCS" font="web-condensed" size="30"/>
 			</container>
+			
+			<!-- DIVIDER -->
+			<widget class="vertical_divider" width="2"/>
+
+			<!-- SUBTITLE -->
+			<widget class="text" text="Access sports reporting that sets the standard " font="web-condensed" alignment="left, centre_y" colour="fg" size="12"/>
+		</container>
+			
+		<!-- MULTIPLAYER HUMAN NEWS ONLY -->
+		<widget class="check_box" id="NGhn" auto_size="all" select_event="NGht" colour="text">
+			<translation id="text" translation_id="466403" type="use" value="Show human-related news only[COMMENT: FR 11210; Competition news panel; check box to allow filtering of news to only include news related to other humans in a multiplayer game]"/>
+		</widget>
 		
-	<container default_width="-1" minimum_width="675" priority="1">
+		<container default_width="-1" minimum_width="675" priority="1">
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
 			<layout class="arrange_vertical_attachment" alignment="top, extend"/>
-
-			<!--multiplayer human news only-->
-			<widget class="check_box" id="NGhn" auto_size="all" select_event="NGht" colour="text">
-				<translation id="text" translation_id="466403" type="use" value="Show human-related news only[COMMENT: FR 11210; Competition news panel; check box to allow filtering of news to only include news related to other humans in a multiplayer game]"/>
-			</widget>
-
+		
 			<widget class="formatted_label" auto_size="none" id="noLB" multiline="true" alignment="centre" colour="website text" size="xxlarge" hidden="true">
-
 				<!-- Choose string based on object type -->
 				<list id="format">
 					<record value="3">
@@ -146,138 +186,188 @@
 				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
 				<container>
-					<attachment_group class="vertical_arrange_autosize">
-						<global id="vertical_gap" name="ui.main_box_gap"/>
-					</attachment_group>
+					<attachment_group class="vertical_arrange_autosize"/>
 
-					<!-- TAB NEWS ITEM -->
-					<container bkcl="bg lighter" height="34" draw_vertical_dividers="true" class="main_box">
-						<attachment_group class="horizontal_arrange" horizontal_alignment="left">
+					<!-- HEADER ITEMS AND SUB HEADER -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+						<!-- TAB NEWS ITEM -->
+						<container bkcl="grey 900" height="38" class="main_box">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle">
+								<global id="horizontal_gap" name="ui.main_box_gap"/>
+							</attachment_group>
+
+							<record id="default_properties" file="competition/tcs/website/athletcs/header item"/>
+
+							<container class="competition_news_item_panel" index="23"/>
+							<container class="competition_news_item_panel" index="24"/>
+						</container>
+					
+						<!-- SUB HEADER 
+						<container class="competition_news_side_panel" id="side" height="130" file="competition/tcs/website/athletcs/header v2"/> -->
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="60">
 							<global id="vertical_gap" name="ui.main_box_gap"/>
 						</attachment_group>
+					
+						<!-- TOP SECTION -->
+						<container height="380" draw_vertical_dividers="true" class="horizontal_adaptive_container" gap="16">
 
-						<record id="default_properties" file="competition/tcs/website/athletcs/header item"/>
+							<!-- LEFT // MAIN ARTICLE -->
+							<container default_width="-4" priority="1" minimum_width="300" class="main_box">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-						<container class="competition_news_item_panel" index="24"/>
-					</container>
+								<container class="competition_news_item_panel" index="0" file="competition/tcs/website/athletcs/item_l">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
 
-					<!-- TOP SECTION -->
-					<container height="380" draw_vertical_dividers="true">
-						<layout class="horizontal_arrange" horizontal_layout="-4,-6,-5"  horizontal_gap="16" />
+							</container>
 
-						<!-- LEFT // MAIN ARTICLE -->
-						<container class="main_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<container class="competition_news_item_panel" index="0" file="competition/tcs/website/athletcs/item_l">
-								<record id="object_property" get_property="objt" set_property="objt"/>
+							<!-- MIDDLE SECTION -->
+							<container default_width="-3" priority="2" draw_horizontal_dividers="true">
+								<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+							
+								<record id="default_properties" file="competition/tcs/website/athletcs/item_m"/>
+							
+								<container class="competition_news_item_panel" index="1">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="2">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="3">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+							</container>
+														
+							<!-- RIGHT // MEH -->
+							<container default_width="-3" priority="3" minimum_width="100" class="main_box">
+								<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+							
+								<record id="default_properties" file="competition/tcs/website/athletcs/item title"/>
+							
+								<container class="competition_news_item_panel" index="16">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="17">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="18">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="19">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="20">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="21">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="22">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
 							</container>
 						</container>
-
+						
+						<!-- DIVIDER -->
+						<widget class="horizontal_subtle_divider" height="2"/>
+						
 						<!-- MIDDLE SECTION -->
-						<container class="main_box" draw_horizontal_dividers="true">
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
+						<container height="380" draw_vertical_dividers="true" class="horizontal_adaptive_container" gap="16">
 
-							<record id="default_properties" file="competition/tcs/website/athletcs/item_m">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
+							<!-- LEFT // MAIN ARTICLE -->
+							<container default_width="-1" priority="1" minimum_width="300" class="main_box">
+<attachment_group class="vertical_arrange" vertical_alignment="fill" />
 
-							<container class="competition_news_item_panel" index="1" />
-							<container class="competition_news_item_panel" index="2" />
-							<container class="competition_news_item_panel" index="3" />
-							<container class="competition_news_item_panel" index="4" />
-						</container>
+<record id="default_properties"  file="competition/tcs/website/athletcs/item_l_alt"/>
 
-						<!-- RIGHT -->
-						<container >
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
+								<container class="competition_news_item_panel" index="5">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="6" >
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
 
-							<record id="default_properties" file="competition/tcs/website/athletcs/item title">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="5" />
-							<container class="competition_news_item_panel" index="6" />
-							<container class="competition_news_item_panel" index="7" />
-							<container class="competition_news_item_panel" index="8" />
-							<container class="competition_news_item_panel" index="9" />
-						</container>
-					</container>
-					
-					<widget class="horizontal_subtle_divider" height="2"/>
-					
-					<!-- MIDDLE SECTION -->
-					<container height="380" draw_vertical_dividers="true">
-						<layout class="horizontal_arrange" horizontal_layout="-5,-5"  horizontal_gap="16" />
-
-						<!-- LEFT // MAIN ARTICLE -->
-						<container class="main_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<container class="competition_news_item_panel" index="10" file="competition/tcs/website/athletcs/item_l_alt">
-								<record id="object_property" get_property="objt" set_property="objt"/>
 							</container>
-						</container>
-												
-						<!-- MIDDLE SECTION -->
-						<container class="main_box" draw_horizontal_dividers="true">
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
 
-							<record id="default_properties" file="competition/tcs/website/athletcs/item_m_alt">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="11" />
-							<container class="competition_news_item_panel" index="12" />
-							<container class="competition_news_item_panel" index="13" />
-							<container class="competition_news_item_panel" index="14" />
-						</container>
-				</container>
+							<!-- MIDDLE SECTION -->
+							<container default_width="-1" priority="2" draw_horizontal_dividers="true">
+								<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+							
+								<record id="default_properties" file="competition/tcs/website/athletcs/item_l_imageonly"/>
+							
+								<container class="competition_news_item_panel" index="4">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
 			
-									<!-- BOTTOM SECTION -->
-					<container height="380" draw_vertical_dividers="true">
-						<layout class="horizontal_arrange" horizontal_layout="-4,-6,-5"  horizontal_gap="16" />
+							</container>
+														
+								</container>
+								
+									<!-- TOP SECTION -->
+						<container height="380" draw_vertical_dividers="true" class="horizontal_adaptive_container" gap="16">
 
-						<!-- LEFT // MAIN ARTICLE -->
-						<container class="main_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<!-- LEFT // MAIN ARTICLE -->
+							<container default_width="-4" priority="1" minimum_width="300" class="main_box">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-							<container class="competition_news_item_panel" index="15" file="competition/tcs/website/athletcs/item_l">
-								<record id="object_property" get_property="objt" set_property="objt"/>
+								<container class="competition_news_item_panel" index="7" file="competition/tcs/website/athletcs/item_l">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+
+							</container>
+
+							<!-- MIDDLE SECTION -->
+							<container default_width="-3" priority="2" draw_horizontal_dividers="true">
+								<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+							
+								<record id="default_properties" file="competition/tcs/website/athletcs/item_m"/>
+							
+								<container class="competition_news_item_panel" index="8">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="9">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="10">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+							</container>
+														
+							<!-- RIGHT // MEH -->
+							<container default_width="-3" priority="3" minimum_width="100" class="main_box">
+								<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+							
+								<record id="default_properties" file="competition/tcs/website/athletcs/item title"/>
+							
+								<container class="competition_news_item_panel" index="11">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="12">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="13">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="14">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+								<container class="competition_news_item_panel" index="15">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+							
 							</container>
 						</container>
+					
 
-						<!-- MIDDLE SECTION -->
-						<container class="main_box" draw_horizontal_dividers="true">
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
-
-							<record id="default_properties" file="competition/tcs/website/athletcs/item_m">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="16" />
-							<container class="competition_news_item_panel" index="17" />
-							<container class="competition_news_item_panel" index="18" />
-							<container class="competition_news_item_panel" index="19" />
-						</container>
-
-						<!-- RIGHT -->
-						<container >
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="16"/>
-
-							<record id="default_properties" file="competition/tcs/website/athletcs/item title">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</record>
-
-							<container class="competition_news_item_panel" index="20" />
-							<container class="competition_news_item_panel" index="21" />
-							<container class="competition_news_item_panel" index="22" />
-							<container class="competition_news_item_panel" index="23" />
-							<container class="competition_news_item_panel" index="24" />
-						</container>
+					
 					</container>
-				</container>
 
+				</container>
 			</container>
 		</container>
 				

@@ -1,20 +1,47 @@
 <panel>
 	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
 
-	<container height="52">
+	<container height="56">
 		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8"/>
 		
 		<container class="main_box">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 		
-			<container width="100" bkcl="yellow"/>
-		
+			<widget class="screen_history_button" id="back" fixed="true" width="30" appearance="chrome/buttons/items/button" icon="icons/26px/back" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+				<attachment class="get_global_attachment" get_property="hnpt" set_property="itms"/>
+				<record id="click_event" event_id="GOTO" event_target="brow" scin="-3"/>
+				<string id="controller_button" value="left_shoulder"/>
+				<attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true"/>
+			</widget>
+
+			<!-- Next Button -->
+			<widget class="screen_history_button" id="forw" fixed="true" width="30" appearance="chrome/buttons/items/button" icon="icons/26px/forward" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+				<attachment class="get_global_attachment" get_property="hnit" set_property="itms"/>
+				<record id="click_event" event_id="GOTO" event_target="brow" scin="-2"/>
+				<string id="controller_button" value="right_shoulder"/>
+				<attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true"/>
+			</widget>
+			
 			<container class="tcs_box" rrep="browser url" appearance="tcs/boxes/news/url/paper">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="8"/>
 				
-				<container width="30" bkcl="red"/>
+				<container width="20" class="tcs_box" appearance="tcs/boxes/news/url/settings"/>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
  
-				<widget class="text" text="https://www.youtube.com/@WorkTheSpace" auto_size="horizontal"/>
+					<record id="default_properties" auto_size="horizontal">
+					</record>
+ 
+					<widget class="text" text="www.youtube.com">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+					</widget>
+
+					<widget class="text" text="/@WorkTheSpace" colour="grey">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+					</widget>
+				</container>
+ 
 			</container>
 		</container>
 		

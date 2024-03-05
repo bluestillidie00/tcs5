@@ -32,12 +32,12 @@
 
 		<!-- Panel contents -->
 		<container>
-			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="64" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="200" />
 
 			<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
 
 			<!-- Header with next match info and browse button -->
-			<container class="tcs_box" appearance="tcs/boxes/ui/titlebar/paper" rrep="processing_box_background" height="150"  transparency="0.95">
+			<container class="tcs_box" appearance="tcs/boxes/ui/titlebar/paper" rrep="processing_box_background" height="200"  transparency="0.95">
 				<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="8" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="10" />
 
@@ -45,7 +45,7 @@
 					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 					<!-- Next match -->
-					<container class="manager_upcoming_fixture_panel" file="game/processing upcoming fixture panel" id="nexm" hidden="true"/>
+					<container class="manager_upcoming_fixture_panel" file="game/tcs/processing/upcoming fixture" id="nexm" hidden="true"/>
 
 					<!-- Unemployed jobs stuff -->
 					<container id="umpC" hidden="true">
@@ -65,7 +65,7 @@
 			</container>
 
 			<!-- Main calendar panel (Only used when there is a human) -->
-			<container id="cale" height="450"  transparency="0.92">
+			<container id="cale" height="400"  transparency="0.92">
 				<layout class="stick_to_sides_attachment" alignment="vertical,left" apply_to_children="true" inset="0" />
 
 				<container width="3200" ignore_error_detection="true">
@@ -156,7 +156,7 @@
 			</container>
 
 			<!-- Footer with hints -->
-			<container class="tcs_box" appearance="tcs/boxes/ui/tab bar/paper" rrep="processing_box_background" height="85" transparency="0.95">
+			<container class="tcs_box" appearance="tcs/boxes/ui/tab bar/paper" rrep="processing_box_background" height="100" transparency="0.95">
 				<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="right,extend" horizontal_offset="8"/>
 
 				<container height="80">

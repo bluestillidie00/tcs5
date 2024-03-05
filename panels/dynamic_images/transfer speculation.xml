@@ -1,23 +1,10 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-	<!-- A random stock image if no stadium-->
-	<widget class="value_based_picture" id="bckp" rand="true" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
-		<list id="value_list">
-			<record value="0" file="photos/dynamic/generic/goal" />
-			<record value="1" file="photos/dynamic/generic/pitch" />
-			<record value="2" file="photos/dynamic/generic/floodlight" />
-			<record value="3" file="photos/dynamic/generic/blue net" />
-		</list>
-		<!-- PROP_ID (for random seed)-->
-		<record id="object_property" get_property="id  " set_property="valu"/>
-	</widget>
-	
-	    <widget class="picture" id="bgim" file="tcs/dynamic/transfer" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false"/>
-
+	    <widget class="picture" id="bgim" file="tcs/dynamic/transfer" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
 
 	<container id="horC">
-		<layout class="arrange_horizontal_attachment" layout="-1,-15,-13,-2" offset="0" gap="0"/>
+		<layout class="arrange_horizontal_attachment" layout="-2,-15,-12,-2" offset="0" gap="0"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
 		<widget class="spacer" />

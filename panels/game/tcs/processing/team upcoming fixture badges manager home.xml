@@ -1,0 +1,79 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4"/>
+
+	<!--stadium picture
+	<widget class="stadium_picture" id="STAp" image_alignment="centre_x,top" scale_picture="true" keep_aspect_ratio="true">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>-->
+
+	<!--container for the team badges-->
+	<string id="skin_style" value="contrast box" />
+	<container id="tbdg">
+
+
+		<attachment_group class="horizontal_arrange" horizontal_layout="140,-1,140" horizontal_offset="6" vertical_inset="16" horizontal_gap="0"/>
+
+		<container navigation_focus_target="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!--home team-->
+			<widget class="object_portrait_picture" id="htpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" inset="0">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Hhme" />
+							<integer id="set_property" value="Shwn" />
+						</record>
+						<record>
+							<integer id="get_property" value="home" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</list>
+				</record>
+			</widget>
+
+			<widget class="label" size="48" alignment="centre">
+				<translation id="text" translation_id="364192" type="use" value="?[COMMENT:upcoming fixture info panel; placeholder used for when match opposition isn't known yet, keep to single character where possible]" />
+				<record id="object_property">
+					<integer id="get_property" value="Hhme" />
+					<integer id="set_property" value="hidn" />
+				</record>
+			</widget>
+		</container>
+
+		<container/>
+
+		<container navigation_focus_target="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!--away team-->
+			<widget class="object_portrait_picture" id="atpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" inset="0">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Hawy" />
+							<integer id="set_property" value="Shwn" />
+						</record>
+						<record>
+							<integer id="get_property" value="away" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</list>
+				</record>
+			</widget>
+
+			<widget class="label" size="48" alignment="centre">
+				<translation id="text" translation_id="364192" type="use" value="?[COMMENT:upcoming fixture info panel; placeholder used for when match opposition isn't known yet, keep to single character where possible]" />
+				<record id="object_property">
+					<integer id="get_property" value="Hawy" />
+					<integer id="set_property" value="hidn" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+</panel>

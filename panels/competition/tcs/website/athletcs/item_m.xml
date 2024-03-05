@@ -1,35 +1,32 @@
 <!-- NOTE: The property 'usoc' used on elements tells the panel to recolour them based on object colours -->
-<panel  navigation_focus_target="true">
+<panel navigation_focus_target="true">
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<container usoc="true" class="main_box">
-		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<container class="main_box">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend"/>
+		
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="-2"/>
+		
+			<record id="default_properties" style="bold" multiline="true" auto_size="vertical" font="webtitle"/>
+		
+			<!-- Main object -->
+			<!-- Story title (max 2 lines of text)-->
+			<widget class="text" id="brif" size="small" colour="faded text"/>
+			<widget class="text" id="titl" colour="website headline" size="large"/>
+			<widget class="text" id="date" alignment="left,bottom" colour="faded text" size="xxsmall" multiline="false"/>
+		</container>
 
-		<attachment class="hide_empty_container_attachment"/>
-
-		<container id="wcon">
-			<layout class="horizontal_arrange" horizontal_layout="-1,127" horizontal_gap="8" />
-
-			<!-- News item -->
-			<container > 
-				<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_alignment="horizontal" vertical_gap="-4"/>
-				
-				<record id="default_properties" style="bold" multiline="true" auto_size="vertical" font="webtitle"/>
-
-				<!-- Main object -->
-				<!-- Story title (max 2 lines of text)-->
-				<widget class="text" id="brif" size="small" colour="faded text"/>
-				<widget class="text" id="titl" colour="website headline" size="large"/>
-			</container>
-			
-			<!-- DYNAMIC IMAGE -->
-			<container >
-				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
-				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container width="150">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
 				<!-- News image -->
-				<container id="CNdi" height="70">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<container id="CNdi" height="90">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 				</container>
 			</container>
 		</container>

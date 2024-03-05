@@ -1,0 +1,32 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="main_subtle_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container class="horizontal_adaptive_container" >
+		
+			
+					<!-- Upcoming fixtures (club only)-->
+			<container class="inner_box" priority="1" default_width="-1" >
+				<translation id="title" translation_id="395516" type="use" value="Upcoming Fixtures[COMMENT: FR 9550 - inbox; title for section showing upcoming fixtures for the competition]" />
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- A panel showing the first four results from an object which could be a continent or a competition -->
+				<container class="simple_data_list" id="fix1" first="0" maximum_items="3" set_property="objt" height="164">
+					<record id="widget_properties" class="client_object_viewer_xml_panel" file="competition/competition news fixture item panel" height="50"/>
+				</container>
+				<widget class="text" id="nofx" alignment="centre" colour="faded text" auto_size="vertical" hidden="true">
+					<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures." />
+				</widget>
+			</container>
+
+		
+		
+		
+		
+		</container>
+		
+	</container>
+	</panel>

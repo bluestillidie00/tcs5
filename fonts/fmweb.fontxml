@@ -1,0 +1,13 @@
+<record>
+	<string id="file_name" value="GT-America-Standard-Bold.ttf"/>
+
+  <real id="font_size_xxsmall" value="6.7" /> <!-- 9px -->
+  <real id="font_size_xsmall" value="8.1" /> <!-- 11px -->
+  <real id="font_size_small" value="8.8" /> <!-- 12px -->
+  <real id="font_size_normal" value="9.7" /> <!-- 13px -->
+  <real id="font_size_large" value="11.2" /> <!-- 15px -->
+  <real id="font_size_xlarge" value="13.7" /> <!-- 18px -->
+  <real id="font_size_xxlarge" value="16.6" /> <!-- 22px -->
+
+  <real id="extra_height" value="2" /> 
+</record>

@@ -2,7 +2,7 @@
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 	<!-- IMPORTANT Need to keep this synced up with number of panels or we won't fill them all, we use this to minimise the amount of data the panel needs to request -->
-	<integer id="number_of_stories_to_request" value="75"/>
+	<integer id="number_of_stories_to_request" value="100"/>
 	<boolean id="show_daily_news_request" value="true"/>
 	<boolean id="show_related_news" value="true"/>
 	<boolean id="save_session_state" value="true"/>
@@ -29,10 +29,10 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 
-				<widget class="client_object_viewer_xml_panel" id="QQQQ" file="competition/tcs/website/fotmob/base"  icon="icons/16px/fm" icon_colour="fg">
+				<!-- <widget class="client_object_viewer_xml_panel" id="QQQQ" file="competition/tcs/website/fotmob/base"  icon="tcs/boxes/news/favicon/fm" icon_colour="fg">
 					<translation id="title" value="Football Manager" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
-				</widget>
+				</widget> -->
 
 				<widget class="client_object_viewer_xml_panel" id="WTSG" file="competition/tcs/website/wts/base"  icon="icons/16px/youtube" icon_colour="fg">
 					<translation id="title" value="WorkTheSpace Guides" type="use"/>

@@ -1,0 +1,20 @@
+﻿<!-- Added option to change pitch orientation -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<!-- the pitch-->
+	<widget	class="pitch_with_tactics" id="pwtc" can_change_orientation="true" icon_flags="show_name,show_extra_details,drop_initial_if_possible" >
+		<boolean id="vertical" value="true"/>
+		<boolean id="pitch_dont_draw_indicators" value="true"/>
+		<boolean id="pitch_draw_grass" value="false"/>
+		<flags id="pitch_alignment" value="can_scale"/>
+		<string id="pitch_line_colour" value="faded text" />
+		<integer id="pitch_touchline_width_percentage" value="10" />
+		<string id="player_icon_file" value="tactics/tactics icon info panel review" />
+		<boolean id="allow_y_score_adjustment_for_roles" value="false" />
+
+		
+	
+	</widget>
+
+	
+</panel>
