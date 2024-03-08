@@ -235,12 +235,11 @@
 					</record>
 
 					<!-- PITCH -->
-					<widget class="pitch_with_tactics" id="attp" icon_flags="dont_fade_icons" line_width="1.4" line_colour="fg" pitch_line_colour="text" pitch_perspective="0.05">
+					<widget class="pitch_with_tactics" id="attp" icon_flags="dont_fade_icons" line_width="1.4" line_colour="fg" pitch_line_colour="text" pitch_perspective="0.005">
 						<boolean id="pitch_is_read_only" value="true" />
 						<boolean id="vertical" value="false" />
 						<string id="pitch_draw_grass" value="true" />
-						<string id="pitch_base_appearance" value="" />
-						<string id="pitch_pattern" value="tcs_h" />
+						<string id="pitch_pattern" value="ui circles" />
 						<boolean id="pitch_dont_draw_indicators" value="true" />
 						<integer id="pitch_vertical_padding" value="8" />
 						<integer id="pitch_alignment" value="centre_x,centre_y" />
