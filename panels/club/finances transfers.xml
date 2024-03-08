@@ -1,108 +1,102 @@
 <panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"  gap="8"/>
-	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	<container class="tcs_fade">
 
-	<!-- panel containing table of clauses  -->
-	<container width="310" class="tcs_box">
-		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
 
-		<container class="tabbed_container" id="trls" default_item="altc" save_session_state="true" inset="0" offset="0" navigation_container="true" default_focus="true">
+		<!-- panel containing table of clauses  -->
+		<container width="310" class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-			<!--Bug fix 60333-->
-			<flags id="save_default_state" value="false" />
+			<container class="tcs_tabs_primary" id="trls" default_item="altc" save_session_state="true" inset="0" offset="0" navigation_container="true" default_focus="true">
 
-			<container id="altc" icon="icons/16px/all">
-				<translation id="title" translation_id="316757" type="use" value="All[COMMENT - Transfer Centre; title of all transfers tab; limited space for text here, 5 characters maximum]" />
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<!--Bug fix 60333-->
+				<flags id="save_default_state" value="false"/>
 
-				<widget class="table" id="allt" save_session_state="true" save_default_state="true" fixed_size_rows="false" auto_size_rows="true" select_event="selp" navigation_focus_target="true">
-					<string id="layout" value="-1" />
-					<flags id="mode" value="select_rows, fill_rows, dont_allow_empty_selection" />
+				<!-- ALL -->
+				<container id="altc" icon="icons/16px/all">
+					<translation id="title" translation_id="316757" type="use"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 
-					<record id="shown_event">
-						<flags id="event_id" value="REQF" />
-						<flags id="event_target" value="self" />
-					</record>
+					<widget class="table" id="allt" save_session_state="true" save_default_state="true" fixed_size_rows="false" auto_size_rows="true" select_event="selp" navigation_focus_target="true">
+						<string id="layout" value="-1"/>
+						<flags id="mode" value="select_rows, fill_rows, dont_allow_empty_selection"/>
 
-					<list id="column_table_properties">
-						<record index="0" sort_disabled="false" left="10"/>
-					</list>
-				</widget>
+						<record id="shown_event">
+							<flags id="event_id" value="REQF"/>
+							<flags id="event_target" value="self"/>
+						</record>
 
-			</container>
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="false" left="10"/>
+						</list>
+					</widget>
+				</container>
 
-			<container id="intc" alignment="centre" icon="icons/16px/transfer in">
-				<translation id="title" translation_id="316758" type="use" value="In[COMMENT - Transfer Centre; title of incoming transfers tab; limited space for text here, 5 characters maximum]" />
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<!-- IN -->
+				<container id="intc" alignment="centre" icon="icons/16px/transfer in">
+					<translation id="title" translation_id="316758" type="use"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 
-				<widget class="table" id="int " save_session_state="true" save_default_state="true" fixed_size_rows="false" auto_size_rows="true" select_event="selp" navigation_focus_target="true">
-					<string id="layout" value="-1" />
-					<flags id="mode" value="select_rows, fill_rows, dont_allow_empty_selection" />
+					<widget class="table" id="int " save_session_state="true" save_default_state="true" fixed_size_rows="false" auto_size_rows="true" select_event="selp" navigation_focus_target="true">
+						<string id="layout" value="-1"/>
+						<flags id="mode" value="select_rows, fill_rows, dont_allow_empty_selection"/>
 
-					<record id="shown_event">
-						<flags id="event_id" value="REQF" />
-						<flags id="event_target" value="self" />
-					</record>
+						<record id="shown_event">
+							<flags id="event_id" value="REQF"/>
+							<flags id="event_target" value="self"/>
+						</record>
 
-					<list id="column_table_properties">
-						<record index="0" sort_disabled="false" left="10"/>
-					</list>
-				</widget>
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="false" left="10"/>
+						</list>
+					</widget>
+				</container>
 
-			</container>
+				<!-- OUT -->
+				<container id="outc" icon="icons/16px/transfer out">
+					<translation id="title" translation_id="316759" type="use"/>
+					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
 
-			<container id="outc" icon="icons/16px/transfer out">
-				<translation id="title" translation_id="316759" type="use" value="Out[COMMENT - Transfer Centre; title of outgoing transfers tab; limited space for text here, 5 characters maximum]" />
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<widget class="table" id="outt" save_session_state="true" save_default_state="true" fixed_size_rows="false" auto_size_rows="true" select_event="selp" navigation_focus_target="true">
+						<string id="layout" value="-1"/>
+						<flags id="mode" value="select_rows, fill_rows, dont_allow_empty_selection"/>
 
-				<widget class="table" id="outt" save_session_state="true" save_default_state="true" fixed_size_rows="false" auto_size_rows="true" select_event="selp" navigation_focus_target="true">
-					<string id="layout" value="-1" />
-					<flags id="mode" value="select_rows, fill_rows, dont_allow_empty_selection" />
+						<record id="shown_event">
+							<flags id="event_id" value="REQF"/>
+							<flags id="event_target" value="self"/>
+						</record>
 
-					<record id="shown_event">
-						<flags id="event_id" value="REQF" />
-						<flags id="event_target" value="self" />
-					</record>
-
-					<list id="column_table_properties">
-						<record index="0" sort_disabled="false" left="10"/>
-					</list>
-				</widget>
-
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="false" left="10"/>
+						</list>
+					</widget>
+				</container>
 			</container>
 
 		</container>
 
-	</container>
+		<!-- CLAUSES AND PLAYER INFORMATION -->
+		<container class="tcs_box">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend"/>
 
-	<container  class="tcs_box" >
-		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
-
-		<container id="righ" navigation_container="true">
-			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8,0" />
-
-			<container>
-				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+			<!-- clauser s-->
+			<container id="righ" navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10"/>
 
 				<widget class="person_button" id="plan" style="bold" size="xxlarge" auto_size="vertical" navigation_focus_target="false"/>
 
 				<widget class="table" id="cdlt" fixed_size_rows="false" auto_size_rows="true" row_spacing="6" navigation_container="true">
-					<string id="layout" value="-1" />
-					<flags id="mode" value="fill_rows, dont_allow_empty_selection" />
-
+					<string id="layout" value="-1"/>
+					<flags id="mode" value="fill_rows, dont_allow_empty_selection"/>
 				</widget>
-
 			</container>
-
-		</container>
         
-		<widget class="client_object_biopic_panel" id="cobp" image_alignment="left,top" width="300" navigation_container="true" />
-
+			<widget class="client_object_biopic_panel" id="cobp" image_alignment="left,top" width="300" navigation_container="true" file="club/tcs/transfers/clauses_widget"/>
+		</container>
+		
 	</container>
-
-
-
+	
 </panel>
