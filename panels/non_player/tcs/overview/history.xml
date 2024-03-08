@@ -1,0 +1,22 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+	<!-- ACHIEVEMENTS -->
+	<container class="tcs_box" height="190">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<widget class="client_object_viewer_xml_panel" file="human/tcs/profile/achievements" id="pacs" auto_size="vertical">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</container>
+
+	<!-- MILESTONES -->
+	<container class="tcs_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<!-- ACHIEVEMENTS -->
+		<widget class="player_history_achievements_panel" file="player/player history achievements small">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</container>
+</panel>
