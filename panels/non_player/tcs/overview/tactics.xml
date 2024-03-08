@@ -1,0 +1,46 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="8"/>
+
+			<!-- PITCH -->
+			<widget class="pitch_with_tactics" id="attp" icon_flags="dont_fade_icons" line_width="1.4" line_colour="fg" pitch_line_colour="text" pitch_perspective="0.005" height="320">
+				<boolean id="pitch_is_read_only" value="true"/>
+				<boolean id="vertical" value="false"/>
+				<string id="pitch_draw_grass" value="true"/>
+				<string id="pitch_pattern" value="ui circles"/>
+				<boolean id="pitch_dont_draw_indicators" value="true"/>
+				<integer id="pitch_vertical_padding" value="8"/>
+				<integer id="pitch_alignment" value="centre_x,centre_y"/>
+			</widget>
+
+			<!-- INSTRUCTIONS -->
+			<widget class="table" id="tacT" layout="-1" mode="fill_rows" row_height="24" auto_size="vertical">
+				<widget class="label" col="0" row="0" font="label" colour="faded white" alignment="left,bottom">
+					<translation id="text" translation_id="229988" type="use" value="Preferred Formation"/>
+				</widget>
+				<widget class="label" col="0" row="2" font="label" colour="faded white" alignment="left,bottom">
+					<translation id="text" translation_id="242539" type="use" value="Playing Mentality"/>
+				</widget>
+				<widget class="label" col="0" row="4" font="label" colour="faded white" alignment="left,bottom">
+					<translation id="text" translation_id="242534" type="use" value="Pressing Style"/>
+				</widget>
+				<widget class="label" col="0" row="6" font="label" colour="faded white" alignment="left,bottom">
+					<translation id="text" translation_id="242547" type="use" value="Marking Style"/>
+				</widget>
+				<widget class="label" col="0" row="8" font="label" colour="faded white" alignment="left,bottom">
+					<translation id="text" translation_id="242543" type="use" value="Coaching Style"/>
+				</widget>
+
+				<widget class="label" colour="white" id="prfo" col="0" row="1"/>
+				<widget class="label" colour="white" id="plma" col="0" row="3"/>
+				<widget class="label" colour="white" id="prst" col="0" row="5"/>
+				<widget class="label" colour="white" id="mars" col="0" row="7"/>
+				<widget class="label" colour="white" id="coas" col="0" row="9"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

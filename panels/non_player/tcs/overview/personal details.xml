@@ -1,0 +1,409 @@
+<!-- PANEL THAT SHOWS AT THE TOP OF THE PLAYER OVERVIEW -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- MAIN CONTAINER -->
+	<container class="tcs_box" appearance="tcs/boxes/main/outline/header/paper" rrep="primary" brep="tcs_accent" draw_vertical_dividers="true">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+
+		<!-- PLAYER INFO -->
+		<container width="520">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+				<!-- CONTAINER HOLDING KIT AND PLAER PIC -->
+				<container width="200">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+					<!-- STATUS INDICATORS -->
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+						<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6" width="32">
+							<layout class="stick_to_sides_attachment" alignment="top,left" inset="0,2"/>
+							<record id="object_property" get_property="Pnfa"/>
+						</widget>
+					</container>
+
+					<!-- PLAYER FACE -->
+					<container>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+							<!-- FACE -->
+							<container width="180">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<widget class="object_portrait_picture" id="face" image_alignment="centre,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+									<record id="object_property" get_property="objt"/>
+								</widget>
+		
+								<!-- BUTTON TO SHOW THE ID -->
+								<widget class="button" appearance="tcs/buttons/text/button" id="tID1">
+				
+									<event id="click_event" event_id="TuiD"/>
+					
+									<!-- THIS EVENT HIDES THE ID BUTTON PANEL -->
+									<attachment class="event_relay_attachment" event_id="TuiD">
+										<record id="action_event">
+											<flags id="event_id" value="hide"/>
+											<flags id="event_target" value="tID1"/>
+										</record>
+									</attachment>
+
+									<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+									<attachment class="event_relay_attachment" event_id="TuiD">
+										<record id="action_event">
+											<flags id="event_id" value="show"/>
+											<flags id="event_target" value="tID2"/>
+										</record>
+									</attachment>
+					
+									<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+									<attachment class="event_relay_attachment" event_id="TuiD">
+										<record id="action_event">
+											<flags id="event_id" value="show"/>
+											<flags id="event_target" value="plID"/>
+										</record>
+									</attachment>
+								</widget>
+
+								<!-- BUTTON TO CLOSE THE ID -->
+								<widget class="button" appearance="tcs/buttons/text/button" id="tID2" hidn="true">
+				
+									<event id="click_event" event_id="TuiD"/>
+					
+									<!-- THIS EVENT HIDES THE CLOSE ID BUTTON -->
+									<attachment class="event_relay_attachment" event_id="TuiD">
+										<record id="action_event">
+											<flags id="event_id" value="hide"/>
+											<flags id="event_target" value="tID2"/>
+										</record>
+									</attachment>
+					
+									<!-- THIS BUTTON SHOWS THE OPEN ID BUTTON -->
+									<attachment class="event_relay_attachment" event_id="TuiD">
+										<record id="action_event">
+											<flags id="event_id" value="show"/>
+											<flags id="event_target" value="tID1"/>
+										</record>
+									</attachment>
+					
+									<!-- THIS BUTTON CLOSES THE ID -->
+									<attachment class="event_relay_attachment" event_id="TuiD">
+										<record id="action_event">
+											<flags id="event_id" value="hide"/>
+											<flags id="event_target" value="plID"/>
+										</record>
+									</attachment>
+								</widget>
+				
+							</container>
+
+						</container>
+		
+						<!-- STAFF ID -->
+						<container id="plID" hidn="true">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+							<animation class="slide_in_bottom_animation"/>
+
+							<container width="160">
+								<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>
+			
+								<widget class="edit_box" width="150" height="16" select_on_focus="true" alignment="centre,centre_y" navigation_focus_target="false" wants_mouse_events="true" auto_size="vertical" appearance="tcs/boxes/uniqueid/box">
+									<record id="object_property" get_property="id" set_property="valu"/>
+								</widget>
+							</container>
+			
+						</container>
+
+					</container>
+				</container>
+
+				<!-- LOGOS AND EXTRA DETAILS -->
+				<container width="300" priority="1">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+					<container height="55">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+						<!-- CLUB -->
+						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="bg lighter" brep="primary">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<!-- IF NO CLUB -->
+							<widget class="value_based_picture" scale_picture="true" file="none">
+								<list id="value_list">
+									<record value="0" file="tcs/icons/unemployed/img"/>
+								</list>
+								<record id="object_property">
+									<list id="get_properties">
+										<record get_property="Pcjo" set_property="valu" dont_set_hint="true"/>
+									</list>
+								</record>
+							</widget>
+
+							<!-- IF CLUB -->
+							<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true">
+								<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt"/>
+							</widget>
+						</container>
+
+						<!-- NATION LOGO -->
+						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="bg lighter" brep="primary">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true">
+								<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt"/>
+							</widget>
+						</container>
+					</container>
+
+					<!-- SMALL SELECTOR -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_gap="2"/>
+
+						<record id="default_properties" auto_size="vertical" alignment="left"/>
+
+						<!-- JOB -->
+						<widget class="label" id="pcjo" style="semi_bold" size="large"/>
+
+						<!-- Age & DoB-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0"/>
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="3"/>
+							<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+							<!-- Age -->
+							<!-- We use an editable panel here just to make it disappear when editing-->
+							<widget class="editable_client_object_property_panel" id="age " auto_size="all">
+								<record id="widget_info" class="formatted_label" alignment="left,centre_y" auto_size="all">
+									<translation id="format" translation_id="242551" type="use" value="[%number#1] years old"/>
+								</record>
+								<record id="widget_properties" width="0" height="0"/>
+								<record id="object_property" get_property="Page"/>
+							</widget>
+
+							<!-- DoB -->
+							<widget class="editable_client_object_property_panel" id="dobl" auto_size="vertical">
+								<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="vertical" format="([%date#1-short])" size="small"/>
+								<record id="widget_properties" height="24"/>
+								<record id="object_property" get_property="Pdob"/>
+							</widget>
+						</container>
+
+						<!-- Nationality -->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0"/>
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="3"/>
+							<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+							<widget class="editable_client_object_property_panel" id="intc" auto_size="all">
+								<record id="widget_info" class="nation_button" icon_enabled="false" auto_size="all" size="small"/>
+								<record id="widget_properties" auto_size="all"/>
+								<record id="object_property" dont_set_hint="true" get_property="PNat">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="objt"/>
+											<integer id="set_property" value="Pers"/>
+										</record>
+									</list>
+								</record>
+							</widget>
+						</container>
+
+						<!-- Gender -->
+						<widget class="gender_label" id="gDLs" auto_size="vertical" size="small">
+							<record id="object_property" dont_set_hint="true" get_property="Pife"/>
+						</widget>
+				
+						<!-- COACHING QUALIFICATIONS -->
+						<widget class="label" id="coaq" auto_size="all"/>
+
+						<!-- STUDYING FOR -->
+						<widget class="label" id="coco" auto_size="all"/>
+						
+						<!-- SEND FOR COACHING COURSE -->
+						<widget class="client_action_icon_button" id="SeCC" HiIA="true" auto_size="all" auto_size_maximum_width="230" click_event="GTss" style="bold" appearance="buttons/link/title/button">
+							<string id="force_display_text" value="true"/>
+							<string id="action_id" value="ccra"/>
+							<record id="object_property">
+								<string id="set_property" value="objt"/>
+								<string id="get_property" value="objt"/>
+							</record>
+						</widget>
+								
+					</container>
+				</container>
+			</container>
+
+		</container>
+
+		<container class="horizontal_adaptive_container" gap="16" id="left" draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+			<record id="default_properties" default_width="-1" minimum_width="340"/>
+
+			<container priority="1">
+			
+				<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+				
+				<!-- DETAILS TABLE -->
+				<container class="tcs_table">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+		
+					<!-- FULL NAME -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<record id="object_property" get_property="Pfln" name="true"/>
+						</widget>
+			
+						<widget class="text">
+							<record id="object_property" get_property="Pfln"/>
+						</widget>
+					</container>
+
+					<!-- LAST CLUB -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left,centre_y" icon_alignment="left,centre_y" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<record id="object_property" get_property="Plcl" name="true"/>
+						</widget>
+			
+						<widget class="club_button">
+							<record id="object_property" get_property="Plcl"/>
+						</widget>
+					</container>
+			
+				</container>
+
+				<container class="tcs_table_trans">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+				 
+					<!-- REPUTATION -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<translation id="text" translation_id="330399" type="use"/>
+						</widget>
+			
+						<widget class="global_reputation_stars_label" mode="0">
+							<record id="object_property" get_property="NrSr"/>
+						</widget>
+					</container>
+
+					<!-- JOB RATING -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<translation id="text" translation_id="229619" type="use"/>
+						</widget>
+			
+						<widget class="person_stars_range_strip">
+							<record id="object_property" get_property="NCst"/>
+						</widget>
+					</container>
+						
+				</container>
+
+				<container class="tcs_table">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+					<!-- PERSONALITY -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<record id="object_property" get_property="PPst" name="true"/>
+						</widget>
+			
+						<widget class="personality_label">
+							<record id="object_property" get_property="PPst"/>
+						</widget>
+					</container>
+
+					<!-- MEDIA HANDLING -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<translation id="text" translation_id="291327" type="use"/>
+						</widget>
+			
+						<widget class="relationship_label" display_format="0">
+							<record id="object_property" get_property="PRHP"/>
+						</widget>
+					</container>
+			
+				</container>
+
+				<container class="tcs_table_trans">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+					<!-- WAGE -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<translation id="text" translation_id="227799" type="use"/>
+						</widget>
+			
+						<widget class="wage_label">
+							<record id="object_property" get_property="Pcww"/>
+						</widget>
+					</container>
+
+					<!-- EXPIRES -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+			
+						<record id="default_properties" alignment="left" auto_size="vertical"/>
+			
+						<widget class="label" style="semi_bold">
+							<translation id="text" translation_id="227784" type="use"/>
+						</widget>
+			
+						<widget class="contract_expiry_button">
+							<record id="object_property" get_property="Pced"/>
+						</widget>
+					</container>
+				</container>
+			
+			</container>
+
+
+			<container priority="3">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<widget class="player_history_achievements_panel" id="pac1" file="non_player/non player history">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,174 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!-- PROPERTIES -->
+	<list id="properties_to_forward">
+		<record get_property="SPdt" set_property="text" target="deli"/>
+		<record get_property="SPpd" set_property="text" target="defp"/>
+		<record get_property="SPaf" set_property="text" target="aimf"/>
+		<record get_property="SPDm" set_property="text" target="defm"/>
+		<record get_property="SPan" set_property="text" target="attn"/>
+		<record get_property="SPdn" set_property="text" target="defn"/>
+		<record get_property="Spdl" set_property="text" target="defl"/>
+	</list>
+
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+	
+			<record id="default_properties" height="130"/>
+	
+			<!-- TOP LAYER -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+				<!-- DELIVERY -->
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" default_width="-1">
+												
+					<widget class="label" font="title" colour="title" multiline="true" alignment="centre_x,centre_y" height="48">
+						<translation id="text" translation_id="468238" type="use" value="Delivery"/>
+					</widget>
+										
+					<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" scale_picture="true" default_height="-1">
+						<list id="value_list">
+							<record min_value="0" max_value="0.99" file="icons/custom/set pieces/creator/corner delivery/inswing" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="1" max_value="1.99" file="icons/custom/set pieces/creator/corner delivery/outswing" red_replacement="fg" blue_replacement="tcs_accent"/>
+						</list>
+						<record id="object_property" get_property="SPdt"/>
+					</widget>
+										
+					<widget class="label" id="deli" alignment="centre_x,centre_y" font="text" colour="text" default_height="22"/>
+				</container>
+				
+<!-- DEFENDING POSTS -->				
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" default_width="-1">
+												
+					<widget class="label" font="title" colour="title" multiline="true" alignment="centre_x,centre_y" height="48">
+						<translation id="text" translation_id="596028" type="use" value="Defending Posts"/>
+					</widget>
+										
+					<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" scale_picture="true" default_height="-1">
+						<list id="value_list">
+							<record min_value="0" max_value="0.99" file="mustermann/set pieces/defending posts/no posts" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="1" max_value="1.99" file="mustermann/set pieces/defending posts/near post" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="2" max_value="2.99" file="mustermann/set pieces/defending posts/both posts" red_replacement="fg" blue_replacement="tcs_accent"/>
+						</list>
+						<record id="object_property" get_property="SPpd"/>
+					</widget>
+										
+					<widget class="label" id="defp" alignment="centre_x,centre_y" font="text" colour="text" default_height="22"/>
+				</container>
+						
+<!-- AIM FOR -->						
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" default_width="-1">
+												
+					<widget class="label" font="title" colour="title" multiline="true" alignment="centre_x,centre_y" height="48">
+						<translation id="text" translation_id="596026" type="use" value="Aim For"/>
+					</widget>
+										
+					<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" scale_picture="true" default_height="-1">
+						<list id="value_list">
+							<record min_value="0" max_value="0.99" file="icons/custom/set pieces/creator/ball delivery zone/near post" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="1" max_value="1.99" file="icons/custom/set pieces/creator/ball delivery zone/central" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="2" max_value="2.99" file="icons/custom/set pieces/creator/ball delivery zone/far post" red_replacement="fg" blue_replacement="tcs_accent"/>
+						</list>
+						<record id="object_property" get_property="SPaf"/>
+					</widget>
+										
+					<widget class="label" id="aimf" alignment="centre_x,centre_y" font="text" colour="text" default_height="22"/>
+				</container>
+
+			</container>
+	
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" default_width="-1">
+												
+					<widget class="label" font="title" colour="title" multiline="true" alignment="centre_x,centre_y" height="48">
+						<translation id="text" translation_id="596030" type="use" value="Defensive Marking"/>
+					</widget>
+										
+					<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" scale_picture="true" default_height="-1">
+						<list id="value_list">
+							<record min_value="0" max_value="0.99" file="mustermann/set pieces/defensive marking/zonal" red_replacement="fg" blue_replacement="tcs_accent" green_replacement="fg tertiary"/>
+							<record min_value="1" max_value="1.99" file="mustermann/set pieces/defensive marking/hybrid" red_replacement="fg" blue_replacement="tcs_accent" green_replacement="fg tertiary"/>
+							<record min_value="2" max_value="2.99" file="mustermann/set pieces/defensive marking/man marking" red_replacement="fg" blue_replacement="tcs_accent" green_replacement="fg tertiary"/>
+						</list>
+						<record id="object_property" get_property="SPDm"/>
+					</widget>
+										
+					<widget class="label" id="defm" alignment="centre_x,centre_y" font="text" colour="text" default_height="22"/>
+										
+				</container>
+									
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" default_width="-1">
+												
+					<widget class="label" font="title" colour="title" multiline="true" alignment="centre_x,centre_y" height="48">
+						<translation id="text" translation_id="596027" type="use" value="Attacking Numbers"/>
+					</widget>
+										
+					<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" scale_picture="true" default_height="-1">
+						<list id="value_list">
+							<record min_value="0" max_value="0.99" file="icons/custom/set pieces/creator/defending transition/defend transition" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="1" max_value="1.99" file="icons/custom/set pieces/creator/defending transition/balanced" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="2" max_value="2.99" file="icons/custom/set pieces/creator/defending transition/stay high" red_replacement="fg" blue_replacement="tcs_accent"/>
+						</list>
+						<record id="object_property" get_property="SPan"/>
+					</widget>
+										
+					<widget class="label" id="attn" alignment="centre_x,centre_y" font="text" colour="text" default_height="22"/>
+										
+				</container>
+									
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" default_width="-1">
+												
+					<widget class="label" font="title" colour="title" multiline="true" alignment="centre_x,centre_y" height="48">
+						<translation id="text" translation_id="596031" type="use" value="Defensive Numbers"/>
+					</widget>
+										
+					<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" scale_picture="true" default_height="-1">
+						<list id="value_list">
+							<record min_value="0" max_value="0.99" file="mustermann/set pieces/defensive numbers/defend the box" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="1" max_value="1.99" file="mustermann/set pieces/defensive numbers/balanced" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="2" max_value="2.99" file="mustermann/set pieces/defensive numbers/counter attack" red_replacement="fg" blue_replacement="tcs_accent"/>
+						</list>
+						<record id="object_property" get_property="SPdn"/>
+					</widget>
+										
+					<widget class="label" id="defn" alignment="centre_x,centre_y" font="text" colour="text" default_height="22"/>
+										
+				</container>
+
+			</container>
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally" default_width="-1">
+												
+					<widget class="label" font="title" colour="title" multiline="true" alignment="centre_x,centre_y" height="48">
+						<translation id="text" translation_id="596019" type="use" value="Defensive Line"/>
+					</widget>
+										
+					<widget class="value_based_picture" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" scale_picture="true" default_height="-1">
+						<list id="value_list">
+							<record min_value="0" max_value="0.99" file="mustermann/set pieces/defensive line/high line" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="1" max_value="1.99" file="mustermann/set pieces/defensive line/balanced" red_replacement="fg" blue_replacement="tcs_accent"/>
+							<record min_value="2" max_value="2.99" file="mustermann/set pieces/defensive line/defend the box" red_replacement="fg" blue_replacement="tcs_accent"/>
+						</list>
+						<record id="object_property" get_property="Spdl"/>
+					</widget>
+										
+					<widget class="label" id="defl" alignment="centre_x,centre_y" font="text" colour="text" default_height="22"/>
+										
+				</container>
+								
+				<container/>
+				<container/>
+								
+			</container>
+	
+		</container>
+	</container>
+
+
+</panel>
