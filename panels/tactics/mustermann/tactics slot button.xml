@@ -1,0 +1,35 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="0" vertical_inset="0"/>
+
+  <boolean id="show_only_if_selected" value="true"/>
+	<boolean id="add_create_tactic" value="true"/>
+
+  <string id="ico1" value="icons/16px/1"/> <!--icon for slot 1-->
+  <string id="ico2" value="icons/16px/2"/> <!--icon for slot 2-->
+  <string id="ico3" value="icons/16px/3"/> <!--icon for slot 3-->
+
+  <string id="app1" value="buttons/primary/split/left/button"/> <!--appearance for slot 1-->
+  <string id="app2" value="buttons/primary/split/middle/button"/> <!--appearance for slot 2-->
+  <string id="ap3s" value="buttons/primary/split/middle/button"/> <!--appearance for slot 3 when selected-->
+  <string id="ap3u" value="buttons/primary/split/right/button"/>  <!--appearance for slot 3 when unselected-->
+
+  <string id="pbma" value="buttons/primary/split/middle/button"/> <!--appearance for popup when not rightmost button-->
+  <string id="pbea" value="buttons/primary/split/right/button"/>  <!--appearance for popup when rightmost button-->
+
+
+  <widget class="icon_button" icon_alignment="centre" id="nbbt" width="35" red_replacement="mustermann3" green_replacement="shadow" blue_replacement="fg" icon_colour="fg">
+    
+  </widget>
+
+  <container id="SloA">
+    <attachment_group class="horizontal_arrange_autosize"/>
+
+    <widget class="popup_button" id="opti" auto_size="horizontal" fixed="true" red_replacement="mustermann1" green_replacement="shadow" blue_replacement="fg" colour="fg" secondary_icon_colour="fg">
+
+    </widget>
+    
+  </container>
+
+ 
+
+</panel>

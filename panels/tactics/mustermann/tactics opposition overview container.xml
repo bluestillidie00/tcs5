@@ -1,0 +1,14 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="data_hub_splashscreen" >
+		<record id="object_property" get_property="Ttea" dont_set_hint="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		
+		<container id="dflt">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="team_opposition_report_predicted_tactical_style_panel" file="tactics/mustermann/tactics opposition overview content" id="topt"/>
+		</container>
+	</widget>
+</panel>

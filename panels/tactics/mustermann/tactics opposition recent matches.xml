@@ -1,0 +1,114 @@
+﻿<panel save_session_state="true">
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="vertical" value="true" />
+
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+	<!--match checkbox topbar-->
+	<container height="64" navigation_container="true">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" horizontal_inset="0" />
+
+		<widget class="label" id="maCl" auto_size="vertical" />
+
+		<container navigation_container="true">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="4" vertical_gap="4" horizontal_inset="0" />
+			<container >
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+				<!--item 1-->
+				<container id="cnt1">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+					<widget class="check_box" id="chk1" auto_size="horizontal" >
+						<record id="clke">
+							<string id="event_id" value="eUcs" />
+							<integer id="index" value="0" />
+						</record>
+					</widget>
+					<container class="horizontal_arrange_container" alignment="right,extend" id="mch1" />
+				</container>
+				<!--item 2-->
+				<container id="cnt2">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+					<widget class="check_box" id="chk2" auto_size="horizontal" >
+						<record id="clke">
+							<string id="event_id" value="eUcs" />
+							<integer id="index" value="1" />
+						</record>
+					</widget>
+					<container class="horizontal_arrange_container" alignment="right,extend" id="mch2" />
+				</container>
+				<!--item 3-->
+				<container id="cnt3">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+					<widget class="check_box" id="chk3" auto_size="horizontal" >
+						<record id="clke">
+							<string id="event_id" value="eUcs" />
+							<integer id="index" value="2" />
+						</record>
+					</widget>
+					<container class="horizontal_arrange_container" alignment="right,extend" id="mch3" />
+				</container>
+				<!--item 4-->
+				<container id="cnt4">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+					<widget class="check_box" id="chk4" auto_size="horizontal" >
+						<record id="clke">
+							<string id="event_id" value="eUcs" />
+							<integer id="index" value="3" />
+						</record>
+					</widget>
+					<container class="horizontal_arrange_container" alignment="right,extend" id="mch4" />
+				</container>
+				<!--item 5-->
+				<container id="cnt5">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+					<widget class="check_box" id="chk5" auto_size="horizontal" >
+						<record id="clke">
+							<string id="event_id" value="eUcs" />
+							<integer id="index" value="4" />
+						</record>
+					</widget>
+					<container class="horizontal_arrange_container" alignment="right,extend" id="mch5" />
+				</container>
+			</container>
+			<widget class="horizontal_divider" height="4" />
+		</container>
+	</container>
+	
+	<!--pitch container-->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-3,-4,-3" horizontal_gap="6"/>
+		<container class="inner_subtle_box" appearance="boxes/titled/compact/paper" alignment="left,top" navigation_container="true" colour="positive">
+			<translation id="title" translation_id="447605" type="use" value="Positives[COMMENT: Match Analysis - Match Positives title]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
+			<container class="scrolling_box">
+				<container class="vertical_arrange_container" id="posC" auto_size="vertical" vertical_gap="4" gap="8" />
+			</container>
+		</container>
+		<container class="inner_subtle_box" entity_layout_id="at24" id="at24" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<container class="chalkboard_pitch" entity_layout_id="at23" id="CSit" wants_mouse_events="true">
+				<string id="select_event" value="slic" />
+				<string id="hide_linked_events" value="true" />
+				<string id="pitch_draw_grass" value="true" />
+				<string id="pitch_base_appearance" value="" />
+				<string id="pitch_pattern" value="ui circles" />
+				<string id="animate_size_and_position" value="false" />
+				<string id="pitch_draw_arrows" value="true" />
+				<string id="pitch_keep_selected_icons" value="false" />
+				<string id="pitch_player_icon_text_font" value="match pitch players" />
+				<string id="pitch_draw_dugout" value="false" />
+				<string id="pitch_draw_markings" value="true" />
+				<string id="pitch_line_colour" value="faded text" />
+				<integer id="pitch_touchline_width_percentage" value="80" />
+				<string id="vertical" value="true" />
+				<string id="force_left_to_right_events" value="true" />
+			</container>
+		</container>
+		<container class="inner_subtle_box" appearance="boxes/titled/compact/paper" alignment="right,top" colour="negative" navigation_container="true">
+			<translation id="title" translation_id="447606" type="use" value="Negatives[COMMENT: Match Analysis - Match negatives title]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
+			<container class="scrolling_box">
+				<container class="vertical_arrange_container" id="negC" auto_size="vertical" vertical_gap="4" gap="8" />
+			</container>
+		</container>
+	</container>
+</panel>

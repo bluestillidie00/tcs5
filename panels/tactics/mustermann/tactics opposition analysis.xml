@@ -1,0 +1,23 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="vertical_adaptive_container" gap="8" mode="distribute_equally">
+
+		<container id="rctM" default_height="-1" minimum_height="500" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<container class="team_recent_matches_analysis_panel" file="tactics/mustermann/tactics opposition recent matches" id="trcM" />
+		</container>
+
+		<container default_height="275" priority="2">
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="team_goal_analysis_summary_panel" id="tgas"/>
+
+			<widget class="team_tactic_analysis_summary_panel" id="ttas" file="team/team tactic analysis summary panel with heading"/>
+
+		</container>
+
+	</container>
+
+</panel>

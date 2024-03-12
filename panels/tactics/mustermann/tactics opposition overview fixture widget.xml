@@ -1,0 +1,12 @@
+﻿<panel width="190">
+	<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" vertical_offset="0" horizontal_gap="8"/>
+
+	<widget class="object_portrait_picture" id="tpic" width="45" height="45" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" navigation_focus_target="true" />
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0"/>
+
+		<widget class="text" id="vers" auto_size="vertical" size="normal" style="semi_bold" />
+		<widget class="comp_button" id="comp" icon_enabled="false" show_button_appearance="false" auto_size="vertical" colour="faded text"/>
+		<widget class="text" id="time" auto_size="vertical" colour="faded text"/>
+	</container>
+</panel>

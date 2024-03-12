@@ -1,0 +1,118 @@
+<panel>
+	<flags id="appearance" value="buttons/custom/tactics/style bar/button" />
+	<flags id="selected_appearance" value="buttons/custom/tactics/style bar/button_selected" />
+	<flags id="mouse_over_appearance" value="buttons/custom/tactics/style bar/button_over" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="0"/>
+
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,140" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />																								
+				
+			<container id="StMe">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="8"/>
+
+				<container id="MENT">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_offset="0"/>
+
+					<widget class="mentality_table_popup_button" id="ment" height="30" font="title" size="small" alignment="centre" vertical_offset="0" focus_appearance="buttons/subtle/flex/button_controller" secondary_icon_enabled="false">
+						<flags id="appearance" value="buttons/custom/tactics/style bar/button" />
+						<flags id="alignment" value="centre" />
+						<flags id="icon_alignment" value="near_right" />
+						<flags id="colour" value="text" />
+						<flags id="disabled_colour" value="faded white" />
+					</widget>
+
+					<widget class="popup_button" id="menP" hidden="true" select_event="SeMe" height="30" alignment="centre" vertical_offset="0" focus_appearance="buttons/subtle/flex/button_controller">
+						<flags id="appearance" value="buttons/custom/tactics/style bar/button" />
+						<flags id="alignment" value="centre" />
+						<flags id="icon_alignment" value="near_right" />
+						<flags id="colour" value="text" />
+						<flags id="disabled_colour" value="faded white" />
+					</widget>
+
+				</container>
+														
+			</container>
+
+			<!--Change Done-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+				<widget class="icon_button" appearance="buttons/custom/tactics/style bar/button" height="30" id="inPm" font="title" size="small" colour="text" alignment="centre" icon_alignment="near_right" icon="icons/16px/in possession">
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+					<translation id="text" translation_id="466532" type="use" value="In Possession[COMMENT: team instructions, what the team do when they have the ball]" />
+					<record id="click_event">
+						<flags id="event_id" value="teIn" />
+						<flags id="index" value="poSE" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</widget>
+				
+				<widget class="text" id="tinP" auto_size="vertical" colour="faded white" alignment="centre" size="small"/>
+			</container>
+
+			<!--Change Done-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+				<widget class="icon_button" appearance="buttons/custom/tactics/style bar/button" height="30" id="trAm" font="title" size="small" colour="text" alignment="centre" icon_alignment="near_right" icon="icons/16px/in transition">
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+					<translation id="text" translation_id="466538" type="use" value="Transition[COMMENT: team instructions, what the team do when transitioning from having the ball to losing it, or vice-versa, this section contains instructions for both situations]" />
+					<record id="click_event">
+						<flags id="event_id" value="teIn" />
+						<flags id="index" value="trSE" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</widget>
+				
+				<widget class="text" id="tinT" auto_size="vertical" colour="faded white" alignment="centre" size="small"/>
+			</container>
+
+			<!--Change Done-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+				<widget class="icon_button" appearance="buttons/custom/tactics/style bar/button" height="30" id="ouPm" font="title" size="small" colour="text" alignment="centre" icon_alignment="near_right" icon="icons/16px/out of possession">
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+					<translation id="text" value="OOP" type="use"  />
+					<record id="click_event">
+						<flags id="event_id" value="teIn" />
+						<flags id="index" value="opSE" />
+						<flags id="event_target" value="prnt" />
+
+					</record>
+				</widget>
+				
+				<widget class="text" id="tinO" auto_size="vertical" colour="faded white" alignment="centre" size="small"/>
+			</container>
+			
+			
+			<container id="styC">
+				<layout class="arrange_vertical_attachment" layout="10,15,-1" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="title" colour="faded text" alignment="left,centre_y" size="small">
+					<translation id="text" translation_id="466531" type="use" value="Tactical Style[COMMENT: FR 23334; tactics panel; title for a button to allow the user to choose a tactical style]" />
+				</widget>
+
+				<widget class="tactics_tactical_style_popup_button" id="TcSt" widget_type="tactics_tactical_style_popup_panel" popup_alignment="right, top" appearance="" font="title" size="normal" alignment="left,centre_y" colour="text" disabled_colour="faded white">
+					<translation id="text" translation_id="466531" type="use" value="Tactical Style[COMMENT: FR 23334; tactics panel; title for a button to allow the user to choose a tactical style]" />
+				</widget>
+				<container/>
+			</container>
+
+		</container>
+		
+	</container>
+
+</panel>

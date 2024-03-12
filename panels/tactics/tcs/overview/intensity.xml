@@ -1,0 +1,15 @@
+﻿<panel>
+ <attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+
+	<widget class="icon_button" auto_size="horizontal" id="itxt" icon="" appearance="none" font="label" colour="teal 900" navigation_focus_target="false" alignment="right">
+		<translation id="text" translation_id="441106" type="use" value="Intensity[COMMENT: representing the physical intensity of user's tactics]"/>
+	</widget>
+
+	<!-- INTESITY -->
+	<container class="inner_box" height="14" id="inCO" appearance="boxes/custom/tactic intensity/paper" width="100">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="horizontal_percentage_bar" id="inBR" label_width="0" appearance="charts/bar/custom/tactics">
+		</widget>
+	</container>
+</panel>

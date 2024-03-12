@@ -1,0 +1,13 @@
+﻿<panel height="400" width="600">
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0" />
+	<container id="titB">
+	
+		<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0" />
+		<container class="scrolling_box">
+			<container class="vertical_arrange_container" auto_size="vertical" draw_horizontal_dividers="false" gap="8" id="keyF" />
+		</container>
+		<widget class="text" id="notA" height="300" alignment="centre" colour="faded text">
+			<translation id="text" translation_id="330275" type="use" value="Not available[COMMENT: happiness panel; text displayed when no happiness information is available]" />
+		</widget>
+	</container>
+</panel>

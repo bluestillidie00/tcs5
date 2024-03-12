@@ -1,0 +1,37 @@
+﻿<panel>
+	<boolean id="show_inactive_buttons" value="false" />
+	<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="0" vertical_inset="0"/>
+
+		<!--starting tactic clot button-->
+		<widget class="tactic_slot_button" file="tactics/mustermann/tactics slot button" id="tsb0" tactics_slot="0" auto_size="horizontal" >
+
+		</widget>
+
+		<!--match prep slot 1-->
+		<widget class="tactic_slot_button" file="tactics/mustermann/tactics slot button" id="tsb1" tactics_slot="1" auto_size="horizontal">
+
+		</widget>
+
+		<!--match prep slot 2-->
+		<widget class="tactic_slot_button" file="tactics/mustermann/tactics slot button" id="tsb2" tactics_slot="2" auto_size="horizontal">
+
+		</widget>
+
+		<widget class="popup_button" secondary_icon_enabled="false" id="AddT" width="35" icon="icons/16px/plus" icon_colour="fg" select_event="tSal" icon_alignment="centre"  appearance="buttons/primary/split/right/button" red_replacement="mustermann3" green_replacement="shadow" blue_replacement="fg">
+		</widget>
+
+		<widget class="icon_button" secondary_icon_enabled="false" id="AdTS" width="35" icon="icons/16px/plus" icon_colour="fg" icon_alignment="centre"  appearance="buttons/primary/split/right/button" red_replacement="mustermann3" green_replacement="shadow" blue_replacement="fg">
+			<event id="click_event">
+				<flags id="event_id" value="tSal" />
+				<flags id="id" value="10" /><!--TACTICS_CREATOR_ID-->
+			</event>
+		</widget>
+	</container>
+	
+	<container/>
+
+</panel>

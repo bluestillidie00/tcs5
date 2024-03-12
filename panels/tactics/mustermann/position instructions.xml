@@ -1,0 +1,187 @@
+<panel>
+	<!--colours for the status panel at the top right-->
+	<symbol id="okst" value="player starting" />
+	<symbol id="wast" value="player not starting" />
+	<symbol id="inst" value="instructions not used" />
+	<boolean id="sspa" value="true" />
+
+	<colour id="selected_colour" name="selected instruction"/>
+	<colour id="preselected_colour" name="preselected instruction"/>
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true" />
+
+	<!--player info-->
+	<container class="inner_box_no_margin" id="plTI" colour="text">
+		<translation id="title" translation_id="247610" type="use" value="Player Instructions" />
+
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container embed_in_frame="true">
+	      <attachment_group class="title_embedded_panel_right" horizontal_offset="0"/>
+	      <!-- buttons area -->
+	      <widget class="icon_button" icon="icons/16px/cross" height="28" width="28" icon_alignment="centre" red_replacement="mustermann" icon_colour="text" appearance="buttons/standard/flex/button" id="clos" embed_in_frame="true">
+	        <record id="click_event">
+	          <flags id="event_id" value="Clos" />
+	        </record>
+	      </widget>
+   		</container>
+
+		<container height="35">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="player_picker_button" id="PLPi" hidden="true" colour="text"/>
+				<widget class="player_picker_button" id="MLPi" widget_type="match_team_squad_player_selection_panel" hidden="true" colour="text"/>
+			</container>
+
+
+			<!--squad list for this player - shows one line of info-->
+			<widget class="client_object_viewer_xml_panel" id="plif" file="none" width="90">
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+				<container width="42">
+					<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" offset="0" />
+
+					<widget class="client_object_property_panel" property="Pnfo">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<widget class="client_object_property_panel" property="Pmor" ShTx="false" icon_alignment="centre" width="22">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+
+				<widget class="client_object_property_panel" property="PcOI" width="30">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+
+
+
+
+			</widget>
+
+		</container>
+
+	</container>
+
+	<container id="plro">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container id="pIco" height="26">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="position_instruction_toggle" id="pITG" dINt="true" file="widgets/position instruction toggle large pitch" />
+
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<!--specific player instructions-->
+				<container id="plIC">
+					<layout class="arrange_vertical_attachment" layout="35,-1,20" offset="0" gap="6"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--role/duty popups-->
+					<widget class="role_duty_popup_button" id="prdp"/>
+
+
+					<widget class="player_instructions_selector_panel" id="plIN" file="item selection panel pitch"/>
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+
+						<widget class="icon_button" id="sele" auto_size="all" icon="icons/16px/circle" show_button_appearance="false" always_use_appearance_font="true" colour="text">
+							<translation id="text" translation_id="344778" type="use" value="Selected[COMMENT: label text for a key showing what colour a selected item is]" />
+						</widget>
+						<widget class="icon_button" id="porl" auto_size="vertical" icon="icons/16px/circle_disabled" show_button_appearance="false" always_use_appearance_font="true" colour="text">
+							<translation id="text" translation_id="395288" type="use" value="Part Of Role[COMMENT: when a tactical option is selected it will be highlighted in a colour if it is a part of the currently selected role; this text is highlighted in that colour as a Key marker to indicate this]" />
+						</widget>
+
+					</container>
+				</container>
+
+				<!--can't edit PIs info-->
+				<widget class="text" id="plIX" colour="faded white">
+					<translation id="text" translation_id="374986" type="use" value="When players have different roles or duties, their instructions can't be changed.[COMMENT: warning text to say to the human that they cannot edit player instructions for multiple players when their roles and/or duties are different]" />
+				</widget>
+			</container>
+		</container>
+
+		<container class="inner_box_no_margin" id="tbib">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="5" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--description/attributes-->
+				<container class="tabbed_container_pitch" default_item="DsTb" save_default_state="true" appearance="" height="200" id="tabb">
+
+
+					<container id="DsTb">
+						<translation id="title" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+
+						<!--description-->
+						<widget class="text" id="rlds" colour="text">
+						</widget>
+
+					</container>
+
+					<container class="scrolling_box" id="pPtT">
+						<translation id="title" translation_id="450771" type="use" value="Partnerships[COMMENT: Tactical analysis email; showing strong and weak partnerships between players on the pitch]" />
+						<container id="prTn">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="4" />
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="6" gap="4" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true" />
+
+							<record id="default_properties" colour="white"/>
+
+						</container>
+
+					</container>
+
+				</container>
+
+
+		</container>
+
+	</container>
+
+</panel>

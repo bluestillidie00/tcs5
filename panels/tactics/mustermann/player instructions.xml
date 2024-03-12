@@ -1,0 +1,12 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="AUsp" value="false"/>
+  
+	<container class="standard_popup_box" >
+		<layout class="stick_to_sides_attachment" apply_to_children="true" />
+ 
+		<!--main instructions area-->
+		<widget class="position_instructions_panel" file="tactics/tcs/overview/player instructions" id="poin"/>
+			
+	</container>	
+</panel>

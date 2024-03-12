@@ -1,0 +1,79 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<attachment class="event_relay_attachment" event_id="tPli">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="tPli"/>
+						</record>
+					</attachment>
+	
+	<container class="standard_popup_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+					
+		<container class="tcs_tabs_primary" default_item="ana1" save_session_state="true">
+						
+			<container class="main_box" id="ana1">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="247414" type="use" value="Overview"/>
+				
+				<widget class="team_opposition_overview_report_panel" id="Tpor" file="tactics/mustermann/tactics opposition overview container" navigation_container="true" default_focus="true" default_height="-1">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+			
+			<container class="main_box" id="ana2">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="316845" type="use" value="Scout Report"/>
+				
+				<widget class="team_opposition_scout_report_panel" id="tpsr" file="tactics/mustermann/tactics opposition scout report" navigation_container="true" default_focus="true" default_height="-1">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+			</container>
+			
+			<container class="main_box" id="ana3">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="447607" type="use" value="Analyst Report"/>
+				
+				<widget class="team_opposition_report_analyst_report_panel" id="tPha" file="tactics/mustermann/tactics opposition analysis" navigation_container="true" default_focus="true" default_height="-1">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+			</container>
+			
+			<container class="main_box" id="ana4">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="535397" type="use" value="Last 5 Matches"/>
+				
+				<widget class="team_recent_matches_analysis_panel" file="tactics/mustermann/tactics recent matches" id="TeRM" navigation_container="true" default_focus="true" default_height="-1">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+			</container>
+				
+		</container>
+		
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" horizontal_offset="4" vertical_inset="4"/>
+			<!-- buttons area -->
+			<widget class="icon_button" icon="icons/16px/cross" height="28" width="28" icon_alignment="centre" icon_colour="text" appearance="buttons/standard/flex/button" id="clos" embed_in_frame="true">
+				<event id="click_event" event_id="TANL"/>
+				<attachment class="event_relay_attachment" event_id="TANL">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="AbtC"/>
+					</record>
+				</attachment>
+				<attachment class="event_relay_attachment" event_id="TANL">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="tAnL"/>
+					</record>
+				</attachment>
+			</widget>
+		</container>
+		
+	</container>
+		
+</panel>

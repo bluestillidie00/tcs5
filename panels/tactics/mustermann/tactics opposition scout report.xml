@@ -1,0 +1,13 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">				
+		
+		<!--TEAM PROS & CONS-->
+		<container class="team_pro_con_summary_panel" id="tpcs" default_height="-1">
+			<integer id="num_pro_cons_to_show" value="12"/>
+		</container>
+						
+	</container>
+	
+</panel>

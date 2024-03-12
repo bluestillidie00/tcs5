@@ -1,18 +1,13 @@
 <panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
 
-	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-		
-	<container>
-
-		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
-
-
-		<widget class="text" auto_size="vertical" id="FAMI" font="label" colour="fg" navigation_focus_target="false" >
+	<widget class="text" auto_size="horizontal" id="FAMI" font="label" colour="teal 900" navigation_focus_target="false" alignment="right">
 			<translation id="text" translation_id="447620" type="use" value="Familiarity[COMMENT: match preparation training tactics; label to indicate how well the squad as a whole is versed in a tactic which they're working upon]" />
 			<translation id="hint" translation_id="447621" type="use" value="Tactic Familiarity[COMMENT: match preparation training tactics; label to indicate how well the squad as a whole is versed in a tactic which they're working upon]" />
 		</widget>
 
-		<container class="inner_box" height="18" id="fmiL"  appearance="boxes/custom/tactic fam/paper">
+	<!-- INTESITY -->
+<container class="inner_box" height="18" id="fmiL"  appearance="boxes/custom/tactic fam/paper" width="100">
 
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
@@ -27,8 +22,4 @@
 			</container>
 
 		</container>
-
-
-	</container>
-
 </panel>

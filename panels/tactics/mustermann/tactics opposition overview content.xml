@@ -1,0 +1,31 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<container red_replacement="pitch_box_background" draw_vertical_dividers="false">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1"/>
+
+		<container default_focus="true" draw_horizontal_dividers="false" navigation_container="true">
+			<attachment_group class="vertical_arrange" vertical_gap="0" vertical_alignment="top,extend" />
+
+			<widget id="fixt" class="team_upcoming_fixture_widget" file="tactics/mustermann/tactics opposition overview fixture widget" auto_size="vertical" />			
+			<container id="expT">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="pitch_with_tactics" id="otpc" pitch_vertical_padding="0" pitch_alignment="top" vertical="true" pitch_is_read_only="true" player_icon_file="tactics/tactics icon opposition predicted team" icon_flags="show_name,show_number,show_role_duty_labels,dont_colour_names,dont_fade_icons,show_preview_info_popup" pitch_draw_grass="false" pitch_line_colour="text" />
+			</container>
+		</container>
+		
+		<container draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange" vertical_layout="-1" gap="8" />
+			<container id="preT">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" />
+				<widget class="text" auto_size="vertical" font="title" id="styT" />
+				<widget class="text" auto_size="vertical" id="tacD" />
+				<container class="data_analyst_key_findings_widget" file="tactics/mustermann/tactics key findings widget" show_team_name="false" id="oppK" />
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>
