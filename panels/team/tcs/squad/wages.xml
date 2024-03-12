@@ -1,0 +1,18 @@
+﻿<panel auto_size_minimum_height="60">
+	<layout class="arrange_vertical_attachment" alignment="middle" offset="2" gap="-2"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2"/>
+  
+	<flags id="child_for_sort" value="Pcww"/>
+
+	<record id="default_properties" alignment="left" auto_size="vertical"/>
+
+	<widget class="wage_label" id="Pcww" colour="text">
+		<integer id="display_format" value="0"/>
+		<record id="object_property" get_property="Pcww" set_property="valu"/>
+	</widget>
+
+	<widget class="contract_expiry_button" colour="faded text" size="small">
+		<record id="object_property" get_property="Pced" set_property="valu"/>
+	</widget>
+
+</panel>
