@@ -1,0 +1,2808 @@
+<record>
+	<list id="column_table_properties">
+
+		<record>
+			<integer id="id" value="dref" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="316793" type="use" value="Name[COMMENT: default properties.xml; list header for any game object name - a game object is anything the user can interact with]" />
+			<flags id="customisation_context" value="none" />
+			<translation id="category" translation_id="248359" type="use" value="General" />
+			<integer id="minimum_width" value="129" />
+			<integer id="auto_hide_priority" value="10" />
+			<!-- a very high chance of not being hidden for this property (lower value = higher priority) -->
+			<record id="widget_info">
+				<symbol id="class" value="club_button" />
+				<integer id="icon_enabled" value="true" />
+			</record>
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="316793" type="use" value="Name[COMMENT: default properties.xml; list header for any game object name - a game object is anything the user can interact with]" />
+				<translation id="hint" translation_id="229689" type="use" value="Name" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Cref" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="292794" type="use" value="Name[comment - Club name]" />
+			<record id="widget_info">
+				<symbol id="class" value="club_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="292794" type="use" value="Name[comment - Club name]" />
+				<translation id="hint" translation_id="292795" type="use" value="Club Name" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="CRfN" />
+			<integer id="width" value="-1" />
+			<flags id="aliased_property_id" value="Cref" />
+			<translation id="name" translation_id="227737" type="use" value="Club" />
+			<record id="widget_info">
+				<symbol id="class" value="club_button" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="227737" type="use" value="Club" />
+				<translation id="hint" translation_id="292795" type="use" value="Club Name" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Crep" />
+			<integer id="width" value="30" />
+			<translation id="name" translation_id="227963" type="use" value="Reputation" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="10000" />
+				<translation id="hint" translation_id="454729" type="use" value="A rating reflecting the team's reputation on a global scale, where the lowest end represents the worst club team anywhere ever, and the higher end represents the best.[COMMENT: edit field hint for 227963 Reputation]" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="227962" type="use" value="Rep[COMMENT:Abbreviation for 'reputation']" />
+				<translation id="hint" translation_id="227963" type="use" value="Reputation" />
+			</record>
+		</record>
+
+		<!-- B Team Reputation -->
+		<record>
+			<integer id="id" value="C2rp" />
+			<integer id="width" value="30" />
+			<translation id="name" translation_id="420758" type="use" value="Second Team Reputation[COMMENT: In-game editor property to change II / Jong / B team rep]" />
+
+			<list id="dependent_properties">
+				<!-- To determine if this a B team -->
+				<integer value="C2hs" />
+			</list>
+
+			<list id="use_field_if">
+				<record id="C2hs" equals="true" />
+			</list>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="10000" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="CreX" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="349068" type="use" value="Relation[COMMENT: title for a column showing clubs' relation to the context club: parent club, feeder club or no relation]" />
+			<record id="widget_info">
+				<symbol id="class" value="formatted_label" />
+				<list id="format">
+					<record value="0">
+						<translation id="format" type="use" translation_id="377742" value="Affiliate Club[COMMENT: interaction manager; type of interaction]" />
+					</record>
+					<record value="1">
+						<translation id="format" type="use" translation_id="377286" value="Senior Affiliate[COMMENT: interaction manager; type of interaction, this is formerly Parent Club, legal request to change to something less divisive than Parent/Feeder]" />
+					</record>
+					<record default_value="true">
+						<translation id="format" translation_id="233089" type="use" value="-" />
+					</record>
+				</list>
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="349068" type="use" value="Relation[COMMENT: title for a column showing clubs' relation to the context club: parent club, feeder club or no relation]" />
+				<translation id="hint" translation_id="349068" type="use" value="Relation[COMMENT: title for a column showing clubs' relation to the context club: parent club, feeder club or no relation]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Cmle" />
+			<integer id="width" value="30" />
+			<translation id="name" translation_id="227839" type="use" value="Morale" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="20" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="227839" type="use" value="Morale" />
+				<translation id="hint" translation_id="227839" type="use" value="Morale" />
+			</record>
+		</record>
+
+		<!-- manager support-->
+		<record>
+			<integer id="id" value="ccms" />
+			<integer id="width" value="30" />
+			<translation id="name" translation_id="445615" type="use" value="Manager Support[COMMENT: FR 21894; backroom advice topic name]" />
+
+			<record id="widget_info">
+				<symbol id="class" value="manager_support_level_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="445615" type="use" value="Manager Support[COMMENT: FR 21894; backroom advice topic name]" />
+				<translation id="hint" translation_id="445615" type="use" value="Manager Support[COMMENT: FR 21894; backroom advice topic name]" />
+			</record>
+		</record>
+
+		<!--Club Atmosphere-->
+		<record>
+			<integer id="id" value="ccca" />
+			<integer id="width" value="30" />
+			<translation id="name" translation_id="509553" type="use" value="Club Atmosphere[COMMENT: AREA: Dynamics; SUB-AREA: Team DRA Panel; FR-BN: 19635; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Used on the main Dynamics panel to display the club's overall atmosphere]" />
+
+			<record id="widget_info">
+				<symbol id="class" value="club_atmosphere_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="509553" type="use" value="Club Atmosphere[COMMENT: AREA: Dynamics; SUB-AREA: Team DRA Panel; FR-BN: 19635; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Used on the main Dynamics panel to display the club's overall atmosphere]" />
+				<translation id="hint" translation_id="509553" type="use" value="Club Atmosphere[COMMENT: AREA: Dynamics; SUB-AREA: Team DRA Panel; FR-BN: 19635; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Used on the main Dynamics panel to display the club's overall atmosphere]" />
+			</record>
+		</record>
+
+		<!-- Club full name without badge -->
+		<record>
+			<integer id="id" value="Cnam" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="247452" type="use" value="Full Name" />
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="edit_box" />
+				<flags id="edit_event" value="CDBd" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="247452" type="use" value="Full Name" />
+				<translation id="hint" translation_id="247452" type="use" value="Full Name" />
+			</record>
+		</record>
+
+		<!-- Club short name -->
+		<record>
+			<integer id="id" value="Csnm" />
+			<integer id="width" value="-1" />
+
+			<translation id="name" translation_id="292684" type="use" value="Short Name" />
+			<record id="widget_info">
+				<symbol id="class" value="label" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="edit_box" />
+				<flags id="edit_event" value="CDBd" />
+			</record>
+		</record>
+
+		<!-- Club six letter name -->
+		<record>
+			<integer id="id" value="Csxn" />
+			<integer id="width" value="-1" />
+
+			<translation id="name" translation_id="292978" type="use" value="Six Letter Name" />
+			<record id="widget_info">
+				<symbol id="class" value="label" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<list id="attachments">
+					<record class="max_length_attachment">
+						<integer id="length" value="6" />
+					</record>
+				</list>
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Cnat" />
+			<integer id="width" value="170" />
+			<translation id="name" translation_id="292796" type="use" value="Nation[COMMENT: nation the club is in]" />
+			<record id="widget_info">
+				<symbol id="class" value="nation_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="292796" type="use" value="Nation[COMMENT: nation the club is in]" />
+				<translation id="hint" translation_id="292796" type="use" value="Nation[COMMENT: nation the club is in]" />
+			</record>
+		</record>
+
+		<!--continental competition-->
+		<record>
+			<integer id="id" value="Ccon" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="319579" type="use" value="Continental Competition[COMMENT: label for showing what continental competition, if any, the club is entered in]" />
+			<record id="widget_info">
+				<symbol id="class" value="comp_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="319580" type="use" value="Cont. Comp.[COMMENT: abbreviation for Continental Competition: label for showing what continental competition, if any, the club is entered in]" />
+				<translation id="hint" translation_id="319579" type="use" value="Continental Competition[COMMENT: label for showing what continental competition, if any, the club is entered in]" />
+			</record>
+		</record>
+
+		<!-- IGE Nation -->
+		<record>
+			<integer id="id" value="Cnti" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="229390" type="use" value="Nation" />
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="edit_nation_button" />
+				<list id="attachments">
+					<record class="pick_database_record_attachment" />
+				</list>
+			</record>
+		</record>
+
+		<!-- IGE City -->
+		<record>
+			<integer id="id" value="Ccty" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="292986" type="use" value="City" />
+
+			<list id="dependent_properties">
+				<!-- Need the club nation to determine the valid cities -->
+				<integer value="Cnti" />
+			</list>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="city_picker_popup_button" />
+				<integer id="popup_updated_event" value="CDBd" />
+			</record>
+		</record>
+
+		<!--professional status-->
+		<record>
+			<integer id="id" value="Cprs" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="319581" type="use" value="Professional Status[COMMENT: club properties; prefix text indicating what status the club holds eg professional, semi-professional, amateur]" />
+			<record id="widget_info">
+				<symbol id="class" value="professional_status_label" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="popup_button" />
+				<integer id="popup_updated_event" value="CDBd" />
+				<list id="items">
+					<record id="1">
+						<translation id="text" translation_id="227318" type="use" value="Professional[COMMENT club status]" />
+					</record>
+					<record id="2">
+						<translation id="text" translation_id="227319" type="use" value="Semi-Professional" />
+					</record>
+					<record id="3">
+						<translation id="text" translation_id="227320" type="use" value="Amateur" />
+					</record>
+				</list>
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="319581" type="use" value="Professional Status[COMMENT: club properties; prefix text indicating what status the club holds eg professional, semi-professional, amateur]" />
+				<translation id="hint" translation_id="326999" type="use" value="Operating Status[COMMENT: club properties; text indicating what status the club holds eg professional, semi-professional, amateur, this appears in the Club Details screen on the Team Profile so keep short and succinct]" />
+			</record>
+		</record>
+
+		<!--transfer policy-->
+		<record>
+			<integer id="id" value="CTPl" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="388971" type="use" value="Transfer Policy[COMMENT: club properties; text indicating any specific transfer policies the club holds, like only signing players of a certain nationality for example]" />
+			<record id="widget_info">
+				<symbol id="class" value="transfer_policy_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="388971" type="use" value="Transfer Policy[COMMENT: club properties; text indicating any specific transfer policies the club holds, like only signing players of a certain nationality for example]" />
+				<translation id="hint" translation_id="388971" type="use" value="Transfer Policy[COMMENT: club properties; text indicating any specific transfer policies the club holds, like only signing players of a certain nationality for example]" />
+			</record>
+		</record>
+
+		<!--club culture-->
+		<record>
+			<integer id="id" value="Cvis" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="491926" type="use" value="Club Culture[COMMENT: AREA: Club vision panel; SUB-AREA: Club culture sub-panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club culture section of the club vision panel, outlines the key objectives in the overall running of the club]" />
+			<record id="widget_info">
+				<symbol id="class" value="transfer_policy_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="491926" type="use" value="Club Culture[COMMENT: AREA: Club vision panel; SUB-AREA: Club culture sub-panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club culture section of the club vision panel, outlines the key objectives in the overall running of the club]" />
+				<translation id="hint" translation_id="491926" type="use" value="Club Culture[COMMENT: AREA: Club vision panel; SUB-AREA: Club culture sub-panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club culture section of the club vision panel, outlines the key objectives in the overall running of the club]" />
+			</record>
+		</record>
+
+		<!--board culture-->
+		<record>
+			<integer id="id" value="CvBC" />
+			<flags id="aliased_property_id" value="Cvis" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="557870" type="use" value="Board Culture[COMMENT: AREA: Job security panel; SUB-AREA: job description sub-panel heading; FR-BN: FM-8915; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the board culture section]" />
+			<record id="widget_info">
+				<symbol id="class" value="transfer_policy_label" />
+				<integer id="type" value="1" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="557870" type="use" value="Board Culture[COMMENT: AREA: Job security panel; SUB-AREA: job description sub-panel heading; FR-BN: FM-8915; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the board culture section]" />
+				<translation id="hint" translation_id="557870" type="use" value="Board Culture[COMMENT: AREA: Job security panel; SUB-AREA: job description sub-panel heading; FR-BN: FM-8915; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the board culture section]" />
+			</record>
+		</record>
+
+		<!--supporter culture-->
+		<record>
+			<integer id="id" value="CvSC" />
+			<flags id="aliased_property_id" value="Cvis" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="557871" type="use" value="Supporter Culture[COMMENT: AREA: Job security panel; SUB-AREA: job description sub-panel heading; FR-BN: FM-8915; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the board culture section]" />
+			<record id="widget_info">
+				<symbol id="class" value="transfer_policy_label" />
+				<integer id="type" value="2" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="557872" type="use" value="Supporter Culture[COMMENT: AREA: Job security panel; SUB-AREA: job description sub-panel heading; FR-BN: FM-8915; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the supporters culture section]" />
+				<translation id="hint" translation_id="557872" type="use" value="Supporter Culture[COMMENT: AREA: Job security panel; SUB-AREA: job description sub-panel heading; FR-BN: FM-8915; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the supporters culture section]" />
+			</record>
+		</record>
+
+		<!--League-specific manager rules-->
+		<record>
+			<integer id="id" value="CmgR" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="509209" type="use" value="Manager Rules[COMMENT: AREA: Rules; SUB-AREA: Comp Rules that apply to Managers; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; NOTE: club properties; text indicating any specific league manager-specific rules, like only being to manage one club per season in Spain and Italy]" />
+			<record id="widget_info">
+				<symbol id="class" value="rule_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="509209" type="use" value="Manager Rules[COMMENT: AREA: Rules; SUB-AREA: Comp Rules that apply to Managers; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; NOTE: club properties; text indicating any specific league manager-specific rules, like only being to manage one club per season in Spain and Italy]" />
+				<translation id="hint" translation_id="509209" type="use" value="Manager Rules[COMMENT: AREA: Rules; SUB-AREA: Comp Rules that apply to Managers; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; NOTE: club properties; text indicating any specific league manager-specific rules, like only being to manage one club per season in Spain and Italy]" />
+			</record>
+		</record>
+
+		<!--manager status-->
+		<record>
+			<integer id="id" value="TCMJ" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="247319" type="use" value="Job Security" />
+			<record id="widget_info">
+				<symbol id="class" value="job_status_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="335336" type="use" value="Status[COMMENT: abbreviation of Job Status for a manager in the game]" />
+				<translation id="hint" translation_id="247319" type="use" value="Job Security" />
+			</record>
+		</record>
+
+		<!--manager job status with longer heading-->
+		<record>
+			<integer id="id" value="MSta" />
+			<integer id="width" value="70" />
+			<flags id="aliased_property_id" value="TCMJ" />
+			<translation id="name" translation_id="247319" type="use" value="Job Security" />
+			<record id="widget_info">
+				<symbol id="class" value="job_status_label" />
+				<boolean id="disable_link" value="true" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="247322" type="use" value="Job Status" />
+				<translation id="hint" translation_id="247319" type="use" value="Job Security" />
+			</record>
+		</record>
+
+		<!--world knowledge %-->
+		<record>
+			<integer id="id" value="CWsc" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="335557" type="use" value="World Scouting Knowledge[COMMENT: team screen; title of panel showing scouting knowledge]" />
+			<record id="widget_info">
+				<symbol id="class" value="scouting_knowledge_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="335557" type="use" value="World Scouting Knowledge[COMMENT: team screen; title of panel showing scouting knowledge]" />
+				<translation id="hint" translation_id="335557" type="use" value="World Scouting Knowledge[COMMENT: team screen; title of panel showing scouting knowledge]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Cdiv" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="292797" type="use" value="Division[comment - club's main team's league division]" />
+			<record id="widget_info">
+				<symbol id="class" value="comp_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="292797" type="use" value="Division[comment - club's main team's league division]" />
+				<translation id="hint" translation_id="292797" type="use" value="Division[comment - club's main team's league division]" />
+			</record>
+		</record>
+
+		<!--regional division-->
+		<record>
+			<integer id="id" value="Todr" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="330389" type="use" value="Regional Division[COMMENT: team information; label for a field displaying a teams regional / secondary division]" />
+			<record id="widget_info">
+				<symbol id="class" value="comp_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="330389" type="use" value="Regional Division[COMMENT: team information; label for a field displaying a teams regional / secondary division]" />
+				<translation id="hint" translation_id="330389" type="use" value="Regional Division[COMMENT: team information; label for a field displaying a teams regional / secondary division]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Tldr" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="330389" type="use" value="Regional Division[COMMENT: team information; label for a field displaying a teams regional / secondary division]" />
+			<record id="widget_info">
+				<symbol id="class" value="comp_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="330389" type="use" value="Regional Division[COMMENT: team information; label for a field displaying a teams regional / secondary division]" />
+				<translation id="hint" translation_id="330389" type="use" value="Regional Division[COMMENT: team information; label for a field displaying a teams regional / secondary division]" />
+			</record>
+		</record>
+
+
+
+
+		<record>
+			<integer id="id" value="Csca" />
+			<integer id="width" value="120" />
+			<translation id="name" translation_id="319583" type="use" value="Squad Personality[COMMENT: club properties; club's squad's overall personality]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="club_squad_character_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="319584" type="use" value="Personality[COMMENT: club properties; club's squad's overall personality]" />
+				<translation id="hint" translation_id="319583" type="use" value="Squad Personality[COMMENT: club properties; club's squad's overall personality]" />
+			</record>
+		</record>
+
+		<!-- Club Attendence -->
+		<record>
+			<integer id="id" value="Catd" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="308772" type="use" value="Club Attendance[COMMENT: conversation; the club's attendence]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="label" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="150000" />
+				<translation id="hint" translation_id="454730" type="use" value="The club's average expected home attendance in its current situation.[COMMENT: hint text for 308772 Club Attendance]" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="308771" type="use" value="Attendance[COMMENT: conversation; the club's attendence]" />
+				<!--The abbreviated version is the text, the normal the hint-->
+				<translation id="hint" translation_id="308772" type="use" value="Club Attendance[COMMENT: conversation; the club's attendence]" />
+			</record>
+		</record>
+
+		<!-- Club Minimum Attendence -->
+		<record>
+			<integer id="id" value="Cmna" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="349004" type="use" value="Minimum Club Attendance[COMMENT: the club's minimum average attendence]" />
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="150000" />
+				<translation id="hint" translation_id="454731" type="use" value="The club's average expected home attendance in its worst foreseeable situation.[COMMENT: hint text for 349004 Minimum Club Attendance]" />
+			</record>
+
+		</record>
+
+		<!-- Club Maximum Attendence -->
+		<record>
+			<integer id="id" value="Cmxa" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="348992" type="use" value="Maximum Club Attendance[COMMENT: the club's maximum average attendence]" />
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="150000" />
+				<translation id="hint" translation_id="454732" type="use" value="The club's average expected home attendance in its best foreseeable situation.[COMMENT: hint text for 348992 Maximum Club Attendance]" />
+			</record>
+
+		</record>
+
+		<!-- Team prop that falls through from club but we need it here so can create the appropriate widget -->
+		<record>
+			<integer id="id" value="Tdiv" />
+			<integer id="width" value="200" />
+			<integer id="minimum_width" value="100" />
+			<translation id="name" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+			<record id="widget_info">
+				<symbol id="class" value="comp_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+				<translation id="hint" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="TDiv" />
+			<integer id="width" value="200" />
+			<integer id="minimum_width" value="100" />
+			<translation id="name" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+			<record id="widget_info">
+				<symbol id="class" value="comp_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+				<translation id="hint" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Tfrm" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="308194" type="use" value="Form[COMMENT: team form 5 games, all competitions, short version]" />
+			<record id="widget_info">
+				<symbol id="class" value="team_recent_form_widget" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="308194" type="use" value="Form[COMMENT: team form 5 games, all competitions, short version]" />
+				<translation id="hint" translation_id="283775" type="use" value="Overall Form[COMMENT: team form 5 games, all competitions]" />
+			</record>
+		</record>
+
+		<!-- Club Position in the league -->
+		<record>
+			<integer id="id" value="Cmai" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="347290" type="use" value="Position[COMMENT: average points fate action type, teams in this position get this fate]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="division_position_button" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="242883" type="use" value="Pos" />
+				<translation id="hint" translation_id="347290" type="use" value="Position[COMMENT: average points fate action type, teams in this position get this fate]" />
+			</record>
+		</record>
+
+		<!-- Club Reputation -->
+		<record>
+			<integer id="id" value="Crsc" />
+			<integer id="width" value="150" />
+			<translation id="name" translation_id="227963" type="use" value="Reputation" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="reputation_label" />
+				<integer id="mode" value="1" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="308672" type="use" value="Rep[COMMENT: club properties; string abbreviation for Reputation, referring to a club's reputation]" />
+				<translation id="hint" translation_id="227963" type="use" value="Reputation" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Csta" />
+			<integer id="width" value="120" />
+			<translation id="name" translation_id="317317" type="use" value="Reputation[COMMENT: club properties; club's reputation star rating]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="club_reputation_stars_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="317318" type="use" value="Rep Rating[COMMENT: club properties; club's reputation star rating; abbreviated]" />
+				<translation id="hint" translation_id="317319" type="use" value="Reputation Rating[COMMENT: club properties; club's reputation star rating]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Cpst" />
+			<integer id="width" value="120" />
+			<translation id="name" translation_id="319585" type="use" value="Previous Reputation[COMMENT: club properties; club's reputation star rating]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="club_reputation_stars_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="319586" type="use" value="Prev Rep Rating[COMMENT: club properties; club's reputation star rating; abbreviated]" />
+				<translation id="hint" translation_id="319587" type="use" value="Previous Reputation Rating[COMMENT: club properties; club's reputation star rating]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Crrp" />
+			<integer id="width" value="40" />
+			<translation id="name" translation_id="317320" type="use" value="Pos[COMMENT: club's current reputation ranking, abbreviated]" />
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="317320" type="use" value="Pos[COMMENT: club's current reputation ranking, abbreviated]" />
+				<translation id="hint" translation_id="317321" type="use" value="Ranking by Reputation[COMMENT: club's current reputation ranking]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Cprp" />
+			<integer id="width" value="40" />
+			<translation id="name" translation_id="317322" type="use" value="Prev[COMMENT: club's previous reputation ranking, abbreviated]" />
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="317322" type="use" value="Prev[COMMENT: club's previous reputation ranking, abbreviated]" />
+				<translation id="hint" translation_id="317323" type="use" value="Previous Ranking by Reputation[COMMENT: club's previous reputation ranking]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Crpc" />
+			<integer id="width" value="20" />
+			<record id="widget_info">
+				<symbol id="class" value="position_change_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="hint" translation_id="317324" type="use" value="Reputation Change[COMMENT: change of club's reputation]" />
+			</record>
+		</record>
+
+		<!--stadium-->
+		<record>
+			<integer id="id" value="Tsre" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="252900" type="use" value="Stadium[COMMENT: team stadium, short title]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="client_object_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="252900" type="use" value="Stadium[COMMENT: team stadium, short title]" />
+				<translation id="hint" translation_id="252901" type="use" value="Stadium[COMMENT: team stadium, title]" />
+			</record>
+		</record>
+
+		<!--City-->
+		<record>
+			<integer id="id" value="SctI" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="319589" type="use" value="City[COMMENT: team stadium city, short title]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="city_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="319589" type="use" value="City[COMMENT: team stadium city, short title]" />
+				<translation id="hint" translation_id="319590" type="use" value="City[COMMENT: team stadium city, title]" />
+			</record>
+		</record>
+
+		<!--City Weather-->
+		<record>
+			<integer id="id" value="SctW" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="292964" type="use" value="Weather" />
+			<integer id="minimum_width" value="60" />
+			<flags id="customisation_context" value="none" />
+			<record id="widget_info">
+				<symbol id="class" value="weather_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="292964" type="use" value="Weather" />
+				<translation id="hint" translation_id="292964" type="use" value="Weather" />
+			</record>
+		</record>
+
+		<!-- Subscribe / Unsubscribe -->
+		<record>
+			<integer id="id" value="nsss" />
+			<integer id="width" value="50" />
+			<translation id="name" translation_id="412472" type="use" value="Follow/Unfollow[COMMENT: toggle subscription status]" />
+			<flags id="customisation_context" value="any" />
+			<translation id="category" translation_id="248359" type="use" value="General" />
+			<integer id="minimum_width" value="50" />
+			<record id="widget_info">
+				<symbol id="class" value="news_subscribe_button" />
+			</record>
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="316791" type="use" value="News[COMMENT: toggle subscription status]" />
+				<translation id="hint" translation_id="412473" type="use" value="Click to set follow on/off[COMMENT: hint text describing what a particular button does, in this case toggling whether subscriptions are enabled or not]" />
+			</record>
+		</record>
+
+		<!--finances - estimated value-->
+		<record>
+			<integer id="id" value="Covv" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+				<translation id="hint" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+			</record>
+		</record>
+
+		<!--finances - financial state-->
+		<record>
+			<integer id="id" value="Csfs" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="251859" type="use" value="Finances[COMMENT: manager home section: finances summary panel heading]" />
+			<integer id="minimum_width" value="60" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="financial_status_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="251859" type="use" value="Finances[COMMENT: manager home section: finances summary panel heading]" />
+				<translation id="hint" translation_id="337906" type="use" value="Financial Status[COMMENT: manager home section: finances summary panel heading]" />
+			</record>
+		</record>
+
+		<!--finances - bank balance-->
+		<record>
+			<integer id="id" value="Ccba" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="255029" type="use" value="Bank Balance[COMMENT: finances list panel; bank balance view option]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="cash_edit_box" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255029" type="use" value="Bank Balance[COMMENT: finances list panel; bank balance view option]" />
+				<translation id="hint" translation_id="255029" type="use" value="Bank Balance[COMMENT: finances list panel; bank balance view option]" />
+			</record>
+		</record>
+
+		<!--finances - turnover-->
+		<record>
+			<integer id="id" value="Ctro" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+				<translation id="hint" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+			</record>
+		</record>
+
+		<!--finances - profit-->
+		<record>
+			<integer id="id" value="Cfpl" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="255031" type="use" value="Profit[COMMENT: finances list panel; profit view option]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255031" type="use" value="Profit[COMMENT: finances list panel; profit view option]" />
+				<translation id="hint" translation_id="255031" type="use" value="Profit[COMMENT: finances list panel; profit view option]" />
+			</record>
+		</record>
+
+		<!--finances - loss-->
+		<record>
+			<integer id="id" value="Cfls" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="255032" type="use" value="Loss[COMMENT: finances list panel; loss view option]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255032" type="use" value="Loss[COMMENT: finances list panel; loss view option]" />
+				<translation id="hint" translation_id="255032" type="use" value="Loss[COMMENT: finances list panel; loss view option]" />
+			</record>
+		</record>
+
+		<!--finances - profit (last season)-->
+		<record>
+			<integer id="id" value="Cpls" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="356917" type="use" value="Profit (Last Season)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356917" type="use" value="Profit (Last Season)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356917" type="use" value="Profit (Last Season)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - loss (last season)-->
+		<record>
+			<integer id="id" value="Clls" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="356892" type="use" value="Loss (Last Season)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356892" type="use" value="Loss (Last Season)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356892" type="use" value="Loss (Last Season)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - transfer budget (season)-->
+		<record>
+			<integer id="id" value="Ctfu" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="356989" type="use" value="Transfer Budget (Season)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356989" type="use" value="Transfer Budget (Season)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356989" type="use" value="Transfer Budget (Season)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - transfer budget (current)-->
+		<record>
+			<integer id="id" value="Ctfc" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="356988" type="use" value="Transfer Budget (Current)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="cash_edit_box" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356988" type="use" value="Transfer Budget (Current)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356988" type="use" value="Transfer Budget (Current)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - wage budget-->
+		<record>
+			<integer id="id" value="Cwwb" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="470177" type="use" value="Wage Budget (Current)[COMMENT: club finances wage budget label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+				<integer id="format" value="40" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="cash_edit_box" />
+				<!-- Use wage budget limit rather than individual player -->
+				<integer id="display_format" value="1" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="310128" type="use" value="Wage Budget[COMMENT: contract offer screen - comments table]" />
+				<translation id="hint" translation_id="310128" type="use" value="Wage Budget[COMMENT: contract offer screen - comments table]" />
+			</record>
+		</record>
+
+		<!--finances - Salary Cap Budget-->
+		<record>
+			<integer id="id" value="CcSC" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="352250" type="use" value="Team Salary Cap[COMMENT - salary cap for the club; used on finances screen]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+				<integer id="format" value="2" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="cash_edit_box" />
+				<!-- Use wage budget limit rather than individual player -->
+				<integer id="display_format" value="1" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="352250" type="use" value="Team Salary Cap[COMMENT - salary cap for the club; used on finances screen]" />
+				<translation id="hint" translation_id="352250" type="use" value="Team Salary Cap[COMMENT - salary cap for the club; used on finances screen]" />
+			</record>
+		</record>
+
+		<!--finances - Salary Cap Budget-->
+		<record>
+			<integer id="id" value="Ccsw" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="396342" type="use" value="Team Salary Cap Spend[COMMENT: Finances League specific panel; FR 10982, changed ID 383893 for bug 121386, removed 'weekly' from the string as the Preferences control how this is displayed]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+				<integer id="format" value="2" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="cash_edit_box" />
+				<!-- Use wage budget limit rather than individual player -->
+				<integer id="display_format" value="1" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="396342" type="use" value="Team Salary Cap Spend[COMMENT: Finances League specific panel; FR 10982, changed ID 383893 for bug 121386, removed 'weekly' from the string as the Preferences control how this is displayed]" />
+				<translation id="hint" translation_id="396342" type="use" value="Team Salary Cap Spend[COMMENT: Finances League specific panel; FR 10982, changed ID 383893 for bug 121386, removed 'weekly' from the string as the Preferences control how this is displayed]" />
+			</record>
+		</record>
+
+		<!--finances - Salary Cap Budget-->
+		<record>
+			<integer id="id" value="CrCs" />
+			<integer id="width" value="90" />
+			<translation id="name" type="use" translation_id="352200" value="Remaining Salary Cap Space[COMMENT - remaining salary cap for the club; used on finances screen]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+				<integer id="format" value="2" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="cash_edit_box" />
+				<!-- Use wage budget limit rather than individual player -->
+				<integer id="display_format" value="1" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" type="use" translation_id="352200" value="Remaining Salary Cap Space[COMMENT - remaining salary cap for the club; used on finances screen]" />
+				<translation id="hint" type="use" translation_id="352200" value="Remaining Salary Cap Space[COMMENT - remaining salary cap for the club; used on finances screen]" />
+			</record>
+		</record>
+
+
+		<!--finances - scouting budget available - only the human truly has a scouting budget -->
+		<record>
+			<integer id="id" value="CSbR" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="509210" type="use" value="Current Scouting Budget[COMMENT: AREA: In-Game Editor; SUB-AREA: Scouting Budget; FR-BN: 29076; TONE: Formal; CHARLIMIT: None; NOTE: Adjust the scouting budget using the in-game editor]" />
+			<translation id="category" translation_id="327301" type="use" value="none" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+				<integer id="format" value="40" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="cash_edit_box" />
+				<!-- Use wage budget limit rather than individual player -->
+				<integer id="display_format" value="1" />
+			</record>
+
+			<list id="dependent_properties">
+				<!-- To determine if main team human controlled -->
+				<integer value="TmHc" />
+			</list>
+
+			<list id="use_field_if">
+				<record id="TmHc" equals="true" />
+			</list>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="509211" type="use" value="Scouting Budget (Current)[COMMENT: AREA: In-Game Editor; SUB-AREA: Scouting Budget; FR-BN: 29076; TONE: Formal; CHARLIMIT: None; NOTE: Adjust the scouting budget using the in-game editor]" />
+				<translation id="hint" translation_id="509211" type="use" value="Scouting Budget (Current)[COMMENT: AREA: In-Game Editor; SUB-AREA: Scouting Budget; FR-BN: 29076; TONE: Formal; CHARLIMIT: None; NOTE: Adjust the scouting budget using the in-game editor]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Cgam" />
+			<integer id="width" value="90" />
+			<translation id="title" translation_id="416364" type="use" value="Remaining General Allocation Money[COMMENT: FR 16538; MLS specific]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="416364" type="use" value="Remaining General Allocation Money[COMMENT: FR 16538; MLS specific]" />
+				<translation id="hint" translation_id="416364" type="use" value="Remaining General Allocation Money[COMMENT: FR 16538; MLS specific]" />
+			</record>
+		</record>
+
+
+		<!--finances - sugar daddy-->
+		<record>
+			<integer id="id" value="Chsd" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="578238" type="use" value="Rich Benefactor[COMMENT: AREA: Finances; NOTE: Renaming Sugar Daddy to Rich Benefactor]" />
+			<translation id="category" translation_id="327301" type="use" value="none" />
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="popup_button" />
+				<integer id="popup_updated_event" value="CDBd" />
+				<list id="items">
+					<record id="0">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</record>
+					<record id="1">
+						<translation id="text" translation_id="348844" type="use" value="Front End[COMMENT: sugar daddy type]" />
+					</record>
+					<record id="2">
+						<translation id="text" translation_id="348778" type="use" value="Back End[COMMENT: sugar daddy type]" />
+					</record>
+					<record id="3">
+						<translation id="text" translation_id="296533" type="use" value="Underwriter[COMMENT: other income type]" />
+					</record>
+					<record id="4">
+						<translation id="text" translation_id="402418" type="use" value="Underwriter Expects Return[COMMENT: other income type]" />
+					</record>
+				</list>
+			</record>
+
+		</record>
+
+		<!--finances - wage bill-->
+		<record>
+			<integer id="id" value="Ccww" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]" />
+				<translation id="hint" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]" />
+			</record>
+		</record>
+
+		<!--finances - average wage-->
+		<record>
+			<integer id="id" value="Caww" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="310131" type="use" value="Average Wage[COMMENT: contract offer screen - comments table]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="310131" type="use" value="Average Wage[COMMENT: contract offer screen - comments table]" />
+				<translation id="hint" translation_id="310131" type="use" value="Average Wage[COMMENT: contract offer screen - comments table]" />
+			</record>
+		</record>
+
+		<!--finances - max wage allowed-->
+		<record>
+			<integer id="id" value="Cmwa" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="wage_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - season ticket holders-->
+		<record>
+			<integer id="id" value="Csth" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="275842" type="use" value="Season Ticket Holders" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="dashed_number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="275842" type="use" value="Season Ticket Holders" />
+				<translation id="hint" translation_id="275842" type="use" value="Season Ticket Holders" />
+			</record>
+		</record>
+
+		<!--finances - average ticket price-->
+		<record>
+			<integer id="id" value="Ctpr" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="275843" type="use" value="Average Ticket Price[COMMENT: finances list panel; average ticket price view option]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="275843" type="use" value="Average Ticket Price[COMMENT: finances list panel; average ticket price view option]" />
+				<translation id="hint" translation_id="275843" type="use" value="Average Ticket Price[COMMENT: finances list panel; average ticket price view option]" />
+			</record>
+		</record>
+
+		<!--finances - average season ticket price-->
+		<record>
+			<integer id="id" value="Cstp" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="275844" type="use" value="Average Season Ticket Price[COMMENT: finances list panel; average season ticket price view option]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="cash_cell" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="275844" type="use" value="Average Season Ticket Price[COMMENT: finances list panel; average season ticket price view option]" />
+				<translation id="hint" translation_id="275844" type="use" value="Average Season Ticket Price[COMMENT: finances list panel; average season ticket price view option]" />
+			</record>
+		</record>
+
+		<!--finances - ticket price ratio-->
+		<record>
+			<integer id="id" value="Crat" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="356984" type="use" value="Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356984" type="use" value="Ticket Price Ratio[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356984" type="use" value="Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - season ticket price ratio-->
+		<record>
+			<integer id="id" value="Cstr" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="356930" type="use" value="Season Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356930" type="use" value="Season Ticket Price Ratio[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356930" type="use" value="Season Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - estimated value-->
+		<record>
+			<integer id="id" value="Bovv" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+				<translation id="hint" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+			</record>
+		</record>
+
+		<!--finances - financial state-->
+		<record>
+			<integer id="id" value="Bfis" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="251859" type="use" value="Finances[COMMENT: manager home section: finances summary panel heading]" />
+			<integer id="minimum_width" value="60" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_financial_status_percentage_bar" />
+				<integer id="label_width" value="140" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="251859" type="use" value="Finances[COMMENT: manager home section: finances summary panel heading]" />
+				<translation id="hint" translation_id="337906" type="use" value="Financial Status[COMMENT: manager home section: finances summary panel heading]" />
+			</record>
+		</record>
+
+		<!--finances - bank balance-->
+		<record>
+			<integer id="id" value="Bcba" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="255029" type="use" value="Bank Balance[COMMENT: finances list panel; bank balance view option]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255029" type="use" value="Bank Balance[COMMENT: finances list panel; bank balance view option]" />
+				<translation id="hint" translation_id="255029" type="use" value="Bank Balance[COMMENT: finances list panel; bank balance view option]" />
+			</record>
+		</record>
+
+		<!--finances - turnover-->
+		<record>
+			<integer id="id" value="Btro" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+				<translation id="hint" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+			</record>
+		</record>
+
+		<!--finances - profit-->
+		<record>
+			<integer id="id" value="Bfpl" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="255031" type="use" value="Profit[COMMENT: finances list panel; profit view option]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255031" type="use" value="Profit[COMMENT: finances list panel; profit view option]" />
+				<translation id="hint" translation_id="255031" type="use" value="Profit[COMMENT: finances list panel; profit view option]" />
+			</record>
+		</record>
+
+		<!--finances - loss-->
+		<record>
+			<integer id="id" value="Bfls" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="255032" type="use" value="Loss[COMMENT: finances list panel; loss view option]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255032" type="use" value="Loss[COMMENT: finances list panel; loss view option]" />
+				<translation id="hint" translation_id="255032" type="use" value="Loss[COMMENT: finances list panel; loss view option]" />
+			</record>
+		</record>
+
+		<!--finances - profit (last season)-->
+		<record>
+			<integer id="id" value="Bpls" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="356917" type="use" value="Profit (Last Season)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356917" type="use" value="Profit (Last Season)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356917" type="use" value="Profit (Last Season)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - loss (last season)-->
+		<record>
+			<integer id="id" value="Blls" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="356892" type="use" value="Loss (Last Season)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356892" type="use" value="Loss (Last Season)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356892" type="use" value="Loss (Last Season)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - transfer budget (season)-->
+		<record>
+			<integer id="id" value="Btfu" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="356989" type="use" value="Transfer Budget (Season)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356989" type="use" value="Transfer Budget (Season)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356989" type="use" value="Transfer Budget (Season)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - transfer budget (current)-->
+		<record>
+			<integer id="id" value="Btfc" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="356988" type="use" value="Transfer Budget (Current)[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundlarge-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356988" type="use" value="Transfer Budget (Current)[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356988" type="use" value="Transfer Budget (Current)[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - wage budget-->
+		<record>
+			<integer id="id" value="Bwwb" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="310128" type="use" value="Wage Budget[COMMENT: contract offer screen - comments table]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_wage_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%wage#1]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="310128" type="use" value="Wage Budget[COMMENT: contract offer screen - comments table]" />
+				<translation id="hint" translation_id="310128" type="use" value="Wage Budget[COMMENT: contract offer screen - comments table]" />
+			</record>
+		</record>
+
+		<!--finances - wage bill-->
+		<record>
+			<integer id="id" value="Bcww" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_wage_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%wage#1]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]" />
+				<translation id="hint" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]" />
+			</record>
+		</record>
+
+		<!--finances - average weekly wage-->
+		<record>
+			<integer id="id" value="Baww" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="text" translation_id="356810" type="use" value="Average Weekly Wage[COMMENT: club properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundnone-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356810" type="use" value="Average Weekly Wage[COMMENT: club properties, finance label]" />
+				<translation id="hint" translation_id="356810" type="use" value="Average Weekly Wage[COMMENT: club properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - max wage allowed-->
+		<record>
+			<integer id="id" value="Bmwa" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundnone-short]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - season ticket holders-->
+		<record>
+			<integer id="id" value="Bsth" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="275842" type="use" value="Season Ticket Holders" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%number#1]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="275842" type="use" value="Season Ticket Holders" />
+				<translation id="hint" translation_id="275842" type="use" value="Season Ticket Holders" />
+			</record>
+		</record>
+
+		<!--finances - average ticket price-->
+		<record>
+			<integer id="id" value="Btpr" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="275843" type="use" value="Average Ticket Price[COMMENT: finances list panel; average ticket price view option]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundnone-ticketprice]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="275843" type="use" value="Average Ticket Price[COMMENT: finances list panel; average ticket price view option]" />
+				<translation id="hint" translation_id="275843" type="use" value="Average Ticket Price[COMMENT: finances list panel; average ticket price view option]" />
+			</record>
+		</record>
+
+		<!--finances - average season ticket price-->
+		<record>
+			<integer id="id" value="Bstp" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="275844" type="use" value="Average Season Ticket Price[COMMENT: finances list panel; average season ticket price view option]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_cash_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%cash#1-roundnone-ticketprice]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="275844" type="use" value="Average Season Ticket Price[COMMENT: finances list panel; average season ticket price view option]" />
+				<translation id="hint" translation_id="275844" type="use" value="Average Season Ticket Price[COMMENT: finances list panel; average season ticket price view option]" />
+			</record>
+		</record>
+
+		<!--finances - ticket price ratio-->
+		<record>
+			<integer id="id" value="Brat" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="356984" type="use" value="Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%fraction#1-4.2]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356984" type="use" value="Ticket Price Ratio[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356984" type="use" value="Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--finances - season ticket price ratio-->
+		<record>
+			<integer id="id" value="Bstr" />
+			<integer id="minimum_width" value="400" />
+			<integer id="width" value="-1" />
+			<translation id="name" translation_id="356930" type="use" value="Season Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			<translation id="category" translation_id="356841" type="use" value="Finances (comparison)[COMMENT: team properties, finance label]" />
+			<record id="widget_info">
+				<symbol id="class" value="horizontal_percentage_bar" />
+				<flags id="bclt" value="bclF" />
+				<string id="format" value="[%fraction#1-4.2]" />
+				<integer id="label_width" value="100" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="356930" type="use" value="Season Ticket Price Ratio[COMMENT: team properties, finance label]" />
+				<translation id="hint" translation_id="356930" type="use" value="Season Ticket Price Ratio[COMMENT: team properties, finance label]" />
+			</record>
+		</record>
+
+		<!--owner status-->
+		<record>
+			<integer id="id" value="CStT" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="394525" type="use" value="Owner Status[COMMENT: heading; team_information_panel; owner's confidence in the club]" />
+			<record id="widget_info">
+				<symbol id="class" value="chairman_status_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="394525" type="use" value="Owner Status[COMMENT: heading; team_information_panel; owner's confidence in the club]" />
+				<translation id="hint" translation_id="394525" type="use" value="Owner Status[COMMENT: heading; team_information_panel; owner's confidence in the club]" />
+			</record>
+		</record>
+
+		<!-- next election date -->
+		<record>
+			<integer id="id" value="Cned" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="text" translation_id="351442" type="use" value="Next Election Date[COMMENT: heading; team_information_panel; date of next election]" />
+			<record id="widget_info">
+				<symbol id="class" value="date_cell" />
+				<string id="format" value="[%date#1-long_no_day]" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="351442" type="use" value="Next Election Date[COMMENT: heading; team_information_panel; date of next election]" />
+				<translation id="hint" translation_id="351442" type="use" value="Next Election Date[COMMENT: heading; team_information_panel; date of next election]" />
+			</record>
+		</record>
+
+		<!--corporate facilities-->
+		<record>
+			<integer id="id" value="Ccfs" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="275859" type="use" value="Corporate Facilities[COMMENT: heading; team_information_panel; the standard of the team's corporate facilities]" />
+			<record id="widget_info">
+				<symbol id="class" value="corporate_facilities_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="275859" type="use" value="Corporate Facilities[COMMENT: heading; team_information_panel; the standard of the team's corporate facilities]" />
+				<translation id="hint" translation_id="275859" type="use" value="Corporate Facilities[COMMENT: heading; team_information_panel; the standard of the team's corporate facilities]" />
+			</record>
+		</record>
+
+		<!--corporate facilities (edit mode)-->
+		<record>
+			<integer id="id" value="Ccfa" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="275859" type="use" value="Corporate Facilities[COMMENT: heading; team_information_panel; the standard of the team's corporate facilities]" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="-1" />
+				<integer id="max_value" value="20" />
+			</record>
+
+		</record>
+
+		<!--legends-->
+		<record>
+			<integer id="id" value="TLeg" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="281393" type="use" value="Legends[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+			<record id="widget_info">
+				<symbol id="class" value="person_list_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="281393" type="use" value="Legends[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+				<translation id="hint" translation_id="281393" type="use" value="Legends[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+			</record>
+		</record>
+
+		<!--icons-->
+		<record>
+			<integer id="id" value="Csvp" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="289355" type="use" value="Icons[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+			<record id="widget_info">
+				<symbol id="class" value="person_list_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="289355" type="use" value="Icons[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+				<translation id="hint" translation_id="289355" type="use" value="Icons[COMMENT: heading; team_information_panel; list of legends persons to current club]" />
+			</record>
+		</record>
+
+		<!--favoured personnel-->
+		<record>
+			<integer id="id" value="Cfap" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="247454" type="use" value="Favoured Personnel" />
+			<record id="widget_info">
+				<symbol id="class" value="person_list_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="247454" type="use" value="Favoured Personnel" />
+				<translation id="hint" translation_id="247454" type="use" value="Favoured Personnel" />
+			</record>
+		</record>
+
+		<!--derbies-->
+		<record>
+			<integer id="id" value="TDer" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="306595" type="use" value="Derbies[COMMENT: heading; team_information_panel; list of current club's derbies]" />
+			<record id="widget_info">
+				<symbol id="class" value="team_derbies_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="306595" type="use" value="Derbies[COMMENT: heading; team_information_panel; list of current club's derbies]" />
+				<translation id="hint" translation_id="306595" type="use" value="Derbies[COMMENT: heading; team_information_panel; list of current club's derbies]" />
+			</record>
+		</record>
+
+		<!--fierce rivals-->
+		<record>
+			<integer id="id" value="Cfmr" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="251298" type="use" value="Fierce Rivals[COMMENT: heading; team_information_panel; list of fierce rival teams to current club]" />
+			<record id="widget_info">
+				<symbol id="class" value="club_rivalries_list_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="251298" type="use" value="Fierce Rivals[COMMENT: heading; team_information_panel; list of fierce rival teams to current club]" />
+				<translation id="hint" translation_id="251298" type="use" value="Fierce Rivals[COMMENT: heading; team_information_panel; list of fierce rival teams to current club]" />
+			</record>
+		</record>
+
+		<!--other rivals-->
+		<record>
+			<integer id="id" value="Cfrt" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="251299" type="use" value="Other Rivals[COMMENT: heading; team_information_panel; list of rival teams to current club]" />
+			<record id="widget_info">
+				<symbol id="class" value="club_rivalries_list_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="251299" type="use" value="Other Rivals[COMMENT: heading; team_information_panel; list of rival teams to current club]" />
+				<translation id="hint" translation_id="251299" type="use" value="Other Rivals[COMMENT: heading; team_information_panel; list of rival teams to current club]" />
+			</record>
+		</record>
+
+		<!--Club Hot prospect -->
+		<record>
+			<integer id="id" value="CtPR" />
+			<integer id="minimum_width" value="50" />
+			<integer id="width" value="50" />
+			<translation id="name" translation_id="420759" type="use" value="Club Hot Prospect[COMMENT: heading; team_information_panel; indicates the current hot prospect at the club]" />
+			<record id="widget_info">
+				<symbol id="class" value="person_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="420759" type="use" value="Club Hot Prospect[COMMENT: heading; team_information_panel; indicates the current hot prospect at the club]" />
+				<translation id="hint" translation_id="420759" type="use" value="Club Hot Prospect[COMMENT: heading; team_information_panel; indicates the current hot prospect at the club]" />
+			</record>
+		</record>
+
+		<!--finances description-->
+		<record>
+			<integer id="id" value="CfiD" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="229821" type="use" value="Finances" />
+			<record id="widget_info">
+				<symbol id="class" value="club_finances_description_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="229821" type="use" value="Finances" />
+				<translation id="hint" translation_id="229821" type="use" value="Finances" />
+			</record>
+		</record>
+
+		<!--value description-->
+		<record>
+			<integer id="id" value="CovD" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+			<record id="widget_info">
+				<symbol id="class" value="club_value_description_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+				<translation id="hint" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+			</record>
+		</record>
+
+		<!--media expectation description-->
+		<record>
+			<integer id="id" value="CmeD" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="243509" type="use" value="Media Prediction" />
+			<record id="widget_info">
+				<symbol id="class" value="media_expectation_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="243509" type="use" value="Media Prediction" />
+				<translation id="hint" translation_id="243509" type="use" value="Media Prediction" />
+			</record>
+		</record>
+
+		<!--league points deduction-->
+		<record>
+			<integer id="id" value="Tptd" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="257207" type="use" value="League Points Deducted[COMMENT: heading; team_information_panel; number of starting point deductions in the league]" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="257207" type="use" value="League Points Deducted[COMMENT: heading; team_information_panel; number of starting point deductions in the league]" />
+				<translation id="hint" translation_id="257207" type="use" value="League Points Deducted[COMMENT: heading; team_information_panel; number of starting point deductions in the league]" />
+			</record>
+		</record>
+
+		<!--Capacity-->
+		<record>
+			<integer id="id" value="Scpy" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="252902" type="use" value="Capacity[COMMENT: team stadium capacity, short title]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="dashed_number_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="252902" type="use" value="Capacity[COMMENT: team stadium capacity, short title]" />
+				<translation id="hint" translation_id="252903" type="use" value="Stadium Capacity[COMMENT: team stadium capacity, title]" />
+			</record>
+		</record>
+
+		<!-- Used Capacity-->
+		<record>
+			<integer id="id" value="Sucy" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="293478" type="use" value="Used Capacity" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="dashed_number_label" />
+			</record>
+			<record id="widget_edit_info">
+				<symbol id="class" value="client_validation_number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="0" />
+				<integer id="max_value" value="150000" />
+				<integer id="property" value="Scpy" />
+				<integer id="mode" value="1" />
+			</record>
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="349165" type="use" value="Used Cap[COMMENT: team stadium used capacity; short text]" />
+				<translation id="hint" translation_id="293478" type="use" value="Used Capacity" />
+			</record>
+		</record>
+
+		<!--stadium capacity description-->
+		<record>
+			<integer id="id" value="TstD" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="247774" type="use" value="Stadium Capacity" />
+			<record id="widget_info">
+				<symbol id="class" value="stadium_capacity_description_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="247774" type="use" value="Stadium Capacity" />
+				<translation id="hint" translation_id="247774" type="use" value="Stadium Capacity" />
+			</record>
+		</record>
+
+		<!-- year built -->
+		<record>
+			<integer id="id" value="Sbdy" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="284334" type="use" value="Year Built[COMMENT: heading; team_information_panel; year the stadium was build on]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="dashed_number_label" />
+				<boolean id="NumF" value="0" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="284334" type="use" value="Year Built[COMMENT: heading; team_information_panel; year the stadium was build on]" />
+				<translation id="hint" translation_id="284334" type="use" value="Year Built[COMMENT: heading; team_information_panel; year the stadium was build on]" />
+			</record>
+		</record>
+
+		<!--training facilities (short)-->
+		<record>
+			<integer id="id" value="TfcS" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="229395" type="use" value="Training Facilities" />
+			<record id="widget_info">
+				<symbol id="class" value="training_facilities_description_text" />
+				<integer id="format" value="1" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="229395" type="use" value="Training Facilities" />
+				<translation id="hint" translation_id="229395" type="use" value="Training Facilities" />
+			</record>
+		</record>
+
+		<!--training facilities (star rating)-->
+		<record>
+			<integer id="id" value="Ctf*" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="229395" type="use" value="Training Facilities" />
+			<record id="widget_info">
+				<symbol id="class" value="training_facilities_stars_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="229395" type="use" value="Training Facilities" />
+				<translation id="hint" translation_id="229395" type="use" value="Training Facilities" />
+			</record>
+		</record>
+
+		<!--training facilities description-->
+		<record>
+			<integer id="id" value="TfcD" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="229395" type="use" value="Training Facilities" />
+			<record id="widget_info">
+				<symbol id="class" value="training_facilities_description_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="229395" type="use" value="Training Facilities" />
+				<translation id="hint" translation_id="229395" type="use" value="Training Facilities" />
+			</record>
+		</record>
+
+		<!--training facilities basic for editor -->
+		<record>
+			<integer id="id" value="Ctlv" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="229395" type="use" value="Training Facilities" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="20" />
+			</record>
+
+		</record>
+
+
+		<!--youth facilities (basic)-->
+		<record>
+			<integer id="id" value="TytS" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+			<record id="widget_info">
+				<symbol id="class" value="youth_facilities_description_text" />
+				<integer id="format" value="1" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+				<translation id="hint" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+			</record>
+		</record>
+
+		<!--youth facilities (stars)-->
+		<record>
+			<integer id="id" value="Cfc*" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+			<record id="widget_info">
+				<symbol id="class" value="youth_facilities_stars_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+				<translation id="hint" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+			</record>
+		</record>
+
+		<!--youth facilities (edit mode)-->
+		<record>
+			<integer id="id" value="Cyfb" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="20" />
+			</record>
+
+		</record>
+
+		<!--youth facilities description-->
+		<record>
+			<integer id="id" value="TytD" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+			<record id="widget_info">
+				<symbol id="class" value="youth_facilities_description_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+				<translation id="hint" translation_id="255008" type="use" value="Youth Facilities[COMMENT: heading; team_information_panel; the standard of a team's youth facilities]" />
+			</record>
+		</record>
+
+		<!--youth setup category-->
+		<record>
+			<integer id="id" value="TysC" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="336926" type="use" value="Youth Level[COMMENT: interaction manager; type of interaction]" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="336926" type="use" value="Youth Level[COMMENT: interaction manager; type of interaction]" />
+				<translation id="hint" translation_id="336926" type="use" value="Youth Level[COMMENT: interaction manager; type of interaction]" />
+			</record>
+		</record>
+
+		<!--junior coaching (edit mode)-->
+		<record>
+			<integer id="id" value="Cytv" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="325853" type="use" value="Junior Coaching[COMMENT: heading; team_information_panel; the standard of the team's youth setup coaching, NOTE: This is a minor string change - 'Youth Coaching' changed to 'Junior coaching'. Please use 'Top 10 Matches']" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="20" />
+			</record>
+		</record>
+
+		<!--youth recruitment (edit mode)-->
+		<record>
+			<integer id="id" value="Crcb" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="308084" type="use" value="Youth Recruitment[COMMENT: heading; team_information_panel; the standard of the team's youth recruitment network]" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="number_edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<integer id="min_value" value="1" />
+				<integer id="max_value" value="20" />
+			</record>
+		</record>
+
+		<!--shared facilities description-->
+		<record>
+			<integer id="id" value="TsfD" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="330450" type="use" value="Shared Facilities[COMMENT: heading; team_information_panel; any shared facilities club has access to]" />
+			<record id="widget_info">
+				<symbol id="class" value="shared_facilities_description_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="330450" type="use" value="Shared Facilities[COMMENT: heading; team_information_panel; any shared facilities club has access to]" />
+				<translation id="hint" translation_id="330450" type="use" value="Shared Facilities[COMMENT: heading; team_information_panel; any shared facilities club has access to]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Sren" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="284331" type="use" value="Rent[COMMENT: heading; team_information_panel; stadium rent for FM2009]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="stadium_rent_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="284331" type="use" value="Rent[COMMENT: heading; team_information_panel; stadium rent for FM2009]" />
+				<translation id="hint" translation_id="284331" type="use" value="Rent[COMMENT: heading; team_information_panel; stadium rent for FM2009]" />
+			</record>
+		</record>
+
+		<!--condition of stadium-->
+		<record>
+			<integer id="id" value="Sdcy" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="284336" type="use" value="Stadium Condition[COMMENT: heading; team_information_panel; stadium condition]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="stadium_condition_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="284336" type="use" value="Stadium Condition[COMMENT: heading; team_information_panel; stadium condition]" />
+				<translation id="hint" translation_id="284336" type="use" value="Stadium Condition[COMMENT: heading; team_information_panel; stadium condition]" />
+			</record>
+		</record>
+
+		<!--surface type-->
+		<record>
+			<integer id="id" value="SsfT" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="284339" type="use" value="Surface[COMMENT: heading; team_information_panel; pitch surface type]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="pitch_surface_type_label" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="284339" type="use" value="Surface[COMMENT: heading; team_information_panel; pitch surface type]" />
+				<translation id="hint" translation_id="284339" type="use" value="Surface[COMMENT: heading; team_information_panel; pitch surface type]" />
+			</record>
+		</record>
+
+		<!--undersoil heating-->
+		<record>
+			<integer id="id" value="Sush" />
+			<integer id="width" value="60" />
+			<translation id="name" translation_id="284337" type="use" value="Under Soil Heating[COMMENT: heading; team_information_panel; under soil heating]" />
+			<integer id="minimum_width" value="60" />
+			<record id="widget_info">
+				<symbol id="class" value="yes_no_label" />
+				<boolean id="ynwo" value="true" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="centre" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="284337" type="use" value="Under Soil Heating[COMMENT: heading; team_information_panel; under soil heating]" />
+				<translation id="hint" translation_id="284337" type="use" value="Under Soil Heating[COMMENT: heading; team_information_panel; under soil heating]" />
+			</record>
+		</record>
+
+		<!--nickname-->
+		<record>
+			<integer id="id" value="TCnn" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="319435" type="use" value="Nickname[COMMENT: heading; team information panel; club nickname]" />
+			<record id="widget_info">
+				<symbol id="class" value="text" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="edit_box" />
+				<flags id="edit_event" value="CDBd" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="319435" type="use" value="Nickname[COMMENT: heading; team information panel; club nickname]" />
+				<translation id="hint" translation_id="319435" type="use" value="Nickname[COMMENT: heading; team information panel; club nickname]" />
+			</record>
+		</record>
+
+		<!--display nation-->
+		<record>
+			<integer id="id" value="Dnat" />
+			<integer id="width" value="170" />
+			<translation id="name" translation_id="291490" type="use" value="Nation[COMMENT: nation the team is in]" />
+			<record id="widget_info">
+				<symbol id="class" value="nation_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="291490" type="use" value="Nation[COMMENT: nation the team is in]" />
+				<translation id="hint" translation_id="291490" type="use" value="Nation[COMMENT: nation the team is in]" />
+			</record>
+		</record>
+
+		<!-- club manager-->
+		<record>
+			<integer id="id" value="TMnR" />
+			<integer id="width" value="90" />
+			<integer id="minimum_width" value="90" />
+			<translation id="name" translation_id="227981" type="use" value="Manager" />
+			<record id="widget_info">
+				<symbol id="class" value="person_button" />
+			</record>
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="227981" type="use" value="Manager" />
+				<translation id="hint" translation_id="227981" type="use" value="Manager" />
+			</record>
+		</record>
+
+		<!--captain-->
+		<record>
+			<integer id="id" value="TCap" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="258290" type="use" value="Captain[COMMENT: heading; team_information_panel; club/nation captain]" />
+			<record id="widget_info">
+				<symbol id="class" value="person_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="258290" type="use" value="Captain[COMMENT: heading; team_information_panel; club/nation captain]" />
+				<translation id="hint" translation_id="258290" type="use" value="Captain[COMMENT: heading; team_information_panel; club/nation captain]" />
+			</record>
+		</record>
+
+		<!--vice captain-->
+		<record>
+			<integer id="id" value="TVca" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="258291" type="use" value="Vice-Captain[COMMENT: heading; team_information_panel; club/nation vice-captain]" />
+			<record id="widget_info">
+				<symbol id="class" value="person_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="258291" type="use" value="Vice-Captain[COMMENT: heading; team_information_panel; club/nation vice-captain]" />
+				<translation id="hint" translation_id="258291" type="use" value="Vice-Captain[COMMENT: heading; team_information_panel; club/nation vice-captain]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="Tpos" />
+			<integer id="width" value="40" />
+			<translation id="name" translation_id="252893" type="use" value="Position[COMMENT: team division position, title]" />
+			<record id="widget_info">
+				<symbol id="class" value="division_position_button" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="252892" type="use" value="Pos[COMMENT: team division position, short title]" />
+				<translation id="hint" translation_id="252893" type="use" value="Position[COMMENT: team division position, title]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="TdvS" />
+			<integer id="width" value="200" />
+			<integer id="minimum_width" value="100" />
+			<translation id="name" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+			<record id="widget_info">
+				<symbol id="class" value="fixture_name_text" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="291491" type="use" value="Division[comment - team's league division]" />
+				<translation id="hint" translation_id="328845" type="use" value="Division (Specific)[comment - team's league division, including sub division names like Western Conference etc]" />
+			</record>
+		</record>
+
+		<!--region-->
+		<record>
+			<integer id="id" value="NrgR" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="257209" type="use" value="Region[COMMENT: heading; team_information_panel; nation's region e.g. Britain]" />
+			<record id="widget_info">
+				<symbol id="class" value="region_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="257209" type="use" value="Region[COMMENT: heading; team_information_panel; nation's region e.g. Britain]" />
+				<translation id="hint" translation_id="257209" type="use" value="Region[COMMENT: heading; team_information_panel; nation's region e.g. Britain]" />
+			</record>
+		</record>
+
+		<!--Stadium sponsor-->
+		<record>
+			<integer id="id" value="CsSP" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="346858" type="use" value="Stadium Sponsor[COMMENT: heading; team_information_panel; Stadium Sponsor ]" />
+			<record id="widget_info">
+				<symbol id="class" value="stadium_sponsor_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="346858" type="use" value="Stadium Sponsor[COMMENT: heading; team_information_panel; Stadium Sponsor ]" />
+				<translation id="hint" translation_id="346858" type="use" value="Stadium Sponsor[COMMENT: heading; team_information_panel; Stadium Sponsor ]" />
+			</record>
+		</record>
+
+		<!--Reserve Stadium-->
+		<record>
+			<integer id="id" value="Trta" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="251301" type="use" value="Reserve Stadium[COMMENT: heading; team_information_panel; their reserve stadium]" />
+			<record id="widget_info">
+				<symbol id="class" value="stadium_button" />
+				<boolean id="ShCt" value="true" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="251301" type="use" value="Reserve Stadium[COMMENT: heading; team_information_panel; their reserve stadium]" />
+				<translation id="hint" translation_id="251301" type="use" value="Reserve Stadium[COMMENT: heading; team_information_panel; their reserve stadium]" />
+			</record>
+		</record>
+
+		<!--Youth Stadium-->
+		<record>
+			<integer id="id" value="Tyts" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="330819" type="use" value="Youth Stadium[COMMENT: heading; team_information_panel; their youth stadium]" />
+			<record id="widget_info">
+				<symbol id="class" value="stadium_button" />
+				<boolean id="ShCt" value="true" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="330819" type="use" value="Youth Stadium[COMMENT: heading; team_information_panel; their youth stadium]" />
+				<translation id="hint" translation_id="330819" type="use" value="Youth Stadium[COMMENT: heading; team_information_panel; their youth stadium]" />
+			</record>
+		</record>
+
+		<!--Training ground-->
+		<record>
+			<integer id="id" value="Ttgs" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="330717" type="use" value="Training Ground[COMMENT: heading; team_information_panel; their training ground]" />
+			<record id="widget_info">
+				<symbol id="class" value="stadium_button" />
+				<boolean id="ShCt" value="true" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="330717" type="use" value="Training Ground[COMMENT: heading; team_information_panel; their training ground]" />
+				<translation id="hint" translation_id="330717" type="use" value="Training Ground[COMMENT: heading; team_information_panel; their training ground]" />
+			</record>
+		</record>
+
+		<!--Planned stadium expansion-->
+		<record>
+			<integer id="id" value="CPSx" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="496368" type="use" value="Planned Stadium Works[COMMENT: AREA: Inbox; SUB-AREA: Stadium Work; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: heading; team_information_panel; planned works for stadium]" />
+			<record id="widget_info">
+				<symbol id="class" value="planned_stadium_expansion_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="496368" type="use" value="Planned Stadium Works[COMMENT: AREA: Inbox; SUB-AREA: Stadium Work; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: heading; team_information_panel; planned works for stadium]" />
+				<translation id="hint" translation_id="496368" type="use" value="Planned Stadium Works[COMMENT: AREA: Inbox; SUB-AREA: Stadium Work; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: heading; team_information_panel; planned works for stadium]" />
+			</record>
+		</record>
+
+		<!--Planned stadium move-->
+		<record>
+			<integer id="id" value="CPSm" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="496369" type="use" value="Planned Infrastructure Changes[COMMENT: AREA: Inbox; SUB-AREA: Stadium Work; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: heading; team_information_panel; planned new infrastructure for the club]" />
+			<record id="widget_info">
+				<symbol id="class" value="planned_stadium_expansion_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="496369" type="use" value="Planned Infrastructure Changes[COMMENT: AREA: Inbox; SUB-AREA: Stadium Work; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: heading; team_information_panel; planned new infrastructure for the club]" />
+				<translation id="hint" translation_id="496369" type="use" value="Planned Infrastructure Changes[COMMENT: AREA: Inbox; SUB-AREA: Stadium Work; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: heading; team_information_panel; planned new infrastructure for the club]" />
+			</record>
+		</record>
+
+		<!--Future stadium plans-->
+		<record>
+			<integer id="id" value="CPSp" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="443669" type="use" value="Future Stadium Plans[COMMENT: heading; team_information_panel; ongoing plans for club new stadium]" />
+			<record id="widget_info">
+				<symbol id="class" value="planned_stadium_expansion_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="443669" type="use" value="Future Stadium Plans[COMMENT: heading; team_information_panel; ongoing plans for club new stadium]" />
+				<translation id="hint" translation_id="443669" type="use" value="Future Stadium Plans[COMMENT: heading; team_information_panel; ongoing plans for club new stadium]" />
+			</record>
+		</record>
+
+		<!--Youth coaching status-->
+		<record>
+			<integer id="id" value="Cyos" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="325853" type="use" value="Junior Coaching[COMMENT: heading; team_information_panel; the standard of the team's youth setup coaching, NOTE: This is a minor string change - 'Youth Coaching' changed to 'Junior coaching'. Please use 'Top 10 Matches']" />
+			<record id="widget_info">
+				<symbol id="class" value="youth_coaching_status_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="325853" type="use" value="Junior Coaching[COMMENT: heading; team_information_panel; the standard of the team's youth setup coaching, NOTE: This is a minor string change - 'Youth Coaching' changed to 'Junior coaching'. Please use 'Top 10 Matches']" />
+				<translation id="hint" translation_id="325853" type="use" value="Junior Coaching[COMMENT: heading; team_information_panel; the standard of the team's youth setup coaching, NOTE: This is a minor string change - 'Youth Coaching' changed to 'Junior coaching'. Please use 'Top 10 Matches']" />
+			</record>
+		</record>
+
+		<!--Regular Stadium (if moved elsewhere temporarily while expanding your own)-->
+		<record>
+			<integer id="id" value="CRst" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="291336" type="use" value="Regular Stadium[COMMENT: heading; team_information_panel; regular stadium when no expansion process ongoing]" />
+			<record id="widget_info">
+				<symbol id="class" value="regular_stadium_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="291336" type="use" value="Regular Stadium[COMMENT: heading; team_information_panel; regular stadium when no expansion process ongoing]" />
+				<translation id="hint" translation_id="291336" type="use" value="Regular Stadium[COMMENT: heading; team_information_panel; regular stadium when no expansion process ongoing]" />
+			</record>
+		</record>
+
+		<!--Youth recruitment status-->
+		<record>
+			<integer id="id" value="Crcs" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="308084" type="use" value="Youth Recruitment[COMMENT: heading; team_information_panel; the standard of the team's youth recruitment network]" />
+			<record id="widget_info">
+				<symbol id="class" value="youth_recruitment_status_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="308084" type="use" value="Youth Recruitment[COMMENT: heading; team_information_panel; the standard of the team's youth recruitment network]" />
+				<translation id="hint" translation_id="308084" type="use" value="Youth Recruitment[COMMENT: heading; team_information_panel; the standard of the team's youth recruitment network]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="ttcl" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="292688" type="use" value="Foreground Colour" />
+			<translation id="hint" translation_id="345232" type="use" value="The primary text colour of the competition's title bar[COMMENT: editor hint text]" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="popup_colour_button" />
+				<record id="colour_selected_event" event_id="CDBd" event_flags="2" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="tbcl" />
+			<integer id="width" value="90" />
+			<translation id="name" translation_id="292689" type="use" value="Background Colour" />
+			<translation id="hint" translation_id="345231" type="use" value="The primary background colour of the competition's title bar[COMMENT: editor hint text]" />
+			<record id="widget_edit_info">
+				<symbol id="class" value="popup_colour_button" />
+				<record id="colour_selected_event" event_id="CDBd" event_flags="2" />
+			</record>
+		</record>
+
+		<!--social followers-->
+		<record>
+			<integer id="id" value="CsSF" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="557873" type="use" value="Social Media Followers[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: n/a]" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="name" translation_id="557873" type="use" value="Social Media Followers[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: n/a]" />
+				<translation id="name" translation_id="557873" type="use" value="Social Media Followers[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: n/a]" />
+			</record>
+		</record>
+		<record>
+			<integer id="id" value="CsSS" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="557874" type="use" value="Social Stature[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: how prominent is this club on (fictional) social media?]" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="name" translation_id="557874" type="use" value="Social Stature[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: how prominent is this club on (fictional) social media?]" />
+				<translation id="name" translation_id="557874" type="use" value="Social Stature[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: how prominent is this club on (fictional) social media?]" />
+			</record>
+		</record>
+		<record>
+			<integer id="id" value="CsST" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<translation id="name" translation_id="557875" type="use" value="Social Trendiness[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: how trendy is this club on (fictional) social media?]" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="name" translation_id="557875" type="use" value="Social Trendiness[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: how trendy is this club on (fictional) social media?]" />
+				<translation id="name" translation_id="557875" type="use" value="Social Trendiness[COMMENT: AREA: Club; SUB-AREA: Supporter Profile; FR: FM-3278; TONE: Formal; CHARLIMIT: None; NOTE: how trendy is this club on (fictional) social media?]" />
+			</record>
+		</record>
+
+		<record>
+			<integer id="id" value="CmSP" />
+			<integer id="minimum_width" value="100" />
+			<integer id="width" value="100" />
+			<flags id="customisation_context" value="none" />
+			<translation id="name" translation_id="595003" type="use" value="Set Piece Coaches Allowed[COMMENT: AREA: Club; SUB-AREA: Backroom advice staff suggestion; FR: FM-26866; TONE: Formal; CHARLIMIT: None; NOTE: Property for showing max number of set piece coaches currently allowed at club]" />
+			<record id="widget_info">
+				<symbol id="class" value="number_label" />
+				<flags id="alignment" value="centre" />
+				<colour id="number_colour" name="staff overview set piece coach colour" />
+			</record>
+
+			<record id="column_heading">
+				<flags id="alignment" value="centre" />
+				<translation id="text" translation_id="595003" type="use" value="Set Piece Coaches Allowed[COMMENT: AREA: Club; SUB-AREA: Backroom advice staff suggestion; FR: FM-26866; TONE: Formal; CHARLIMIT: None; NOTE: Property for showing max number of set piece coaches currently allowed at club]" />
+				<translation id="hint" translation_id="595003" type="use" value="Set Piece Coaches Allowed[COMMENT: AREA: Club; SUB-AREA: Backroom advice staff suggestion; FR: FM-26866; TONE: Formal; CHARLIMIT: None; NOTE: Property for showing max number of set piece coaches currently allowed at club]" />
+			</record>
+		</record>
+
+		<!-- Club six letter name -->
+		<record>
+			<integer id="id" value="Cl3n" />
+			<integer id="width" value="-1" />
+
+			<translation id="name" translation_id="293087" type="use" value="3 Letter Name" />
+			<translation id="hint" type="use" value="The three letter name used on scoreboards" />
+			<record id="widget_info">
+				<symbol id="class" value="label" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="edit_box" />
+				<flags id="edit_event" value="CDBd" />
+				<list id="attachments">
+					<record class="max_length_attachment">
+						<integer id="length" value="3" />
+					</record>
+				</list>
+			</record>
+		</record>
+		
+		<!-- HASHTAG -->
+		<record>
+			<integer id="id" value="TCht" />
+			<integer id="width" value="-1" />
+
+        <translation id="name" translation_id="452026" type="use" value="Hashtag" />
+			<record id="widget_info">
+				<symbol id="class" value="label" />
+			</record>
+
+			<record id="widget_edit_info">
+				<symbol id="class" value="edit_box" />
+				<flags id="edit_event" value="CDBd" />
+			</record>
+		</record>
+
+		<!-- STOP OUTSIDE TAKEOVERS -->
+		<record>
+			<integer id="id" value="Csot" />
+			<integer id="width" value="60" />
+        <translation id="name" translation_id="510177" type="use" value="Stop Outside Takeovers[COMMENT: AREA: editor; SUB-AREA: allowed takeovers; FR-BN: 28943; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: editor, tick box indicating that a club will never be sold to outside sources]" />
+        <translation id="hint" translation_id="510178" type="use" value="This indicates that a club will never be sold to outside sources.[COMMENT: AREA: editor; SUB-AREA: allowed takeovers; FR-BN: 28943; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: editor, tick box indicating that a club will never be sold to outside sources]" />
+	<record id="widget_info">
+				<symbol id="class" value="yes_no_label" />
+				<boolean id="ynwo" value="true" />
+			</record>
+				<record id="widget_edit_info">
+				<symbol id="class" value="check_box" />
+				<integer id="click_event" value="CDBd" />
+			</record>
+		</record>
+		
+		
+<!-- YEAR FOUNDED -->
+		<record>
+			<integer id="id" value="Cyfn" />
+			<integer id="width" value="70" />
+			<translation id="name" translation_id="257214" type="use" value="Year Founded" />
+			<record id="widget_info">
+				<symbol id="class" value="dashed_number_label" />
+				<boolean id="NumF" value="0" />
+			</record>
+	<record id="widget_edit_info">
+				<symbol id="class" value="edit_box" />
+				<flags id="edit_event" value="CDBd" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="257214" type="use" value="Year Founded" />
+				<translation id="hint" translation_id="257214" type="use" value="Year Founded" />
+			</record>
+		</record>
+
+	</list>
+
+</record>
