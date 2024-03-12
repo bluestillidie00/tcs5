@@ -7380,7 +7380,7 @@
 			</record>
 			<record id="column_widget_properties">
 				<flags id="alignment" value="left,centre_y" />
-				<flags id="use_format" value="very_short" />
+				<flags id="use_format" value="short" />
 				<!-- default nation format should be TLA -->
 			</record>
 			<record id="column_heading">
@@ -27273,7 +27273,7 @@
 			</record>
 
 		</record>
-
+		
 		<record>
 			<integer id="id" value="Pnad" />
 			<flags id="aliased_property_id" value="Pers" />
@@ -28536,6 +28536,35 @@
 			</record>
 		</record>
 		<!-- DEBUG ONLY -->
+		
+		<record>
+			<integer id="id" value="tCDT" />
+			<flags id="aliased_property_id" value="Pcww" />
+			<boolean id="dont_use_aliased_property_id_for_sort" value="true" />
+			<integer id="width" value="90" />
+			<translation id="name" type="use" value="TCS Contract Details" />
+					<flags id="customisation_context" value="any" />
+			<translation id="category" translation_id="230163" type="use" value="Contract" />
+			<translation id="subcategory" translation_id="248359" type="use" value="General" />
+			<boolean id="locked" value="true" />
+			<integer id="auto_hide_priority" value="10" />
+			<!-- a very high chance of not being hidden for this property (lower value = higher priority) -->
+			<record id="widget_info">
+				<symbol id="class" value="client_object_viewer_xml_panel" />
+				<string id="file" value="team/tcs/squad/wages" />
+			</record>
+
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+<translation id="text" translation_id="227799" type="use" value="Wage" />
+				<translation id="hint" translation_id="227799" type="use" value="Wage" />
+			</record>
+
+		</record>
+
 
 	</list>
 
