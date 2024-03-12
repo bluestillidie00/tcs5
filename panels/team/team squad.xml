@@ -232,11 +232,11 @@
 								<translation id="name" type="use" value="TCS General Squad View"/>
 								<record id="view">
 									<flags id="PtsL"/>
-									<record id="Pnat" width="22"/>
+									<record id="Pnat" use_format="very_short" width="18"/>
 									<flags id="Pnfo"/>
 									<flags id="PPDW"/>
 									<flags id="PpsC"/>
-									<flags id="PPst"/>
+									<!-- <flags id="PPst"/> -->
 									<flags id="Pcac"/>
 									<flags id="Ppab"/>
 									<flags id="Pdet"/>
@@ -244,19 +244,17 @@
 									<flags id="Ptwr"/>
 									<flags id="PcOI"/>
 									<flags id="PftI"/>
-									<flags id="Pmor"/>
+									<record id="Pmor" width="12"/>
 									<flags id="Poap"/>
-									<flags id="POmg"/>
 									<flags id="Pgls"/>
-									<flags id="POgg"/>
 									<flags id="PNxg"/>
-									<flags id="PNx9"/>
+									<flags id="PxGO"/>
 									<flags id="Pfrm"/>
 									<flags id="Poav"/>
 									<flags id="LMrt"/>
 									<flags id="Ptrt"/>
 									<flags id="Pdva"/>
-									<flags id="Pcww"/>
+									<flags id="tCDT"/>
 								</record>
 							</record>
 								
