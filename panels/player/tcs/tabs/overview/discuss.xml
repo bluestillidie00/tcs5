@@ -1,0 +1,115 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_fade">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container id="phit" class="person_discussion_panel" file="none">
+			<record id="object_property" get_property="Pers"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<boolean id="should_force_refresh" value="true"/>
+
+			<container id="phit" colour="fg">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top, fill"/>
+					<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+
+					<container class="plain_box" appearance="boxes/inner/subtle/paper">
+						<attachment_group class="vertical_arrange_autosize"/>
+
+						<container class="client_object_viewer_xml_panel" id="diPE">
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" auto_size="horizontal"/>
+
+							<widget class="object_portrait_picture" id="plpc" auto_size="all" width="80" height="80" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
+
+							<!-- person name -->
+							<widget class="person_button_with_job_description" id="pnam" width="200" height="80" spec="text" style="bold" alignment="left" size="14" info_popup_enabled="true">
+								<record id="object_property" get_property="objt" set_property="valu"/>
+							</widget>
+
+							<container class="plain_box" width="10">
+								<attachment_group class="vertical_arrange_autosize"/>
+							</container>
+
+							<container class="plain_box" width="500" appearance="boxes/custom/quick chat/ai_quick_chat_speech" alignment="left" red_replacement="bg darker">
+								<attachment_group class="vertical_arrange_autosize"/>
+								<widget class="text" id="stQU" height="50" alignment="left, centre_y">
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<container class="scrolling_box">
+
+						<container class="plain_box">
+							<attachment_group class="vertical_arrange_autosize"/>
+
+							<container class="plain_box" id="QCbo" appearance="boxes/inner/subtle/paper" colour="text" size="large" navigation_container="true">
+								<translation id="title" translation_id="509194" type="use" value="Quick Chat[COMMENT: AREA: Player Discussion; SUB-AREA: Title text; FR-BN: n/a; TONE: Formal; CHARLIMIT: n/a; REF-ID: n/a; NOTE: appears as a title for a range of options]"/>
+								<attachment_group class="vertical_arrange_autosize"/>
+
+								<!-- quick chat topics added here -->
+							</container>
+
+							<container class="plain_box" id="PCbo" appearance="boxes/inner/subtle/paper" colour="text" size="large" navigation_container="true">
+								<translation id="title" translation_id="312505" type="use" value="Private Chat[COMMENT: have a chat with own of your players]"/>
+								<attachment_group class="vertical_arrange_autosize"/>
+
+								<!-- private chat topics added here -->
+							</container>
+						</container>
+					</container>
+				</container>
+
+				<container>
+					<attachment class="vertical_arrange" vertical_alignment="centre_x,middle"/>
+					<record id="object_property" get_property="PHcr" set_property="hidn"/>
+
+					<record id="default_properties" auto_size="vertical" alignment="centre_x"/>
+
+					<container>
+						<layout class="vertical_arrange_autosize"/>
+
+						<container>
+							<layout class="horizontal_arrange_vertical_autosize" horizontal_alignment="centre_x,middle"/>
+
+							<container height="75" width="75">
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+								<widget class="value_based_picture" scale_picture="true" file="none">
+									<list id="value_list">
+										<record value="0" file="icons/custom/staff/unemployed"/>
+									</list>
+									<record id="object_property">
+										<list id="get_properties">
+											<record get_property="Pcjo" set_property="valu" dont_set_hint="true"/>
+										</list>
+									</record>
+								</widget>
+
+								<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="true">
+									<record id="object_property" get_property="Pclb" set_property="objt" dont_set_hint="true"/>
+								</widget>
+
+							</container>
+						</container>
+					</container>
+
+					<widget class="spacer" height="8"/>
+
+					<widget class="text" colour="faded text">
+						<translation id="text" translation_id="284138" type="use" value="No Training Information Available"/>
+					</widget>
+
+					<widget class="player_extra_details_text" multiline="false">
+						<record id="object_property" get_property="PExD"/>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

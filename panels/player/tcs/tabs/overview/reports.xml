@@ -1,0 +1,20 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_fade">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<!-- COACH REPORTS / WHEN PLAYER IS HUMAN CONTROLLED -->
+		<widget class="player_scout_reports_panel" type="2" file="player/tcs/tabs/overview/widgets/reports_coach">
+			<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+		</widget>
+
+		<!-- SCOUT REPORTS / WHEN PLAYER ISN'T HUMAN CONTROLLED -->
+	<widget class="player_scout_reports_panel" type="1" file="player/tcs/tabs/overview/widgets/reports_scout">
+			<record id="object_property" get_property="PHcr" set_property="hidn"/>
+		</widget>
+
+	</container>
+</panel>
