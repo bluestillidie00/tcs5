@@ -1,0 +1,307 @@
+﻿<panel save_session_state="true" save_default_state="true">
+	<flags id="cham" value="tables/custom/league/champions/row"/>
+	<boolean id="use_pro_con_long_strings" value="true"/>
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!-- HEADER -->
+	<container class="main_box" navigation_container="true">
+		<string id="remove_if" value="use_simplified_scouting"/>
+
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" horizontal_offset="0" vertical_gap="0" vertical_offset="0"/>
+
+		<!-- LEFT -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="2" vertical_offset="0"/>
+
+			<!-- OVERALL REPORT TEXT -->
+			<widget class="label" id="perl" size="normal" colour="contrast" auto_size="all" font="title">
+				<translation id="text" translation_id="539024" type="use"/>
+			</widget>
+
+			<!-- REPORT FROM -->
+			<widget class="text" id="lsdt" auto_size="all"/>
+
+		</container>
+
+		<!-- RIGHT HAND SIDE -->
+		<container width="400">
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="right"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="10"/>
+
+			<!-- SCOUTING KNOWLEDGE ICON -->
+			<widget class="icon_button" id="khtx" appearance="" icon="icons/16px/scouting" font="label" colour="fg" auto_size="all" size="medium"/>
+			<!-- SCOUTING KNOWLEDGE -->
+			<widget class="label" id="rdtx" colour="disabled" auto_size="all" size="medium"/>
+
+			<!-- COMPLETED ON -->
+			<container hidden="true">
+				<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0" vertical_gap="0"/>
+				<widget class="button" font="text" colour="faded text" size="medium" appearance="none" id="ytab" auto_size="all" mouse_entered_event="ytin" mouse_exited_event="ytou"/>
+			</container>
+		</container>
+	</container>
+
+	<!-- IF WE HAVE SCOUT REPORT -->
+	<container id="scou">
+		<layout class="horizontal_arrange" horizontal_layout="-10,-9,-9" horizontal_gap="8"/>
+
+		<widget class="player_reports_overview_summary_panel" id="proS" file="player/player reports overview summary vertical" always_recolour_wage_cost_text="true" recommendation_widget_mode="0" mode="1"/>
+
+
+		<!-- LEFT -->
+		<container class="main_subtle_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+		<widget class="player_reports_overview_summary_panel" id="proS" file="player/player reports overview summary vertical" always_recolour_wage_cost_text="true" recommendation_widget_mode="0" mode="1"/>
+
+
+			<!-- STARS -->
+			<container id="sTRS">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12"/>
+				
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0"/>
+
+					<!-- SCOUT SUMMARY LABEL -->
+					<widget class="text" font="label" alignment="left" auto_size="vertical">
+						<translation id="text" translation_id="324456" type="use"/>
+					</widget>
+
+					<!-- SUMMARY -->
+					<widget class="text" id="chRC" alignment="left,centre_y" multiline="true" style="bold" colour="text" auto_size="vertical" size="xxarge"/>
+				</container>
+
+				<widget class="horizontal_subtle_divider" height="2"/>
+
+				<!-- CA -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6"/>
+
+					<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+						<translation id="text" translation_id="251893" type="use"/>
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1"/>
+
+						<!-- STARS -->
+						<widget class="scout_stars_label" id="cast" height="18" alignment="left, centre_y" mode="1">
+							<record id="object_property" get_property="Pcab"/>
+						</widget>
+
+						<!-- STARS LABEL -->
+						<widget class="text" id="crTX" auto_size="vertical" alignment="left" colour="faded text"/>
+					</container>
+				</container>
+
+				<!-- PA -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6"/>
+
+					<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+						<translation id="text" translation_id="251894" type="use"/>
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1"/>
+
+						<!-- STARS -->
+						<widget class="scout_stars_label" id="past" height="18" alignment="left" mode="2">
+							<record id="object_property" get_property="Ppab"/>
+						</widget>
+
+						<!-- STARS LABEL -->
+						<widget class="text" id="prTX" auto_size="vertical" alignment="left" colour="faded text"/>
+					</container>
+				</container>
+
+				<widget class="horizontal_subtle_divider" height="2"/>
+			</container>
+				
+			<!--Stats/Squad Comparison section on RHS-->
+			<container id="righ" draw_horizontal_dividers="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" horizontal_inset="0" vertical_gap="10"/>
+
+				<widget class="player_positions_indicator_panel" id="ppos" height="70" file="player/player positions indicator panel selector">
+					<string id="remove_if" value="use_simplified_scouting"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<container draw_horizontal_dividers="true" navigation_container="true">
+					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" horizontal_inset="0" vertical_gap="5"/>
+
+					<!--Squad comparison table-->
+					<container id="sqdC">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+					
+						<widget class="link_button_title" id="sqcw" size="medium" alignment="left, centre_y">
+							<string id="remove_if" value="is_fmt"/>
+						</widget>
+						<widget class="text" id="sqcw" font="title" size="medium" auto_size="vertical">
+							<string id="create_if" value="is_fmt"/>
+						</widget>
+
+						<!-- Ability list table -->
+						<widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="26,-5,-3,-3" sort_disabled="true">
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" colour="faded text"/>
+								<record indx="1" alignment="left,centre_y"/>
+								<record indx="2" alignment="left,centre_y" navigation_focus_target="false"/>
+								<record indx="3" alignment="left,centre_y" navigation_focus_target="false"/>
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5"/>
+								<record indx="1" sort_disabled="true">
+									<record id="column_heading">
+										<flags id="alignment" value="left,centre_y"/>
+										<translation id="text" translation_id="227966" type="use" value="Player"/>
+									</record>
+								</record>
+								<record indx="2" sort_disabled="true">
+									<record id="column_heading">
+										<flags id="alignment" value="left,centre_y"/>
+										<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]"/>
+										<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]"/>
+									</record>
+								</record>
+								<record indx="3" sort_disabled="true">
+									<record id="column_heading">
+										<flags id="alignment" value="left,centre_y"/>
+										<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]"/>
+										<translation id="hint" translation_id="310136" type="use" value="Potential Ability[COMMENT: contract offer screen - comments table]"/>
+									</record>
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<!--FMT Position abilty widget-->
+					<container class="main_box_no_margin">
+						<string id="create_if" value="use_simplified_scouting"/>
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+						<widget class="player_positions_indicator_panel" id="pPOS" file="player/player positions indicator report overview">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+
+						<container height="20">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+							<container height="20" width="100">
+								<attachment_group class="horizontal_arrange_autosize" horizontal_gap="8"/>
+								<widget class="text" auto_size="all" colour="faded text">
+									<translation id="text" translation_id="230000" type="use" value="Left Foot"/>
+								</widget>
+
+								<widget class="footedness_label" id="fotL" alignment="left" auto_size="all" format="[%string#1]" multiline="false">
+									<record id="object_property" get_property="PlfG" set_property="valu"/>
+								</widget>
+							</container>
+
+							<container height="20" width="100">
+								<attachment_group class="horizontal_arrange_autosize" horizontal_gap="8"/>
+								<widget class="text" auto_size="all" colour="faded text">
+									<translation id="text" translation_id="230001" type="use" value="Right Foot"/>
+								</widget>
+
+								<widget class="footedness_label" id="fotR" alignment="left" auto_size="all" format="[%string#1]" multiline="false">
+									<record id="object_property" get_property="PrfG" set_property="valu"/>
+								</widget>
+							</container>
+						</container>
+					</container>
+
+				</container>
+			</container>
+
+
+		</container>
+
+		<!-- PROS AND CONS -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+
+			<!-- PROS -->
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+
+				<widget class="label" font="title" colour="fg positive" alignment="left,centre_y" size="large" auto_size="vertical">
+					<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
+				</widget>
+
+				<widget class="table" id="tpro" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_focus_target="true" default_sort_column="0">
+					<list id="column_table_properties">
+						<record index="0" sort_ascending="false"/>
+					</list>
+				</widget>
+				<widget class="text" id="nPro" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+			</container>
+
+			<!-- CONS -->
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+				<widget class="label" font="title" colour="fg negative" alignment="left,centre_y" size="large" auto_size="vertical">
+					<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]"/>
+				</widget>
+
+				<widget class="table" id="tcon" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_focus_target="true" default_sort_column="0">
+					<list id="column_table_properties">
+						<record index="0" sort_ascending="false"/>
+					</list>
+				</widget>
+				<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+			</container>
+		</container>
+		
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+
+			<!--Data hub widgets-->
+			<container id="dhbW" class="main_subtle_box">
+				<string id="remove_if" value="is_fmt"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="player_additional_stats_panel" id="astA" file="player/player additional stats mini report attacking" colour="faded text">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+				<widget class="player_additional_stats_panel" id="asCr" file="player/player additional stats mini report creative" colour="faded text">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+				<widget class="player_additional_stats_panel" id="astP" file="player/player additional stats mini report passing" colour="faded text">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+				<widget class="player_additional_stats_panel" id="astD" file="player/player additional stats mini report defending" colour="faded text">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<widget class="data_analyst_visualisation_widget" id="visU" hidden="true" visualisation_type="polygon" data_type="player" category="defensive_wide_midfielder" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<record id="object_property" get_property="PclC" set_property="comp"/>
+				</widget>
+			</container>
+				
+			<container class="main_subtle_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				
+				
+				<widget file="player/tcs/selector/big/reports/match report" class="player_match_report_small_panel" id="loan" late_loading="true">
+					<translation id="title" translation_id="420686" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+
+	<!-- NO REPORT -->
+	<container id="norp" hidden="true" class="client_object_viewer_xml_panel" file="player/tcs/selector/big/reports/overall/noreport">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</container>
+</panel>
