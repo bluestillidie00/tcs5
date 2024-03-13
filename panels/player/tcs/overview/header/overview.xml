@@ -1,0 +1,125 @@
+<!-- PANEL THAT SHOWS AT THE TOP OF THE PLAYER OVERVIEW -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- MAIN CONTAINER -->
+	<container class="tcs_box" appearance="tcs/boxes/main/outline/header/paper" rrep="primary" brep="tcs_accent" draw_vertical_dividers="true">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+
+		<!-- PLAYER INFO -->
+		<container width="520">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+				<!-- CONTAINER HOLDING KIT AND PLAER PIC -->
+				<container width="280">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<record id="default_properties" save_session_state="true" dont_set_embedded_title="true" >
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</record>
+
+					<!-- STADIUM SELECTOR 
+					<widget file="player/tcs/selector/header/playerpic/stadium_sel" id="STAD" class="client_object_viewer_selector_panel"  default_item="STAp" /> -->
+					
+					<!-- FACE SELECTOR -->
+					<widget file="player/tcs/overview/header/selectors/playerpic/selector" id="FACE" class="client_object_viewer_selector_panel"  default_item="defa" /> 
+				</container>
+
+				<!-- LOGOS AND EXTRA DETAILS -->
+				<container width="220" priority="1">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+					<container height="55">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+						<!-- CLUB -->
+						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="bg lighter" brep="primary">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<!-- IF NO CLUB -->
+							<widget class="value_based_picture" scale_picture="true" file="none">
+								<list id="value_list">
+									<record value="0" file="tcs/icons/unemployed/img"/>
+								</list>
+								<record id="object_property">
+									<list id="get_properties">
+										<record get_property="Pcjo" set_property="valu" dont_set_hint="true"/>
+									</list>
+								</record>
+							</widget>
+
+							<!-- IF CLUB -->
+							<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true">
+								<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt"/>
+							</widget>
+						</container>
+
+						<!-- NATION LOGO -->
+						<container class="tcs_box" appearance="tcs/boxes/main/outline/paper" rrep="bg lighter" brep="primary">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true">
+								<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt"/>
+							</widget>
+						</container>
+					</container>
+
+					<!-- SMALL SELECTOR -->
+					<container>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<container class="client_object_viewer_selector_panel" id="tcsH" file="player/player overview small header selector panel" save_session_state="true">
+							<integer id="default_for_unemployed_managers" value="pers"/>
+							<integer id="default_for_international_managers_other_team" value="pers"/>
+							<integer id="default_for_everyone_else" value="pers"/>
+							<integer id="default_for_versus_mode" value="pers"/>
+						</container>
+					</container>
+				</container>
+			</container>
+
+		</container>
+
+		<container class="horizontal_adaptive_container" gap="16" id="left" draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+			<record id="default_properties" default_width="-1" minimum_width="340"/>
+
+			<container priority="1">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<container class="client_object_viewer_selector_panel" id="tcHl" file="player/player overview header selector panel" save_session_state="true">
+					<integer id="default_for_unemployed_managers" value="tpAb"/>
+					<integer id="default_for_international_managers_other_team" value="tpAb"/>
+					<integer id="default_for_everyone_else" value="tpAb"/>
+					<integer id="default_for_versus_mode" value="tpAb"/>
+				</container>
+			</container>
+
+			<container priority="2">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<container class="client_object_viewer_selector_panel" id="tcHm" file="player/player overview header selector panel" save_session_state="true">
+					<integer id="default_for_unemployed_managers" value="tPCo"/>
+					<integer id="default_for_international_managers_other_team" value="tPCo"/>
+					<integer id="default_for_everyone_else" value="tPCo"/>
+					<integer id="default_for_versus_mode" value="tPCo"/>
+				</container>
+			</container>
+
+			<container priority="3">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<container class="client_object_viewer_selector_panel" id="tcHR" file="player/player overview header selector panel" save_session_state="true">
+					<integer id="default_for_unemployed_managers" value="Pcrs"/>
+					<integer id="default_for_international_managers_other_team" value="Pcrs"/>
+					<integer id="default_for_everyone_else" value="Pcrs"/>
+					<integer id="default_for_versus_mode" value="Pcrs"/>
+				</container>
+			</container>
+
+		</container>
+
+	</container>
+</panel>
