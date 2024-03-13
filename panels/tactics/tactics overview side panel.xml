@@ -101,7 +101,7 @@
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 			
 				<!-- ANALYSIS BUTTON -->
-				<widget class="icon_button" width="40" appearance="buttons/primary/normal/button" rrep="bg green lighter" icon_colour="fg" icon="icons/16px/personality" icon_alignment="centre_x,centre_y" text="" id="AbtO">
+				<widget class="icon_button" width="40" appearance="buttons/primary/normal/button" rrep="bg green lighter" icon_colour="fg" icon="icons/16px/report" icon_alignment="centre_x,centre_y" text="" id="AbtO">
 					<translation id="hint" translation_id="229719" type="use"/>
 							
 					<event id="click_event" event_id="TANL"/>
