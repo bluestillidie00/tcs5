@@ -1,0 +1,160 @@
+<!-- PANEL THAT DISPLAYS THE PLAYER FACE -->
+<!-- THIS VERSION FEATURES THE FULL KIT -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- PLAYER KIT -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true"/>
+
+		<!-- OUTFIELD -->
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<record id="object_property" get_property="Pigo" set_property="hidn"/>
+
+			<!-- BACK OF KIT -->
+			<widget id="cKit" class="kit_icon" image_alignment="top, left" scale_picture="true" file="player/tcs/overview/header/selectors/playerpic/back_full" kit_path="default" dont_set_hint="true" wants_mouse_events="false">
+				<layout class="stick_to_sides_attachment" alignment="top"/>
+				<layout class="stick_to_sides_attachment" alignment="left" inset="-30"/>
+				<record id="object_property" get_property="Pers" set_property="objt"/>
+			</widget>
+		</container>
+
+		<!-- GK -->
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<record id="object_property" get_property="Pigo" set_property="Shwn"/>
+
+			<!-- DUE TO GAME LIMITATIONS WE HAVE TO USE THE ZOOMED KIT FOR GOALKEEPERS -->
+			<widget id="cKit" class="kit_icon" width="170" image_alignment="centre" scale_picture="true" kit_path="zoomed/large" kit_number_path="large">
+				<record id="object_property" get_property="Pers" set_property="objt"/>
+			</widget>
+		</container>
+	</container>
+	
+	<!-- STATUS INDICATORS -->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+		<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6" width="32">
+			<layout class="stick_to_sides_attachment" alignment="top,left" inset="0,2"/>
+			<record id="object_property" get_property="Pnfa"/>
+		</widget>
+	</container>
+
+	<!-- PLAYER FACE -->
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+			<!-- SPACER -->
+			<container width="110"/>
+		
+			<!-- FACE -->
+			<container width="180">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<widget class="object_portrait_picture" id="face" image_alignment="centre,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<record id="object_property" get_property="objt"/>
+				</widget>
+		
+				<!-- BUTTON TO SHOW THE ID -->
+				<widget class="button" appearance="tcs/buttons/text/button" id="tID1">
+				
+					<event id="click_event" event_id="TuiD"/>
+					
+					<!-- THIS EVENT HIDES THE ID BUTTON PANEL -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="tID1"/>
+						</record>
+					</attachment>
+
+					<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="tID2"/>
+						</record>
+					</attachment>
+					
+					<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="plID"/>
+						</record>
+					</attachment>
+				</widget>
+
+				<!-- BUTTON TO CLOSE THE ID -->
+				<widget class="button" appearance="tcs/buttons/text/button" id="tID2" hidn="true">
+				
+					<event id="click_event" event_id="TuiD"/>
+					
+					<!-- THIS EVENT HIDES THE CLOSE ID BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="tID2"/>
+						</record>
+					</attachment>
+					
+					<!-- THIS BUTTON SHOWS THE OPEN ID BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="tID1"/>
+						</record>
+					</attachment>
+					
+					<!-- THIS BUTTON CLOSES THE ID -->
+					<attachment class="event_relay_attachment" event_id="TuiD">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="plID"/>
+						</record>
+					</attachment>
+				</widget>
+				
+			</container>
+
+			<!-- SPACER -->
+			<container/>
+		</container>
+		
+		<container id="plID" hidn="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
+			<animation class="slide_in_bottom_animation"/>
+
+			<container width="160">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>
+			
+				<widget class="edit_box" width="150" height="16" select_on_focus="true" alignment="centre,centre_y" navigation_focus_target="false" wants_mouse_events="true" auto_size="vertical" appearance="tcs/boxes/uniqueid/box">
+					<record id="object_property" get_property="id" set_property="valu"/>
+				</widget>
+			</container>
+			
+		</container>
+		</container>
+		
+			<!-- CAPTAIN INDICATORS -->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+		
+			<widget class="picture" file="tcs/icons/captain/captain_alt" width="22" height="22" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre_x,bottom" rrep="fg accent">
+				<record id="object_property" get_property="PisC" set_property="Shwn"/>
+			</widget>
+			
+			<widget class="picture" file="tcs/icons/captain/vice" width="22" height="22" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre_x,bottom" rrep="fg tertiary">
+				<record id="object_property" get_property="PisV" set_property="Shwn"/>
+			</widget>
+		</container>
+
+</panel>

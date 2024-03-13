@@ -1,0 +1,38 @@
+<panel navigation_container="true">
+	<container id="SUBP">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+	
+	<widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="tcs/buttons/header/button" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="0" />
+	</widget>
+
+	<record id="default_properties" late_loading="true"/>
+
+	<!-- DEFAULT -->
+	<container class="client_object_viewer_xml_panel" file="player/tcs/overview/header/selectors/playerpic/default" id="defa" >
+		<translation id="title" type="use" value="Back of Kit (Zoomed)" />
+	</container>
+
+	<!-- FACE -->
+	<container class="client_object_viewer_xml_panel" file="player/tcs/overview/header/selectors/playerpic/faceonly" id="face">
+		<translation id="title" type="use" value="Face Only" />
+	</container>
+
+	<!-- BACK ZOOMED OUT -->
+	<container class="client_object_viewer_xml_panel" file="player/tcs/overview/header/selectors/playerpic/back_full_dummy" id="bkzm" valid_for_unemployed_player="false" >
+		<translation id="title" type="use" value="Back of Kit (Full)" />
+	</container>
+
+	<!-- BACK ZOOMED OUT -->
+	<container class="client_object_viewer_xml_panel" file="player/tcs/overview/header/selectors/playerpic/frontkit" id="fron" valid_for_unemployed_player="false" >
+		<translation id="title" type="use" value="Front" />
+	</container>
+	
+	<!-- Combined 
+	<container class="client_object_viewer_xml_panel" file="player/tcs/overview/header/selectors/playerpic/combined" id="comb">
+		<translation id="title" type="use" value="Combined" />
+	</container> -->
+
+</panel>
