@@ -280,7 +280,7 @@
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 				<translation id="title" translation_id="" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]"/>
 
-				<widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/trophy info" file="club/trophies" section="trov">
+				<widget class="team_container_honours_panel" id="tchp" file="club/tcs/fm24/overview/history/trophies" honour_subpanel_filename="club/tcs/fm24/overview/history/trophy info"  section="trov">
 					<translation id="title" translation_id="321147" type="use" value="Trophies Won"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
