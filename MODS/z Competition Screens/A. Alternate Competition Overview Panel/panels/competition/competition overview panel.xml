@@ -52,6 +52,46 @@
 					</container>
 				</container>
 			</container>
+			
+			
+						<!-- AWARD WINNERS -->
+			<container id="cawa" class="award_winners_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="292779" type="use"/>
+			</container>
+		
+			<!-- PREVIEW -->
+			<container id="CSmo" class="competition_managers_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="336480" type="use"/>
+			</container>	
+			
+			<!-- PREVIEW -->
+			<container id="cslp" class="league_positions_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="243284" type="use"/>
+			</container>	
+			
+			<!-- PREVIEW -->
+			<container id="cshi" class="competition_history_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="247942" type="use"/>
+			</container>	
+		
+			<!-- PREVIEW -->
+					<container id="ruls" late_loading="true" vsave_session_state="true">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<translation id="title" translation_id="255104" type="use"/>
+				<container class="client_object_viewer_selector_panel" file="competition/tcs/overview/rules_dummy"/>
+			</container>	
+			
+			
+			<!-- PREVIEW -->
+			<container id="cmPr" class="competition_preview_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="344751" type="use"/>
+			</container>
 		
 		</container>
 

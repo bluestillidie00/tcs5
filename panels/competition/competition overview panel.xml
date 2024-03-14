@@ -3,7 +3,7 @@
 
 	<container class="horizontal_adaptive_container" gap="8">
 
-		<container default_width="-666" class="tcs_tabs_primary" save_session_state="true" default_item="left">
+		<container default_width="-550" class="tcs_tabs_primary" save_session_state="true" default_item="left">
 		
 			<!-- LEFT PANEL -->
 			<container id="left">
@@ -46,12 +46,13 @@
 					<container class="tcs_box" default_width="-10">
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 			
-						<widget class="client_object_viewer_xml_panel" file="competition/tcs/overview/alternate/centre">
+						<widget class="client_object_viewer_xml_panel" file="competition/tcs/overview/centre">
 							<record id="object_property" get_property="objt" set_property="objt"/>
 						</widget>
 					</container>
 				</container>
 			</container>
+			
 			
 						<!-- AWARD WINNERS -->
 			<container id="cawa" class="award_winners_panel">
@@ -94,10 +95,9 @@
 		
 		</container>
 
-		<container default_width="-333">
-			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+		<container default_width="-333" class="vertical_adaptive_container">
 		
-			<container class="tcs_box" id="cmpS" minimum_width="625" priority="1" default_width="-3" navigation_container="true">
+			<container class="tcs_box" id="cmpS" priority="1" default_height="560" >
 				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8"/>
 
 				<widget class="link_button_title" section="cspl">
@@ -105,59 +105,264 @@
 					<translation id="text" translation_id="416342" type="use" value="Player Stats[COMMENT: competition overview player stats panel; panel title]"/>
 				</widget>
 
-				<container class="vertical_adaptive_container" inset="0" offset="0" draw_horizontal_dividers="true">
+				<container class="vertical_adaptive_container" inset="0" offset="0" >
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
-					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="1" gap="15">
+					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="1" gap="12">
 
-						<record id="default_properties" file="competition/tcs/overview/alternate/player stats" maximum_items="10" default_width="-1" minimum_width="230"/>
-
-						<!-- CPS_GOALS-->
-						<container class="competition_player_stats_panel" type="2" priority="1" navigation_container="true">
-							<record id="object_property" get_property="objt" set_property="objt"/>
+						<container default_width="300">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container default_height="116"/>
+								
+								<!-- CPS_GOALS-->
+								<container class="competition_player_stats_panel" id="msc1" file="stats small" type="2" maximum_items="5" default_height="-1" priority="2" navigation_container="true">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+							
+							</container>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container class="contrast_box" appearance="boxes/contrast/no margin/top/paper" red_replacement="bg" default_height="40">
+									<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+ 
+									<widget class="picture" file="icons/custom/player stats/top goalscorer" rrep="fg" width="20" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+									
+									<widget class="text" alignment="centre_x,centre_y,can_scale" size="large" font="title" colour="fg" auto_size="horizontal">
+										<translation id="text" type="use" value="Top Goalscorer"/>
+									</widget>
+								
+								</container>
+								
+								<container class="contrast_box" appearance="boxes/contrast/no margin/bottom/paper" red_replacement="bg" default_height="121">
+									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+									
+									<widget class="picture" file="tcs/boxes/playerstats/paper" grep="fg" image_alignment="centre_x,centre_y" transparency="0.8"/>
+									
+									<container class="competition_player_stats_panel" id="msc2" file="stats large" type="2" maximum_items="1" priority="1" navigation_container="true">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</container>
+									
+								</container>
+								
+								<container default_height="-1"/>
+							
+							</container>
+						
 						</container>
-						<!-- CPS_AVERAGE_RATING -->
+						
+						<container default_width="300">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container default_height="116"/>
+								
+								<!-- CPS_GOALS-->
+								<container class="competition_player_stats_panel" id="msc1" file="stats small" type="27" maximum_items="5" default_height="-1" priority="2" navigation_container="true">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+							
+							</container>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container class="contrast_box" appearance="boxes/contrast/no margin/top/paper" red_replacement="bg" default_height="40">
+									<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+ 
+									<widget class="picture" file="icons/custom/player stats/average rating" rrep="fg" width="20" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+									
+									<widget class="text" alignment="centre_x,centre_y,can_scale" size="large" font="title" colour="fg" auto_size="horizontal">
+										<translation id="text" type="use" translation_id="227853"/>
+									</widget>
+								
+								</container>
+								
+								<container class="contrast_box" appearance="boxes/contrast/no margin/bottom/paper" red_replacement="bg" default_height="121">
+									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+									
+									<widget class="picture" file="tcs/boxes/playerstats/paper" grep="fg" image_alignment="centre_x,centre_y" transparency="0.8"/>
+									
+									<container class="competition_player_stats_panel" id="msc2" file="stats large" type="27" maximum_items="1" priority="1" navigation_container="true">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</container>
+									
+								</container>
+								
+								<container default_height="-1"/>
+							
+							</container>
+						
+						</container>
+						
+						<!-- CPS_AVERAGE_RATING 
 						<container class="competition_player_stats_panel" type="27" priority="2" navigation_container="true">
 							<record id="object_property" get_property="objt" set_property="objt"/>
-						</container>
+						</container>-->
 					
 					</container>
 
-					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="3">
-						<record id="default_properties" file="competition/tcs/overview/alternate/player stats" maximum_items="10" default_width="-1" minimum_width="230"/>
+					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="3" gap="12">
+						
+							<container default_width="300">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container default_height="116"/>
+								
+								<!-- CPS_GOALS-->
+								<container class="competition_player_stats_panel" id="msc1" file="stats small" type="5" maximum_items="5" default_height="-1" priority="2" navigation_container="true">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+							
+							</container>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container class="contrast_box" appearance="boxes/contrast/no margin/top/paper" red_replacement="bg" default_height="40">
+									<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+ 
+									<widget class="picture" file="icons/custom/player stats/assists" rrep="fg" width="20" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+									
+									<widget class="text" alignment="centre_x,centre_y,can_scale" size="large" font="title" colour="fg" auto_size="horizontal">
+										<translation id="text" type="use" translation_id="227847"/>
+									</widget>
+								
+								</container>
+								
+								<container class="contrast_box" appearance="boxes/contrast/no margin/bottom/paper" red_replacement="bg" default_height="121">
+									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+									
+									<widget class="picture" file="tcs/boxes/playerstats/paper" grep="fg" image_alignment="centre_x,centre_y" transparency="0.8"/>
+									
+									<container class="competition_player_stats_panel" id="msc2" file="stats large" type="5" maximum_items="1" priority="1" navigation_container="true">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</container>
+									
+								</container>
+								
+								<container default_height="-1"/>
+							
+							</container>
+						
+						</container>
+						
+							<container default_width="300">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container default_height="116"/>
+								
+								<!-- CPS_GOALS-->
+								<container class="competition_player_stats_panel" id="msc1" file="stats small" type="12" maximum_items="5" default_height="-1" priority="2" navigation_container="true">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+							
+							</container>
+							
+							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+							
+								<container class="contrast_box" appearance="boxes/contrast/no margin/top/paper" red_replacement="bg" default_height="40">
+									<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+ 
+									<widget class="picture" file="icons/custom/player stats/player of match" rrep="fg" width="20" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+									
+									<widget class="text" alignment="centre_x,centre_y,can_scale" size="large" font="title" colour="fg" auto_size="horizontal">
+										<translation id="text" type="use" translation_id="227859"/>
+									</widget>
+								
+								</container>
+								
+								<container class="contrast_box" appearance="boxes/contrast/no margin/bottom/paper" red_replacement="bg" default_height="121">
+									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+									
+									<widget class="picture" file="tcs/boxes/playerstats/paper" grep="fg" image_alignment="centre_x,centre_y" transparency="0.8"/>
+									
+									<container class="competition_player_stats_panel" id="msc2" file="stats large" type="12" maximum_items="1" priority="1" navigation_container="true">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</container>
+									
+								</container>
+								
+								<container default_height="-1"/>
+							
+							</container>
+						
+						</container>
 
-						<!-- CPS_MAN_OF_MATCH -->
+						<!-- CPS_MAN_OF_MATCH 
 						<container class="competition_player_stats_panel" type="12" priority="1" navigation_container="true">
 							<record id="object_property" get_property="objt" set_property="objt"/>
-						</container>
-						<!-- CPS_CLEAN_SHEETS -->
-						<container class="competition_player_stats_panel" type="20" priority="2" navigation_container="true">
+						</container> -->
+			
+						<!-- CPS_ASSISTS 
+						<container class="competition_player_stats_panel" type="5" priority="3" navigation_container="true">
 							<record id="object_property" get_property="objt" set_property="objt"/>
-						</container>
+						</container> -->
 					
 					</container>
 
-					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="3">
-						<record id="default_properties" file="competition/tcs/overview/alternate/player stats" maximum_items="10" default_width="-1" minimum_width="230"/>
-
-						<!-- CPS_ASSISTS -->
-						<container class="competition_player_stats_panel" type="5" priority="3" navigation_container="true">
-							<record id="object_property" get_property="objt" set_property="objt"/>
-						</container>
-						<!-- CPS_YELLOW_CARDS -->
-						<container class="competition_player_stats_panel" type="10" priority="3" navigation_container="true">
-							<record id="object_property" get_property="objt" set_property="objt"/>
-						</container>
-					</container>
 				</container>
 			</container>
 			
 			<!-- TEAM STATS -->
-			<container class="tcs_box">
+			<container default_height="-1" minimum_height="300" priority="2">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="420579" type="use" value="Team Overview[COMMENT: FR 8873; Section title for Competition Team Stats Overview Panel]"/>
 				
-				<container class="competition_stats_overview_panel" id="Tmst" file="competition/tcs/overview/alternate/team stats">
+				<container class="competition_preview_panel" id="Tmst" file="none">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
+					
+					<container class="main_contrast_box" red_replacement="pitch_box_background" minimum_width="520" default_width="-1" priority="1">
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+						<container class="inner_subtle_box" width="200" colour="white" alignment="centre" red_replacement="black">
+							<translation id="title" translation_id="420578" type="use" value="Highlighted Star Player[COMMENT: competition season preview panel, focus panel on a star player from any given team]"/>
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="10"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+							<container class="client_object_viewer_xml_panel" id="plIn" file="widgets/player vertical info panel"/>
+
+							<widget class="horizontal_divider"/>
+
+							<container class="client_object_viewer_xml_panel" id="plVl">
+								<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+								<widget class="transfer_value_label" auto_size="vertical" style="semi_bold" size="large" alignment="centre" colour="white">
+									<translation id="format" translation_id="383826" type="use" value="Valued at [%cash#1-roundsmall-short][COMMENT: FR 10661; player overview; string diaplyed a player's estimated monetary value]"/>
+									<record id="object_property" get_property="Pdva" dont_set_hint="true"/>
+								</widget>
+							</container>
+
+						</container>
+						<!-- Pitch with players -->
+						<container class="inner_subtle_box" appearance="boxes/titled/compact/paper" colour="white" alignment="centre">
+							<translation id="title" translation_id="420579" type="use" value="Media Dream Eleven[COMMENT: competition preview panel, label for a proposed media best eleven ahead of the competition starting]"/>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+							<widget class="pitch_with_tactics" id="mdPt"
+							        select_event="slic"
+							        icon_flags="show_selection_image,dont_allow_player_links,show_name,drop_initial_if_possible,dont_show_status_icons,show_team_name_hint"
+							        pitch_additional_touchline_pixels_left=".5"
+							        pitch_additional_touchline_pixels_bottom="0"
+							        pitch_draw_grass="false"
+							        pitch_perspective="0"
+							        pitch_draw_markings="false"
+							        pitch_length_percentage="110"
+							        allow_y_score_adjustment_for_roles="false"
+							        player_icon_file="tactics/tactics info panel team report"/>
+
+						</container>
+					</container>
+					
 				</container>
 			</container>
 		
