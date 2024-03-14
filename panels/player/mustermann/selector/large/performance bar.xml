@@ -1,0 +1,2515 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<container>
+		<attachment class="horizontal_arrange" horizontal_layout="-1,26" horizontal_gap="8"/>
+				
+		<!--PIZZA CHART-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			
+			<!--GRAPH UNDERLAY-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally">
+				
+				<container default_height="-1" minimum_height="1"/>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="picture" file="mustermann/barchart/bar back" red_replacement="bg int" blue_replacement="bg int" scale_picture="true" image_alignment="centre_x,centre_y" default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+
+			
+			</container>
+						
+			<!--ALL PLAYERS-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally" id="pcal">
+			
+				<container default_height="-1" minimum_height="1"/>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_xa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5"/>
+						<record id="object_property" get_property="PxA9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_npxg" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.2"/>
+						<record id="object_property" get_property="PNx9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_gls" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.4"/>
+						<record id="object_property" get_property="POgg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_shot" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.6"/>
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_hrs" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.8"/>
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_pressa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.0"/>
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_tck" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.2"/>
+						<record id="object_property" get_property="Pota"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_posswon" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.4"/>
+						<record id="object_property" get_property="POW9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_posslost" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.6"/>
+						<record id="object_property" get_property="POL9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_passes" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.8"/>
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_prgpasses" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.0"/>
+						<record id="object_property" get_property="PGR9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_all_drb" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.2"/>
+						<record id="object_property" get_property="Podr"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+			
+			</container>	
+			
+			<!--CENTRE BACKS-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally" id="pccd" hidden="true">
+			
+				<container default_height="-1" minimum_height="1"/>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_xa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5"/>
+						<record id="object_property" get_property="PxA9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_npxg" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.2"/>
+						<record id="object_property" get_property="PNx9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_gls" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.4"/>
+						<record id="object_property" get_property="POgg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_shot" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.6"/>
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_hrs" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.8"/>
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_pressa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.0"/>
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_tck" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.2"/>
+						<record id="object_property" get_property="Pota"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_posswon" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.4"/>
+						<record id="object_property" get_property="POW9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_posslost" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.6"/>
+						<record id="object_property" get_property="POL9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_passes" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.8"/>
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_prgpasses" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.0"/>
+						<record id="object_property" get_property="PGR9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_centre_back_drb" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.2"/>
+						<record id="object_property" get_property="Podr"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+			
+			</container>	
+
+			<!--FULL BACKS-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally" id="pcfb" hidden="true">
+			
+				<container default_height="-1" minimum_height="1"/>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_xa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5"/>
+						<record id="object_property" get_property="PxA9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_npxg" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.2"/>
+						<record id="object_property" get_property="PNx9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_gls" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.4"/>
+						<record id="object_property" get_property="POgg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_shot" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.6"/>
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_hrs" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.8"/>
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_pressa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.0"/>
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_tck" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.2"/>
+						<record id="object_property" get_property="Pota"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_posswon" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.4"/>
+						<record id="object_property" get_property="POW9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_posslost" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.6"/>
+						<record id="object_property" get_property="POL9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_passes" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.8"/>
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_prgpasses" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.0"/>
+						<record id="object_property" get_property="PGR9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_full_back_drb" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.2"/>
+						<record id="object_property" get_property="Podr"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+			
+			</container>			
+
+			<!--DEFENSIVE MIDFIELDERS-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally" id="pcdm" hidden="true">
+			
+				<container default_height="-1" minimum_height="1"/>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_xa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5"/>
+						<record id="object_property" get_property="PxA9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_npxg" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.2"/>
+						<record id="object_property" get_property="PNx9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_gls" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.4"/>
+						<record id="object_property" get_property="POgg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_shot" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.6"/>
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_hrs" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.8"/>
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_pressa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.0"/>
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_tck" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.2"/>
+						<record id="object_property" get_property="Pota"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_posswon" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.4"/>
+						<record id="object_property" get_property="POW9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_posslost" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.6"/>
+						<record id="object_property" get_property="POL9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_passes" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.8"/>
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_prgpasses" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.0"/>
+						<record id="object_property" get_property="PGR9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_central_midfielder_drb" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.2"/>
+						<record id="object_property" get_property="Podr"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+			
+			</container>				
+			
+			<!--ATTACKING MIDFIELDERS-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally" id="pcam" hidden="true">
+			
+				<container default_height="-1" minimum_height="1"/>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_xa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5"/>
+						<record id="object_property" get_property="PxA9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_npxg" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.2"/>
+						<record id="object_property" get_property="PNx9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_gls" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.4"/>
+						<record id="object_property" get_property="POgg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_shot" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.6"/>
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_hrs" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.8"/>
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_pressa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.0"/>
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_tck" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.2"/>
+						<record id="object_property" get_property="Pota"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_posswon" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.4"/>
+						<record id="object_property" get_property="POW9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_posslost" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.6"/>
+						<record id="object_property" get_property="POL9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_passes" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.8"/>
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_prgpasses" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.0"/>
+						<record id="object_property" get_property="PGR9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_attacking_midfielder_drb" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.2"/>
+						<record id="object_property" get_property="Podr"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+			
+			</container>	
+			
+			<!--FORWARDS-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally" id="pcfw" hidden="true">
+			
+				<container default_height="-1" minimum_height="1"/>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_xa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5"/>
+						<record id="object_property" get_property="PxA9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_npxg" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.2"/>
+						<record id="object_property" get_property="PNx9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_gls" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.4"/>
+						<record id="object_property" get_property="POgg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_shot" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.6"/>
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_hrs" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="0.8"/>
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_pressa" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.0"/>
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_tck" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.2"/>
+						<record id="object_property" get_property="Pota"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_posswon" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.4"/>
+						<record id="object_property" get_property="POW9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_posslost" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.6"/>
+						<record id="object_property" get_property="POL9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_passes" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="1.8"/>
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_prgpasses" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.0"/>
+						<record id="object_property" get_property="PGR9"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1"/>
+					
+					<widget class="bar_striker_drb" default_width="400">
+						<animation class="slide_in_left_animation" duration="0.5" delay="2.2"/>
+						<record id="object_property" get_property="Podr"/>
+					</widget>
+					
+					<container default_width="50"/>
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+			
+			</container>	
+						
+			<!--BAR BLOCKER-->
+			<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally">
+			
+				<container default_width="-1" background_colour="bg lighter"/>
+				
+				<container default_width="455"/>
+			
+			</container>
+			
+			<!--STATS-->
+			<container class="vertical_adaptive_container" gap="4" mode="distribute_equally">
+				
+				<container default_height="-1" minimum_height="1"/>
+				
+				<!--EXPECTED ASSISTS-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+												
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="bar_attack">
+							<translation id="text" type="use" translation_id="513484" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="PxA9" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>
+				
+				</container>
+				
+				<!--NON PENALTY EXPECTED GOALS-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="bar_attack">
+							<translation id="text" type="use" translation_id="552419" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="PNx9" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>
+				
+				</container>
+				
+				<!--GOALS-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="bar_attack">
+							<translation id="text" type="use" translation_id="227851" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="POgg" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--SHOTS-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="bar_attack">
+							<translation id="text" type="use" translation_id="291479" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="POsg" />
+						</widget>
+						
+						<widget class="dashed_record_percentage_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="faded text">
+							<record id="object_property" get_property="Post" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--HEADERS WON-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="bar_defend">
+							<translation id="text" type="use" translation_id="388158" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="POHg" />
+						</widget>
+						
+						<widget class="dashed_record_percentage_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="faded text">
+							<record id="object_property" get_property="POhr" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--PRESSURES ATTEMPTED-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="bar_defend">
+							<translation id="text" type="use" translation_id="554494" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="PRS9" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--TACKLES WON-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="bar_defend">
+							<translation id="text" type="use" translation_id="247389" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="Pota" />
+						</widget>
+						
+						<widget class="dashed_record_percentage_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="faded text">
+							<record id="object_property" get_property="POtr" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--POSSESSION WON-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="athletic_possession">
+							<translation id="text" type="use" translation_id="513437" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="POW9" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--POSSESSION LOST-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="athletic_possession">
+							<translation id="text" type="use" translation_id="513436" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="POL9" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--PASSES COMPLETED-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="athletic_possession">
+							<translation id="text" type="use" translation_id="513512" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="POpc" />
+						</widget>
+						
+						<widget class="dashed_record_percentage_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="faded text">
+							<record id="object_property" get_property="Popa" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--PROGRESSIVE PASSES-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="athletic_possession">
+							<translation id="text" type="use" translation_id="552423" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="PGR9" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<!--DRIBBLES-->
+				<container class="horizontal_adaptive_container" gap="4" mode="distribute_equally" default_height="25">
+				
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+						
+						
+						<widget class="label" auto_size="all" multiline="false" alignment="right,centre_y" colour="athletic_possession">
+							<translation id="text" type="use" translation_id="249422" value="" />
+						</widget>
+						
+						<widget class="dashed_number_label" auto_size="all" multiline="false" alignment="right,centre_y" colour="text">
+							<record id="object_property" get_property="Podr" />
+						</widget>
+
+					</container>
+					
+					<container default_width="401"/>
+
+					<container default_width="50"/>	
+				
+				</container>
+				
+				<container default_height="-1" minimum_height="1"/>
+
+			
+			</container>
+								
+		</container>
+		
+		<!--BUTTONS-->
+		<container>
+			<attachment class="vertical_arrange" vertical_layout="16,-1,26,26,26,26,26,26,26,-1,16,26" vertical_gap="8"/>
+			
+			<container/>
+			<container/>
+			
+			<!--GOALKEEPER-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--OPEN-->
+				<widget class="icon_button" id="opn7" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/goalkeeper" show_button_appearance="false">				
+					<translation id="hint" translation_id="539326" type="use" value="Goalkeepers"/>
+					<record id="primary_icon_properties" red_replacement="fg" blue_replacement="bg"/>
+					<event id="click_event" event_id="pbgk"/>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pccd"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfb"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcdm"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcam"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfw"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcal"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="pcgk"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="opn7"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbgk">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="clo7"/>
+						</record>
+					</attachment>					
+				</widget>
+				
+				<!--CLOSE-->
+				<widget class="icon_button" id="clo7" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/goalkeeper" show_button_appearance="false">				
+					<record id="primary_icon_properties" red_replacement="gimntext" blue_replacement="tcs_accent"/>
+				</widget>
+				
+			</container>
+						
+			<!--CENTRAL DEFENDER-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--OPEN-->
+				<widget class="icon_button" id="opn1" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/centre back" show_button_appearance="false">				
+					<translation id="hint" translation_id="539328" type="use" value="Centre-Backs"/>
+					<record id="primary_icon_properties" red_replacement="fg" blue_replacement="bg"/>
+					<event id="click_event" event_id="pbcd"/>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="pccd"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfb"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcdm"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcam"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfw"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcal"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcgk"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="opn1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn7"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="clo1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbcd">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo7"/>
+						</record>
+					</attachment>					
+				</widget>
+				
+				<!--CLOSE-->
+				<widget class="icon_button" id="clo1" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/centre back" show_button_appearance="false">				
+					<record id="primary_icon_properties" red_replacement="gimntext" blue_replacement="tcs_accent"/>
+				</widget>
+				
+			</container>
+			
+			<!--FULL BACK-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--OPEN-->
+				<widget class="icon_button" id="opn2" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/full back" show_button_appearance="false">				
+					<translation id="hint" translation_id="539327" type="use" value="Full-Backs"/>
+					<record id="primary_icon_properties" red_replacement="fg" blue_replacement="bg"/>
+					<event id="click_event" event_id="pbfb"/>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pccd"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="pcfb"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcdm"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcam"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfw"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcal"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcgk"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="opn2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn7"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="clo2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfb">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo7"/>
+						</record>
+					</attachment>					
+				</widget>
+				
+				<!--CLOSE-->
+				<widget class="icon_button" id="clo2" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/full back" show_button_appearance="false">				
+					<record id="primary_icon_properties" red_replacement="gimntext" blue_replacement="tcs_accent"/>
+				</widget>
+				
+			</container>
+			
+			<!--DEFENSIVE MIDFIELDER-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--OPEN-->
+				<widget class="icon_button" id="opn3" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/defensive midfielder" show_button_appearance="false">				
+					<translation id="hint" translation_id="539330" type="use" value="Defensive Midfielders"/>
+					<record id="primary_icon_properties" red_replacement="fg" blue_replacement="bg"/>
+					<event id="click_event" event_id="pbdm"/>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pccd"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfb"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="pcdm"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcam"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfw"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcal"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcgk"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="opn3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn7"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="clo3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbdm">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo7"/>
+						</record>
+					</attachment>					
+				</widget>
+				
+				<!--CLOSE-->
+				<widget class="icon_button" id="clo3" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/defensive midfielder" show_button_appearance="false">				
+					<record id="primary_icon_properties" red_replacement="gimntext" blue_replacement="tcs_accent"/>
+				</widget>
+				
+			</container>
+			
+			<!--ATTACKING MIDFIELDER-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--OPEN-->
+				<widget class="icon_button" id="opn4" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/attacking midfielder" show_button_appearance="false">				
+					<translation id="hint" translation_id="539333" type="use" value="Attacking Midfielders"/>
+					<record id="primary_icon_properties" red_replacement="fg" blue_replacement="bg"/>
+					<event id="click_event" event_id="pbam"/>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pccd"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfb"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcdm"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="pcam"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfw"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcal"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcgk"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="opn4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn7"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="clo4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbam">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo7"/>
+						</record>
+					</attachment>					
+				</widget>
+				
+				<!--CLOSE-->
+				<widget class="icon_button" id="clo4" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/attacking midfielder" show_button_appearance="false">				
+					<record id="primary_icon_properties" red_replacement="gimntext" blue_replacement="tcs_accent"/>
+				</widget>
+				
+			</container>
+			
+			<!--FORWARD-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--OPEN-->
+				<widget class="icon_button" id="opn5" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/forward" show_button_appearance="false">				
+					<translation id="hint" translation_id="309040" type="use" value="Forwards"/>
+					<record id="primary_icon_properties" red_replacement="fg" blue_replacement="bg"/>
+					<event id="click_event" event_id="pbfw"/>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pccd"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfb"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcdm"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcam"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="pcfw"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcal"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcgk"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="opn5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn7"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="clo5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbfw">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo7"/>
+						</record>
+					</attachment>					
+				</widget>
+				
+				<!--CLOSE-->
+				<widget class="icon_button" id="clo5" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/forward" show_button_appearance="false">				
+					<record id="primary_icon_properties" red_replacement="gimntext" blue_replacement="tcs_accent"/>
+				</widget>
+				
+			</container>
+
+			<!--ALL POSITIONS-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				
+				<!--CLOSE-->
+				<widget class="icon_button" id="clo6" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/all" show_button_appearance="false">				
+					<record id="primary_icon_properties" red_replacement="gimntext" blue_replacement="tcs_accent"/>
+				</widget>
+				
+				<!--OPEN-->
+				<widget class="icon_button" id="opn6" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/buttons/all" show_button_appearance="false">				
+					<translation id="hint" translation_id="316702" type="use" value="All Positions"/>
+					<record id="primary_icon_properties" red_replacement="fg" blue_replacement="bg"/>
+					<event id="click_event" event_id="pbal"/>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pccd"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfb"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcdm"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcam"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcfw"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="pcal"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="pcgk"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="opn6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="opn7"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo1"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo2"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo3"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo4"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo5"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="clo6"/>
+						</record>
+					</attachment>
+					<attachment class="event_relay_attachment" event_id="pbal">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="clo7"/>
+						</record>
+					</attachment>					
+				</widget>				
+				
+			</container>
+			
+			<container/>
+			
+			<widget class="picture" file="icons/16px/help" red_replacement="fg" scale_picture="false" image_alignment="centre_x,centre_y" default_width="16">
+				<translation id="hint" type="use" value="Compared to players performing a similar role across the Top 20 Leagues and expressed as a percentile. &#10; &#10;Position groups are broad and relate to the general role of the player.  E.g. a central midfielder whose primary job is defensive cover should be considered as a defensive midfielder. &#10; &#10;To change comparison group, please select a button above." />
+			</widget>
+			
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				
+				<widget class="picture" file="mustermann/credits/benbackground" red_replacement="bg darker" scale_picture="false" image_alignment="centre_x,centre_y"/>
+				
+				<widget class="picture" file="mustermann/credits/ben" scale_picture="false" image_alignment="centre_x,centre_y">
+					<translation id="hint" type="use" value="Bar chart inspired by _Ben_" />
+				</widget>
+				
+				<widget class="link_button" navigation_focus_target="true" show_button_appearance="false" colour="gimntext">
+					<record id="click_event" event_id="OURL" url="https://community.sigames.com/forums/topic/579475-fm24skin-statman24" />
+					<translation id="text" type="use" value="" />
+				</widget>
+			</container>
+						
+		</container>
+		
+	</container>
+</panel>
+		
+		

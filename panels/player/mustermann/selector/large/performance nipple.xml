@@ -1,0 +1,459 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<container class="tcs_box">
+		<attachment class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" horizontal_gap="8"/>
+		
+		<!--PASSING-->
+		<container>
+			<attachment class="vertical_arrange" vertical_layout="30,200,100,-1" vertical_gap="8"/>
+		
+			<widget class="label" font="title" alignment="centre_x,centre_y" colour="title" size="large">
+				<translation id="text" type="use" translation_id="227881" value="Passing"/>
+			</widget>
+			
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				
+				<widget class="picture" file="mustermann/nipples/99" red_replacement="bg" scale_picture="false" image_alignment="centre_x,centre_y"/>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_pass_att">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="POpg"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_pass_cmp">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+						
+			</container>
+			
+			<container>
+				<attachment class="vertical_arrange" vertical_layout="22,22,22,22" vertical_gap="4"/>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POpg"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="249443" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POpc"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="249444" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_record_percentage_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="Popa"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="249473" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="PGR9"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="552423" value=""/>
+					</widget>
+
+				</container>
+			
+			</container>
+			
+			<container/>
+			
+		</container>
+		
+		<!--SHOOTING-->
+		<container>
+			<attachment class="vertical_arrange" vertical_layout="30,200,100,-1" vertical_gap="8"/>
+		
+			<widget class="label" font="title" alignment="centre_x,centre_y" colour="title" size="large">
+				<translation id="text" type="use" translation_id="229306" value="Shooting"/>
+			</widget>
+		
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				
+				<widget class="picture" file="mustermann/nipples/99" red_replacement="bg" scale_picture="false" image_alignment="centre_x,centre_y"/>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_shot_att">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_shot_tgt">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="POtg"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+						
+			</container>
+			
+			<container>
+				<attachment class="vertical_arrange" vertical_layout="22,22,22,22" vertical_gap="4"/>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POsg"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="248761" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POtg"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="248762" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_record_percentage_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="Post"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="249472" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POgg"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="252153" value=""/>
+					</widget>
+
+				</container>
+			
+			</container>
+			
+		</container>
+		
+		<!--HEADING-->
+		<container>
+			<attachment class="vertical_arrange" vertical_layout="30,200,100,-1" vertical_gap="8"/>
+		
+			<widget class="label" font="title" alignment="centre_x,centre_y" colour="title" size="large">
+				<translation id="text" type="use" translation_id="308897" value="Heading"/>
+			</widget>
+		
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				
+				<widget class="picture" file="mustermann/nipples/99" red_replacement="bg" scale_picture="false" image_alignment="centre_x,centre_y"/>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_hdrs_att">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="POhg"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_hdrs_cmp">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+						
+			</container>
+			
+			<container>
+				<attachment class="vertical_arrange" vertical_layout="22,22,22,22" vertical_gap="4"/>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POhg"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="388156" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POHg"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="388158" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_record_percentage_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POhr"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="388157" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="POH9"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="388191" value=""/>
+					</widget>
+
+				</container>
+			
+			</container>
+				
+		</container>
+		
+		<!--PRESSING-->
+		<container>
+			<attachment class="vertical_arrange" vertical_layout="30,200,100,-1" vertical_gap="8"/>
+		
+			<widget class="label" font="title" alignment="centre_x,centre_y" colour="title" size="large">
+				<translation id="text" type="use" translation_id="293052" value="Pressing"/>
+			</widget>
+		
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				
+				<widget class="picture" file="mustermann/nipples/99" red_replacement="bg" scale_picture="false" image_alignment="centre_x,centre_y"/>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_pres_att">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+				
+				<container>
+					<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+					<attachment class="horizontal_arrange" horizontal_layout="-1,200,-1" horizontal_gap="0"/>
+				
+					<container/>
+					
+					<widget class="nipple_all_pres_cmp">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+						<record id="object_property" get_property="Prs9"/>
+					</widget>
+					
+					<container/>
+					
+				</container>
+						
+			</container>
+		
+			<container>
+				<attachment class="vertical_arrange" vertical_layout="22,22,22,22" vertical_gap="4"/>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="PRS9"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="554494" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="Prs9"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="554496" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="Pota"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="247389" value=""/>
+					</widget>
+
+				</container>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="2"/>
+					
+					<container width="40"/>
+					
+					<widget class="dashed_number_label" colour="text" alignment="left, centre_y" auto_size="horizontal">
+						<record id="object_property" get_property="PObg"/>
+					</widget>
+					
+					<widget class="text" font="text" alignment="left,centre_y" colour="faded text" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="513435" value=""/>
+					</widget>
+
+				</container>
+			
+			</container>
+		</container>
+							
+	</container>
+</panel>
+		
+		
