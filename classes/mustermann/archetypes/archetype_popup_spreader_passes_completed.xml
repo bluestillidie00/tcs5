@@ -1,0 +1,6 @@
+<class class="archetype_popup_spreader_passes_completed" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="62.89" appearance="mustermann/archetypes/spreader_disabled" image_alignment="centre_x,centre_y" red_replacement="mustermann2" green_replacement="mustermann2" blue_replacement="mustermann3" colour="" hidden="false"/>
+		<record min_value="62.89" max_value="10000" appearance="" image_alignment="centre_x,centre_y" red_replacement="bg" colour="" hidden="false"/>
+	</list>
+</class>

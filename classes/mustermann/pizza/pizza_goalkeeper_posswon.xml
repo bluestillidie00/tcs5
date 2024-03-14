@@ -1,0 +1,25 @@
+<class class="pizza_goalkeeper_posswon" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_aligment="centre_x,centre_y">
+	<list id="value_list">
+		<record min_value="-1" max_value="3.55" appearance="mustermann/pizza/slices/gkc0" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="3.55" max_value="3.87" appearance="mustermann/pizza/slices/gkc5" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="3.87" max_value="4.15" appearance="mustermann/pizza/slices/gkc10" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="4.15" max_value="4.34" appearance="mustermann/pizza/slices/gkc15" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="4.34" max_value="4.50" appearance="mustermann/pizza/slices/gkc20" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="4.50" max_value="4.63" appearance="mustermann/pizza/slices/gkc25" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="4.63" max_value="4.75" appearance="mustermann/pizza/slices/gkc30" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="4.75" max_value="4.86" appearance="mustermann/pizza/slices/gkc35" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="4.86" max_value="5.00" appearance="mustermann/pizza/slices/gkc40" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.00" max_value="5.12" appearance="mustermann/pizza/slices/gkc45" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.12" max_value="5.23" appearance="mustermann/pizza/slices/gkc50" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.23" max_value="5.37" appearance="mustermann/pizza/slices/gkc55" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.37" max_value="5.50" appearance="mustermann/pizza/slices/gkc60" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.50" max_value="5.66" appearance="mustermann/pizza/slices/gkc65" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.66" max_value="5.80" appearance="mustermann/pizza/slices/gkc70" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.80" max_value="5.96" appearance="mustermann/pizza/slices/gkc75" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="5.96" max_value="6.20" appearance="mustermann/pizza/slices/gkc80" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="6.20" max_value="6.49" appearance="mustermann/pizza/slices/gkc85" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="6.49" max_value="6.89" appearance="mustermann/pizza/slices/gkc90" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="6.89" max_value="7.56" appearance="mustermann/pizza/slices/gkc95" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+		<record min_value="7.56" max_value="1000" appearance="mustermann/pizza/slices/gkc99" image_aligment="centre_x,centre_y" red_replacement="pizza_possess" blue_replacement="pizza_possess_border" colour="" hidden="false"/>
+	</list>
+</class>

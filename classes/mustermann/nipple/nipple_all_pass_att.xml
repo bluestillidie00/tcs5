@@ -1,0 +1,25 @@
+<class class="nipple_all_pass_att" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_aligment="centre_x,centre_y">
+	<list id="value_list">
+		<record min_value="-1" max_value="0" appearance="" image_aligment="centre_x,centre_y" red_replacement="" colour="" hidden="false"/>
+		<record min_value="0" max_value="4.59" appearance="mustermann/nipples/5" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="4.59" max_value="9.17" appearance="mustermann/nipples/10" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="9.17" max_value="13.76" appearance="mustermann/nipples/15" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="13.76" max_value="18.35" appearance="mustermann/nipples/20" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="18.35" max_value="22.93" appearance="mustermann/nipples/25" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="22.93" max_value="27.52" appearance="mustermann/nipples/30" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="27.52" max_value="32.11" appearance="mustermann/nipples/35" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="32.11" max_value="36.69" appearance="mustermann/nipples/40" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="36.69" max_value="41.28" appearance="mustermann/nipples/45" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="41.28" max_value="45.87" appearance="mustermann/nipples/50" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="45.87" max_value="50.45" appearance="mustermann/nipples/55" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="50.45" max_value="55.04" appearance="mustermann/nipples/60" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="55.04" max_value="59.63" appearance="mustermann/nipples/65" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="59.63" max_value="64.21" appearance="mustermann/nipples/70" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="64.21" max_value="68.8" appearance="mustermann/nipples/75" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="68.8" max_value="73.39" appearance="mustermann/nipples/80" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="73.39" max_value="77.97" appearance="mustermann/nipples/85" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="77.97" max_value="82.56" appearance="mustermann/nipples/90" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="82.56" max_value="87.15" appearance="mustermann/nipples/95" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+		<record min_value="87.15" max_value="1000" appearance="mustermann/nipples/99" image_aligment="centre_x,centre_y" red_replacement="nipple_inner" colour="" hidden="false"/>
+	</list>
+</class>

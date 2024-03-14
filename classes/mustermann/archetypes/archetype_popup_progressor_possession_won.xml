@@ -1,0 +1,6 @@
+<class class="archetype_popup_progressor_possession_won" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_alignment="bottom">
+	<list id="value_list">
+		<record min_value="-1" max_value="12.40" appearance="mustermann/archetypes/progressor_disabled" image_alignment="centre_x,centre_y" red_replacement="mustermann2" green_replacement="mustermann2" blue_replacement="mustermann3" colour="" hidden="false"/>
+		<record min_value="12.40" max_value="10000" appearance="" image_alignment="centre_x,centre_y" red_replacement="bg" colour="" hidden="false"/>
+	</list>
+</class>
