@@ -17,15 +17,8 @@
 			<widget id="TeSe" class="match_team_selector_panel" width="60" height="30">
 				<record id="object_property" get_property="objt" set_property="objt" />
 			</widget>
-		</container>
 
-		<!-- LAPTOP BATTERY POWER -->
-		<container height="30">
-			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
-
-			<widget class="spacer" />
-			
-				<!-- CONSOLE -->
+			<!-- CONSOLE -->
 			<container class="inner_box" appearance="boxes/contrast/no margin/middle/paper" red_replacement="bg" height="30">
 				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_gap="2" />
 
@@ -41,7 +34,7 @@
 
 					<!--MAKE SUB-->
 					<widget class="icon_button" id="qsub" icon="icons/16px/refresh"  appearance="buttons/custom/over state only/button" auto_size="horizontal" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" >
-						<translation id="text" translation_id="323103" type="use" value="Make Sub[COMMENT: match tactics shortcuts, change tactics dialog title, Sub is an abbreviation for Substitution]" />
+						<translation id="text" translation_id="454740" type="use" value="Make Sub[COMMENT: match tactics shortcuts, change tactics dialog title, Sub is an abbreviation for Substitution]" />
 					</widget>	
 
 					<!-- MENTALITY -->
@@ -76,6 +69,29 @@
 				</widget>			
 			</container>
 
+			<!-- CONTAINER WHEN ADVANCED CHANGES HAVE BEEN MADE -->
+			<container id="advc" navigation_container="true" height="0">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" />
+				<record id="default_properties" default_focus="true" font="title" colour="text" size="small" auto_size="horizontal" />
+
+				<!-- EDIT PENDING CHANGES BUTTON -->
+				<widget class="icon_button" id="ediP" event_id="eptt" icon="icons/16px/edit" click_event="EsFT"  appearance="buttons/custom/match/bottom bar/split/left/button">
+					<translation id="text" translation_id="229690" type="use" value="Edit" />
+				</widget>
+
+				<!-- CANCEL PENDING CHANGES BUTTON -->
+				<widget class="icon_button" id="canP" event_id="cptt" appearance="buttons/custom/match/bottom bar/split/right/button">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+			</container>	
+		</container>
+
+		<!-- LAPTOP BATTERY POWER -->
+		<container height="30">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
+
+			<widget class="spacer" />
+
 			<container navigation_container="true">
 				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0">
 					<global id="horizontal_offset" name="ui.safe_area_left"/>
@@ -101,14 +117,12 @@
 			</container>
 		</container>
 	</container>
+
 	<container class="main_box_no_margin" height="130" background_colour="bg lighter" id="mBar">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 		<container navigation_container="true">
-			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="0" />
-
-<!-- EDIT THIS LINE TO ADJUST WEBCAM WIDTH -->
-<container width="400" />
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0" />
 
 			<container >
 				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0" />
