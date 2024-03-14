@@ -1,0 +1,1567 @@
+<panel>
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="save_default_state" value="true"/>
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/row/normal/row"/>
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row"/>
+
+	<!-- Sent off Styles -->
+	<flags id="soff" value="tables/custom/cards/red/row"/>
+
+	<!-- Not in squad Styles -->
+	<flags id="nisq" value="tables/custom/squad/outside squad/row"/>
+
+	<!-- Highlighted Styles -->
+	<flags id="hida" value="tables/custom/squad/highlight/row"/>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8"/>
+
+	<container class="main_box_no_margin" id="plti" alignment="left" force_title_borders="false">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- buttons area -->
+		<container navigation_container="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right,extend"/>
+
+			<!-- top left buttons -->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="6"/>
+
+				<widget class="view_menu_label" id="TitL" auto_size="horizontal" embed_in_frame="false">
+					<translation id="text" translation_id="232113" type="use" value="Players"/>
+				</widget>
+			
+				<widget class="view_menu_popup" id="plvi" embed_in_frame="false" auto_size="all"/>
+			</container>
+		
+			<!-- top right buttons -->
+			<container>
+				<layout class="arrange_horizontal_attachment" offset="0" alignment="right">
+					<global id="gap" name="ui.button_row_gap"/>
+				</layout>
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" inset="0" alignment="top,right"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0"/>
+
+				<!-- quick pick -->
+				<container>
+					<layout class="arrange_horizontal_attachment" offset="0" alignment="right">
+						<global id="gap" name="ui.split_button_row_gap"/>
+					</layout>
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0">
+						<global id="gap" name="ui.split_button_row_gap"/>
+					</layout>
+
+					<widget class="icon_button" id="askp" auto_size="all" appearance="buttons/subtle/split/left/button" controller_button="y_button">
+						<translation id="text" translation_id="344655" type="use" value="Quick Pick[COMMENT - team screen team selection, contains the former Ask To Pick menu but also acts as a standalone button which picks the team, renamed for accuracy]"/>
+					</widget>
+					
+					<widget class="popup_button" id="apic" fixed="true" width="45" auto_size="vertical" appearance="buttons/subtle/split/right/button"/>
+				</container>
+
+				<!-- filter menu -->
+				<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all"/>
+			</container>
+		</container>
+
+		<widget class="picking_panel" id="pkpn" navigation_container="true"/>
+
+		<container id="ptct">
+
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<widget class="tactic_player_list_table" id="pltb" database_table_type="1" customisation_context="play" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows, show_bullets, select_rows, select_multiple, show_insert_column_popup,keyboard" column_mode="resize_columns, move_columns, custom_views" popup_menu_class="popup_button_table_header" row_height="30" navigation_container="true" default_focus="true">
+
+				<boolean id="save_session_state" value="true"/>
+				<boolean id="save_default_state" value="true"/>
+
+				<!-- <integer id="contextual_handler_column_id" value="Pnms"/> -->
+
+				<!-- default sort by playing position (primary), then picked position, then name -->
+				<list id="default_sort_column">
+					<integer value="PtsL"/>
+					<integer value="PpsC"/>
+				</list>
+
+				<!--default view-->
+				<flags id="default_view" value="sltn"/>
+
+				<!--available views-->
+				<list id="viws">
+				
+					<record id="WTSv">
+						<translation id="text" type="use" value="WorkTheSpace Views"/>
+						
+						<list id="items">
+							<record id="Wusv">
+								<translation id="name" type="use" value="WorkTheSpace Ultimate Squad View"/>
+								<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+								<record id="view">
+									<flags id="PtsL"/><!-- picked info -->
+									<flags id="Pnfo"/><!-- player status/info -->
+									<flags id="Page"/><!-- person age -->
+									<flags id="port"/>
+							<flags id="Pnms"/><!-- person name -->
+									<flags id="PpsC"/><!-- person position -->
+									<flags id="Pcab"/><!-- current ability -->
+									<flags id="Ppab"/><!-- potential -->
+									<flags id="Pmor"/><!-- morale-->
+									<flags id="Pfrm"/><!-- l5g -->
+									<record id="PcOI"/><!-- player condition-->
+									<record id="PftI"/><!-- player sharpness -->
+									<record id="Poap"/><!-- overall appearances -->
+									<record id="Pogl"/><!-- overall goals -->
+									<record id="Poas"/><!-- overall assists -->
+									<flags id="Poav"/><!-- av rating -->
+									<record id="Pdva"/><!-- value -->
+									<flags id="Pcww"/><!-- wage -->
+									<flags id="Pced"/><!-- expiring -->
+									<flags id="Pnat"/><!-- person nationality -->
+									<flags id="Ptrt"/><!-- training rating -->
+								</record>
+							</record>
+							
+							<record id="WusV">
+								<record id="view_table_properties">
+									<integer id="row_height" value="38"/>
+								</record>
+								<translation id="name" type="use" value="WorkTheSpace Ultimate Squad View Alternate"/>
+								<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+								<record id="view">
+									<flags id="PtsL"/><!-- picked info -->
+									<flags id="Pnfo"/><!-- player status/info -->
+									<flags id="Page"/><!-- person age -->
+									<flags id="port"/><!-- person name -->
+									<flags id="PNaN"/><!-- person name -->
+									<flags id="PpsC"/><!-- person position -->
+									<flags id="Pcab"/><!-- current ability -->
+									<flags id="Ppab"/><!-- potential -->
+									<flags id="Pmor"/><!-- morale-->
+									<flags id="Pfrm"/><!-- l5g -->
+									<record id="PcOI"/><!-- player condition-->
+									<record id="PftI"/><!-- player sharpness -->
+									<record id="Poap"/><!-- overall appearances -->
+									<record id="Pogl"/><!-- overall goals -->
+									<record id="Poas"/><!-- overall assists -->
+									<flags id="Poav"/><!-- av rating -->
+									<record id="Pdva"/><!-- value -->
+									<flags id="Pcww"/><!-- wage -->
+									<flags id="Pced"/><!-- expiring -->
+									<flags id="Pnat"/><!-- person nationality -->
+									<flags id="Ptrt"/><!-- training rating -->
+								</record>
+							</record>
+							
+							<record id="Wspv">
+								<translation id="name" type="use" value="WorkTheSpace's FM24 Squad Profile View"/>
+								<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+								<record id="view">
+									<flags id="PtsL"/><!-- picked info -->
+									<flags id="Pnfo"/><!-- player status/info -->
+									<flags id="Pnat"/><!-- person nationality -->
+									<flags id="Page"/><!-- person age -->
+									<flags id="port"/>
+							<flags id="Pnms"/><!-- person name -->
+									<record id="PpsC" width="80"/><!-- person position -->
+									<flags id="Pcab"/><!-- current ability -->
+									<flags id="Ppab"/><!-- potential -->
+									<flags id="PPst"/><!-- personality -->
+									<flags id="THic"/><!-- hierachy -->
+									<flags id="Pcpt"/><!-- potential -->
+									<flags id="Ppth"/><!-- potential -->
+									<flags id="Pohl"/><!-- potential -->
+									<flags id="Poav"/><!-- av rating -->
+									<flags id="Poap"/><!-- apps -->
+									<flags id="Pogl"/><!-- potential -->
+									<record id="POmi"/><!-- potential -->
+									<record id="Pdet" width="22"/><!-- determination -->
+									<record id="Pwkr" width="22"/><!-- work rate -->
+									<record id="Psta" width="22"/><!-- stamina -->
+									<record id="Ptwr" width="22"/><!-- teamwork -->
+									<record id="Pcnt" width="22"/><!-- concentration -->
+									<record id="Pdec" width="22"/><!-- decisions -->
+								</record>
+							</record>
+							
+							<record id="Wtsv">
+								<translation id="name" type="use" value="WorkTheSpace FM24 - Complete Training Squad View"/>
+								<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+								<record id="view">
+									<flags id="PtsL"/><!-- picked info -->
+									<flags id="Pnfo"/><!-- player status/info -->
+									<flags id="Page"/><!-- person age -->
+									<flags id="port"/>
+							<flags id="Pnms"/><!-- person name -->
+									<record id="PpsC" width="80"/><!-- person position -->
+									<flags id="Pcab"/><!-- current ability -->
+									<flags id="Ppab"/><!-- potential -->
+									<flags id="PTif"/><!-- potential -->
+									<flags id="PTaf"/><!-- potential -->
+									<flags id="PTpm"/><!-- potential -->
+									<flags id="PTov"/><!-- potential -->
+									<flags id="PTat"/><!-- potential -->
+									<flags id="PTtc"/><!-- potential -->
+									<flags id="PTbc"/><!-- potential -->
+									<flags id="PTdf"/><!-- potential -->
+									<flags id="PTft"/><!-- potential -->
+									<flags id="Piaw"/><!-- potential -->
+								</record>
+							</record>
+						</list>
+					</record>
+				
+					<record id="othV">
+						<translation id="text" type="use" value="Other Squad Views"/>
+						
+						<list id="items">
+							<!-- GENERAL VIEW -->
+							<record id="tsGe">
+								<record id="view_table_properties">
+									<integer id="row_height" value="35"/>
+								</record>
+								<translation id="name" type="use" value="TCS General Squad View"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<record id="Pnat" use_format="very_short" width="18"/>
+									<flags id="Pnfo"/>
+									<flags id="PPDW"/>
+									<flags id="PpsC"/>
+									<!-- <flags id="PPst"/> -->
+									<flags id="Pcac"/>
+									<flags id="Ppab"/>
+									<flags id="Pdet"/>
+									<flags id="Pwkr"/>
+									<flags id="Ptwr"/>
+									<flags id="PcOI"/>
+									<flags id="PftI"/>
+									<record id="Pmor" width="12"/>
+									<flags id="Poap"/>
+									<flags id="Pgls"/>
+									<flags id="PNxg"/>
+									<flags id="PxGO"/>
+									<flags id="Pfrm"/>
+									<flags id="Poav"/>
+									<flags id="LMrt"/>
+									<flags id="Ptrt"/>
+									<flags id="Pdva"/>
+									<flags id="tCDT"/>
+								</record>
+							</record>
+								
+							<!-- TRAINING -->
+							<record id="tsTr">
+								<record id="view_table_properties">
+									<integer id="row_height" value="35"/>
+								</record>
+								<translation id="name" type="use" value="TCS Training Squad View"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<record id="Pnat" width="22"/>
+									<flags id="Pnfo"/>
+									<flags id="PPDW"/>
+									<flags id="PpsC"/>
+									<flags id="PPst"/>
+									<flags id="Pcac"/>
+									<flags id="Ppab"/>
+									<flags id="PcOI"/>
+									<flags id="PftI"/>
+									<flags id="Ptrt"/>
+									<flags id="PTif"/>
+									<flags id="PTaf"/>
+									<flags id="PTpm"/>
+									<flags id="PpAH"/>
+									<flags id="PTWl"/>
+									<flags id="Piaw"/>
+								</record>
+							</record>
+						</list>
+					</record>
+					
+					<record id="----"/>
+
+					<record id="geni">
+
+						<translation id="name" translation_id="247410" type="use" value="General Info"/>
+						<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="PpsC"/>
+							<!-- position -->
+							<flags id="Pbpc"/>
+							<!-- best position -->
+							<flags id="Pbrc"/>
+							<!-- best role -->
+							<flags id="PSag"/>
+							<!-- person age -->
+							<record id="Pnat">
+								<!-- person nationality -->
+								<flags id="use_format" value="short"/>
+							</record>
+							<flags id="Pcpt"/>
+							<!-- agreed playing time -->
+							<flags id="Pcac"/>
+							<!-- current ability -->
+							<flags id="Pppc"/>
+							<!-- potential ability -->
+							<flags id="Pcww"/>
+							<!-- wage -->
+							<flags id="Pced"/>
+							<!-- contract expiry -->
+							<flags id="Pdva"/>
+							<!-- value -->
+						</record>
+					</record>
+
+					<record id="ctrt">
+						<translation id="name" translation_id="230163" type="use" value="Contract"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Psnu"/>
+							<!-- squad number -->
+							<flags id="Pcpt"/>
+							<!-- agreed playing time -->
+							<flags id="Pcif"/>
+							<!-- full time or part-time contract -->
+							<flags id="Pcww"/>
+							<!-- weekly wage -->
+							<flags id="Pced"/>
+							<!-- contract expiry -->
+							<flags id="Pdva"/>
+							<!-- value -->
+							<flags id="Pwof"/>
+							<!-- new wage -->
+							<flags id="Pcof"/>
+							<!-- new date -->
+						</record>
+					</record>
+
+					<record id="trnf">
+						<translation id="name" translation_id="230119" type="use" value="Transfer"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Pagn"/>
+							<!-- person agent -->
+							<flags id="Pcoo"/>
+							<!-- transfer options -->
+							<flags id="Pctr"/>
+							<!-- transfer status -->
+							<flags id="Pcls"/>
+							<!-- loan status -->
+							<flags id="Papr"/>
+							<!-- asking price -->
+							<flags id="Pdva"/>
+							<!-- value -->
+						</record>
+					</record>
+
+					<record id="hgst">
+						<translation id="name" translation_id="275860" type="use" value="Home-Grown Status"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<record id="PSag" auto_hide_priority="3000"/>
+							<!-- person age -->
+							<record id="Pnat" auto_hide_priority="1000"/>
+							<!-- person nationality -->
+							<record id="Phgs" auto_hide_priority="2000"/>
+							<!-- home grown status -->
+							<record id="Phdd" auto_hide_priority="4000"/>
+							<!-- home grown due date-->
+							<flags id="Pdva"/>
+							<!-- value -->
+						</record>
+					</record>
+
+					<record id="info">
+						<translation id="name" translation_id="247860" type="use" value="Full Player Status[COMMENT: player full status information: heading]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Pnfa"/>
+							<!-- full player status/info -->
+							<flags id="Pdva"/>
+							<!-- value -->
+						</record>
+					</record>
+
+					<!-- This view will show the player unique IDs in a list (visible if 'show unique id' preference set) -->
+					<record id="unid">
+						<translation id="name" translation_id="247858" type="use" value="Unique IDs"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Duni"/>
+							<!-- unique id -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- name -->
+							<flags id="Pclb"/>
+							<!-- person club -->
+							<flags id="Pnat"/>
+							<!-- nationality -->
+							<flags id="Pdva"/>
+							<!-- value -->
+						</record>
+					</record>
+
+					<record id="----"/>
+
+					<!-- shown for club teams -->
+					<record id="sltn">
+						<translation id="name" translation_id="326989" type="use" value="Selection Info[COMMENT: button in view_menu on squad screens; choose to view club stats]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<record id="PpsC" auto_hide_priority="1000"/>
+							<!-- position -->
+							<record id="PcOI" auto_hide_priority="2000"/>
+							<!-- player condition-->
+							<record id="PftI" auto_hide_priority="2000"/>
+							<!-- player sharpness -->
+							<record id="Pmor" auto_hide_priority="3000"/>
+							<!-- player morale -->
+							<record id="Ppth" auto_hide_priority="3000"/>
+							<!--playing time happiness-->
+							<record id="Pfrm" auto_hide_priority="6000"/>
+							<!-- player form -->
+							<record id="Poap" auto_hide_priority="3000"/>
+							<!-- overall appearances -->
+							<record id="Pogl" auto_hide_priority="4000"/>
+							<!-- overall goals -->
+							<record id="Poas" auto_hide_priority="4000"/>
+							<!-- overall assists -->
+							<flags id="Poav"/>
+							<!-- overall average rating -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="5"/>
+						</record>
+					</record>
+
+
+					<!-- shown for club youth teams -->
+					<record id="ysli">
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<record id="PpsC" auto_hide_priority="1000"/>
+							<!-- position -->
+							<record id="Pmor" auto_hide_priority="5000"/>
+							<!-- player morale -->
+							<record id="Pfrm" auto_hide_priority="6000"/>
+							<!-- player form -->
+							<record id="PcOI" auto_hide_priority="2000"/>
+							<!-- player condition -->
+							<record id="PftI" auto_hide_priority="2000"/>
+							<!-- player sharpness -->
+							<record id="Ppth" auto_hide_priority="1000"/>
+							<!--playing time happiness-->
+							<record id="Poap" auto_hide_priority="3000"/>
+							<!-- overall appearances -->
+							<record id="Pogl" auto_hide_priority="4000"/>
+							<!-- overall goals -->
+							<record id="Poas" auto_hide_priority="4000"/>
+							<!-- overall assists -->
+							<flags id="Poav"/>
+							<!-- overall average rating -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="0"/>
+						</record>
+					</record>
+
+					<record id="plat">
+						<translation id="text" translation_id="423877" type="use" value="Playing Time[COMMENT: FR 14013, contract promise type]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Pcpt"/>
+							<!-- agreed playing time -->
+							<flags id="Pctp"/>
+							<!-- current playing time -->
+							<record id="Poap" auto_hide_priority="3000"/>
+							<!-- overall appearances -->
+							<record id="Ppth" auto_hide_priority="1000"/>
+							<!--playing time happiness-->
+							<record id="Ppte" auto_hide_priority="1000"/>
+							<!--playing time happiness-->
+							<record id="PFpt" auto_hide_priority="1000"/>
+							<!--future playing time-->
+						</record>
+					</record>
+
+					<record id="fuPT">
+						<translation id="text" translation_id="492004" type="use" value="Future Playing Time[COMMENT: AREA: Playing Time; SUB-AREA: Playing Time Pathways; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: displays the agreed playing time for the player in years to come]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Pcpt"/>
+							<!-- agreed playing time -->
+							<flags id="fpt1"/>
+							<!-- current season +1 -->
+							<flags id="fpt2"/>
+							<!-- current season +2 -->
+							<flags id="fpt3"/>
+							<!-- current season +3 -->
+							<flags id="fpt4"/>
+							<!-- current season +4 -->
+						</record>
+					</record>
+
+					<record id="dyna">
+						<translation id="text" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Pmbm"/>
+							<!-- promises -->
+							<flags id="Pmor"/>
+							<!-- morale -->
+							<flags id="THic"/>
+							<!-- player hierarchy category -->
+							<flags id="DRsd"/>
+							<!-- player social group -->
+							<flags id="Pohl"/>
+							<!-- player overall happiness-->
+						</record>
+					</record>
+
+
+					<!-- shown for international teams -->
+					<record id="csln">
+						<translation id="name" translation_id="275847" type="use" value="Club Selection[COMMENT: button in view_menu on squad screens; choose to view club stats]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<record id="PpsC" auto_hide_priority="1000"/>
+							<!-- position -->
+							<record id="Pmor" auto_hide_priority="5000"/>
+							<!-- player morale -->
+							<record id="Pfrm" auto_hide_priority="6000"/>
+							<!-- player form -->
+							<record id="PcOI" auto_hide_priority="2000"/>
+							<!-- player condition -->
+							<record id="PftI" auto_hide_priority="2000"/>
+							<!-- player sharpness -->
+							<record id="Poap" auto_hide_priority="3000"/>
+							<!-- overall appearances -->
+							<record id="Pogl" auto_hide_priority="4000"/>
+							<!-- overall goals -->
+							<record id="Poas" auto_hide_priority="4000"/>
+							<!-- overall assists -->
+							<flags id="Poav"/>
+							<!-- overall average rating -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="5"/>
+						</record>
+					</record>
+
+					<!-- shown for international teams -->
+					<record id="intf">
+						<translation id="name" translation_id="275848" type="use" value="International Selection[COMMENT: button in view_menu on squad screens; choose to view international stats]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<record id="PpsC" auto_hide_priority="1000"/>
+							<!-- position -->
+							<record id="Pmor" auto_hide_priority="5000"/>
+							<!-- player morale -->
+							<record id="Pfrm" auto_hide_priority="6000"/>
+							<!-- player form -->
+							<record id="PcOI" auto_hide_priority="2000"/>
+							<!-- player condition -->
+							<record id="PftI" auto_hide_priority="2000"/>
+							<!-- player sharpness -->
+							<record id="Poap" auto_hide_priority="3000"/>
+							<!-- overall appearances -->
+							<record id="Pogl" auto_hide_priority="4000"/>
+							<!-- overall goals -->
+							<record id="Poas" auto_hide_priority="4000"/>
+							<!-- overall assists -->
+							<flags id="Poav"/>
+							<!-- international average rating -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="7"/>
+						</record>
+					</record>
+
+					<record id="coac">
+						<translation id="name" translation_id="292814" type="use" value="Reports[COMMENT: top level menu title for player reports screens]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="PpPs"/>
+							<!-- player style -->
+							<flags id="Pbpc"/>
+							<!-- best position -->
+							<flags id="Pbrc"/>
+							<!-- role -->
+							<flags id="Pbdc"/>
+							<!-- duty -->
+							<flags id="Page"/>
+							<!-- age -->
+							<flags id="Pcac"/>
+							<!-- currant ability -->
+							<flags id="Pppc"/>
+							<!-- potential ability -->
+						</record>
+					</record>
+
+					<record id="inju">
+						<translation id="name" translation_id="247861" type="use" value="Injuries[COMMENT: squad list view menu, injuries menu item label]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="PpsC"/>
+							<!-- position -->
+							<record id="injr" auto_hide_priority="3000"/>
+							<!-- player injury -->
+							<record id="iida" auto_hide_priority="4000"/>
+							<!-- player injured date-->
+							<record id="iito" auto_hide_priority="5000"/>
+							<!-- player injury time out -->
+							<record id="PcOI" auto_hide_priority="2000"/>
+							<!-- player condition -->
+							<record id="PftI" auto_hide_priority="2000"/>
+							<!-- player condition -->
+						</record>
+					</record>
+
+					<record id="RskA">
+						<translation id="text" translation_id="447655" type="use" value="Risk Assessment[COMMENT: FR20159; team injuries panel; panel title for assessing player injury risk]"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="PpsC"/>
+							<!-- position -->
+							<flags id="PMlo"/>
+							<!-- player match load -->
+							<flags id="PTWl"/>
+							<!-- player training load -->
+							<flags id="PInS"/>
+							<!-- player injury susceptibility -->
+							<record id="PcOI"/>
+							<!-- player condition -->
+							<flags id="PftI"/>
+							<!-- player sharpness -->
+							<flags id="POvR"/>
+							<!-- player overall injury risk -->
+						</record>
+					</record>
+
+
+					<record id="stts">
+						<translation id="text" translation_id="247412" type="use" value="Stats"/>
+
+						<list id="items">
+
+							<record id="gatp">
+								<translation id="name" translation_id="284341" type="use" value="Goal Attempts[COMMENT: team information panel; stats section; column heading]"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Pogl"/>
+									<!-- player overall goals -->
+									<flags id="POsa"/>
+									<!-- player overall shots -->
+									<flags id="POst"/>
+									<!-- overall shots on target ratio -->
+									<flags id="POps"/>
+									<!-- overall penalties scored -->
+									<flags id="POpt"/>
+									<!-- overall penalties taken -->
+									<flags id="POlg"/>
+									<!-- overall minutes since last goal -->
+
+								</record>
+
+								<record id="object_list_view_context">
+									<integer id="player_stats_scope" value="5"/>
+								</record>
+							</record>
+
+							<record id="genp">
+								<translation id="name" translation_id="284349" type="use" value="General Play[COMMENT: team information panel; stats section; column heading]"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="POpC"/>
+									<!-- player overall passes completed -->
+									<flags id="POpa"/>
+									<!-- player overall pass attempts -->
+									<flags id="POgm"/>
+									<!-- overall mistakes leading to goal -->
+									<flags id="POhc"/>
+									<!-- overall headers won -->
+									<flags id="POha"/>
+									<!-- overall aerial challenges attempt -->
+									<flags id="POcc"/>
+									<!-- overall crosses completed won -->
+									<flags id="POca"/>
+									<!-- overall crosses attempt -->
+								</record>
+
+								<record id="object_list_view_context">
+									<integer id="player_stats_scope" value="5"/>
+								</record>
+							</record>
+
+							<record id="disc">
+								<translation id="name" translation_id="284353" type="use" value="Discipline[COMMENT: team information panel; stats section; column heading]"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Poap"/>
+									<!-- player appearances -->
+									<flags id="POtc"/>
+									<!-- player overall tackle completed -->
+									<flags id="Pofm"/>
+									<!--overall fouls-->
+									<flags id="POta"/>
+									<!-- overall tackle attempt -->
+									<flags id="Poyc"/>
+									<!-- overall yellow cards -->
+									<flags id="Porc"/>
+									<!-- overall red card -->
+
+								</record>
+
+								<record id="object_list_view_context">
+									<integer id="player_stats_scope" value="5"/>
+								</record>
+							</record>
+
+							<record id="goak">
+								<translation id="name" translation_id="284359" type="use" value="Goalkeeper[COMMENT: team information panel; stats section; column heading]"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Poap"/>
+									<!-- player appearances -->
+									<flags id="POcs"/>
+									<!-- player overall clean sheet -->
+									<flags id="Poco"/>
+									<!--overall goals conceded-->
+									<flags id="POs%"/>
+									<!--save ratio-->
+									<flags id="POx%"/>
+									<!--expected save ratio-->
+
+								</record>
+
+								<record id="object_list_view_context">
+									<integer id="player_stats_scope" value="5"/>
+								</record>
+							</record>
+
+							<record id="ExGo">
+								<translation id="name" translation_id=" 514224" type="use" value="xG[COMMENT: AREA: Team Stat; SUB-AREA: Expected goals stats FR: 32708; TONE: Formal; CHARLIMIT: None NOTE: expected goals short string]"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Poap"/>
+									<!-- player appearances -->
+									<flags id="Pogl"/>
+									<!-- player overall goals -->
+									<flags id="POsa"/>
+									<!-- player overall shots -->
+									<flags id="PoxG"/>
+									<!-- player XG -->
+
+								</record>
+
+								<record id="object_list_view_context">
+									<integer id="player_stats_scope" value="5"/>
+								</record>
+							</record>
+
+
+							<record>
+								<translation id="text" translation_id="227741" type="use" value="Competitions"/>
+								<list id="items">
+
+									<record id="ncst">
+										<translation id="name" translation_id="320538" type="use" value="Non Competitive[COMMENT: squad list view type]"/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="Poap"/>
+											<!-- overall appearances -->
+											<flags id="Pogl"/>
+											<!-- player overall goals -->
+											<flags id="Poas"/>
+											<!-- overall assists -->
+											<flags id="PoxG"/>
+											<!-- player XG -->
+											<flags id="Pomo"/>
+											<!-- overall man of match -->
+											<flags id="Popa"/>
+											<!-- overall pass completion ratio -->
+											<flags id="Pota"/>
+											<!-- overall tackles per game ratio -->
+											<flags id="Podr"/>
+											<!-- overall dribbles per game ratio -->
+											<flags id="Post"/>
+											<!-- overall shots on target ratio -->
+											<flags id="Poyc"/>
+											<!-- overall yellow cards -->
+											<flags id="Porc"/>
+											<!-- overall red cards -->
+											<flags id="Poav"/>
+											<!-- overall average rating -->
+										</record>
+
+										<record id="object_list_view_context">
+											<integer id="player_stats_scope" value="0"/>
+										</record>
+									</record>
+
+									<record id="lgst">
+										<translation id="name" translation_id="320539" type="use" value="League[COMMENT: squad list view type]"/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="Poap"/>
+											<!-- overall appearances -->
+											<flags id="Pogl"/>
+											<!-- player overall goals -->
+											<flags id="Poas"/>
+											<!-- overall assists -->
+											<flags id="PoxG"/>
+											<!-- player XG -->
+											<flags id="Pomo"/>
+											<!-- overall man of match -->
+											<flags id="Popa"/>
+											<!-- overall pass completion ratio -->
+											<flags id="Pota"/>
+											<!-- overall tackles per game ratio -->
+											<flags id="Podr"/>
+											<!-- overall dribbles per game ratio -->
+											<flags id="Post"/>
+											<!-- overall shots on target ratio -->
+											<flags id="Poyc"/>
+											<!-- overall yellow cards -->
+											<flags id="Porc"/>
+											<!-- overall red cards -->
+											<flags id="Poav"/>
+											<!-- overall average rating -->
+										</record>
+
+										<record id="object_list_view_context">
+											<integer id="player_stats_scope" value="1"/>
+										</record>
+									</record>
+
+									<record id="cpst">
+										<translation id="name" translation_id="320540" type="use" value="Cup[COMMENT: squad list view type]"/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="Poap"/>
+											<!-- overall appearances -->
+											<flags id="Pogl"/>
+											<!-- player overall goals -->
+											<flags id="Poas"/>
+											<!-- overall assists -->
+											<flags id="PoxG"/>
+											<!-- player XG -->
+											<flags id="Pomo"/>
+											<!-- overall man of match -->
+											<flags id="Popa"/>
+											<!-- overall pass completion ratio -->
+											<flags id="Pota"/>
+											<!-- overall tackles per game ratio -->
+											<flags id="Podr"/>
+											<!-- overall dribbles per game ratio -->
+											<flags id="Post"/>
+											<!-- overall shots on target ratio -->
+											<flags id="Poyc"/>
+											<!-- overall yellow cards -->
+											<flags id="Porc"/>
+											<!-- overall red cards -->
+											<flags id="Poav"/>
+											<!-- overall average rating -->
+										</record>
+
+										<record id="object_list_view_context">
+											<integer id="player_stats_scope" value="2"/>
+										</record>
+									</record>
+
+									<record id="ctst">
+										<translation id="name" translation_id="320541" type="use" value="Continental[COMMENT: squad list view type]"/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="Poap"/>
+											<!-- overall appearances -->
+											<flags id="Pogl"/>
+											<!-- player overall goals -->
+											<flags id="Poas"/>
+											<!-- overall assists -->
+											<flags id="PoxG"/>
+											<!-- player XG -->
+											<flags id="Pomo"/>
+											<!-- overall man of match -->
+											<flags id="Popa"/>
+											<!-- overall pass completion ratio -->
+											<flags id="Pota"/>
+											<!-- overall tackles per game ratio -->
+											<flags id="Podr"/>
+											<!-- overall dribbles per game ratio -->
+											<flags id="Post"/>
+											<!-- overall shots on target ratio -->
+											<flags id="Poyc"/>
+											<!-- overall yellow cards -->
+											<flags id="Porc"/>
+											<!-- overall red cards -->
+											<flags id="Poav"/>
+											<!-- overall average rating -->
+										</record>
+
+										<record id="object_list_view_context">
+											<integer id="player_stats_scope" value="3"/>
+										</record>
+									</record>
+
+									<record id="teat">
+										<translation id="name" translation_id="229413" type="use" value="Technical"/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="Poap"/>
+											<!-- overall appearances -->
+											<flags id="Pogl"/>
+											<!-- player overall goals -->
+											<flags id="Poas"/>
+											<!-- overall assists -->
+											<flags id="PoxG"/>
+											<!-- player XG -->
+											<flags id="Pomo"/>
+											<!-- overall man of match -->
+											<flags id="Popa"/>
+											<!-- overall pass completion ratio -->
+											<flags id="Pota"/>
+											<!-- overall tackles per game ratio -->
+											<flags id="Podr"/>
+											<!-- overall dribbles per game ratio -->
+											<flags id="Post"/>
+											<!-- overall shots on target ratio -->
+											<flags id="Poyc"/>
+											<!-- overall yellow cards -->
+											<flags id="Porc"/>
+											<!-- overall red cards -->
+											<flags id="Poav"/>
+											<!-- overall average rating -->
+										</record>
+
+										<record id="object_list_view_context">
+											<integer id="player_stats_scope" value="7"/>
+										</record>
+									</record>
+
+									<record id="ovst">
+										<translation id="name" translation_id="320543" type="use" value="Overall[COMMENT: squad list view type]"/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="Poap"/>
+											<!-- overall appearances -->
+											<flags id="Pogl"/>
+											<!-- player overall goals -->
+											<flags id="Poas"/>
+											<!-- overall assists -->
+											<flags id="PoxG"/>
+											<!-- player XG -->
+											<flags id="Pomo"/>
+											<!-- overall man of match -->
+											<flags id="Popa"/>
+											<!-- overall pass completion ratio -->
+											<flags id="Pota"/>
+											<!-- overall tackles per game ratio -->
+											<flags id="Podr"/>
+											<!-- overall dribbles per game ratio -->
+											<flags id="Post"/>
+											<!-- overall shots on target ratio -->
+											<flags id="Poyc"/>
+											<!-- overall yellow cards -->
+											<flags id="Porc"/>
+											<!-- overall red cards -->
+											<flags id="Poav"/>
+											<!-- overall average rating -->
+										</record>
+
+										<record id="object_list_view_context">
+											<integer id="player_stats_scope" value="5"/>
+										</record>
+									</record>
+
+									<record id="altm">
+										<translation id="name" translation_id="335947" type="use" value="All Time[COMMENT: squad list view type]"/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="PAap"/>
+											<!-- all time appearances -->
+											<flags id="PAla"/>
+											<!-- all time league appearances -->
+											<flags id="PAcg"/>
+											<!-- all time goals -->
+											<flags id="PAlg"/>
+											<!-- all time league goals -->
+										</record>
+
+										<record id="object_list_view_context">
+											<integer id="player_stats_scope" value="5"/>
+										</record>
+									</record>
+
+									<record id="----"/>
+
+									<!-- current competition stats -->
+									<record id="ccst">
+										<translation id="name" value=""/>
+										<record id="view">
+											<flags id="PtsL"/>
+											<!-- picked info -->
+											<flags id="Pnfo"/>
+											<!-- player status/info -->
+											<flags id="port"/>
+							<flags id="Pnms"/>
+											<!-- person name -->
+											<flags id="Poap"/>
+											<!-- overall appearances -->
+											<flags id="Pogl"/>
+											<!-- player overall goals -->
+											<flags id="Poas"/>
+											<!-- overall assists -->
+											<flags id="PoxG"/>
+											<!-- player XG -->
+											<flags id="Pomo"/>
+											<!-- overall man of match -->
+											<flags id="Popa"/>
+											<!-- overall pass completion ratio -->
+											<flags id="Pota"/>
+											<!-- overall tackles per game ratio -->
+											<flags id="Podr"/>
+											<!-- overall dribbles per game ratio -->
+											<flags id="Post"/>
+											<!-- overall shots on target ratio -->
+											<flags id="Poyc"/>
+											<!-- overall yellow cards -->
+											<flags id="Porc"/>
+											<!-- overall red cards -->
+											<flags id="Poav"/>
+											<!-- overall average rating -->
+										</record>
+									</record>
+
+								</list>
+
+							</record>
+
+							<record id="----"/>
+
+						</list>
+					</record>
+
+					<record id="inca">
+						<translation id="name" translation_id="227820" type="use" value="International"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Pclb"/>
+							<!-- person club -->
+							<flags id="Pnat"/>
+							<!-- person nationality -->
+							<flags id="Pntm"/>
+							<!-- current international team picked for -->
+							<flags id="Piap"/>
+							<!-- player int apps -->
+							<flags id="Pigl"/>
+							<!-- player int goals -->
+							<flags id="Puia"/>
+							<!-- player int u21 apps -->
+							<flags id="Puig"/>
+							<!-- player int u21 goals -->
+							<flags id="Pdva"/>
+							<!-- value -->
+						</record>
+					</record>
+
+					<record id="----"/>
+
+					<record id="stts">
+						<translation id="text" translation_id="229822" type="use" value="Attributes"/>
+
+						<list id="items">
+							<record id="ImAt"/>
+
+							<record id="phat">
+								<translation id="name" translation_id="230003" type="use" value="Physical"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Pacc"/>
+									<!-- (p) acceleration -->
+									<flags id="Pagi"/>
+									<!-- (p) agility -->
+									<flags id="Pbal"/>
+									<!-- (p) balance -->
+									<flags id="Pjum"/>
+									<!-- (p) jumping -->
+									<flags id="Pnft"/>
+									<!-- (p) natural fitness -->
+									<flags id="Ppac"/>
+									<!-- (p) pace -->
+									<flags id="Psta"/>
+									<!-- (p) stamina -->
+									<flags id="Pstr"/>
+									<!-- (p) strength -->
+								</record>
+							</record>
+
+							<record id="meat">
+								<translation id="name" translation_id="230106" type="use" value="Mental"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<record id="Pagg"/>
+									<!-- (m) aggression -->
+									<record id="Pant"/>
+									<!-- (m) anticipation -->
+									<record id="Pbra"/>
+									<!-- (m) bravery -->
+									<record id="Pcmp"/>
+									<!-- (m) composure -->
+									<record id="Pcnt"/>
+									<!-- (m) concentration -->
+									<record id="Pdec"/>
+									<!-- (m) decisions -->
+									<record id="Pdet"/>
+									<!-- (m) determination -->
+									<record id="Pfla"/>
+									<!-- (m) flair -->
+									<record id="Pinf"/>
+									<!-- (m) influence -->
+									<record id="Potb"/>
+									<!-- (m) off the ball -->
+									<record id="Ppsn"/>
+									<!-- (m) positioning -->
+									<record id="Ptwr"/>
+									<!-- (m) teamwork -->
+									<record id="Pcre"/>
+									<!-- (m) vision -->
+									<record id="Pwkr"/>
+									<!-- (m) work rate -->
+								</record>
+							</record>
+
+							<record id="teat">
+								<translation id="name" translation_id="229413" type="use" value="Technical"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<record id="Pcor"/>
+									<!-- (t) corner taking -->
+									<record id="Pcro"/>
+									<!-- (t) crossing -->
+									<record id="Pdri"/>
+									<!-- (t) dribbling -->
+									<record id="Pfin"/>
+									<!-- (t) finishing -->
+									<record id="Pfrs"/>
+									<!-- (t) first touch -->
+									<record id="Pfrk"/>
+									<!-- (t) free kick taking -->
+									<record id="Phea"/>
+									<!-- (t) heading -->
+									<record id="Plsh"/>
+									<!-- (t) long shots -->
+									<record id="Plth"/>
+									<!-- (t) long throws -->
+									<record id="Pmar"/>
+									<!-- (t) marking -->
+									<record id="Ppas"/>
+									<!-- (t) passing -->
+									<record id="Ppen"/>
+									<!-- (t) penalty taking -->
+									<record id="Ptac"/>
+									<!-- (t) tackling -->
+									<record id="Ptec"/>
+									<!-- (t) technique -->
+								</record>
+							</record>
+
+							<record id="goat">
+								<translation id="name" translation_id="230024" type="use" value="Goalkeeping"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Paab"/>
+									<!-- aerial reach -->
+									<flags id="Pcoa"/>
+									<!-- command of area -->
+									<flags id="Pcom"/>
+									<!-- communication -->
+									<flags id="Pecc"/>
+									<!-- eccentricity -->
+									<flags id="Phan"/>
+									<!-- handling -->
+									<flags id="Pkic"/>
+									<!-- kicking -->
+									<flags id="Pooo"/>
+									<!-- one on ones -->
+									<flags id="Pref"/>
+									<!-- reflexes -->
+									<flags id="Prou"/>
+									<!-- rushing out -->
+									<flags id="Pttp"/>
+									<!-- tendency to punch -->
+									<flags id="Pthr"/>
+									<!-- throwing -->
+								</record>
+							</record>
+
+							<record id="deat">
+								<translation id="name" translation_id="247413" type="use" value="Defensive"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Pacc"/>
+									<!-- acceleration -->
+									<flags id="Pant"/>
+									<!-- anticipation -->
+									<flags id="Phea"/>
+									<!-- heading -->
+									<flags id="Pjum"/>
+									<!-- jumping -->
+									<flags id="Pmar"/>
+									<!-- marking -->
+									<flags id="Ppac"/>
+									<!-- pace -->
+									<flags id="Ppsn"/>
+									<!-- positioning -->
+									<flags id="Psta"/>
+									<!-- stamina -->
+									<flags id="Pstr"/>
+									<!-- strength -->
+									<flags id="Ptac"/>
+									<!-- tackling -->
+								</record>
+							</record>
+
+							<record id="atat">
+								<translation id="name" translation_id="230042" type="use" value="Attacking"/>
+								<record id="view">
+									<flags id="PtsL"/>
+									<!-- picked info -->
+									<flags id="Pnfo"/>
+									<!-- player status/info -->
+									<flags id="port"/>
+							<flags id="Pnms"/>
+									<!-- person name -->
+									<flags id="Pcro"/>
+									<!-- crossing -->
+									<flags id="Pdri"/>
+									<!-- dribbling -->
+									<flags id="Pfrk"/>
+									<!-- free kicks -->
+									<flags id="Pfin"/>
+									<!-- finishing -->
+									<flags id="Pfrs"/>
+									<!-- first touch -->
+									<flags id="Pfla"/>
+									<!-- flair -->
+									<flags id="Plsh"/>
+									<!-- long shots -->
+									<flags id="Potb"/>
+									<!-- off the ball -->
+									<flags id="Ppas"/>
+									<!-- passing -->
+									<flags id="Pcre"/>
+									<!-- vision -->
+								</record>
+							</record>
+						</list>
+					</record>
+
+					<record id="----"/>
+
+					<record id="debg">
+						<translation id="name" translation_id="247109" type="use" value="Debug"/>
+						<!-- Define attributes/properties to view in this view type on the panel.
+									Any properties not defined here will be hidden for this view. -->
+						<record id="view">
+							<flags id="PtsL"/>
+							<!-- picked info -->
+							<flags id="duni"/>
+							<!-- unique id -->
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="PSag"/>
+							<!-- person age -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="PCAB"/>
+							<flags id="PPAB"/>
+							<flags id="PPPA"/>
+							<flags id="PCRP"/>
+							<flags id="PHRP"/>
+							<flags id="PWRP"/>
+							<flags id="Pcbv"/>
+							<flags id="Pdva"/>
+							<flags id="Pnar"/>
+							<flags id="PCAP"/>
+						</record>
+					</record>
+
+					<record id="debc">
+						<string id="name" value="Contract Debug"/>
+						<record id="view">
+							<flags id="PtsL"/>
+							<flags id="duni"/>
+							<flags id="Pnfo"/>
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<flags id="PSag"/>
+							<flags id="Pcpt"/>
+							<flags id="PCRF"/>
+							<flags id="Pced"/>
+							<flags id="PCRU"/>
+							<flags id="PCRN"/>
+							<flags id="PCRC"/>
+							<flags id="PCRT"/>
+							<flags id="PCRR"/>
+						</record>
+					</record>
+
+					<record id="debt">
+						<string id="name" value="Playing Time Debug"/>
+						<record id="view">
+							<flags id="Pnfo"/>
+							<!-- player status/info -->
+							<flags id="port"/>
+							<flags id="Pnms"/>
+							<!-- person name -->
+							<flags id="Pcpt"/>
+							<!-- agreed playing time -->
+							<flags id="Puag"/>
+							<!-- unhappy agreed playing time -->
+							<flags id="Pcag"/>
+							<!-- close to unhappy agreed playing time -->
+							<flags id="Pctp"/>
+							<!-- current playing time -->
+							<record id="Poap"/>
+							<!-- overall appearances -->
+							<record id="Pchf"/>
+							<!-- club choice factor -->
+							<record id="Pptc"/>
+							<!-- agreed playing time choice factor -->
+							<flags id="Puff"/>
+							<!-- unhappy first team football -->
+							<flags id="Pcff"/>
+							<!-- close to unhappy first team football -->
+							<record id="Ppth" auto_hide_priority="5000"/>
+							<!-- playing time happiness -->
+						</record>
+					</record>
+
+				</list>
+			</widget>
+
+		</container>
+	</container>
+
+	<!-- panel showing squad selection rules for the next match -->
+	<widget class="match_squad_info_panel" id="ssnm" navigation_container="true"/>
+
+</panel>
