@@ -1,0 +1,200 @@
+<panel>
+	<layout class="horizontal_arrange" horizontal_layout="-700,-420"/>
+
+	<!-- RIGHT HAND SIDE -->
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+		<!-- SQUAD VIEW -->
+		<container class="team_squad_tactics_panel" entity_layout_id="at04" id="tesA" name="team squad table">
+			<string id="include_starting_xi" value="true"/>
+			<string id="include_starting_subs" value="true"/>
+			<string id="include_unpicked" value="true"/>
+		</container>
+	
+		<!-- ANALYSIS -->
+		<container id="tAnL" hidn="true">
+			<animation class="slide_in_bottom_animation"/>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	
+			<container class="tactics_recent_match_analysis_panel" file="tactics/mustermann/tactics analysis" id="anLy" wants_mouse_events="true" hidn="true">
+				<string id="create_if" value="allow_data_analysis"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>
+	
+		<container class="tactics_player_instructions_panel" file="tactics/mustermann/player instructions" wants_mouse_events="true" id="tPli" hidden="true">
+			<animation class="slide_in_left_animation"/>
+		</container>
+			
+		<!-- <container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+			<container class="player_attributes_comparison_panel" file="player/player attributes comparison panel tactics" id="comP" hidden="true" width="195" name="comparison"/>
+		
+		</container> -->
+	
+	</container>
+
+
+	<!-- LEFT SIDE -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0"/>
+		
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+		
+			<!-- HEADER -->
+			<container class="main_contrast_box_no_margin" rrep="green 500" appearance="boxes/main/contrast/no margin/paper" height="38">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="8"/>
+				
+				<!-- REST OF CONTENT -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+					
+					<!-- TACTICS PITCH 
+					<widget class="picture" file="icons/16px/tactics" width="20" rrep="teal 900" image_alignment="left"/> -->
+						
+					<!-- TACTICS LABEL 
+					<widget class="text" alignment="centre_y,left" auto_size="horizontal" font="title" colour="teal 900">
+						<translation id="text" translation_id="230056" type="use"/>
+					</widget> -->
+
+					<!-- TACTICS SLOTS -->
+					<container class="tactic_slot_tab_container" entity_layout_id="it08" file="tactics/tactic slot tab container picker" id="tacw" auto_size="horizontal" needs_width="true" height="30" name="active tactic">
+						<integer id="slot_popup_maximum_width" value="200"/>
+						<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="top" set_side="top" move_side="true" target="main"/>
+						<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="right" set_side="left" move_side="true" target="at03"/>
+					</container>
+					
+				</container>
+				
+				<container class="tactic_slot_tab_container" entity_layout_id="it17" file="tactics/tactic slot tab container intensity" id="tstI" width="100" height="30" name="Intensity">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="4"/>
+				</container>
+				<container class="tactic_slot_tab_container" entity_layout_id="it06" file="tactics/tactic slot tab container familiarity" id="tstf" width="100" height="30" name="Familiarity">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="4"/>
+				</container>
+	
+			</container>
+		
+			<!-- PITCH -->
+			<container class="main_contrast_box_no_margin" rrep="pitch_box_background" appearance="boxes/main/contrast/top/paper">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+				<container>
+			
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+					<!-- FORMATION LABEL -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+					
+						<!-- DEFAULT PROPERTIES SO WE DON'T HAVE TO DEFINE THE SAME THING EVERY TIME -->
+						<record id="default_properties" height="22" file="tactics/tactic slot button formation" alignment="centre_x,centre_y"/>
+					
+						<!-- LABEL-->
+						<widget class="text" alignment="centre_x" font="label" colour="faded white" size="large" auto_size="vertical" file="none">
+							<translation id="text" value="Formation" translation_id="298104" type="use"/>
+						</widget>
+			
+						<!-- FORMATION LABELS - 0 IS THE FIRST TACTIC SLOT, 1 IS THE 2ND TACTIC SLOT, 2 IS THE THIRD -->
+						<container class="tactic_slot_button" id="frm0">
+							<integer id="tactics_slot" value="0"/>
+							<string id="menu_mode" value="0x00000100"/>
+						</container>
+						<container class="tactic_slot_button" id="frm1">
+							<integer id="tactics_slot" value="1"/>
+							<string id="menu_mode" value="0x00000100"/>
+						</container>
+						<container class="tactic_slot_button" id="frm2">
+							<integer id="tactics_slot" value="2"/>
+							<string id="menu_mode" value="0x00000100"/>
+						</container>
+					</container>
+		
+					<container>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+						<!-- PITCH FILE -->
+						<container file="tactics/tcs/overview/pitch">
+						</container>
+									<container class="container" id="conG"/>
+
+						
+				</container>
+				</container>
+			</container>
+		</container>
+		
+		<!-- FOOTER -->
+		<container class="main_contrast_box_no_margin" rrep="style_background" appearance="boxes/main/contrast/bottom/paper" height="50">
+			<!-- PUSHES INFORMATION TO THE RIGHT -->
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8"/>
+		 	
+			<container class="team_instructions_panel" file="tactics/mustermann/tactics team instructions" id="Tein" name="Team instructions"/>
+			
+			<container width="36">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			
+				<!-- ANALYSIS BUTTON -->
+				<widget class="icon_button" width="40" appearance="buttons/primary/normal/button" rrep="bg green lighter" icon_colour="fg" icon="icons/16px/report" icon_alignment="centre_x,centre_y" text="" id="AbtO">
+					<translation id="hint" translation_id="229719" type="use"/>
+							
+					<event id="click_event" event_id="TANL"/>
+					
+					<!-- THIS EVENT SHOWS THE CLOSE BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TANL">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="tPli"/>
+						</record>
+					</attachment>
+			
+					<!-- THIS EVENT SHOWS THE CLOSE BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TANL">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="AbtC"/>
+						</record>
+					</attachment>
+
+					<attachment class="event_relay_attachment" event_id="TANL">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="tAnL"/>
+						</record>
+					</attachment>
+				</widget>
+
+				<!-- CLOSE BUTTON -->
+				<widget class="icon_button" width="40" appearance="buttons/primary/normal/button" rrep="bg red" icon_colour="fg" icon="icons/16px/cross" icon_alignment="centre_x,centre_y" text="" id="AbtC" hidn="true">
+					<translation id="hint" translation_id="229719" type="use"/>
+							
+					<event id="click_event" event_id="TANL"/>
+			
+					<!-- THIS EVENT SHOWS THE CLOSE BUTTON -->
+					<attachment class="event_relay_attachment" event_id="TANL">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="AbtC"/>
+						</record>
+					</attachment>
+
+					<attachment class="event_relay_attachment" event_id="TANL">
+						<record id="action_event">
+							<flags id="event_id" value="hide"/>
+							<flags id="event_target" value="tAnL"/>
+						</record>
+					</attachment>
+				</widget>
+			</container>
+		</container>
+		
+	</container>
+	
+
+	<!-- IDs USED 
+
+	tPli - PLAYER INSTRUCTIONS
+	anLy - ANALYSIS
+	-->
+</panel>
