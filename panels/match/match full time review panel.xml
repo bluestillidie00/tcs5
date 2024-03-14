@@ -218,9 +218,8 @@
 					<container id="mtst" >
 						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 						<translation id="title" type="use" value="Match Stats" />
-
-						<container class="tcs_box" appearance="tcs/boxes/main/top left">
-<layout class="vertical_arrange" vertical_layout="-6,-4" />
+						
+				<container class="horizontal_split_container" starting_layout="-6, -3" save_session_state="true" save_default_state="true">
 
 							<container class="match_stats_panel" id="mtst">
 								<record id="object_property" get_property="objt" set_property="objt"/>
