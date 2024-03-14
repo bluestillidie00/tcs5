@@ -161,10 +161,9 @@
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 		
 		<!-- SQUAD VIEW -->
-		<container class="team_squad_tactics_panel" entity_layout_id="at04" id="tesA" name="team squad table">
-			<string id="include_starting_xi" value="true"/>
-			<string id="include_starting_subs" value="true"/>
-			<string id="include_unpicked" value="true"/>
+		<container class="match_team_squad_panel" entity_layout_id="at04" id="tesA" name="team squad table">
+    <list id="disallowed_view_property_ids" />
+    <list id="required_view_property_ids" />
 		</container>
 	
 		<!-- ANALYSIS -->

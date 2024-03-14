@@ -8,6 +8,8 @@
 		<!-- LEAGUE TABLE AND RESULTS -->
 		<container default_width="-560" priority="3" minimum_width="400"  class="vertical_adaptive_container"> 
 
+<container height="4" />
+
 			<!-- RESULTS AND FIXTURES -->
 			<container  default_height="255" priority="2">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>

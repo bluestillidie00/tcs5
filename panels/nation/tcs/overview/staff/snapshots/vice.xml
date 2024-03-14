@@ -37,7 +37,7 @@
 
 				<!-- IF WE HAVE INFO -->
 				<container id="info">
-					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+                    <attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
 
 					<!-- DEFAULT PROPERTIES SO WE DON'T  HAVE TO DEFINE THE SAME CODE EVERY TIME -->
 					<record id="default_properties" alignment="left,centre_y" auto_size="vertical"/>

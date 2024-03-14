@@ -20,20 +20,16 @@
 		<container id="NEvp">
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
 
-			<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right" draw_horizontal_dividers="true">
+<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
-				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="1.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top"/>
-				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false"/>
-			
-				<container class="horizontal_split_container" starting_layout="155, -1" save_session_state="true" save_default_state="true">
-							
 					<!-- TOP SELECTOR -->
-					<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep1_dummy">
+					<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep1_dummy" height="200">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
-
-					<container class="horizontal_split_container" starting_layout="206, -1" save_session_state="true" save_default_state="true" min_height_top="1">
+					
+					<container  draw_horizontal_dividers="true">
+					<layout class="vertical_arrange" vertical_layout="260,-1" />
 					
 						<!-- MIDDLE SELECTOR -->
 						<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep2_dummy">
@@ -44,9 +40,12 @@
 						<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep3_dummy">
 							<record id="object_property" get_property="objt" set_property="objt"/>
 						</container>
+					
 					</container>
-				</container>
-			
+
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="1.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top"/>
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false"/>
+
 			</container>
 	
 			<widget class="spacer" height="47"/>

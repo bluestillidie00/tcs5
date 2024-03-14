@@ -18,11 +18,11 @@
 
     </container>
 
-    <container class="inner_subtle_box" height="75">
-        <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+    <container class="inner_subtle_box" height="90">
+        <attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
 
         <widget class="text" id="wcnt" alignment="centre" size="large" style="bold" auto_size="vertical" />
-        <widget class="text" id="cmpn" multiline="true" auto_size="vertical" alignment="centre_x,top" size="small"/>
+        <widget class="text" id="cmpn" multiline="true" auto_size="vertical" alignment="centre_x,top" size="xsmall"/>
 
     </container>
 

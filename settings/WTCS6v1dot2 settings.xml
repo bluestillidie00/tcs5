@@ -55,4 +55,48 @@
 	<colour name="browser url" value="rgb(64,62,65)"/><!-- #403e41 -->
 	<colour name="news_youtube" value="rgb(15,15,15)"/><!-- #0f0f0f -->
 	<colour name="subscribe_button" value="rgb(39,39,39)"/><!-- #272727 -->
+	
+		<!-- ATHLETIC COLOURS -->
+	<colour name="athletic_attacking" value="rgb(14,112,191)"/><!-- #0e70bf -->
+	<colour name="athletic_defending" value="rgb(236,49,58)"/><!-- #ec313a -->
+	<colour name="athletic_possession" value="rgb(25,218,137)"/><!-- #19da89 -->
+	<colour name="athletic_gk" value="rgb(231,217,110)"/><!-- #e7d96e -->
+	
+	<!-- MUSTERMANN -->
+	<colour name="bg int" value="rgb(75,76,78)"/>
+
+	<colour name="mustermann0" value="rgb(0,29,38)"/>
+	<colour name="mustermann1" value="rgb(0,49,58)"/>
+	<colour name="mustermann2" value="rgb(5,69,78)"/>
+	<colour name="mustermann3" value="bg"/>
+	<colour name="mustermann4" value="athletic_attacking"/>
+	<colour name="mustermann5" value="rgb(65,129,138)"/>
+	<colour name="mustermann6" value="athletic_defending"/>
+	<colour name="mustermanntext" value="fg"/>
+
+	<colour name="gimn1" value="rgb(0,168,192)"/>
+	<colour name="gimn2" value="athletic_possession"/>
+	<colour name="gimn3" value="rgb(20,208,232)"/>
+	<colour name="gimntext" value="bg darker"/>
+
+	<!--CUSTOM PARAMETERS FOR THE SKIN-->
+	<colour name="pizza_attack" value="athletic_attacking"/>
+	<colour name="pizza_attack_border" value="white"/>
+	<colour name="pizza_defend" value="athletic_defending"/>
+	<colour name="pizza_defend_border" value="white"/>
+	<colour name="pizza_possess" value="athletic_possession"/>
+	<colour name="pizza_possess_border" value="white"/>
+	<colour name="pizza_keeper" value="athletic_gk"/>
+	<colour name="pizza_keeper_border" value="white"/>
+	
+		<colour name="nipple_outer" value="tcs_accent"/>
+	<colour name="nipple_inner" value="tcs_accent_darker"/>
+	
+		<colour name="bar_attack"																	value="mustermann4"/>
+	<colour name="bar_attack_border"															value="mustermann3"/>
+	<colour name="bar_defend"																	value="mustermann6"/>
+	<colour name="bar_defend_border"															value="mustermann5"/>
+	<colour name="bar_possess"																	value="gimn2"/>
+	<colour name="bar_possess_border"															value="gimn1"/>
+
 </properties>

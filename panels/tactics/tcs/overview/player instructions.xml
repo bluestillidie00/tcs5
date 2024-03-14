@@ -113,6 +113,64 @@
 			<container class="main_subtle_box" id="SoPI" navigation_container="true">
 				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="8" gap="5" />
 				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+					<container height="35">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="player_picker_button" id="PLPi" hidden="true" colour="white"/>
+				<widget class="player_picker_button" id="MLPi" widget_type="match_team_squad_player_selection_panel" hidden="true" colour="white"/>
+			</container>
+
+
+			<!--squad list for this player - shows one line of info-->
+			<widget class="client_object_viewer_xml_panel" id="plif" file="none" width="90">
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+				<container width="42">
+					<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" offset="0" />
+
+					<widget class="client_object_property_panel" property="Pnfo">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<widget class="client_object_property_panel" property="Pmor" ShTx="false" icon_alignment="centre" width="22">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+
+				<widget class="client_object_property_panel" property="PcOI" width="30">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</widget>
+
+		</container>
 
 				<!-- Personalised instruction buttons container -->
 				<container id="pIco">
@@ -121,9 +179,7 @@
 					<widget class="position_instruction_toggle" id="pITG" dINt="true" file="widgets/position instruction toggle large" height="27" />
 
 					<widget class="text" id="pIde" alignment="centre" colour="faded text" auto_size="vertical" />
-
 				</container>
-
 
 				<!-- Current role container -->
 				<container class="inner_box" id="crFc">
