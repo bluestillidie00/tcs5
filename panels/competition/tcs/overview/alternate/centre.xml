@@ -14,11 +14,8 @@
 			<container default_width="-300">
 				<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
 
-				<container width="300" class="main_box">
-					<attachment_group class="horizontal_arrange" horizontal_layout="100,-1" horizontal_gap="16"/>
-
 					<!-- TROPHY PIC -->
-					<widget class="object_portrait_picture" id="trop" scale_picture="true">
+					<widget class="object_portrait_picture" id="trop" scale_picture="true" width="100">
 						<integer id="property" value="trop"/>
 						<boolean id="keep_aspect_ratio" value="true"/>
 						<boolean id="comp_use_trophy_icon" value="true"/>
@@ -26,22 +23,16 @@
 					</widget>
 
 					<container>
-						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-
-						<container>
-							<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" />
 
 							<!-- CURRENT HOLDER LABEL-->
-							<widget class="label" alignment="left" spec="text" font="label" style="bold" auto_size="vertical">
+							<widget class="label" alignment="left" spec="text" font="label" style="bold" auto_size="all">
 								<translation id="text" translation_id="416340" type="use" value="Title Holders[COMMENT - Competition Overview Title Holders]"/>
 							</widget>
 
 							<!-- TEAM NAME -->
-							<widget class="team_button" spec="text" size="xlarge" id="nnat" style="bold" icon_enabled="true" auto_size="vertical" alignment="left,centre_y" display_format="3" navigation_focus_target="true"/>
+							<widget class="team_button" spec="text" size="xlarge" id="nnat" style="bold" icon_enabled="true" auto_size="all" alignment="left,centre_y" display_format="3" navigation_focus_target="true"/>
 						</container>
-					</container>
-				</container>
 			</container>
 
 		</container>
