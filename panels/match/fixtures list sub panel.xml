@@ -108,10 +108,10 @@
 							<string id="FxNm"/>
 							<string id="stad" />
 							<string id="FxTV"/>
+							<record id="home" alignment="left,centre_y" icon_alignment="right" icon_enabled="false" width="130"/>
+							<record id="away" alignment="left,centre_y" width="130" icon_enabled="false"/>
 							<string id="FxRT"/>
-							<record id="home" alignment="right,centre_y" icon_alignment="right" icon_enabled="false" width="130"/>
 							<string id="FxRs"/>
-							<record id="away" width="130" icon_enabled="false"/>
 							<record id="FxCG" multiline="true" />
 							<record id="fdRE" width="95" alignment="centre"/>				
 						</record>
