@@ -1,0 +1,29 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+	
+	<!-- VALUE BASED PICTURE FOR GENERIC STADIUMS -->
+	<widget class="value_based_picture" wants_mouse_events="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-50"/>
+		<list id="value_list">
+			<record min_value="0" max_value="999" file="tcs/pictures/stadiums/generic/1"/>
+			<record min_value="1000" max_value="4999" file="tcs/pictures/stadiums/generic/2"/>
+			<record min_value="5000" max_value="9999" file="tcs/pictures/stadiums/generic/3"/>
+			<record min_value="10000" max_value="19999" file="tcs/pictures/stadiums/generic/4"/>
+			<record min_value="20000" max_value="29999" file="tcs/pictures/stadiums/generic/5"/>
+			<record min_value="30000" max_value="39999" file="tcs/pictures/stadiums/generic/6"/>
+			<record min_value="40000" max_value="49999" file="tcs/pictures/stadiums/generic/7"/>
+			<record min_value="50000" max_value="69999" file="tcs/pictures/stadiums/generic/8"/>
+			<record min_value="70000" max_value="99999" file="tcs/pictures/stadiums/generic/9"/>
+			<record min_value="100000" max_value="999999" file="tcs/pictures/stadiums/generic/10"/>
+		</list>
+		<record id="object_property" get_property="Scpy"/>
+	</widget>
+
+
+	<widget class="stadium_picture" id="STAp" priority="1">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-50"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+</panel>
