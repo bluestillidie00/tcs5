@@ -1,0 +1,12 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="tcs_box" >
+		<layout class="vertical_arrange" vertical_layout="-360,-400,-250" />
+
+		<widget class="team_staff_subteam_overview_panel" id="ovvw" link="true"/>
+		<widget class="team_container_staff_details_panel" id="deta" />
+		<widget class="team_staff_attributes_comparison_panel" id="tsac"/>
+	</container>
+
+</panel>

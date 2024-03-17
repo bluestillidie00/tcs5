@@ -1,0 +1,33 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="tcs_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+		<string id="skin_style" value="title link" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" horizontal_alignment="left" />
+			<widget class="link_button" id="tlnk" auto_size="all" />
+		</container>			
+
+		<!-- LABEL -->
+		<widget class="label" auto_size="vertical" id="titl"  font="title" colour="tcs_accent" navigation_focus_target="false" />
+
+		<!-- QUANTITY OF STAFF -->
+		<widget class="label" auto_size="vertical" id="nump" style="semi_bold" size="large" />
+
+		<widget class="text" auto_size="vertical" id="boac" colour="faded text">
+			<string id="create_if" value="allow_board_confidence"/>
+		</widget>
+
+		<widget class="team_staff_little_guys_panel" id="tslg" height="10"/>
+
+		<widget class="horizontal_divider" />
+
+		<container id="tsst" class="property_list_viewer_xml_panel" file="team/team staff subteam table" />
+
+	</container>
+
+</panel>
