@@ -199,7 +199,20 @@
 							<widget class="label" auto_size="vertical" style="semi_bold">
 								<record id="object_property" get_property="NYRt" name="true"/>
 							</widget>
-							<widget class="TEXT" auto_size="vertical" alignment="left">
+							
+							<widget class="value_based_picture" image_alignment="left" auto_size="vertical">
+								<list id="value_list">
+									<record min_value="1" max_value="19" file="icons/custom/role rating/stars/11"/>
+									<record min_value="20" max_value="39" file="icons/custom/role rating/stars/12"/>
+									<record min_value="40" max_value="59" file="icons/custom/role rating/stars/13"/>
+									<record min_value="60" max_value="79" file="icons/custom/role rating/stars/14"/>
+									<record min_value="80" max_value="99" file="icons/custom/role rating/stars/15"/>
+									<record min_value="100" max_value="119" file="icons/custom/role rating/stars/16"/>
+									<record min_value="120" max_value="139" file="icons/custom/role rating/stars/17"/>
+									<record min_value="140" max_value="159" file="icons/custom/role rating/stars/18"/>
+									<record min_value="160" max_value="179" file="icons/custom/role rating/stars/19"/>
+									<record min_value="180" max_value="200" file="icons/custom/role rating/stars/20"/>
+								</list>
 								<record id="object_property" get_property="NYRt"/>
 							</widget>
 						</container>
