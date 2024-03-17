@@ -11,7 +11,7 @@
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 
-		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0,7" rrep="bg" />
+		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.4" rrep="bg" />
 
 		<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
 		<container class="bordered_box" appearance="tcs/ro" />

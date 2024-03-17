@@ -1,0 +1,90 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<!-- Background image layer -->
+	<container id="laye">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<!-- Background image -->
+	
+	
+		<!-- Weather shading overlay -->
+		<widget class="value_based_picture" id="weat" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<list id="value_list">
+				<!-- SUNNY_1 -->
+				<record value="0" file="photos/dynamic/blurred stadium/sunny" default_value="true"/>
+				<!-- SUNNY_2 -->
+				<record value="1" file="photos/dynamic/blurred stadium/sunny" />
+				<!-- CLOUDY -->
+				<record value="2" file="photos/dynamic/blurred stadium/overcast" />
+				<!-- OVERCAST -->
+				<record value="3" file="photos/dynamic/blurred stadium/overcast" />
+				<!-- DOWNPOUR -->
+				<record value="4" file="photos/dynamic/blurred stadium/rain" />
+				<!-- NIGHT_CLEAR -->
+				<record value="5" file="photos/dynamic/blurred stadium/night" />
+				<!-- NIGHT_DOWNPOUR -->
+				<record value="6" file="photos/dynamic/blurred stadium/night rain" />
+				<!-- SLEET -->
+				<record value="7" file="photos/dynamic/blurred stadium/rain" />
+				<!-- NIGHT_SLEET -->
+				<record value="8" file="photos/dynamic/blurred stadium/night rain" />
+				<!-- LIGHT_SNOW -->
+				<record value="9" file="photos/dynamic/blurred stadium/snow" />
+				<!-- NIGHT_LIGHT_SNOW -->
+				<record value="10" file="photos/dynamic/blurred stadium/night snow" />
+				<!-- HEAVY_SNOW -->
+				<record value="11" file="photos/dynamic/blurred stadium/snow" />
+				<!-- NIGHT_HEAVY_SNOW -->
+				<record value="12" file="photos/dynamic/blurred stadium/night snow" />
+			</list>
+			<!-- simatchshared::PROP_WEATHER-->
+			<record id="object_property" get_property="weat" set_property="valu"/>
+		</widget>
+	
+	<container class="client_object_viewer_xml_panel" id="bgim">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+
+	<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture" >
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.7" rrep="bg" />
+
+		<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+		<container class="bordered_box" appearance="tcs/ro" rrep="bg lighter"/>
+	</container>
+
+
+		<!-- Star -->
+		<container id="strC">
+			<layout class="arrange_horizontal_attachment" layout="-6, -4" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="picture" id="star" file="photos/dynamic/PoM/star" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+		</container>
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-3,-5" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<widget class="spacer" />
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-2,-5,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+			<widget class="spacer" />
+			<!-- Logo/Portrait -->
+			<widget class="object_portrait_picture" id="log1" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<!-- PROP_TEAM -->
+				<record id="object_property" get_property="Ttea" set_property="objt"/>
+			</widget>
+			<widget class="spacer" />
+		</container>
+		<!-- Logo/Portrait -->
+		<widget class="object_portrait_picture" id="log2" image_alignment="bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+			<!-- PROP_PERSON -->
+			<record id="object_property" get_property="Pers" set_property="objt"/>
+		</widget>
+	</container>
+</panel>
