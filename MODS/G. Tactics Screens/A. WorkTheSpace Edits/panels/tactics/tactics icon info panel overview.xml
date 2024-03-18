@@ -12,58 +12,39 @@
 	<container>
 		<layout class="arrange_vertical_attachment" layout="-1, 42" offset="0" gap="2"/>
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 
-		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_right="0" number_inset_top="0" number_height="50">
-		<layout class="stick_to_sides_attachment" alignment="left" inset="-4"/>
+		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_right="0" number_inset_top="0" number_height="60">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="-10"/>
 		</widget>
 
 		<container class="spacer" id="kitS"/>
 	</container>
 
-	 <!-- BLOCKS OUT THE KIT  -->
-	<container class="main_contrast_box">
-	</container> 
 
-
-	<container>
-		<layout class="vertical_arrange" vertical_layout="-1,20" vertical_gap="0"/>
-
-
-		<container />
-
-	</container>
-
-	<container>
-		<layout class="stick_to_sides_attachment" alignment="top,left" inset="0" apply_to_children="true"/>
-
-		<!--injury/red/yellow card -->
-		<container class="inner_box_no_margin" id="inji" height="16" width="16">
-		</container>
-	</container>
 
 	<container class="main_box" id="nmcN" appearance="boxes/custom/tactics kit/paper">
 		<layout class="arrange_vertical_attachment" alignment="bottom" offset="0"/>
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,0" apply_to_children="true"/>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 
-		<container class="main_contrast_box_no_margin" id="" red_replacement="bg lighter" height="46" >
+		<container class="main_contrast_box_no_margin" id="" red_replacement="bg lighter" height="46">
 			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true"/>
 
 			<container>
-				<container id="OUTE" >
-					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<container id="OUTE">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 
 					<!-- Extra container level to make the animations work -->
 					<container height="25">
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="-4,0,0,0" apply_to_children="true"/>
 
 						<!--role/duty-->
 						<widget class="role_duty_popup_button_mini" id="rodu" size="xsmall" auto_size="none" secondary_icon="icons/custom/misc/small down" alignment="centre" disabled_colour="faded white">
-							<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" delay_widget_hide="false" />
+							<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" delay_widget_hide="false"/>
 						</widget>
 
 						<!--info (morale, rating, condition)-->
@@ -71,10 +52,10 @@
 							<layout class="arrange_horizontal_attachment" layout="12,-1,20" offset="4" gap="2"/>
 							<layout class="stick_to_sides_attachment" alignment="vertical" inset="1" apply_to_children="true"/>
 
-							<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 1.0" delay_widget_hide="false" />
+							<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 1.0" delay_widget_hide="false"/>
 
 							<!--morale-->
-							<widget class="morale_label" id="Mora"  width="12" height="12" colour="faded white" smpc="true" ShTx="false" scale_picture="true" />
+							<widget class="morale_label" id="Mora" width="12" height="12" colour="faded white" smpc="true" ShTx="false" scale_picture="true"/>
 
 							<!--rating and position share a slot - show one or the other-->
 							<container>
@@ -85,9 +66,9 @@
 							</container>
 
 							<!--condition-->
-							<widget class="player_condition_icon_widget" id="cond" >
-								<flags id="appearance" value="" />
-								<boolean id="label_disabled" value="true" />
+							<widget class="player_condition_icon_widget" id="cond">
+								<flags id="appearance" value=""/>
+								<boolean id="label_disabled" value="true"/>
 							</widget>
 						</container>
 
@@ -95,7 +76,7 @@
 						<container id="fmiL">
 							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 							<widget class="player_tactical_familiarity_bar" id="fmBR" auto_hidden="false">
-								<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" delay_widget_hide="false" />
+								<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" delay_widget_hide="false"/>
 							</widget>
 
 						</container>
@@ -104,14 +85,10 @@
 						<container id="play">
 							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 							<widget class="reserves_recommended_playing_time_popup" id="ptBR" select_event="eRSP" appearance="buttons/custom/tactics/role picker mini/button" red_replacement="black" alignment="centre">
-								<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" />
+								<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0"/>
 							</widget>
-
 						</container>
-
 					</container>
-
-
 				</container>
 			</container>
 
@@ -132,10 +109,10 @@
 	</container>
 
 	<container id="gpIN">
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 
 		<widget class="picture" file="icons/custom/player instruction/player pitch" id="PInI" image_alignment="bottom,left" scale_picture="false">
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,45,0" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,45,0"/>
 		</widget>
 	</container>
 
@@ -144,8 +121,8 @@
 
 		<!-- PLAYER PICTURE -->
 		<widget class="object_portrait_picture" id="pict" scale_picture="true" wants_mouse_events="false" image_alignment="centre_x">
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="45" />
-					<!-- <layout class="stick_to_sides_attachment" alignment="right" inset="16"/> -->
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="45"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="14"/>
 
 			<record id="object_property">
 				<integer id="get_property" value="objt"/>
@@ -153,86 +130,75 @@
 			</record>
 		</widget>
 	</container>
-
-
+		
+	<!-- POS/ROLE/DUTY INDICATOR
 	<container>
 		<layout class="stick_to_sides_attachment" />
 
-		<widget class="value_based_picture" id="vbp1" width="18" height="18" scale_picture="true" transparency="1">
-			<layout class="stick_to_sides_attachment" alignment="left" inset="12"/>
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="48"/>
-			<list id="value_list">
-				<record min_value="1" max_value="4" file="tcs/icons/footedness/left" red_replacement="fg red" />
-				<record min_value="5" max_value="8" file="tcs/icons/footedness/left" red_replacement="fg range4" />
-				<record min_value="9" max_value="11" file="tcs/icons/footedness/left" red_replacement="fg range8" />
-				<record min_value="12" max_value="14" file="tcs/icons/footedness/left" red_replacement="fg range12" />
-				<record min_value="15" max_value="17" file="tcs/icons/footedness/left" red_replacement="fg range16" />
-				<record min_value="18" max_value="20" file="tcs/icons/footedness/left" red_replacement="fg green" />
-			</list>
-			<record id="object_property">
-				<integer id="get_property" value="Plft" />
-			</record>
+		<widget class="position_role_duty_suitability_pie" id="prdF" width="20" height="20">
+						<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="4,50"/>
 		</widget>
+	</container> -->
 
-		<widget class="value_based_picture" id="vbp1" width="18" height="18" scale_picture="true" transparency="1">
-			<layout class="stick_to_sides_attachment" alignment="right" inset="12"/>
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="48"/>
-			<list id="value_list">
-				<record min_value="1" max_value="4" file="tcs/icons/footedness/right" red_replacement="fg red" />
-				<record min_value="5" max_value="8" file="tcs/icons/footedness/right" red_replacement="fg range4" />
-				<record min_value="9" max_value="11" file="tcs/icons/footedness/right" red_replacement="fg range8" />
-				<record min_value="12" max_value="14" file="tcs/icons/footedness/right" red_replacement="fg range12" />
-				<record min_value="15" max_value="17" file="tcs/icons/footedness/right" red_replacement="fg range16" />
-				<record min_value="18" max_value="20" file="tcs/icons/footedness/right" red_replacement="fg green" />
-			</list>
-			<record id="object_property">
-				<integer id="get_property" value="Prft" />
-			</record>
-		</widget>
-	</container>
-	
+	<!-- FOOTEDNESS -->
+	<container>
+		<layout class="stick_to_sides_attachment"/>
 		
-		<container>
-		<layout class="arrange_vertical_attachment" layout="-1, 2" offset="0" gap="0"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<record id="default_properties" width="10" height="10" scale_picture="true"/>
 
-		<container>
+		<!-- LEFT -->
+		<widget class="value_based_picture" id="vbp1"  transparency="1" width="20" height="20">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="46"/>
+			<list id="value_list">
+				<record min_value="1" max_value="4" file="tcs/icons/footedness/left" red_replacement="fg red"/>
+				<record min_value="5" max_value="8" file="tcs/icons/footedness/left" red_replacement="fg range4"/>
+				<record min_value="9" max_value="11" file="tcs/icons/footedness/left" red_replacement="fg range8"/>
+				<record min_value="12" max_value="14" file="tcs/icons/footedness/left" red_replacement="fg range12"/>
+				<record min_value="15" max_value="17" file="tcs/icons/footedness/left" red_replacement="fg range16"/>
+				<record min_value="18" max_value="20" file="tcs/icons/footedness/left" red_replacement="fg range20"/>
+			</list>
+			<record id="object_property">
+				<integer id="get_property" value="Plft"/>
+			</record>
+		</widget>
 
-			<widget class="client_object_property_panel" property="PftI" width="12" height="12" scale_picture="true" navigation_focus_target="false" id="Pft2">
+		<!-- RIGHT -->
+		<widget class="value_based_picture" id="vbp1"  transparency="1" width="20" height="20">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="46"/>
+			<list id="value_list">
+				<record min_value="1" max_value="4" file="tcs/icons/footedness/right" red_replacement="fg red"/>
+				<record min_value="5" max_value="8" file="tcs/icons/footedness/right" red_replacement="fg range4"/>
+				<record min_value="9" max_value="11" file="tcs/icons/footedness/right" red_replacement="fg range8"/>
+				<record min_value="12" max_value="14" file="tcs/icons/footedness/right" red_replacement="fg range12"/>
+				<record min_value="15" max_value="17" file="tcs/icons/footedness/right" red_replacement="fg range16"/>
+				<record min_value="18" max_value="20" file="tcs/icons/footedness/right" red_replacement="fg range20"/>
+			</list>
+			<record id="object_property">
+				<integer id="get_property" value="Prft"/>
+			</record>
+		</widget>
+		
+					<widget class="client_object_property_panel" property="PcOI" navigation_focus_target="false" id="PcO2">
+				<record id="object_property" get_property="objt" set_property="objt" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
+			</widget>
+		
+				<widget class="client_object_property_panel" property="PftI"  navigation_focus_target="false" id="Pft2">
 				<record id="object_property" get_property="objt" set_property="objt" />
 				<layout class="stick_to_sides_attachment" alignment="left" inset="18"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="4"/>
-
+				<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
 			</widget>
-
-
-		</container>
-
-		<container class="spacer" id="kit1"/>
 	</container>
-
-	<container>
-		<layout class="arrange_vertical_attachment" layout="-1, 2" offset="0" gap="0"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-
+	
 		<container>
+		<layout class="stick_to_sides_attachment" alignment="bottom,left" inset="8,64" apply_to_children="true"/>
 
-			<widget class="client_object_property_panel" property="PcOI" width="12" height="12" scale_picture="true" navigation_focus_target="false" id="PcO2">
-				<record id="object_property" get_property="objt" set_property="objt" />
-				<layout class="stick_to_sides_attachment" alignment="left" inset="3"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="4"/>
-
-			</widget>
-
-
+		<!--injury/red/yellow card -->
+		<container class="inner_box_no_margin" id="inji" height="16" width="16">
 		</container>
-
-		<container class="spacer" id="kit1"/>
 	</container>
-
-		<container class="tcs_box" appearance="tcs/boxes/main/outline/trans/paper" brep="primary">
-		</container>
 
 </panel>
