@@ -1,0 +1,168 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" gap="8">
+
+		<container default_width="-666" class="tcs_tabs_primary" save_session_state="true" default_item="left">
+		
+			<!-- LEFT PANEL -->
+			<container id="left">
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,0,0,0"/>
+				<translation id="title" translation_id="450832" type="use"/>
+				
+				<record id="object_property" get_property="objt" set_property="objt"/>
+
+				<container class="horizontal_adaptive_container" gap="8">
+
+					<!-- LEFT -->
+					<container default_width="-9" class="vertical_adaptive_container" gap="8">
+								
+						<!-- FIXTURES AND RESULTS -->
+						<container class="tcs_box" id="cofo" default_height="-1">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8"/>
+
+							<widget class="link_button_title" section="csfp">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+								<translation id="text" translation_id="416341" type="use" value="Fixtures/Results[COMMENT: club staff overview; button which when clicked takes you to the club's first team fixtures]"/>
+							</widget>
+
+							<widget class="competition_fixtures_panel" file="competition/competition fixtures overview" id="cofp">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
+						</container>
+
+						<!-- REPUTATION -->
+						<container default_height="380" class="tcs_box" id="colr">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				
+							<container class="competition_overview_reputation_panel" height="360" priority="3" navigation_container="true">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</container>
+						</container>
+					</container>
+
+					<!-- CENTRE PANEL -->
+					<container class="tcs_box" default_width="-10">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			
+						<widget class="client_object_viewer_xml_panel" file="competition/tcs/overview/alternate/centre">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+			
+						<!-- AWARD WINNERS -->
+			<container id="cawa" class="award_winners_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="292779" type="use"/>
+			</container>
+		
+			<!-- PREVIEW -->
+			<container id="CSmo" class="competition_managers_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="336480" type="use"/>
+			</container>	
+			
+			<!-- PREVIEW -->
+			<container id="cslp" class="league_positions_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="243284" type="use"/>
+			</container>	
+			
+			<!-- PREVIEW -->
+			<container id="cshi" class="competition_history_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="247942" type="use"/>
+			</container>	
+		
+			<!-- PREVIEW -->
+					<container id="ruls" late_loading="true" vsave_session_state="true">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<translation id="title" translation_id="255104" type="use"/>
+				<container class="client_object_viewer_selector_panel" file="competition/tcs/overview/rules_dummy"/>
+			</container>	
+			
+			
+			<!-- PREVIEW -->
+			<container id="cmPr" class="competition_preview_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="344751" type="use"/>
+			</container>
+		
+		</container>
+
+		<container default_width="-333">
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+		
+			<container class="tcs_box" id="cmpS" minimum_width="625" priority="1" default_width="-3" navigation_container="true">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8"/>
+
+				<widget class="link_button_title" section="cspl">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+					<translation id="text" translation_id="416342" type="use" value="Player Stats[COMMENT: competition overview player stats panel; panel title]"/>
+				</widget>
+
+				<container class="vertical_adaptive_container" inset="0" offset="0" draw_horizontal_dividers="true">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="1" gap="15">
+
+						<record id="default_properties" file="competition/tcs/overview/alternate/player stats" maximum_items="10" default_width="-1" minimum_width="230"/>
+
+						<!-- CPS_GOALS-->
+						<container class="competition_player_stats_panel" type="2" priority="1" navigation_container="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+						<!-- CPS_AVERAGE_RATING -->
+						<container class="competition_player_stats_panel" type="27" priority="2" navigation_container="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					
+					</container>
+
+					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="3">
+						<record id="default_properties" file="competition/tcs/overview/alternate/player stats" maximum_items="10" default_width="-1" minimum_width="230"/>
+
+						<!-- CPS_MAN_OF_MATCH -->
+						<container class="competition_player_stats_panel" type="12" priority="1" navigation_container="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+						<!-- CPS_CLEAN_SHEETS -->
+						<container class="competition_player_stats_panel" type="20" priority="2" navigation_container="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					
+					</container>
+
+					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="3">
+						<record id="default_properties" file="competition/tcs/overview/alternate/player stats" maximum_items="10" default_width="-1" minimum_width="230"/>
+
+						<!-- CPS_ASSISTS -->
+						<container class="competition_player_stats_panel" type="5" priority="3" navigation_container="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+						<!-- CPS_YELLOW_CARDS -->
+						<container class="competition_player_stats_panel" type="10" priority="3" navigation_container="true">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					</container>
+				</container>
+			</container>
+			
+			<!-- TEAM STATS -->
+			<container class="tcs_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				
+				<container class="competition_stats_overview_panel" id="Tmst" file="competition/tcs/overview/alternate/team stats">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</container>
+			</container>
+		
+		</container>
+
+	</container>
+
+</panel>
