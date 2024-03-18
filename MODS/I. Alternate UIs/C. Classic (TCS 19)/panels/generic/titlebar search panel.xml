@@ -1,0 +1,66 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true"/>
+
+	<!-- SEARCH BOX -->
+	<widget class="db_record_search_box" id="srcB" file="widgets/search box titlebar" hidden="true"/>
+
+	<!--standard title bar text-->
+	<container id="sttt">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- Button to highlight existance of search box on hover -->
+		<widget class="button" appearance="tcs/buttons/interface/search/button" rrep="secondary"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="12"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<!-- search icon -->
+			<widget class="button" id="srch" appearance="icons/26px/search" red_replacement="secondary" hidden="true" width="30"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+				
+				<record id="default_properties" font="title" multiline="false" auto_size="vertical" wants_mouse_events="false" colour="secondary"/>
+
+				<!-- title area -->
+				<widget class="text" id="sect" alignment="centre_x,bottom" size="16" >
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="titl"/>
+								<integer id="set_property" value="text"/>
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<!-- description -->
+				<widget class="text" id="subs" size="small" alignment="centre_x,top" >
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="subt"/>
+								<integer id="set_property" value="atxt"/>
+								<boolean id="dont_set_hint" value="true"/>
+							</record>
+							<record>
+								<integer id="get_property" value="subL"/>
+								<integer id="set_property" value="text"/>
+								<boolean id="dont_set_hint" value="true"/>
+							</record>
+							<!--<record>
+                    <integer id="get_property" value="ttcl" />
+                    <integer id="set_property" value="colr" />
+                  </record>-->
+						</list>
+					</record>
+				</widget>
+			</container>
+
+		</container>
+
+
+	</container>
+
+</panel>

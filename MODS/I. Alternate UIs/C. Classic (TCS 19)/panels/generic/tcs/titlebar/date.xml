@@ -1,0 +1,16 @@
+<panel height="44" width="120">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="16" apply_to_children="true" auto_size="horizontal"/>
+
+		<record id="default_properties" auto_size="vertical" font="text" alignment="centre" colour="fg"/>
+
+		<widget class="text" id="dtam" size="medium" />
+		<widget class="text" id="dytm" size="small" colour="faded text"/>
+
+	</container>
+
+	<widget class="button" appearance="chrome/buttons/items/button" id="actn" click_event="opcl" height="42"/>
+</panel>

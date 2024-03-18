@@ -1,0 +1,130 @@
+<panel>
+
+	<!-- Continue Button -->
+	<widget class="icon_button" id="GCNT" appearance="tcs/buttons/interface/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue FMT" secondary_icon_alignment="centre_right, centre_y" colour="text" font="extendedblack" size="xsmall" multiline="true" offset="6">
+		<translation id="text" translation_id="243222" type="use" value="Continue"/>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+        
+        <record id="secondary_icon_properties" red_replacement="text"/>
+		<record id="click_event" event_id="CONT" event_target="glob" />
+
+		
+		<!-- We adjust the continue colour in code in some scenarios, the default colour is defined as 'continue colour' and can be adjusted in the global colour definitions -->
+		<attachment class="get_global_attachment" get_property="ctcl" set_property="colour"/>
+        <attachment class="get_global_attachment" get_property="ctcl" set_property="secondary_icon_colour"/>
+		
+		<attachment class="test_global_attachment" get_property="cont" set_property="disabled">
+			<list id="value">
+				<integer value="-5" />
+			</list>
+		</attachment>
+        
+		<attachment class="test_global_attachment" get_property="cont" set_property="hidden">
+			<list id="value">
+				<integer value="-16" />
+				<integer value="-14" />
+				<integer value="-13" />
+				<integer value="-7" />
+			</list>
+		</attachment>
+
+		<!-- match play text -->
+		<attachment class="get_global_attachment" get_property="cttx" set_property="text" />
+		<attachment class="get_global_attachment" get_property="ctht" set_property="hint" />
+
+		<attachment class="get_global_attachment" get_property="UsrL" set_property="Flas" skip_if_null="false"/>
+		<attachment class="flash_colour_attachment" auto_start="false">
+			<colour id="first_colour" name="text"/>
+			<colour id="second_colour" red="212" green="88" blue="64"/>
+			<list id="colour_property">
+				<flags value="rrep"/>
+				<flags value="brep"/>
+			</list>
+		</attachment>
+	</widget>
+
+	<!-- Must do stuff Button -->
+	<widget class="icon_button" id="MDSB" appearance="chrome/buttons/continue/button" alignment="centre" font="extendedblack" size="xsmall" secondary_icon_enabled="true" secondary_icon="icons/16px/urgent" secondary_icon_alignment="centre_right, centre_y" colour="bg darker" red_replacement="fg negative" blue_replacement="bg negative" green_replacement="black" controller_button="right_trigger">
+		<record id="secondary_icon_properties" red_replacement="bg darker"/>
+		<translation id="text" translation_id="295226" type="use" value="Must Respond[COMMENT: text to indicate that there is a news item the user must respond to before continuing the game]" />
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<record id="click_event" event_id="CONT" event_target="glob" />
+		<attachment class="test_global_attachment" mode="not_equal" get_property="cont" set_property="hidn">
+			<list id="value">
+				<integer value="-14" />
+				<integer value="-16" />
+			</list>
+		</attachment>
+		<attachment class="get_global_attachment" get_property="ctht" set_property="hint" />
+
+		<attachment class="get_global_attachment" get_property="UsrL" set_property="Flas" skip_if_null="false"/>
+		<attachment class="flash_colour_attachment" auto_start="false">
+			<colour id="first_colour" name="bg" />
+			<colour id="second_colour" name="bg alert" />
+			<flags id="colour_property" value="bkcl"/>
+		</attachment>
+	</widget>
+
+	<!-- back to match Button -->
+	<widget class="icon_button" id="BTMB" appearance="chrome/buttons/continue/button" alignment="centre" font="title" controller_button="right_trigger" secondary_icon_enabled="true" secondary_icon="icons/16px/ball" secondary_icon_alignment="centre_right, centre_y" colour="bg darker" red_replacement="fg negative" blue_replacement="negative" green_replacement="black">
+		<record id="secondary_icon_properties" red_replacement="bg"/>
+		<translation id="text" translation_id="258584" type="use" value="Match[COMMENT - continue button text when match screen is next screen to appear]" />
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<record id="click_event" event_id="CONT" event_target="glob" />
+		<attachment class="test_global_attachment" mode="not_equal" get_property="cont" set_property="hidn">
+			<list id="value">
+				<integer value="-7" />
+			</list>
+		</attachment>
+		<attachment class="get_global_attachment" get_property="ctht" set_property="hint" />
+		<attachment class="get_global_attachment" get_property="cttx" set_property="text" />
+
+		<attachment class="get_global_attachment" get_property="UsrL" set_property="Flas" skip_if_null="false"/>
+		<attachment class="flash_colour_attachment" auto_start="false">
+			<colour id="first_colour" name="bg red darker" />
+			<colour id="second_colour" name="bg red lighter" />
+			<flags id="colour_property" value="bkcl"/>
+		</attachment>
+	</widget>
+
+
+	<!--button showing the number of humans playing - click it to go to game status screen-->
+	<widget class="icon_button" auto_size="horizontal" height="14" size="7" alignment="centre" style="semi_bold" appearance="buttons/custom/network game/button" font="fonts/button" icon="icons/custom/network game/users">
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="3" />
+		<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+		<attachment class="get_global_attachment" get_property="nhmw" set_property="text" />
+		<attachment class="get_global_attachment" get_property="ahph" set_property="hint" />
+		<attachment class="test_global_attachment" get_property="nhmw" mode="equal" value="0" set_property="hidn" />
+		<event id="click_event" event_id="STAT" event_target="scrC" />
+	</widget>
+
+	<!--button to request stop time-->
+	<widget class="popup_button_request_stop" auto_size="horizontal" style="semi_bold" appearance="buttons/custom/network game/button" fixed="true" height="14" size="7" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+		<attachment class="get_global_attachment" get_property="rqsm" set_property="itms" />
+		<attachment class="get_global_attachment" get_property="rqst" set_property="text" />
+		<attachment class="test_global_attachment" get_property="usrq" mode="not_equal" value="1" set_property="hidn" />
+		<event id="select_event" event_id="RQST" event_target="glob" />
+	</widget>
+
+	<!--button shown when another user has requested a stop time-->
+	<widget class="popup_button_other_client_wants_stop" auto_size="horizontal" appearance="buttons/custom/network game/button" fixed="true" height="14" size="7" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+		<attachment class="get_global_attachment" get_property="rqsm" set_property="itms" />
+		<attachment class="get_global_attachment" get_property="rqst" set_property="text" />
+		<attachment class="test_global_attachment" get_property="usrq" mode="not_equal" value="2" set_property="hidn">
+			<list id="value">
+				<integer value="2" />
+				<integer value="3" />
+			</list>
+		</attachment>
+		<event id="select_event" event_id="RQST" event_target="glob" />
+	</widget>
+
+</panel>

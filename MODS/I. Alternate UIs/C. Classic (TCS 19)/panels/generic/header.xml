@@ -1,0 +1,87 @@
+<panel>
+
+	<!-- debug menu -->
+	<attachment class="get_global_attachment" get_property="Dmen" set_property="coni" />
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!--titlebars-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- titlebar -->
+		<widget class="titlebar_panel" id="NHdr" height="60" />
+
+		<!-- match titlebar -->
+		<widget class="match_titlebar_panel" id="MHdr" height="40" />
+	</container>
+
+	<!--tabs/match feed/content menu-->
+	<!-- @archie.buck The tutorial relies on this id not changing, if you need to adjust it please also update TUTORIAL_MANAGER -->
+	<container class="main_box" height="42" appearance="boxes/custom/match/titlebar/paper" id="secT">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="5" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+
+		<attachment class="test_multiple_globals_attachment" default_value="false">
+			<list id="get_properties">
+				<record get_property="section" test_mode="equal" value="MRev" skip_if_null="false" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mMMr" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htmt" skip_if_null="true" />
+                <record get_property="section" test_mode="equal" comparison_mode="or" value="hPtt" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="TacH" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htpT" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htpP" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htpS" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htpN" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htpC" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htmt" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="hopi" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="htpF" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="TacA" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="atpT" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="atpP" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="atpS" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="atpN" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="atpC" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="atmt" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="aPtt" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="aopi" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="atpF" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="AnaH" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="AnaA" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="AnaN" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mazp" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mspa" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="matm" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mapl" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mshp" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mhan" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="maan" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="bmfs" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="bmts" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mtst" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="hfms" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="afms" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mgup" skip_if_null="true" />
+				<record get_property="section" test_mode="equal" comparison_mode="or" value="mpst" skip_if_null="true" />
+				<record get_property="hide_tabs" test_mode="equal" comparison_mode="and" value="false" skip_if_null="false" />
+			</list>
+			<integer id="set_property" value="Shwn" />
+		</attachment>
+
+		<!--team switching radio buttons-->
+		<widget class="match_team_selector_panel" id="mtsp">
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+
+		<!--tab bar-->
+		<widget class="sections_menu_strip_match" id="tree" auto_size="horizontal">
+			<record id="default_properties" colour="text" red_replacement="text"/>
+		</widget>
+
+	</container>
+</panel>
