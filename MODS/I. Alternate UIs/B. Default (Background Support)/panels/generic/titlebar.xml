@@ -1,0 +1,189 @@
+<!-- normal header container used on all screens except the match screen -->
+<panel>
+    <container navigation_container="true" >
+        <layout class="stick_to_sides_attachment" alignment="all" inset="6,0,0,0"/>
+
+        <attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0"/>
+
+        <container>
+            <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="4" gap="4" />
+            <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <!-- Back Button -->
+            <widget class="screen_history_button" id="back" fixed="true" width="50" appearance="chrome/buttons/items/button" icon="icons/custom/header/left" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+                <attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+                <record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+                <string id="controller_button" value="left_shoulder" />
+                <attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true" />
+            </widget>
+
+            <!-- Next Button -->
+            <widget class="screen_history_button" id="forw" fixed="true" width="30" appearance="chrome/buttons/items/button" icon="icons/custom/header/right" icon_alignment="centre" gamepad_icon_alignment="top,centre_x">
+                <attachment class="get_global_attachment" get_property="hnit" set_property="itms" />
+                <record id="click_event" event_id="GOTO" event_target="brow" scin="-2" />
+                <string id="controller_button" value="right_shoulder" />
+                <attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true" />
+            </widget>
+
+            <boolean id="should_force_refresh" value="true" />
+
+            <container height="50">
+                <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+                <!-- main logos container -->
+                <container id="MnLg">
+                    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8" />
+                    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+                    <!--buffer-->
+                    <container width="1"/>
+
+                    <!--left sided main logo and quick flicks-->
+                    <container id="flik">
+                        <attachment_group class="horizontal_arrange_autosize"/>
+
+                        <!-- Primary Logo -->
+                        <widget class="picture" id="lgtF" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="36">
+                            <layout class="stick_to_sides_attachment" alignment="vertical" inset="2" />
+
+                            <attachment class="test_setting_attachment" get_setting="show_badges" default_value="true" set_property="hidden">
+                                <boolean id="value" value="false" />
+                            </attachment>
+
+                            <!-- tells the picture to listen to the 'main picture' global property being set, and set its own file property from it -->
+                            <record id="object_property" should_force_refresh="true"> 
+                                <integer id="get_property" value="mnpc"  />
+                                <integer id="set_property" value="file" />
+                            </record>
+                        </widget>
+
+                        <!--quick flicks-->
+                        <container width="20">
+                            
+                            <string id="remove_if" value="ui.is_fmt_touchscreen_skin"/>
+
+                            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+                            <widget class="quick_flick_button" id="flkl" auto_size="all" appearance="icons/16px/up" icon_enabled="true" cached="true" step="-1" red_replacement="fg" >
+                                <layout class="stick_to_sides_attachment" alignment="left,top" inset="12,0,0,0" />
+
+                                <attachment class="get_global_attachment" get_property="stPQ" set_property="click_event" />
+                            </widget>
+
+                            <widget class="quick_flick_button" id="flkr" auto_size="all" appearance="icons/16px/down" cached="true" step="1" red_replacement="fg" >
+                                <layout class="stick_to_sides_attachment" alignment="left,top" inset="26,0,0,0" />
+
+                                <attachment class="get_global_attachment" get_property="stNQ" set_property="click_event" />
+                            </widget>
+                        </container>
+
+                    </container>
+
+                    <!--object name and search bar-->
+                    <widget class="titlebar_search_panel" id="Tits">
+                        <record id="object_property">
+                            <integer id="get_property" value="objt" />
+                            <integer id="set_property" value="objt" />
+                        </record>
+                    </widget>
+                </container>
+
+                <!--in game editor edit object button-->
+                <container>
+                    <attachment class="test_global_attachment" get_property="gset" value="false" set_property="hidn" />
+                    <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="0" vertical_offset="0"/>
+
+     <!-- CONTEXT MENU -->
+            <widget class="popup_button" icon="tcs/icons/interface/hamburger" fixed="true" colour="fg" width="44" appearance="chrome/buttons/items/button" secondary_icon_enabled="false" >
+                <record id="primary_icon_properties" red_replacement="fg" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="4"/>
+                <attachment class="get_global_attachment" get_property="lnks" set_property="itms"/>
+                <attachment class="test_global_attachment" get_property="lnks" set_property="hidn">
+                    <list id="value">
+                        <integer value="0"/>
+                    </list>
+                </attachment>
+            </widget>
+
+                    <widget class="edit_object_icon_button" id="edit" fixed="true" icon="icons/16px/edit" icon_alignment="centre" appearance="chrome/buttons/items/button" auto_size="none" multiline="false" width="44" height="44" secondary_icon_enabled="false">
+                        <record id="primary_icon_properties" red_replacement="fg" />
+                        <attachment class="flash_colour_attachment" auto_start="false" rate="850">
+                            <colour id="first_colour" red="49" green="52" blue="63" />
+                            <colour id="second_colour" red="46" green="103" blue="182" />
+                            <flags id="colour_property" value="bkcl" />
+                        </attachment>
+                    </widget>
+
+                    <!-- World dropdown -->
+            <widget class="world_popup_button" id="wrld" width="44" height="44" icon="icons/26px/world" appearance="chrome/buttons/items/button" secondary_icon_enabled="false" icon_alignment="centre" alignment="centre" >
+                <attachment class="test_multiple_globals_attachment" default_value="true" >
+                    <list id="get_properties">
+                        <record get_property="gset" test_mode="equal" value="false" />
+                        <record get_property="iVMg" test_mode="equal" comparison_mode="or" value="true" />
+                    </list>
+                    <integer id="set_property" value="hidn" />
+                </attachment>
+            </widget>
+
+            <!-- Help button 
+            <widget class="icon_button" id="hlpB" appearance="chrome/buttons/items/button" hidden="true" icon="icons/26px/help" width="44" height="44" disable_wheel="true" icon_alignment="centre" click_event="ohlp" >
+                <translation id="hint" translation_id="466619" type="use" value="Help[COMMENT: Help button on titlebar]" />
+            </widget> -->
+
+            <!-- FM button -->
+            <widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="44" height="44" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
+                <event id="click_notification_event" event_id="FM" item="NULL" />
+                <event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
+                <record id="items" file="menus/game" />
+                <translation id="hint" translation_id="292829" type="use" value="Options[COMMENT: menubar game options button]" />
+            </widget>
+
+            <!-- change manager button -->
+            <widget class="popup_button" id="ChMN" appearance="chrome/buttons/items/button" disable_wheel="true" height="39" auto_size="horizontal" text="-" style="semi_bold" >
+                <event id="click_notification_event" event_id="FM" item="NULL" />
+                <event id="menu_layout_notification_event" event_id="mlne" event_target="ChMN" />
+                <attachment class="get_global_attachment" get_property="Hmen" set_property="itms" />
+                <attachment class="get_global_attachment" get_property="HmeV" set_property="Shwn" skip_if_null="false"/>
+                <attachment class="get_global_attachment" get_property="HmeD" set_property="disa" skip_if_null="false"/>
+                <attachment class="get_global_attachment" get_property="CHum" set_property="slct" />
+                <attachment class="test_screen_size_attachment">
+                    <list id="properties">
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1280" />
+                            <integer id="max_value" value="10000" />
+                            <symbol id="set_property" value="auto_size_maximum_width" />
+                            <integer id="true_value" value="400" />
+                            <integer id="false_value" value="65" />
+                        </record>
+                    </list>
+                </attachment>
+            </widget>
+                </container>
+            </container>
+        </container>
+
+        <!-- Group of buttons in the top right -->
+        <container>
+            <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="6" horizontal_offset="6" vertical_offset="2"/>
+
+            
+            <!-- calendar button -->
+            <widget class="current_game_date_widget" id="cgdw" height="44">
+                <attachment class="test_global_attachment" get_property="cont" set_property="disa">
+                    <list id="value">
+                        <integer value="-5" />
+                    </list>
+                </attachment>
+            </widget>
+
+            <!-- transfer deadline day countdown -->
+            <widget class="transfer_deadline_day_countdown_widget" id="DDcd" height="44"/>
+
+            <!-- continue button -->
+            <container id="ctnu" file="generic/tcs/ui/continue" height="46" width="160"/>
+        </container>
+    </container>
+</panel>

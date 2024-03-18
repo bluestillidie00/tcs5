@@ -1,0 +1,136 @@
+<panel save_default_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<symbol id="sidebar_secondary_colour" value="fg"/>
+    <symbol id="alt_sidebar_secondary_colour" value="dark text"/>
+    <string id="table_selected_appearance" value="tables/custom/sidebar/selected/row"/>
+    <string id="table_alt_selected_appearance" value="tables/custom/sidebar/alt selected/row"/>
+
+  	<container class="tcs_box" appearance="tcs/boxes/ui/sidebar/paper" rrep="primary" grep="bg" transparency="0.6">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="4"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true" />
+		
+		<!--club/nation selector-->
+		<container class="tabbed_container" id="tabc" changed_event="Tesc" contents_kind="container" group_kind="container" hide_selector_if_one_or_fewer_items="true">
+			<record id="top_properties">
+				<flags id="appearance" value="tabs/custom/sidebar"/>
+				<flags id="auto_size" value="vertical" />
+				<flags id="alignment" value="top" />
+				<boolean id="use_alt_end_tab_appearances" value="false"/>
+				<boolean id="hide_tab_text" value="true"/>
+			</record>
+
+			<!--club table-->
+			<container id="CLUB">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="table" id="club" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single,drag_rows,drop_on_rows,insert_on_drop,highlight_on_scroll,dont_allow_clear_selection" auto_size_rows="true" fixed_size_rows="false" navigation_focus_target="true">
+					<list id="column_table_properties">
+						<record width="-1" minimum_width="20" column_heading="Icon">
+							<record id="column_widget_properties"/>
+						</record>
+						<record width="-3" minimum_width="100" column_heading="Name">
+							<record id="column_widget_properties" alignment="left,centre_y" colour="white"  size="normal">
+								<record id="secondary_text_properties" alignment="left,top"  size="normal"/>
+							</record>
+						</record>
+					</list>
+				</widget>
+
+				<widget class="table" id="cluF" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" highlighted_appearance="tables/custom/sidebar/over/row">
+					<list id="column_table_properties">
+						<record width="-1" column_heading="Icon">
+							<record id="column_widget_properties"/>
+						</record>
+						<record width="-3" minimum_width="100" column_heading="Name">
+							<record id="column_widget_properties" alignment="left,centre_y" colour="faded white" font="title" size="small" gap="0" >
+								<record id="secondary_text_properties" alignment="left,top" size="normal" colour="white"/>
+							</record>
+						</record>
+					</list>
+				</widget>
+
+			</container>
+
+			<!--nation table-->
+			<container id="NATI">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="table" id="nati" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single,drag_rows,drop_on_rows,insert_on_drop,highlight_on_scroll" auto_size_rows="true" fixed_size_rows="false" highlighted_appearance="tables/custom/sidebar/over/row" navigation_focus_target="true">
+					<list id="column_table_properties">
+						<record width="-1" minimum_width="20" column_heading="Icon">
+							<record id="column_widget_properties"/>
+						</record>
+						<record width="-3" minimum_width="100" column_heading="Name">
+							<record id="column_widget_properties" alignment="left,centre_y" colour="white"  size="normal"/>
+						</record>
+					</list>
+				</widget>
+
+				<widget class="table" id="natF" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" highlighted_appearance="tables/custom/sidebar/over/row">
+					<list id="column_table_properties">
+						<record width="-1" column_heading="Icon">
+							<record id="column_widget_properties"/>
+						</record>
+						<record width="-3" minimum_width="100" column_heading="Name">
+							<record id="column_widget_properties" alignment="left,centre_y" colour="faded white" font="title" size="small" gap="0" >
+								<record id="secondary_text_properties" alignment="left,top" size="normal" colour="white"/>
+							</record>
+						</record>
+					</list>
+				</widget>
+			</container>
+		</container>
+
+		<!--unemployed table-->
+		<container id="UNEM">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="table" id="unem" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single,drag_rows,drop_on_rows,insert_on_drop,highlight_on_scroll" auto_size_rows="true" fixed_size_rows="false" navigation_focus_target="true" highlighted_appearance="tables/custom/sidebar/over/row">
+				<list id="column_table_properties">
+					<record width="-1" minimum_width="20" column_heading="Icon">
+						<record id="column_widget_properties"/>
+					</record>
+					<record width="-3" minimum_width="100" column_heading="Name">
+						<record id="column_widget_properties" alignment="left,centre_y" colour="white"  size="normal"/>
+					</record>
+				</list>
+			</widget>
+
+			<widget class="table" id="uneF" mode="select_rows,fill_rows,hide_headings,dont_allow_click_unselect_single" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" highlighted_appearance="tables/custom/sidebar/over/row">
+				<list id="column_table_properties">
+					<record width="-1" column_heading="Icon">
+						<record id="column_widget_properties"/>
+					</record>
+					<record width="-3" minimum_width="100" column_heading="Name">
+						<record id="column_widget_properties" alignment="left,centre_y" colour="faded white" font="title" size="small" gap="0" >
+							<record id="secondary_text_properties" alignment="left,top" size="normal" colour="white"/>
+						</record>
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<!-- battery indicator, only shows up for laptops  & chat indicator-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom" gap="0" offset="5"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="0"/>
+
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="5"/>
+
+			<widget class="feed_button" id="ChBt" width="45" height="40" event_id="addF" secondary_icon="icons/26px/speech bubble" secondary_icon_alignment="centre" appearance="" alignment="left,top">
+				<record id="secondary_icon_properties" red_replacement="white"/>
+				<record id="modal_popup_properties" >
+					<boolean id="darkened" value="false" />
+					<boolean id="attempt_to_reposition" value="true" />
+				</record>
+			</widget>
+			<widget class="battery_power_indicator" width="45" height="20" image_alignment="centre"/>
+		</container>
+	</container>
+
+</panel>
