@@ -1,0 +1,80 @@
+<panel>
+
+	<string id="skin_style" value="match" />
+
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="plti">
+
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="tactic_player_list_table" select_event="eops" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows, printable, store_sort_state, show_bullets select_rows, select_multiple" column_mode="move_columns" column_spacing="0" row_spacing="5">
+
+			<integer id="contextual_handler_column_id" value="POsL" />
+
+			<!--default view-->
+			<flags id="default_view" value="play" />
+
+			<!--this is the view menu to be shown wherever the ui wants it-->
+			<list id="viws">
+				<record id="play">
+					<boolean id="tick" value="false" />
+					<boolean id="sort_disabled" value="true" />
+					<record id="view">
+						<!-- picked info -->
+						<record id="POsL" width="55"/>
+						<record id="OPpS" auto_hide_priority="110" />
+						<!-- status info -->
+						<record id="pKib" width="-2" auto_hide_priority="104" minimum_width="110"/>
+						<!-- condition   -->
+						<record id="PcOI" auto_hide_priority="104"/>
+						<!-- sharpness -->
+						<record id="PftI" auto_hide_priority="104"/>
+
+						<record id="OPiT" auto_hide_priority="100" width="45" />
+						<!-- match status -->
+						<record id="Pcar" auto_hide_priority="105" width="28"/>
+						<!-- advice -->
+						<record id="OPad" auto_hide_priority="100" width="28"/>
+						<!-- opposition player: tight marking -->
+						<record id="OPtm" auto_hide_priority="100" width="-1" minimum_width="40"/>
+						<!-- opposition player: pressing intensity -->
+						<record id="OPcd" auto_hide_priority="101" width="-1" minimum_width="40"/>
+						<!-- opposition player: pressing intensity -->
+						<record id="OPtk" auto_hide_priority="102" width="-1" minimum_width="40"/>
+						<!-- opposition player: show onto foot -->
+						<record id="OPsf" auto_hide_priority="103" width="-1" minimum_width="40"/>
+
+						<!-- opposition player: average rating / match rating. Only one visible if in/out match -->
+						<record id="Poav" auto_hide_priority="104" width="50"/>
+						<record id="MPrt" auto_hide_priority="104" width="50"/>
+						<record id="Pmor" auto_hide_priority="106"/>
+						<!-- morale -->
+					</record>
+				</record>
+
+				<record id="posi">
+					<boolean id="tick" value="false" />
+					<boolean id="sort_disabled" value="true" />
+					<record id="view">
+						<flags id="POsL" />
+						<!-- picked info -->
+						<flags id="OPtm" auto_hide_priority="100"/>
+						<!-- opposition player: tight marking -->
+						<flags id="OPcd" auto_hide_priority="101"/>
+						<!-- opposition player: pressing intensity -->
+						<flags id="OPtk" auto_hide_priority="102"/>
+						<!-- opposition player: tackling -->
+						<flags id="OPsf" auto_hide_priority="103"/>
+						<!-- opposition player: show onto foot -->
+					</record>
+				</record>
+
+			</list>
+
+		</widget>
+
+	</container>
+</panel>

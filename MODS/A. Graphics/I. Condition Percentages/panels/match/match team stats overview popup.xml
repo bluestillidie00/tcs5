@@ -1,0 +1,40 @@
+<panel>
+
+  <!-- Starting XI Styles -->
+  <flags id="stxi" value="table/row"/>
+
+  <!-- Subs Styles -->
+  <flags id="subs" value="tables/custom/lineup/subs/row"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows,printable">
+    <boolean id="sort_disabled" value="true" />
+    <record id="default_properties" navigation_focus_target="false" />
+
+    <flags id="default_view" value="msvw" />
+
+    <!-- default sort by playing position (primary), then picked position, then name -->
+    <list id="default_sort_column">
+      <integer value="TPRD" />
+    </list>
+
+    <list id="viws">
+      <record id="msvw">
+        <record id="view">
+          <record id="TPRD" hidden="true"/>
+		  <flags id="Psnu"/>
+		  <flags id="Pcar"/>
+		  <flags id="PisC"/>
+          <record id="Pnam" navigation_focus_target="true"/>
+		  <flags id="PcOI"/>
+		  <flags id="PftI"/>
+          <record id="MPrt" auto_hide_priority="1300"/>
+          <record id="MPgl" auto_hide_priority="1400"/>
+          <record id="MPas" auto_hide_priority="1500"/>
+        </record>
+      </record>
+    </list>
+
+  </widget>
+</panel>

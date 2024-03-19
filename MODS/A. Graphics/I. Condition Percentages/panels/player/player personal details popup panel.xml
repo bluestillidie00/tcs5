@@ -1,0 +1,139 @@
+<!-- A panel showing various bits of information about a player -->
+<panel height="170">
+	<boolean id="should_force_refresh" value="true"/>
+	<layout class="horizontal_arrange" horizontal_layout="240,-1,200"/>
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8"/>
+
+		<!-- CONTAINER HOLDING KIT AND PLAER PIC -->
+		<!-- KIT ICON AND PLAYER STATUS -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+		
+			<container>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- PLAYER PICTURE -->
+				<widget class="object_portrait_picture" id="face" width="100" image_alignment="left,bottom" scale_picture="true" keep_aspect_ratio="true">
+					<record id="object_property" get_property="objt"/>
+				</widget>
+
+				<!-- STATUS INDICATORS-->
+				<!-- Fix Issue #46 changed order, and added a container to give it the right placeholder, and maintain the picture as clickable -->
+				<container>
+					<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+						<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+						<record id="object_property" get_property="Pnfa"/>
+					</widget>
+				</container>
+			</container>
+			
+			<widget class="person_button" auto_size="vertical" font="title" colour="fg" alignment="centre">
+			<record id="object_property" get_property="dref" />
+			</widget>
+			
+		</container>
+
+		<!-- CLUB AND NATION LOGO -->
+		<container width="70">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="4"/>
+
+				<!-- CLUB -->
+				<container class="tcs_box">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!-- IF NO CLUB -->
+					<widget class="value_based_picture" scale_picture="true" file="none">
+						<list id="value_list">
+							<record value="0" file="tcs/icons/unemployed/img"/>
+						</list>
+						<record id="object_property">
+							<list id="get_properties">
+								<record get_property="Pcjo" set_property="valu" dont_set_hint="true"/>
+							</list>
+						</record>
+					</widget>
+
+					<!-- IF CLUB -->
+					<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true">
+						<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt"/>
+					</widget>
+				</container>
+
+				<!-- NATION LOGO -->
+				<container class="tcs_box">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true">
+						<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt"/>
+					</widget>
+				</container>
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0"/>
+
+				<record id="default_properties" appearance="" label_disabled="true" show_hover_popup_on_focus="true" auto_size="vertical" alignment="centre_x"/>
+
+				<widget class="player_condition_icon_widget" id="PcOI">
+					<record id="object_property" get_property="PcOI"/>
+				</widget>
+
+				<widget class="player_match_sharpness_icon_widget" id="Pfit">
+					<record id="object_property" get_property="Pfit"/>
+				</widget>
+
+			</container>
+
+		</container>
+	</container>
+
+	<!-- DETAILS TABLE -->
+	<container class="tcs_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container class="player_profile_panel" id="popS" file="none">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<container class="player_personal_details_panel" id="tper" file="player/tcs/selector/information/ppdp">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" type="use" translation_id="292923"/>
+				<translation id="subtitle" type="use" translation_id="292589"/>
+			</container>
+		</container>
+	</container>
+
+	<container class="tcs_table">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container id="botc" class="player_profile_panel" file="none">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<widget class="label" auto_size="vertical" font="title" colour="text">
+				<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]"/>
+			</widget>
+
+			<container class="scrolling_box">
+
+				<container>
+					<layout class="vertical_arrange" vertical_alignment="top"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill"/>
+
+					<widget class="preferred_moves_panel" auto_size="vertical" file="player/player information preferred moves" id="pfmp">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+
+
+</panel>

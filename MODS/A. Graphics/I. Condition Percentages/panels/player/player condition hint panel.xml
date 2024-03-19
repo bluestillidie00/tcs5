@@ -1,0 +1,31 @@
+﻿<panel width="300">
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" vertical_offset="5"/>
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" vertical_gap="8"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="35, -1" horizontal_offset="6"/>
+
+			<widget class="player_condition_icon_widget" height="30" label_disabled="true" appearance="" smpc="false" scale_picture="true" keep_aspect_ratio="true" navigation_focus_target="false">
+				<record id="object_property" get_property="PcOI"/>
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="0" vertical_alignment="middle"/>
+
+				<widget class="player_condition_icon_widget" height="22" icon_enabled="false" appearance="" font="title" size="large" colour="fg" navigation_focus_target="false">
+					<record id="object_property" get_property="PcOI"/>
+				</widget>
+				
+				<widget class="text" id="cndT" colour="faded text" multiline="true" auto_size="vertical"/>
+			</container>
+		</container>
+
+		<!--injury status-->
+		<widget class="player_injury_panel" id="AdIn" file="player/player injury panel condition hint">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</container>
+
+</panel>

@@ -1,0 +1,538 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<!-- main area -->
+	<container id="main" navigation_container="true" default_focus="true">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="main_box" id="plti" alignment="left" force_title_borders="true" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- buttons area -->
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_left"/>
+
+				<widget class="view_menu_label" id="TitL">
+					<translation id="text" translation_id="270700" type="use" value="Loans[COMMENT - team screen section; section showing players on loan]" />
+				</widget>
+
+				<!-- view button -->
+				<widget class="view_menu_popup" id="plvi" />
+			</container>
+
+			<!-- buttons area -->
+			<container id="btna" embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right"/>
+
+				<!-- filter menu -->
+				<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true"/>
+
+			</container>
+
+			<widget class="client_object_list_table" id="pltb" database_table_type="1" customisation_context="play" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" column_mode="resize_columns, move_columns, custom_views" navigation_container="true">
+				<boolean id="save_session_state" value="true" />
+				<integer id="contextual_handler_column_id" value="Pnms" />
+				<boolean id="should_force_refresh" value="true" />
+
+				<!-- default sort by playing position (primary), then picked position, then name -->
+				<list id="default_sort_column">
+					<integer value="PpsC" />
+					<integer value="Pnms" />
+				</list>
+
+				<!--default view-->
+				<flags id="default_view" value="loan" />
+
+				<list id="viws">
+					<record id="loan">
+						<translation id="name" translation_id="275856" type="use" value="Details[COMMENT: button in view_menu on squad screens; choose to view loan/coownership details]" />
+						<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="PpsC" />
+							<!-- position -->
+							<flags id="Plcb" />
+							<!-- person loan club -->
+							<flags id="Pled" />
+							<!-- loan end date -->
+							<flags id="Pwcn" />
+							<!-- loan wage contribution -->
+							<flags id="Poap" />
+							<!-- apps -->
+							<flags id="Pogl" />
+							<!-- goals -->
+							<flags id="Poav" />
+							<!-- average rating -->
+							<flags id="Pdva" />
+							<!-- player value -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="geni">
+						<translation id="name" translation_id="247410" type="use" value="General Info" />
+						<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="PpsC" />
+							<!-- position -->
+							<record id="Pnat">
+								<!-- person nationality -->
+								<flags id="use_format" value="short" />
+							</record>
+							<flags id="Phei" />
+							<!-- height -->
+							<flags id="Pwei" />
+							<!-- weight -->
+							<flags id="PSag" />
+							<!-- person age -->
+							<flags id="Pdva" />
+							<!-- player value -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="ctrt">
+						<translation id="name" translation_id="230163" type="use" value="Contract" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Psnu" />
+							<!-- squad number -->
+							<flags id="Pcpt" />
+              <!-- agreed playing time -->
+							<flags id="Pcif" />
+							<!-- full time or part-time contract -->
+							<flags id="Pcww" />
+							<!-- weekly wage -->
+							<flags id="Pced" />
+							<!-- contract expiry -->
+							<!-- <flags id="Pcpr"/> - protected -->
+							<flags id="Pdva" />
+							<!-- value -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="trnf">
+						<translation id="name" translation_id="230119" type="use" value="Transfer" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pagn" />
+							<!-- person agent -->
+							<flags id="Pcoo" />
+							<!-- transfer options -->
+							<flags id="PcTp" />
+							<!-- transfer status -->
+							<flags id="PcLp" />
+							<!-- loan status -->
+							<flags id="Papr" />
+							<!-- asking price -->
+							<flags id="Pdva" />
+							<!-- value -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="info">
+						<translation id="name" translation_id="247860" type="use" value="Full Player Status[COMMENT: player full status information: heading]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pnfa" />
+							<!-- full player status/info -->
+							<flags id="Pdva" />
+							<!-- value -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="----" />
+
+					<!-- shown for club teams -->
+					<record id="sltn">
+						<translation id="name" translation_id="326989" type="use" value="Selection Info[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="PpsC" />
+							<!-- position -->
+							<flags id="Pmor" />
+							<!-- player morale -->
+							<flags id="Pfrm" />
+							<!-- player form -->
+							<flags id="PcOI" />
+							<!-- player condition -->
+							<flags id="Poap" />
+							<!-- overall appearances -->
+							<flags id="Pogl" />
+							<!-- overall goals -->
+							<flags id="Poav" />
+							<!-- overall average rating -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="5" />
+						</record>
+					</record>
+
+					<record id="coac">
+						<translation id="name" translation_id="292814" type="use" value="Reports[COMMENT: top level menu title for player reports screens]" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pbpc" />
+							<!-- player style -->
+							<flags id="PpPs" />
+							<!-- best position -->
+							<flags id="Pbrc" />
+							<!-- role -->
+							<flags id="Pbdc" />
+							<!-- duty -->
+							<flags id="Page" />
+							<!-- age -->
+							<flags id="Pcac" />
+							<!-- currant ability -->
+							<flags id="Pppc" />
+							<!-- potential ability -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="inju">
+						<translation id="name" translation_id="247861" type="use" value="Injuries[COMMENT: squad list view menu, injuries menu item label]" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="PpsC" />
+							<!-- position -->
+							<record id="injr" auto_hide_priority="3" />
+							<!-- player injury -->
+							<record id="iida" auto_hide_priority="4" />
+							<!-- player injured date-->
+							<record id="iito" auto_hide_priority="5" />
+							<!-- player injury time out -->
+							<flags id="PcOI" auto_hide_priority="2"/>
+							<!-- player condition -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="fitn">
+						<translation id="name" translation_id="247571" type="use" value="Fitness" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="PpsC" />
+							<!-- position -->
+							<flags id="PcOI" auto_hide_priority="2"/>
+							<!-- player condition -->
+							<flags id="PftI" auto_hide_priority="1" />
+							<!-- player sharpness -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="sest">
+						<translation id="name" translation_id="247412" type="use" value="Stats" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Poap" />
+							<!-- overall appearances -->
+							<flags id="Pogl" />
+							<!-- player overall goals -->
+							<flags id="Poas" />
+							<!-- overall assists -->
+							<flags id="Pomo" />
+							<!-- overall man of match -->
+							<flags id="Popa" />
+							<!-- overall pass completion ratio -->
+							<flags id="Pota" />
+							<!-- overall tackles per game ratio -->
+							<flags id="Podr" />
+							<!-- overall dribbles per game ratio -->
+							<flags id="Post" />
+							<!-- overall shots on target ratio -->
+							<flags id="Poav" />
+							<!-- overall average rating -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="inca">
+						<translation id="name" translation_id="227820" type="use" value="International" />
+						<record id="view">
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pnat" />
+							<!-- person nationality -->
+							<flags id="Pntm" />
+							<!-- current international team picked for -->
+							<flags id="Piap" />
+							<!-- player int apps -->
+							<flags id="Pigl" />
+							<!-- player int goals -->
+							<flags id="Puia" />
+							<!-- player int u21 apps -->
+							<flags id="Puig" />
+							<!-- player int u21 goals -->
+							<flags id="loan" />
+							<!-- end loan action -->
+						</record>
+					</record>
+
+					<record id="----" />
+
+					<record id="stts">
+						<translation id="text" translation_id="229822" type="use" value="Attributes" />
+
+						<list id="items">
+							<record id="phat">
+								<translation id="name" translation_id="230003" type="use" value="Physical" />
+								<record id="view">
+									<flags id="Pnfo" />
+									<!-- player status/info -->
+									<flags id="Pnms" />
+									<!-- person name -->
+									<flags id="Pacc" />
+									<!-- (p) acceleration -->
+									<flags id="Pagi" />
+									<!-- (p) agility -->
+									<flags id="Pbal" />
+									<!-- (p) balance -->
+									<flags id="Pjum" />
+									<!-- (p) jumping -->
+									<flags id="Pnft" />
+									<!-- (p) natural fitness -->
+									<flags id="Ppac" />
+									<!-- (p) pace -->
+									<flags id="Psta" />
+									<!-- (p) stamina -->
+									<flags id="Pstr" />
+									<!-- (p) strength -->
+								</record>
+							</record>
+
+							<record id="meat">
+								<translation id="name" translation_id="230106" type="use" value="Mental" />
+								<record id="view">
+									<flags id="Pnfo" />
+									<!-- player status/info -->
+									<flags id="Pnms" />
+									<!-- person name -->
+									<record id="Pagg" />
+									<!-- (m) aggression -->
+									<record id="Pant" />
+									<!-- (m) anticipation -->
+									<record id="Pbra" />
+									<!-- (m) bravery -->
+									<record id="Pcmp" />
+									<!-- (m) composure -->
+									<record id="Pcnt" />
+									<!-- (m) concentration -->
+									<record id="Pdec" />
+									<!-- (m) decisions -->
+									<record id="Pdet" />
+									<!-- (m) determination -->
+									<record id="Pfla" />
+									<!-- (m) flair -->
+									<record id="Pinf" />
+									<!-- (m) influence -->
+									<record id="Potb" />
+									<!-- (m) off the ball -->
+									<record id="Ppsn" />
+									<!-- (m) positioning -->
+									<record id="Ptwr" />
+									<!-- (m) teamwork -->
+									<record id="Pcre" />
+									<!-- (m) vision -->
+									<record id="Pwkr" />
+									<!-- (m) work rate -->
+								</record>
+							</record>
+
+							<record id="teat">
+								<translation id="name" translation_id="229413" type="use" value="Technical" />
+								<record id="view">
+									<flags id="Pnfo" />
+									<!-- player status/info -->
+									<flags id="Pnms" />
+									<!-- person name -->
+									<record id="Pcor" />
+									<!-- (t) corner taking -->
+									<record id="Pcro" />
+									<!-- (t) crossing -->
+									<record id="Pdri" />
+									<!-- (t) dribbling -->
+									<record id="Pfin" />
+									<!-- (t) finishing -->
+									<record id="Pfrs" />
+									<!-- (t) first touch -->
+									<record id="Pfrk" />
+									<!-- (t) free kick taking -->
+									<record id="Phea" />
+									<!-- (t) heading -->
+									<record id="Plsh" />
+									<!-- (t) long shots -->
+									<record id="Plth" />
+									<!-- (t) long throws -->
+									<record id="Pmar" />
+									<!-- (t) marking -->
+									<record id="Ppas" />
+									<!-- (t) passing -->
+									<record id="Ppen" />
+									<!-- (t) penalty taking -->
+									<record id="Ptac" />
+									<!-- (t) tackling -->
+									<record id="Ptec" />
+									<!-- (t) technique -->
+								</record>
+							</record>
+
+							<record id="goat">
+								<translation id="name" translation_id="230024" type="use" value="Goalkeeping" />
+								<record id="view">
+									<flags id="Pnfo" />
+									<!-- player status/info -->
+									<flags id="Pnms" />
+									<!-- person name -->
+									<flags id="Paab" />
+									<!-- aerial reach -->
+									<flags id="Pcoa" />
+									<!-- command of area -->
+									<flags id="Pcom" />
+									<!-- communication -->
+									<flags id="Pecc" />
+									<!-- eccentricity -->
+									<flags id="Phan" />
+									<!-- handling -->
+									<flags id="Pkic" />
+									<!-- kicking -->
+									<flags id="Pooo" />
+									<!-- one on ones -->
+									<flags id="Pref" />
+									<!-- reflexes -->
+									<flags id="Prou" />
+									<!-- rushing out -->
+									<flags id="Pttp" />
+									<!-- tendency to punch -->
+									<flags id="Pthr" />
+									<!-- throwing -->
+								</record>
+							</record>
+
+							<record id="deat">
+								<translation id="name" translation_id="247413" type="use" value="Defensive" />
+								<record id="view">
+									<flags id="Pnfo" />
+									<!-- player status/info -->
+									<flags id="Pnms" />
+									<!-- person name -->
+									<flags id="Pacc" />
+									<!-- acceleration -->
+									<flags id="Pant" />
+									<!-- anticipation -->
+									<flags id="Phea" />
+									<!-- heading -->
+									<flags id="Pjum" />
+									<!-- jumping -->
+									<flags id="Pmar" />
+									<!-- marking -->
+									<flags id="Ppac" />
+									<!-- pace -->
+									<flags id="Ppsn" />
+									<!-- positioning -->
+									<flags id="Psta" />
+									<!-- stamina -->
+									<flags id="Pstr" />
+									<!-- strength -->
+									<flags id="Ptac" />
+									<!-- tackling -->
+								</record>
+							</record>
+
+							<record id="atat">
+								<translation id="name" translation_id="230042" type="use" value="Attacking" />
+								<record id="view">
+									<flags id="Pnfo" />
+									<!-- player status/info -->
+									<flags id="Pnms" />
+									<!-- person name -->
+									<flags id="Pcro" />
+									<!-- crossing -->
+									<flags id="Pdri" />
+									<!-- dribbling -->
+									<flags id="Pfrk" />
+									<!-- free kicks -->
+									<flags id="Pfin" />
+									<!-- finishing -->
+									<flags id="Pfrs" />
+									<!-- first touch -->
+									<flags id="Pfla" />
+									<!-- flair -->
+									<flags id="Plsh" />
+									<!-- long shots -->
+									<flags id="Potb" />
+									<!-- off the ball -->
+									<flags id="Ppas" />
+									<!-- passing -->
+									<flags id="Pcre" />
+									<!-- vision -->
+								</record>
+							</record>
+						</list>
+					</record>
+				</list>
+
+			</widget>
+
+		</container>
+		<!-- players titled box -->
+
+	</container>
+	<!-- main area -->
+
+</panel>
+<!-- panel -->

@@ -1,0 +1,129 @@
+<panel>
+	<!--passed colour for text-->
+	<flags id="ptCL" value="positive" />
+	<!--failed colour for text-->
+	<flags id="ftCL" value="negative" />
+	<!--passed but not fully fit colour for text-->
+	<flags id="mtCL" value="mid condition" />
+	<!--passed colour for icon-->
+	<flags id="piCL" value="bg positive" />
+	<!--failed colour for icon-->
+	<flags id="fiCL" value="bg negative" />
+	<!--passed but not fully fit colour for icon-->
+	<flags id="miCL" value="bg orange" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<string id="skin_style" value="subtle box" />
+
+	<container class="inner_subtle_box">
+
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="55,70,-1" horizontal_offset="0" vertical_offset="0" />
+
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<container id="fiIc" class="main_contrast_box" appearance="boxes/custom/fitness test/paper">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--passed picture - tick icon-->
+				<widget class="picture" id="psPI" file="icons/26px/tick" red_replacement="white" height="55" image_alignment="centre" scale_picture="false" />
+
+				<!--passed but not recommended to pick picture - warning icon-->.
+				<widget class="picture" id="wrPI" file="icons/26px/urgent" red_replacement="white" image_alignment="centre" height="55" scale_picture="false" />
+
+				<!--failed picture - failed icon-->.
+				<widget class="picture" id="flPI" file="icons/26px/close" red_replacement="white" image_alignment="centre" height="55" scale_picture="false" />
+
+				<widget class="text" id="rcTM" alignment="centre" size="small" colour="white" height="55" />
+			</container>
+
+
+			<!-- Profile picture -->
+			<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x" height="110">
+				<record id="object_property">
+					<list id="get_properties">
+						<!--Facegen data request-->
+						<record get_property="fcgn" />
+						<!--Fake name request-->
+						<record get_property="Pfke" />
+						<record get_property="prpc" set_property="valu" />
+					</list>
+				</record>
+			</widget>
+
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,130" horizontal_offset="0" vertical_offset="0" />
+
+				<container>
+
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="2" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" gap="2" />
+
+					<widget class="person_button" id="namV" alignment="left,centre_y" auto_size="vertical" style="bold" size="large">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+						<record id="object_property">
+							<integer id="get_property" value="Pnms" />
+						</record>
+					</widget>
+
+					<widget class="button" id="pSoN" alignment="left,centre_y" auto_size="all" appearance="labels/standard/label" red_replacement="bg lighter" navigation_focus_target="false">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+					</widget>
+
+					<widget class="text" id="RETx" alignment="left,centre_y" auto_size="vertical">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					</widget>
+
+					<widget class="text" id="inFT" alignment="left,centre_y" auto_size="vertical" colour="faded text">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					</widget>
+
+				</container>
+
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<container class="vertical_label_value_pair" value_widget="clBT" label_widget="lbBT">
+						<widget class="player_condition_icon_widget" appearance=""  auto_size="vertical" label_disabled="true" icon_alignment="centre" navigation_focus_target="false">
+							<record id="object_property" get_property="PcOI" />
+						</widget>
+
+						<widget class="label" id="lbBT" auto_size="vertical">
+							<translation id="text" translation_id="227793" type="use" value="Condition" />
+						</widget>
+					</container>
+							
+					<container class="vertical_label_value_pair" value_widget="clTP" label_widget="lbTP">
+
+						<widget class="player_match_sharpness_icon_widget" appearance=""  auto_size="vertical" label_disabled="true" icon_alignment="centre" navigation_focus_target="false">
+							<record id="object_property" get_property="PftI" />
+						</widget>
+
+						<widget class="label" id="lbTP" auto_size="vertical">
+							<record id="object_property">
+								<integer id="get_property" value="PftI" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+					</container>
+
+				</container>
+
+			</container>
+		</container>
+
+		<widget class="link_button" section="PInj" auto_size="all">
+			<translation id="text" translation_id="447586" type="use" value="Medical Report[COMMENT: Panel title for when viewing medical report]" />
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+		</widget>
+
+	</container>
+
+</panel>

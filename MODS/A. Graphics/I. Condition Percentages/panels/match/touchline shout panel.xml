@@ -1,0 +1,98 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="10" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<container height="40">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container height="40" width="500">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="text" id="sNtx" auto_size="vertical" alignment="left,centre_y" size="large" style="semi_bold" />
+
+					<widget class="text" auto_size="vertical" alignment="left,centre_y" colour="faded text" size="small">
+						<translation id="text" translation_id="450755" type="use" value="Select player(s) to target with this shout[COMMENT: touchline shout panel instruction text]" />
+					</widget>
+				</container>
+
+				<widget class="popup_button" id="Psel" auto_size="horizontal" select_event="PpSL" propagate_mouse_events="false">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" />
+					<list id="items">
+						<record id="0">
+							<translation id="name" translation_id="447565" type="use" value="Defence[COMMENT: team talk panel; option to hand team talks over to the assistant manager for all defensive positions]" />
+						</record>
+						<record id="1">
+							<translation id="name" translation_id="447564" type="use" value="Midfield[COMMENT: team talk panel; option to hand team talks over to the assistant manager for all midfield positions]" />
+						</record>
+						<record id="2">
+							<translation id="name" translation_id="447563" type="use" value="Attack[COMMENT: team talk panel; option to hand team talks over to the assistant manager for all offensive positions]" />
+						</record>
+						<record id="4">
+							<translation id="name" translation_id="450756" type="use" value="All Positions[COMMENT: team talk panel; option to hand team talks over to the assistant manager for all positions]" />
+						</record>
+						<record id="----" />
+						<record id="3">
+							<translation id="name" translation_id="447566" type="use" value="Select Player(s)[COMMENT: team talk panel; option to hand team talks over to the assistant manager for a selection of positions]" />
+						</record>
+						<record id="5">
+							<translation id="text" translation_id="308085" type="use" value="Clear Selection[COMMENT: team screen pick euro/continental squad]" />
+						</record>
+					</list>
+					<integer id="selection" value="3" />
+					<integer id="popup_updated_event" value="PUpd" />
+				</widget>
+			</container>
+
+			<widget class="tactic_player_list_table" id="plrt" database_table_type="1" mode="fill_rows,select_rows,show_bullets,select_multiple" auto_size="vertical" select_event="sLsT" row_height="28">
+
+				<list id="default_sort_column">
+					<integer value="Pshp" />
+				</list>
+
+				<!--For Touchline talks-->
+				<record id="viewed_property_ids">
+					<!-- picked info -->
+					<record id="Pshp" auto_hide_priority="1" />
+					<!-- status -->
+					<record id="Pcar" auto_hide_priority="1" />
+					<!--Players Name-->
+					<record id="Pers" person_is_player="true" width="100" auto_hide_priority="3" />
+					<!--Match rating -->
+					<record id="MPrt" auto_hide_priority="1" />
+					<!-- Match condition -->
+					<record id="PcOI" auto_hide_priority="201" />
+					<!-- Match sharpness -->
+					<record id="PftI" auto_hide_priority="201" />
+					<!--Player Morale -->
+					<record id="Pmor" width="90" auto_hide_priority="3" />
+					<!-- player body language -->
+					<record id="Pmtc" width="140" auto_hide_priority="198" />
+				</record>
+			</widget>
+		</container>
+
+		<container height="40">
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="4" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4" />
+
+			<widget class="icon_button" id="clea" click_event="clea" auto_size="horizontal" controller_button="x_button">
+				<translation id="text" translation_id="451325" type="use" value="Clear All[COMMENT: button text to clear all previously given touchline shouts]" />
+			</widget>
+
+			<widget class="icon_button" click_event="canc" auto_size="horizontal" controller_button="b_button">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+
+			<widget class="primary_icon_tick_button" id="cnfB" disabled="true" click_event="conf" auto_size="horizontal" controller_button="y_button">
+				<translation id="text" translation_id="450759" type="use" value="Confirm Shout[COMMENT: touchline shout panel confirmation button]" />
+			</widget>
+		</container>
+	</container>
+</panel>

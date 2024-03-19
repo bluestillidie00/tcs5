@@ -1,0 +1,627 @@
+<panel>
+	<!--colours for the status panel at the top right-->
+	<symbol id="okst" value="player starting" />
+	<symbol id="wast" value="player not starting" />
+	<symbol id="inst" value="instructions not used" />
+
+	<colour id="selected_colour" name="selected instruction" />
+	<colour id="preselected_colour" name="preselected instruction" />
+
+	<layout class="arrange_vertical_attachment" layout="55,-1" offset="0">
+		<global id="gap" name="ui.main_contrast_box_gap" />
+	</layout>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!--info on the player selected-->
+	<container class="main_contrast_box_no_margin" navigation_container="true">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="5" gap="8" />
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+
+		<!--player icon and details-->
+		<container id="icde">
+			<layout class="arrange_vertical_attachment" layout="-2,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+			<!--icon, games played, suitability-->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--icon-->
+				<widget class="object_portrait_picture" width="60" id="plpc">
+					<boolean id="scale_picture" value="true" />
+					<boolean id="keep_aspect_ratio" value="true" />
+					<flags id="image_alignment" value="centre" />
+
+					<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+						<list id="value">
+							<boolean value="false" />
+						</list>
+					</attachment>
+
+					<record id="object_property">
+						<integer id="index" value="1" />
+						<integer id="get_property" value="ttcl" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--position legend-->
+				<widget class="picture" file="icons/custom/player instruction/large/position" id="poPI" width="32" image_alignment="centre" hidden="true" >
+				</widget>
+
+				<!--no position legend-->
+				<widget class="picture" file="icons/16px/circle" id="nPpi" width="65" image_alignment="centre" hidden="true" />
+
+				<!--player instruction icon-->
+				<widget class="picture" id="Piic" width="32" image_alignment="centre" scale_picture="true" hidden="true" />
+
+				<!--details-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="position_label" id="psLB" size="large" style="bold" alignment="left,top" auto_size="vertical" display_format="0" pUac="true" >
+					</widget>
+
+					<widget class="position_label" id="ppOT" alignment="left,top" auto_size="vertical" display_format="0" pUac="true">
+					</widget>
+
+					<widget class="person_button" id="plbt" style="bold" size="large" alignment="left,bottom" auto_size="vertical" enforce_style="true" navigation_focus_target="true">
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+
+		<!--text showing this position's status - the container is what gets coloured, the text is the text-->
+		<container class="main_box" height="40" appearance="boxes/custom/darken/rounded/standard/paper">
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="5" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+
+			<widget class="text" id="plst" alignment="right,centre_y" auto_size="all" size="small" colour="white" />
+
+			<container class="picture" id="plBK" width="5" file="icons/16px/square" scale_picture="true" keep_aspect_ratio="false" />
+		</container>
+		
+<container >
+	      <attachment_group class="title_embedded_panel_right" horizontal_offset="0" vertical_inset="8"/>
+	      <!-- buttons area -->
+	      <widget class="icon_button" icon="icons/16px/cross" height="28" width="28" icon_alignment="centre" red_replacement="bg green lighter" icon_colour="text" appearance="buttons/standard/flex/button" id="clos" embed_in_frame="true">
+	        <record id="click_event">
+	          <flags id="event_id" value="Clos" />
+	        </record>
+	      </widget>
+   		</container>
+	</container>
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="-7,-11" offset="0">
+			<global id="gap" name="ui.main_contrast_box_gap" />
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container class="main_subtle_box" id="SoPI" navigation_container="true">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="8" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+					<container height="35">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="player_picker_button" id="PLPi" hidden="true" colour="white"/>
+				<widget class="player_picker_button" id="MLPi" widget_type="match_team_squad_player_selection_panel" hidden="true" colour="white"/>
+			</container>
+
+
+			<!--squad list for this player - shows one line of info-->
+			<widget class="client_object_viewer_xml_panel" id="plif" file="none" width="90">
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+				<container width="42">
+					<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" offset="0" />
+
+					<widget class="client_object_property_panel" property="Pnfo">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<widget class="client_object_property_panel" property="Pmor" ShTx="false" icon_alignment="centre" width="22">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+
+				<widget class="client_object_property_panel" property="PcOI" width="30">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</widget>
+
+		</container>
+
+				<!-- Personalised instruction buttons container -->
+				<container id="pIco">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="position_instruction_toggle" id="pITG" dINt="true" file="widgets/position instruction toggle large" height="27" />
+
+					<widget class="text" id="pIde" alignment="centre" colour="faded text" auto_size="vertical" />
+				</container>
+
+				<!-- Current role container -->
+				<container class="inner_box" id="crFc">
+					<translation id="title" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+					<!--role/duty popups-->
+					<widget class="role_duty_popup_button" id="prdp" height="37" position_strength_indicator_width="85"/>
+
+					<!--overlay stars denoting suitability-->
+					<widget class="stars_range_strip" id="rlSt" height="37" alignment="left,centre_y" wants_mouse_events="false">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="12,0"/>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<!--specific player instructions-->
+						<container class="inner_box" id="plIC">
+							<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="4" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="player_instructions_selector_panel" id="plIN" />
+
+							<container class="item_selection_panel" file="item selection panel conflicts" id="coIN" add_button_hidden="true" height="100">
+								<translation id="title" translation_id="441103" type="use" value="Conflicts with Role[COMMENT: title for a table that shows additional instructions assigned to a player that conflict with his currently set role]" />
+
+								<record id="changed_event" event_id="Pinc" />
+							</container>
+
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+								<widget class="icon_button" id="sele" auto_size="all" icon="icons/16px/circle" show_button_appearance="false" always_use_appearance_font="true" colour="text" navigation_focus_target="false">
+									<translation id="text" translation_id="344778" type="use" value="Selected[COMMENT: label text for a key showing what colour a selected item is]" />
+								</widget>
+								<widget class="icon_button" id="porl" auto_size="all" icon="icons/16px/circle_disabled" show_button_appearance="false" always_use_appearance_font="true" colour="text" navigation_focus_target="false">
+									<translation id="text" translation_id="395288" type="use" value="Part Of Role[COMMENT: when a tactical option is selected it will be highlighted in a colour if it is a part of the currently selected role; this text is highlighted in that colour as a Key marker to indicate this]" />
+								</widget>
+
+							</container>
+						</container>
+
+						<!--can't edit PIs info-->
+						<widget class="text" id="plIX">
+							<translation id="text" translation_id="374986" type="use" value="When players have different roles or duties, their instructions can't be changed.[COMMENT: warning text to say to the human that they cannot edit player instructions for multiple players when their roles and/or duties are different]" />
+						</widget>
+					</container>
+
+					<!--swap with-->
+					<container id="swct">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" font="title" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="364775" type="use" value="Swap positions with...[COMMENT: label for a popup button to allow the user to choose a player for this player to swap positions with on the pitch]" />
+						</widget>
+
+						<widget class="subtle_popup_button" id="swwi" auto_size="vertical" select_event="sesw" />
+
+					</container>
+
+					<!--Add instructions-->
+					<widget class="icon_button" auto_size="vertical" alignment="centre" click_event="EpIn" hidden="true">
+						<translation id="text" translation_id="447618" type="use" value="Edit Positional Instructions[COMMENT button text; a button that enables the user to current player positional instruction]" />
+					</widget>
+
+					<widget class="check_box" id="uSin" click_event="uTin" hidden="true">
+						<translation id="text" translation_id="447619" type="use" value="Use same instructions for [%string#1][COMMENT checkbox text; to copy current personalised instruction of the player to similar positions the player can play in, string variable relates to a tactic name, can be custom input from the user]" />
+					</widget>
+
+					<!--Set most suitable Role-->
+					<widget class="text" font="title" colour="accent" auto_size="vertical" id="atil" alignment="left,centre_y" hidden="true" />
+
+					<!--Set most suitable Role-->
+					<widget class="icon_button" id="suTb" auto_size="vertical" alignment="centre" click_event="mSrl" />
+				</container>
+
+			</container>
+
+			<container id="NoPI">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true" />
+
+				<widget class="text">
+					<translation id="text" translation_id="308077" type="use" value="No player selected." />
+				</widget>
+			</container>
+		</container>
+
+		<container class="tabbed_container" id="tabc" appearance="boxes/main/standard/paper" default_item="info" hide_selector_if_one_or_fewer_items="true" navigation_focus_target="false">
+			<!--information area-->
+			<container id="info">
+				<string id="title" value="Info" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="patt" draw_horizontal_dividers="true">
+					<layout class="arrange_vertical_attachment" layout="348,-1,-1" offset="0">
+						<global id="gap" name="ui.main_box_gap" />
+					</layout>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!-- Attributes Container -->
+					<container class="main_box" >
+						<translation id="title" translation_id="316628" type="use" value="Important Attributes[COMMENT:title for attributes panel showing which attributes are important for a tactical role]" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container class="player_attributes_panel" id="patp" allow_no_player="true" file="player/player attributes tactics panel" />
+					</container>
+
+					<!--player PPMs-->
+					<container class="main_box" id="ppmc">
+
+    					<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+						<translation id="title" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container class="scrolling_box">
+							<widget class="preferred_moves_panel" id="pppm" file="player/preferred moves panel no heading" />
+						</container>
+					</container>
+
+					<!--statistics-->
+					<container class="main_box" id="poSt">
+
+    					<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+					
+						<layout class="test_screen_size_attachment">
+							<string id="alignment" value="vertical"/>
+							<integer id="min_value" value="740"/>
+							<integer id="max_value" value="10000"/>
+							<symbol id="set_property" value="shown"/>
+							<boolean id="test_on_layout" value="false"/>
+						</layout>
+						<translation id="title" translation_id="323124" type="use" value="Statistics[COMMENT: Player comparison type header]" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="table" layout="-1,50,50,50,50,50,50" id="PoSt" auto_size_rows="true" fixed_size_rows="false">
+							<record id="default_properties">
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+							<list id="column_widget_properties">
+								<record index="0">
+									<colour id="colour" name="text" />
+								</record>
+							</list>
+
+							<list id="column_table_properties">
+								<record>
+									<flags id="id" value="tROL" />
+									<record id="column_heading">
+										<translation id="text" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]" />
+										<translation id="hint" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]" />
+									</record>
+								</record>
+
+								<record>
+									<flags id="id" value="aPsL" />
+									<record id="column_heading">
+										<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+										<translation id="hint" translation_id="492013" type="use" value="The player's appearances in each respective role[COMMENT: AREA: Player Tactics; SUB-AREA: Information on performance by Player Role; FR-BN: 6662; TONE: Formal; CHARLIMIT: Keep it short; REF-ID: n/a; NOTE: Tooltip for ID 227844]" />
+									</record>
+								</record>
+
+								<record>
+									<flags id="id" value="tGLS" />
+									<record id="column_heading">
+										<translation id="text" translation_id="227856" type="use" value="Gls" />
+										<translation id="hint" translation_id="492014" type="use" value="The number of goals scored while playing in each role[COMMENT: AREA: Player Tactics; SUB-AREA: Information on performance by Player Role; FR-BN: 6662; TONE: Formal; CHARLIMIT: Keep it short; REF-ID: n/a; NOTE: Tooltip for ID 227856]" />
+									</record>
+								</record>
+
+								<record>
+									<flags id="id" value="tAST" />
+									<record id="column_heading">
+										<translation id="text" translation_id="249488" type="use" value="Asts" />
+										<translation id="hint" translation_id="492015" type="use" value="The number of assists created while playing in each role[COMMENT: AREA: Player Tactics; SUB-AREA: Information on performance by Player Role; FR-BN: 6662; TONE: Formal; CHARLIMIT: Keep it short; REF-ID: n/a; NOTE: Tooltip for ID 249488]" />
+									</record>
+								</record>
+
+								<record>
+									<flags id="id" value="tCLS" />
+									<record id="column_heading">
+										<translation id="text" translation_id="249492" type="use" value="Cln[COMMENT clean sheets]" />
+										<translation id="hint" translation_id="492016" type="use" value="The number of matches played without conceding a goal[COMMENT: AREA: Player Tactics; SUB-AREA: Information on performance by Player Role; FR-BN: 6662; TONE: Formal; CHARLIMIT: Keep it short; REF-ID: n/a; NOTE: Tooltip for ID 249492]" />
+									</record>
+								</record>
+
+								<record>
+									<flags id="id" value="tGCO" />
+									<record id="column_heading">
+										<translation id="text" translation_id="257312" type="use" value="Conc" />
+										<translation id="hint" translation_id="492017" type="use" value="The number of goals conceded[COMMENT: AREA: Player Tactics; SUB-AREA: Information on performance by Player Role; FR-BN: 6662; TONE: Formal; CHARLIMIT: Keep it short; REF-ID: n/a; NOTE: Tooltip for ID 257312]" />
+									</record>
+								</record>
+
+								<record>
+									<flags id="id" value="tAVR" />
+									<record id="column_heading">
+										<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+										<translation id="hint" translation_id="492018" type="use" value="The player's average performance rating while playing in each role[COMMENT: AREA: Player Tactics; SUB-AREA: Information on performance by Player Role; FR-BN: 6662; TONE: Formal; CHARLIMIT: Keep it short; REF-ID: n/a; NOTE: Tooltip for ID 227852]" />
+									</record>
+								</record>
+							</list>
+
+						</widget>
+					</container>
+
+
+				</container>
+
+				<container class="main_box" id="sLco" navigation_container="true">
+					<layout class="arrange_vertical_attachment" layout="24,-1,2,24,-1,31" offset="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="icon_button" id="tiNI" show_button_appearance="false" icon="icons/custom/player instruction/position" font="text">
+						<record id="primary_icon_properties" red_replacement="text" />
+					</widget>
+
+					<widget class="client_object_list_table" id="oPrT" mode="fill_rows, stripe_rows, printable, select_rows" customisation_context="play" select_event="desc" database_table_type="1" row_spacing="2" row_height="28">
+						<boolean id="save_session_state" value="true" />
+						<integer id="contextual_handler_column_id" value="Pnms" />
+						<boolean id="should_force_refresh" value="true" />
+						<boolean id="force_refresh_on_object_list" value="true" />
+						<boolean id="always_use_latest_object_list" value="true"/>
+
+						<!--default view-->
+						<flags id="default_view" value="role" />
+
+						<list id="viws">
+
+							<record id="role">
+								<translation id="name" translation_id="298050" type="use" value="Role" />
+								<record id="view">
+									<record id="PCPr" appearance="" auto_hide_priority="1"/>
+									<record id="PXpQ" appearance="" auto_hide_priority="1"/>
+									<record id="Pnms" auto_hide_priority="1"/>
+									<record id="PpsC" auto_hide_priority="1"/>
+									<record id="CcoR" abbt="true" />
+								</record>
+							</record>
+
+
+
+						</list>
+
+					</widget>
+
+					<widget class="horizontal_divider" />
+
+					<widget class="icon_button" id="tiPI" show_button_appearance="false" icon="icons/custom/player instruction/player" font="text">
+						<record id="primary_icon_properties" red_replacement="personalised instructions" />
+					</widget>
+
+					<widget class="client_object_list_table" id="wPrT" mode="fill_rows, stripe_rows, printable, select_rows" customisation_context="play" select_event="desc" database_table_type="1" row_spacing="2" row_height="28">
+						<boolean id="save_session_state" value="true" />
+						<integer id="contextual_handler_column_id" value="Pnms" />
+						<boolean id="should_force_refresh" value="true" />
+
+						<!--default view-->
+						<flags id="default_view" value="role" />
+
+						<list id="viws">
+
+							<record id="role">
+								<translation id="name" translation_id="298050" type="use" value="Role" />
+								<record id="view">
+									<record id="PCPr" appearance="" auto_hide_priority="1"/>
+									<record id="PXpQ" appearance="" auto_hide_priority="1"/>
+									<record id="Pnms" auto_hide_priority="1"/>
+									<record id="PpsC" auto_hide_priority="1"/>
+									<record id="CcoR" abbt="true" icon_alignment="centre" />
+
+								</record>
+							</record>
+
+						</list>
+
+					</widget>
+
+					<container navigation_container="true">
+						<widget class="icon_button" auto_size="all" show_button_appearance="false" icon="icons/16px/circle" icon_colour="table_row_selected" colour="text">
+							<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+							<translation id="text" translation_id="452508" type="use" value="Currently selected in position[COMMENT: player instruction panel; player current select in the starting elevent]" />
+						</widget>
+
+						<widget class="link_button" id="vsde" section="sddh" auto_size="all">
+                            <string id="remove_if" value="is_fmt"/>
+							<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" />
+							<translation id="text" translation_id="316743" type="use" value="Squad Depth[COMMENT: team report; squad depth heading]" />
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+			<container id="debg">
+				<string id="title" value="Debug" />
+
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="table" layout="-1,-1">
+
+					<widget class="label" row="0" column="0">
+						<string id="text" value="Hold up ball" />
+					</widget>
+					<widget class="label" id="Hubl" row="0" column="1">
+					</widget>
+
+					<widget class="label" row="1" column="0">
+						<string id="text" value="Tight Marking" />
+					</widget>
+					<widget class="label" id="TiMa" row="1" column="1">
+					</widget>
+
+					<widget class="label" row="2" column="0">
+						<string id="text" value="Forward Runs" />
+					</widget>
+					<widget class="label" id="FoRu" row="2" column="1">
+					</widget>
+
+					<widget class="label" row="3" column="0">
+						<string id="text" value="Run with ball" />
+					</widget>
+					<widget class="label" id="Rwba" row="3" column="1">
+					</widget>
+
+					<widget class="label" row="4" column="0">
+						<string id="text" value="Try through balls" />
+					</widget>
+					<widget class="label" id="Thro" row="4" column="1">
+					</widget>
+
+					<widget class="label" row="5" column="0">
+						<string id="text" value="Long shots" />
+					</widget>
+					<widget class="label" id="Long" row="5" column="1">
+					</widget>
+
+					<widget class="label" row="6" column="0">
+						<string id="text" value="Cross ball" />
+					</widget>
+					<widget class="label" id="CrBa" row="6" column="1">
+					</widget>
+
+					<widget class="label" row="7" column="0">
+						<string id="text" value="Cross from" />
+					</widget>
+					<widget class="label" id="CrFr" row="7" column="1">
+					</widget>
+
+					<widget class="label" row="8" column="0">
+						<string id="text" value="Cross aim" />
+					</widget>
+					<widget class="label" id="CrAi" row="8" column="1">
+					</widget>
+
+					<widget class="label" row="9" column="0">
+						<string id="text" value="Tackling" />
+					</widget>
+					<widget class="label" id="Tack" row="9" column="1">
+					</widget>
+
+					<widget class="label" row="10" column="0">
+						<string id="text" value="Free role" />
+					</widget>
+					<widget class="label" id="Free" row="10" column="1">
+					</widget>
+
+					<widget class="label" row="11" column="0">
+						<string id="text" value="Men behind ball" />
+					</widget>
+					<widget class="label" id="mbbl" row="11" column="1">
+					</widget>
+
+					<widget class="label" row="12" column="0">
+						<string id="text" value="Gung ho" />
+					</widget>
+					<widget class="label" id="Gung" row="12" column="1">
+					</widget>
+
+					<widget class="label" row="13" column="0">
+						<string id="text" value="RWB Style" />
+					</widget>
+					<widget class="label" id="rwbs" row="13" column="1">
+					</widget>
+
+					<widget class="label" row="14" column="0">
+						<string id="text" value="Play Wider" />
+					</widget>
+					<widget class="label" id="Wide" row="14" column="1">
+					</widget>
+
+					<widget class="label" row="15" column="0">
+						<string id="text" value="Move into channels" />
+					</widget>
+					<widget class="label" id="MvCh" row="15" column="1">
+					</widget>
+
+					<widget class="label" row="16" column="0">
+						<string id="text" value="Fluidity" />
+					</widget>
+					<widget class="label" id="Flam" row="16" column="1">
+					</widget>
+
+					<widget class="label" row="17" column="0">
+						<string id="text" value="Mentality" />
+					</widget>
+					<widget class="label" id="Ment" row="17" column="1">
+					</widget>
+
+					<widget class="label" row="18" column="0">
+						<string id="text" value="Trigger Press" />
+					</widget>
+					<widget class="label" id="Clos" row="18" column="1">
+					</widget>
+
+					<widget class="label" row="19" column="0">
+						<string id="text" value="Directness" />
+					</widget>
+					<widget class="label" id="Dire" row="19" column="1">
+					</widget>
+
+				</widget>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

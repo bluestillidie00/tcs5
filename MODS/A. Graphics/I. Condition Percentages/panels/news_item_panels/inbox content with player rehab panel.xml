@@ -1,0 +1,97 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<widget class="inbox_body_text" id="bdtx" />
+	
+	<container height="180">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-2,-3"/>
+
+		<container class="inner_subtle_box">
+			<layout class="arrange_horizontal_attachment" layout="80, -1" gap="1" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="person_button" info_popup_enabled="true" Pipl="true" auto_size="vertical" size="large" style="bold">
+					<record id="object_property">
+						<integer id="get_property" value="objt"/>
+						<integer id="set_property" value="valu"/>
+					</record>
+				</widget>
+
+				<widget class="position_label" display_format="0" auto_size="vertical" colour="faded text" alignment="centre_y,left" navigation_focus_target="false">
+					<record id="object_property" dont_set_hint="true" get_property="Ppos"/>
+				</widget>
+
+				<!-- Age -->
+				<widget class="formatted_label" alignment="left, centre_y" auto_size="vertical" colour="faded text">
+					<translation id="format" translation_id="242551" type="use" value="[%number#1] years old"/>
+					<record id="object_property" get_property="Page"/>
+				</widget>
+			</container>
+		</container>
+
+		<container class="inner_subtle_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="4"/>
+
+			<!-- Header with fitness link-->
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="0"/>
+
+				<string id="skin_style" value="title link"/>
+
+				<widget class="link_button" id="stit" alignment="left,centre_y" auto_size="all" section="Ptra">
+					<translation id="text" translation_id="247571" type="use" value="Fitness"/>
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend"/>
+
+				<!--Injury Risk-->
+				<widget class="client_object_property_labelled_panel" id="inRs" property="inRs">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<!--CON/SHP-->
+				<widget class="client_object_property_labelled_panel" id="PcOI" property="PcOI" height="50">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<record id="label_widget_properties"/>
+					<record id="value_widget_properties" height="30"/>
+				</widget>
+
+				<!--fitness label-->
+				<widget class="client_object_property_labelled_panel" id="PftI" property="PftI" height="50">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<record id="label_widget_properties" />
+					<record id="value_widget_properties" height="30"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+	<!-- Rehab Details -->
+	<container class="inner_subtle_box" height="60" id="rtct">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="8" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<widget class="label" alignment="left" auto_size="horizontal" font="title">
+			<translation id="text" translation_id="466473" type="use" value="Rehab Training[COMMENT: inbox item detailing what everyone's been up to in training; players listed here are in Rehab(ilitation) Training after injury]"/>
+		</widget>
+
+		<widget class="text" id="rtxt" alignment="left, top"/>
+	</container>
+
+</panel>

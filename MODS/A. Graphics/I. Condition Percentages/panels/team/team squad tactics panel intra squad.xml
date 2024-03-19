@@ -1,0 +1,142 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/row/normal/row" />
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row" />
+	<!-- Sent off Styles -->
+	<flags id="soff" value="tables/custom/cards/red/row" />
+	<!-- Not in squad Styles -->
+	<flags id="nisq" value="tables/custom/squad/outside squad/row" />
+	<!-- Highlighted Styles -->
+	<flags id="hida" value="tables/custom/squad/highlight/row" />
+	<!-- Unavailable Styles -->
+	<flags id="unAP" value="tables/custom/squad/unavailable/row" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_box" id="plti" force_title_borders="false" navigation_container="true">
+
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<!-- buttons area -->
+		<container height="30" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" horizontal_offset="0">
+				<global id="horizontal_gap" name="ui.button_row_gap" />
+			</attachment_group>
+
+			<container embed_in_frame="true" height="30" hidden="true">
+				<layout class="arrange_horizontal_attachment" alignment="left" embed_in_frame="true" offset="0">
+					<global id="gap" name="ui.split_button_row_gap" />
+				</layout>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true" offset="0">
+					<global id="gap" name="ui.split_button_row_gap" />
+				</layout>
+
+				<!--team container stuff-->
+				<widget class="icon_button" id="askp" auto_size="horizontal" embed_in_frame="true" appearance="buttons/subtle/split/left/button">
+					<translation id="text" translation_id="344655" type="use" value="Quick Pick[COMMENT - team screen team selection, contains the former Ask To Pick menu but also acts as a standalone button which picks the team, renamed for accuracy]" />
+				</widget>
+				<widget class="popup_button" id="apic" fixed="true" fixed_icon="true" auto_size="horizontal" embed_in_frame="true" appearance="buttons/subtle/split/right/button"  />
+			</container>
+
+		</container>
+
+		<!-- panel showing squad selection rules for the next match -->
+		<widget class="match_squad_info_panel" id="ssnm" show_all_comps="false" should_force_refresh="true" />
+		
+		<widget class="tactic_player_list_table" column_spacing="0" id="pltb" customisation_context="play" database_table_type="1" view_setting_name="stored_tactics_view" mode="fill_rows, select_rows, select_multiple, printable, store_sort_state, drag_rows, drop_on_rows, show_insert_column_popup, stripe_rows" column_mode="resize_columns, move_columns, custom_views" row_spacing="0" popup_menu_class="popup_button_table_header" row_height="38" fixed_row_height="26">
+
+			<boolean id="auto_size_rows" value="false" />
+			<boolean id="fixed_size_rows" value="true" />
+			<boolean id="dont_restore_selection" value="true" />
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+
+			<integer id="contextual_handler_column_id" value="PlSE" />
+
+			<!-- default sort by playing position (primary), then picked position, then name -->
+			<list id="default_sort_column">
+				<integer value="TPRD" />
+				<integer value="PpsC" />
+			</list>
+
+			<list id="disallowed_view_property_ids">
+				<!-- never allow squad selection, squad number selection or team selection -->
+				<flags value="Pssi" />
+				<flags value="PtsL" />
+				<flags value="Psne" />
+			</list>
+			<list id="required_view_property_ids">
+				<!-- always require role/duty -->
+				<flags value="TPRD" />
+			</list>
+
+			<!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							(this can help when for example supplying a selected object to another panel to display further info)-->
+			<!--these can be omitted, they're just a time saver-->
+			<list id="Spid">
+				<integer value="PPra" />
+				<integer value="Psnu" />
+				<integer value="PCpQ" />
+			</list>
+
+
+			<!--default view-->
+			<flags id="default_view" value="sltn" />
+
+
+			<!--available views-->
+			<list id="viws">
+
+				<record id="sltn">
+					<translation id="name" translation_id="326989" type="use" value="Selection Info[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+					<record id="view">
+						<!-- role -->
+						<record id="TPRD" auto_hide_priority="2" width="100" />
+						<!-- current ability in role-->
+						<record id="PRPr" auto_hide_priority="6" width="70" navigation_focus_target="false" />
+						<!-- Player Instruction-->
+						<record id="pIDa" auto_hide_priority="7" width="42" navigation_focus_target="false"/>
+						<!-- person name -->
+						<record id="PlSE" auto_hide_priority="1" minimum_width="100" widget_type="intra_squad_player_selection_panel" is_intra_squad="true"/>
+						<!-- status info -->
+						<record id="Pnfo" auto_hide_priority="4" navigation_focus_target="false" />
+						<!-- player condition -->
+						<record id="PcOI" auto_hide_priority="3" width="30" navigation_focus_target="false" />
+						<!-- player match sharpness -->
+						<record id="PftI" auto_hide_priority="3" width="30" navigation_focus_target="false" />
+						<!-- player morale -->
+						<record id="Pmor" auto_hide_priority="7" width="22" ShTx="false" navigation_focus_target="false" />
+						<!-- position -->
+						<record id="PpsC" auto_hide_priority="9" navigation_focus_target="false" />
+						<!-- tactical familiarity -->
+						<record id="pTLV" auto_hide_priority="12" width="70" navigation_focus_target="false"/>
+						<!-- injury risk -->
+						<record id="PMlo" auto_hide_priority="13" width="70" navigation_focus_target="false"/>
+						<!-- player form -->
+						<record id="Pfrm" auto_hide_priority="10" navigation_focus_target="false" />
+						<!-- game win ratio -->
+						<record id="POwr" auto_hide_priority="15" navigation_focus_target="false" />
+						<!-- overall appearances -->
+						<record id="Poap" auto_hide_priority="14" navigation_focus_target="false" />
+						<!-- assists -->
+						<record id="POag" auto_hide_priority="16" navigation_focus_target="false" />
+						<!-- overall goals -->
+						<record id="Pogl" auto_hide_priority="11" navigation_focus_target="false" />
+						<!-- overall average rating -->
+						<record id="Poav" auto_hide_priority="8" width="60" navigation_focus_target="false"/>
+					</record>
+				</record>
+
+			</list>
+
+		</widget>
+
+	</container>
+
+
+</panel>

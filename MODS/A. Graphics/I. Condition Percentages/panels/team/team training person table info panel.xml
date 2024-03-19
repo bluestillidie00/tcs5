@@ -1,0 +1,146 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_layout="-4,-9">
+		<global id="horizontal_gap" name="ui.main_contrast_box_gap"/>
+	</attachment_group>
+
+	<container class="main_subtle_box" id="plti" alignment="left">
+		<attachment_group class="vertical_arrange" vertical_layout="30,30,-1,35" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+		<widget class="view_menu_label" id="TitL" embed_in_frame="false" alignment="left,top">
+			<translation id="text" translation_id="330121" type="use" value="Individual Training[COMMENT: individual player training header text]" />
+		</widget>
+
+		<!-- views -->
+		<container navigation_container="true" default_focus="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend"/>
+
+			<widget class="view_menu_popup" id="plvi" embed_in_frame="false" auto_size="all" />
+
+			<!-- filters -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
+				<widget class="embedded_filter_button" id="plsf" target="pltb" auto_size="all" embed_in_frame="false" />
+			</container>
+
+		</container>
+
+		<!-- player list -->
+		<widget class="client_object_list_table" id="pltb" select_event="desc" database_table_type="1" mode="fill_rows, stripe_rows, dont_allow_empty_selection, printable, keyboard, select_rows, select_multiple, show_bullets" fixed_size_rows="true" auto_size_rows="false" row_height="28" navigation_focus_target="true">
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<integer id="contextual_handler_column_id" value="Pnms" />
+			<boolean id="should_force_refresh" value="true" />
+
+			<!-- default sort by playing position (primary), then name -->
+			<list id="default_sort_column">
+				<integer value="PpsC" />
+				<integer value="Pnms" />
+			</list>
+
+			<!--default view-->
+			<flags id="default_view" value="deta" />
+
+			<list id="viws">
+
+				<record id="deta">
+					<record id="view_table_properties">
+						<integer id="row_height" value="45" />
+					</record>
+					<translation id="name" translation_id="466547" type="use" value="Detailed[COMMENT: Table view which allows detailed information to be shown on selected players training]" />
+					<record id="view">
+						<record id="asTC" />
+						<!-- control training -->
+						<record id="Pnfo"  auto_hide_priority="40" />
+						<record id="Pnad" auto_hide_priority="1" width="-3" minimum_width="140" select_on_focus="false"/>
+						<!-- name and description -->
+						<record id="PpsC" width="-1" minimum_width="40" auto_hide_priority="2"  />
+						<!-- position -->
+						<record id="Ptrt" auto_hide_priority="4"  />
+						<!-- training rating -->
+					</record>
+				</record>
+
+				<record id="traV">
+					<translation id="name" translation_id="466548" type="use" value="List[COMMENT: Table view which shows a list of general information on all players training]" />
+					<record id="view">
+						<record id="asTC" />
+						<!-- control training -->
+						<record id="Pnfo"  auto_hide_priority="40" />
+						<record id="Pnms" />
+						<!-- name -->
+						<record id="PpsC" />
+						<!-- position -->
+						<record id="Ptrt" />
+						<!-- training rating -->
+						<record id="PcOI" auto_hide_priority="2" />
+						<!-- player condition -->
+						<record id="PftI" auto_hide_priority="2" />
+						<!-- player sharpness -->
+						<record id="PTif" unique_id="pltb"/>
+						<!-- training position -->
+						<record id="PTaf" />
+						<!-- training focus -->
+						<record id="PTiR" />
+						<!-- training intensity -->
+						<record id="Piaw" />
+						<!-- training workload -->
+						<record id="PSia" />
+					</record>
+				</record>
+
+				<record id="traH">
+					<translation id="name" translation_id="334174" type="use" value="Training Happiness[COMMENT: player training, player happiness comments]" />
+					<record id="view">
+						<record id="asTC" />
+						<!-- control training -->
+						<record id="Pnfo"  auto_hide_priority="40" />
+						<record id="Pnms" />
+						<!-- name -->
+						<record id="PpsC" />
+						<!-- position -->
+						<record id="PTif" />
+						<!-- training position -->
+						<record id="PTha" auto_hide_priority="7" />
+						<!--Training Happiness-->
+						<record id="PThd" auto_hide_priority="1" />
+						<!--Training Happiness details-->
+					</record>
+				</record>
+
+			</list>
+
+		</widget>
+
+		<container hidden="true" id="butt" navigation_container="true">
+			<layout class="stick_to_sides_attachment" alignment="right,bottom" apply_to_children="true" inset="0" />
+			<widget class="icon_button" id="prev" click_event="askF" auto_size="all" controller_button="y_button">
+				<translation id="text" translation_id="492042" type="use" value="Ask Assistant to set individual training[COMMENT: AREA: Inbox; SUB-AREA: Training; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: team training delegation string]" />
+			</widget>
+		</container>
+	</container>
+
+	<!-- container for additional information panels when in detailed view -->
+	<container id="dipc">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="player_training_panel" id="sptp" />
+
+		<container id="mptc">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-2,-5" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<widget class="player_training_information" id="mpti" />
+
+			<container class="main_box" appearance="boxes/bordered/standard/right/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="scrolling_box">
+					<container class="simple_data_list" id="mptl" set_property="objt" reverse_order="true">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<record id="widget_properties" class="client_object_viewer_xml_panel" file="player/player training summary panel" />
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

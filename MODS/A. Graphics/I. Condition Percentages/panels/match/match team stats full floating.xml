@@ -1,0 +1,207 @@
+﻿<panel>
+ 	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/normal" />
+ 
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row" />
+ 
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+ 
+	<container class="inner_box" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="30,0,0,0" apply_to_children="true" />
+		
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left" horizontal_offset="0"/>
+ 
+			<widget class="view_menu_popup" id="plvi" />
+		</container>
+ 
+		<widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows, fill_columns" row_height="28" column_spacing="0" >
+			<boolean id="auto_size_rows" value="false" />
+			<boolean id="fixed_size_rows" value="true" />
+			<boolean id="dont_restore_selection" value="true" />
+			<boolean id="save_session_state" value="true" />
+			<boolean id="sort_disabled" value="true" />
+ 
+			<flags id="default_view" value="gnIn" />
+ 
+			<list id="default_sort_column">
+				<integer value="TPRD" />
+			</list>
+ 
+			<!--available views-->
+			<list id="viws">
+ 
+				<record id="gnIn">
+					<translation id="name" translation_id="247410" type="use" value="General Info" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+						<!--- Goals -->
+						<record id="MPgl" auto_hide_priority="4" navigation_focus_target="false"/>
+						<!-- Assists -->
+						<record id="MPas" auto_hide_priority="3"/>
+						<!-- Rating -->
+						<record id="MPrt" auto_hide_priority="5" navigation_focus_target="false"/>
+						<!-- Condition -->
+						<record id="PcOI" auto_hide_priority="6" alignment="centre"/>
+						<!--Captain-->
+						<record id="PisC" auto_hide_priority="7" />
+
+					</record>
+				</record>
+ 				
+				<record id="TkIn">
+					<translation id="name" translation_id="227902" type="use" value="Tackling" />
+					<record id="view">
+							<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+						<!-- TACKLING -->
+						<!-- Total/Completed -->
+						<record id="tCmT" auto_hide_priority="2"/>
+						<!-- Key -->
+						<record id="MPkt" auto_hide_priority="5"/>
+						<!-- Fouls Made -->
+						<record id="MPfm" auto_hide_priority="7"/>
+						<!-- Interceptions -->
+						<record id="MPic" auto_hide_priority="6"/>
+						<!-- Shots Blocked Defending -->
+						<record id="MPsb" auto_hide_priority="8"/>
+						<!-- Clearances -->
+						<record id="MPCl" auto_hide_priority="8"/>
+					</record>
+						
+				
+				</record>
+				
+				<record id="hdIn">
+					<translation id="name" translation_id="227818" type="use" value="Heading" />
+					<record id="view">
+							<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+						<!-- HEADING -->
+						<!-- Total/Won -->
+						<record id="tCmH" auto_hide_priority="26"/>
+						<!-- Key -->
+						<record id="MPky" auto_hide_priority="27"/>
+					</record>
+						
+				
+				</record>
+				
+				<record id="ShIn">
+					<translation id="name" translation_id="229306" type="use" value="Shooting[COMMENT - training category]" />
+					<record id="view">
+							<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+						<!-- SHOOTING -->
+						<!-- Total/On Target -->
+						<record id="ssOt" auto_hide_priority="2"/>
+						<!-- Hit Woodwork -->
+						<record id="HwdW" auto_hide_priority="3"/>
+						<!--- Goals -->
+						<record id="MPgl" auto_hide_priority="2" navigation_focus_target="false"/>
+					</record>
+						
+				
+				</record>
+				
+				<record id="PaIn">
+					<translation id="name" translation_id="227881" type="use" value="Passing" />
+					<record id="view">
+							<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+							<!-- PASSING -->
+						<!--- Total/Completed -->
+						<record id="tCmP" auto_hide_priority="2"/>
+						<!-- Key -->
+						<record id="MPkp" auto_hide_priority="4"/>
+						<!-- Assists -->
+						<record id="MPas" auto_hide_priority="3"/>
+					</record>
+						
+				
+				</record>
+					
+				<record id="ATIn">
+					<translation id="name" translation_id="230042" type="use" value="Attacking" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+						<!-- MISC -->
+						<!-- Dribbles -->
+						<record id="DrbL" auto_hide_priority="31"/>
+						<!-- Fouled -->
+						<record id="MPfd" auto_hide_priority="34"/> 
+						<!--- Goals -->
+						<record id="MPgl" auto_hide_priority="30" navigation_focus_target="false"/>
+						<!-- Assists -->
+						<record id="MPas" auto_hide_priority="24"/>
+					</record>
+				</record>
+		
+ 
+				<record id="SPIn">
+					<translation id="name" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+						<!--- Throw Ins -->
+						<record id="MPti" auto_hide_priority="2"/>
+						<!-- Corners -->
+						<record id="MPce" auto_hide_priority="3"/>
+						<!-- Def FK -->
+						<record id="MPdf" auto_hide_priority="4"/>
+						<!-- Att FK -->
+						<record id="MPaf" auto_hide_priority="5" />
+					</record>
+				</record>
+
+				<record id="Bodl">
+					<translation id="name" translation_id="331837" type="use" value="Body Language[COMMENT - what kind of mood the player appears to be in, formerly titled 'motivation']" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="40"/>
+						<!-- Name -->
+						<record id="Pnam" auto_hide_priority="1"/>
+
+						<!-- Body Language -->
+						<record id="Pmtc" auto_hide_priority="2" />
+
+						
+					</record>
+				</record>
+
+ 
+			</list>
+ 
+		</widget>
+ 
+		
+	</container>
+ 
+</panel>

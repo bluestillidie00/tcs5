@@ -1,0 +1,124 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" layout="180, -1" offset="0">
+		<global id="gap" name="ui.main_contrast_box_gap"/>
+	</layout>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<string id="skin_style" value="title link"/>
+
+	<container class="main_subtle_box" draw_vertical_dividers="true" navigation_container="true">
+		<layout class="arrange_horizontal_attachment" layout="-1, -1, -1" offset="0">
+			<global id="gap" name="ui.inner_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<container class="inner_box" id="AsBx">
+			<layout class="arrange_vertical_attachment" layout="20, 55, -1" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="text" auto_size="none" font="title">
+				<translation id="text" translation_id="447653" type="use" value="Assessment By[COMMENT: FR20159; team injuries panel; panel title for who is assessing player injury risk]"/>
+			</widget>
+
+			<widget class="client_object_viewer_xml_panel" file="person/person details panel small no club colours" id="StDt" navigation_focus_target="false"/>
+
+			<container class="inner_subtle_box" appearance="boxes/custom/speech bubble/top/paper" id="advi">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8,2" apply_to_children="true"/>
+
+				<container class="scrolling_box">
+					<widget class="text" id="StQt" auto_size="vertical" multiline="true"/>
+				</container>
+			</container>
+		</container>
+
+		<container class="inner_box" id="Fixt">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+
+			<widget class="link_button" section="TeFi" auto_size="all" alignment="left,centre_y">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				<translation id="text" translation_id="242258" type="use" value="Fixtures"/>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+
+				<widget class="label" id="FxIn" size="large" style="bold" auto_size="vertical"/>
+				<widget class="label" id="FxBr" size="small" auto_size="vertical" />
+
+				<widget class="spacer" height="6"/>
+
+				<widget class="fixtures_list_panel" id="FxLt" file="match/fixtures list panel 3 row" height="78">
+					<record id="object_property">
+						<integer id="get_property" value="Tftm"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<container class="inner_box" id="TTwl">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+
+			<widget class="link_button" section="TeOv" auto_size="all">
+				<translation id="text" translation_id="447654" type="use" value="Team Training Workload[COMMENT: FR20159; team injuries panel; link button label to team training panel]"/>
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+				<!-- workload -->
+				<widget class="label" id="TrWl" size="large" style="bold" auto_size="vertical"/>
+
+				<!-- focus -->
+				<widget class="label" id="TrFc" auto_size="vertical"/>
+
+				<!-- intensity -->
+				<widget class="label" id="TrIn" auto_size="vertical"/>
+
+				<!-- happiness string -->
+				<widget class="label" id="TrHp" multiline="true" alignment="left,top" colour="faded text"/>
+			</container>
+		</container>
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<container class="main_box" id="TopP" navigation_container="true" default_focus="true">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container height="30">
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+				
+				<widget class="text" auto_size="all" font="title">
+					<translation id="text" translation_id="447655" type="use" value="Risk Assessment[COMMENT: FR20159; team injuries panel; panel title for assessing player injury risk]"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+				</widget>
+
+				<widget class="embedded_filter_button" id="plsf" target="TopP" auto_size="all">
+					<layout class="stick_to_sides_attachment" alignment="right"/>
+				</widget>
+			</container>
+
+			<widget class="team_injuries_risk_assessment_table_panel" id="RAtb" hidden="false"/>
+
+			<widget class="label" id="OnEn" alignment="centre" auto_size="none" hidden="true">
+				<translation id="text" translation_id="241285" type="use" value="Squad end of season break[COMMENT: END_OF_SEASON_HOLIDAY_NEWS; players begin post-season holiday; headline]"/>
+			</widget>
+
+			<widget class="label" id="OnMi" alignment="centre" auto_size="none" hidden="true">
+				<translation id="text" translation_id="365337" type="use" value="Squad mid-season break[COMMENT: FR 7093, END_OF_SEASON_HOLIDAY_NEWS; players mid-season holiday; headline]"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

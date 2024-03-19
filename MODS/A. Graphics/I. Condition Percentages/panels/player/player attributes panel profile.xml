@@ -1,0 +1,147 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-3, -1" offset="0" gap="15"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 15, 45, 30" row_height="20" row_spacing="1" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="8" top="0">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false"/>
+			</record>
+			<!-- Attribute training improvement offset -->
+			<record index="1" id="offs" sort_disabled="true">
+				<record id="widget_info" class="training_improvement" />
+			</record>
+			<!-- Attribute value -->
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" alignment="right,centre_y" style="semi_bold" multiline="false"/>
+			</record>
+			<!-- Attribute edit widget -->
+			<record index="3" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- Technical Table -->
+		<widget class="table" id="pltt" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="229413" type="use" value="Technical"/>
+				</record>
+			</list>
+		</widget>
+		<!-- Goalkeeping Table -->
+		<widget class="table" id="plgk" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+				</record>
+			</list>
+		</widget>
+		<!-- Mental Table -->
+		<widget class="table" id="plmt" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230106" type="use" value="Mental"/>
+				</record>
+			</list>
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!-- Physical Table -->
+			<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+				<list id="headings">
+					<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+						<translation id="text" translation_id="230003" type="use" value="Physical"/>
+					</record>
+				</list>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Separator -->
+				<widget class="horizontal_divider" />
+
+				<!-- Additional attributes table -->
+				<container class="client_object_viewer_xml_panel" id="attT">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="table" layout="-1, 40, 54" mode="fill_rows, printable" row_height="22" row_spacing="0">
+						<list id="column_table_properties">
+							<record index="0" left="8" sort_disabled="true"/>
+							<record index="1" right="8" sort_disabled="true"/>
+							<record index="2" left="8" sort_disabled="true"/>
+							<record index="3" right="8" sort_disabled="true"/>
+						</list>
+
+						<!-- Height-->
+						<widget class="label" row="0" column="0" column_span="2">
+							<record id="object_property" get_property="Phei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Phei" row="0" column="1" column_span="2" style="semi_bold">
+							<record id="object_property" get_property="Phei"/>
+							<record id="widget_properties" alignment="right,centre_y" />
+						</widget>
+						<!-- Weight-->
+						<widget class="label" row="1" column="0" column_span="2" >
+							<record id="object_property" get_property="Pwei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Pwei" row="1" column="1" column_span="2" style="semi_bold">
+							<record id="object_property" get_property="Pwei"/>
+							<record id="widget_properties" alignment="right,centre_y" />
+						</widget>
+						<!-- Condition -->
+						<widget class="label" row="2" column="0" column_span="2">
+							<record id="object_property" get_property="Pcon" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="conv" row="2" column="1" column_span="2">
+							<record id="widget_info" class="player_condition_icon_widget" appearance=""  label_disabled="true" icon_alignment="right"/>
+							<record id="widget_properties" alignment="right,centre_y" navigation_focus_target="false"/>
+							<record id="object_property" get_property="PcOI"/>
+							<!-- We need to set the value back as PROP_PLAYER_RAW_CONDITION-->
+							<integer id="editing_property_to_store" value="Pcon" />
+						</widget>
+						<!-- Fitness -->
+						<widget class="label" row="3" column="0" column_span="2" >
+							<record id="object_property" get_property="Pfit" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="fitv" row="3" column="1" column_span="2">
+							<record id="widget_info" class="player_match_sharpness_icon_widget" alignment="right,centre_y" appearance=""  label_disabled="true" icon_alignment="right"/>
+							<record id="widget_properties" alignment="right,centre_y" navigation_focus_target="false"/>
+							<record id="object_property" get_property="PftI"/>
+							<!-- We need to set the value back as PROP_PLAYER_RAW_FITNESS-->
+							<integer id="editing_property_to_store" value="Pfit" />
+						</widget>
+						<!-- Morale-->
+						<widget class="label" row="4" column="0" column_span="1" >
+							<record id="object_property" get_property="Pmor" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="fmor" row="4" column="1" column_span="2">
+							<record id="widget_info" class="morale_label" alignment="right,centre_y" icon_alignment="left" should_recolour="true"/>
+							<record id="widget_properties" alignment="right,centre_y"/>
+							<record id="object_property" get_property="Pmor"/>
+						</widget>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- More attribute stuff-->
+	<container class="client_object_viewer_xml_panel" id="atT2" file="player/player additional attributes panel"/>
+</panel>

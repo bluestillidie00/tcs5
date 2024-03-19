@@ -1,0 +1,76 @@
+<panel>
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/row/normal/row" />
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row" />
+
+	<!-- Sent off Styles -->
+	<flags id="soff" value="tables/custom/cards/red/row" />
+
+	<!-- Not in squad Styles -->
+	<flags id="nisq" value="tables/custom/squad/row/outside squad/row" />
+
+	<!-- Highlighted Styles -->
+	<flags id="hisa" value="tables/custom/squad/highlight/row" />
+	<flags id="hida" value="tables/custom/squad/highlight/row" />
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="tactic_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows" column_mode="resize_columns, move_columns" row_height="30">
+
+		<list id="column_widget_properties">
+			<record indx="1" auto_size="vertical" multiline="true"/>
+			<record indx="2" auto_size="vertical" multiline="true"/>
+		</list>
+
+		<boolean id="auto_size_rows" value="true" />
+		<boolean id="fixed_size_rows" value="false" />
+		<boolean id="dont_restore_selection" value="true" />
+		<boolean id="save_session_state" value="true" />
+		<boolean id="save_default_state" value="true" />
+
+		<!-- default sort by playing position (primary), then picked position, then name -->
+		<list id="default_sort_column">
+			<integer value="Pshp" />
+		</list>
+
+		<list id="Spid">
+			<integer value="PpsC"/>
+		</list>
+
+		<!--default view-->
+		<flags id="default_view" value="deta" />
+
+		<!--available views-->
+		<list id="viws">
+
+			<record id="deta">
+				<translation id="text" translation_id="227793" type="use" value="Condition" />
+				<boolean id="tick" value="false" />
+				<record id="view">
+					<flags id="Pshp" />
+					<record id="TPrl" auto_hide_priority="1250" size="small" width="80" appearance="buttons/subtle/normal/button"/>
+					<record id="TPdt" auto_hide_priority="1260" size="small" width="80" appearance="buttons/subtle/normal/button"/>
+					<flags id="Pcar" />
+					<record id="Pnam" disable_link="true" person_is_player="true" links_enabled_in_popup="false" />
+					<record id="Pmor" auto_hide_priority="1400"/>
+					<record id="PcOI" auto_hide_priority="900" />
+					<record id="PftI" auto_hide_priority="900" />
+					<record id="Pgls" auto_hide_priority="1000" />
+					<record id="Past" auto_hide_priority="1100" />
+					<record id="Prat" auto_hide_priority="1200" />
+					<record id="PpsC" auto_hide_priority="1300" disable_link="true"/>
+					<record id="Pmtc" auto_hide_priority="1150" multiline="false"/>
+				</record>
+			</record>
+		</list>
+
+	</widget>
+
+</panel>
+<!-- panel -->

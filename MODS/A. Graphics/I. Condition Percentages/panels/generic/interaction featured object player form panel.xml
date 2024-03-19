@@ -1,0 +1,113 @@
+﻿<panel width="200">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!--dynamic image here please-->
+	<container id="PCdi" height="117" width="160">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	</container>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+		<!-- person name -->
+		<widget class="person_button" id="nmlb" auto_size="vertical" font="text" style="bold" colour="text" alignment="left, centre_y"/>
+
+		<!-- person description -->
+		<widget class="text" id="delb" spec="text" colour="faded text" auto_size="vertical" alignment="left, centre_y"/>
+	</container>
+
+	<widget class="horizontal_divider"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+		<!-- scoreline (match stats) -->
+		<widget class="text" id="mtsc" font="title" auto_size="vertical" alignment="left, centre_y"/>
+
+		<!-- fitness -->
+		<widget class="text" id="fttl" font="title" auto_size="vertical" alignment="left, centre_y">
+			<translation id="text" translation_id="247571" type="use" value="Fitness"/>
+		</widget>
+
+		<!-- injury indicator widget -->
+		<widget class="player_status_button" id="inji" height="30" maximised="true">
+			<layout class="stick_to_sides_attachment" alignment="left"/>
+		</widget>
+
+		<!-- injury details -->
+		<widget class="fitness_label" id="injL" spec="text" auto_size="horizontal" size="small" alignment="left, centre_y"/>
+		<widget class="text" id="injd" spec="text" auto_size="horizontal" size="small" alignment="left, centre_y"/>
+
+		<!-- fitness (season stats) -->
+		<container id="ftbx" class="client_object_viewer_xml_panel">
+			<attachment_group class="vertical_arrange_autosize"/>
+
+			<container class="vertical_label_value_pair" value_widget="clTP" label_widget="lbTP">
+
+				<widget class="label" id="lbTP" auto_size="vertical" alignment="left, centre_y">
+					<record id="object_property">
+						<integer id="get_property" value="PftI" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<widget class="player_match_sharpness_icon_widget" appearance=""  auto_size="vertical" label_disabled="true" icon_alignment="left, centre_y">
+					<record id="object_property" get_property="PftI" />
+				</widget>
+
+			</container>
+
+			<container class="vertical_label_value_pair" value_widget="clBT" label_widget="lbBT">
+
+				<widget class="label" id="lbBT" auto_size="vertical" alignment="left, centre_y">
+					<translation id="text" translation_id="227793" type="use" value="Condition" />
+				</widget>
+			</container>
+
+			<widget class="player_condition_icon_widget" appearance=""  auto_size="vertical" label_disabled="true" icon_alignment="left, centre_y">
+				<record id="object_property" get_property="PcOI" />
+			</widget>
+
+
+		</container>
+	</container>
+
+	<widget class="horizontal_divider"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+		<!-- appearances -->
+		<widget class="text" id="ApTl" font="title" auto_size="vertical" alignment="left, centre_y">
+			<translation id="text" translation_id="227845" type="use" value="Appearances"/>
+		</widget>
+		<widget class="text" id="plap" spec="text" auto_size="vertical" size="small" alignment="left, centre_y"/>
+	</container>
+
+	<widget class="horizontal_divider"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+		<!-- misc stat -->
+		<widget class="text" id="msTl" font="title" auto_size="vertical" alignment="left, centre_y">
+			<translation id="text" translation_id="227857" type="use" value="Goals"/>
+		</widget>
+		<widget class="text" id="msLb" spec="text" auto_size="vertical" size="small" alignment="left, centre_y"/>
+	</container>
+
+	<widget class="horizontal_divider"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+		<!-- form -->
+		<widget class="text" id="FmTl" font="title" auto_size="vertical" alignment="left, centre_y">
+			<translation id="text" translation_id="395236" type="use" value="Form (Last 5 Matches)[COMMENT: player overview; sub panel title for player form graph]"/>
+		</widget>
+		<widget class="number_label" id="plfm" spec="text" size="small" alignment="left, centre_y" auto_size="vertical"/>
+	</container>
+
+</panel>

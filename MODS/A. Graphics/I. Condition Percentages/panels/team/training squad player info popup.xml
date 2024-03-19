@@ -1,0 +1,80 @@
+<panel width="500">
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+	<layout class="fit_children_attachment" alignment="vertical" offset="12" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="12" gap="0"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="12" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="12"/>
+
+		<record id="object_property">
+			<integer id="get_property" value="crvi" />
+			<integer id="set_property" value="crvi" />
+		</record>
+
+		<widget class="client_object_list_table" auto_size="vertical" auto_size_maximum_height="400" id="pltb" mode="fill_rows, stripe_rows"  database_table_type="1">
+			<boolean id="should_force_refresh" value="true" />
+
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objL" />
+						<integer id="set_property" value="objL" />
+					</record>
+					<record>
+						<integer id="get_property" value="crvi" />
+						<integer id="set_property" value="crvi" />
+					</record>
+				</list>
+			</record>
+
+			<integer id="contextual_handler_column_id" value="Pnms" />
+
+			<list id="viws">
+				<record id="fitn">
+					<record id="view">
+						<record id="Pnms"  width="140" info_popup_enabled="false" />
+						<!-- person name -->
+						<record id="PcOI"/>
+						<!-- player condition -->
+						<record id="PftI"/>
+						<!-- player match fitness -->
+					</record>
+				</record>
+
+				<record id="inju">
+					<record id="view">
+						<record id="Pnms"  width="120" info_popup_enabled="false" />
+						<!-- person name -->
+						<record id="PcOI"/>
+						<!-- player condition -->
+						<record id="PftI"/>
+						<!-- player match fitness -->
+						<record id="injr" width="100"/>
+						<!-- injury type-->
+						<record id="iito" width="60"/>
+						<!-- injury time out-->
+					</record>
+				</record>
+
+
+				<record id="hapi">
+					<record id="view">
+						<record id="Pnms"  width="110" info_popup_enabled="false" />
+						<!-- person name -->
+						<record id="PTha" width="110"/>
+						<!-- training role/duty-->
+						<record id="PThd" width="140"/>
+						<!-- training happiness-->
+					</record>
+				</record>
+			</list>
+		</widget>
+	</container>
+
+
+
+
+</panel>

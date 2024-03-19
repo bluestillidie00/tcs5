@@ -1,0 +1,55 @@
+﻿<panel width="550">
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container class="standard_popup_box" entity_layout_id="at07" id="at07" auto_size="vertical">
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<container id="heDR" height="32">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" layout="20, -1, 40, 20, 25" offset="0" gap="0" />
+			
+			<widget class="picture" entity_layout_id="at03" id="at03" file="icons/16px/sub on">
+				<string id="image_alignment" value="centre"/>
+				<string id="red_replacement" value="positive"/>
+			</widget>
+			<widget class="text" entity_layout_id="at04" id="rplT" alignment="centre_y,left">
+				<string id="style" value="bold"/>
+			</widget>
+
+			<container class="client_object_property_panel" entity_layout_id="at08" id="ngpf">
+				<string id="property" value="Pnfo"/>
+			</container>
+
+			<container class="client_object_property_panel" entity_layout_id="at06" id="moRL">
+				<string id="property" value="Pmor"/>
+			</container>
+			
+			<container class="client_object_property_panel" entity_layout_id="at05" id="coDI">
+				<string id="property" value="PcOI"/>
+			</container>
+		</container>
+		
+		<widget class="horizontal_divider" entity_layout_id="at09" id="at09">
+			<string id="image_alignment" value="centre_y"/>
+		</widget>
+
+		<container entity_layout_id="at00" id="at00">
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true"/>
+			<layout class="fit_children_attachment" alignment="vertical" gap="0"/>
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0"/>
+
+			<container class="table" entity_layout_id="at01" id="proT" layout="20,-1" auto_size="vertical" needs_height="true">
+				<string id="auto_size_rows" value="true"/>
+				<string id="fixed_size_rows" value="false"/>
+				<integer id="row_spacing" value="4"/>
+			</container>
+			
+			<container class="table" entity_layout_id="at02" id="conT" layout="20,-1" auto_size="vertical" needs_height="true">
+				<string id="auto_size_rows" value="true"/>
+				<string id="fixed_size_rows" value="false"/>
+				<integer id="row_spacing" value="4"/>
+			</container>
+		</container>
+
+	</container>
+</panel>

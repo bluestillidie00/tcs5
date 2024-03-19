@@ -1,0 +1,85 @@
+﻿<panel width="87" height="57">
+	<list id="properties_to_add_to_context">
+		<integer value="Ttea"/>
+	</list>
+
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!--The button that will get clicks-->
+	<widget class="popup_button" id="abtn" appearance="" down_arrow_appearance="" fixed="true" select_event="acsl">
+
+	</widget>
+
+	<widget class="picture" file="boxes/custom/match/card/paper" scale_picture="true" keep_aspect_ratio="false"/>
+
+	<container class="container_with_mouse_events" id="cefw">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+		
+		<container class="main_box_no_margin" >
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"  vertical_offset="4" horizontal_inset="0" vertical_gap="0"/>
+
+			<container  height="16">
+				<attachment_group class="horizontal_arrange" horizontal_layout="16,-1,16" horizontal_gap="0" horizontal_offset="0"/>
+
+				<!--Goal icon if needed-->
+				<widget class="client_object_property_panel" property="MPgl" id="MPgl">
+					<record id="widget_properties">
+						<flags id="scale_picture" value="false" />
+						<flags id="image_alignment" value="top" />
+						<flags id="auto_size" value="horizontal"/>
+						<boolean id="label_disabled" value="true"/>
+					</record>
+				</widget>
+
+					<!-- Position-->
+				<widget class="tactic_button" id="Pshp" alignment="bottom,centre_x" height="16" appearance="" disabled="true" size="xsmall" wants_mouse_events="false">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+				</widget>
+
+
+
+				<!--injury/sub icon if needed-->
+				<widget class="client_object_property_panel" property="PinD" id="PinD">
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<record id="widget_properties">
+						<flags id="label_disabled" value="true" />
+					</record>
+				</widget>
+
+
+			</container>
+
+			<!--name-->
+			<widget class="text"  id="name" auto_size="vertical" font="title" colour="text" alignment="centre,can_scale" size="small" navigation_focus_target="false">
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="4" horizontal_offset="0"/>
+
+				<!--body language icon-->
+			<widget class="body_language_widget" id="Pmtc" label_disabled="true" width="16" icon_alignment="centre" appearance="" navigation_focus_target="false">
+				
+			</widget>
+			
+
+				<!--match rating-->
+					<widget class="match_rating_label_formatted" id="rtIc" format="[%fraction#1-2.1]" dont_format_numeric_grouping="true" alignment="centre"  navigation_focus_target="false" auto_size="horizontal" wants_mouse_events="false">
+				
+			</widget>
+
+				<!--condition icon-->
+				<widget class="player_condition_icon_widget" icon_alignment="centre"  width="16" navigation_focus_target="false" id="PcOI" label_disabled="true" show_hover_popup="false"/>
+
+
+			</container>
+
+
+		</container>
+		
+	</container>
+
+
+
+
+</panel>
