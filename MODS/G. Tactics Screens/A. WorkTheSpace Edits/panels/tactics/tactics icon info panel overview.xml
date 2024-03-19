@@ -147,16 +147,16 @@
 		<record id="default_properties" width="10" height="10" scale_picture="true"/>
 
 		<!-- LEFT -->
-		<widget class="value_based_picture" id="vbp1"  transparency="1" width="20" height="20">
+		<widget class="value_based_picture" id="vbp1" transparency="1" width="20" height="20">
 			<layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="46"/>
 			<list id="value_list">
 				<record min_value="1" max_value="4" file="tcs/icons/footedness/left" red_replacement="fg red"/>
-				<record min_value="5" max_value="8" file="tcs/icons/footedness/left" red_replacement="fg range4"/>
-				<record min_value="9" max_value="11" file="tcs/icons/footedness/left" red_replacement="fg range8"/>
-				<record min_value="12" max_value="14" file="tcs/icons/footedness/left" red_replacement="fg range12"/>
-				<record min_value="15" max_value="17" file="tcs/icons/footedness/left" red_replacement="fg range16"/>
-				<record min_value="18" max_value="20" file="tcs/icons/footedness/left" red_replacement="fg range20"/>
+				<record min_value="5" max_value="8" file="tcs/icons/footedness/left" red_replacement="awkward"/>
+				<record min_value="9" max_value="11" file="tcs/icons/footedness/left" red_replacement="unconvincing"/>
+				<record min_value="12" max_value="14" file="tcs/icons/footedness/left" red_replacement="competent"/>
+				<record min_value="15" max_value="17" file="tcs/icons/footedness/left" red_replacement="accomplished"/>
+				<record min_value="18" max_value="20" file="tcs/icons/footedness/left" red_replacement="natural"/>
 			</list>
 			<record id="object_property">
 				<integer id="get_property" value="Plft"/>
@@ -164,36 +164,36 @@
 		</widget>
 
 		<!-- RIGHT -->
-		<widget class="value_based_picture" id="vbp1"  transparency="1" width="20" height="20">
+		<widget class="value_based_picture" id="vbp1" transparency="1" width="20" height="20">
 			<layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="46"/>
 			<list id="value_list">
 				<record min_value="1" max_value="4" file="tcs/icons/footedness/right" red_replacement="fg red"/>
-				<record min_value="5" max_value="8" file="tcs/icons/footedness/right" red_replacement="fg range4"/>
-				<record min_value="9" max_value="11" file="tcs/icons/footedness/right" red_replacement="fg range8"/>
-				<record min_value="12" max_value="14" file="tcs/icons/footedness/right" red_replacement="fg range12"/>
-				<record min_value="15" max_value="17" file="tcs/icons/footedness/right" red_replacement="fg range16"/>
-				<record min_value="18" max_value="20" file="tcs/icons/footedness/right" red_replacement="fg range20"/>
+				<record min_value="5" max_value="8" file="tcs/icons/footedness/right" red_replacement="awkward"/>
+				<record min_value="9" max_value="11" file="tcs/icons/footedness/right" red_replacement="unconvincing"/>
+				<record min_value="12" max_value="14" file="tcs/icons/footedness/right" red_replacement="competent"/>
+				<record min_value="15" max_value="17" file="tcs/icons/footedness/right" red_replacement="accomplished"/>
+				<record min_value="18" max_value="20" file="tcs/icons/footedness/right" red_replacement="natural"/>
 			</list>
 			<record id="object_property">
 				<integer id="get_property" value="Prft"/>
 			</record>
 		</widget>
 		
-					<widget class="client_object_property_panel" property="PcOI" navigation_focus_target="false" id="PcO2">
-				<record id="object_property" get_property="objt" set_property="objt" />
-				<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
-			</widget>
+		<widget class="client_object_property_panel" property="PcOI" navigation_focus_target="false" id="PcO2">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
+		</widget>
 		
-				<widget class="client_object_property_panel" property="PftI"  navigation_focus_target="false" id="Pft2">
-				<record id="object_property" get_property="objt" set_property="objt" />
-				<layout class="stick_to_sides_attachment" alignment="left" inset="18"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
-			</widget>
+		<widget class="client_object_property_panel" property="PftI" navigation_focus_target="false" id="Pft2">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="18"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
+		</widget>
 	</container>
 	
-		<container>
+	<container>
 		<layout class="stick_to_sides_attachment" alignment="bottom,left" inset="8,64" apply_to_children="true"/>
 
 		<!--injury/red/yellow card -->

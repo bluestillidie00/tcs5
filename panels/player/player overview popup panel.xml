@@ -43,12 +43,12 @@
 
 						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
 							<list id="value_list">
-								<record min_value="1" max_value="4" red_replacement="bg red"/>
-								<record min_value="5" max_value="8" red_replacement="bg range4"/>
-								<record min_value="9" max_value="11" red_replacement="bg range8"/>
-								<record min_value="12" max_value="14" red_replacement="bg range12"/>
-								<record min_value="15" max_value="17" red_replacement="bg range16"/>
-								<record min_value="18" max_value="20" red_replacement="bg green"/>
+								<record min_value="1" max_value="4" red_replacement="fg red"/>
+								<record min_value="5" max_value="8" red_replacement="awkward"/>
+								<record min_value="9" max_value="11" red_replacement="unconvincing"/>
+								<record min_value="12" max_value="14" red_replacement="competent"/>
+								<record min_value="15" max_value="17" red_replacement="accomplished"/>
+								<record min_value="18" max_value="20" red_replacement="natural"/>
 							</list>
 							<record id="object_property" get_property="PlfG"/>
 						</widget>
@@ -73,12 +73,12 @@
 
 						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
 							<list id="value_list">
-								<record min_value="1" max_value="4" red_replacement="bg red"/>
-								<record min_value="5" max_value="8" red_replacement="bg range4"/>
-								<record min_value="9" max_value="11" red_replacement="bg range8"/>
-								<record min_value="12" max_value="14" red_replacement="bg range12"/>
-								<record min_value="15" max_value="17" red_replacement="bg range16"/>
-								<record min_value="18" max_value="20" red_replacement="bg green"/>
+								<record min_value="1" max_value="4" red_replacement="fg red"/>
+								<record min_value="5" max_value="8" red_replacement="awkward"/>
+								<record min_value="9" max_value="11" red_replacement="unconvincing"/>
+								<record min_value="12" max_value="14" red_replacement="competent"/>
+								<record min_value="15" max_value="17" red_replacement="accomplished"/>
+								<record min_value="18" max_value="20" red_replacement="natural"/>
 							</list>
 							<record id="object_property" get_property="PrfG"/>
 						</widget>
