@@ -257,6 +257,34 @@
 									<flags id="tCDT"/>
 								</record>
 							</record>
+							
+											<record id="tsCn">
+								<translation id="name" type="use" value="TCS Contracts View"/>
+								<record id="view">
+											<flags id="PtsL"/>
+									<record id="Pnat" use_format="very_short" width="18"/>
+									<flags id="Pnfo"/>
+									<flags id="Pnms"/>
+									<flags id="PpsC"/>
+									<flags id="Pcpt"/>
+									<flags id="Pctp"/>
+									<flags id="Pcac"/>
+									<flags id="Ppab"/>
+									<record id="Pmor" width="16"/>
+									<flags id="Poap"/>
+									<flags id="Pgls"/>
+									<flags id="PNxg"/>
+									<flags id="PxGO"/>
+									<flags id="Poav"/>
+									<flags id="Pdva"/>
+									<flags id="Pcww"/>
+									<flags id="Pced"/>
+									<flags id="Pywi"/>
+									<flags id="Paco"/>
+									<flags id="PsfR"/>
+						
+								</record>
+							</record>
 								
 							<!-- TRAINING -->
 							<record id="tsTr">
