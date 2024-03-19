@@ -36,46 +36,8 @@
 				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.6" end_mode="hold_end" />
 				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.4" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
 
-				<container height="193"  >
-					<layout class="stick_to_sides_attachment" apply_to_children="true" inset="-20"/>
-
-									<widget class="stadium_picture" id="STAp" file="none">
-										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
-
-										<record id="object_property" get_property="objt" set_property="objt"/>
-										<record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
-
-										<widget class="picture" file="pictures/stadiums/stadium_bg" />
-										<widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
-										<widget class="picture" id="STPC"/>
-									</widget>
-
-					<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.60" rrep="bg" />
-
-					<widget class="match_info_panel" id="bmin" file="file" >
-						<record id="object_property" get_property="objt" set_property="objt"/>
-						<layout class="horizontal_arrange" horizontal_layout="-1,24,-1" />
-
-						<!--  home incidents panel -->
-						<widget class="home_match_incidents_panel" id="hmip" small_version="false" file="none">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-							<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
-								<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
-							</widget>
-						</widget>
-
-						<widget class="text" alignment="centre" >
-							<translation id="text" type="use" value="V" />
-						</widget>
-
-						<!--  home incidents panel -->
-						<widget class="away_match_incidents_panel" id="amip" small_version="false" file="none">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-							<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" >
-								<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
-							</widget>
-						</widget>
-					</widget>
+				<container height="193" class="client_object_viewer_xml_panel" file="match/tcs/tablet/match info">
+					<record id="object_property" get_property="objt" set_property="objt"/>
 				</container>
 
 				<!-- WEATHER FORECAST-->
@@ -118,7 +80,7 @@
 						<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
 						<translation id="text" translation_id="227740" type="use" value="Competition" />
 					</widget>
-					<widget class="fixture_name_text" auto_size="all" icon_enabled="true">
+					<widget class="fixture_name_text" auto_size="all" icon_enabled="true" multiline="true">
 						<record id="object_property" get_property="FxNm" />
 					</widget>
 				</container>
@@ -164,7 +126,7 @@
 		<container class="tcs_box" appearance="tcs/boxes/main/trans/paper" >
 			<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
 			<container>
-				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,50,40,64"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,16,16,24"/>
 
 				<container class="tcs_box" appearance="tcs/boxes/match/touchline tablet/base/paper" id="TTab"> 
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
@@ -253,10 +215,10 @@
 									</container>
 
 									<!-- SHOTS -->
-									<widget class="events_match_chalkboard_panel" id="mecp" file="match/events match chalkboard panel">
-										<translation id="title" translation_id="247381" type="use" value="Shots" />
-										<record id="object_property" get_property="objt" set_property="objt"/>
-									</widget>
+								<!-- Match Momentum -->
+		<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="momentum" data_type="fixture" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
 								</container>
 
 								<container draw_vertical_dividers="true" > 
@@ -285,7 +247,7 @@
 											</widget>							
 										</container>
 
-						<container class="match_info_panel" file="none">
+										<container class="match_info_panel" file="none">
 											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
 											<record id="object_property" get_property="objt" set_property="objt"/>
 
@@ -302,7 +264,7 @@
 										</container>
 									</container>
 
-									<widget class="match_analysis_panel" id="Anal" file="match/comps/eur/champions league/heatmaps">
+									<widget class="match_analysis_panel" id="Anal" file="match/tcs/tablet/heatmaps">
 										<!-- Slide in from side of screen -->
 										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
 										<animation class="fade_on_hide_animation" duration="0.35"/>
