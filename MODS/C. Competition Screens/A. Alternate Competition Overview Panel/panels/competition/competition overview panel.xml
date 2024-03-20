@@ -110,7 +110,7 @@
 
 					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="1" gap="12">
 
-						<container default_width="300">
+						<container default_width="-1">
 							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 							
 							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
@@ -154,7 +154,7 @@
 						
 						</container>
 						
-						<container default_width="300">
+						<container default_width="-1">
 							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 							
 							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
@@ -207,7 +207,7 @@
 
 					<container class="horizontal_adaptive_container" default_height="-1" minimum_height="126" priority="3" gap="12">
 						
-							<container default_width="300">
+							<container default_width="-1">
 							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 							
 							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
@@ -251,7 +251,7 @@
 						
 						</container>
 						
-							<container default_width="300">
+							<container default_width="-1">
 							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 							
 							<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
