@@ -23,19 +23,6 @@
 		</attachment>
 	</widget>
 
-	<widget class="inner_contrast_box" appearance="backgrounds/default">
-		<animation class="translate_animation" start_value="0, 0.2" end_value="0, 0" duration="0.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_screen"/>
-		<attachment class="test_multiple_globals_attachment" default_value="false">
-			<list id="get_properties">
-				<record get_property="MatS" test_mode="equal" value="true" skip_if_null="true"/>
-				<!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
-				<record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true"/>
-				<record get_property="HdBk" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true"/>
-			</list>
-			<integer id="set_property" value="hidn"/>
-		</attachment>
-	</widget>
-
 	<widget class="inner_contrast_box" appearance="tcs/interface/bg/paper">
 		<animation class="translate_animation" start_value="0, 0.2" end_value="0, 0" duration="0.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_screen"/>
 		<attachment class="test_multiple_globals_attachment" default_value="false">
