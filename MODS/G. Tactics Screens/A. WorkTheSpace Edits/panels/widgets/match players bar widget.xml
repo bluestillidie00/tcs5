@@ -1,0 +1,138 @@
+﻿<panel>
+	<list id="properties_to_add_to_context">
+		<integer value="Ttea"/>
+	</list>
+
+	<list id="properties_to_forward">
+		<record get_property="aprn" target="bpic" set_property="file"/>
+		<record get_property="rrep" target="bpic" set_property="rrep"/>
+	</list>
+
+	<flags id="titA" value="menus/standard/heading_item"/>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<widget class="picture" file="boxes/custom/match/card/paper" id="bpic" scale_picture="true" keep_aspect_ratio="false"/>
+
+	<container class="container_with_mouse_events" id="cefw">
+		<!-- PANEL HAD TO BE SPLIT SO WE CAN USE THE POPUP -->
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0"/>
+
+		<container height="4" />
+
+		<!-- Position-->
+		<widget class="tactic_button" id="Pshp" alignment="bottom,centre_x" height="16" appearance="" disabled="true" size="small" wants_mouse_events="false">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+		</widget>
+
+		<!-- PLAYER NAME -->
+		<container height="20">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+			<widget class="person_button" id="Pnms" alignment="centre" auto_size="horizontal" style="semi_bold" wants_mouse_events="true" format="[%person#1-surname]">
+				<record id="object_property" get_property="Pnms"/>
+			</widget>
+		</container>
+
+		<!-- REST OF PANEL -->
+		<container >
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"  vertical_offset="0,0,0,0" horizontal_inset="0" vertical_gap="0"/>
+
+				<!-- MAIN BIT OF PANEL -->
+				<container>
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!-- KIT AND PLAYER FACE A-->
+					<container>
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="64"/>
+
+							<container width="60" >
+								<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0"/>
+								<widget class="shirt_number_label" id="PsnS"/>
+							</container>
+
+						</container>
+
+						<!-- Player picture >-->
+						<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="middle" >
+							<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+						
+						
+						<container>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="40" apply_to_children="true"/>
+					<layout class="stick_to_sides_attachment" alignment="right" inset="32" apply_to_children="true"/>
+
+				<!--Goal icon if needed-->
+				<widget class="client_object_property_panel" property="MPgl" id="MPgl" height="16" width="16">
+					<record id="widget_properties">
+						<flags id="scale_picture" value="false" />
+						<flags id="image_alignment" value="top" />
+						<flags id="auto_size" value="horizontal"/>
+						<boolean id="label_disabled" value="true"/>
+					</record>
+				</widget>
+
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="top,right" inset="32,0" apply_to_children="true"/>
+
+				<!--injury/sub icon if needed-->
+				<widget class="client_object_property_panel" property="PinD" id="PinD"  height="16" width="16">
+					<record id="widget_properties">
+						<flags id="label_disabled" value="true" />
+					</record>
+				</widget>		
+
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="top,right" inset="0" apply_to_children="true"/>
+					<widget class="picture" file="icons/16px/slightly injured" height="16" width="16" id="inji" scale_picture="true"/>
+				</container> 
+					</container>
+				</container>
+
+
+				<container class="main_box_no_margin" appearance="boxes/custom/darken/no margin/paper" height="27">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" horizontal_gap="2"/>
+
+					<widget class="body_language_widget" id="Pmtc" label_disabled="true" width="16" icon_alignment="centre" appearance="" navigation_focus_target="false">
+
+					</widget>
+
+					<widget class="match_rating_label_formatted" id="rtIc" format="[%fraction#1-2.1]" dont_format_numeric_grouping="true" alignment="centre"  navigation_focus_target="false" auto_size="horizontal" wants_mouse_events="false">
+
+					</widget>
+
+
+					<!--condition icon-->
+					<widget class="player_condition_icon_widget" property="PcOI" width="16" navigation_focus_target="false" id="PcOI">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<record id="widget_properties">
+							<boolean id="label_disabled" value="true" />
+							<boolean id="show_hover_popup" value="false" />
+							<integer id="width" value="16" />
+							<flags id="icon_alignment" value="centre"/>
+						</record>
+					</widget>
+
+				</container>
+
+
+			</container>
+
+
+			<!--The button that will get clicks -->
+			<widget class="popup_button" id="abtn" appearance="buttons/custom/over state only/square/button" down_arrow_appearance="" fixed="true" select_event="acsl" default_focus="true"/> 
+		</container>
+	</container>
+</panel>
