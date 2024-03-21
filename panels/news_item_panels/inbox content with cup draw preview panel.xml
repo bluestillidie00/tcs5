@@ -1,0 +1,116 @@
+﻿<panel>
+
+	<list id="properties_to_forward">
+		<record get_property="NewI" set_property="NewI" target="dynI" />
+	</list>
+
+	<container class="scrolling_box">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="320,-1" />
+
+			<string id="skin_style" value="subtle box" />
+
+				<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+					<widget class="inbox_dynamic_image_panel" id="dynI" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_gap="8" />
+
+						<widget class="object_portrait_picture" width="30" height="30" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+							<record id="object_property" get_property="objt" />
+						</widget>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+							<widget class="text" font="title" auto_size="vertical">
+								<translation id="text" translation_id="227740" type="use" value="Competition" />
+								<attachment class="get_global_attachment" get_property="CDtc" set_property="colour" />
+							</widget>
+
+							<widget class="client_object_label" auto_size="vertical" colour="text" navigation_focus_target="true">
+								<record id="object_property" get_property="objt" />
+							</widget>
+
+						</container>
+
+					</container>
+
+					<widget class="horizontal_divider" height="1" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+						<widget class="text" font="title" alignment="left,bottom" auto_size="vertical">
+							<translation id="text" translation_id="385506" type="use" value="Holders[COMMENT: FR 9550 - holders, i.e. last winners of a competition]" />
+							<attachment class="get_global_attachment" get_property="CDtc" set_property="colour" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="CLwR" size="normal" navigation_focus_target="true">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+							<record id="widget_properties" auto_size="vertical" alignment="left,centre_y" />
+						</widget>
+
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+						<widget class="text" font="title" alignment="left,bottom" auto_size="vertical">
+							<translation id="text" translation_id="561852" type="use" value="Favourites[COMMENT: FR 14577; cup draw warning news item; title of cup favourites box]" />
+							<attachment class="get_global_attachment" get_property="CDtc" set_property="colour" />
+						</widget>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" />
+
+							<widget class="team_button" id="favT" auto_size="all" alignment="left,centre_y" navigation_focus_target="true" />
+							<widget class="text" id="favO" auto_size="all" alignment="left,centre_y" />
+
+						</container>
+
+					</container>
+
+				</container>
+
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" horizontal_alignment="horizontal" />
+
+					<widget class="news_feed_panel" id="poll" filter="Fsco" file="">
+						<attachment class="get_global_attachment" get_property="CDtc" set_property="bar_value_colour" />
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" />
+						<container id="PlPa">
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" />
+
+							<widget class="text" font="title" auto_size="all">
+								<attachment class="get_global_attachment" get_property="CDtc" set_property="colour" />
+								<translation id="text" translation_id="538971" type="use" value="Fan Poll[COMMENT: AREA: UI; SUB-AREA: Transfer Deadline Day; FR: 34747; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: Transfer news panel section title for social reactions poll result]" />
+							</widget>
+
+							<widget class="text" id="PlSt" auto_size="vertical" alignment="left, centre_y" colour="faded text" />
+
+							<widget class="spacer" height="10" />
+							<!-- poll result bar charts added in code here -->
+						</container>
+					</widget>
+
+				</container>
+
+			</container>
+
+	<widget class="inbox_body_text" id="bdtx" />
+
+	
+
+		</container>
+	</container>
+</panel>

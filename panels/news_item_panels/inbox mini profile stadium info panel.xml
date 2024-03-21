@@ -1,0 +1,93 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="inner_subtle_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+		<!-- BACKGROUND -->
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="-10"/>
+			
+			<!-- STADIUM PIC -->
+			<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture" height="100">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		
+			<!-- OVERLAY -->
+			<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.55" rrep="bg"/>
+		</container>
+
+		<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+		<container class="bordered_box" appearance="tcs/ro" rrep="inboxstadoverlay"/>
+	
+	</container>
+	
+	<container class="main_box">
+<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="4" />		
+		
+			<widget class="client_object_label" id="snam" size="11" style="bold" multiline="true" alignment="centre" auto_size="vertical">
+			<record id="object_property">
+				<integer id="get_property" value="stad"/>
+				<integer id="set_property" value="valu"/>
+			</record>
+		</widget>
+		
+		
+	
+		<!-- CAPACITY -->
+		<container>
+				<attachment_group class="vertical_arrange_autosize"/>
+		
+	 
+			<record id="default_properties" auto_size="all" alignment="centre_x,middle"/>
+		
+			<!--capacity-->
+			<widget class="text" multiline="true" font="label" colour="faded text">
+				<translation id="text" translation_id="252902" type="use" value="Capacity[COMMENT: team stadium capacity, short title]"/>
+			</widget>
+			<widget class="dashed_number_label" id="ScpV" size="11" style="bold">
+				<record id="object_property">
+					<integer id="get_property" value="Scpy"/>
+					<integer id="set_property" value="valu"/>
+				</record>
+			</widget>	
+		</container>
+	
+		<container>
+				<attachment_group class="vertical_arrange_autosize"/>
+	 
+			<record id="default_properties" auto_size="all" alignment="centre"/>
+		
+			<widget class="text" multiline="true" font="label" colour="faded text">
+				<translation id="text" translation_id="284339" type="use" value="Surface[COMMENT: heading; team_information_panel; pitch surface type]"/>
+			</widget>
+			<widget class="pitch_surface_type_label" id="surV" size="11" style="bold">
+				<record id="object_property">
+					<integer id="get_property" value="SsfT"/>
+					<integer id="set_property" value="valu"/>
+				</record>
+			</widget>
+		</container>
+		
+		<container>
+				<attachment_group class="vertical_arrange_autosize"/>
+	 
+			<record id="default_properties" auto_size="all" alignment="centre"/>
+		
+				
+			<widget class="text" multiline="true" font="label" colour="faded text">
+				<translation id="text" translation_id="282080" type="use" value="Pitch Condition[COMMENT: heading; team_information_panel; max pitch dimensions]"/>
+			</widget>
+			<widget class="pitch_condition_label" id="SptV" size="11" multiline="true" style="bold">
+				<record id="object_property">
+					<integer id="get_property" value="Sptc"/>
+					<integer id="set_property" value="valu"/>
+				</record>
+			</widget>
+		</container>
+	
+	</container>
+
+
+</panel>

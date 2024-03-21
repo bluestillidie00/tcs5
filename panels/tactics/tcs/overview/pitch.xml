@@ -5,7 +5,7 @@
 		<container class="pitch_with_tactics" id="pitc" name="pitch">
 			<layout class="stick_to_sides_attachment" alignment="all"/>
 			<real id="pitch_perspective" value="0.000000"/>
-			<string id="icon_flags" value="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity"/>
+			<string id="icon_flags" value="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity,show_captain"/>
 			<string id="show_extra_details_buttons" value="true"/>
 			<string id="pitch_draw_grass" value="true"/>
 			<string id="pitch_base_appearance" value=""/>

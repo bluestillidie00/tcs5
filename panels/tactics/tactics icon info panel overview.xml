@@ -104,6 +104,8 @@
 				<container>
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+					
+
 
 					<!--name-->
 					<widget class="player_picker_button" entity_layout_id="it02" id="plPB" file="widgets/player selection button tactics" editor_group_id="it10" navigation_focus_target="true">
@@ -149,9 +151,11 @@
 	<!-- FOOTEDNESS -->
 	<container>
 		<layout class="stick_to_sides_attachment"/>
+		
+		
 
 		<!-- LEFT -->
-		<widget class="value_based_picture" id="vbp1" width="10" height="10" scale_picture="true" transparency="1">
+		<widget class="value_based_picture" id="vbp1" width="12" height="12" scale_picture="true" transparency="1">
 			<layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="50"/>
 			<list id="value_list">
@@ -168,7 +172,7 @@
 		</widget>
 
 		<!-- RIGHT -->
-		<widget class="value_based_picture" id="vbp1" width="10" height="10" scale_picture="true" transparency="1">
+		<widget class="value_based_picture" id="vbp1" width="12" height="12" scale_picture="true" transparency="1">
 			<layout class="stick_to_sides_attachment" alignment="left" inset="20"/>
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="50"/>
 			<list id="value_list">
@@ -183,6 +187,13 @@
 				<integer id="get_property" value="Prft"/>
 			</record>
 		</widget>
+		
+							       <!-- captain/vice captain icon -->
+       <widget class="picture" id="capi" scale_picture="true" file="tcs/icons/captain/captain" width="14" height="14" >
+     			<layout class="stick_to_sides_attachment" alignment="bottom" inset="65"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
+      </widget>
+		
 	</container>
 
 </panel>

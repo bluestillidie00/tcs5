@@ -1,0 +1,98 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical"/>
+			<layout class="arrange_horizontal_attachment" layout="320, -1" gap="12"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true"/>
+			
+			<container>
+				<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0"/>
+				
+				<container height="200">
+					<layout class="stick_to_sides_attachment" apply_to_children="true" />
+
+					<!--dynamic image here please-->
+					<container id="ICdi" height="200">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="-8" apply_to_children="true"/>
+					</container>
+					
+	<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+	<container class="bordered_box" appearance="tcs/ro" rrep="inbox_content"/>					
+				</container>
+
+				<!-- FM versus mode only-->
+				<container id="vsmc">
+					<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<widget class="client_object_viewer_xml_panel" id="tvsi" file="news_item_panels/inbox mini profile team vs mode info panel"/>
+				
+				</container>
+				
+				<!-- other modes -->
+				<container id="otmc">
+					<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<!-- opposition details -->
+					<widget class="inbox_mini_profile_team_info_panel" id="tmin"/>
+
+					<!-- stadium details -->
+					<widget class="client_object_viewer_xml_panel" file="news_item_panels/inbox mini profile stadium info panel" id="stdi" height="250"/>
+					
+				</container>
+				
+			</container>
+	
+
+			<container draw_horizontal_dividers="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="20"/>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<widget class="text" id="comp" style="bold" auto_size="vertical" alignment="centre" navigation_focus_target="true" font="title" colour="text" icon_enabled="true"/>
+					<widget class="text" id="fxdt" auto_size="vertical" alignment="centre"/>
+					
+					<!-- logos -->
+					<container height="150">
+						<layout class="arrange_horizontal_attachment" alignment="middle,fill"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+						
+						<record id="default_properties" height="150"/>
+
+						<container>
+							<attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="bottom,extend"/>
+
+							<widget class="object_portrait_picture" id="hmpc" scale_picture="true" image_alignment="centre" width="120"/>
+							<widget class="client_object_label" id="hmnm" auto_size="all" style="bold" alignment="centre" navigation_focus_target="true"/>
+						</container>
+
+						<widget class="text" auto_size="all" alignment="centre" colour="text" style="semi_bold" size="18">
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+							<translation id="text" translation_id="242324" type="use" value="v[versus]"/>
+						</widget>
+
+						<container >
+							<attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="bottom,extend"/>
+
+
+							<widget class="object_portrait_picture" id="awpc" scale_picture="true" image_alignment="centre" width="120"/>
+							<widget class="client_object_label" id="awnm" auto_size="all" style="bold" alignment="centre" navigation_focus_target="true"/>
+						</container>
+					</container>
+
+				</container>
+
+				<!-- main body text -->
+				<widget class="inbox_body_text" id="bdtx"/>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

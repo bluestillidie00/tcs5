@@ -1,0 +1,186 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- content area -->
+	<container class="scrolling_box" navigation_container="true">
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="320,-1" horizontal_offset="0" horizontal_gap="8" vertical_offset="0"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal"/>
+
+				<container class="tcs_box" appearance="boxes/main/contrast/top/paper" rrep="bg lighter">
+					<attachment_group class="vertical_arrange_autosize"/>
+					<widget class="fixture_name_text" id="comp" font="title" alignment="left,centre_y" auto_size="vertical" icon_enabled="true"/>
+				</container>
+
+				<container height="160">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!--dynamic image here please-->
+					<container id="ICdi" height="160">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					</container>
+				
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom" vertical_offset="4" horizontal_inset="4"/>
+				
+						<!-- friendly, temp, attendance -->
+						<container height="24" class="tcs_box" appearance="tcs/boxes/stadium/paper" rrep="bg lighter">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="2" vertical_inset="0"/>
+
+
+							<widget class="text" auto_size="horizontal" colour="faded text" alignment="left,centre_y">
+								<translation id="text" translation_id="376419" type="use" value="Attendance:[COMMENT: match report news panel, attendance label]"/>
+							</widget>
+
+							<widget class="number_label" id="atnw" auto_size="horizontal" colour="faded text" style="semi_bold" alignment="left,centre_y"/>
+
+							<container width="2"/>
+
+							<widget class="weather_indicator_panel_horizontal" id="weic" width="30">
+								<boolean id="show_weather_label" value="false"/>
+								<boolean id="show_weather_icon" value="true"/>
+								<boolean id="show_temperature_on_icon" value="true"/>
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<!-- shots and possession stats -->
+				<container class="inner_subtle_box" appearance="boxes/main/contrast/middle/paper" rrep="bg lighter" height="115">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8" vertical_offset="0" horizontal_inset="0"/>
+
+					<widget class="text" auto_size="vertical" font="title" multiline="false" alignment="left,centre_y">
+						<attachment class="get_global_attachment" get_property="CDtc" set_property="colour"/>
+						<translation id="text" translation_id="247439" type="use" value="Match Stats"/>
+					</widget>
+
+					<container>
+
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0" vertical_inset="0"/>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0"/>
+
+							<container>
+								<widget class="pie_chart" id="shtP">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+									<flags id="is_donut_chart" value="true"/>
+									<integer id="donut_line_width" value="5"/>
+								</widget>
+
+								<widget class="text" id="shtw" auto_size="none" colour="text" alignment="centre" size="small">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+								</widget>
+							</container>
+
+							<widget class="text" colour="faded text" font="title" auto_size="vertical" alignment="centre">
+								<translation id="text" translation_id="291479" type="use" value="Shots[COMMENT: match analysis panel; event type]"/>
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0"/>
+
+							<container>
+								<widget class="pie_chart" id="xgwP">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+									<flags id="is_donut_chart" value="true"/>
+									<integer id="donut_line_width" value="5"/>
+								</widget>
+
+								<widget class="text" id="xgtw" auto_size="vertical" colour="text" alignment="centre" size="xsmall" multiline="true">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="12"/>
+								</widget>
+							</container>
+
+							<widget class="text" colour="faded text" font="title" auto_size="vertical" alignment="centre">
+								<translation id="text" translation_id="514224" type="use" value="xG[COMMENT: AREA: Team Stat; SUB-AREA: Expected goals stats FR: 32708; TONE: Formal; CHARLIMIT: None NOTE: expected goals short string]"/>
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0"/>
+
+							<container>
+								<widget class="pie_chart" id="posP">
+									<flags id="is_donut_chart" value="true"/>
+									<integer id="donut_line_width" value="5"/>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+								</widget>
+
+								<widget class="text" id="posw" auto_size="none" spec="text" colour="text" alignment="centre" size="small">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+								</widget>
+							</container>
+
+							<widget class="text" colour="faded text" font="title" alignment="centre" auto_size="vertical">
+								<translation id="text" translation_id="232851" type="use" value="Possession"/>
+							</widget>
+						</container>
+
+					</container>
+				</container>
+
+				<widget class="horizontal_divider" height="2"/>
+
+				<!-- man of the match -->
+				<container class="inner_subtle_box" appearance="boxes/main/contrast/middle/paper" rrep="bg lighter">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+					<widget class="text" auto_size="vertical" font="title" multiline="false" alignment="left,centre_y">
+						<attachment class="get_global_attachment" get_property="CDtc" set_property="colour"/>
+						<translation id="text" translation_id="420696" type="use" value="Player of the Match[COMMENT: Player of the Match award]"/>
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="6" vertical_offset="0"/>
+
+						<widget class="object_portrait_picture" id="momp" width="50" height="60" scale_picture="true" image_alignment="centre"/>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0"/>
+
+							<widget class="person_button" id="momb" auto_size="vertical" multiline="false" style="bold"/>
+
+							<container height="24">
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+								<widget class="nation_button" id="momn" scale_picture="false" image_alignment="left,centre_y" icon_enabled="true" hidden="true" size="small" colour="faded text"/>
+								<widget class="team_button" id="momt" image_alignment="left,centre_y" icon_enabled="true" hidden="true" colour="faded text"/>
+							</container>
+
+							<container height="22">
+								<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="4" vertical_inset="0"/>
+
+								<widget class="dashed_number_label" id="momr" auto_size="horizontal" alignment="left,centre_y" format="[%fraction#1-3.1]" size="small"/>
+
+								<widget class="text" colour="faded text" multiline="false" alignment="left,centre_y" size="small">
+									<translation id="text" translation_id="420697" type="use" value="Match Rating[COMMENT: match report news panel]"/>
+								</widget>
+							</container>
+
+							<widget class="adaptive_match_player_summary" id="momP" height="26"/>
+						</container>
+					</container>
+				</container>
+
+				<widget class="horizontal_divider" height="2"/>
+
+				<!-- incidents -->
+				<container class="inner_subtle_box" id="incB" appearance="boxes/main/contrast/bottom/paper" rrep="bg lighter">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<!-- incidents are created here -->
+				</container>
+			</container>
+	
+
+			<widget class="inbox_body_text" id="bdtx"/>
+
+		</container>
+	</container>
+</panel>

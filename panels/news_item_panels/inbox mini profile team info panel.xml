@@ -1,0 +1,38 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="inner_subtle_box">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="arrange_horizontal_attachment" layout="90, -1" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+		
+				<widget class="object_portrait_picture" id="tmbd" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="100"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_alignment="middle" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- team name -->
+			<widget class="client_object_label" id="tnam" size="11" style="bold" auto_size="vertical" alignment="left,can_scale" multiline="true" navigation_focus_target="true"/>
+
+			<!-- league position -->
+			<widget class="text" id="lgpo" auto_size="vertical" alignment="left,centre_y" multiline="true"/>
+
+			<!-- nation ranking -->
+			<widget class="text" id="wrtx" auto_size="vertical" alignment="left,centre_y" multiline="true" colour="faded text">
+				<translation id="text" translation_id="297998" type="use" value="World Ranking[COMMENT: heading; a team's world ranking]" />
+			</widget>
+			<widget class="fifa_ranking_label" auto_size="vertical" alignment="left" id="wrvl" style="semi_bold" size="18"/>
+
+			<!-- reputation -->
+			<widget class="text" auto_size="vertical" alignment="left,centre_y" multiline="true" font="label" colour="faded text">
+				<translation id="text" translation_id="227963" type="use" value="Reputation"/>
+			</widget>
+
+			<widget class="club_reputation_stars_label" id="trst" mode="1" size="11" auto_size="vertical" alignment="left,centre_y" multiline="true" navigation_focus_target="false"/>
+		</container>
+	</container>
+
+</panel>
