@@ -1,0 +1,62 @@
+<panel>
+
+	<string id="skin_style" value="subtle box"/>
+
+
+	<attachment_group class="horizontal_arrange" horizontal_layout="320,-1" horizontal_offset="0" horizontal_gap="20" vertical_inset="0" />
+
+	<container class="inner_box_no_margin">
+		<attachment_group class="vertical_arrange" vertical_layout="90,-1" vertical_offset="0" horizontal_inset="0" vertical_gap="8"/>
+
+		<container class="main_contrast_box"  red_replacement="primary" >
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+		<container class="plain_box" appearance="tcs/boxes/playerstats/paper" grep="secondary"/>
+		
+			<!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
+	<container class="bordered_box" appearance="tcs/ro" rrep="primary"/>		
+		
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="80,-1" horizontal_offset="0" horizontal_gap="10" vertical_offset="0" />
+
+			<widget class="object_portrait_picture" id="logo" height="80" scale_picture="true" image_alignment="centre" />
+
+			<container>
+
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" />			
+
+				<widget class="text" id="rcnb" size="25" style="bold" alignment="left,bottom" auto_size="vertical" colour="secondary"/>
+				<widget class="text" id="rcds" alignment="left,top" auto_size="vertical" colour="secondary"/>
+
+			</container>
+		</container>
+
+		</container>
+
+		<container class="inner_subtle_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" />
+
+			<widget class="table" mode="fill_rows" layout="45,-1,40" id="fxtb" column_spacing="2" row_spacing="2">
+
+				<record id="default_properties" alignment="left,centre_y" navigation_focus_target="false" />
+
+			</widget>
+
+			<widget class="horizontal_divider" /> 
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_alignment="right" horizontal_inset="0" />
+
+				<widget class="link_button" id="fxlk" section="TeFi" alignment="right,centre_y" auto_size="all" />
+			</container>
+		</container>
+
+	</container>
+
+	<!-- main body text -->
+	<container class="scrolling_box">
+		<widget class="inbox_body_text" id="bdtx" />
+	</container>
+
+
+</panel>
