@@ -1,0 +1,27 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+  <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+  <layout class="arrange_horizontal_attachment" layout="-2,-4" offset="10" gap="0" />
+
+  <!--buttons area-->
+  <container>
+    <layout class="fit_children_attachment" alignment="vertical" offset="10" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="10,0,0,0" apply_to_children="true" />
+
+    <widget class="table" id="butt" layout="-1" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30" mode="0" />
+  </container>
+
+  <!--bookmarks area-->
+  <container class="main_box">
+    <translation id="title" translation_id="251391" type="use" value="Bookmarks[COMMENT: top menu title for bookmarks menu]" />
+    
+    <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+    <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+
+    <widget class="tree_menu" id="bkmk" auto_size="vertical" allow_submenu_selection="false">
+      
+    </widget>
+
+  </container>
+</panel>
