@@ -11,7 +11,7 @@
 		<string id="skin_style" value="title link" />
 
 		<!-- Linked header -->
-		<widget class="link_button" section="Pfrm" auto_size="all">
+		<widget class="link_button" section="PHin" auto_size="all">
 			<translation id="text" translation_id="316626" type="use"/>
 		</widget>
 
