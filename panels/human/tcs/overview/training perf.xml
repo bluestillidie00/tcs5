@@ -1,0 +1,37 @@
+﻿<panel>
+	<container class="vertical_adaptive_container" offset="0" id="trnC" gap="8">
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		
+		<container class="main_subtle_box">
+<layout class="vertical_arrange_autosize" />
+
+		<!-- Intro Information -->
+		<widget class="text" id="trpT" auto_size="vertical" multiline="true" priority="2" />
+		</container>
+		<container default_height="80" priority="3" class="main_box">
+			<attachment_group class="vertical_arrange" vertical_layout="20,-1" vertical_gap="0" />
+			<widget class="text" font="title">
+				<translation id="text" translation_id="466393" type="use" value="Avg. Training Rating[COMMENT: a rating of how well the team is getting on in training on average]" />
+			</widget>
+			<widget class="dashed_formatted_label" format="[%fraction#1-2.2]" id="avtr" size="xxlarge"  style="bold"/>
+		</container>
+
+		<container priority="1" minimum_height="380">
+			<attachment_group class="vertical_arrange" vertical_layout="-1,1,-1" vertical_offset="0" vertical_gap="6"/>
+			<container class="scrolling_box" navigation_focus_target="false">
+				<widget class="club_training_performers_list_widget" id="best" />
+			</container>
+			<widget class="horizontal_subtle_divider"/>
+			<container class="scrolling_box" navigation_focus_target="false">
+				<widget class="club_training_performers_list_widget" id="wrst" is_worst="true"/>
+			</container>
+		</container>
+	</container>
+
+	<widget class="text" id="noTi" font="title" hidden="true" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<translation id="text" translation_id="242522" type="use" value="N/A" />
+	</widget>
+</panel>

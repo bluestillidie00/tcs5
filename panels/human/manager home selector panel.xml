@@ -1,0 +1,83 @@
+<panel navigation_container="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="title_link_box" force_title_borders="true" id="SUBP" />
+	
+	<!-- Make sure everything is late loading! -->
+
+	<widget class="board_confidence_panel" id="bcsn" file="club/board confidence snapshot" section="tcon" late_loading="true" valid_for_international_teams="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="491929" type="use" value="Manager Performance[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: If Applicable, otherwise None; REF-ID: n/a; NOTE: title for summary of manager performance]" />
+	</widget>
+	<widget class="board_confidence_panel" id="bcsn" file="club/board confidence snapshot" section="ncon" late_loading="true" valid_for_club_teams="false" valid_for_international_youth_teams="false" valid_for_unemployed_manager="false" valid_for_fmt="false">
+		<translation id="title" translation_id="491929" type="use" value="Manager Performance[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: If Applicable, otherwise None; REF-ID: n/a; NOTE: title for summary of manager performance]" />
+	</widget>
+	<widget class="squad_status_snapshot_panel" id="sssn" section="TeSq" late_loading="true" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="227783" type="use" value="Squad Status" />
+	</widget>
+	<widget class="team_transfer_snapshot_panel" id="ttsn" section="trcn" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="296337" type="use" value="Pending Transfers" />
+		<boolean id="should_force_refresh" value="true" />
+	</widget>
+	<widget class="job_centre_panel" file="human/available jobs summary" id="ajsn" section="Pjjc" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="296329" type="use" value="Available Jobs[COMMENT:title for a box containing a list of available manager jobs]" />
+	</widget>
+	<widget class="insecure_jobs_summary_panel" id="ijsn" section="Pjjs" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="296333" type="use" value="Insecure Jobs[COMMENT:title for a box containing a list of insecure manager jobs]" />
+	</widget>
+	<widget class="team_snapshot_contract_panel" id="tsco" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="255039" type="use" value="Contract Expiry Dates[COMMENT: team contract snapshot panel heading]" />
+	</widget>
+	<widget class="team_snapshot_injury_panel" id="tsin" late_loading="true" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="298734" type="use" value="Team Injuries[COMMENT:title for a box containing a list of a team's injuries]" />
+	</widget>
+	<widget class="team_injuries_overview_panel" id="MedC" section="InOv" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_unemployed_manager="false" file="team/team injuries overview panel snapshot">
+		<translation id="title" translation_id="450760" type="use" value="Medical Centre[COMMENT: Panel title for when viewing medical report, was ID 447586 but we've since been asked to change it to Medical Centre]" />
+	</widget>
+	<widget class="training_overview_panel" file="human/manager home training panel" id="tstr" section="TeOv" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]" />
+	</widget>
+	<widget class="team_training_week_panel" id="tsBr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="466442" type="use" value="Training Session Breakdown[COMMENT; training section of player profile, will provide details (i.e. breakdown) of what's in the session]" />
+	</widget>
+	<widget class="club_training_performers_panel" id="CTPP" section="TeOv" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false" file="human/tcs/overview/training perf">
+		<translation id="title" translation_id="466443" type="use" value="Training Performance[COMMENT; training performance section of manager home panel]" />
+	</widget>
+	<widget class="team_training_happiness_widget" id="ttHp" late_loading="true" section="TeTi" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="334174" type="use" value="Training Happiness[COMMENT: player training, player happiness comments]" />
+	</widget>
+	<!--<widget class="scouting_assignments_panel" file="club/scouting assignments manager home" id="tssc" section="sasp" late_loading="true" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="248356" type="use" value="Scouting" />
+	</widget>-->
+  <widget class="scouting_top_panel" file="team/scouting top bar manager home" id="tssc" section="tssc" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_unemployed_manager="false">
+    <translation id="title" translation_id="391265" type="use" value="Scouting[COMMENT: editor club responsibilities section]" />
+  </widget>
+	<container class="finances_summary_panel" id="fsws" file="club/finances summary snapshot panel" late_loading="true" section="tfin" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="329952" type="use" value="Finance &amp; Salary[COMMENT: manager snapshot/home: wage &amp; finances summary panel heading]" />
+	</container>
+	<widget class="team_stats_summary_panel" id="tssu" late_loading="true" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="251858" type="use" value="Team Stats[COMMENT: manager snapshot/home: team stats summary panel heading]" />
+	</widget>
+	<widget class="player_stats_summary_panel" id="pssu" section="tcis" late_loading="true" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="247694" type="use" value="Player Stats[COMMENT: manager home section: player stats summary heading]" />
+	</widget>
+	<widget class="manager_competitions_panel" id="mcom" section="comp" late_loading="true" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="255034" type="use" value="Team Competitions[COMMENT: manager snapshot/home: manager/team competition summary list title]" />
+	</widget>
+	<widget class="team_league_table_panel" id="tlta" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" default_for_club_teams="true" valid_for_unemployed_manager="false">
+		<translation id="title" translation_id="242904" type="use" value="League Table[COMMENT - competition stage panel: title for league table]" />
+	</widget>
+	<widget class="inbox_feed_panel" id="inbx" section="Pibx" late_loading="true">
+		<translation id="title" translation_id="248088" type="use" value="Inbox" />
+	</widget>
+	<widget class="competition_news_panel" file="human/manager home news panel" id="mnew" section="Pnws" late_loading="true" valid_for_unemployed_manager="true">
+		<translation id="title" translation_id="308646" type="use" value="News[COMMENT: top level menu title for news screens]" />
+	</widget>
+	<widget class="manager_promises_panel" id="mngp" section="Mpro" late_loading="true" valid_for_unemployed_manager="false" valid_for_international_teams="false" valid_for_international_youth_teams="false" file="human/manager promises panel manager home">
+		<translation id="title" translation_id="320154" type="use" value="Promises[COMMENT: player status panel; panel header title for a section listing all promises a manager has made to a player]" />
+	</widget>
+	<widget class="manager_targets_panel" id="mngt" section="Mtar" late_loading="true" valid_for_unemployed_manager="false" valid_for_international_teams="false" valid_for_international_youth_teams="false" file="human/manager targets panel manager home">
+		<translation id="title" type="new" value="Targets[COMMENT: AREA: Player Targets; SUB-AREA: Targets Panel; FR-BN: FM-23145; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; panel header title for a section listing all targets a manager has set for a player]" />
+	</widget>
+
+
+</panel>
