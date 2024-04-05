@@ -1,5 +1,8 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+<container class="tcs_fade">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 	
 	<widget class="club_overview_stadium_panel" id="clst" file="club/tcs/fm24/overview/stadium/tab">
 		<record id="object_property">
@@ -31,4 +34,6 @@
 			<integer id="set_property" value="hidn"/>
 		</record>
 	</widget>
+	</container>
+
 </panel>
