@@ -135,13 +135,22 @@
 								<record id="object_property" get_property="Pwei" />
 								<record id="widget_properties" alignment="right,centre_y" />
 							</widget>
+							
+														<widget class="label" row="2" column="0">
+								<translation id="text" translation_id="441135" type="use" />
+							</widget>
+								<widget class="player_style_label" row="2" column="1" style="semi_bold" alignment="right,centre_y">
+								<record id="object_property" get_property="PpPs" />
+																<record id="widget_properties" alignment="right,centre_y" />
+							</widget>
+
 
 							<!-- Physical Condition -->
-							<widget class="label" row="2" column="0">
+							<widget class="label" row="3" column="0">
 								<translation id="text" translation_id="227793" type="use" />
 							</widget>
 							<!-- Changed the class type editable_client_object_property_panel to match the other working elements -->
-							<widget class="editable_client_object_property_panel" id="PcOI" row="2"
+							<widget class="editable_client_object_property_panel" id="PcOI" row="3"
 								column="1" style="semi_bold">
 								<!-- Added the record with the class type of player_condition_icon_widget to match the original panel-->
 								<record id="widget_info" class="player_condition_icon_widget"
@@ -154,12 +163,12 @@
 							</widget>
 
 							<!-- Match Sharpness -->
-							<widget class="label" row="3" column="0">
+							<widget class="label" row="4" column="0">
 								<translation id="text" translation_id="395316" type="use" />
 							</widget>
 
 							<!-- Changed the class type editable_client_object_property_panel to match the other working elements -->
-							<widget class="editable_client_object_property_panel" id="PftI" row="3"
+							<widget class="editable_client_object_property_panel" id="PftI" row="4"
 								column="1" style="semi_bold" auto_size="horizontal">
 								<!-- Added the record with the class type of player_match_sharpness_icon_widget to match the original panel-->
 								<record id="widget_info" class="player_match_sharpness_icon_widget"
@@ -170,7 +179,8 @@
 								<boolean id="label_disabled" value="true" />
 								<boolean id="show_hover_popup_on_focus" value="true" />
 							</widget>
-
+							
+	
 							<!-- 	
 							<widget class="label" row="4" column="0" >
 								<record id="object_property" get_property="Pjad" name="true"/>
