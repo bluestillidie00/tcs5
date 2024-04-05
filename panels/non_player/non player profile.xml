@@ -38,6 +38,16 @@
 							
 							<!-- FAVOURED CLUBS LABEL -->
 							<widget class="label" font="label">
+								<translation id="text" translation_id="447587" type="use"/>
+							</widget>
+							
+							<!-- INTERNATIONAL RECORD -->
+							<widget class="international_appearances_label" auto_size="vertical">
+								<record id="object_property" dont_set_hint="true" get_property="Pist"/>
+							</widget>
+
+							<!-- FAVOURED CLUBS LABEL -->
+							<widget class="label" font="label">
 								<record id="object_property" get_property="Pfcl" name="true"/>
 							</widget>
 							
@@ -168,7 +178,7 @@
 							<container class="tcs_tabs_primary" save_session_state="true" default_item="tact">
 
 								<!-- HISTORY -->
-								<container class="person_history_biography_panel" id="biog" >
+								<container class="person_history_biography_panel" id="biog">
 									<record id="object_property" get_property="objt" set_property="objt"/>
 									<translation id="title" translation_id="295868" type="use"/>
 								</container>
@@ -184,7 +194,7 @@
 									<record id="object_property" get_property="objt" set_property="objt"/>
 									<translation id="title" translation_id="298519" type="use"/>
 								</container>
-							</container>							
+							</container>
 			
 						</container>
 							
