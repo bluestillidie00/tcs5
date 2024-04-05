@@ -1,0 +1,212 @@
+<panel>
+	<layout class="vertical_arrange" vertical_layout="200,-1" vertical_gap="8"/>
+
+	<!-- HEADER -->
+	<widget class="player_personal_details_panel" id="ppdp" navigation_container="true" file="non_player/tcs/overview/personal details">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	<container id="over">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" translation_id="247414" type="use"/>
+		
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container class="vertical_adaptive_container" gap="8">
+
+			<!-- TOP -->
+			<container class="tcs_box" appearance="tcs/boxes/main/fade/top left/paper" rrep="bg lighter" brep="primary" default_height="-555" priority="1">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<!-- OVERVIEW -->
+				<container class="horizontal_adaptive_container" gap="8">
+
+					<!-- LEFT SIDE -->
+					<container class="vertical_adaptive_container" default_width="350" priority="2" gap="8">
+
+						<!-- STAFF ROLES -->
+						<container default_height="-10" priority="1" class="tcs_box">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<widget class="non_player_roles_panel" id="nprp"/>
+						</container>
+							
+						<!-- OTHER INFORMATION -->
+						<container class="tcs_box">
+							<attachment_group class="vertical_arrange_autosize"/>
+							
+							<record id="default_properties" auto_size="vertical" alignment="left"/>
+							
+							<!-- FAVOURED CLUBS LABEL -->
+							<widget class="label" font="label">
+								<translation id="text" translation_id="447587" type="use"/>
+							</widget>
+							
+							<!-- INTERNATIONAL RECORD -->
+							<widget class="international_appearances_label" auto_size="vertical">
+								<record id="object_property" dont_set_hint="true" get_property="Pist"/>
+							</widget>
+
+							<!-- FAVOURED CLUBS LABEL -->
+							<widget class="label" font="label">
+								<record id="object_property" get_property="Pfcl" name="true"/>
+							</widget>
+							
+							<!-- FAVOURED CLUBS -->
+							<widget class="favourite_clubs_text">
+								<record id="object_property" get_property="Pfcl"/>
+							</widget>
+
+							<!-- FAVOURED PERSONNEL LABEL -->
+							<widget class="label" font="label">
+								<record id="object_property" get_property="Pfpv" name="true"/>
+							</widget>
+							
+							<!-- FAVOURED PERSONNEL -->
+							<widget class="favourite_personel_text">
+								<record id="object_property" get_property="Pfpv"/>
+							</widget>
+													
+							<!-- ATTITUDE LABEL -->
+							<widget class="label" font="label">
+								<translation id="text" translation_id="308047" type="use"/>
+							</widget>
+							
+							<!-- ATTITUDE  -->
+							<widget class="relationship_label">
+								<record id="object_property" get_property="PRHP"/>
+							</widget>
+							
+							<!-- LANGUAGES LABEL -->
+							<widget class="label" font="label">
+								<translation id="text" translation_id="295874" type="use"/>
+							</widget>
+							
+							<!-- LANGUAGES -->
+							<widget class="languages_text">
+								<record id="object_property" get_property="Lang"/>
+							</widget>
+						</container>
+							
+					</container>
+
+					<!-- MIDDLE AND RIGHT -->
+					<container class="horizontal_adaptive_container" gap="8" id="mid" default_width="-1" minimum_width="500" priority="1">
+
+						<record id="object_property" get_property="objt" set_property="objt"/>
+
+						<!-- MIDDLE -->
+						<container default_width="-400" priority="1" minimum_width="500" gap="8" class="tcs_box">
+							<layout class="vertical_arrange" vertical_layout="40,-1"/>
+
+							<record id="object_property" get_property="objt" set_property="objt"/>
+
+							<!-- FAKE TABS -->
+							<container navigation_container="true">
+								<layout class="arrange_horizontal_attachment" offset="0" alignment="left,extend,as_needed" gap="0"/>
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+									
+								<record id="default_properties" auto_size="horizontal" appearance="tabs/subsection/normal/top/button" rrep="primary" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon_alignment="left"/>
+
+								<!-- MANAGERIAL -->
+								<widget class="radio_button" id="MgtW" secondary_icon="icons/16px/manager">
+									<translation id="text" translation_id="447595" type="use" value="Managerial[COMMENT:Attribute Category;to show only managerial related attributes]"/>
+									<event id="click_event">
+										<flags id="event_id" value="eAtH"/>
+										<flags id="mode" value="1"/>
+									</event>
+								</widget>
+									
+								<!-- COACHING -->
+								<widget class="radio_button" id="CctW" secondary_icon="icons/16px/training">
+									<translation id="text" translation_id="230043" type="use" value="Coaching"/>
+									<event id="click_event">
+										<flags id="event_id" value="eAtH"/>
+										<flags id="mode" value="2"/>
+									</event>
+								</widget>
+									
+								<!-- SCOUTING -->
+								<widget class="radio_button" id="SctW" secondary_icon="icons/16px/scouting">
+									<translation id="text" translation_id="248356" type="use" value="Scouting"/>
+									<event id="click_event">
+										<flags id="event_id" value="eAtH"/>
+										<flags id="mode" value="3"/>
+									</event>
+								</widget>
+									
+								<!--MEDICAL -->
+								<widget class="radio_button" id="MdtW" secondary_icon="icons/16px/medical">
+									<translation id="text" translation_id="422164" type="use" value="Medical[COMMENT:Job Centre- Medical team sub-section]"/>
+									<event id="click_event">
+										<flags id="event_id" value="eAtH"/>
+										<flags id="mode" value="4"/>
+									</event>
+								</widget>
+							</container>
+							
+							<!-- CENTRAL PANEL -->
+							<container draw_horizontal_dividers="true" class="vertical_adaptive_container">
+							
+								<!-- ATTRIBUTES -->
+								<container class="non_player_attributes_panel" id="patp" default_height="310" priority="1"/>
+
+							</container>
+
+						</container>
+							
+						<container default_width="-350" class="tcs_box" priority="2" minimum_width="300">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+							<container class="tcs_tabs_primary" save_session_state="true" default_item="deta">
+							
+													<!-- PANEL UNDERNEATH -->
+								<container priority="2" default_height="-96" minimum_height="240" id="deta">
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+									<translation id="title" translation_id="257253" type="use"/>
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									
+								
+									<!-- SET PIECES -->
+									<widget class="client_object_viewer_xml_panel" file="non_player/tcs/overview/set pieces" id="npSP">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</widget>
+									
+									<!-- KNOWLEDGE -->
+									<widget class="non_player_knowledge_panel" id="npkn" file="non_player/tcs/overview/knowledge"/>
+												
+									<!-- TENDANCIES -->
+									<widget class="non_player_tendencies_panel" id="nptp" file="non_player/tcs/overview/tendancies">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</widget>
+								
+								</container>
+
+								<!-- HISTORY -->
+								<container class="person_history_biography_panel" id="biog">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<translation id="title" translation_id="295868" type="use"/>
+								</container>
+								
+								<!-- HISTORY -->
+								<container class="client_object_viewer_xml_panel" id="hist" file="non_player/tcs/overview/history">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<translation id="title" translation_id="229719" type="use"/>
+								</container>
+
+								<!-- TACTICS -->
+								<container class="non_player_tactics_overview_panel" id="tact" file="non_player/tcs/overview/tactics">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<translation id="title" translation_id="298519" type="use"/>
+								</container>
+							</container>
+			
+						</container>
+							
+					</container>
+				</container>
+			</container>
+			
+		</container>
+
+	</container>
+</panel>

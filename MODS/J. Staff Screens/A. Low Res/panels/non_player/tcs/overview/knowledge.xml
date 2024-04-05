@@ -1,0 +1,41 @@
+<panel>
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+<container class="main_box">
+	<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+	
+		<translation id="title" translation_id="327250" type="use" />
+
+
+	<container height="180">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="2" />
+
+		<widget class="team_scouting_knowledge_map" id="npMp" />
+
+	</container>
+
+	<widget class="table" mode="fill_rows, stripe_rows" id="tabl" layout="-1, -1" auto_size_rows="false" row_height="30" save_session_state="true" save_default_state="true">
+
+		<list id="headings">
+			<record column_span="1" alignment="left,centre_y">
+				<translation id="text" translation_id="291490" type="use" value="Nation[COMMENT: nation the team is in]" />
+			</record>
+
+			<record column_span="1" alignment="left,centre_y">
+				<translation id="text" translation_id="251861" type="use" value="Knowledge[COMMENT: non player profile panel; title of panel showing scouting knowledge]" />
+			</record>
+		</list>
+
+		<list id="column_widget_properties">
+			<record indx="0" alignment="right,centre_y" use_mainland_china_override="true"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record indx="0" left="4" sort_disabled="true"/>
+			<record indx="1" top="6" bottom="6" right="4" sort_disabled="true"/>
+		</list>
+	</widget>
+</container>
+
+</panel>
