@@ -1,0 +1,192 @@
+<panel>
+	<layout class="vertical_arrange" vertical_layout="85,-1" vertical_gap="0"/>
+
+	<!-- IF HUMAN CONTROLLED TEAM, SHOW -->
+	<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+
+	<widget class="player_scout_reports_panel" id="pscR" late_loading="true" file="none">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+		<translation id="title" translation_id="420686" type="use"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<!-- NO REPORT -->
+		<container id="norp" hidden="true" class="client_object_viewer_xml_panel" file="player/tcs/selector/big/reports/overall/noreport">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+
+		<!-- IF WE DO HAVE A SCOUT REPORT -->
+		<container id="scou">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+			<widget class="player_reports_overview_summary_panel" id="proS" file="player/tcs/selector/big/reports/overall/ai_summary" always_recolour_wage_cost_text="true" mode="6"/>
+
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" layout="-1,2" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+				<container navigation_container="true">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+
+					<container id="sTRS">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12"/>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6"/>
+
+							<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+								<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]"/>
+							</widget>
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1"/>
+
+								<!--CA-->
+								<widget class="scout_stars_label" id="cast" height="18" alignment="left, centre_y" mode="1">
+									<record id="object_property" get_property="Pcab"/>
+								</widget>
+
+								<!--CA label-->
+								<widget class="text" id="crTX" auto_size="vertical" alignment="left" colour="faded text"/>
+							</container>
+
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6"/>
+
+							<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+								<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]"/>
+							</widget>
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1"/>
+
+								<!--PA-->
+								<widget class="scout_stars_label" id="past" height="18" alignment="left" mode="2">
+									<record id="object_property" get_property="Ppab"/>
+								</widget>
+
+								<!--PA label-->
+								<widget class="text" id="prTX" auto_size="vertical" alignment="left" colour="faded text"/>
+							</container>
+						</container>
+
+					</container>
+				</container>
+			</container>
+		</container>
+	</widget>
+
+	<container class="tcs_tabs_primary" id="RepS" default_item="frmA" save_default_state="true" save_session_state="true">
+	
+		<!-- RECENT FORM -->
+		<widget class="player_additional_stats_panel" file="none" id="frmA">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" type="use" value=" Form WIP"/>
+			<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</widget>
+
+		<!-- DETAILS -->
+		<widget class="client_object_viewer_xml_panel" file="none" id="detA">
+			<layout class="vertical_arrange_autosize"/>
+
+			<translation id="title" type="use" translation_id=" 317254"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+
+			<!-- SET_VAR MEANS WE DON'T HAVE TO DEFINE THE SAME LAYOUTS REPEATEDLY -->
+			<set_var name="shared_vertical_layout">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0"/>
+				<record id="default_properties" auto_size="all" alignment="left,centre_y"/>
+			</set_var>
+		
+			<!-- STRONGEST WEAKEST AREA PARTS OF GAME -->
+			<container class="main_box">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+		
+				<!-- STRONGEST AREA OF GAME -->
+				<container>
+					<var name="shared_vertical_layout"/>
+
+					<widget class="label" font="label">
+						<record id="object_property" get_property="PpPs" name="true"/>
+					</widget>
+
+					<widget class="player_style_label">
+						<record id="object_property" get_property="PpPs"/>
+					</widget>
+				</container>
+
+				<!-- WEAKEST AREA OF GAME -->
+				<container>
+					<var name="shared_vertical_layout"/>
+
+					<widget class="label" font="label">
+						<translation id="text" translation_id="383263" type="use"/>
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="0"/>
+
+						<record id="default_properties" auto_size="all" alignment="left,centre_y"/>
+
+
+						<widget class="position_label">
+							<record id="object_property" get_property="Pbpc"/>
+						</widget>
+					
+						<widget class="text" text=" / "/>
+					
+						<widget class="tactical_role_label" abbt="true">
+							<record id="object_property" get_property="Parc"/>
+						</widget>
+					
+						<widget class="text" text="- "/>
+					
+						<widget class="tactical_role_label" abbt="true">
+							<record id="object_property" get_property="Pbdc"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<!-- STRONGEST WEAKEST AREA PARTS OF GAME -->
+			<container class="main_box">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+		
+				<!-- STRONGEST AREA OF GAME -->
+				<container>
+					<var name="shared_vertical_layout"/>
+
+					<widget class="label" font="label">
+						<record id="object_property" get_property="Pmst" name="true"/>
+					</widget>
+
+					<widget class="strength_weakness_label">
+						<record id="object_property" get_property="Pmst"/>
+					</widget>
+				</container>
+
+				<!-- WEAKEST AREA OF GAME -->
+				<container>
+					<var name="shared_vertical_layout"/>
+
+					<widget class="label" font="label">
+						<record id="object_property" get_property="Pwea" name="true"/>
+					</widget>
+
+					<widget class="strength_weakness_label">
+						<record id="object_property" get_property="Pwea"/>
+					</widget>
+				</container>
+			</container>
+			
+		</widget>
+	</container>
+
+
+</panel>

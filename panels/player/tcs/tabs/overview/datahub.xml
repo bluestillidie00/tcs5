@@ -2,77 +2,77 @@
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 	<container class="tcs_box" appearance="tcs/boxes/main/fade/paper" rrep="bg lighter" brep="primary">
-	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-			<container class="horizontal_adaptive_container" gap="8" >
-		
-<record id="default_properties" default_width="-1" />
-	
-		<container class="scrolling_box" priority="1" minimum_width="600">
-			<container>
-				<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
-		
-				<!--PIZZA OVERLAY-->
-				<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance pizza" id="mmpo" height="450">
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
-				
-				<!--PIZZA OVERLAY-->
-				<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance nipple" id="mmpo" height="450">
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
-
-				<!--PIZZA OVERLAY-->
-				<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance bar" id="mmpo" height="450">
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
-		
-			</container>
-		</container>
-		
-		<container>
-		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
-		
-		<container class="tcs_box">
- <attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
-		
-			<widget class="player_additional_stats_panel" file="none" id="lb0">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-		<translation id="title" type="use" value=" Form (Last 20 Matches)"/>
-		<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar">
-			<record id="object_property" get_property="objt" set_property="objt"/>
-		</widget>
-	</widget>
-		</container>
-		
-				<container  navigation_container="true" class="tcs_box">
-						<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-						<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
-							<record id="object_property">
-								<list id="get_properties">
-									<!-- Hide this panel if player is in inactive league-->
-									<record id="object_property" get_property="objt" set_property="objt"/>
-									<record id="object_property" get_property="Pila" set_property="hidn"/>
-								</list>
-							</record>
-						</widget>
-						<widget class="player_stats_panel" id="pssp" file="player/player stats small">
-							<record id="object_property">
-								<list id="get_properties">
-									<!-- Show this panel if player is in inactive league-->
-									<record id="object_property" get_property="Pila" set_property="Shwn"/>
-									<record id="object_property" get_property="objt" set_property="objt"/>
-								</list>
-							</record>
-						</widget>
+		<container class="horizontal_adaptive_container" gap="8">
+		
+			<record id="default_properties" default_width="-1"/>
+	
+			<container class="scrolling_box" priority="1" minimum_width="600">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+		
+					<!--PIZZA OVERLAY-->
+					<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance pizza" id="mmpo" height="450">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+				
+					<!--PIZZA OVERLAY-->
+					<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance nipple" id="mmpo" height="450">
+						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 
-	</container>
-	</container>
+					<!--PIZZA OVERLAY-->
+					<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance bar" id="mmpo" height="450">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</container>
+		
+				</container>
+			</container>
+		
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+		
+				<container class="tcs_box">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+		
+					<widget class="player_additional_stats_panel" file="none" id="lb0">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<translation id="title" type="use" value=" Form (Last 20 Matches)"/>
+						<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+						<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</widget>
+				</container>
+		
+				<container navigation_container="true" class="tcs_box">
+					<!-- <container class="tcs_box" width="650" priority="2" default_width="-2"  navigation_container="true" > -->
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- Hide this panel if player is in inactive league-->
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<record id="object_property" get_property="Pila" set_property="hidn"/>
+							</list>
+						</record>
+					</widget>
+					<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- Show this panel if player is in inactive league-->
+								<record id="object_property" get_property="Pila" set_property="Shwn"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+			</container>
 		</container>
+	</container>
 
 </panel>

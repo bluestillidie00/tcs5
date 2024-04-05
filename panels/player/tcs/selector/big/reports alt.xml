@@ -1,0 +1,59 @@
+<!-- THIS PANELS SHOWS UNDER THE REPORTS PANEL IN THE BIG SELECTOR -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- SET UP TABS -->
+	<container class="tcs_tabs_primary" id="Repo" default_item="rOvA" save_default_state="true" save_session_state="true">
+
+		<!-- OVERALL -->
+		<container id="rOvA">
+			<translation id="title" translation_id="259402" type="use"/>
+			<!-- INSET // T,L,R,B -->
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			
+			<widget class="client_object_viewer_xml_panel" file="player/tcs/selector/big/reports/overall/human_alt">
+				<record id="object_property" get_property="PHcr" set_property="Shwn"/>
+			</widget>
+			
+			<widget class="client_object_viewer_xml_panel" file="player/tcs/selector/big/reports/overall/ai">
+				<record id="object_property" get_property="PHcr" set_property="hidn"/>
+			</widget>
+
+		</container>
+
+		<!-- PER 90 -->
+		<container id="rTrA">
+			<translation id="title" translation_id="309185" type="use"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
+
+			<widget file="player/tcs/selector/big/reports/per 90/tabbed" class="client_object_viewer_xml_panel" id="pe90" late_loading="true">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+		<!-- PROS AND CONS -->
+		<container id="rPCA">
+			<translation id="title" type="use" value="Pros/Cons"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
+
+			<widget class="player_scout_reports_panel" id="PrCo" file="player/tcs/selector/big/reports/pros cons no title" late_loading="true">
+				<translation id="title" translation_id="420686" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+		<!-- MATCH REPORT -->
+		<container id="rMRA">
+			<translation id="title" type="use" value="Match Report"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,0,0,0"/>
+
+			<widget file="player/tcs/selector/big/reports/match report" class="player_match_report_small_panel" id="loan" late_loading="true">
+				<translation id="title" translation_id="420686" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+	</container>
+</panel>
