@@ -1,0 +1,48 @@
+<panel>
+	<layout class="vertical_arrange_autosize" vertical_gap="8" vertical_offset="8"/>
+		
+	<set_var name="shared_vertical_layout">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0"/>
+		<record id="default_properties" auto_size="vertical" alignment="left,centre_y"/>
+	</set_var>
+
+	<!-- SEASON TICKET HOLDER -->
+	<container class="main_box">
+		<var name="shared_vertical_layout"/>
+
+		<widget class="label" font="label">
+			<record id="object_property" get_property="Csth" name="true"/>
+		</widget>
+
+		<widget class="dashed_number_label">
+			<record id="object_property" get_property="Csth"/>
+		</widget>
+	</container>
+
+	<!-- AVERAGE TICKET PRICE -->
+	<container class="main_box">
+		<var name="shared_vertical_layout"/>
+
+		<widget class="label" font="label">
+			<record id="object_property" get_property="Ctpr" name="true"/>
+		</widget>
+
+		<widget class="cash_cell">
+			<record id="object_property" get_property="Ctpr"/>
+		</widget>
+	</container>
+
+	<!-- AVERAGE SEASON TICKET PRICE -->
+	<container class="main_box">
+		<var name="shared_vertical_layout"/>
+
+		<widget class="label" font="label">
+			<record id="object_property" get_property="Cstp" name="true"/>
+		</widget>
+
+		<widget class="cash_cell">
+			<record id="object_property" get_property="Cstp"/>
+		</widget>
+	</container>
+
+</panel>
