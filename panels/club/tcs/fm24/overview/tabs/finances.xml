@@ -1,6 +1,9 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
+	
+	<container class="tcs_fade">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
 	<container class="horizontal_adaptive_container" gap="8">
 	
 		<!-- BALANCE GRAPH -->
@@ -41,8 +44,15 @@
 					<translation id="title" translation_id="396455" type="use"/>
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
+				
+				<!-- SPONSOR -->
+				<widget class="client_object_viewer_xml_panel" id="tTic" file="club/tcs/fm24/overview/finances/ticket information">
+					<translation id="title" value="Ticket Prices" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
 			</container>
 		</container>
 	</container>
-	
+	</container>
+
 </panel>
