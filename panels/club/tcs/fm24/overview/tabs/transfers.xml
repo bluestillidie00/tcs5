@@ -88,11 +88,11 @@
 					</widget>
 				</container>
 
-				<container>
+			<!-- 	<container>
 					<attachment_group class="title_embedded_panel_right"/>
 
 					<widget class="icon_button" id="GTog" click_event="toggle_graph" icon="icons/16px/up" show_button_appearance="false" auto_size="horizontal" embed_in_frame="true"/>
-				</container>
+				</container> -->
 			</container>
 
 			<widget class="horizontal_divider" />
