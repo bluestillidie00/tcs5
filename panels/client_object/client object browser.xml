@@ -234,7 +234,7 @@
 										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 									
 										<!-- OPEN BOOKMARKS BUTTON -->
-										<widget class="menubar_icon_button" id="boBK" appearance="tcs/icons/interface/bookmarks" secondary_icon_enabled="false" icon_alignment="right" controller_button="select_button" gamepad_icon_alignment="centre_right" rrep="tcs_accent">
+										<widget class="widget_popup_button" id="boBK" appearance="tcs/icons/interface/bookmarks" secondary_icon_enabled="false" icon_alignment="right" controller_button="select_button" gamepad_icon_alignment="centre_right" rrep="tcs_accent">
 
 											<!-- THIS CLICK EVENT MUST MATCH THE REST OF THE EVENT IDS IN THE BUTTONS -->
 											<event id="click_event" event_id="bBmk"/>
@@ -317,29 +317,14 @@
 									</container>
 								</container>
 								
-								<!-- BOOKMARKS -->
-								<container id="bkmk" hidn="true">
-									<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="12" horizontal_inset="32"/>
-									
-									<!-- FADE ANIMATION -->
-									<animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse"/>
 										
-									<!-- POPUP BOX -->
-									<container class="standard_popup_box" height="450" width="720">
-										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-										<!-- BOOKMARKS -->
-										<widget class="bookmarks_menu_panel" id="book">
-											<record id="object_property" get_property="objt" set_property="objt"/>
-										</widget>
-									</container>
-									
-								</container>
-								
 							</container>
 						</container>
 					</container>
 				</container>
+				
+			
+				
 			</container>
 
 			<container id="Fpco">
@@ -353,4 +338,32 @@
 			<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 	</container>
+	
+	<!-- BOOKMARKS -->
+	<container id="bkmk" hidn="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+										
+		<container class="tcs_box" appearance="boxes/custom/dialog background/paper" rrep="bg darker">
+			<animation class="fade_on_hide_animation" duration="0.2" end_mode="hold_auto_reverse"/>
+		</container>
+										
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="80" horizontal_inset="32"/>
+									
+			<!-- FADE ANIMATION -->
+			<animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse"/>
+										
+			<!-- POPUP BOX -->
+			<container class="standard_popup_box" height="450" width="720">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- BOOKMARKS -->
+				<widget class="bookmarks_menu_panel" id="book">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+									
+		</container>
+	</container>
+					
 </panel>
