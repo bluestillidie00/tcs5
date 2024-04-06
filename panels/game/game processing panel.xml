@@ -154,6 +154,9 @@
 					<record id="widget_info" class="property_list_viewer_xml_panel" file="game/processing prozone panel" alignment="left,centre_y" colour="fg"/>
 				</widget>
 			</container>
+			
+					<widget class="property_list_viewer_xml_panel" id="LoSp" hidden="true" auto_size="vertical" file="game/loading save details panel"/>
+
 
 			<!-- Footer with hints -->
 			<container class="tcs_box" appearance="tcs/boxes/ui/tab bar/paper" rrep="processing_box_background" height="100" transparency="0.95">
