@@ -80,17 +80,6 @@
 
 	<container class="tcs_tabs_primary" id="RepS" default_item="frmA" save_default_state="true" save_session_state="true">
 	
-		<!-- RECENT FORM -->
-		<widget class="player_additional_stats_panel" file="none" id="frmA">
-			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-			<translation id="title" type="use" value=" Form WIP"/>
-			<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
-			<record id="object_property" get_property="objt" set_property="objt"/>
-			<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar">
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</widget>
-		</widget>
-
 		<!-- DETAILS -->
 		<widget class="client_object_viewer_xml_panel" file="none" id="detA">
 			<layout class="vertical_arrange_autosize"/>
@@ -186,6 +175,19 @@
 			</container>
 			
 		</widget>
+
+		<!-- RECENT FORM -->
+		<widget class="player_additional_stats_panel" file="none" id="frmA">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" type="use" value=" Form"/>
+			<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<widget class="player_form_summary_panel" file="player/tcs/selector/big/reports/overall/form no header">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</widget>
+
+
 	</container>
 
 
