@@ -152,6 +152,40 @@
 			<layout class="stick_to_sides_attachment" alignment="top" inset="40"/>
 		</widget>
 		
+		<widget class="value_based_picture" id="vbp1" transparency="1" width="20" height="20">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="46"/>
+			<list id="value_list">
+				<record min_value="1" max_value="4" file="tcs/icons/footedness/left" red_replacement="fg red"/>
+				<record min_value="5" max_value="8" file="tcs/icons/footedness/left" red_replacement="awkward"/>
+				<record min_value="9" max_value="11" file="tcs/icons/footedness/left" red_replacement="unconvincing"/>
+				<record min_value="12" max_value="14" file="tcs/icons/footedness/left" red_replacement="competent"/>
+				<record min_value="15" max_value="17" file="tcs/icons/footedness/left" red_replacement="accomplished"/>
+				<record min_value="18" max_value="20" file="tcs/icons/footedness/left" red_replacement="natural"/>
+			</list>
+			<record id="object_property">
+				<integer id="get_property" value="Plft"/>
+			</record>
+		</widget>
+
+		<!-- RIGHT -->
+		<widget class="value_based_picture" id="vbp1" transparency="1" width="20" height="20">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="46"/>
+			<list id="value_list">
+				<record min_value="1" max_value="4" file="tcs/icons/footedness/right" red_replacement="fg red"/>
+				<record min_value="5" max_value="8" file="tcs/icons/footedness/right" red_replacement="awkward"/>
+				<record min_value="9" max_value="11" file="tcs/icons/footedness/right" red_replacement="unconvincing"/>
+				<record min_value="12" max_value="14" file="tcs/icons/footedness/right" red_replacement="competent"/>
+				<record min_value="15" max_value="17" file="tcs/icons/footedness/right" red_replacement="accomplished"/>
+				<record min_value="18" max_value="20" file="tcs/icons/footedness/right" red_replacement="natural"/>
+			</list>
+			<record id="object_property">
+				<integer id="get_property" value="Prft"/>
+			</record>
+		</widget>
+		
+		
 	</container>
 	
 	<container>
