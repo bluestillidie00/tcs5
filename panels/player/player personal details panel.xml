@@ -18,7 +18,7 @@
 				<container width="280">
 					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-					<record id="default_properties" save_session_state="true" dont_set_embedded_title="true" >
+					<record id="default_properties" save_session_state="true" dont_set_embedded_title="true">
 						<record id="object_property" get_property="objt" set_property="objt"/>
 					</record>
 
@@ -26,7 +26,7 @@
 					<widget file="player/tcs/selector/header/playerpic/stadium_sel" id="STAD" class="client_object_viewer_selector_panel"  default_item="STAp" /> -->
 					
 					<!-- FACE SELECTOR -->
-					<widget file="player/tcs/selector/header/playerpic/selector" id="FACE" class="client_object_viewer_selector_panel"  default_item="defa" /> 
+					<widget file="player/tcs/selector/header/playerpic/selector" id="FACE" class="client_object_viewer_selector_panel" default_item="defa"/>
 				</container>
 
 				<!-- LOGOS AND EXTRA DETAILS -->
@@ -70,7 +70,7 @@
 
 					<!-- SMALL SELECTOR -->
 					<container>
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
 
 						<container class="client_object_viewer_selector_panel" id="tcsH" file="player/player overview small header selector panel" save_session_state="true">
 							<integer id="default_for_unemployed_managers" value="pers"/>
@@ -78,6 +78,10 @@
 							<integer id="default_for_everyone_else" value="pers"/>
 							<integer id="default_for_versus_mode" value="pers"/>
 						</container>
+						
+						<widget class="player_extra_details_text" size="small" auto_size="vertical" colour="fg accent">
+							<record id="object_property" get_property="PExD"/>
+						</widget>
 					</container>
 				</container>
 			</container>

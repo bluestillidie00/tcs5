@@ -64,11 +64,6 @@
 
 		<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" size="small"/>
 
-		<widget class="player_extra_details_text" size="small" auto_size="vertical" colour="fg accent"> 
-			<record id="object_property" get_property="PExD" />
-		</widget>
- 
-
 	</container>
 
 </panel>
