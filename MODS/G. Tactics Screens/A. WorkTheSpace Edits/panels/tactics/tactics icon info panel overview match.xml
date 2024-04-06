@@ -100,7 +100,7 @@
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
 					<!--name-->
-					<widget class="player_picker_button" entity_layout_id="it02" id="plPB" file="widgets/player selection button tactics" editor_group_id="it10" navigation_focus_target="true">
+					<widget class="player_picker_button" entity_layout_id="it02" id="plPB" widget_type="match_team_squad_player_selection_panel" file="widgets/player selection button tactics" editor_group_id="it10">
 						<string id="draggable" value="false"/>
 					</widget>
 				</container>
