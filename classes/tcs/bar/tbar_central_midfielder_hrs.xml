@@ -1,0 +1,25 @@
+<class class="tbar_central_midfielder_hrs" parent="match_rating_label" font="transparent" size="0" should_recolour="false" fixed_appearance_alignment="bottom" image_aligment="centre_x,centre_y">
+	<list id="value_list">
+		<record min_value="-1" max_value="0.48" appearance="tcs/icons/form/0" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="0.48" max_value="0.64" appearance="tcs/icons/form/5" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="0.64" max_value="0.75" appearance="tcs/icons/form/10" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="0.75" max_value="0.85" appearance="tcs/icons/form/15" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="0.85" max_value="0.96" appearance="tcs/icons/form/20" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="0.96" max_value="1.06" appearance="tcs/icons/form/25" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.06" max_value="1.16" appearance="tcs/icons/form/30" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.16" max_value="1.26" appearance="tcs/icons/form/35" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.26" max_value="1.37" appearance="tcs/icons/form/40" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.37" max_value="1.47" appearance="tcs/icons/form/45" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.47" max_value="1.59" appearance="tcs/icons/form/50" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.59" max_value="1.73" appearance="tcs/icons/form/55" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.73" max_value="1.86" appearance="tcs/icons/form/60" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="1.86" max_value="2.01" appearance="tcs/icons/form/65" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="2.01" max_value="2.20" appearance="tcs/icons/form/70" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="2.20" max_value="2.41" appearance="tcs/icons/form/75" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="2.41" max_value="2.64" appearance="tcs/icons/form/80" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="2.64" max_value="2.98" appearance="tcs/icons/form/85" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="2.98" max_value="3.47" appearance="tcs/icons/form/90" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="3.47" max_value="4.81" appearance="tcs/icons/form/95" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+		<record min_value="4.81" max_value="1000" appearance="tcs/icons/form/99" image_aligment="centre_x,centre_y" red_replacement="bar_defend" blue_replacement="bar_defend_border" colour="" hidden="false"/>
+	</list>
+</class>
