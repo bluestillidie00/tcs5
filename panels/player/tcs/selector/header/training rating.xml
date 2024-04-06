@@ -19,10 +19,15 @@
 		<container class="player_training_panel" file="none">
 			<record id="object_property" get_property="PHcr" set_property="Shwn"/>
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			
+			<record id="object_property" get_property="objt" set_property="objt"/>
 
 			<!-- TRAINING ROLE -->
 			<container class="player_training_information" id="ptst" navigation_container="true" file="none">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<record id="object_property" get_property="objt" set_property="objt"/>
+
 
 				<container>
 					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
@@ -73,6 +78,8 @@
 		<!-- IF NOT A HUMAN TEAMS PLAYER. CREDIT TO FME -->
 		<container >
 			<layout class="stick_to_sides_attachment" apply_to_children="true" />
+			
+			<record id="object_property" get_property="objt" set_property="objt"/>
 
 			<container>
 				<attachment class="vertical_arrange" vertical_alignment="centre_x,middle"/>

@@ -1,0 +1,55 @@
+﻿<panel maximum_items="20">
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Pfrm" auto_size="all">
+			<translation id="text" type="use" value=" Form (Last 20 Matches)" />
+		</widget>
+
+		<widget class="spacer" height="3" />
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="label" id="nfrm" size="11" alignment="centre" hidden="true" colour="faded text">
+			<translation id="text" translation_id="338020" type="use" value="None available[COMMENT: match ratings summary; no data available]" />
+		</widget>
+
+		<container id="cont">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+				<widget class="graph" id="grap" draw_shadows="false" inset="0" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<record id="instant_hint">
+						<string id="format" value="[%fraction#1-3.2]"/>
+					</record>
+					<record id="default_series_properties" colour="accent" type="bar" line_width="3" point_radius="6" point_colour="accent"/>
+					<record id="x_axis" hidden="true">
+						<string id="format" value="[%fraction#1-3.0]"/>
+						<translation id="title" translation_id="242774" type="use" value="Match" />
+					</record>
+					<record id="y_axis" hidden="true">
+						<string id="format" value="[%fraction#1-3.0]"/>
+						<record id="title_font" style="vertical"/>
+						<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
+					</record>
+					<list id="grid_line_styles">
+						<record colour=""/>
+						<record colour="graph row"/>
+					</list>
+				</widget>
+				<widget class="label" id="nogp" hidden="true" colour="faded text">
+					<translation id="text" translation_id="330262" type="use" value="No Games Played Yet[COMMENT: player_positions_details_panel; string indicating that a player is yet to compete in any matches and as such has no positional data]" />
+				</widget>
+			</container>
+	</container>
+</panel>

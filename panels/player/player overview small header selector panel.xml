@@ -16,7 +16,7 @@
 		<translation id="title" translation_id="395236" type="use" />
 		<translation id="subtitle" translation_id="344664" type="use" />
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
-		<widget class="player_form_summary_panel" file="player/tcs/selector/last 5 games" >
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 5 games_bar_mini" >
 			<record id="object_property" get_property="objt" set_property="objt" />
 		</widget>	
 	</widget>
@@ -27,7 +27,18 @@
 		<translation id="title" type="use" value=" Form (Last 10 Matches)" />
 		<translation id="subtitle" translation_id="344664" type="use" />
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
-		<widget class="player_form_summary_panel" file="player/tcs/selector/last 10 games" >
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 10 games_bar_mini" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>	
+	</widget>
+
+	<!-- LAST 20 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la20">
+		<record id="object_property" get_property="objt" set_property="objt" />
+		<translation id="title" type="use" value=" Form (Last 20 Matches)" />
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar_mini" >
 			<record id="object_property" get_property="objt" set_property="objt" />
 		</widget>	
 	</widget>
@@ -52,17 +63,11 @@
 	</container> 
 
 	<!-- DEVELOPMENT -->
-	<widget class="client_object_viewer_xml_panel" file="player/tcs/selector/header/progress" section="Pgrg" id="Pgrg" late_loading="true">
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/selector/header/progress" section="Pgrg" id="Pgrg" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
 		<translation id="title" translation_id="289978" type="use" />
 		<translation id="subtitle" translation_id="486383" type="use" />
 	</widget>
 		
-	<!-- TRAINING -->
-	<container class="client_object_viewer_selector_panel" id="pTra" file="player/tcs/selector/header/training rating">
-		<translation id="title" type="use" translation_id="466504" />
-		<translation id="subtitle" translation_id="486383" type="use" />
-	</container> 
-
 	<!-- PERSONAL INFORMATION -->
 	<!-- INTERNATIONAL RECORD -->
 	<widget class="person_personal_information_panel" file="player/tcs/selector/header/intl small" id="Nati" vertical="false">
