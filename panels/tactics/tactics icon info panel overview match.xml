@@ -160,11 +160,11 @@
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="50"/>
 			<list id="value_list">
 				<record min_value="1" max_value="4" file="icons/26px/bullet" red_replacement="fg red"/>
-				<record min_value="5" max_value="8" file="icons/26px/bullet" red_replacement="fg range4"/>
-				<record min_value="9" max_value="11" file="icons/26px/bullet" red_replacement="fg range8"/>
-				<record min_value="12" max_value="14" file="icons/26px/bullet" red_replacement="fg range12"/>
-				<record min_value="15" max_value="17" file="icons/26px/bullet" red_replacement="fg range16"/>
-				<record min_value="18" max_value="20" file="icons/26px/bullet" red_replacement="fg green"/>
+				<record min_value="5" max_value="8" file="icons/26px/bullet" red_replacement="awkward"/>
+				<record min_value="9" max_value="11" file="icons/26px/bullet" red_replacement="unconvincing"/>
+				<record min_value="12" max_value="14" file="icons/26px/bullet" red_replacement="competent"/>
+				<record min_value="15" max_value="17" file="icons/26px/bullet" red_replacement="accomplished"/>
+				<record min_value="18" max_value="20" file="icons/26px/bullet" red_replacement="natural"/>
 			</list>
 			<record id="object_property">
 				<integer id="get_property" value="Plft"/>
@@ -177,16 +177,23 @@
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="50"/>
 			<list id="value_list">
 				<record min_value="1" max_value="4" file="icons/26px/bullet" red_replacement="fg red"/>
-				<record min_value="5" max_value="8" file="icons/26px/bullet" red_replacement="fg range4"/>
-				<record min_value="9" max_value="11" file="icons/26px/bullet" red_replacement="fg range8"/>
-				<record min_value="12" max_value="14" file="icons/26px/bullet" red_replacement="fg range12"/>
-				<record min_value="15" max_value="17" file="icons/26px/bullet" red_replacement="fg range16"/>
-				<record min_value="18" max_value="20" file="icons/26px/bullet" red_replacement="fg green"/>
+				<record min_value="5" max_value="8" file="icons/26px/bullet" red_replacement="awkward"/>
+				<record min_value="9" max_value="11" file="icons/26px/bullet" red_replacement="unconvincing"/>
+				<record min_value="12" max_value="14" file="icons/26px/bullet" red_replacement="competent"/>
+				<record min_value="15" max_value="17" file="icons/26px/bullet" red_replacement="accomplished"/>
+				<record min_value="18" max_value="20" file="icons/26px/bullet" red_replacement="natural"/>
 			</list>
 			<record id="object_property">
 				<integer id="get_property" value="Prft"/>
 			</record>
 		</widget>
+		
+		<!-- captain/vice captain icon -->
+		<widget class="picture" id="capi" scale_picture="true" file="tcs/icons/captain/captain" width="14" height="14">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="65"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
+		</widget>
+		
 	</container>
 
 </panel>
