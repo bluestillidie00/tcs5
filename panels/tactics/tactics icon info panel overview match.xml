@@ -27,6 +27,10 @@
 		<!--injury/red/yellow card -->
 		<container class="inner_box_no_margin" id="inji" height="16" width="16">
 		</container>
+		
+		    <!--injury/red/yellow card -->
+    <container class="goal_icon" id="goal" height="16" width="16">
+    </container>
 	</container>
 
 	<container class="main_box" id="nmcN" appearance="boxes/custom/tactics kit/paper">
@@ -106,9 +110,9 @@
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
 					<!--name-->
-					<widget class="player_picker_button" entity_layout_id="it02" id="plPB" file="widgets/player selection button tactics" editor_group_id="it10" navigation_focus_target="true">
-						<string id="draggable" value="false"/>
-					</widget>
+			         <widget class="player_picker_button" entity_layout_id="it02" id="plPB" widget_type="match_team_squad_player_selection_panel" file="widgets/player selection button tactics" editor_group_id="it10">
+            <string id="draggable" value="false"/>
+          </widget>
 				</container>
 			</container>
 		</container>
