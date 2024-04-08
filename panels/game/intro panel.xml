@@ -214,7 +214,7 @@
 				<container file="game/intro panel menu" navigation_container="true" default_focus="true" />
 
 				<!-- version label-->
-				<widget class="text" value="WTCS Gold v1.3" auto_size="all" colour="fg alpha" size="small">
+				<widget class="text" value="WTCS Gold v1.3.1" auto_size="all" colour="fg alpha" size="small">
 					<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="49,30" />
 				</widget>
 
