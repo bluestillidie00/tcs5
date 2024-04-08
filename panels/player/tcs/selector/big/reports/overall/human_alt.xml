@@ -187,6 +187,16 @@
 			</widget>
 		</widget>
 
+		<!-- RECENT FORM 
+		<widget class="client_object_viewer_xml_panel" file="none" id="sttA">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" type="use" value=" Stats"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+			<widget class="player_form_summary_panel" file="player/tcs/selector/big/reports/overall/stats/base">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</widget> -->
+
 
 	</container>
 

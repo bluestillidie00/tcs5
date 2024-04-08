@@ -84,9 +84,9 @@
 		<translation id="title" translation_id="254774" type="use"/>
 	</widget>
 
-	<!-- REPORTS ALT -->
+	<!-- REPORTS ALT 
 	<widget file="player/tcs/selector/big/reports alt" class="client_object_viewer_xml_panel" id="repA" late_loading="true">
 		<translation id="title" value="Reports (Alt)" type="use"/>
-	</widget>
+	</widget> -->
     
 </panel>
