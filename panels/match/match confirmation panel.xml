@@ -30,7 +30,7 @@
 		<widget class="spacer" height="5" />
 
 		<!--simulate match area-->
-		<container class="inner_subtle_box" id="SMCT">
+		<container id="SMCT">
 			<translation id="title" translation_id="383109" type="use" value="Simulate Match[COMMENT: button text to go through the next match leaving the result to the staff, using the full match engine to simulate the match result]" />
 
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" do_not_size="true"/>
@@ -59,8 +59,7 @@
 		<widget class="spacer" height="5" id="SPAC"/>
 
 		<!--instant result area-->
-		<container class="inner_subtle_box" id="IRAR" >
-			<translation id="title" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
+		<container id="IRAR" >
 
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" do_not_size="true" />
 			<layout class="fit_children_attachment" alignment="vertical,fill" gap="4" offset="0" />
@@ -84,11 +83,13 @@
 		<!--cancel button-->
 		<container>
 			<attachment_group class="button_arrangement_right" />
+			
+			<record id="default_properties" colour="fg" icon_colour="fg"/>
 
-			<widget class="primary_icon_button" id="cont" click_event="conS" width="90" auto_size="vertical" controller_button="y_button">
+			<widget class="primary_icon_button" id="cont" click_event="conS" width="90" auto_size="vertical" controller_button="y_button" icon="icons/16px/tick" rrep="bg green">
 				<translation id="text" translation_id="242044" type="use" value="Yes" />
 			</widget>
-			<widget class="icon_button" id="canc" click_event="canc" auto_size="all" controller_button="x_button">
+			<widget class="primary_icon_button" id="canc" click_event="canc" auto_size="all" controller_button="x_button" icon="icons/16px/cross" rrep="bg red">
 				<translation id="text" translation_id="229828" type="use" value="Cancel" />
 			</widget>
 		</container>
