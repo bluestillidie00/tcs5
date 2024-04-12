@@ -4267,7 +4267,7 @@
 			<translation id="text" translation_id="450835" type="use" value="Review[COMMENT: not sure whether or not this will need translating, it might get cut out with the new match screen, so hold off for the moment]" />
 			<record id="widget_info">
 				<symbol id="class" value="match_mid_match_review_panel" />
-				<string id="file" value="match/match full time review panel" />
+				<string id="file" value="match/match full time review panel1" />
 			</record>
 			<record id="section_ui_settings">
 				<boolean id="hide_tabs" value="true" />
