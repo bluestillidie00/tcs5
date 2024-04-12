@@ -12,12 +12,12 @@
 	 -->
 
 	<!-- skin details - most of these are intentionally not translated -->
-	<translation id="name" type="use" value="WTCS Gold v1.3.1" />
+	<translation id="name" type="use" value="WTCS Gold v1.4" />
 	<string id="author" value="Bluestillidie00xWorkTheSpace" />
 	<translation id="description" type="use" value="TCS Returns once More" />
-	<string id="version" value="1.3.1" />
+	<string id="version" value="1.4" />
 	<flags id="parent" value="fm" />
-	<string id="skin_name" value="WTCS6v1dot31R" />
+	<string id="skin_name" value="WTCS6v1dot4" />
 	<!--
 	 Minimum game version this skin requires to be valid, and listed as an option in the list of skins .
 	 
