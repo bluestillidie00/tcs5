@@ -1,0 +1,144 @@
+<panel>
+
+	<string id="skin_style" value="subtle box" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<boolean id="is_in_inbox" value="true" />
+
+	<container class="tcs_box" red_replacement="tcs_accent">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="300,-1,-1" horizontal_offset="6" vertical_offset="6" />
+
+		<!-- placing -->
+		<container background_colour="gold" height="28" width="28" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="1" apply_to_children="true" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true" />
+
+			<widget class="label" id="posl" alignment="centre" colour="black" size="12" style="bold" embed_in_frame="true" auto_size="none" />
+
+		</container>
+
+		<!-- Player Picture -->
+		<widget class="competition_news_image_panel" id="ptpc" height="160" file="award/tcs/winner"/>
+
+		<widget class="table" id="pitb" layout="18,-1" auto_size_rows="false" auto_size="vertical" row_height="24" all_content_same_height="true" row_spacing="1" sort_disabled="true">
+
+			<list id="column_table_properties">
+				<record index="0" right="20" />
+			</list>
+
+			<record id="default_properties" alignment="left,centre_y" />
+
+			<!-- Name -->
+			<widget class="person_button" id="apfn" col="0" row="0" style="bold" column_span="2" />
+
+			<!-- Club -->
+			<widget class="team_button" id="apcb" col="1" row="1" icon_enabled="false" colour="faded text" navigation_focus_target="true" />
+
+			<!-- Nation -->
+			<widget class="nation_button" id="apna" col="1" row="2" icon_enabled="true" colour="faded text" />
+
+			<!-- Position -->
+			<widget class="position_label" id="appo" col="1" row="3" colour="faded text" navigation_focus_target="false" />
+
+			<!-- Average Rating -->
+			<widget class="label" id="apav" col="1" row="4" colour="faded text" />
+
+			<!-- Age -->
+			<widget class="label" id="apag" col="1" row="5" colour="faded text" />
+			
+		</widget>
+
+		<widget class="table" id="stdt" mode="fill_rows, stripe_rows" layout="-1, -1" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" />
+				<record index="1" alignment="right,centre_y" />
+			</list>
+
+			<!-- Appearances (player)-->
+			<widget class="label" col="0" row="0">
+				<translation id="text" translation_id="227845" type="use" value="Appearances" />
+			</widget>
+			<widget class="label" id="apps" col="1" row="0" />
+
+			<!-- games played (manager) -->
+			<widget class="label" col="0" row="1">
+				<translation id="text" translation_id="247159" type="use" value="Games" />
+			</widget>
+			<widget class="label" id="apga" col="1" row="1" />
+
+			<!-- win ratio -->
+			<widget class="label" col="0" row="2">
+				<translation id="text" translation_id="306798" type="use" value="Win Ratio[COMMENT: manager stat; games divided by wins]" />
+			</widget>
+			<widget class="percentage_label" id="apwr" col="1" row="2" />
+
+			<!-- Goals -->
+			<widget class="label" col="0" row="3">
+				<translation id="text" translation_id="227857" type="use" value="Goals" />
+			</widget>
+			<widget class="label" id="apgl" col="1" row="3" />
+
+			<!-- Assists -->
+			<widget class="label" col="0" row="4">
+				<translation id="text" translation_id="227847" type="use" value="Assists" />
+			</widget>
+			<widget class="label" id="apas" col="1" row="4" />
+
+			<!-- Conceded -->
+			<widget class="label" col="0" row="5">
+				<translation id="text" translation_id="247734" type="use" value="Conceded" />
+			</widget>
+			<widget class="label" id="apco" col="1" row="5" />
+
+			<!-- Yellow Cards -->
+			<widget class="label" col="0" row="6">
+				<translation id="text" translation_id="247391" type="use" value="Yellow Cards" />
+			</widget>
+			<widget class="label" id="apyc" col="1" row="6" />
+
+			<!-- Red Cards -->
+			<widget class="label" col="0" row="7">
+				<translation id="text" translation_id="247392" type="use" value="Red Cards" />
+			</widget>
+			<widget class="label" id="aprc" col="1" row="7" />
+
+			<!-- Golden boot points -->
+			<widget class="label" col="0" row="8">
+				<translation id="text" translation_id="317385" type="use" value="Score" />
+			</widget>
+			<widget class="label" id="apgb" col="1" row="8" />
+
+			<!-- Man of the Match -->
+			<widget class="label" col="0" row="9">
+				<translation id="text" translation_id="257306" type="use" value="Player of the Match" />
+			</widget>
+			<widget class="label" id="apmo" col="1" row="9" />
+
+			<!-- Clean Sheets -->
+			<widget class="label" col="0" row="10">
+				<translation id="text" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]" />
+			</widget>
+			<widget class="label" id="apcs" col="1" row="10" />
+
+			<!-- Average Rating (winner) -->
+			<widget class="label" col="0" row="11">
+				<translation id="text" translation_id="233158" type="use" value="Average Rating" />
+			</widget>
+			<widget class="label" id="apaw" col="1" row="11" />
+
+			<!-- Votes -->
+			<widget class="label" col="0" row="12">
+				<translation id="text" translation_id="258625" type="use" value="Voting Points" />
+			</widget>
+			<widget class="label" id="apvo" col="1" row="12" />
+
+			<!-- points (manager) -->
+			<widget class="label" col="0" row="13">
+				<translation id="text" translation_id="257305" type="use" value="Manager Points" />
+			</widget>
+			<widget class="label" id="apmp" col="1" row="13" />
+		</widget>
+	</container>
+
+</panel>

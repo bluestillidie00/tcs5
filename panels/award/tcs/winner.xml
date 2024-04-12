@@ -1,0 +1,36 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<!-- Right -->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-2, -3," gap="0" offset="2"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="spacer" />
+			<widget class="object_portrait_picture" id="rhgt" image_alignment="left" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+		</container>
+
+		<!-- Left -->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-5, -4" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="object_portrait_picture" id="left" image_alignment="right" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+			<widget class="spacer" />
+		</container>
+
+		<!-- Centre -->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -5, -1" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="spacer" />
+			<widget class="object_portrait_picture" id="pcen" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+			<widget class="spacer" />
+		</container>
+	</container>
+
+</panel>
