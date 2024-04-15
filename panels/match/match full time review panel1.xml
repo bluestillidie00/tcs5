@@ -1,4 +1,4 @@
-﻿<panel bkcl="red">
+﻿<panel>
 	<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
 
 	<container>
@@ -98,10 +98,10 @@
 							</widget>					
 							<widget class="text" id="stad" alignment="centre_x" spec="text" size="small" auto_size="vertical" />
 
-							<!-- INFO -->
-							<widget class="match_info_panel" file="match/match info overview popup" height="120">
-								<record id="object_property" set_property="objt" get_property="objt" />
-							</widget>
+										<!-- INFO -->
+								<widget class="match_info_panel" file="match/tcs/full time/overview" height="120">
+									<record id="object_property" set_property="objt" get_property="objt"/>
+								</widget>
 
 							<!-- DIVIDER -->
 							<widget class="horizontal_divider" height="1" />

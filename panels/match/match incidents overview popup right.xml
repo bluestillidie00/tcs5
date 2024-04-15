@@ -3,16 +3,16 @@
 	<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="4" offset="0" />
 
 <!-- CONTROLS SIZE OF LOGO/KIT -->
-		<container height="50" width="65" >
+		<container height="70" width="90" >
 <!-- If you only want either the kit or the logo rather than both delete the below line and then delete the lines for either the kit or logo-->	
 			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="4" />
 			<!-- Logo -->
 			<widget class="match_team_logo_picture" id="TeLo" image_alignment="right" scale_picture="true" keep_aspect_ratio="true" alignment="right">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" /> 
+					<layout class="stick_to_sides_attachment" alignment="all" inset="8" /> 
 			</widget>
 			<!-- Kit -->
 			<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="left" >
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,2,0" /> 
+					<layout class="stick_to_sides_attachment" alignment="all" inset="4" /> 
 			</widget>
 		</container>
 			

@@ -1,305 +1,301 @@
 ﻿<panel>
-	<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<layout class="stick_to_sides_attachment"/>
+
+	<container class="tcs_box">
+	</container>
 
 	<container>
-		<layout class="horizontal_arrange" horizontal_layout="-14,-15,-15"  horizontal_gap="8" />
 
-		<!-- MIDDLE -->
-		<container class="tcs_box" appearance="tcs/boxes/main/match/paper" draw_horizontal_dividers="trye">
-			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="16" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
 
-			<!-- TEAM STATS -->
-			<widget class="match_team_stats_panel" id="HMts" file="match/tcs/full time/tcs team stats" team_index="0" >
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</widget>
+		<container>
+			<layout class="horizontal_arrange" horizontal_layout="-14,-15,-15" horizontal_gap="8"/>
 
-			<container height="440" draw_vertical_dividers="true">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+			<!-- MIDDLE -->
+			<container class="tcs_box" appearance="tcs/boxes/main/match/paper" draw_horizontal_dividers="trye">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="16"/>
 
-				<record id="default_properties" team_index="0"/>
-
-				<!-- FORMATION -->
-				<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+				<!-- TEAM STATS -->
+				<widget class="match_team_stats_panel" id="HMts" file="match/tcs/full time/tcs team stats" team_index="0">
 					<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
+				</widget>
 
-				<!--HOME HEATMAP & PASSMAP-->
-				<container default_width="-1">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true"/>
+				<container height="440" draw_vertical_dividers="true">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
-					<widget class="preselected_match_chalkboard_panel" id="mhhm" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-10" />
-						<record id="object_property" get_property="objt" set_property="objt" />
+					<record id="default_properties" team_index="0"/>
 
-						<list id="chalkboard_events_to_display">
-							<integer value="42"/>  
-						</list>
-					</widget>
-
-					<container class="tcs_box" transparency="0.8">
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					<!-- FORMATION -->
+					<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 
-					<widget class="preselected_match_chalkboard_panel" id="mhpm" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-						<record id="object_property" get_property="objt" set_property="objt" />
+					<!--HOME HEATMAP & PASSMAP-->
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true"/>
 
-						<list id="chalkboard_events_to_display">
-							<integer value="63"/>  
-						</list>
-					</widget>
-
-				</container>
-			</container>
-		</container>
-		
-			<!-- MIDDLE -->
-		<container>
-			<layout class="vertical_arrange" vertical_layout="-10,-16" vertical_gap="8"/>
-
-			<!-- TOP -->
-			<container class="tcs_box" appearance="tcs/boxes/main/match/paper">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>				
-
-				<!-- STADIUM PIC -->
-	<container>
-					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-					<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture">
-						<record id="object_property" get_property="objt" set_property="objt"/>
-					</widget>
-				</container>
-
-				<container class="tcs_box" appearance="tcs/ro" rrep="bg" />
-
-				<!-- OVERLAY ON STADIUM PIC -->
-				<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.9" rrep="bg" />
-
-				<container>
-					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
-
-					<container class="main_box">
-						<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,0,0,0"/>
-
-						<!-- OVERVIEW -->
-						<container class="match_info_panel" info_panel_type="1" file="none">
-							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
-
+						<widget class="preselected_match_chalkboard_panel" id="mhhm" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false" enable_popup="false">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-10"/>
 							<record id="object_property" get_property="objt" set_property="objt"/>
 
-							<!-- COMP PICTURE -->
-							<widget class="object_portrait_picture" scale_picture="true" height="30" keep_aspect_ratio="true" image_alignment="centrre">
-								<record id="object_property" get_property="fxCo" set_property="objt"/>
-							</widget>
+							<list id="chalkboard_events_to_display">
+								<integer value="42"/>
+							</list>
+						</widget>
 
-							<!-- COMP -->
-							<widget class="fixture_name_text" auto_size="vertical" alignment="centre" font="title" colour="text">
-								<record id="object_property" get_property="FxNm"/>
-							</widget>					
-							<widget class="text" id="stad" alignment="centre_x" spec="text" size="small" auto_size="vertical" />
-
-							<!-- INFO -->
-							<widget class="match_info_panel" file="match/match info overview popup" height="120">
-								<record id="object_property" set_property="objt" get_property="objt" />
-							</widget>
-
-							<!-- DIVIDER -->
-							<widget class="horizontal_divider" height="1" />
-
-							<!-- INCIDENTS -->
-							<widget class="match_info_panel" file="match/match info overview popup scorers" id="mips">
-								<record id="object_property" set_property="objt" get_property="objt" />
-							</widget>
-
+						<container class="tcs_box" transparency="0.8">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 						</container>
-					</container>
 
-					<!-- BUTTONS ON THE BOTTOM -->
+						<widget class="preselected_match_chalkboard_panel" id="mhpm" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false" enable_popup="false">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+
+							<list id="chalkboard_events_to_display">
+								<integer value="63"/>
+							</list>
+						</widget>
+
+					</container>
+				</container>
+			</container>
+		
+			<!-- MIDDLE -->
+			<container>
+				<layout class="vertical_arrange" vertical_layout="-10,-16" vertical_gap="8"/>
+
+				<!-- TOP -->
+				<container class="tcs_box" appearance="tcs/boxes/main/match/paper">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!-- STADIUM PIC -->
 					<container>
-						<attachment_group class="vertical_arrange_autosize" />
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
+						<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</widget>
+					</container>
+
+					<container class="tcs_box" appearance="tcs/ro" rrep="full time stad"/>
+
+					<!-- OVERLAY ON STADIUM PIC -->
+					<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.9" rrep="bg"/>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+						<container class="main_box">
+							<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,0,0,0"/>
+
+							<!-- OVERVIEW -->
+							<container class="match_info_panel" info_panel_type="1" file="none">
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<!-- COMP PICTURE -->
+								<widget class="object_portrait_picture" scale_picture="true" height="30" keep_aspect_ratio="true" image_alignment="centrre">
+									<record id="object_property" get_property="fxCo" set_property="objt"/>
+								</widget>
+
+								<!-- COMP -->
+								<widget class="fixture_name_text" auto_size="vertical" alignment="centre" font="title" colour="text">
+									<record id="object_property" get_property="FxNm"/>
+								</widget>
+								<widget class="text" id="stad" alignment="centre_x" spec="text" size="small" auto_size="vertical"/>
+
+								<!-- INFO -->
+								<widget class="match_info_panel" file="match/tcs/full time/overview" height="120">
+									<record id="object_property" set_property="objt" get_property="objt"/>
+								</widget>
+
+								<!-- DIVIDER -->
+								<widget class="horizontal_divider" height="1"/>
+
+								<!-- INCIDENTS -->
+								<widget class="match_info_panel" file="match/match info overview popup scorers" id="mips">
+									<record id="object_property" set_property="objt" get_property="objt"/>
+								</widget>
+
+							</container>
+						</container>
+
+						<!-- BUTTONS ON THE BOTTOM -->
 						<container>
-							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="2" vertical_offset="0"/>
+							<attachment_group class="vertical_arrange_autosize"/>
 
-							<!-- ANALYTICAL DATA -->
-							<widget class="icon_button" auto_size="all" alignment="centre" click_event="AnDD" icon="icons/16px/stats" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/subtle/normal/button">
-								<string id="remove_if" value="platform_is_switch" />
-								<translation id="text" translation_id="515054" type="use" value="Analytical Data[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing key analytics data post-match]" />
-							</widget>
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="2" vertical_offset="0"/>
 
-							<!-- PLAYER STATISTICS -->
-							<widget class="icon_button" id="psbt" auto_size="all" alignment="centre" click_event="FpsD" icon="icons/16px/man" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/subtle/normal/button">
-								<translation id="text" translation_id="515058" type="use" value="Player Statistics[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing player statistics from the match just finished]" />
-							</widget>
-
-							<!-- AROUND THE GROUND -->
-							<widget class="icon_button" auto_size="all" alignment="centre" click_event="ScTD" icon="icons/16px/competition" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/subtle/normal/button">
-								<translation id="text" translation_id="513685" type="use" value="Latest Scores &amp; Table[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing latest scoreds from other matches and the live league table]" />
-							</widget>
-
-						</container>
-
-						<!-- SPACER -->
-						<container height="2" />
-
-					</container>
-				</container>
-			</container>
-
-			<!-- INFO -->
-			<container class="tcs_box" appearance="tcs/boxes/main/match/paper">
-				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-				<container class="tcs_tabs" save_session_state="true" save_default_state="true" default_item="mtst">
-
-
-
-					<!-- ANALYSIS -->
-					<container id="Data" >
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-						<translation id="title" type="use" value="Analysis" />
-
-						<container class="tcs_box"  id="mMat">
-							<attachment_group class="vertical_arrange" vertical_alignment="fill" horizontal_inset="60"/>
-
-							<!-- MOMENTUIM -->
-							<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="momentum" data_type="fixture" category="last_match" file="match/mustermann/match report/visualisation mini" show_mini_visualisation_text="false" can_pin_visualisation="false" default_focus="true" default_height="200">
-								<record id="object_property" get_property="objt" set_property="objt" />
-							</widget>
-
-							<!-- SHOT MAP -->
-							<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="xg_map" data_type="fixture" category="last_match" file="match/mustermann/match report/visualisation mini" show_mini_visualisation_text="false" can_pin_visualisation="false" default_focus="true" default_height="200">
-								<record id="object_property" get_property="objt" set_property="objt" />
-							</widget>
-
-						</container>
-					</container>
-
-					<!-- AS IT HAPPENED -->
-					<container id="NoEv">
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-						<translation id="title" type="use" value="As It Happened" />
-
-						<container class="tcs_box">
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-							<!-- AS IT HAPPENED -->
-							<container class="match_notable_events_panel" file="none" id="NEve">
-								<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
-
-								<record id="object_property" get_property="objt" set_property="objt"/>
-
-								<widget class="text" font="title" auto_size="vertical" alignment="centre" colour="title">
-									<translation id="text" translation_id="515063" type="use" value="Notable Events[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing notable events from the match; goals, cards etc]" />
+								<!-- ANALYTICAL DATA -->
+								<widget class="icon_button" auto_size="all" alignment="centre" click_event="AnDD" icon="icons/16px/stats" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/subtle/normal/button">
+									<string id="remove_if" value="platform_is_switch"/>
+									<translation id="text" translation_id="515054" type="use" value="Analytical Data[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing key analytics data post-match]"/>
 								</widget>
 
-								<widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true" >
-									<list id="column_widget_properties">
-										<record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false" />
-										<record index="1" icon_alignment="centre" navigation_focus_target="false" />
-										<record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false" />
-										<record index="3" icon_alignment="centre" navigation_focus_target="false" />
-										<record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false" />
-									</list>
-									<list id="column_table_properties">
-										<record index="0" id="homt" />
-										<record index="1" id="homi" />
-										<record index="2" id="time" />
-										<record index="3" id="awai" />
-										<record index="4" id="awat" />
-									</list>
+								<!-- PLAYER STATISTICS -->
+								<widget class="icon_button" id="psbt" auto_size="all" alignment="centre" click_event="FpsD" icon="icons/16px/man" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/subtle/normal/button">
+									<translation id="text" translation_id="515058" type="use" value="Player Statistics[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing player statistics from the match just finished]"/>
 								</widget>
 
 							</container>
-						</container>
-					</container>
 
-					<!-- MATCH STATS -->
-					<container id="mtst" >
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-						<translation id="title" type="use" value="Match Stats" />
-						
-				<container class="horizontal_split_container" starting_layout="-6, -3" save_session_state="true" save_default_state="true">
-
-							<container class="match_stats_panel" id="mtst">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</container>
-							
-							<!-- MOMENTUIM -->
-							<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="momentum" data_type="fixture" category="last_match" file="match/mustermann/match report/visualisation mini" show_mini_visualisation_text="false" can_pin_visualisation="false" default_focus="true" default_height="200">
-								<record id="object_property" get_property="objt" set_property="objt" />
-							</widget>
-						</container>
-					</container>
-
-					<!-- FEEDBACK -->
-					<container id="feed" >
-						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-						<translation id="title" type="use" value="Feedback" />
-
-						<container class="tcs_box" >
-							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-							<container class="match_feed_panel" id="Feed" file="match/match feed panel analysis">
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</container>
+							<!-- SPACER -->
+							<container height="2"/>
 
 						</container>
 					</container>
 				</container>
+
+				<!-- INFO -->
+				<container class="tcs_box" appearance="tcs/boxes/main/match/paper">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="tcs_tabs" save_session_state="true" save_default_state="true" default_item="mtst">
+
+
+
+						<!-- ANALYSIS -->
+						<container id="Data">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<translation id="title" type="use" value="Analysis"/>
+
+							<container class="tcs_box" id="mMat">
+								<attachment_group class="vertical_arrange" vertical_alignment="fill" horizontal_inset="60"/>
+
+								<!-- MOMENTUIM -->
+								<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="momentum" data_type="fixture" category="last_match" file="match/mustermann/match report/visualisation mini" show_mini_visualisation_text="false" can_pin_visualisation="false" default_focus="true" default_height="200">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</widget>
+
+								<!-- SHOT MAP -->
+								<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="xg_map" data_type="fixture" category="last_match" file="match/mustermann/match report/visualisation mini" show_mini_visualisation_text="false" can_pin_visualisation="false" default_focus="true" default_height="200">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</widget>
+
+							</container>
+						</container>
+
+						<!-- AS IT HAPPENED -->
+						<container id="NoEv">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<translation id="title" type="use" value="As It Happened"/>
+
+							<container class="tcs_box">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<!-- AS IT HAPPENED -->
+								<container class="match_notable_events_panel" file="none" id="NEve">
+									<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+
+									<record id="object_property" get_property="objt" set_property="objt"/>
+
+									<widget class="text" font="title" auto_size="vertical" alignment="centre" colour="title">
+										<translation id="text" translation_id="515063" type="use" value="Notable Events[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing notable events from the match; goals, cards etc]"/>
+									</widget>
+
+									<widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true">
+										<list id="column_widget_properties">
+											<record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false"/>
+											<record index="1" icon_alignment="centre" navigation_focus_target="false"/>
+											<record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false"/>
+											<record index="3" icon_alignment="centre" navigation_focus_target="false"/>
+											<record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false"/>
+										</list>
+										<list id="column_table_properties">
+											<record index="0" id="homt"/>
+											<record index="1" id="homi"/>
+											<record index="2" id="time"/>
+											<record index="3" id="awai"/>
+											<record index="4" id="awat"/>
+										</list>
+									</widget>
+
+								</container>
+							</container>
+						</container>
+
+						<!-- MATCH STATS -->
+						<container id="mtst">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<translation id="title" type="use" value="Match Stats"/>
+
+<container class="match_stats_panel" id="mtst">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>						
+						</container>
+
+						<!-- FEEDBACK -->
+						<container id="feed">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<translation id="title" type="use" value="Feedback"/>
+
+							<container class="tcs_box">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+								<container class="match_feed_panel" id="Feed" file="match/match feed panel analysis">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</container>
+
+							</container>
+						</container>
+					</container>
+				</container>
 			</container>
-		</container>
 
 	
 
-		<!-- RIGHT -->
-		<container class="tcs_box" appearance="tcs/boxes/main/match/paper" draw_horizontal_dividers="trye">
-			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="16" />
+			<!-- RIGHT -->
+			<container class="tcs_box" appearance="tcs/boxes/main/match/paper" draw_horizontal_dividers="trye">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="16"/>
 
-			<!-- TEAM STATS -->
-			<widget class="match_team_stats_panel" id="AMts" file="match/tcs/full time/tcs team stats" team_index="1" >
-				<record id="object_property" get_property="objt" set_property="objt"/>
-			</widget>
-
-			<container height="440" draw_vertical_dividers="true">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
-
-				<record id="default_properties" team_index="1"/>
-
-				<!-- FORMATION -->
-				<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+				<!-- TEAM STATS -->
+				<widget class="match_team_stats_panel" id="AMts" file="match/tcs/full time/tcs team stats" team_index="1">
 					<record id="object_property" get_property="objt" set_property="objt"/>
-				</container>
+				</widget>
 
-				<!--HOME HEATMAP & PASSMAP-->
-				<container default_width="-1">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true"/>
+				<container height="440" draw_vertical_dividers="true">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
 
-					<widget class="preselected_match_chalkboard_panel" id="mhhm" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-10" />
-						<record id="object_property" get_property="objt" set_property="objt" />
+					<record id="default_properties" team_index="1"/>
 
-						<list id="chalkboard_events_to_display">
-							<integer value="42"/>  
-						</list>
-					</widget>
-
-					<container class="tcs_box" transparency="0.8">
-						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					<!-- FORMATION -->
+					<container height="400" class="match_formation_panel" file="match/tcs/full time/formation">
+						<record id="object_property" get_property="objt" set_property="objt"/>
 					</container>
 
-					<widget class="preselected_match_chalkboard_panel" id="mhpm" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">			
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-						<record id="object_property" get_property="objt" set_property="objt" />
+					<!--HOME HEATMAP & PASSMAP-->
+					<container default_width="-1">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="-10" apply_to_children="true"/>
 
-						<list id="chalkboard_events_to_display">
-							<integer value="63"/>  
-						</list>
-					</widget>
+						<widget class="preselected_match_chalkboard_panel" id="mhhm" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false" wants_global_events="false" enable_popup="false">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-10"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
 
+							<list id="chalkboard_events_to_display">
+								<integer value="42"/>
+							</list>
+						</widget>
+
+						<container class="tcs_box" transparency="0.8">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+						</container>
+
+						<widget class="preselected_match_chalkboard_panel" id="mhpm" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false" wants_global_events="false" enable_popup="false">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+							<record id="object_property" get_property="objt" set_property="objt"/>
+
+							<list id="chalkboard_events_to_display">
+								<integer value="63"/>
+							</list>
+						</widget>
+
+					</container>
 				</container>
 			</container>
-		</container>
 
+		</container>
 	</container>
 
 </panel>

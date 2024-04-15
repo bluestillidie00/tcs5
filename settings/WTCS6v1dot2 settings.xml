@@ -98,5 +98,7 @@
 	<colour name="bar_defend_border"															value="mustermann5"/>
 	<colour name="bar_possess"																	value="gimn2"/>
 	<colour name="bar_possess_border"															value="gimn1"/>
+	
+	<colour name="full time stad" value="rgb(40,40,40)"/> <!-- #282828 --> 
 
 </properties>
