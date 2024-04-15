@@ -150,11 +150,15 @@
 				<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
 			</widget>
 
-			<widget class="table" id="tpro" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
-				<list id="column_table_properties">
-					<record index="0" sort_ascending="false"/>
-				</list>
-			</widget>
+		<container class="scrolling_box">
+						<container id="mprT">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="fit_children_attachment" alignment="vertical,fill"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+							<integer id="size" value="20"/>
+							<record id="default_properties" multiline="true" colour="white"/>
+						</container>
+					</container>
 
 			<widget class="text" id="nPro" auto_size="vertical" colour ="faded text" multiline="true" hidden="true"/>
 		</container>
@@ -165,11 +169,15 @@
 				<translation id="text" translation_id="361094" type="use" value="Pros[COMMENT: FR 8316 ]" />
 			</widget>
 
-			<widget class="table" id="tcon" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" default_sort_column="0">
-				<list id="column_table_properties">
-					<record index="0" sort_ascending="false"/>
-				</list>
-			</widget>
+		<container class="scrolling_box">
+						<container id="mcoT">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="fit_children_attachment" alignment="vertical,fill"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+							<integer id="size" value="20"/>
+							<record id="default_properties" multiline="true" colour="white"/>
+						</container>
+					</container>
 
 			<widget class="text" id="nCon" auto_size="vertical" colour ="faded text" multiline="true" hidden="true"/>
 		</container>
