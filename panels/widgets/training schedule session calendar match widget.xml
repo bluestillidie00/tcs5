@@ -3,7 +3,9 @@
 
 	<container bkcl="primary">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-
+		
+							<container class="main_box" appearance="tcs/boxes/playerstats/paper" grep="secondary" />
+			
 		<!-- BACKGROUND LOGO -->
 		<!-- DIFFERENT CLASS CONTAINER USED TO BE ABLE TO ROTATE THE LOGO -->
 		<container class="transformation_container">
@@ -18,8 +20,9 @@
 			<!-- TEAM LOGO -->
 			<widget class="object_portrait_picture" id="matP" image_alignment="centre" keep_aspect_ratio="true"  scale_picture="true" transparency="1">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="-50"/>
-			</widget>
-
+			</widget> 
+	
+			
 			<!-- ADDS SLIGHT OVERLAY TO LOGO -->
 			<widget class="picture" file="photos/dynamic/press conference/lighting" scale_picture="false" keep_aspect_ratio="false" height="160" width="300" image_alignment="top" transparency="0.8">
 				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="50" />
