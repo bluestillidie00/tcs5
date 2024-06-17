@@ -11,10 +11,17 @@
 			<container class="scrolling_box" priority="1" minimum_width="600">
 				<container>
 					<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
-		
+					
+					<container height="450">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 					<!--PIZZA OVERLAY-->
-					<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance pizza" id="mmpo" height="450">
-						<record id="object_property" get_property="objt" set_property="objt"/>
+					<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance pizza_outfield" id="mmpo" height="450">
+						<record id="object_property" get_property="Pigo" set_property="hidn"/>
+					</container>
+					
+					<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance pizza_gk" id="mmpo" height="450">
+						<record id="object_property" get_property="Pigo" set_property="Shwn"/>
+					</container>
 					</container>
 				
 					<!--PIZZA OVERLAY-->

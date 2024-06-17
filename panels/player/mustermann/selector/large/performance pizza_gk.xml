@@ -1,0 +1,341 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="tcs_box">
+		<attachment class="horizontal_arrange" horizontal_layout="-1,26" horizontal_gap="8"/>
+
+		<!--PIZZA CHART-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<!--GOALKEEPER-->
+			<container id="pcgk" >
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<!--STATISTICS & KEY-->
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+
+					<container default_height="34"/>				
+					<container class="horizontal_adaptive_container" gap="5" mode="distribute_equally" default_height="40">
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="right,top" colour="text">
+								<translation id="text" type="use" translation_id="316588" value="" />
+							</widget>
+
+							<widget class="dashed_number_label" colour="text" alignment="right,bottom">
+								<record id="object_property" get_property="POs9"/>
+							</widget>
+
+						</container>
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_keeper" scale_picture="false" image_alignment="centre" default_width="16"/>			
+
+						<container default_width="104"/>			
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_keeper" scale_picture="false" image_alignment="centre" default_width="16"/>
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="left,top" colour="text">
+								<translation id="text" type="use" translation_id="534930" value="" />
+							</widget>
+
+							<widget class="dashed_number_label" colour="text" alignment="left,bottom">
+								<record id="object_property" get_property="Pxg9"/>
+							</widget>
+
+						</container>
+
+					</container>				
+					<container default_height="54"/>				
+					<container class="horizontal_adaptive_container" gap="5" mode="distribute_equally" default_height="40">
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="right,top" colour="text">
+								<translation id="text" type="use" translation_id="257313" value="" />
+							</widget>
+
+							<widget class="dashed_number_label" colour="text" alignment="right,bottom">
+								<record id="object_property" get_property="POcg"/>
+							</widget>
+
+						</container>
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_keeper" scale_picture="false" image_alignment="centre" default_width="16"/>
+
+						<container default_width="288"/>
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_keeper" scale_picture="false" image_alignment="centre" default_width="16"/>
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="left,top" colour="text">
+								<translation id="text" type="use" translation_id="249453" value="" />
+							</widget>
+
+							<widget class="dashed_number_label" colour="text" alignment="left,bottom">
+								<record id="object_property" get_property="POg9"/>
+							</widget>
+
+						</container>
+
+					</container>
+					<container default_height="90"/>				
+					<container class="horizontal_adaptive_container" gap="5" mode="distribute_equally" default_height="40">
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="right,top" colour="text">
+								<translation id="text" type="use" translation_id="557894" value="" />
+							</widget>
+
+							<widget class="dashed_number_label" colour="text" alignment="right,bottom">
+								<record id="object_property" get_property="PGR9"/>
+							</widget>
+
+						</container>
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_possess" scale_picture="false" image_alignment="centre" default_width="16"/>
+
+						<container default_width="288"/>
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_possess" scale_picture="false" image_alignment="centre" default_width="16"/>
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="left,top" colour="text">
+								<translation id="text" type="use" translation_id="513437" value="" />
+							</widget>
+
+							<widget class="dashed_number_label" colour="text" alignment="left,bottom">
+								<record id="object_property" get_property="POW9"/>
+							</widget>
+
+						</container>
+
+					</container>
+					<container default_height="54"/>				
+					<container class="horizontal_adaptive_container" gap="5" mode="distribute_equally" default_height="40">
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="right,top" colour="text">
+								<translation id="text" type="use" translation_id="513512" value="" />
+							</widget>
+
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,45"/>
+
+								<widget class="dashed_record_percentage_label" colour="faded text" alignment="right,bottom">
+									<record id="object_property" get_property="Popa"/>
+								</widget>
+
+								<widget class="dashed_number_label" colour="text" alignment="right,bottom">
+									<record id="object_property" get_property="POpc"/>
+								</widget>
+							</container>
+
+						</container>
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_possess" scale_picture="false" image_alignment="centre" default_width="16"/>
+
+						<container default_width="104"/>
+
+						<widget class="picture" file="mustermann/attributes/good" red_replacement="pizza_possess" scale_picture="false" image_alignment="centre" default_width="16"/>
+
+						<container default_width="-1">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<widget class="label" font="text" alignment="left,top" colour="text">
+								<translation id="text" type="use" translation_id="513436" value="" />
+							</widget>
+
+							<widget class="dashed_number_label" colour="text" alignment="left,bottom">
+								<record id="object_property" get_property="POL9"/>
+							</widget>
+
+						</container>
+
+					</container>
+
+					<container default_height="-1" minimum_height="1"/>
+
+				</container>
+
+
+				<!--PIZZA-->
+				<container class="vertical_adaptive_container" gap="0" mode="distribute_equally">
+
+					<container default_height="-1" minimum_height="1"/>
+
+					<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally" default_height="300">
+
+						<container default_width="-1" minimum_width="1"/>
+
+						<container default_width="300">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_xgp">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+										<record id="object_property" get_property="Pxg9"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.05" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_cln">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>							
+										<record id="object_property" get_property="POg9"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.1" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_posswon">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+										<record id="object_property" get_property="POW9"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.15" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300" >
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_posslost">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+										<record id="object_property" get_property="POL9"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300" >
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_passes">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+										<record id="object_property" get_property="POpc"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.25" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300" >
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_prgpasses">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+										<record id="object_property" get_property="PGR9"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.3" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_con">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+										<record id="object_property" get_property="POcg"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<animation class="scale_animation" start_value="0" end_value="1" duration="0.3" delay="0.35" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" tween="ease_in"/>
+								<container height="300" width="300">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+									<widget class="pizza_goalkeeper_save">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>	
+										<record id="object_property" get_property="POs9"/>
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<container height="50" width="50">
+									<layout class="stick_to_sides_attachment" alignment="bottom" inset="125"/>
+									<layout class="stick_to_sides_attachment" alignment="left" inset="125"/>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<widget class="picture" file="mustermann/pizza/hole" red_replacement="bg" scale_picture="false" image_alignment="centre">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+									</widget>
+
+									<widget class="picture" file="icons/48px/grade_scout" red_replacement="tcs_accent" scale_picture="false" image_alignment="centre">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+									</widget>
+
+								</container>
+							</container>
+
+							<container>
+								<container height="50" width="50">
+									<layout class="stick_to_sides_attachment" alignment="bottom" inset="125"/>
+									<layout class="stick_to_sides_attachment" alignment="left" inset="125"/>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<widget class="label" font="title" colour="title" size="10" alignment="centre_x,centre_y">
+										<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+										<translation id="text" type="use" translation_id="229432" value="GK" />
+									</widget>
+
+								</container>
+							</container>
+
+						</container>			
+
+						<container default_width="-1" minimum_width="1"/>
+
+					</container>
+
+					<container default_height="-1" minimum_height="1"/>
+
+				</container>
+
+			</container>
+
+			<!--GRAPH UNDERLAY-->
+			<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally" default_width="-2">
+
+				<container default_width="-1" minimum_width="1"/>
+				<widget class="picture" file="mustermann/pizza/keeper_overlay" red_replacement="fg darker" scale_picture="false" image_alignment="centre_x,centre_y" width="300"/>							
+				<container default_width="-1" minimum_width="1"/>
+
+			</container>
+		</container>
+
+<container />
+	
+	</container>
+</panel>
+
