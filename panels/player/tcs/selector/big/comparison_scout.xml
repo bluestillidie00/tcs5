@@ -1,0 +1,178 @@
+<panel>
+	<!-- BACKGROUND FOR CURRENT PLAYER -->
+	<flags id="cham" value="tables/custom/league/champions/row" />
+
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="use_pro_con_long_strings" value="true"/>
+
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<string id="skin_style" value="title link"/>
+
+		<!-- Header -->
+		<widget class="link_button" section="Ptac" auto_size="all" navigation_focus_target="false">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			<translation id="text" translation_id="420686" type="use" />		
+		</widget>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<!-- No scout report -->
+		<container id="nsrc" class="main_box">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+
+			<container id="nocs" height="96">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<!--explanatory text-->
+				<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+				</widget>
+				<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+					<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+					<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+				</widget>
+			</container>
+
+			<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</widget>
+		</container>
+
+		<!-- Already being scounted -->
+		<container id="Arbs" class="main_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+				<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+			</widget>
+		</container>
+
+		<!-- Already being scouted by pool -->
+		<container id="Pool" class="main_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" colour="attention">
+				<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+			</widget>
+		</container>
+
+		<container id="scou" class="vertical_adaptive_container">
+
+			<container id="sqdC" priority="1" minimum_height="170" default_height="-1">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+
+				<!-- <widget class="text" id="sqcw" font="title" size="medium" auto_size="vertical"/> -->
+
+				<!-- Ability list table -->
+				<widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="26,-5,-3,-3">
+					<list id="column_widget_properties">
+						<record indx="0" alignment="centre_x,centre_y" colour="faded text" />
+						<record indx="1" alignment="centre_x,centre_y" />
+						<record indx="2" alignment="centre_x,centre_y" navigation_focus_target="false" />
+						<record indx="3" alignment="centre_x,centre_y" navigation_focus_target="false" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="true" left="5" />
+						<record indx="1" sort_disabled="true" >
+							<record id="column_heading">
+								<flags id="alignment" value="centre_x,centre_y" />
+								<translation id="text" translation_id="227966" type="use" value="Player" />
+							</record>
+						</record>
+						<record indx="2" sort_disabled="true" >
+							<record id="column_heading">
+								<flags id="alignment" value="centre_x,centre_y" />
+								<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]" />
+								<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]" />
+							</record>
+						</record>
+						<record indx="3" sort_disabled="true" >
+							<record id="column_heading">
+								<flags id="alignment" value="centre_x,centre_y" />
+								<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]"/>
+								<translation id="hint" translation_id="310136" type="use" value="Potential Ability[COMMENT: contract offer screen - comments table]" />
+							</record>
+						</record>
+					</list>
+				</widget>
+			</container>
+
+			<!-- TOM TODO: USE FILE="none" TRICK TO MOVE DIVIDER INTO THE PPI BELOW -->
+			<!-- DONE 22/03/22 23:09 -->
+			<!-- <widget class="horizontal_subtle_divider" default_height="2" priority="3"/> -->
+
+			<!-- TOM TODO: ADD ACCENT BOX -->
+			<widget class="player_positions_indicator_panel" id="ppos" default_height="70" file="none" priority="2" save_session_state="true">
+				<string id="remove_if" value="use_simplified_scouting"/>
+				<record id="object_property" get_property="objt" set_property="objt" />
+
+				<layout class="vertical_arrange" vertical_layout="2,-1" vertical_gap="32" />
+
+				<widget class="horizontal_subtle_divider" />
+
+				<container class="main_box_no_margin">
+					<layout class="arrange_horizontal_attachment" layout="-1,40" offset="0" gap="12" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<container>
+							<layout class="arrange_horizontal_attachment" layout="-1, 20" offset="12" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+								<widget class="text" id="sltP" size="xlarge" height="25" font="title" colour="accent"/>
+
+								<container>
+									<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="5"/>
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="5"/>
+									<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+									<widget class="text" auto_size="all" colour="faded text" alignment="left, centre_y">
+										<translation id="text" translation_id="383263" type="use" value="Best Role[COMMENT - person list view column heading - abbreviation of Best Role - an opinion of the best role for this player]" />
+									</widget>
+
+									<widget class="info_icon_hint_text" id="hnt1" width="20" height="18" />
+
+									<widget class="text" id="roL1" auto_size="vertical" multiline="false" colour="text" alignment="left, centre_y"/>
+								</container>
+							</container>
+
+							<widget class="position_popup" id="posm" height="20" short_position_string="false" fixed="true" text="" show_button_appearance="false" display_compound_positions="false" alignment="left" sele="PosS" skip_no_position_string="true">
+								<layout class="stick_to_sides_attachment" alignment="right" inset="4" />
+							</widget>
+						</container>
+					</container>
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<!-- Pitch -->
+						<widget class="player_basic_positions_indicator_widget" id="pbip">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+						<widget class="pitch_with_player_positions" id="ppip" hidden="true" wants_mouse_events="false" />
+					</container>
+				</container>
+			</widget>
+		</container>
+	</container>
+	
+</panel>
