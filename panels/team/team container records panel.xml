@@ -1,0 +1,38 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8,0,0,0"/>
+
+	<container class="tcs_box" id="trtb" force_title_borders="true">
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+		<!-- buttons area -->
+		<container embed_in_frame="true" >
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="labl"/>
+			<widget class="view_menu_popup" id="view" />
+		</container>
+
+		<!-- text explaining that some records are only valid since the game start date -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right"/>
+
+			<widget class="label" id="rvlb" embed_in_frame="true" auto_size="horizontal" alignment="right,centre_y" spec="text" colour="text"/>
+		</container>
+
+		<!--for competitions/cup history, landmarks, league positions, attendances, results, sequences, players, transfers-->
+		<widget class="table" id="tabl" layout="120,-1" mode="fill_rows,stripe_rows" auto_size_rows="true" fixed_size_rows="false" save_session_state="true" row_spacing="2">
+			<list id="column_table_properties">
+				<record indx="0" left="4" sort_disabled="true" />
+				<record indx="1" top="0" sort_disabled="true" alignment="left,centre_y"/>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" spec="text" />
+				<record index="1" alignment="left,centre_y" spec="text" colour="text" />
+			</list>
+		</widget>
+
+	</container>
+</panel>
