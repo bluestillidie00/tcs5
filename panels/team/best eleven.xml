@@ -1,0 +1,77 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/normal" />
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/row/substitute/row" />
+
+	<!-- divider row appearance -->
+	<flags id="divider_appearance" value="tables/standard/divider/row" />
+
+	<container class="inner_box" id="titl">
+        <attachment_group class="vertical_arrange" vertical_layout="30, -1" horizontal_gap="0" />
+
+		<!-- embedded view menu -->
+		<container id="btns" navigation_container="true" default_focus="true">
+                <attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+
+			<!-- seasons popup -->
+			<widget class="embedded_season_selection_list" id="sesl" width="200" sele="sels" height="30" />
+		</container>
+        
+        <container>
+        <attachment_group class="horizontal_arrange" horizontal_layout="-12, -8" horizontal_gap="8" />
+		<container class="tcs_box">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="client_object_list_table" id="awsl" sort_disabled="true" always_use_latest_object_list="true" should_force_refresh="true" navigation_container="true">
+				<integer id="contextual_handler_column_id" value="Pnms" />
+				<list id="viewed_property_ids">
+					<integer value="Pers" />
+					<integer value="PNat" />
+					<integer value="Pbep" />
+					<integer value="Pbea" />
+					<integer value="Pbeg" />
+					<integer value="Pbav" />
+				</list>
+			</widget>
+
+			<container navigation_container="true">
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="bottom" apply_to_children="true" inset="5" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="5" />
+
+				<widget class="icon_button" auto_size="horizontal" height="30" click_event="ecwn" controller_button="y_button">
+					<translation id="text" translation_id="275840" type="use" value="Where Are They Now?" />
+				</widget>
+			</container>
+
+		</container>
+
+			<container class="main_contrast_box_no_margin" rrep="pitch_box_background" appearance="boxes/main/contrast/top/paper">
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<widget class="pitch_with_tactics" id="attp" icon_flags="show_name,use_player_kits_back" player_icon_file="tactics/tcs/icons/best eleven"  navigation_container="true">
+			<boolean id="vertical" value="true"/>
+			<boolean id="pitch_is_read_only" value="true" />
+			<integer id="pitch_vertical_padding" value="0" />
+				<string id="pitch_draw_grass" value="true"/>
+			<string id="pitch_base_appearance" value=""/>
+			<string id="pitch_pattern" value="ui circles"/>
+		</widget>
+    </container>
+    </container>
+	</container>
+
+	<!-- panel for no data available-->
+	<container class="empty_state" id="nb11" header_widget="BShe" navigation_container="true" default_focus="true">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+		</widget>
+	</container>
+
+</panel>

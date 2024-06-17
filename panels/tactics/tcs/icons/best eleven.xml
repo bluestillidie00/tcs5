@@ -1,0 +1,82 @@
+<panel width="75" height="74" use_hit_mask="true">
+  <flags id="selected_appearance" value=""/>
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+<container>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="-8"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <container>
+	  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+	  <widget class="tactics_kit_picture" id="kitp">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+    </widget>
+
+    <!--containers for the indicators-->
+    <!--injury/red/yellow card -->
+    <container class="inner_box_no_margin" id="inji" width="20" height="20" icon_alignment="left,top" >
+      <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="9"/>
+    </container>
+
+    <!--captain icon-->
+    <widget class="picture" id="capi" scale_picture="true" file="icons/16px/captain" width="14" height="14">
+      <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="9"/>
+    </widget>
+  </container>
+  
+
+  <container height="45">
+     <layout class="arrange_vertical_attachment" layout="25,-1" offset="0" gap="0" />
+     <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  
+    <container class="main_contrast_box_no_margin" id="bcIM" red_replacement="teal 900" height="25">
+     <layout class="arrange_vertical_attachment" layout="24,-1" offset="0" gap="0"/>
+     <layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
+
+    <!--name-->
+  	<widget class="player_picker_button" id="plPB"  file="widgets/player selection button tactics" draggable="false"  format="[%person#1-surname]">
+  	</widget>
+  	
+  </container>
+  	
+  	<!--name-->
+    <widget class="position_label" id="Ppos" colour="faded white" size="small" alignment="centre_x,top" navigation_focus_target="false">
+    </widget>
+    
+    </container>
+    
+
+
+  <!--debug role/duty-->
+  <container id="rodu" height="10">
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+    <layout class="centre_in_parent_attachment" alignment="horizontal" />
+    <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4"/>
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <widget class="tactical_role_label" id="role" abbt="true" size="8" colour="black" auto_size="horizontal"/>
+    <widget class="label" size="8" colour="faded white" auto_size="horizontal">
+      <translation id="text" translation_id="233089" type="use" value="-" />
+    </widget>
+    <widget class="tactical_role_label" id="duty" abbt="true" size="8" colour="black" auto_size="horizontal"/>
+  </container>
+  </container>
+  
+  	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="32" apply_to_children="true"/>
+
+		<!-- PLAYER PICTURE -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" wants_mouse_events="false" image_alignment="centre_x">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="45"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="4"/>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+	</container>
+</panel>
