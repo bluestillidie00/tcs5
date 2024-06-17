@@ -29,9 +29,9 @@
 			<widget class="label" id="PPs:" auto_size="vertical" style="semi_bold" >
 				<record id="object_property" get_property="PPst" name="true"/>
 			</widget>
-			<widget class="personality_label" id="PPst" auto_size="vertical" >
-				<record id="object_property" get_property="PPst"/>
-			</widget>
+			<widget class="client_object_viewer_xml_panel" id="PPst" auto_size="vertical" file="player/tcs/personality_colour"  >
+<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>	
 			<widget class="player_description_text" id="Pdes" auto_size="vertical" size="small" colour="faded text" alignment="left,can_scale">
 				<record id="object_property" get_property="Pdes"/>
 			</widget>
