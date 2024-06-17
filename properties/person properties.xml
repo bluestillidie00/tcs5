@@ -13623,8 +13623,8 @@
 			<translation id="category" translation_id="248359" type="use" value="General"/>
 			<integer id="auto_hide_priority" value="98"/>
 			<record id="widget_info">
-				<symbol id="class" value="personality_label"/>
-				<flags id="multiline" value="false"/>
+				<symbol id="class" value="client_object_viewer_xml_panel"/>
+				<string id="file" value="player/tcs/personality_colour"/>
 			</record>
 			<record id="column_widget_properties">
 				<flags id="alignment" value="left,centre_y"/>

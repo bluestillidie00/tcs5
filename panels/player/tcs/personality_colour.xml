@@ -1,0 +1,82 @@
+<panel height="20">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<record id="default_properties" alignment="left,centre_y" />
+
+	<!-- VERY BAD PERSONLIATY -->
+	<widget class="formatted_label" colour="fg red darker">
+		<record id="object_property" get_property="PPst"/>
+		<list id="format">
+			<record value="3" format="Temperamental"/>
+			<record value="7" format="Slack"/>
+			<record value="8" format="Casual"/>
+			<record value="16" format="Easily Discouraged"/>
+			<record value="17" format="Low Determination"/>
+			<record value="31" format="Jovial"/>
+		</list>
+	</widget>
+
+	<!-- BAD PERSONLIATY -->
+	<widget class="formatted_label" colour="fg red">
+		<record id="object_property" get_property="PPst"/>
+		<list id="format">
+			<record value="11" format="Unambitious"/>
+			<record value="12" format="Honest"/>
+			<record value="13" format="Sporting"/>
+			<record value="24" format="Spineless"/>
+			<record value="25" format="Low Self Belief"/>
+		</list>
+	</widget>
+
+	<!-- BALANCED PERSONLIATY -->
+	<widget class="formatted_label" colour="fg">
+		<record id="object_property" get_property="PPst"/>
+		<list id="format">
+			<record value="4" format="Balanced"/>
+			<record value="9" format="Very Ambitious"/>
+			<record value="14" format="Unsporting"/>
+			<record value="15" format="Realist"/>
+			<record value="18" format="Very Loyal"/>
+			<record value="19" format="Loyal"/>
+			<record value="20" format="Mercenary"/>
+			<record value="21" format="Fickle*"/>
+			<record value="27" format="Charismatic Leader"/>
+			<record value="28" format="Leader*"/>
+			<record value="30" format="Light Hearted"/>
+			<record value="36" format="Fairly Ambitious"/>
+			<record value="37" format="Fairly Loyal"/>
+			<record value="38" format="Fairly Sporting"/>
+			<!-- <record value="N/A" format="Devoted"/> -->
+
+		</list>
+	</widget>
+
+	<!-- GOOD PERSONLIATY -->
+	<widget class="formatted_label" colour="fg green">
+		<record id="object_property" get_property="PPst"/>
+		<list id="format">
+			<record value="2" format="Determined"/>
+			<record value="10" format="Ambitious"/>
+			<record value="22" format="Iron Willed"/>
+			<record value="23" format="Resilient"/>
+			<record value="32" format="Spirited"/>
+			<record value="34" format="Fairly Determined"/>
+			<record value="35" format="Fairly Professional"/>
+		</list>
+	</widget>
+			
+	<!-- VERY GOD PERSONLIATY -->
+	<widget class="formatted_label" colour="pro high">
+		<record id="object_property" get_property="PPst"/>
+		<list id="format">
+			<record value="1" format="Professional"/>
+			<record value="5" format="Model Professional"/>
+			<record value="6" format="Driven"/>
+			<record value="26" format="Born Leader"/>
+			<record value="33" format="Resolute"/>
+			<record value="39" format="Perfectionist"/>
+			<record value="40" format="Model Citizen"/>
+		</list>
+	</widget>
+
+</panel>
