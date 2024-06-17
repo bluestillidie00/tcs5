@@ -227,7 +227,7 @@
 								</container>						
 						</container>
 
-						<!-- FEEDBACK -->
+						<!-- FEEDBACK 
 						<container id="feed">
 							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 							<translation id="title" type="use" value="Feedback"/>
@@ -237,9 +237,8 @@
 								<container class="match_feed_panel" id="Feed" file="match/match feed panel analysis">
 									<record id="object_property" get_property="objt" set_property="objt"/>
 								</container>
-
-							</container>
-						</container>
+							</container> 
+						</container> --> 
 					</container>
 				</container>
 			</container>
