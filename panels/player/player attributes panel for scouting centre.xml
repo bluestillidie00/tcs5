@@ -1,0 +1,138 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" layout="-3, -1" offset="0" gap="15"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 50, 30" row_height="20" row_spacing="0" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="8" top="0">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" size="small"/>
+			</record>
+			<!-- Attribute value -->
+			<record index="1" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" alignment="right,centre_y" style="semi_bold" multiline="false"/>
+			</record>
+			<!-- Attribute edit widget -->
+			<record index="2" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+
+		<!-- Technical Table -->
+		<widget class="table" id="pltt" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+					<translation id="text" translation_id="229413" type="use" value="Technical"/>
+				</record>
+			</list>
+		</widget>
+		<!-- Goalkeeping Table -->
+		<widget class="table" id="plgk" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+					<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+				</record>
+			</list>
+		</widget>
+		<!-- Mental Table -->
+		<widget class="table" id="plmt" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+					<translation id="text" translation_id="230106" type="use" value="Mental"/>
+				</record>
+			</list>
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Physical Table -->
+				<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+							<translation id="text" translation_id="230003" type="use" value="Physical"/>
+						</record>
+					</list>
+				</widget>
+
+				<!-- Extra technical table for GK -->
+				<widget class="table" id="plgt" layout="-1" auto_size="vertical">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" font="title" colour="accent">
+							<translation id="text" translation_id="229413" type="use" value="Technical"/>
+						</record>
+					</list>
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Separator -->
+				<widget class="horizontal_divider" />
+
+				<!-- Additional attributes table -->
+				<container class="client_object_viewer_xml_panel" id="attT">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="table" layout="80, -1" mode="fill_rows, printable" row_height="22" row_spacing="0">
+						<list id="column_table_properties">
+							<record index="0" left="8" sort_disabled="true"/>
+							<record index="1" right="8" sort_disabled="true"/>
+						</list>
+
+						<!-- Height-->
+						<widget class="label" row="0" column="0">
+							<record id="object_property" get_property="Phei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Phei" row="0" column="1" style="semi_bold">
+							<record id="object_property" get_property="Phei"/>
+							<record id="widget_properties" alignment="right,centre_y" />
+						</widget>
+						<!-- Weight-->
+						<widget class="label" row="1" column="0" >
+							<record id="object_property" get_property="Pwei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Pwei" row="1" column="1" style="semi_bold">
+							<record id="object_property" get_property="Pwei"/>
+							<record id="widget_properties" alignment="right,centre_y" />
+						</widget>
+						<!-- Weight-->
+							<!-- Weight-->
+						<widget class="label" row="2" column="0" >
+							<record id="object_property" get_property="PPst" name="true"/>
+						</widget>
+						<widget class="client_object_viewer_xml_panel" id="PPst" row="2" column="1" file="player/tcs/personality_colour_scouting" >
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<record id="widget_properties" alignment="right,centre_y" />
+						</widget>
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- More attribute stuff
+	<container class="client_object_viewer_xml_panel" id="atT2" file="player/player additional attributes panel">
+		<layout class="show_medium_horizontal" />
+	</container>-->
+</panel>
