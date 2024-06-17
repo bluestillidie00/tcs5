@@ -105,7 +105,7 @@
 						<translation id="text" value="TCS Schedule View" type="use"/>
 						<record id="view">
 							<record id="fxdt"  alignment="centre" width="100"/>
-							<string id="FxNm"/>
+							<string id="FxNm" width="140"/>
 							<string id="stad" />
 							<string id="FxTV"/>
 							<record id="home" alignment="left,centre_y" icon_alignment="right" icon_enabled="false" width="130"/>
