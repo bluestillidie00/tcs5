@@ -1,0 +1,292 @@
+<panel class="client_object_viewer_xml_panel" id="PlEd">
+    <attachment_group class="vertical_arrange_autosize"/>
+
+    <container class="tabbed_container" default_item="cnt0" height="500">
+
+        <container id="cnt0">
+            <translation id="title" translation_id="248359" type="use" value="General" />
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+            <widget class="client_object_label_value_table" id="edtb" edit_mode="true">
+                <boolean id="should_force_refresh" value="true" />
+
+                <record id="table_properties" auto_size="none">
+                    <flags id="mode" value="fill_rows, stripe_rows, printable" />
+                    <boolean id="auto_size_rows" value="true" />
+                    <boolean id="fixed_size_rows" value="false" />
+                    <string id="layout" value="-3,-4" />
+                    <integer id="row_spacing" value="0" />
+                    <list id="column_widget_properties">
+                        <record indx="0" alignment="left,centre_y" />
+                        <record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+                    </list>
+
+                    <list id="column_table_properties">
+                        <record indx="0">
+                            <integer id="left" value="8" />
+                        </record>
+                        <record indx="1">
+                            <flags id="alignment" value="left,centre_y" />
+                            <integer id="top" value="2" />
+                            <integer id="bottom" value="2" />
+                        </record>
+                    </list>
+                </record>
+
+                <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                    <integer id="set_property" value="objt" />
+                </record>
+
+                <list id="viewed_property_ids">
+                    <integer value="PCAB" />
+                    <integer value="ERCA" />
+                    <integer value="PPAB" />
+                    <integer value="PCRP" />
+                    <integer value="PHRP" />
+                    <integer value="PWRP" />
+                    <integer value="Pada" />
+                    <integer value="Pamb" />
+                    <integer value="Ploy" />
+                    <integer value="Ppre" />
+                    <integer value="Ppro" />
+                    <integer value="Pspo" />
+                    <integer value="Ptem" />
+                    <integer value="Pcvy" />
+                    <integer value="PCON" />
+                    <integer value="Pdir" />
+                    <integer value="Pimp" />
+                    <integer value="Pipr" />
+                    <integer value="Pver" />
+                    <integer value="Phei" />
+                    <integer value="Pwei" />
+                </list>
+            </widget>
+        </container>
+
+        <container id="cnt5">
+            <translation id="title" translation_id="247571" type="use" value="Fitness" />
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+            <widget class="client_object_label_value_table" id="fitb" edit_mode="true">
+                <record id="table_properties" auto_size="none">
+                    <flags id="mode" value="fill_rows, stripe_rows, printable" />
+                    <boolean id="auto_size_rows" value="true" />
+                    <boolean id="fixed_size_rows" value="false" />
+                    <string id="layout" value="-3,-4" />
+                    <integer id="row_spacing" value="0" />
+                    <list id="column_widget_properties">
+                        <record indx="0" alignment="left,centre_y" />
+                        <record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+                    </list>
+
+                    <list id="column_table_properties">
+                        <record indx="0">
+                            <integer id="left" value="8" />
+                        </record>
+                        <record indx="1">
+                            <flags id="alignment" value="left,centre_y" />
+                            <integer id="top" value="2" />
+                            <integer id="bottom" value="2" />
+                        </record>
+                    </list>
+                </record>
+
+                <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                    <integer id="set_property" value="objt" />
+                </record>
+
+                <list id="viewed_property_ids">
+                    <integer value="Pcon" />
+                    <integer value="Pfit" />
+                    <integer value="Pjad" />
+                </list>
+            </widget>
+        </container>
+
+        <container id="cnt1">
+            <translation id="title" translation_id="330376" type="use" value="Positions[COMMENT: Player comparison type header]" />
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+            <widget class="client_object_label_value_table" id="potb" edit_mode="true">
+                <record id="table_properties" auto_size="none">
+                    <flags id="mode" value="fill_rows, stripe_rows, printable" />
+                    <boolean id="auto_size_rows" value="true" />
+                    <boolean id="fixed_size_rows" value="false" />
+                    <string id="layout" value="-3,-4" />
+                    <integer id="row_spacing" value="0" />
+                    <list id="column_widget_properties">
+                        <record indx="0" alignment="left,centre_y" />
+                        <record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+                    </list>
+
+                    <list id="column_table_properties">
+                        <record indx="0">
+                            <integer id="left" value="8" />
+                        </record>
+                        <record indx="1">
+                            <flags id="alignment" value="left,centre_y" />
+                            <integer id="top" value="2" />
+                            <integer id="bottom" value="2" />
+                        </record>
+                    </list>
+                </record>
+
+                <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                    <integer id="set_property" value="objt" />
+                </record>
+
+                <list id="viewed_property_ids">
+                    <integer value="Pgoa" />
+                    <integer value="Pdls" />
+                    <integer value="Pdce" />
+                    <integer value="Pdrs" />
+                    <integer value="Pwbl" />
+                    <integer value="Pwbr" />
+                    <integer value="Pdmc" />
+                    <integer value="Pmls" />
+                    <integer value="Pmce" />
+                    <integer value="Pmrs" />
+                    <integer value="Paml" />
+                    <integer value="Pamc" />
+                    <integer value="Pamr" />
+                    <integer value="Pace" />
+                    <integer value="Plft" />
+                    <integer value="Prft" />
+                </list>
+            </widget>
+        </container>
+
+        <container id="cnt2">
+            <translation id="title" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+            <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+            <widget class="client_object_label_value_table" id="pmt1" edit_mode="true">
+                <record id="table_properties" auto_size="none">
+                    <flags id="mode" value="fill_rows, stripe_rows, printable" />
+                    <boolean id="auto_size_rows" value="true" />
+                    <boolean id="fixed_size_rows" value="false" />
+                    <string id="layout" value="-3,-4" />
+                    <integer id="row_spacing" value="0" />
+                    <list id="column_widget_properties">
+                        <record indx="0" alignment="left,centre_y" />
+                        <record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+                    </list>
+
+                    <list id="column_table_properties">
+                        <record indx="0">
+                            <integer id="left" value="8" />
+                        </record>
+                        <record indx="1">
+                            <flags id="alignment" value="left,centre_y" />
+                            <integer id="top" value="2" />
+                            <integer id="bottom" value="2" />
+                        </record>
+                    </list>
+                </record>
+
+                <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                    <integer id="set_property" value="objt" />
+                </record>
+            </widget>
+
+            <widget class="client_object_label_value_table" id="pmt2" edit_mode="true">
+                <record id="table_properties" auto_size="none">
+                    <flags id="mode" value="fill_rows, stripe_rows, printable" />
+                    <boolean id="auto_size_rows" value="true" />
+                    <boolean id="fixed_size_rows" value="false" />
+                    <string id="layout" value="-3,-4" />
+                    <integer id="row_spacing" value="0" />
+                    <list id="column_widget_properties">
+                        <record indx="0" alignment="left,centre_y" />
+                        <record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+                    </list>
+
+                    <list id="column_table_properties">
+                        <record indx="0">
+                            <integer id="left" value="8" />
+                        </record>
+                        <record indx="1">
+                            <flags id="alignment" value="left,centre_y" />
+                            <integer id="top" value="2" />
+                            <integer id="bottom" value="2" />
+                        </record>
+                    </list>
+                </record>
+
+                <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                    <integer id="set_property" value="objt" />
+                </record>
+            </widget>
+        </container>
+
+        <container id="cnt3">
+            <translation id="title" translation_id="284254" type="use" value="Trained at club[COMMENT: home grown status label]" />
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+            <widget class="client_object_list_property_panel" id="pltc" edit_mode="true">
+                <record id="list_table_properties">
+                    <list id="views">
+                        <record id="over">
+                            <record id="view">
+                                <flags id="club" />
+                                <!-- club -->
+                            </record>
+                        </record>
+                    </list>
+                </record>
+
+                <record id="Cols" file="properties/relationship properties" />
+                <integer id="viewed_property_ids" value="Phgc" />
+            </widget>
+        </container>
+
+        <container id="cnt4">
+            <translation id="title" translation_id="284255" type="use" value="Trained in nation[COMMENT: home grown status label]" />
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+            <widget class="client_object_list_property_panel" id="pltn" edit_mode="true">
+                <record id="list_table_properties">
+                    <list id="views">
+                        <record id="over">
+                            <record id="view">
+                                <flags id="nati" />
+                                <!-- team -->
+                            </record>
+                        </record>
+                    </list>
+                </record>
+
+                <record id="Cols" file="properties/relationship properties" />
+                <integer id="viewed_property_ids" value="Phgn" />
+            </widget>
+        </container>
+		
+		<container id="cnt6">
+			<translation id="title" translation_id="247569" type="use" value="Bans" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_list_property_panel" id="plba" edit_mode="true">
+				<record id="list_table_properties">
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="Pbsd" />
+								<flags id="Pbng" />
+								<flags id="Pbnd" />
+							</record>
+						</record>
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/player ban properties" />
+				<integer id="viewed_property_ids" value="Pibl" />
+			</widget>
+		</container>
+   </container>
+</panel>
