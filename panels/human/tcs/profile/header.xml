@@ -52,8 +52,18 @@
 
 			<widget class="picture" file="photos/dynamic/appointment scarf/scarf shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
 		</container>
-
+		
 		<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="bg" transparency="0.4"/>
+		
+			<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left" vertical_alignment="bottom"/>
+
+		<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6" width="32"  height="40">
+			<layout class="stick_to_sides_attachment" alignment="bottom,left" inset="4"/>
+			<record id="object_property" get_property="Pnfa"/>
+		</widget>
+	</container>
+
 
 		<!-- Player Picture -->
 		<widget class="picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="right" />
@@ -62,6 +72,9 @@
 			<record id="object_property" get_property="PiCh" set_property="Shwn"/>
 			<translation id="hint" translation_id="443654" type="use" value="Edit Manager Appearance[COMMENT: manager edit appearance panel; editing manager's look]" />
 		</widget>
+		
+		
+		
 	</container>
 
 	<!-- LOGOS -->
