@@ -1,0 +1,14 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_fade">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+
+		<!-- SCOUT REPORTS / WHEN PLAYER ISN'T HUMAN CONTROLLED -->
+	<widget class="player_scout_reports_panel" type="1" file="player/tcs/tabs/overview/scouting/reports_scout">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+	</container>
+</panel>

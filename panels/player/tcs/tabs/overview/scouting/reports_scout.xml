@@ -1,0 +1,101 @@
+﻿<panel save_session_state="true" save_default_state="true">
+	<flags id="cham" value="tables/custom/league/champions/row"/>
+	<boolean id="use_pro_con_long_strings" value="true"/>
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!-- HEADER -->
+	<container class="main_box" navigation_container="true">
+		<string id="remove_if" value="use_simplified_scouting"/>
+
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" horizontal_offset="0" vertical_gap="0" vertical_offset="0"/>
+
+		<!-- LEFT -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="2" vertical_offset="0"/>
+
+			<!-- OVERALL REPORT TEXT -->
+			<widget class="label" id="perl" size="normal" colour="contrast" auto_size="all" font="title">
+				<translation id="text" translation_id="539024" type="use"/>
+			</widget>
+
+			<!-- REPORT FROM -->
+			<widget class="text" id="lsdt" auto_size="all"/>
+
+		</container>
+
+		<!-- RIGHT HAND SIDE -->
+		<container width="400">
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="right"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="10"/>
+
+			<!-- SCOUTING KNOWLEDGE ICON -->
+			<widget class="icon_button" id="khtx" appearance="" icon="icons/16px/scouting" font="label" colour="fg" auto_size="all" size="medium"/>
+			<!-- SCOUTING KNOWLEDGE -->
+			<widget class="label" id="rdtx" colour="disabled" auto_size="all" size="medium"/>
+
+			<!-- COMPLETED ON -->
+			<container hidden="true">
+				<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0" vertical_gap="0"/>
+				<widget class="button" font="text" colour="faded text" size="medium" appearance="none" id="ytab" auto_size="all" mouse_entered_event="ytin" mouse_exited_event="ytou"/>
+			</container>
+		</container>
+	</container>
+
+	<!-- IF WE HAVE SCOUT REPORT -->
+	<container id="scou">
+		<layout class="horizontal_arrange" horizontal_layout="-10,-9,-9" horizontal_gap="8"/>
+
+		<!-- PROS AND CONS -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+
+			<!-- PROS -->
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+
+				<widget class="label" font="title" colour="fg positive" alignment="left,centre_y" size="large" auto_size="vertical">
+					<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
+				</widget>
+
+				<widget class="table" id="tpro" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_focus_target="true" default_sort_column="0">
+					<list id="column_table_properties">
+						<record index="0" sort_ascending="false"/>
+					</list>
+				</widget>
+				<widget class="text" id="nPro" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+			</container>
+
+		</container>
+		
+		
+			<!-- CONS -->
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+				<widget class="label" font="title" colour="fg negative" alignment="left,centre_y" size="large" auto_size="vertical">
+					<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]"/>
+				</widget>
+
+				<widget class="table" id="tcon" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_focus_target="true" default_sort_column="0">
+					<list id="column_table_properties">
+						<record index="0" sort_ascending="false"/>
+					</list>
+				</widget>
+				<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+			</container>
+		
+					
+				<!-- COMPARISON -->
+	<widget class="player_scout_reports_panel" id="pscR" file="player/tcs/selector/big/comparison" >
+	<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	</container>
+
+	<!-- NO REPORT -->
+	<container id="norp" hidden="true" class="client_object_viewer_xml_panel" file="player/tcs/selector/big/reports/overall/noreport">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</container>
+</panel>
