@@ -1,0 +1,572 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	<integer id="TbWs" value="650"/>
+	<integer id="TbWm" value="1010"/>
+	<integer id="TbWl" value="1430"/>
+
+	<list id="properties_to_forward">
+		<record get_property="HNEp" target="NEvp" set_property="hidn"/><record get_property="HFep" target="FEEP" set_property="hidn"/><record get_property="HTtp" target="TTab" set_property="hidn"/><record get_property="OTfi" target="TTab" set_property="OTfi"/><record get_property="HTsi" target="TTab" set_property="HTsi"/><record get_property="OTsi" target="TTab" set_property="OTsi"/><record get_property="HSMt" target="TTab" set_property="HSMt"/><record get_property="ASMt" target="TTab" set_property="ASMt"/><record get_property="HPMt" target="TTab" set_property="HPMt"/><record get_property="APMt" target="TTab" set_property="APMt"/><list id="properties_to_forward">
+			<record get_property="HSMt" target="nep1" set_property="HSMt"/>
+			<record get_property="HSMt" target="nep2" set_property="HSMt"/>
+			<record get_property="ASMt" target="nep1" set_property="ASMt"/>
+			<record get_property="ASMt" target="nep2" set_property="ASMt"/>
+		</list>
+	</list>
+
+	<!-- SPLIT CONTAINER TO MAKE THE LEFT PANEL WIDER OR THINNER -->
+	<container class="vertical_split_container" id="bott" starting_layout="272,-1" min_width_left="1" save_session_state="true" save_default_state="true">
+		
+		<container id="NEvp">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+			<container class="main_transparent_box" appearance="tcs/boxes/match/main/cropped/right" draw_horizontal_dividers="true">
+					<layout class="vertical_arrange" vertical_layout="260,-1" />
+					
+						<!-- MIDDLE SELECTOR -->
+						<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep2_dummy">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+
+						<!-- BOTTOM SELECTOR -->
+						<container class="client_object_viewer_xml_panel" file="match/tcs/tablet/selectors/nep3_dummy">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="1.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top"/>
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false"/>
+
+			</container>
+	
+			<widget class="spacer" height="47"/>
+
+		</container>
+
+		<container class="tcs_box" appearance="tcs/boxes/main/trans/paper">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="24" apply_to_children="true"/>
+			<container>
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,16,16,24"/>
+
+				<container class="tcs_box" appearance="tcs/boxes/match/touchline tablet/base/paper" id="TTab">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="tcs_tabs" save_default_state="true" save_session_state="true">
+
+						<!-- OVERVIEW -->
+						<container id="over" draw_vertical_dividers="true">
+							<translation id="title" translation_id="257300" type="use"/>
+							<layout class="horizontal_arrange" horizontal_layout="-16,-7" vertical_inset="8" horizontal_gap="16"/>
+
+							<container draw_vertical_dividers="true">
+								<layout class="horizontal_arrange" horizontal_layout="-4,-7"/>
+
+								<!-- LEFT HAND SIDE -->
+								<container draw_horizontal_dividers="true">
+									<layout class="vertical_arrange" vertical_layout="-12,-6" vertical_gap="8"/>
+
+									<!-- Slide in from side of screen -->
+									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+									<!-- Fade animation -->
+									<animation class="fade_on_hide_animation" duration="0.35"/>
+
+									<!-- VISUALISER -->
+									<container class="client_object_viewer_xml_panel" id="prmC">
+										<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="8"/>
+										<record id="object_property" get_property="objt" set_property="objt"/>
+
+										<widget class="preselected_match_chalkboard_panel" display_event_time_window="5" display_last_major_event="true" display_recent_events="true" file="match/visualiser">
+											<record id="object_property" get_property="objt" set_property="objt"/>
+											<attachment class="test_screen_size_attachment" skip_if_false="true">
+												<list id="properties">
+													<record>
+														<flags id="alignment" value="vertical"/>
+														<integer id="min_value" value="0"/>
+														<integer id="max_value" value="720"/>
+														<symbol id="set_property" value="height"/>
+														<integer id="true_value" value="177"/>
+														<integer id="false_value" value="177"/>
+													</record>
+													<record>
+														<flags id="alignment" value="vertical"/>
+														<integer id="min_value" value="720"/>
+														<integer id="max_value" value="10000"/>
+														<symbol id="set_property" value="height"/>
+														<integer id="true_value" value="200"/>
+														<integer id="false_value" value="200"/>
+													</record>
+												</list>
+											</attachment>
+											<record id="object_property">
+												<integer id="get_property" value="objt"/>
+												<integer id="set_property" value="objt"/>
+											</record>
+											<record id="icon_properties">
+												<string id="icon" value="icons/custom/visualiser/ball"/>
+												<string id="red_replacement" value="white"/>
+												<string id="blue_replacement" value="black"/>
+											</record>
+											<list id="chalkboard_events_to_display">
+												<!-- Shot missed target -->
+												<integer value="2"/>
+												<!-- Shot hit woodwork -->
+												<integer value="3"/>
+												<!-- Shot saved -->
+												<integer value="4"/>
+												<!-- Shot blocked -->
+												<integer value="5"/>
+												<!-- Foul called -->
+												<integer value="19"/>
+												<!-- Yellow card -->
+												<integer value="20"/>
+												<!-- Red card -->
+												<integer value="21"/>
+												<!-- Foul penalty -->
+												<integer value="22"/>
+												<!-- Touches -->
+												<integer value="54"/>
+											</list>
+										</widget>
+
+										<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks and action zones combined panel">
+											<record id="object_property" get_property="objt" set_property="objt"/>
+											<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]"/>
+										</widget>
+									</container>
+
+									<!-- SHOTS -->
+									<!-- Match Momentum -->
+									<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="momentum" data_type="fixture" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</widget>
+								</container>
+
+								<container draw_vertical_dividers="true">
+									<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+									<!-- MIDDLE PANEL -->
+									<container height="404">
+										<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="8" horizontal_gap="16"/>
+
+										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+										<animation class="fade_on_hide_animation" duration="0.35"/>
+
+										<container class="match_info_panel" file="none">
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
+											<record id="object_property" get_property="objt" set_property="objt"/>
+
+											<widget class="home_match_incidents_panel" id="hmip" file="none" height="20">
+												<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<widget class="text" id="mitn" font="title" alignment="left,centre_y" auto_size="vertical"/>
+											</widget>
+											<!-- HOME FORMATION -->
+											<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="0" read_only="true">
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<translation id="title" translation_id="230056" type="use" value="Tactics"/>
+											</widget>
+										</container>
+
+										<container class="match_info_panel" file="none">
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="24" vertical_gap="-8"/>
+											<record id="object_property" get_property="objt" set_property="objt"/>
+
+											<widget class="away_match_incidents_panel" id="amip" file="none" height="20">
+												<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<widget class="text" id="mitn" font="title" alignment="left,centre_y" auto_size="vertical"/>
+											</widget>
+											<!-- HOME FORMATION -->
+											<widget class="match_formation_panel" id="hmtt" file="match/tcs/tablet/formations" team_index="1" read_only="true">
+												<record id="object_property" get_property="objt" set_property="objt"/>
+												<translation id="title" translation_id="230056" type="use" value="Tactics"/>
+											</widget>
+										</container>
+									</container>
+
+									<widget class="match_analysis_panel" id="Anal" file="match/tcs/tablet/heatmaps">
+										<!-- Slide in from side of screen -->
+										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+										<animation class="fade_on_hide_animation" duration="0.35"/>
+										<record id="object_property">
+											<integer id="get_property" value="objt"/>
+											<integer id="set_property" value="objt"/>
+										</record>
+									</widget>
+
+								</container>
+
+
+							</container>
+
+
+							<!-- MIDDLE PANEL -->
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+								<!-- Slide in from side of screen -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+								<!-- Fade animation -->
+								<animation class="fade_on_hide_animation" duration="0.35"/>
+
+								<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats full floating" team_index="0">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<translation id="title" translation_id="247393" type="use" value="Team Stats"/>
+								</widget>
+
+								<widget class="match_team_stats_panel" id="afMs" file="match/match team stats full floating" team_index="1">
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<translation id="title" translation_id="247393" type="use" value="Team Stats"/>
+								</widget>
+
+							</container>
+						</container>
+
+
+						<!-- MATCH STATS -->
+						<container id="STAT" draw_vertical_dividers="true">
+							<translation id="title" translation_id="291566" type="use"/>
+							<layout class="horizontal_arrange" horizontal_layout="-4,-8" vertical_inset="8" horizontal_gap="16"/>
+
+							<widget class="match_analysis_summary_panel" id="aana" file="none">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+								<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="xg_map" data_type="fixture" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false" default_focus="true">
+									<!-- Slide in from side of screen -->
+									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+									<!-- Fade animation -->
+									<animation class="fade_on_hide_animation" duration="0.35"/>
+								</widget>
+
+								<container class="client_object_viewer_xml_panel" id="toto">
+									<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+									<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" delay="0.2"/>
+									<!-- Fade animation -->
+									<animation class="fade_on_hide_animation" duration="0.35"/>
+
+									<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]"/>
+									</widget>
+
+									<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<translation id="title" translation_id="247327" type="use" value="Action Zones"/>
+										<colour id="ptlc" name="white"/>
+									</widget>
+
+								</container>
+
+							</widget>
+
+							<container class="match_stats_panel">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<!-- Slide in from side of screen -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+								<!-- Fade animation -->
+								<animation class="fade_on_hide_animation" duration="0.35"/>
+							</container>
+						</container>
+
+
+						<!-- HOME -->
+						<container id="hmtt">
+							<layout class="horizontal_arrange" horizontal_layout="-4,-8" vertical_inset="16" horizontal_offset="8"/>
+							<translation id="title" translation_id="248080" type="use"/>
+
+							<widget class="match_formation_panel" file="match/tcs/tablet/formations" team_index="0" read_only="true">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<!-- Slide in from side of screen -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+								<!-- Fade animation -->
+								<animation class="fade_on_hide_animation" duration="0.35"/>
+							</widget>
+
+							<widget class="match_team_stats_panel" id="hfMs" file="match/tcs/tablet/team stats" team_index="0">
+								<boolean id="save_session_state" value="true"/>
+								<boolean id="save_default_state" value="true"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<!-- Slide in from side of screen -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+								<!-- Fade animation -->
+								<animation class="fade_on_hide_animation" duration="0.35"/>
+							</widget>
+						</container>
+
+						<!-- AWAY -->
+						<container id="amtt">
+							<layout class="horizontal_arrange" horizontal_layout="-8,-4" vertical_inset="16" horizontal_offset="8"/>
+							<translation id="title" translation_id="248081" type="use"/>
+
+							<widget class="match_team_stats_panel" id="hfMs" file="match/tcs/tablet/team stats" team_index="1">
+								<!-- Slide in from side of screen -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+								<!-- Fade animation -->
+								<animation class="fade_on_hide_animation" duration="0.35"/>
+								<boolean id="save_session_state" value="true"/>
+								<boolean id="save_default_state" value="true"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
+
+							<widget class="match_formation_panel" file="match/match formation panel review" team_index="1" read_only="true">
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<!-- Slide in from side of screen -->
+								<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+								<!-- Fade animation -->
+								<animation class="fade_on_hide_animation" duration="0.35"/>
+							</widget>
+						</container>
+
+						<!-- SHOT MAP -->
+						<container id="shot">
+							<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,4,4,4"/>
+							<translation id="title" translation_id="395318" type="use"/>
+
+							<widget class="match_shot_analysis_panel" id="shoT" file="none">
+								<boolean id="save_session_state" value="true"/>
+								<boolean id="save_default_state" value="true"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+								<container class="subsection_box_transparent">
+									<translation id="title" translation_id="395318" type="use" value="Shot Accuracy[COMMENT: FR 10596, match shot analysis label]"/>
+
+									<!-- prozone logo area -->
+									<container id="btna" embed_in_frame="true" height="30">
+										<layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="4" offset="0"/>
+										<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" embed_in_frame="true"/>
+										<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="0"/>
+
+										<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true" offset="0"/>
+
+										<container embed_in_frame="true" width="100" height="30">
+											<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" embed_in_frame="true"/>
+											<layout class="stick_to_sides_attachment" alignment="right" apply_to_children="true" inset="0" embed_in_frame="true"/>
+
+											<!-- TODO:: Matt W 26/09/2019 - Bug 13328 removed prozone branding, revisit when known what replacement is-->
+											<widget class="picture" width="90" image_alignment="right,top" file="" scale_picture="true" keep_aspect_ratio="true" embed_in_frame="true"/>
+										</container>
+
+									</container>
+
+									<layout class="arrange_horizontal_attachment" layout="425,-1" offset="2"/>
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+									<container class="inner_subtle_box" navigation_container="true">
+										<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+										<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+										<!-- Slide in from side of screen -->
+										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+										<!-- Fade animation -->
+										<animation class="fade_on_hide_animation" duration="0.35"/>
+
+										<container id="teaC">
+											<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+											<layout class="arrange_horizontal_attachment" alignment="fill" offset="2" gap=""/>
+											<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+											<widget class="radio_toggle_switch_left" id="homb" auto_size="vertical" alignment="centre" group_parent_level="teaC" selected="true" group="2" click_event="homF"/>
+											<widget class="radio_toggle_switch_right" id="awab" auto_size="vertical" group="2" group_parent_level="teaC" alignment="centre" click_event="awaF"/>
+										</container>
+
+										<container>
+											<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+											<container id="homc" navigation_container="true">
+												<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="4"/>
+												<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+												<widget class="check_box" id="hsal" click_event="hsal" selected="true">
+													<translation id="text" translation_id="247116" type="use" value="Select All"/>
+												</widget>
+
+												<widget class="tactic_player_list_table" id="homt" database_table_type="1" mode="fill_rows, stripe_rows" fixed_size_rows="true" auto_size_rows="false" row_height="25" sort_disabled="true">
+													<record id="default_properties" spec="text"/>
+													<flags id="default_view" value="0"/>
+													<list id="views">
+														<record id="0">
+															<record id="view">
+																<!--Name, Incident, etc-->
+																<record id="InCh"/>
+																<record id="PsnC"/>
+																<record id="Pnam"/>
+																<record id="PinD"/>
+																<record id="Pcar"/>
+
+																<!--Stats-->
+																<record id="MPst" width="30"/>
+																<record id="MPgl" navigation_focus_target="false"/>
+															</record>
+														</record>
+													</list>
+
+													<list id="column_table_properties">
+														<!-- Tick Box -->
+														<record>
+															<integer id="id" value="InCh"/>
+															<integer id="width" value="35"/>
+															<translation id="name" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]"/>
+															<record id="widget_info">
+																<symbol id="class" value="chalkboard_player_check_box"/>
+																<record id="click_event" event_id="plCE"/>
+																<boolean id="selected" value="true"/>
+															</record>
+
+															<record id="column_widget_properties">
+																<flags id="alignment" value="centre"/>
+															</record>
+
+															<record id="column_heading">
+																<flags id="alignment" value="centre"/>
+																<translation id="text" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]"/>
+																<translation id="hint" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]"/>
+															</record>
+														</record>
+													</list>
+												</widget>
+											</container>
+
+											<container id="awac" navigation_container="true">
+												<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="4"/>
+												<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+												<widget class="check_box" id="asal" click_event="asal" selected="true">
+													<translation id="text" translation_id="247116" type="use" value="Select All"/>
+												</widget>
+
+												<widget class="tactic_player_list_table" id="awat" database_table_type="1" mode="fill_rows, stripe_rows" fixed_size_rows="true" auto_size_rows="false" row_height="25" sort_disabled="true">
+													<record id="default_properties" spec="text"/>
+													<flags id="default_view" value="0"/>
+													<list id="views">
+														<record id="0">
+															<record id="view">
+																<!--Name, Incident, etc-->
+																<record id="InCh"/>
+																<record id="PsnC"/>
+																<record id="Pnam"/>
+																<record id="PinD"/>
+																<record id="Pcar"/>
+
+																<!--Stats-->
+																<record id="MPst" width="30"/>
+																<record id="MPgl"/>
+															</record>
+														</record>
+													</list>
+
+													<list id="column_table_properties">
+														<!-- Tick Box -->
+														<record>
+															<integer id="id" value="InCh"/>
+															<integer id="width" value="35"/>
+															<translation id="name" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]"/>
+															<record id="widget_info">
+																<symbol id="class" value="chalkboard_player_check_box"/>
+																<record id="click_event" event_id="plCE"/>
+																<boolean id="selected" value="true"/>
+															</record>
+
+															<record id="column_widget_properties">
+																<flags id="alignment" value="centre"/>
+															</record>
+
+															<record id="column_heading">
+																<flags id="alignment" value="centre"/>
+																<translation id="text" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]"/>
+																<translation id="hint" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]"/>
+															</record>
+														</record>
+													</list>
+												</widget>
+											</container>
+										</container>
+
+									</container>
+
+									<container class="inner_subtle_box" navigation_container="true">
+										<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4"/>
+										<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+										<!-- Slide in from side of screen -->
+										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
+										<!-- Fade animation -->
+										<animation class="fade_on_hide_animation" duration="0.35"/>
+
+										<container id="radC">
+											<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+											<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="2" gap="0"/>
+											<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+											<container>
+												<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+												<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" apply_to_children="true"/>
+
+												<widget class="radio_toggle_switch_left" id="shob" auto_size="all" alignment="right,centre_y" group_parent_level="radC" selected="true" group="1" click_event="shoF">
+													<translation id="text" translation_id="247381" type="use" value="Shots"/>
+													<translation id="hint" translation_id="447663" type="use" value="This view shows the initial trajectory of shots and not necessarily where the shots ended up if they were deflected[COMMENT - Match Analysis shot chart screen, tooltip explaining where the shots are tracked from]"/>
+												</widget>
+
+											</container>
+
+											<container>
+												<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+												<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true"/>
+
+
+												<widget class="radio_toggle_switch_right" id="goab" auto_size="all" group="1" group_parent_level="radC" alignment="left,centre_y" click_event="goaF">
+													<translation id="text" translation_id="247334" type="use" value="Goals[COMMENT - match screen; option in replays menu for goal replays to be shown]"/>
+												</widget>
+
+											</container>
+
+										</container>
+
+										<widget class="shot_areas_panel" id="areP" mode="1" enable_popup="true">
+											<!-- Slide in from side of screen -->
+											<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" delay="0.2"/>
+											<!-- Fade animation -->
+											<animation class="fade_on_hide_animation" duration="0.35"/>
+										</widget>
+									</container>
+
+								</container>
+
+							</widget>
+						</container>
+
+
+						<!-- ANALYSIS -->
+						<container id="AAna">
+							<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,4,4,4"/>
+							<translation id="title" translation_id="296334" type="use"/>
+
+							<widget class="match_analysis_summary_panel" id="Anal">
+								<boolean id="save_session_state" value="true"/>
+								<boolean id="save_default_state" value="true"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
+						</container>
+
+						<!-- AROUND THE GROUNDS -->
+						<container id="artg">
+							<layout class="stick_to_sides_attachment" apply_to_children="true" inset="8,4,4,4"/>
+							<translation id="title" translation_id="515055" type="use"/>
+
+							<widget class="client_object_viewer_xml_panel" id="hfMs" file="match/tcs/tablet/around the ground">
+								<boolean id="save_session_state" value="true"/>
+								<boolean id="save_default_state" value="true"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>
+						</container>
+
+					</container>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>
