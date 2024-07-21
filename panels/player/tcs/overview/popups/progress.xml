@@ -2,7 +2,6 @@
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 	<container class="player_attributes_panel" show_attribute_offsets="true" file="none" id="patt" save_session_state="true">
-
 		<record id="object_property">
 			<list id="get_properties">
 				<record>
@@ -184,30 +183,36 @@
 				</layout>
 				<layout class="stick_to_sides_attachment" alignment="top,left" inset="0"/>
 
-				<!-- <widget class="radio_button" id="Pact" select_event="SelP" selected="true" auto_size="all" icon="" show_button_appearance="true" appearance="switches/toggle/left/button"> -->
-					<!-- <translation id="text" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/> -->
-				<!-- </widget> -->
+				<widget class="radio_button" id="Pact" select_event="SelP" selected="true" auto_size="all" icon="" show_button_appearance="true" appearance="switches/toggle/left/button">
+					<translation id="text" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]"/>
+				</widget>
 				<widget class="radio_button" id="Ppup" select_event="SelA" auto_size="all" icon="" show_button_appearance="true" appearance="switches/toggle/right/button" text="test">
 					<translation id="text" translation_id="229822" type="use" value="Attributes"/>
 				</widget>
 				
-				<!-- PROGRESS PANEL -->
-				<widget class="icon_button" width="40" icon="icons/16px/cross" icon_alignment="centre" id="CCpr">
-					<translation id="hint" value="Open the Progress Panel" type="use"/>
-							
-					<event id="click_event" event_id="tCpg"/>
-								
-					<!-- THIS EVENT OPENS THE HISTORY PANEL -->
-					<attachment class="event_relay_attachment" event_id="tCpg">
-						<record id="action_event">
-							<flags id="event_id" value="hide"/>
-							<flags id="event_target" value="TPrg"/>
-						</record>
-					</attachment>
-				</widget>
 				
 			</container>
 		</container>
 
+	</container>
+	
+	
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right"/>
+		<!-- PROGRESS PANEL -->
+		<widget class="icon_button" height="40" width="40" icon="icons/16px/cross" icon_alignment="centre" id="CCpr">
+			<translation id="hint" value="Open the Progress Panel" type="use"/>
+							
+			<event id="click_event" event_id="tCpg"/>
+								
+			<!-- THIS EVENT OPENS THE HISTORY PANEL -->
+			<attachment class="event_relay_attachment" event_id="tCpg">
+				<record id="action_event">
+					<flags id="event_id" value="hide"/>
+					<flags id="event_target" value="TPrg"/>
+				</record>
+			</attachment>
+		</widget>
 	</container>
 </panel>
