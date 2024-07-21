@@ -264,37 +264,7 @@
 											</attachment>
 										</widget>
 										
-										<!-- BOOKMARK CLOSE BUTTON -->
-										<widget class="icon_button" id="bcBK" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/cross" icon_colour="fg" hidn="true">
-											<translation id="hint" translation_id="249644" type="use"/>
-								
-											<event id="click_event" event_id="bBmk"/>
-												
-											<!-- HIDES THE BOOKMARKS MENU -->
-											<attachment class="event_relay_attachment" event_id="bBmk">
-												<record id="action_event">
-													<flags id="event_id" value="hide"/>
-													<flags id="event_target" value="bkmk"/>
-												</record>
-											</attachment>
-
-											<!-- HIDES THE CLOSE BUTTON -->
-											<attachment class="event_relay_attachment" event_id="bBmk">
-												<record id="action_event">
-													<flags id="event_id" value="hide"/>
-													<flags id="event_target" value="bcBK"/>
-												</record>
-											</attachment>
-											
-											<!-- SHOWS THE OPEN BOOKMARKS BUTTON -->
-											<attachment class="event_relay_attachment" event_id="bBmk">
-												<record id="action_event">
-													<flags id="event_id" value="show"/>
-													<flags id="event_target" value="boBK"/>
-												</record>
-											</attachment>
-										</widget>
-									</container>
+										</container>
 									
 									<container width="8"/>
 									
@@ -339,6 +309,37 @@
 		</widget>
 	</container>
 	
+	<!-- BOOKMARK CLOSE BUTTON -->
+										<widget class="icon_button" id="bcBK" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="tcs/buttons/text/button" rrep="popup_box_background" icon_colour="fg" hidn="true">
+											<translation id="hint" translation_id="249644" type="use"/>
+								
+											<event id="click_event" event_id="bBmk"/>
+												
+											<!-- HIDES THE BOOKMARKS MENU -->
+											<attachment class="event_relay_attachment" event_id="bBmk">
+												<record id="action_event">
+													<flags id="event_id" value="hide"/>
+													<flags id="event_target" value="bkmk"/>
+												</record>
+											</attachment>
+
+											<!-- HIDES THE CLOSE BUTTON -->
+											<attachment class="event_relay_attachment" event_id="bBmk">
+												<record id="action_event">
+													<flags id="event_id" value="hide"/>
+													<flags id="event_target" value="bcBK"/>
+												</record>
+											</attachment>
+											
+											<!-- SHOWS THE OPEN BOOKMARKS BUTTON -->
+											<attachment class="event_relay_attachment" event_id="bBmk">
+												<record id="action_event">
+													<flags id="event_id" value="show"/>
+													<flags id="event_target" value="boBK"/>
+												</record>
+											</attachment>
+										</widget>
+	
 	<!-- BOOKMARKS -->
 	<container id="bkmk" hidn="true">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
@@ -346,6 +347,9 @@
 		<container class="tcs_box" appearance="boxes/custom/dialog background/paper" rrep="bg darker">
 			<animation class="fade_on_hide_animation" duration="0.2" end_mode="hold_auto_reverse"/>
 		</container>
+		
+				
+							
 										
 		<container>
 			<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_alignment="right" vertical_offset="80" horizontal_inset="32"/>
