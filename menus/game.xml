@@ -1,0 +1,207 @@
+<record fixed="true">
+  <translation id="name" translation_id="247120" type="use" value="Game Options" />
+  <flags id="event_target" value="scrC" />
+
+  <list id="items">
+
+    <record id="chpl">
+      <translation id="text" translation_id="365175" type="use" value="Change Manager[COMMENT: option in menu to switch between different users, use top ten matches]" />
+      <flags id="event_id" value="CPLR" />
+      <flags id="event_target" value="glob" />
+    </record>
+
+    <record id="----" />
+
+    <record id="gsvg">
+      <translation id="text" translation_id="247129" type="use" value="Save Game" />
+      <flags id="event_id" value="SAVE" />
+      <flags id="event_target" value="glob" />
+    </record>
+
+    <record id="gsva">
+      <translation id="text" translation_id="247130" type="use" value="Save Game As" />
+      <flags id="event_id" value="SAVA" />
+      <flags id="event_target" value="glob" />
+    </record>
+
+    <record id="gopn">
+      <translation id="text" translation_id="248149" type="use" value="Load Game" />
+      <flags id="event_id" value="OPN?" />
+      <flags id="event_target" value="glob" />
+    </record>
+
+    <record>
+      <translation id="text" translation_id="327247" type="use" value="Quit to Start Screen[COMMENT: Menu option to exit current game and return to start screen]" />
+      <flags id="event_id" value="MAMR" />
+    </record>
+
+    <record>
+      <translation id="text" translation_id="320405" type="use" value="Quit Game and Exit[COMMENT: Menu option to exit football manager]" />
+      <flags id="event_id" value="QUIT" />
+    </record>
+
+    <record id="----" />
+
+    <record id="gnew">
+      <translation id="text" translation_id="339074" type="use" value="New Career Game[COMMENT: intro panel; button text to start a new FM career game]" />
+      <flags id="event_id" value="NWGR" />
+    </record>
+
+    <record id="Onew">
+      <translation id="text" translation_id="339075" type="use" value="New Online Game[COMMENT: intro panel; button text to start a new online game]" />
+      <flags id="event_id" value="NOGR" />
+    </record>
+
+    <record id="----" />
+
+    <record id="gprf">
+      <translation id="text" translation_id="229824" type="use" value="Preferences" />
+      <flags id="event_id" value="PREF" />
+    </record>
+
+    <record id="----" />
+
+    <record id="gnwu">
+      <translation id="text" translation_id="295849" type="use" value="Add New Manager[COMMENT: game menu option; to add a new manager]" />
+      <flags id="event_id" value="ADDM" />
+      <flags id="event_target" value="glob" />
+    </record>
+
+    <record id="gmad">
+      <translation id="text" translation_id="319433" type="use" value="Add/Remove Leagues[COMMENT: competition detail level option on game menu]" />
+      <flags id="event_id" value="GMAD" />
+    </record>
+    
+    <record id="gmdt">
+      <translation id="text" translation_id="255004" type="use" value="Detail Level[COMMENT: competition detail level option on game menu]" />
+      <flags id="event_id" value="GMDT" />
+    </record>
+    
+    <record id="----" />
+
+    <record id="ldrb">
+      <translation id="text" translation_id="335142" type="use" value="Leaderboards[COMMENT: section title for leaderboard section]" />
+      <flags id="event_id" value="LDRB" />
+    </record>
+
+    <record id="ghof">
+      <translation id="text" translation_id="247122" type="use" value="Hall of Fame" />
+      <flags id="event_id" value="FAME" />
+    </record>    
+		
+		<record id="gacA">
+			<translation id="text" translation_id="247607" type="use" value="Achievements" />
+			<flags id="event_id" value="ACHV" />
+    </record>
+
+    <record id="----" />
+
+    <record id="maIB">
+      <translation id="text" translation_id="326982" type="use" value="Manual" />
+      <flags id="event_id" value="soUM" />
+      <flags id="mode" value="1" />
+    </record>
+
+		<record>
+			<translation id="text" translation_id="551804" type="use" value="Support[COMMENT: AREA: FM Menu; SUB-AREA: Support; FR-BN: FM-4106; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; Menu item that holds support links]" />
+
+			<list id="items">
+				<record id="fqIB">
+					<translation id="text" translation_id="551805" type="use" value="FAQs[COMMENT: AREA: FM Menu; SUB-AREA: Support; FR-BN: FM-4106; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; links to FAQs]" />
+					<flags id="event_id" value="sFAQ" />
+					<flags id="mode" value="1" />
+				</record>
+				<record id="sfIB">
+					<translation id="text" translation_id="551806" type="use" value="Forum Support[COMMENT: AREA: FM Menu; SUB-AREA: Support; FR-BN: FM-4106; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; links to forums]" />
+					<flags id="event_id" value="sFor" />
+					<flags id="mode" value="1" />
+				</record>
+				<record id="guIB">
+					<translation id="text" translation_id="551807" type="use" value="Guides[COMMENT: AREA: FM Menu; SUB-AREA: Support; FR-BN: FM-4106; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; links to guides]" />
+					<flags id="event_id" value="sGui" />
+					<flags id="mode" value="1" />
+				</record>
+				<record id="tuIB">
+					<translation id="text" translation_id="551808" type="use" value="Tutorials[COMMENT: AREA: FM Menu; SUB-AREA: Support; FR-BN: FM-4106; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; links to tutorials]" />
+					<flags id="event_id" value="sTut" />
+					<flags id="mode" value="1" />
+				</record>
+			</list>
+		</record>
+	  
+	  <record id="gcMP">
+		  <translation id="text" translation_id="495210" type="use" value="Gamepad Controls[COMMENT: title and menu option for displaying a map of gamepad controls and their functions in game]" />
+		  <flags id="event_id" value="GCMP" />
+	  </record>
+
+    <record id="----" />
+
+    <record>
+      <translation id="text" translation_id="247133" type="use" value="Print Screen" />
+      <flags id="event_id" value="APRN" />
+    </record>
+
+    <record id="----" />
+
+    <record>
+      <translation id="text" translation_id="247123" type="use" value="Manager Chat" />
+      <flags id="event_id" value="CHAT" />
+    </record>
+
+    <record id="----" />
+
+    <record id="gsta">
+      <translation id="text" translation_id="247121" type="use" value="Game Status" />
+      <flags id="event_id" value="STAT" />
+    </record>
+
+    <record>
+      <translation id="text" translation_id="247992" type="use" value="Credits" />
+      <list id="items">
+        <record event_id="CRED" diti="true">
+          <translation id="text" translation_id="248409" type="use" value="Development" />
+        </record>
+        <record event_id="RSCC" diti="true">
+          <translation id="text" translation_id="248410" type="use" value="Research" />
+        </record>
+        <record event_id="INFO" diti="true">
+          <translation id="text" translation_id="247958" type="use" value="Community Information" />
+        </record>
+      </list>
+    </record>
+
+
+    <record id="----" />
+	
+	    <record>
+      <translation id="text" type="use" value="Donate" />
+	        <list id="items">
+
+	<!-- KO-FI -->
+				<record>
+					<translation id="text" type="use" value="Donate via Ko-Fi"/>
+					<flags id="event_id" value="OURL"/>
+					<flags id="url" value="https://ko-fi.com/tcsskin"/>
+					<flags id="icon" value="tcs/icons/donate/kofi"/>
+				</record>
+	
+				<!-- TRUSSEL -->
+				<record>
+					<translation id="text" type="use" value="Donate to a local foodbank (via Trussel Trust)"/>
+					<flags id="event_id" value="OURL"/>
+					<flags id="url" value="https://www.trusselltrust.org/get-help/find-a-foodbank/"/>
+					<flags id="icon" value="tcs/icons/donate/trussel"/>
+				</record>
+	    </list>
+    </record>
+	
+    <record id="----" />
+
+    <record>
+      <translation id="text" translation_id="349581" type="use" value="Downloads[COMMENT: button text to take user to the downloads]" />
+      <flags id="event_id" value="STOR" />
+    </record>
+
+  </list>
+
+</record>
