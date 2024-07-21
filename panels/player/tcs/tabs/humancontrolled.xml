@@ -427,8 +427,10 @@
 										<!-- Praise/Criticise -->
 										<container>
 											<layout class="horizontal_arrange_autosize_all"/>
-											<widget class="button" id="ptbn" click_event="ptev" auto_size="horizontal" red_replacement="pro high"/>
-											<widget class="button" id="ctbn" click_event="ctev" auto_size="horizontal" red_replacement="con high"/>
+																<record id="default_properties"  appearance="buttons/primary/normal/button" auto_size="horizontal" colour="fg" icon_colour="fg"/>
+
+											<widget class="icon_button" icon="icons/16px/thumbs up" rrep="bg positive" click_event="ptev"/>
+											<widget class="icon_button" icon="icons/16px/thumbs down" rrep="bg negative" click_event="ctev"/>
 										</container>
 						
 										<!-- PROGRESS PANEL -->
