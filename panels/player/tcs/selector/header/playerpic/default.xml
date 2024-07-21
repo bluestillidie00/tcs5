@@ -7,6 +7,19 @@
 <widget id="cKit" class="kit_icon" width="170" image_alignment="centre" scale_picture="true" kit_path="zoomed/large" kit_number_path="large" >
 		<record id="object_property" get_property="Pers" set_property="objt"/>
 	</widget>
+			
+				<!-- CAPTAIN INDICATORS -->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+		
+			<widget class="picture" file="tcs/icons/captain/captain_alt" width="22" height="22" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre_x,bottom" rrep="fg accent">
+				<record id="object_property" get_property="PisC" set_property="Shwn"/>
+			</widget>
+			
+			<widget class="picture" file="tcs/icons/captain/vice" width="22" height="22" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre_x,bottom" rrep="fg tertiary">
+				<record id="object_property" get_property="PisV" set_property="Shwn"/>
+			</widget>
+		</container>
 	
 	<!-- STATUS INDICATORS -->
 	<container>
@@ -118,19 +131,4 @@
 
 	</container>
 	
-	
-			
-				<!-- CAPTAIN INDICATORS -->
-		<container>
-			<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
-		
-			<widget class="picture" file="tcs/icons/captain/captain_alt" width="22" height="22" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre_x,bottom" rrep="fg accent">
-				<record id="object_property" get_property="PisC" set_property="Shwn"/>
-			</widget>
-			
-			<widget class="picture" file="tcs/icons/captain/vice" width="22" height="22" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre_x,bottom" rrep="fg tertiary">
-				<record id="object_property" get_property="PisV" set_property="Shwn"/>
-			</widget>
-		</container>
-
 </panel>

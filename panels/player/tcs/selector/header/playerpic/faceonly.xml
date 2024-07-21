@@ -2,17 +2,6 @@
 <panel>
 	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 	<boolean id="should_force_refresh" value="true"/>
-
-
-	<!-- STATUS INDICATORS -->
-	<container>
-		<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
-
-		<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6" width="32">
-			<layout class="stick_to_sides_attachment" alignment="top,left" inset="0,2"/>
-			<record id="object_property" get_property="Pnfa"/>
-		</widget>
-	</container>
 	
 		<!-- CAPTAIN INDICATORS -->
 		<container>
@@ -25,7 +14,17 @@
 			<widget class="picture" file="tcs/icons/captain/vice" width="22" height="22" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre_x,bottom" rrep="fg tertiary">
 				<record id="object_property" get_property="PisV" set_property="Shwn"/>
 			</widget>
-		</container>
+		</container>	
+
+	<!-- STATUS INDICATORS -->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+		<widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6" width="32">
+			<layout class="stick_to_sides_attachment" alignment="top,left" inset="0,2"/>
+			<record id="object_property" get_property="Pnfa"/>
+		</widget>
+	</container>
 
 	<!-- PLAYER FACE -->
 	<container>
