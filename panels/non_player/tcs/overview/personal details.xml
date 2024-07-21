@@ -352,8 +352,8 @@
 							<translation id="text" translation_id="291327" type="use"/>
 						</widget>
 			
-						<widget class="relationship_label" display_format="0">
-							<record id="object_property" get_property="PRHP"/>
+						<widget class="media_handling_label">
+							<record id="object_property" get_property="Pghm"/>
 						</widget>
 					</container>
 			
