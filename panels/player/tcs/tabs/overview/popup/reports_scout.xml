@@ -1,0 +1,157 @@
+﻿<panel save_session_state="true" save_default_state="true">
+	<flags id="cham" value="tables/custom/league/champions/row"/>
+	<boolean id="use_pro_con_long_strings" value="true"/>
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!-- IF WE HAVE SCOUT REPORT -->
+	<container id="scou">
+		<layout class="horizontal_arrange" horizontal_layout="-11,-9,-9" horizontal_gap="8"/>
+
+		<!-- SUMMARY -->
+		<widget class="player_reports_overview_summary_panel" id="proS" file="none" always_recolour_wage_cost_text="true" recommendation_widget_mode="0" mode="1">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+			<record id="object_property" get_property="objt" set_property="objt"/>
+
+			<!-- RECOMMENDATION WIDGET -->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0"/>
+
+				<!-- RECOMMENDATION LETTER -->
+				<widget class="player_scout_recommendation_widget" file="widgets/player scout recommendation widget compact" id="RCic" alignment="left,centre_y" auto_size="none" click_event="ltms" show_knowledge_bar="false" width="32" height="32" recommendation_mode="2" should_recolour_recommendation_value="true"/>
+
+				<!-- TEXT -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+
+					<!-- TEXT -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+						<!-- RECOMMENDATION TEXT -->
+						<widget class="text" id="SMtx" auto_size="vertical" style="semi_bold" size="xsmall" alignment="left,centre_y"/>
+
+						<!-- KNOWLEDGE -->
+						<widget class="label" id="ktxt" auto_size="vertical" size="small" colour="faded text"/>
+					</container>
+
+					<widget class="horizontal_subtle_divider" height="2"/>
+
+				</container>
+			</container>
+
+			<!-- TRANSFER INFORMATION -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10"/>
+
+				<!--Transfer/Loan info-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="2" vertical_offset="0" vertical_gap="2"/>
+						
+					<!-- TRANSFER INTEREST -->
+					<container id="trif">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2"/>
+
+						<widget class="text" id="trit" font="label" colour="text" auto_size="vertical">
+							<translation id="text" translation_id="450790" type="use" value="Transfer Interest[COMMENT: FR 21116, scout report panel label]"/>
+						</widget>
+
+						<widget class="text" id="triw" style="semi_bold" auto_size="vertical" multiline="false"/>
+					</container>
+				</container>
+					
+				<!-- LOAN INTEREST -->
+				<container id="loif">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2"/>
+
+					<widget class="text" id="loit" font="label" colour="text" auto_size="vertical">
+						<translation id="text" translation_id="450791" type="use" value="Loan Interest[COMMENT: FR 21116, scout report panel label]"/>
+					</widget>
+
+					<widget class="text" id="loiw" style="semi_bold" auto_size="vertical" multiline="false"/>
+				</container>
+
+				<!--Transfer Value/Estimated Wage-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="2" vertical_offset="0" vertical_gap="2"/>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2"/>
+
+						<widget class="text" font="label" colour="text" auto_size="vertical">
+							<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]"/>
+						</widget>
+
+						<widget class="text" id="cosw" style="semi_bold" auto_size="vertical" multiline="false"/>
+					</container>
+				</container>
+					
+				<!-- ESTIMATED WAGE -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2"/>
+
+					<widget class="text" font="label" colour="text" auto_size="vertical">
+						<translation id="text" translation_id="450789" type="use" value="Estimated Wage[COMMENT: FR 21116, scout report panel label]"/>
+					</widget>
+
+					<widget class="text" id="ewaw" style="semi_bold" auto_size="vertical" multiline="false"/>
+
+					<widget class="text" id="wagw" auto_size="vertical" colour="faded text">
+						<layout class="show_medium_vertical"/>
+					</widget>
+				</container>
+			</container>
+				
+			<widget class="horizontal_subtle_divider" height="2"/>
+
+
+				
+		</widget>
+
+		<!-- PROS AND CONS -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+
+			<!-- PROS -->
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+
+				<widget class="label" font="title" colour="fg positive" alignment="left,centre_y" size="large" auto_size="vertical">
+					<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
+				</widget>
+
+				<widget class="table" id="tpro" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_focus_target="true" default_sort_column="0">
+					<list id="column_table_properties">
+						<record index="0" sort_ascending="false"/>
+					</list>
+				</widget>
+				<widget class="text" id="nPro" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+			</container>
+
+			</container>
+		
+		<!-- CONS -->
+			<container class="main_subtle_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+				<widget class="label" font="title" colour="fg negative" alignment="left,centre_y" size="large" auto_size="vertical">
+					<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]"/>
+				</widget>
+
+				<widget class="table" id="tcon" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_focus_target="true" default_sort_column="0">
+					<list id="column_table_properties">
+						<record index="0" sort_ascending="false"/>
+					</list>
+				</widget>
+				<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true"/>
+			</container>
+	
+	</container>
+
+	<!-- NO REPORT -->
+	<container id="norp" hidden="true" class="client_object_viewer_xml_panel" file="player/tcs/selector/big/reports/overall/noreport">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</container>
+</panel>

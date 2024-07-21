@@ -154,12 +154,12 @@
 		<translation id="subtitle" type="use" translation_id="292589"/>
 	</container>
 
-	<!-- PERSONAL DETAILS / POSITIONS -->
+	<!-- PERSONAL DETAILS / POSITIONS 
 	<widget class="player_positions_indicator_panel" id="Ppos" file="player/tcs/alt/position" navigation_container="true" default_focus="true">
 		<record id="object_property" get_property="objt" set_property="objt"/>
 		<translation id="title" translation_id="333996" type="use"/>
 		<translation id="subtitle" type="use" translation_id="292589"/>
-	</widget>
+	</widget> -->
 
 	<!-- PERSONAL DETAILS / PROGRESS -->
 	<container class="client_object_viewer_xml_panel" id="tpPr" file="player/tcs/selector/information/ppdp prog" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">

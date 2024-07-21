@@ -1,0 +1,177 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<list id="properties_to_forward">
+		<record get_property="recommendation_widget_mode" set_property="recommendation_mode" target="sriW" />
+		<record get_property="showing_in_list" set_property="showing_in_list" target="sriW" />
+	</list>
+	<container class="main_subtle_box">		
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="10" />
+
+<!-- RECOMMENDATION WIDGET -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0"/>
+
+					<!-- RECOMMENDATION LETTER -->
+					<widget class="player_scout_recommendation_widget" file="widgets/player scout recommendation widget compact" id="RCic" alignment="left,centre_y" auto_size="none" click_event="ltms" show_knowledge_bar="false" width="32" height="32" recommendation_mode="2" should_recolour_recommendation_value="true"/>
+
+					<!-- TEXT -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+
+						<widget class="horizontal_subtle_divider" height="2"/>
+							
+						<!-- TEXT -->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+							<!-- RECOMMENDATION TEXT -->
+							<widget class="text" id="SMtx" auto_size="vertical" style="semi_bold" size="xsmall" alignment="left,centre_y"/>
+
+							<!-- KNOWLEDGE -->
+							<widget class="label" id="ktxt" auto_size="vertical" size="small" colour="faded text"/>
+						</container>
+
+						<widget class="horizontal_subtle_divider" height="2"/>
+
+					</container>
+				</container>
+
+		<container draw_horizontal_dividers="true">
+
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend">
+				<global id="vertical_gap" name="ui.inner_box_gap" />
+			</attachment_group>
+
+			<container id="strs">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" />
+
+
+				<widget class="label" font="title" alignment="left,centre_y" auto_size="vertical">
+					<translation id="text" translation_id="539029" type="use" value="Key Information[COMMENT: AREA: Scouting; SUB-AREA: Scouting card/report header; FR-BN: 36081; NOTES: title for area showing scout's opinion on player ability]" />
+				</widget>
+				
+				<container>
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" />
+
+					<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+						<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+					</widget>
+
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1" />
+						
+						<!--CA-->
+						<widget class="scout_stars_label" id="cast" height="18" alignment="left, centre_y" mode="1">
+							<record id="object_property" get_property="Pcab" />
+						</widget>
+						
+						<!--CA label-->
+						<widget class="text" id="caLB" auto_size="vertical" alignment="left" colour="faded text" />
+						
+					</container>
+
+				</container>
+
+				<container>
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" />
+
+					<widget class="text" auto_size="vertical" spec="text" font="label" colour="text" alignment="left,centre_y">
+						<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+					</widget>
+					
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80, -1" />
+						
+						<!--PA-->
+						<widget class="scout_stars_label" id="past" height="18" alignment="left" mode="2">
+							<record id="object_property" get_property="Ppab" />
+						</widget>
+						
+						<!--PA label-->
+						<widget class="text" id="paLB" auto_size="vertical" alignment="left" colour="faded text" />
+					</container>
+
+				</container>
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_layout="-5, 30" vertical_gap="6" />
+				
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" />
+
+					<widget class="label" font="title" alignment="left,centre_y" auto_size="vertical">
+						<translation id="text" translation_id="539030" type="use" value="Other Information[COMMENT: AREA: Scouting; SUB-AREA: Scouting card/report header; FR-BN: 36081; NOTES: title for area showing player transfer info]" />
+					</widget>
+								 
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3" />
+
+						<widget class="text" font="label" colour="text" auto_size="vertical">
+							<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+						</widget>
+
+						<widget class="text" id="cosw" style="semi_bold" auto_size="vertical" multiline="false" />
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3" />
+
+						<widget class="text" font="label" colour="text" auto_size="vertical">
+							<translation id="text" translation_id="450789" type="use" value="Estimated Wage[COMMENT: FR 21116, scout report panel label]" />
+						</widget>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" />
+							
+							<widget class="text" id="ewaw" style="semi_bold" auto_size="vertical" multiline="false" />
+							<widget class="text" id="wagw" auto_size="vertical" colour="faded text" />
+						</container>
+					</container>
+
+					<container id="trif">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3" />
+
+						<widget class="text" id="trit" font="label" colour="text" auto_size="vertical">
+							<translation id="text" translation_id="450790" type="use" value="Transfer Interest[COMMENT: FR 21116, scout report panel label]" />
+						</widget>
+
+						<widget class="text" id="triw" style="semi_bold" auto_size="vertical" multiline="false" />
+
+					</container>
+
+					<container id="loif">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3" />
+
+						<widget class="text" id="loit" font="label" colour="text" auto_size="vertical">
+							<translation id="text" translation_id="450791" type="use" value="Loan Interest[COMMENT: FR 21116, scout report panel label]" />
+						</widget>
+
+						<widget class="text" id="loiw" style="semi_bold" auto_size="vertical" multiline="false" />
+					</container>
+
+				</container>
+			
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right" vertical_alignment="bottom" horizontal_offset="0" horizontal_gap="0"/>
+
+					<widget class="player_scouting_centre_actions_popup_button" auto_size="all" id="scAa" fixed="true" appearance="buttons/subtle/normal/button" hidden="true">
+						<string id="remove_if" value="is_fmt" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

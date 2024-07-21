@@ -99,7 +99,7 @@
 		<container class="player_profile_panel" id="popS" file="none">
 			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
-			<container class="player_personal_details_panel" id="tper" file="player/tcs/selector/information/ppdp">
+			<container class="player_personal_details_panel" id="tper" file="player/tcs/selector/information/ppdp_popup">
 				<record id="object_property" get_property="objt" set_property="objt"/>
 				<translation id="title" type="use" translation_id="292923"/>
 				<translation id="subtitle" type="use" translation_id="292589"/>

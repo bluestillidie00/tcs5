@@ -2,7 +2,7 @@
 	<attachment_group class="vertical_arrange_autosize" />
 	<boolean id="suppress_update_after_selection" value="true"/>
 	
-	<container class="tcs_tabs" height="450" id="popu" default_item="oVer" save_default_state="true" save_session_state="true" >
+	<container class="tcs_tabs" height="450" id="popu" default_item="RepO" save_default_state="true" save_session_state="true" >
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
 		<!-- OVERVIEW -->
@@ -100,7 +100,7 @@
 			<container class="tcs_box">
 				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-				<widget class="player_scout_reports_panel" id="repo" file="player/tcs/scouting/tabs/reports">
+				<widget class="player_scout_reports_panel" id="repo" file="player/tcs/tabs/overview/popup/reports">
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
 			</container>
