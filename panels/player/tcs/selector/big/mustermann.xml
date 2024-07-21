@@ -1,0 +1,268 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+	
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<string id="skin_style" value="title link"/>
+
+		<!-- Linked header -->
+		<widget class="link_button" auto_size="all">
+			<translation id="text" value="Mustermann Metrics" type="use"/>
+		</widget>
+	</container>
+	
+	
+	<container class="main_subtle_box" height="60" rrep="archetype_bg">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+		<widget class="client_object_viewer_xml_panel" file="player/mustermann/archetypes no title" id="arch" late_loading="true">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	
+	</container>
+
+	<!-- STACKED BAR CHARTS -->
+	<container class="main_subtle_box">
+		<attachment_group class="vertical_arrange_autosize"/>
+		
+		<!--DEFENSIVE ACTIONS KEY-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize"/>
+				
+			<widget class="label" auto_size="all" font="title" colour="text">
+				<translation id="text" type="use" value="Defensive Actions"/>
+			</widget>
+			
+			<container height="20">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="4"/>
+			
+				<!-- TACKLES -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked1" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Tackles"/>
+				</widget>
+				
+				<container width="2"/>
+				
+				<!-- BLOCKS -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked2" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Blocks"/>
+				</widget>
+			
+				<container width="2"/>
+			
+				<!-- CLEARANCES -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked3" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Clearances"/>
+				</widget>
+			
+				<container width="2"/>
+
+				<!-- INTERCEPTIONS -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked4" auto_size="vertical" width="4"/>
+					
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Interceptions"/>
+				</widget>
+			</container>
+				
+		</container>
+		
+		<!-- DEFENSIVE ACTIONS BAR -->
+		<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally" height="30">
+			
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+				<widget class="stacked_defensive_actions_tackles" auto_size="horizontal">
+					<record id="object_property" get_property="Pota"/>
+				</widget>
+					
+				<widget class="stacked_defensive_actions_blocks" auto_size="horizontal">
+					<record id="object_property" get_property="PObg"/>
+				</widget>
+					
+				<widget class="stacked_defensive_actions_clearances" auto_size="horizontal">
+					<record id="object_property" get_property="POc9"/>
+				</widget>
+					
+				<widget class="stacked_defensive_actions_interceptions" auto_size="horizontal">
+					<record id="object_property" get_property="POiG"/>
+				</widget>
+
+			</container>
+				
+			<container default_width="-1"/>
+		</container>
+				
+		<!--EXCITEMENT FACTOR KEY-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize"/>
+				
+			<widget class="label" auto_size="all" font="title" colour="text">
+				<translation id="text" type="use" value="Excitement Factor"/>
+			</widget>
+			
+			<container height="20">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="4"/>
+			
+				<!-- DRIBBLES -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked1" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Dribbles"/>
+				</widget>
+				
+				<container width="2"/>
+				
+				<!-- OPEN PLAY KEY PASSES -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked2" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Open Play Key Passes"/>
+				</widget>
+			
+				<container width="2"/>
+			
+				<!-- SHOTS -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked3" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Shots"/>
+				</widget>
+			</container>
+		</container>
+		
+			<!-- EXCITEMENT FACTOR -->
+		<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally" height="30">
+			
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+				<widget class="stacked_excitement_factor_dribbles" auto_size="horizontal">
+					<record id="object_property" get_property="Podr"/>
+				</widget>
+					
+				<widget class="stacked_excitement_factor_key_passes" auto_size="horizontal">
+					<record id="object_property" get_property="Pop9"/>
+				</widget>
+					
+				<widget class="stacked_excitement_factor_shots" auto_size="horizontal">
+					<record id="object_property" get_property="POsg"/>
+				</widget>
+
+			</container>
+				
+			<container default_width="-1"/>
+		</container>
+		
+		<!--DEFENSIVE ACTIONS KEY-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize"/>
+				
+			<widget class="label" auto_size="all" font="title" colour="text">
+				<translation id="text" type="use" value="Key Passing Breakdown"/>
+			</widget>
+			
+			<container height="20">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="4"/>
+			
+				<!-- TACKLES -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked1" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Open Play"/>
+				</widget>
+				
+				<container width="2"/>
+				
+				<!-- BLOCKS -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked2" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Set Piece"/>
+				</widget>
+			
+				<container width="2"/>
+			
+				<!-- CLEARANCES -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked3" auto_size="vertical" width="4"/>
+
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Progressive"/>
+				</widget>
+			
+				<container width="2"/>
+
+				<!-- INTERCEPTIONS -->
+				<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked4" auto_size="vertical" width="4"/>
+					
+				<widget class="label" auto_size="all" font="text" colour="faded text">
+					<translation id="text" type="use" value="Boring"/>
+				</widget>
+			</container>
+				
+		</container>
+		
+<container height="30">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				
+				<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally">
+			
+					<container>
+						<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+						<widget class="stacked_passing_breakdown_passes" auto_size="horizontal">
+							<record id="object_property" get_property="POpc" />
+						</widget>
+						
+					</container>
+					
+					<container default_width="-1"/>
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally">
+			
+					<container>
+						<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+						<widget class="stacked_passing_breakdown_key" auto_size="horizontal">
+							<record id="object_property" get_property="POkG" />
+						</widget>
+						
+						<widget class="stacked_passing_breakdown_progressive" auto_size="horizontal">
+							<record id="object_property" get_property="PGR9" />
+						</widget>
+						
+					</container>
+					
+					<container default_width="-1"/>
+				</container>
+				
+				<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally">
+			
+					<container>
+						<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+						<widget class="stacked_passing_breakdown_op" auto_size="horizontal">
+							<record id="object_property" get_property="Pop9" />
+						</widget>
+						
+					</container>
+					
+					<container default_width="-1"/>
+				</container>
+			
+			</container>
+		
+		
+	</container>
+
+</panel>

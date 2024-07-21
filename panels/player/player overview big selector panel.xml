@@ -83,6 +83,11 @@
 	<widget file="player/tcs/selector/big/reports" class="client_object_viewer_xml_panel" id="repo" late_loading="true">
 		<translation id="title" translation_id="254774" type="use"/>
 	</widget>
+    
+	<!-- REPORTS -->
+	<widget file="player/tcs/selector/big/mustermann" class="client_object_viewer_xml_panel" id="must" late_loading="true">
+		<translation id="title" value="Mustermann Metrics" type="use"/>
+	</widget>
 
 	<!-- REPORTS ALT 
 	<widget file="player/tcs/selector/big/reports alt" class="client_object_viewer_xml_panel" id="repA" late_loading="true">

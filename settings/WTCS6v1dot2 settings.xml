@@ -3,6 +3,7 @@
 	<!-- DEFAULT BOX COLOUR -->
 	<colour name="bg lighter" value="rgb(43,43,43)"/>
 	<colour name="bg" value="rgb(34,34,34)"/>
+	<colour name="archetype_bg" value="rgb(36,36,36)"/>
 
 	<!-- TCS Colours -->
 	<!-- BOXES -->
@@ -98,6 +99,15 @@
 	<colour name="bar_defend_border"															value="mustermann5"/>
 	<colour name="bar_possess"																	value="gimn2"/>
 	<colour name="bar_possess_border"															value="gimn1"/>
+	
+	<colour name="stacked1"																		value="gimn2"/>
+	<colour name="stacked1_border"																value="gimn2"/>
+	<colour name="stacked2"																		value="mustermann6"/>
+	<colour name="stacked2_border"																value="mustermann6"/>
+	<colour name="stacked3"																		value="mustermann4"/>
+	<colour name="stacked3_border"																value="mustermann4"/>
+	<colour name="stacked4"																		value="mustermann2"/>
+	<colour name="stacked4_border"																value="mustermann2"/>
 	
 	<colour name="full time stad" value="rgb(40,40,40)"/> <!-- #282828 --> 
 

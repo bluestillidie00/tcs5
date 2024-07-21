@@ -45,6 +45,10 @@
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
 	
+	<widget class="client_object_viewer_xml_panel" file="player/mustermann/archetypes" id="arch" late_loading="true">
+		<translation id="title" type="use" value="Archetypes (Mustermann Iconic)" />
+	</widget>
+	
 	<!-- FORM / LAST 5 GAMES -->
 	<widget class="player_additional_stats_panel" file="none" id="la5g">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
