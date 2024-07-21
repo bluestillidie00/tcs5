@@ -1,106 +1,102 @@
 <panel>
-    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
-
-    <!-- TOP BAR -->
-    <container height="80" class="tcs_box">
-        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-        <widget class="match_info_panel" id="bmin" file="match/match info overview popup" small_version="true">
-            <record id="object_property" get_property="objt" set_property="objt"/>
-        </widget>
-    </container>
-
-    <container class="tcs_tabs" save_session_state="true">
-
-        <!-- MATCH EVENTS AND TEAM STATS -->
-        <container id="over">
-            <translation id="title" type="use" value="Overview" />
-            <layout class="horizontal_arrange" horizontal_layout="-6,-8" horizontal_gap="8" />
-
-            <!-- LEFT HAND SIDE -->
-            <container>
-                <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="8"/>
-
-                <!-- NOTABLE EVENTS -->
-                <container class="tcs_box">
-                    <layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-                    <!-- STADIUM PIC -->
-                    <container>
-                        <layout class="stick_to_sides_attachment" apply_to_children="true" inset="-100"/>
-
-		<widget class="client_object_viewer_xml_panel" file="club/tcs/fm24/overview/stadium/picture" >
+	<layout class="horizontal_arrange" horizontal_layout="-5,-8" horizontal_gap="8"/>
+ 
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+		
+		<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+		
+		<container height="64" class="tcs_table">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+ 
+			<widget class="match_info_panel" id="bmin" file="match/tcs/simulate match/info" small_version="false">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+ 
+		<!-- NOTABLE EVENTS -->
+		<widget class="match_notable_events_panel" file="none" id="nota">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 			<record id="object_property" get_property="objt" set_property="objt"/>
-		</widget>
-                    
-                    <container class="tcs_box" appearance="tcs/backgrounds/overlay/100" transparency="0.80" rrep="bg"/>
-                    </container>
 
-                    <!-- NOTABLE EVENTS -->
-                    <widget class="match_notable_events_panel" file="none" id="nota">
-                        <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
-                        <record id="object_property" get_property="objt" set_property="objt"/>
-
-                        <container id="NEve">
-                            <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" horizontal_inset="4" />
-                            <!-- 
+			<container id="NEve">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" horizontal_inset="0"/>
+				<!-- 
                         <widget class="text" font="title" auto_size="vertical" alignment="centre" colour="title">
                             <translation id="text" translation_id="515063" type="use" value="Notable Events[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing notable events from the match; goals, cards etc]" />
                         </widget> -->
 
-                            <widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true" >
+				<widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true">
 
-                                <list id="column_widget_properties">
-                                    <record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false" />
-                                    <record index="1" icon_alignment="centre" navigation_focus_target="false" />
-                                    <record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false" />
-                                    <record index="3" icon_alignment="centre" navigation_focus_target="false" />
-                                    <record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false" />
-                                </list>
+					<list id="column_widget_properties">
+						<record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false"/>
+						<record index="1" icon_alignment="centre" navigation_focus_target="false"/>
+						<record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false"/>
+						<record index="3" icon_alignment="centre" navigation_focus_target="false"/>
+						<record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false"/>
+					</list>
 
-                                <list id="column_table_properties">
-                                    <record index="0" id="homt" />
-                                    <record index="1" id="homi" />
-                                    <record index="2" id="time" />
-                                    <record index="3" id="awai" />
-                                    <record index="4" id="awat" />
-                                </list>
-                            </widget>
-                        </container>
+					<list id="column_table_properties">
+						<record index="0" id="homt"/>
+						<record index="1" id="homi"/>
+						<record index="2" id="time"/>
+						<record index="3" id="awai"/>
+						<record index="4" id="awat"/>
+					</list>
+				</widget>
+			</container>
 
-                    </widget>
+		</widget>
+ 
+	</container>
+	
+	<container height="80" class="tcs_table">
+	<attachment_group class="vertical_arrange" vertical_alignment="middle" />
+	
+		<!-- COMPETITION -->
+		<container priority="1">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 
-                    <!-- OVERLAY AT BOTTOM TO ROUND STADIUM PIC -->
-                    <container class="bordered_box" appearance="tcs/ro" rrep="bg lighter"/>
-                </container>
+			<record id="default_properties" auto_size="vertical" alignment="centre"/>
 
-                <!-- MATCH STATS -->
-                <container class="tcs_box">
-                    <attachment_group class="vertical_arrange_autosize" />
+			<widget class="label" font="label">
+				<translation id="text" translation_id="227740" type="use"/>
+			</widget>
+			<widget class="fixture_name_text" multiline="true">
+				<record id="object_property" get_property="FxNm"/>
+			</widget>
+		</container>
 
-                    <widget class="match_stats_panel" id="MSPn" file="match/match stats overview popup">
+		<!-- ATTENDNACE -->
+		<container priority="3">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+			<record id="default_properties" auto_size="vertical" alignment="centre"/>
+
+			<widget class="label" font="label">
+				<translation id="text" translation_id="247242" type="use" value="Attendance"/>
+			</widget>
+			<widget class="number_label">
+				<record id="object_property" get_property="FxEA" dont_set_hint="true"/>
+			</widget>
+		</container>
+	
+	</container>
+	
+	</container>
+ 
+ <container class="tcs_tabs_primary" save_session_state="true" default_item="stat">
+ 
+  <container id="stat">
+            <translation id="title" type="use" value="Match Stats" />
+            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                 <widget class="match_stats_panel" id="Mtat" file="match/match stats">
                         <record id="object_property" get_property="objt" set_property="objt"/>
                     </widget>
-                </container>
-            </container>
-
-            <!-- RIGHT -->
-            <!-- PLAYER STATS -->
-            <container class="tcs_box">
-                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-                <!-- HOME TEAM -->
-                <widget class="match_team_stats_panel" id="hfMs" file="match/match team stats overview popup" team_index="0">
-                    <record id="object_property" get_property="objt" set_property="objt"/>
-                </widget>
-
-                <!-- AWAY TEAM -->
-                <widget class="match_team_stats_panel" id="afMs" file="match/match team stats overview popup" team_index="1">
-                    <record id="object_property" get_property="objt" set_property="objt"/>
-                </widget>
-            </container>
         </container>
-
+		
         <container id="home">
             <translation id="title" type="use" value="Home Stats" />
 <layout class="horizontal_arrange" horizontal_layout="-6"  />
@@ -140,14 +136,8 @@
             </widget>
         </container>
         
-        <container id="stat">
-            <translation id="title" type="use" value="Match Stats" />
-            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-                 <widget class="match_stats_panel" id="Mtat" file="match/match stats">
-                        <record id="object_property" get_property="objt" set_property="objt"/>
-                    </widget>
-        </container>
-
+       
     </container>
+
+ 
 </panel>
