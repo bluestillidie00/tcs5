@@ -1,0 +1,35 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- We need to use a more compact version of the layout for each achievement item too -->
+	<string id="item_file" value="player/career milestone item small"/>
+	<string id="view" value="5"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="PHac" section="PHac" auto_size="horizontal">
+				<translation id="text" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
+			</widget>
+		</container>
+
+		<widget class="spacer" height="3" />
+
+		<!-- List of achievements -->
+		<container class="scrolling_box">
+			<container id="lndM">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Filled in code using 'player history achievement small item panel' -->
+			</container>
+		</container>
+	</container>
+</panel>

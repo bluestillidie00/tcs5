@@ -1,0 +1,41 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- properties for the picture used to mark cards in the table. I've shoved gap in here as the spacing between the cards simply for convienience-->
+	<!-- colour should be the default colour for unfilled card blocks-->
+	<record id="widget_info" class="picture" file="icons/16px/square" scale_picture="true" keep_aspect_ratio="false" height="12" gap="1" red_replacement="grey" WMev="true"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- Set icon to only show: Yel, Sus -->
+		<record id="widget_properties" type="5"/>
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="text" auto_size="all" font="title" colour="accent">
+				<translation id="text" translation_id="247569" type="use" value="Bans" />
+			</widget>
+		</container>
+
+		<widget class="spacer" height="3"/>
+
+		<!-- Bans get put in here. The first 5 columns may be used for -->
+		<widget class="table" id="banT" layout="30,-1" row_height="22" fixed_size_rows="true" column_spacing="10">
+			<list id="column_table_properties">
+				<!-- Cards display. Red and yellow use the same appearance but will be recoloured as necessary -->
+				<record index="0" id="card" sort_disabled="true"/>
+				<!-- Text describing ban -->
+				<record index="1" id="text" sort_disabled="true">
+					<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" WMev="true"/>
+				</record>
+			</list>
+		</widget>
+	</container>
+</panel>

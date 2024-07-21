@@ -1,0 +1,53 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<widget class="progress_graph_panel" file="none">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="PpAH" />
+					<integer id="set_property" value="value" />
+				</record>
+			</list>
+		</record>
+		
+		
+	<layout class="stick_to_sides_attachment" alignment="all" inset="5,5" apply_to_children="true" />
+
+	<container >
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="scBt" auto_size="horizontal">
+				<translation id="text" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
+			</widget>
+		</container>
+
+		<widget class="graph" id="grap" >
+
+			<record id="default_series_properties" colour="accent" type="line" line_width="2" />
+			<record id="instant_hint" file="generic/graph instant hint star rating" />
+			<record id="x_axis" hide_title="true" consistent_label_width="true" gap="3">
+				<record id="label_font" font="title"/>
+			</record>
+			<record id="y_axis" interval="2"  show_labels="false" >
+				<translation id="title" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]"/>
+				<translation id="hint" translation_id="257318" type="use" value="Assistant manager's opinion of this player's current ability[COMMENT - person list view column heading hint]"/>
+			</record>
+
+			<list id="grid_line_styles">
+				<record colour="transparent"/>
+				<record colour="transparent"/>
+			</list>
+		</widget>
+		<widget class="text" id="nprg" colour="faded white" alignment="centre" hidden="true">
+			<translation id="text" translation_id="242522" type="use" value="N/A" />
+		</widget>
+	</container>
+		
+	</widget>	
+</panel>

@@ -1,0 +1,62 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_offset="0" vertical_inset="0" vertical_gap="0"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" vertical_inset="0" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="ppin" section="Prel" auto_size="all">
+				<!-- @archie.buck Replacing this for bug 171807 -->
+				<translation id="text" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
+			</widget>
+		</container>
+
+		<!-- No data label -->
+		<widget class="label" id="labl" auto_size="vertical" hidden="true">
+			<translation id="text" translation_id="330275" type="use" value="Not available[COMMENT: happiness panel; text displayed when no happiness information is available]" />
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize"/>
+			<!-- Morale-->
+			<widget class="editable_client_object_property_panel" id="mora"  size="large" style="semi_bold" auto_size="vertical">
+				<record id="object_property">
+					<integer id="get_property" value="Pmor" />
+				</record>
+				<record id="widget_properties" auto_size="vertical" icon_enabled="true" should_recolour="true" />
+			</widget>
+
+			<!--dyanmics-->
+			<container id="dyLC">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+
+				<widget class="text" id="dynL" auto_size="all" />
+				<widget class="text" id="dynS" colour="faded text" auto_size="vertical" multiline="false"/>
+			</container>
+		</container>
+		<!-- Number of positive / number of negatives -->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+			<widget class="link_text" id="posC" section="Ppin" size="small" auto_size="all"/>
+			<widget class="label" id="hdiv" size="small" auto_size="all" hidden="true">
+				<string id="text" value="/"/>
+			</widget>
+			<widget class="link_text" id="negC" section="Ppin" size="small" auto_size="all"/>
+		</container>
+		
+		
+
+		<container class="scrolling_box">
+			<!-- Most important happiness string-->
+			<widget class="text" id="genH" auto_size="vertical" size="small" colour="faded text"/>
+		</container>
+	</container>
+</panel>

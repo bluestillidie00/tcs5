@@ -8,45 +8,68 @@
 		<layout class="stick_to_sides_attachment" alignment="right,top" inset="4,2" />
 	</widget>
 
-	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true">
-		<translation id="title" translation_id="247571" type="use" value="Fitness" />
-	</widget>
-	<widget class="client_object_viewer_xml_panel" file="widgets/client object progress graph" section="Pgrg" id="Pgrg" late_loading="true">
-		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
-	</widget>
-	<widget class="player_bans_overview_panel" section="PHst" id="pbop" late_loading="true">
-		<translation id="title" translation_id="247569" type="use" value="Bans" />
-	</widget>
-	<widget class="player_transfer_information_small_panel" id="ptri" late_loading="true">
-		<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
-	</widget>
-	<widget class="person_happiness_panel" file="person/person happiness profile" id="Phap" late_loading="true">
-		<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
-	</widget>
-	<widget class="person_happiness_panel" file="person/person happiness profile plans" id="Ppla" late_loading="true">
-		<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
-	</widget>
-  <widget class="person_chemistry_relationship_panel" file="person/person playing time pathway profile" id="PPtp" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-    <translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
-  </widget>
+
 	<widget class="player_form_summary_panel" id="Pfor" file="player/player form summary panel profile" late_loading="true">
 		<translation id="title" translation_id="308194" type="use" value="Form[COMMENT: team form 5 games, all competitions, short version]" />
-	</widget>
-	<widget class="player_training_stats_panel" id="pTTS" late_loading="true" valid_for_international_managers_other_team="false" valid_for_unemployed_player="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-		<translation id="title" translation_id="242773" type="use" value="Training" />
-	</widget>
-	<widget class="player_contract_panel" id="pcon" file="player/player contract small" valid_for_unemployed_player="false" late_loading="true">
-		<translation id="title" translation_id="230163" type="use" value="Contract" />
-	</widget>
-	<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
-		<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
-	</widget>
-	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
-		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
 	
 	<widget class="client_object_viewer_xml_panel" file="player/mustermann/archetypes" id="arch" late_loading="true">
 		<translation id="title" type="use" value="Archetypes (Mustermann Iconic)" />
+	</widget>
+	
+	<!-- BANS -->
+		<widget class="player_bans_overview_panel" section="PHst" id="pbop" late_loading="true" file="player/tcs/selector/small/bans">
+		<translation id="title" translation_id="247569" type="use" value="Bans" />
+	</widget>
+	
+	<!-- CAREER MILESTONES -->
+	<widget class="player_history_achievements_panel" id="pac1" file="player/tcs/selector/small/milestones" late_loading="true">
+		<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
+	</widget>
+	
+	<!-- CAREER STATS -->
+		<widget class="playing_history_summary_panel" file="player/tcs/selector/small/history" id="Pcrs" late_loading="true">
+		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
+	</widget>
+	
+	<!-- CONTRACT  -->
+	<widget class="player_contract_panel" id="pcon" file="player/tcs/selector/small/contract" valid_for_unemployed_player="false" late_loading="true">
+		<translation id="title" translation_id="230163" type="use" value="Contract" />
+	</widget>
+	
+	<!-- DYNAMICS -->
+	<widget class="person_happiness_panel" file="player/tcs/selector/small/dynamics" id="Phap" late_loading="true">
+		<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
+	</widget>
+	
+	<!-- FITNESS -->
+	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true" file="player/tcs/selector/small/fitness">
+		<translation id="title" translation_id="247571" type="use" value="Fitness" />
+	</widget>
+	
+	<!-- PLANS -->
+	<widget class="person_happiness_panel" file="player/tcs/selector/small/plans" id="Ppla" late_loading="true">
+		<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
+	</widget>
+	
+	<!-- PLAYING TIME -->
+  <widget class="person_chemistry_relationship_panel" file="player/tcs/selector/small/playing time" id="PPtp" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+    <translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+  </widget>
+  
+  <!-- PROGRESS -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/selector/small/progress" section="Pgrg" id="Pgrg" late_loading="true">
+		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
+	</widget>
+	
+	<!-- TRAINING --> 
+	<widget class="player_training_stats_panel" id="pTTS" late_loading="true" valid_for_international_managers_other_team="false" valid_for_unemployed_player="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false" file="player/tcs/selector/small/training">
+		<translation id="title" translation_id="242773" type="use" value="Training" />
+	</widget>
+	
+	
+	<widget class="player_transfer_information_panel" id="ptri" late_loading="true" file="player/tcs/selector/small/transfer">
+		<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
 	</widget>
 	
 	<!-- FORM / LAST 5 GAMES -->

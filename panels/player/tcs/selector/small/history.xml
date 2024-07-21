@@ -1,0 +1,41 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="small_mode" value="true"/>
+
+	<container>
+		<record id="object_property" get_property="tbcl" set_property="icRR" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="PHst" section="PHst" auto_size="horizontal">
+				<translation id="text" translation_id="247605" type="use" value="Career Stats" />
+			</widget>
+		</container>
+
+		<widget class="table" id="phst" layout="50,10,10,-1,55,45" fixed_size_rows="true" row_height="19" row_spacing="0" column_spacing="0">
+			<list id="column_table_properties">
+				<record index="0" sort_disabled="true" />
+				<record index="1" hidden="true" />
+				<record index="2" hidden="true" />
+				<record index="3" sort_disabled="true" right="10"/>
+				<record index="4" sort_disabled="true" />
+				<record index="5" sort_disabled="true" />
+			</list>
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" colour="faded text" size="small"/>
+				<record index="1" alignment="left"/>
+				<record index="2" alignment="left"/>
+				<record index="4" alignment="left,centre_y"/>
+				<record index="5" alignment="left,centre_y" />
+			</list>
+		</widget>
+	</container>
+</panel>

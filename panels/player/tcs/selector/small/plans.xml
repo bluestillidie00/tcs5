@@ -1,0 +1,62 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_box" rrep="bg lighter" draw_vertical_dividers="true">
+
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="12"/>
+	
+		<!-- short term future / long term future -->
+		<!-- short term plans -->
+		<container id="shor">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+			<container height="15">
+				<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true"/>
+
+				<string id="skin_style" value="title link"/>
+
+				<!-- Linked header -->
+				<widget class="link_button" section="Prel" auto_size="horizontal">
+					<translation id="text" translation_id="251277" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]"/>
+				</widget>
+			</container>
+
+			<widget class="table" id="futt" layout="16,-1" auto_size_rows="true" fixed_size_rows="false">
+				<list id="column_table_properties">
+					<record id="bull">
+						<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16"/>
+					</record>
+					<record id="text">
+						<record id="widget_info" class="text" auto_size="vertical"/>
+					</record>
+				</list>
+			</widget>
+		</container>
+		
+		<!-- Long term plans -->
+		<container id="long">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+			<container height="15">
+				<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true"/>
+
+				<string id="skin_style" value="title link"/>
+
+				<!-- Linked header -->
+				<widget class="link_button" section="Prel" auto_size="horizontal">
+					<translation id="text" translation_id="251278" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]"/>
+				</widget>
+			</container>
+		
+			<widget class="table" id="lftt" layout="16,-1" auto_size_rows="true" fixed_size_rows="false">
+				<list id="column_table_properties">
+					<record id="bull">
+						<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16"/>
+					</record>
+					<record id="text">
+						<record id="widget_info" class="text" auto_size="vertical"/>
+					</record>
+				</list>
+			</widget>
+		</container>
+	</container>
+	
+</panel>

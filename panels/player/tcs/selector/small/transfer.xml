@@ -1,0 +1,70 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  
+	<boolean id="should_force_refresh" value="true" />
+
+	<container >
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="Ptin" section="Ptin" auto_size="horizontal">
+				<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+			</widget>
+		</container>
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- Player value -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top, extend" vertical_gap="0" />
+
+				<widget class="text" font="label" auto_size="all">
+					<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+				</widget>
+				<widget class="transfer_value_label" id="TrVa" font="text" size="medium" style="bold" auto_size="all" alignment="left, centre_y" allow_link_to_transfer_info="true" show_button_appearance="false" />
+			</container>
+
+			<!-- Transfer Status -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" vertical_gap="0"/>
+
+				<widget class="text" font="label" auto_size="all">
+					<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left, extend" />
+
+					<widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" />
+					<widget class="transfer_status_label" id="TSta" font="text" style="bold" auto_size="all" />
+				</container>
+			</container>
+
+			<!-- Loan Status -->
+			<container id="lssT">
+				<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" vertical_gap="0"/>
+
+				<widget class="text" font="label" auto_size="all">
+					<translation id="text" translation_id="247489" type="use" value="Loan Status" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left, extend" />
+
+					<widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" />
+					<widget class="loan_status_label" id="LSta" font="text" style="bold" auto_size="all" multiline="true" alignment="left, centre_y" />
+				</container>
+			</container>
+				
+				
+			</container>
+		</container>
+	</container>
+</panel>

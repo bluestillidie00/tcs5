@@ -61,7 +61,6 @@
 					<widget class="icon_button" icon="icons/16px/thumbs down" rrep="bg negative" id="ctbn" click_event="ctev" >
 						<layout class="centre_in_parent_attachment" alignment="vertical" />
 					</widget>
-
 				</container>
 
 			</container>

@@ -1,0 +1,211 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+	<container>
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<!-- set wage format -->
+		<integer id="format" value="10"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+
+			<!-- Set icon to only show: Yth, FrA, Ama -->
+			<record id="widget_properties" type="6"/>
+
+			<string id="skin_style" value="title link"/>
+
+			<!-- Linked header -->
+			<widget class="link_button" id="Pcnr" section="Pcnr" auto_size="horizontal">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+				<translation id="text" translation_id="257347" type="use" value="Contract[COMMENT - transfer status filter text; offers at contract stage]"/>
+			</widget>
+
+			<container class="scrolling_box">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<!-- Wage -->
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="0"/>
+
+						<widget class="wage_label" id="wagw" auto_size="all" style="semi_bold"/>
+					</container>
+
+					<widget class="formatted_label" id="wagi" auto_size="vertical" size="small" colour="faded text" multiline="true">
+						<string id="format" value="([%string#1])"/>
+					</widget>
+
+					<!-- Bonuses / clasues -->
+					<widget id="cbcl" class="label" auto_size="vertical" size="small" colour="faded text"/>
+
+					<!-- Contract expiry -->
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" vertical_inset="0"/>
+
+						<!-- Time to expiry -->
+						<widget id="ttex" class="label" auto_size="all" size="small" colour="faded text"/>
+
+						<!-- Expiry date -->
+						<widget class="editable_client_object_property_panel" id="expw" auto_size="vertical" size="small" colour="faded text">
+							<record id="widget_properties" class="game_formatted_label" format="([%date#1-short])" auto_size="all"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<!-- BONUS -->
+		<container class="main_contrast_box" id="pcBo" hidn="true">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			
+			<container file="player/tcs/selector/small/widgets/contract_bonuses"/>
+			<animation class="slide_in_bottom_animation"/>
+		</container>
+
+		<!-- CLAUSE -->
+		<container class="main_contrast_box" id="pcCl" hidn="true">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container file="player/tcs/selector/small/widgets/contract_clauses"/>
+			<animation class="slide_in_bottom_animation"/>
+		</container>
+	</container>
+
+	<!-- BUTTONS -->
+	<container height="30">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+	 
+		<!-- BONUSES -->
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	 
+			<!-- BONUSES BUTTON -->
+			<container class="icon_button" id="bon1" icon="icons/16px/bonus" controller_button="x_button" appearance="buttons/subtle/flex/button">
+				<translation id="text" translation_id="242354" type="use"/>
+				<record id="click_event" event_id="pCBo"/>
+			
+				<!-- HIDES THE BONUSES BUTTON -->
+				<attachment class="event_relay_attachment" event_id="pCBo">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="bon1"/>
+					</record>
+				</attachment>
+
+				<!-- SHOWS THE CLOSE BUTTON -->
+				<attachment class="event_relay_attachment" event_id="pCBo">
+					<record id="action_event">
+						<flags id="event_id" value="show"/>
+						<flags id="event_target" value="bon2"/>
+					</record>
+				</attachment>
+					
+				<!-- THIS EVENT SHOWS THE BONUSES BOX -->
+				<attachment class="event_relay_attachment" event_id="pCBo">
+					<record id="action_event">
+						<flags id="event_id" value="show"/>
+						<flags id="event_target" value="pcBo"/>
+					</record>
+				</attachment>
+			</container>
+		
+			<!-- BONUSES CLOSE BUTTON -->
+			<container class="icon_button" id="bon2" icon="icons/16px/clear" controller_button="x_button" appearance="buttons/subtle/flex/button" hidn="true">
+				<translation id="text" translation_id="249644" type="use"/>
+				<record id="click_event" event_id="pCBo"/>
+			
+				<!-- HIDES THE BONUSES -->
+				<attachment class="event_relay_attachment" event_id="pCBo">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="pcBo"/>
+					</record>
+				</attachment>
+						
+				<!-- HIDES THE CLOSE BUTTON -->
+				<attachment class="event_relay_attachment" event_id="pCBo">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="bon2"/>
+					</record>
+				</attachment>
+						
+				<!-- SHOWS THE BONUSES BUTTON -->
+				<attachment class="event_relay_attachment" event_id="pCBo">
+					<record id="action_event">
+						<flags id="event_id" value="show"/>
+						<flags id="event_target" value="bon1"/>
+					</record>
+				</attachment>
+			</container>
+		</container>
+		
+		<!-- CLAUSES -->
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	 
+			<container class="icon_button" id="cla1" icon="icons/16px/finances" controller_button="x_button" appearance="buttons/subtle/flex/button">
+				<translation id="text" translation_id="247434" type="use"/>
+				<record id="click_event" event_id="pCCl"/>
+			
+				<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+				<attachment class="event_relay_attachment" event_id="pCCl">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="cla1"/>
+					</record>
+				</attachment>
+
+
+				<attachment class="event_relay_attachment" event_id="pCCl">
+					<record id="action_event">
+						<flags id="event_id" value="show"/>
+						<flags id="event_target" value="cla2"/>
+					</record>
+				</attachment>
+						
+				<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+				<attachment class="event_relay_attachment" event_id="pCCl">
+					<record id="action_event">
+						<flags id="event_id" value="show"/>
+						<flags id="event_target" value="pcCl"/>
+					</record>
+				</attachment>
+			</container>
+		
+			<container class="icon_button" id="cla2" icon="icons/16px/clear" controller_button="x_button" appearance="buttons/subtle/flex/button" hidn="true">
+				<translation id="text" translation_id="249644" type="use"/>
+				<record id="click_event" event_id="pCCl"/>
+			
+				<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+				<attachment class="event_relay_attachment" event_id="pCCl">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="pcCl"/>
+					</record>
+				</attachment>
+						
+				<!-- THIS EVENT SHOWS THE UNIQUE ID BOX -->
+				<attachment class="event_relay_attachment" event_id="pCCl">
+					<record id="action_event">
+						<flags id="event_id" value="hide"/>
+						<flags id="event_target" value="cla2"/>
+					</record>
+				</attachment>
+						
+				<attachment class="event_relay_attachment" event_id="pCCl">
+					<record id="action_event">
+						<flags id="event_id" value="show"/>
+						<flags id="event_target" value="cla1"/>
+					</record>
+				</attachment>
+			</container>
+		</container>
+	
+	</container>
+
+</panel>

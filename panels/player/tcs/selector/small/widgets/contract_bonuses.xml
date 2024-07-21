@@ -1,0 +1,33 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+	
+			<!-- Build in code -->
+			<widget class="table" id="bons" layout="-1, -1" mode="" auto_size="vertical" row_spacing="0">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+				<boolean id="fixed_size_rows" value="false"/>
+				<boolean id="auto_size_rows" value="true"/>
+
+				<!-- default properties for everything in a table -->
+				<record id="default_properties">
+					<flags id="alignment" value="left,centre_y"/>
+				</record>
+
+				<!-- properies for specific columns in the table -->
+				<list id="column_widget_properties">
+					<record indx="0" size="10" colour="text" height="12"/>
+					<record indx="1" alignment="right,centre_y" colour="faded text" size="10"/>
+				</list>
+
+				<!-- table isn't sortable -->
+				<list id="column_table_properties">
+					<record index="0" sort_disabled="true" top="4" bottom="4"/>
+					<record index="1" sort_disabled="true" top="4" bottom="4"/>
+				</list>
+			</widget>
+		</container>
+	</container>
+</panel>

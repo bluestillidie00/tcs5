@@ -1,0 +1,101 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="left" horizontal_inset="0" vertical_offset="0"/>
+
+			<string id="skin_style" value="title link"/>
+
+			<!-- Linked header -->
+			<widget class="link_button" id="TrTi" section="Ptra" auto_size="all">
+				<string id="remove_if" value="is_fmt"/>
+				<translation id="text" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]"/>
+			</widget>
+
+			<widget class="text" id="NotT" auto_size="all" font="title" colour="accent">
+				<translation id="text" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]"/>
+			</widget>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+		
+			<container class="player_training_information" file="none">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+				
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				
+				<container width="130">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				
+					<widget class="pitch_with_player_positions" id="pspi" allow_click="false" wants_mouse_events="false" pitch_keep_selected_icons="false" vertical="false" pitch_alignment="centre" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="alt text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="16">
+						<string id="pitch_kit_icon" value="pitch/icons/dots"/>
+					</widget>
+				</container>
+		
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+					<widget class="individual_position_training_popup" show_table_legend="true" fixed="false" appearance="buttons/text/button" id="itpu" alignment="left,centre_y" auto_size="vertical"/>
+
+					<widget class="individual_training_popup" show_table_legend="true" fixed="false" appearance="buttons/text/button" id="itat" alignment="left,centre_y" auto_size="vertical"/>
+				
+					<widget class="player_training_intensity_rest_popup_button" fixed="false" appearance="buttons/text/button" id="inPt" alignment="left,centre_y" auto_size="vertical"/>
+
+					<widget class="client_object_property_panel" id="phyR" size="8" property="pTIR" alignment="centre_x,centre_y" colour="faded text">
+						<translation id="hint" translation_id="248363" type="use"/>
+						<record id="widget_properties" auto_size="vertical"/>
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+		
+				</container>
+			</container>
+		
+			<container height="34" class="tcs_table">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+				
+				<container>
+					<attachment_group class="vertical_arrange_horizontal_autosize" vertical_gap="0"/>
+		
+					<record id="default_properties" alignment="left" auto_size="all"/>
+		
+					<widget class="text" font="label">
+						<translation id="text" translation_id="248363" type="use" value="Training Rating[COMMENT: a rating of how well the player is getting on in training]"/>
+
+					</widget>
+		
+					<widget class="training_rating_label_formatted" format="[%fraction#1-3.2]">
+						<record id="object_property" get_property="Ptrt"/>
+					</widget>
+				</container>
+		
+				<container class="player_training_panel" file="none">
+					<layout class="horizontal_arrange" horizontal_alignment="right"/>
+
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					
+					<record id="default_properties" appearance="buttons/primary/normal/button" auto_size="horizontal" colour="fg" icon_colour="fg"/>
+
+					<widget class="icon_button" icon="icons/16px/thumbs up" rrep="bg positive" id="ptbn" click_event="ptev">
+						<layout class="centre_in_parent_attachment" alignment="vertical"/>
+					</widget>
+
+					<widget class="icon_button" icon="icons/16px/thumbs down" rrep="bg negative" id="ctbn" click_event="ctev">
+						<layout class="centre_in_parent_attachment" alignment="vertical"/>
+					</widget>
+				</container>
+		
+			</container>
+		
+		
+		</container>
+		
+		
+	</container>
+</panel>

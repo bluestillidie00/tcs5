@@ -1,0 +1,72 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+    <container height="15">
+      <layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      <widget class="link_button" section="Prel" auto_size="horizontal">
+        <translation id="text" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+      </widget>
+    </container>
+
+    <container class="scrolling_box">
+      <!-- Playing time panel-->
+      <container id="plaC">
+        <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+        <!-- Current Playing Time -->
+        <container>
+          <attachment_group class="horizontal_arrange_vertical_autosize_centre" />
+
+          <widget class="text" alignment="left,centre_y" auto_size="all" size="large" style="bold">
+            <translation id="text" translation_id="492006" type="use" value="Actual:[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised; shorter version of Actual Playing Time]" />
+          </widget>
+
+          <widget class="client_object_property_panel" property="Pctp" auto_size="all">
+            <record id="object_property">
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+            <record id="widget_properties" alignment="left,centre_y" auto_size="all" size="large" style="bold" spec="text" />
+          </widget>
+
+        </container>
+
+        <!-- Agreed Playing Time -->
+        <container>
+          <attachment_group class="horizontal_arrange_vertical_autosize_centre" />
+
+          <widget class="text" auto_size="all" alignment="left,centre_y" colour="faded text" size="small">
+            <translation id="text" translation_id="492007" type="use" value="Agreed:[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type; shorter version of Agreed Playing Time]" />
+          </widget>
+
+          <widget class="client_object_property_panel" property="Pcpt" auto_size="all">
+            <record id="object_property">
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+            <record id="widget_properties" alignment="left,centre_y" auto_size="all" colour="faded text" size="small" />
+          </widget>
+
+        </container>
+
+        <widget class="client_object_property_panel" property="Ppth" auto_size="all">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+          <record id="widget_properties" alignment="left,centre_y" auto_size="vertical" abbt="false" show_hover_popup="false" colour="faded text" size="small" />
+        </widget>
+
+      </container>
+    </container>
+
+  </container>
+
+</panel>

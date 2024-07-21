@@ -1,4 +1,4 @@
-<panel>
+<panel >
 	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 	
 	<container height="18">
@@ -22,9 +22,13 @@
 		</widget>
 	
 	</container>
+	
+	<widget class="horizontal_divider" height="4" />
+	
+	<container height="4" />
 
 	<!-- STACKED BAR CHARTS -->
-	<container class="main_subtle_box">
+	<container class="main_box">
 		<attachment_group class="vertical_arrange_autosize"/>
 		
 		<!--DEFENSIVE ACTIONS KEY-->
