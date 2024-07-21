@@ -1,0 +1,124 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-6" horizontal_offset="0" vertical_inset="0" />
+	
+	<!--button showing the number of humans playing - click it to go to game status screen-->
+	<container navigation_container="true">
+		<attachment_group class="horizontal_arrange_autosize"/>
+		<widget class="icon_button" auto_size="horizontal" size="small" alignment="centre" appearance="buttons/custom/match/play/button" secondary_icon_alignment="centre" default_focus="false" red_replacement="bg lighter" style="bold" icon="icons/custom/network game/users">
+			<attachment class="get_global_attachment" get_property="nhmw" set_property="text" />
+			<attachment class="get_global_attachment" get_property="ahph" set_property="hint" />
+			<attachment class="test_global_attachment" get_property="nhmw" mode="equal" value="0" set_property="hidn" />
+			<event id="click_event" event_id="STAT" event_target="scrC" />
+		</widget>
+	</container>
+
+	<!--button to request stop time-->
+	<widget class="popup_button_request_stop" auto_size="horizontal" style="semi_bold" fixed="true" height="14" size="7" alignment="centre">
+		<attachment class="get_global_attachment" get_property="rqsm" set_property="itms" />
+		<attachment class="get_global_attachment" get_property="rqst" set_property="text" />
+		<attachment class="test_global_attachment" get_property="usrq" mode="not_equal" value="1" set_property="hidn" />
+		<event id="select_event" event_id="RQST" event_target="glob" />
+	</widget>
+
+	<!--button shown when another user has requested a stop time-->
+	<widget class="popup_button_other_client_wants_stop" auto_size="horizontal" fixed="true" height="14" size="7" alignment="centre">
+		<attachment class="get_global_attachment" get_property="rqsm" set_property="itms" />
+		<attachment class="get_global_attachment" get_property="rqst" set_property="text" />
+		<attachment class="test_global_attachment" get_property="usrq" mode="1" value="2" set_property="hidn">
+			<list id="value">
+				<integer value="2" />
+				<integer value="3" />
+			</list>
+		</attachment>
+		<event id="select_event" event_id="RQST" event_target="glob" />
+	</widget>
+
+	<!--button and drop down-->
+	<container height="48" >
+
+		<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-6" horizontal_offset="0" vertical_inset="0" />
+
+		<!--the dropdown-->
+		<widget class="widget_popup_button" width="37" height="50" id="popu" popup_alignment="right,bottom" widget_type="match_playback_control_container" appearance="buttons/custom/match/play/button" secondary_icon_alignment="centre" default_focus="false" red_replacement="tcstv_main" icon_colour="tcstv_accent" >
+			<record id="modal_popup_properties" file="modal popup panel auto sized" darkened="false" />
+
+			<string id="remove_if" value="is_fmt" />
+		</widget>
+
+		<!--the big button-->
+		<widget class="icon_button" id="IMBu" appearance="buttons/custom/match/bottom bar/split/middle/button" gamepad_icon_alignment="centre_right" controller_button="right_trigger" alignment="centre" icon_alignment="centre_left" icon_always_spaced="true" auto_size_minimum_width="90" font="title" auto_size="all" red_replacement="primary_button" blue_replacement="white" navigation_focus_target="false" icon_colour="bg" colour="bg">
+			<record id="click_event" event_id="CONT" event_target="glob" />
+			<string id="create_if" value="is_fmt" />
+
+			<!-- match play text -->
+			<attachment class="get_global_attachment" get_property="cttx" set_property="text" />
+			<attachment class="get_global_attachment" get_property="ctht" set_property="hint" />
+			<attachment class="get_global_attachment" get_property="ctic" set_property="icon" />
+
+			<attachment class="get_global_attachment" get_property="UsrL" set_property="Flas" skip_if_null="false" />
+			<attachment class="flash_colour_attachment" auto_start="false">
+				<colour id="first_colour" name="fg acccent" />
+				<colour id="second_colour" name="bg accent" />
+				<flags id="colour_property" value="bkcl" />
+			</attachment>
+		</widget>
+
+		<!--the big button-->
+		<widget class="icon_button" id="IMBu" appearance="buttons/custom/match/play/button" controller_button="right_trigger" alignment="centre" gamepad_icon_alignment="centre_right" icon_alignment="centre_left" font="title" colour="accent button text" icon_colour="accent button text" auto_size="horizontal" icon_always_spaced="true">
+			<record id="click_event" event_id="CONT" event_target="glob" />
+			<string id="remove_if" value="is_fmt" />
+
+			<!-- match play text -->
+			<attachment class="get_global_attachment" get_property="cttx" set_property="text" />
+			<attachment class="get_global_attachment" get_property="ctht" set_property="hint" />
+			<attachment class="get_global_attachment" get_property="ctic" set_property="icon" />
+
+			<attachment class="get_global_attachment" get_property="UsrL" set_property="Flas" skip_if_null="false" />
+			<attachment class="flash_colour_attachment" auto_start="false">
+				<colour id="first_colour" name="blue" />
+				<colour id="second_colour" name="red" />
+				<flags id="colour_property" value="bkcl" />
+			</attachment>
+		</widget>
+
+		<!--confirm changes-->
+		<container id="CONF">
+			<string id="remove_if" value="is_fmt"/>
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-14" horizontal_offset="0" vertical_inset="8" />
+
+			<!--cancel-->
+			<widget class="icon_button" id="canc" click_event="cntt" icon_alignment="centre" width="45" appearance="buttons/custom/match/confirm tactics/button" icon="icons/16px/cross" red_replacement="negative dark">
+				<record id="primary_icon_properties" red_replacement="white" />
+			</widget>
+
+			<!--confirm-->
+			<widget class="icon_tick_button" id="conf" alignment="centre" auto_size="horizontal" icon_alignment="centre_left, centre_y" click_event="aptt" appearance="buttons/custom/match/confirm tactics/button" red_replacement="positive dark" colour="white" multiline="true">
+				<record id="primary_icon_properties" red_replacement="white" />
+			</widget>
+
+		</container>
+
+		<!-- Add a spacer for iPhones with a safe area as the match continue button will get cut off -->
+		<widget class="spacer">
+			<string id="create_if" value="platform_is_ios_phone"/>
+			<global id="width" name="ui.safe_area_left"/>
+		</widget>
+
+		<!-- As iPads often don't have a safe area like iphones, add a small spacer for them to avoid text cut-offs on devices with rounded corners -->
+		<widget class="spacer" width="20">
+			<string id="create_if" value="platform_is_ios_pad"/>
+		</widget>		
+
+	</container>
+
+	<!--little icons for doing stuff in multiplayer games-->
+	<!--text showing continue game timeout-->
+	<!--<widget class="button" width="39" height="14" size="7" alignment="centre" style="semi_bold" appearance="buttons/custom/network game/button" font="fonts/button">
+      <layout class="stick_to_sides_attachment" alignment="bottom" inset="1" />
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+      <attachment class="get_global_attachment" get_property="CTTx" set_property="text" />
+      <attachment class="test_global_attachment" get_property="CTTx" mode="0" value="" set_property="hidn" />
+    </widget>-->
+
+
+</panel>

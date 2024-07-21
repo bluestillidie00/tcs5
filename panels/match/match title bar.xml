@@ -1,0 +1,97 @@
+<panel colour_team_names="false" colour_team_scores="false">
+
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<container height="60">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="4" vertical_inset="0">
+			<global id="horizontal_offset" name="ui.safe_area_left"/>
+		</attachment_group>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="-14" horizontal_offset="0" vertical_inset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-35" horizontal_offset="0" vertical_inset="0" />
+
+				<!-- Back Button -->
+				<widget class="screen_history_button" id="back" fixed="true" width="60" appearance="buttons/custom/square/button" icon="icons/26px/left" icon_alignment="centre" controller_button="b_button">
+					<attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+					<record id="primary_icon_properties" red_replacement="text"/>
+					<record id="click_event" event_id="GOTO" event_target="brow" scin="-8" />
+
+					<attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true"/>
+				</widget>
+
+				<container class="client_object_viewer_xml_panel" id="MsaP" file="match/match score area panel">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</container>
+				
+				<container>
+	<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="top" vertical_gap="0"/>
+	
+	<container height="10" />
+
+				<container class="main_box_no_margin" id="wfHc"  appearance="tcs/tcstv/scoreboard/highlights" red_replacement="tcstv_accent">
+					<animation class="scale_animation" start_value="0, 1" end_value="1, 1" duration="0.4" delay="0" centre_point="left" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target"/>
+					<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_offset="14" vertical_inset="0" />
+					<!-- the loading animation - GPU rendering -->
+
+					<widget class="picture" id="anmG" width="26" height="26" scale_picture="true" keep_aspect_ratio="true" file="progress/circular/spinner_match" frame_duration="100000" frame_width="26" red_replacement="tcstv_main">
+						<animation class="rotate_animation" end_mode="repeat" start_value="0" end_value="360" tween="linear" apply_to_mouse="false" />
+						<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end"/>
+					</widget>
+
+
+					<!--title text-->
+					<widget class="text" id="Wttx" multiline="false" alignment="centre" font="title" colour="tcstv_main" auto_size="all" auto_size_maximum_width="210">
+						<translation id="text" translation_id="332286" type="use" value="Waiting for next highlight...[COMMENT: title for a box containing information to look at between highlights]" />
+						<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end"/>
+					</widget>
+				</container>
+			
+			</container>
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="-14" horizontal_offset="0" vertical_inset="0" />
+
+				<container id="mtSL">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<!-- debug container with old time slider panel created in code-->
+				</container>
+
+				<container file="match/match viewer joining panel"/>
+				
+			</container>
+
+			
+
+		</container>
+
+		<container navigation_container="true">
+
+			<animation class="translate_animation" start_value="1, 0" end_value="0, 0" duration="0.5" delay="0.8" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" />
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-8" horizontal_offset="0" vertical_inset="0" />
+
+			<widget class="widget_popup_button" id="Sett" auto_size="horizontal" red_replacement="tcstv_main" icon="icons/16px/settings" widget_type="match_settings_panel" mpmF="generic/modal popup panel match" secondary_icon_enabled="false" appearance="buttons/custom/match/play/button" controller_button="select_button"  gamepad_icon_alignment="centre_right" icon_alignment="centre_left" icon_always_spaced="true">
+				<record id="modal_popup_properties">
+					<boolean id="darkened" value="false" />
+				</record>
+				<translation id="hint" translation_id="332230" type="use" value="Click to show the match settings.[COMMENT: hint for a button to toggle showing the match settings panel]" />
+				<record id="primary_icon_properties" red_replacement="tcstv_accent" />
+				<record id="secondary_icon_properties" red_replacement="tcstv_accent" />
+			</widget>
+
+			<!-- continue button -->
+			<widget class="match_continue_panel" id="mcnt" auto_size="horizontal">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+		</container>
+	</container>
+
+
+</panel>

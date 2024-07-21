@@ -1,0 +1,33 @@
+<panel>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="10" gap="0"/>
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+	<widget class="text" id="fwdh" auto_size="vertical" font="fonts/inbox_title" size="16" alignment="left,centre_y" colour="text">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="13"/>
+	</widget>
+
+	<container>
+		<!-- this weird layout makes sure the headline and media source never overlap...-->
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="fit_children_attachment" alignment="horizontal" offset="10" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="right,top" apply_to_children="true" inset="0,2"/>
+
+		<container class="inner_subtle_box" appearance="boxes/custom/inbox attachment/media/source/paper">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+			<widget class="text" id="fwdm" auto_size="all" alignment="right,centre_y" font="capitals" colour="bg" multiline="false" size="8"/>
+		</container>
+
+
+
+	</container>
+
+
+</panel>

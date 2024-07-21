@@ -1,0 +1,63 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="inner_box_no_margin">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="10" horizontal_gap="16"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="4,5,4,0" apply_to_children="true"/>
+
+			<container class="tcs_box" appearance="mustermann/inbox/search" transparency="0.4">
+				<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="20,-1,20" horizontal_gap="0" vertical_offset="0" />
+				
+				<!-- search button -->
+				<widget class="icon_button" id="nefi" show_button_appearance="false" icon="icons/16px/search" width="20" height="20">
+					<record id="primary_icon_properties" red_replacement="text"/>
+					<event id="click_event">
+						<flags id="event_id" value="keyu"/>
+						<flags id="event_target" value="nwsf"/>
+						<flags id="key " value="13"/>
+					</event>
+				</widget>
+
+				<widget class="edit_box" id="nwsf" return_event="chfl" auto_size="vertical" save_session_state="true" show_clear_text_icon="true" ignore_leading_space="true" disabled_colour="inbox_text" appearance="" clear_text_event="chfl">
+					<translation id="placeholder_string" translation_id="416348" type="use" value="All Items[COMMENT: FR 16822;human inbox panel; place holder text for search bar]"/>
+				</widget>
+			</container>
+		</container>
+
+		<widget class="icon_button" id="mess" show_button_appearance="false" icon="icons/16px/speech bubble" width="16" secondary_icon_enabled="false" icon_alignment="centre">
+			<record id="click_event" event_id="SNMS" event_target="glob"/>
+			<attachment class="get_global_attachment" get_property="HmeV" set_property="Shwn"/>
+		</widget>
+		
+		<widget class="icon_button" id="mbta" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/inbox/next" show_button_appearance="false" width="16">
+			<translation id="hint" translation_id="248086" type="use" value="Next Unread"/>
+			<record id="click_event" event_id="nexr"/>
+		</widget>
+		
+		<widget class="icon_button" id="mbtb" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/inbox/mark" show_button_appearance="false" width="16">
+			<translation id="hint" translation_id="383549" type="use" value="Mark All Items As Read"/>
+			<record id="click_event" event_id="mard"/>
+		</widget>
+		
+		<widget class="icon_button" id="mbtc" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" icon="mustermann/inbox/save" show_button_appearance="false" width="16">
+			<translation id="hint" translation_id="257241" type="use" value="Save As Note"/>
+			<record id="click_event" event_id="nisn"/>
+		</widget>
+		
+		<widget class="popup_button" id="ibpu" select_event="ibpu" fixed="true" show_button_appearance="false" icon="mustermann/inbox/filter" secondary_icon_enabled="false" width="16">
+			<translation id="hint" translation_id="249639" type="use" value="Filters"/>
+			<record id="primary_icon_properties" red_replacement="text"/>
+			<record id="secondary_icon_properties" red_replacement="text"/>
+			<list id="items">
+				<record id="sflt">
+					<translation id="text" translation_id="249639" type="use" value="Filters"/>
+				</record>
+			</list>
+		</widget>
+
+		
+	</container>
+
+</panel>

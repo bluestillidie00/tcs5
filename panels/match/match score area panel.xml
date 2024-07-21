@@ -1,0 +1,168 @@
+﻿<panel>
+
+	<!--Alternate UI mode-->
+	<integer id="alSM" value="3"/>
+
+	<list id="properties_to_forward">
+		<record get_property="disable_animations" set_property="disable_animations" target="clkc"/>
+		<record get_property="disable_animations" set_property="disable_animations" target="temc"/>
+	</list>
+
+	<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<container id="scbr">
+		<attachment_group class="vertical_arrange_autosize_all" vertical_gap="0"/>
+		<container height="10">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="0" vertical_inset="0"/>
+	
+			<!--Make sure this matches the mtSA container below-->
+			<widget class="spacer" width="70"/>
+
+			<container class="main_box_no_margin" id="T1rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="5" width="10" />
+
+			<widget class="spacer" width="180"/>
+
+			<container class="main_box_no_margin" id="T2rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="5" width="10" />
+
+		</container>
+		
+		<container height="50" id="mtSA">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-25"/>
+		
+			<!--team names and score-->
+			<container id="temc">
+				<attachment_group class="horizontal_arrange_autosize" vertical_inset="0,0,0,0" horizontal_gap="0"/>
+				
+				<container class="main_box_no_margin" appearance="tcs/tcstv/scoreboard/base" width="60">
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="4"/>
+				
+				<widget class="object_portrait_picture" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+				
+				</container>
+						
+				
+
+				<!-- HOME TEAM -->
+				<container class="client_object_viewer_xml_panel" id="T1Co" override_with_object="true" width="100">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="main_box_no_margin" appearance="tcs/tcstv/scoreboard/base">
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+						<!-- TEAM NAME -->
+						<widget class="text_button" id="T1nm" font="title" size="16" alignment="bottom" click_event="htac" colour="tcstv_accent" navigation_focus_target="false" multiline="true">
+							<layout class="stick_to_sides_attachment" alignment="bottom" inset="6"/>
+						</widget>
+
+						<!-- TEAM COLOUR -->
+						<container height="4">
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container class="main_box_no_margin" id="t1CS" appearance="boxes/custom/solid/paper"/>
+							<container class="main_box_no_margin" id="t1CB" appearance="tcs/tcstv/scoreboard/col"/>
+						</container>
+					</container>
+				</container>
+
+				<container id="MInf" width="80">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<container class="main_box_no_margin" appearance="tcs/tcstv/scoreboard/base" red_replacement="tcstv_accent" navigation_focus_target="false">
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1, 1 ,-1" horizontal_gap="2" horizontal_offset="2" vertical_inset="0"/>
+						
+						<widget class="text" id="T1sc" size="20" font="title" alignment="centre" colour="tcstv_main">
+						</widget>
+						<widget class="picture" file="boxes/custom/solid/paper" red_replacement="bg lighter"/>
+						<widget class="text" id="T2sc" size="20" font="title" alignment="centre" colour="tcstv_main">
+						</widget>
+					</container>
+				</container>
+
+				<!-- AWAY TEAM -->
+				<container class="client_object_viewer_xml_panel" id="T2Co" override_with_object="true" width="100">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="main_box_no_margin" appearance="tcs/tcstv/scoreboard/base">
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+						<!-- TEAM NAME -->
+						<widget class="text_button" id="T2nm" font="title" size="16" alignment="bottom" click_event="atac" colour="tcstv_accent" navigation_focus_target="false" multiline="true">
+							<layout class="stick_to_sides_attachment" alignment="bottom" inset="6"/>
+						</widget>
+
+						<!-- TEAM COLOUR -->
+						<container height="4">
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container class="main_box_no_margin" id="t2CS" appearance="boxes/custom/solid/paper"/>
+							<container class="main_box_no_margin" id="t2CB" appearance="tcs/tcstv/scoreboard/col"/>
+						</container>
+					</container>
+				</container>
+				
+		<!-- 		<container class="main_box" id="asco" appearance="boxes/custom/solid/paper" red_replacement="uel orange">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="4" vertical_inset="0"/>
+
+					<widget class="text" id="T1as" size="14" font="europa bold" alignment="centre" colour="white" auto_size="horizontal"/>
+					<widget class="text" size="14" font="europa bold" alignment="centre" text="-" colour="white" auto_size="horizontal"/>
+					<widget class="text" id="T2as" size="14" font="europa bold" alignment="centre" colour="white" auto_size="horizontal"/>
+
+				</container> -->
+				
+				
+			<container class="main_box_no_margin" appearance="tcs/tcstv/scoreboard/time" id="clkc" width="110">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+					<widget class="text" id="Mclk" size="12" font="europa bold" alignment="centre_y,auto_fit">
+						<!--Alternate UI mode-->
+						<integer id="alSM" value="3"/>
+					</widget>
+					<widget class="text" id="ClkT" size="14" font="europa bold" alignment="centre_y,auto_fit">
+						<integer id="alSM" value="3"/>
+					</widget>
+			</container>
+			
+			<container width="30" />
+
+			</container>
+
+		
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" vertical_inset="0,0,0,0" horizontal_offset="0" horizontal_gap="-25"/>
+
+				<!--elapsed injury time indicator-->
+				<container id="McIC" class="main_box_no_margin" appearance="tcs/tcstv/scoreboard/added" red_replacement="tcstv_accent">
+					<attachment_group class="horizontal_arrange_autosize" vertical_inset="0" horizontal_offset="4"/>
+
+					<widget class="text" id="McIt" font="title" alignment="centre" colour="tcstv_main" size="14" width="60"/>
+
+				</container>
+				<!--injury time indicator-->
+				<container id="MijC" class="main_box_no_margin" appearance="tcs/tcstv/scoreboard/added" red_replacement="tcstv_main">
+					<attachment_group class="horizontal_arrange_autosize" vertical_inset="0" horizontal_offset="4"/>
+
+					<widget class="text" id="Mijt" auto_size="horizontal" font="title" alignment="centre" colour="tcstv_accent" size="14" usMT="true"/>
+
+				</container>
+			</container>
+
+
+
+		</container>
+	</container>
+	<widget class="button" appearance="" navigation_focus_target="false">
+		<!--Dark Magic xml shenanigans to make this button match the above container, while also allowing us to keep the autosize horizontal-->
+		<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" target="scbr"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="scbr"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="scbr"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="scbr"/>
+		<record id="click_event">
+			<flags id="event_id" value="TNeV"/>
+			<integer id="evfl" value="7"/>
+			<flags id="evtg" value="root"/>
+		</record>
+	</widget>
+
+</panel>

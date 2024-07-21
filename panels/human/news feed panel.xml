@@ -1,0 +1,131 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+	<layout class="arrange_horizontal_attachment" offset="0" layout="-1, -6, -1" gap="0"/>
+
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="save_immediate_state" value="false"/>
+	<boolean id="save_default_state" value="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<integer id="number_of_items_to_display" value="75"/>
+	
+	<!-- @note this attachment is needed in order to stop focus being unable to reach the main box on high resolution monitors-->
+	<attachment class="test_screen_size_attachment">
+		<list id="properties">
+			<record>
+				<flags id="alignment" value="horizontal" />
+				<integer id="min_value" value="0" />
+				<integer id="max_value" value="1900" />
+				<symbol id="set_property" value="navigation_container" />
+				<integer id="true_value" value="false" />
+				<integer id="false_value" value="true" />
+			</record>
+		</list>
+    </attachment>
+	
+    <container>
+     <layout class="show_medium_horizontal" min_value="1500"/>
+    </container>
+
+	<!-- Note that the id is important so that the league selector panels have their popups display correctly -->
+	<container id="Pnlf">
+		<layout class="arrange_horizontal_attachment" offset="0" layout="-1, 275">
+			<global id="gap" name="ui.main_contrast_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<container class="main_box" navigation_container="true" default_focus="true">
+			<layout class="arrange_vertical_attachment" alignment="top,extend"/>
+
+			<widget class="view_menu_popup" id="filt" select_event="filt" embed_in_frame="false">
+				<global id="hidden" name="ui.is_fmt_controller_skin"/>
+				<layout class="stick_to_sides_attachment" alignment="left"/>
+				<list id="items">
+					<record id="Fnwo">
+						<translation id="name" translation_id="230330" type="use" value="News"/>
+					</record>
+					<record id="Fsco">
+						<translation id="name" translation_id="412455" type="use" value="Social[COMMENT: FR 16824; news feed panel; label for social media menu selection]"/>
+					</record>
+					<record id="Fnas">
+						<translation id="name" translation_id="412456" type="use" value="News + Social[COMMENT: FR 16824; news feed panel; label for news and social media menu selection]"/>
+					</record>
+				</list>
+			</widget>
+
+			<container class="scrolling_box" id="scrb">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+				<container id="nwsl">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+					<!-- items added in code here -->
+				</container>
+			</container>
+		</container>
+
+		<!-- following list -->
+		<container class="main_subtle_box" navigation_container="true">
+			<layout class="arrange_vertical_attachment" layout="20, 30, -1, 1, 52" gap="6" offset="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true"/>
+
+			<widget class="text" spec="title" alignment="left,centre_y" >
+				<translation id="text" translation_id="424311" type="use" value="Subjects and People to Follow[COMMENT: FR 16824; news feed panel; title for suggested objects to follow list]"/>
+			</widget>
+
+			<container class="tcs_box" appearance="mustermann/inbox/search" transparency="0.4">
+                <attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="20, -1, 20" horizontal_gap="0" vertical_offset="0" />
+
+                    <!-- search button -->
+                <widget class="icon_button" id="nefi" appearance="none" icon="icons/16px/search" auto_size="all">
+                    <record id="primary_icon_properties" red_replacement="normal_icon"/>
+                    <layout class="centre_in_parent_attachment" alignment="vertical"/>
+
+                    <event id="click_event">
+                        <flags id="event_id" value="keyu"/>
+                        <flags id="event_target" value="nwsf"/>
+                        <flags id="key " value="13"/>
+                    </event>
+                </widget>
+                
+				<widget class="edit_box" id="nwsf" save_immediate_state="true" ignore_leading_space="true" colour="searchbox text" clear_text_event="shch" show_clear_text_icon="true" appearance="">
+                    <!-- send the return event to the parent -->
+                    <event id="return_event">
+                        <flags id="event_id" value="shch"/>
+                        <flags id="event_target" value="prnt"/>
+                    </event>
+                </widget>
+			</container>
+
+			<widget class="table" id="flwl" layout="-1" mode="fill_rows" auto_size_rows="false" fixed_size_rows="true" row_height="42" row_spacing="0" column_spacing="8"/>
+
+			<widget class="horizontal_divider" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-3, -2" gap="0"/>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+
+					<widget class="text" alignment="left,bottom" auto_size="vertical">
+						<translation id="text" translation_id="412458" type="use" value="Following[COMMENT: FR 16824; news feed panel; label to indicate number of followed objects]"/>
+					</widget>
+
+					<widget class="text" id="fsct" size="xlarge" style="bold" alignment="left,top"/>
+				</container>
+
+				<widget class="icon_button" auto_size="all" click_event="mgfl" controller_button="y_button">
+					<translation id="text" translation_id="412459" type="use" value="Manage[COMMENT: FR 16824; news feed panel; button label to manage followed objects]"/>
+					<layout class="centre_in_parent_attachment" alignment="vertical"/>
+					<layout class="stick_to_sides_attachment" alignment="right"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+	
+	<container>
+     <layout class="show_medium_horizontal" min_value="1500"/>
+    </container>
+
+</panel>

@@ -14,7 +14,7 @@
 	<colour name="tcs_accent" value="rgb(207,181,59)"/>
 	<colour name="tcs_accent_ligher" value="rgb(246,198,0)"/>
 	<colour name="tcs_accent_darker" value="rgb(135,116,27)"/>
-<colour name="inboxstadoverlay" value="rgb(47,47,47)"/> <!-- #2f2f2f --> 
+	<colour name="inboxstadoverlay" value="rgb(47,47,47)"/><!-- #2f2f2f -->
 	<!-- TCS Edits -->
 	<colour name="title" value="tcs_accent"/>
 	<colour name="human controlled" value="tcs_accent"/>
@@ -57,7 +57,7 @@
 	<colour name="news_youtube" value="rgb(15,15,15)"/><!-- #0f0f0f -->
 	<colour name="subscribe_button" value="rgb(39,39,39)"/><!-- #272727 -->
 	
-		<!-- ATHLETIC COLOURS -->
+	<!-- ATHLETIC COLOURS -->
 	<colour name="athletic_attacking" value="rgb(14,112,191)"/><!-- #0e70bf -->
 	<colour name="athletic_defending" value="rgb(236,49,58)"/><!-- #ec313a -->
 	<colour name="athletic_possession" value="rgb(25,218,137)"/><!-- #19da89 -->
@@ -90,25 +90,32 @@
 	<colour name="pizza_keeper" value="athletic_gk"/>
 	<colour name="pizza_keeper_border" value="white"/>
 	
-		<colour name="nipple_outer" value="tcs_accent"/>
+	<colour name="nipple_outer" value="tcs_accent"/>
 	<colour name="nipple_inner" value="tcs_accent_darker"/>
 	
-		<colour name="bar_attack"																	value="mustermann4"/>
-	<colour name="bar_attack_border"															value="mustermann3"/>
-	<colour name="bar_defend"																	value="mustermann6"/>
-	<colour name="bar_defend_border"															value="mustermann5"/>
-	<colour name="bar_possess"																	value="gimn2"/>
-	<colour name="bar_possess_border"															value="gimn1"/>
+	<colour name="bar_attack" value="mustermann4"/>
+	<colour name="bar_attack_border" value="mustermann3"/>
+	<colour name="bar_defend" value="mustermann6"/>
+	<colour name="bar_defend_border" value="mustermann5"/>
+	<colour name="bar_possess" value="gimn2"/>
+	<colour name="bar_possess_border" value="gimn1"/>
 	
-	<colour name="stacked1"																		value="gimn2"/>
-	<colour name="stacked1_border"																value="gimn2"/>
-	<colour name="stacked2"																		value="mustermann6"/>
-	<colour name="stacked2_border"																value="mustermann6"/>
-	<colour name="stacked3"																		value="mustermann4"/>
-	<colour name="stacked3_border"																value="mustermann4"/>
-	<colour name="stacked4"																		value="mustermann2"/>
-	<colour name="stacked4_border"																value="mustermann2"/>
+	<colour name="stacked1" value="gimn2"/>
+	<colour name="stacked1_border" value="gimn2"/>
+	<colour name="stacked2" value="mustermann6"/>
+	<colour name="stacked2_border" value="mustermann6"/>
+	<colour name="stacked3" value="mustermann4"/>
+	<colour name="stacked3_border" value="mustermann4"/>
+	<colour name="stacked4" value="mustermann2"/>
+	<colour name="stacked4_border" value="mustermann2"/>
 	
-	<colour name="full time stad" value="rgb(40,40,40)"/> <!-- #282828 --> 
+	<colour name="full time stad" value="rgb(40,40,40)"/><!-- #282828 -->
+	
+	<!-- TCS TV -->
+	<colour name="tcstv_main" value="rgb(0,11,16)"/><!-- #282828 -->
+	<colour name="tcstv_accent" value="tcs_accent"/>
+
+	<colour name="news item" value="tcs_accent"/>
+
 
 </properties>
