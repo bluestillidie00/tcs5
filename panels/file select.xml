@@ -1,0 +1,199 @@
+<panel id="dlog">
+	
+	<list id="properties_to_forward">
+		<record get_property="SOSI" set_property="Shwn" target="losC" />
+	</list>
+	
+	<!-- stick all items to width of box -->
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+
+	<string id="skin_style" value="dark box override" />
+
+	<!-- add custom icon to top right corner of dialog (actual icon image gets set in code) -->
+	<widget class="picture" id="cico" file="icons/dialog/file" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+	</widget>
+
+	<!-- header showing path and up button -->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_inset="0" />
+
+		<container id="losC" hidden="true">
+			<string id="remove_if" value="is_demo_mode" />
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_inset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize_all_centre_centered_in_parent" horizontal_alignment="middle" />
+
+				<widget class="info_icon_hint_text" width="20" height="20" widget_type="standard_popup_box">
+					<record id="info_popup_hint" file="dialogs/load older version saves dialog contents" width="500" icon_enabled="false" stit="true" titc="text" />
+				</widget>
+
+				<widget class="text" auto_size="all">
+					<translation id="text" translation_id="594828" type="use" value="You can now load saved games from FM23.[COMMENT: AREA: Intro Panel; SUB-AREA: More Detailed Sub-Area; FR-BN: FM-24312; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; any other information the translator can make use of]" />
+				</widget>
+
+			</container>
+			
+		</container>
+	
+
+
+
+		<!-- edit box for displaying/editing name -->
+		<container id="namp" navigation_container="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle" horizontal_gap="10" />
+
+			<widget class="text" id="lbln" auto_size="all" alignment="right,centre_y">
+				<translation id="text" translation_id="255261" type="use" value="Save As:[COMMENT: file select dialog; label before edit box]" />
+			</widget>
+
+			<widget class="filter_edit_box" id="name" auto_size="vertical" width="300" size="large" show_clear_text_icon="true">
+				<attachment class="max_length_attachment" length="100" />
+				<flags id="escape_event" value="canc" />
+				<flags id="return_event" value="slct" />
+				<flags id="changed_event" value="upbt" />
+			</widget>
+
+			<!-- warning icon to alert of illegal filenames -->
+			<widget class="picture" id="ifwi" auto_size="horizontal" height="16" hidden="true" file="icons/16px/warning" colour="negative">
+				<translation id="hint" translation_id="282093" type="use" value="The filename you have entered is invalid. Please enter a different filename.[COMMENT: Hint text of a warning icon that appears in dialogs where the user has to type in some text to name a new file or folder. This icon is only shown if that filename is invalid for some reason]" />
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="8" />
+			</widget>
+		</container>
+
+		<widget class="text" id="prpt" spec="text" size="normal" auto_size="vertical" alignment="centre" />
+	</container>
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,200,200,-1" horizontal_offset="6" vertical_offset="0">
+			<global id="horizontal_gap" name="ui.split_button_row_gap" />
+		</attachment_group>
+
+		<container height="1" />
+
+		<widget class="radio_toggle_switch_left" id="SLlo" group="0" selected="true" alignment="centre" hidden="true" secondary_icon_enabled="true" secondary_icon="icons/16px/local" secondary_icon_alignment="centre" secondary_icon_colour="text" auto_size="vertical">
+			<translation id="text" translation_id="354044" type="use" value="Local[COMMENT: save system location, meaning saving to the local computer]" />
+			<record id="click_event">
+				<flags id="event_id" value="slLO" />
+			</record>
+		</widget>
+		<widget class="radio_toggle_switch_right" id="SLcl" group="0" selected="false" alignment="centre" hidden="true" secondary_icon_enabled="true" secondary_icon="icons/16px/cloud" secondary_icon_alignment="centre" secondary_icon_colour="text" auto_size="vertical">
+			<translation id="text" translation_id="353875" type="use" value="Cloud[COMMENT: save system location, meaning saving to a cloud storage syncing location]" />
+			<record id="click_event">
+				<flags id="event_id" value="slCL" />
+			</record>
+		</widget>
+
+		<container height="1" />
+	</container>
+
+	<!-- main panel and buttons -->
+	<container id="main">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<string id="skin_style" value="plain box" />
+
+		<!-- top panel: contains the file list and preview panel -->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="10" vertical_inset="0" />
+
+			<string id="skin_style" value="gap" />
+
+			<!-- main table -->
+			<container class="tcs_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="5" horizontal_inset="0" />
+
+                <container navigation_container="true">
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, 48, 200" horizontal_offset="0" vertical_alignment="vertical" vertical_offset="0" />
+
+					<widget class="popup_button" id="path" sele="path" auto_size="vertical" multiline="false" />
+
+					<widget class="icon_button" id="prnt" click_event="prnt" auto_size="vertical" icon="icons/16px/directory up" alignment="centre_y,centre_x" />
+					<widget class="popup_button" id="refo" sele="refo" auto_size="vertical" fixed="true">
+						<translation id="text" translation_id="249632" type="use" value="Recent[COMMENT: file dialogs: recent folder list: menu label]" />
+					</widget>
+				</container>
+
+				<widget class="table" id="list" sele="item" dcle="doub" row_height="34" save_session_state="true" navigation_container="true" default_focus="true">
+					<flags id="layout" value="50, -12, -2, -5, 4" />
+					<flags id="mode" value="select_rows, select_multiple, fill_rows, keyboard, dont_allow_click_unselect_single" />
+
+					<boolean id="auto_size_rows" value="false" />
+					<flags id="default_sort_column" value="date" />
+
+					<list id="headings">
+						<record alignment="centre, centre_y">
+							<translation id="text" translation_id="249634" type="use" value="Type[COMMENT: file dialogs: file type, header]" />
+						</record>
+						<record column_span="2" alignment="left,centre_y">
+							<translation id="text" translation_id="249635" type="use" value="Name[COMMENT: file dialgos: file name, header]" />
+						</record>
+						<record column_span="2" alignment="centre, centre_y">
+							<translation id="text" translation_id="249636" type="use" value="Date[COMMENT: file dialgos: file date, header]" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0" id="icon" column_alignment="centre" />
+						<record index="1" id="name" />
+						<record index="2" id="type" />
+						<record index="3" id="date" sort_ascending="false" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="0" auto_size="all" />
+						<record index="1" alignment="left,centre_y" multiline="false" navigation_focus_target="true" />
+						<record index="3" alignment="left,centre_y" size="small" colour="faded text" />
+					</list>
+				</widget>
+			</container>
+
+			<!-- image preview container -->
+			<container class="main_box" width="300" id="prev" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			</container>
+		</container>
+
+		<!-- bottom panel: contains buttons panel and optional "extra info widget" -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+			<container class="inner_box_no_margin" id="extp">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+			</container>
+
+			<!-- row of buttons -->
+			<container id="btns" navigation_container="true">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="top" vertical_offset="2" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="2" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="2" />
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+					<widget class="button" id="newf" auto_size="all">
+						<translation id="text" translation_id="249638" type="use" value="New Folder" />
+						<record id="click_event">
+							<flags id="event_id" value="new?" />
+						</record>
+					</widget>
+
+					<widget class="icon_button" id="dele" auto_size="all" controller_button="right_stick_down">
+						<translation id="text" translation_id="247202" type="use" value="Delete" />
+						<record id="click_event">
+							<flags id="event_id" value="del?" />
+						</record>
+					</widget>
+
+					<widget class="check_box" id="UtoS" auto_size="all" text="Upload to Test" click_event="Uplo">
+					</widget>
+				</container>
+
+				<container file="file select buttons" />
+
+			</container>
+		</container>
+	</container>
+</panel>

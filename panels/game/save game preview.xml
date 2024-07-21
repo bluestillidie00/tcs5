@@ -1,0 +1,135 @@
+<panel >
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<!-- the main details/data panel shown for save game files -->
+	<container id="data" class="tcs_box">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="table" id="tabl" layout="110, -1" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows" navigation_container="true" hide_sorting="true">
+
+			<list id="column_widget_properties">
+				<record indx="0" colour="faded text" />
+				<record indx="1" top="3" bottom="3" />
+			</list>
+
+			<list id="column_table_properties">
+				<record top="4" bottom="4" />
+				<record top="4" bottom="4" />
+			</list>
+
+			<list id="row_properties">
+				<record indx="2" initial_id="gNaR" />
+				<record indx="3" initial_id="gdsR" />
+			</list>
+
+			<list id="headings">
+				<record alignment="left,centre_y" column_span="2" colour="title" size="xlarge">
+					<translation id="text" translation_id="336635" type="use" value="Save title" />
+				</record>
+			</list>
+
+			<record id="default_properties" alignment="left,centre_y" standard_spec="text" auto_size="vertical" />
+
+			<!--Game type -->
+			<widget class="text" row="0" col="0">
+				<translation id="text" translation_id="336308" type="use" value="Game Type[COMMENT: find network game; game type field, asks the user to select a type of network game to play, any, an fm career, an fmc career, or a versus competition]" />
+			</widget>
+
+			<widget class="text" row="0" id="gmty" col="1" />
+
+			<!--game name-->
+			<widget class="text" row="1" id="gmNa" col="0" column_span="2" />
+			<!--game description-->
+			<widget class="text" row="2" id="gmds" col="0" column_span="2" />
+
+			<!--Date -->
+			<widget class="text" row="3" col="0">
+				<translation id="text" translation_id="230120" type="use" value="Date" />
+			</widget>
+			<widget class="text" row="3" id="date" col="1" />
+
+			<!--Nations -->
+			<widget class="text" row="4" col="0">
+				<translation id="text" translation_id="229364" type="use" value="Nations" />
+			</widget>
+			<widget class="text" row="4" col="1" id="nati" />
+
+			<!--Clubs managed -->
+			<widget class="text" row="5" col="0">
+				<translation id="text" translation_id="336480" type="use" value="Managers[COMMENT: load save game dialog; field showing managers]" />
+			</widget>
+			<widget class="text" row="5" id="mana" col="1" />
+
+			<!-- Save size -->
+			<widget class="text" row="6" col="0">
+				<translation id="text" translation_id="353923" type="use" value="File Size[COMMENT: File Select Dialog Preview; displays the size of the file]" />
+			</widget>
+
+			<container row="6" col="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend"/>
+				
+				<widget class="picture" file="icons/16px/warning" id="warn" width="16" alignment="left, centre_y" red_replacement="negative" blue_replacement="bg"/>
+				<widget class="text" id="flsZ"/>
+			</container>
+
+      <!--Next Match Date - debug only -->
+      <widget class="text" row="7" col="0">
+        <string id="text" value="Next Match Date (debug)" />
+      </widget>
+      <widget class="text" row="7" id="nxmt" col="1" />
+
+    </widget>
+
+		<widget class="table" id="csTb" layout="135, -1" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows">
+			<flags id="auto_size" value="vertical" />
+            
+            <!-- No API for cloud space & availability with CloudKit, so hide cloud details -->
+            <string id="remove_if" value="distribution_is_apple"/>
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" />
+				<record indx="1" alignment="right,centre_y" top="3" bottom="3" />
+			</list>
+
+			<list id="column_table_properties">
+				<record top="4" bottom="4" />
+				<record top="4" bottom="4" />
+			</list>
+
+			<list id="headings">
+				<record alignment="centre_y" column_span="2">
+					<translation id="text" translation_id="353874" type="use" value="Cloud Storage[COMMENT: file select dialog: table header for the cloud storage details]" />
+				</record>
+			</list>
+
+			<record id="default_properties" spec="text" />
+
+			<widget class="text" auto_size="vertical" multiline="true" row="0" col="0" column_span="2" id="peEs">
+				<translation id="text" translation_id="465555" type="use" value="Please ensure there is enough available space in [%string#1] for this saved game[COMMENT: save game preview panel; Warning message to the user to verify they have enough space to save their game to the cloud]" />
+			</widget>
+
+			<widget class="text" auto_size="all" row="1" col="0">
+				<translation id="text" translation_id="354181" type="use" value="Total Space[COMMENT: file select dialog: the amount of total space available in the cloud storage]" />
+			</widget>
+			<widget class="text" auto_size="vertical" id="CssT" row="1" col="1" />
+
+			<widget class="text" auto_size="all" row="2" col="0">
+				<translation id="text" translation_id="354109" type="use" value="Space Available[COMMENT: file select dialog: the amount of free space available in the cloud storage]" />
+			</widget>
+
+			<widget class="text" auto_size="vertical" id="CssA" row="2" col="1" />
+
+
+		</widget>
+
+	</container>
+
+	<!-- the default label shown when the sfile type given to the panel is the incorrect one -->
+	<widget class="text" id="labl" auto_size="all" colour="faded text">
+		<translation id="text" translation_id="336634" type="use" value="Save Game Preview[COMMENT: Save Game Preview Panel default text when no details available]" />
+		<layout class="centre_in_parent_attachment" alignment="all" />
+	</widget>
+
+</panel>

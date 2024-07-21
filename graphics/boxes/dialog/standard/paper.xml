@@ -1,0 +1,33 @@
+<!-- image properties -->
+<properties>
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image -->
+	<!-- (for example, in the case of a button, the content would be the text label) -->
+	<record id="image_borders" left="16" right="16" top="56" bottom="26"/>
+
+	<!-- image slices determine the points at which the image will be sliced to enable scaling -->
+	<!-- the image will only slice in the directions slicing values are provided for-->
+	<record id="image_slices" left="10" right="10" top="10" bottom="14"/>
+
+	<!-- title insets -->
+	<!-- these determine how many pixels the title is inset from the top/bottom/left/right of the box -->
+	<integer id="text_top_inset" value="16"/>
+	<integer id="text_bottom_inset" value="0"/>
+	<integer id="text_left_inset" value="16"/>
+	<integer id="text_right_inset" value="16"/>
+
+	<!-- title properties -->
+	<record id="font_spec">
+		<flags id="font" value="title"/> 
+		<colour id="colr" name="text"/> 
+		<flags id="size" value="xlarge"/> 
+	</record>
+
+	<colour id="red_replacement" name="bg"/>
+	<colour id="green_replacement" name="box_shadow"/>
+	<colour id="blue_replacement" name="fg"/>
+
+	<boolean id="blurred" value="false"/>
+	
+</properties>

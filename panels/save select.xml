@@ -1,0 +1,189 @@
+﻿<panel id="dlog">
+	<list id="properties_to_forward">
+		<record get_property="SOSI" set_property="Shwn" target="losC" />
+	</list>
+	<!-- stick all items to width of box -->
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="6" vertical_gap="12" horizontal_inset="16" />
+
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<string id="skin_style" value="dark box override" />
+
+	<!-- add custom icon to top right corner of dialog (actual icon image gets set in code) -->
+	<widget class="picture" id="cico" file="icons/dialog/file" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+	</widget>
+
+	<container id="losC" hidden="true" navigation_container="true">
+		<string id="remove_if" value="is_demo_mode" />
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_autosize_all_centre_centered_in_parent" horizontal_alignment="middle" />
+
+			<widget class="info_icon_hint_text" width="20" height="20" widget_type="standard_popup_box">
+				<record id="info_popup_hint" file="dialogs/load older version saves dialog contents" width="500" icon_enabled="false" stit="true" titc="text" />
+				<string id="remove_if" value="is_fmt" />
+			</widget>
+
+			<widget class="text" auto_size="all">
+				<translation id="text" translation_id="594828" type="use" value="You can now load saved games from FM23.[COMMENT: AREA: Intro Panel; SUB-AREA: More Detailed Sub-Area; FR-BN: FM-24312; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; any other information the translator can make use of]" />
+			</widget>
+
+			<widget class="button" auto_size="all" click_event="rdMr">
+				<translation id="text" translation_id="412454" type="use" value="Read more...[COMMENT: FR 16824; news feed panel; link text to display news item popup]" />
+				<string id="create_if" value="is_fmt" />
+			</widget>
+		</container>
+	</container>
+
+	<widget class="text" id="ClwT" auto_size="vertical" alignment="centre" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="120" />
+		<translation id="text" translation_id="598884" type="use" value="Cloud saved games are limited to 400MB, after which they cannot be synced. You may want to save your file locally if it is approaching the file size limit.[COMMENT: AREA: Save Game; SUB-AREA: Save As dialog; FR-BN: FM-21058; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE; Warning string for cloud save games]" />
+	</widget>
+
+	<container height="30" navigation_container="true">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_gap="0" />
+
+			<widget class="radio_button" id="fm24" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" auto_size="all" text="FM 24" selected="true">
+				<string id="remove_if" value="is_demo_mode" />
+				<event id="click_event">
+					<flags id="event_id" value="SVts" />
+					<integer id="slsc" value="0" /> <!-- sidistribution::LOAD_SAVE_SCOPE::CURRENT_YEAR-->
+				</event>
+			</widget>
+			<widget class="radio_button" id="fm23" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" auto_size="all" text="FM 23">
+				<string id="remove_if" value="is_demo_mode" />
+				<event id="click_event">
+					<flags id="event_id" value="SVts" />
+					<integer id="slsc" value="1" />	<!-- sidistribution::LOAD_SAVE_SCOPE::PREVIOUS_YEAR-->
+				</event>
+			</widget>
+
+			<widget class="spacer" />
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_autosize_all" />
+
+			<widget class="popup_button" id="svpp" auto_size="all" select_event="LoCh" />
+
+			<widget class="button" auto_size="all" id="brBU" click_event="FsDi">
+				<translation id="text" translation_id="260314" type="use" value="Browse[COMMENT: Text on button to break in and browse the game whilst processing continues in the background]" />
+			</widget>
+
+			<widget class="button" auto_size="all" hidden="true" id="FiSt">
+				<flags id="appearance" value="buttons/link/button" />
+				<translation id="text" translation_id="596375" type="use" value="Find on Steam[COMMENT: AREA: Save Select; NOTE: Button to open link to find save games via Steam]" />
+			</widget>
+		</container>
+	</container>
+
+	<!-- header showing path and up button -->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_inset="0" />
+
+		<!-- edit box for displaying/editing name -->
+		<container id="namp" height="30" navigation_container="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="filter_edit_box" id="name" width="700" size="large" show_clear_text_icon="true">
+				<!-- For the GDK due to the UCS2 encoding the maximum length we can use for saves names is 63-->
+				<attachment class="max_length_attachment" length="63" />
+				<flags id="escape_event" value="canc" />
+				<flags id="return_event" value="slct" />
+				<flags id="changed_event" value="upbt" />
+			</widget>
+
+			<!-- warning icon to alert of illegal filenames -->
+			<widget class="picture" id="ifwi" auto_size="horizontal" height="16" hidden="true" file="icons/16px/warning" colour="negative">
+				<translation id="hint" translation_id="282093" type="use" value="The filename you have entered is invalid. Please enter a different filename.[COMMENT: Hint text of a warning icon that appears in dialogs where the user has to type in some text to name a new file or folder. This icon is only shown if that filename is invalid for some reason]" />
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="8" />
+			</widget>
+		</container>
+
+		<widget class="text" id="prpt" spec="text" size="normal" auto_size="vertical" alignment="centre" />
+	</container>
+
+	<!-- main panel and buttons -->
+	<container id="main">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend" vertical_offset="0" horizontal_inset="0" />
+
+		<string id="skin_style" value="plain box" />
+
+		<!-- top panel: contains the file list and preview panel -->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0" />
+
+			<string id="skin_style" value="gap" />
+
+			<!-- main table -->
+			<container class="main_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="table" id="list" sele="item" dcle="doub" row_height="34" save_session_state="true" navigation_container="true" default_focus="true">
+					<flags id="layout" value="-3, -1" />
+					<flags id="mode" value="select_rows, select_multiple, fill_rows, keyboard, dont_allow_click_unselect_single" />
+
+					<boolean id="auto_size_rows" value="false" />
+					<flags id="default_sort_column" value="date" />
+
+					<list id="headings">
+						<record column_span="1" alignment="left,centre_y">
+							<translation id="text" translation_id="249635" type="use" value="Name[COMMENT: file dialgos: file name, header]" />
+						</record>
+						<record column_span="1" alignment="left, centre_y">
+							<translation id="text" translation_id="249636" type="use" value="Date[COMMENT: file dialgos: file date, header]" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0" id="name" />
+						<record index="1" id="date" sort_ascending="false" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="0" alignment="left,centre_y" multiline="false" navigation_focus_target="true" />
+						<record index="1" alignment="left,centre_y" size="small" colour="faded text" />
+					</list>
+				</widget>
+			</container>
+
+			<!-- image preview container -->
+			<container class="main_box" width="300" id="prev" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			</container>
+		</container>
+
+		<!-- bottom panel: contains buttons panel and optional "extra info widget" -->
+		<container navigation_container="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+			<!-- row of buttons -->
+			<container id="btns">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="top" vertical_offset="2" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="2" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="2" />
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+					<widget class="icon_button" id="dele" auto_size="all" controller_button="right_stick_down">
+						<translation id="text" translation_id="247202" type="use" value="Delete" />
+						<record id="click_event">
+							<flags id="event_id" value="del?" />
+						</record>
+					</widget>
+				</container>
+
+				<container file="file select buttons" />
+
+			</container>
+		</container>
+	</container>
+</panel>
