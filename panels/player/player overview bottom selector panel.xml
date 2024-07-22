@@ -108,6 +108,13 @@
             <record id="object_property" get_property="objt" set_property="objt"/>
         </widget>
     </widget>
+	
+	
+	<!-- REPORTS -->
+	<widget file="player/tcs/selector/big/mustermann" class="client_object_viewer_xml_panel" id="must" late_loading="true">
+		<translation id="title" value="Mustermann Metrics" type="use"/>
+	</widget>
+
 
 
 </panel>
