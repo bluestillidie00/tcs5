@@ -41,7 +41,7 @@
 	</widget>
 
 	<!-- PLAYER GAMES IN POSITION -->
-	<widget class="player_games_in_position_panel" id="pgpp" file="player/tcs/selector/games in pos">
+	<widget class="person_information_panel" id="pgpp" file="player/tcs/selector/games in pos">
 		<translation id="title" translation_id="257322" type="use"/>
 	</widget>
 
