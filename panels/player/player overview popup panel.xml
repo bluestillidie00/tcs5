@@ -1,5 +1,5 @@
 <panel>
-	<attachment_group class="vertical_arrange_autosize" />
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
 	<boolean id="suppress_update_after_selection" value="true"/>
 	
 	<container class="tcs_tabs" height="450" id="popu" default_item="oVer" save_default_state="true" save_session_state="true" >
@@ -174,7 +174,7 @@
 
 	</container>
 
-	<container height="135" draw_vertical_dividers="true">
+	<container height="160" draw_vertical_dividers="true">
 		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="10"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true"/>
 

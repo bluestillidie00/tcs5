@@ -1,55 +1,23 @@
-<panel>
+<panel navigation_container="true">
 	<container id="SUBP">
-		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 	</container>
 
-	<widget class="popup_button" id="popv" mode="6" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true">
-		<layout class="stick_to_sides_attachment" alignment="right,top" inset="6" />
-
-		<!-- This is a bit clumsy but I can't think of a better way without using equally clumsy code -->
-		<!-- Animation to 'hide' the widget by drawing it out of the clipping area -->
-		<!--<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="100.0,0.0" end_value="100.0,0.0" duration="0.1" end_mode="hold_end" apply_to_mouse="false"/>-->
-		<!-- Animations to move it back and fade it in when moused over  -->
-		<!--<animation class="translate_animation" trigger_start="msen" trigger_end="msex" start_value="-100.0,0.0" end_value="-100.0,0.0" duration="0.01" end_mode="hold_auto_reverse" apply_to_mouse="false"/>-->
-		<!--<animation class="fade_animation" trigger_start="msen" trigger_end="msex" start_value="0.0" end_value="1.0" duration="0.4" end_mode="hold_auto_reverse"/>-->
+	<widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="4,2" />
 	</widget>
 
-	<!-- FORM -->
-	<!-- LAST 5 GAMES -->
-	<widget class="player_additional_stats_panel" file="none" id="la5g">
-		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-		<translation id="title" translation_id="395236" type="use"/>
-		<translation id="subtitle" translation_id="344664" type="use" />
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<widget class="player_form_summary_panel" file="player/tcs/selector/last 5 games">
-			<record id="object_property" get_property="objt" set_property="objt"/>
-		</widget>
-	</widget>
 
-	<!-- LAST 10 GAMES -->
-	<widget class="player_additional_stats_panel" file="none" id="la10">
-		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
-		<translation id="subtitle" translation_id="344664" type="use" />
-		<record id="object_property" get_property="objt" set_property="objt"/>
-		<widget class="player_form_summary_panel" file="player/tcs/selector/last 10 games">
-			<record id="object_property" get_property="objt" set_property="objt"/>
-		</widget>
+	<widget class="player_form_summary_panel" id="Pfor" file="player/player form summary panel profile" late_loading="true">
+		<translation id="title" translation_id="308194" type="use" value="Form[COMMENT: team form 5 games, all competitions, short version]" />
 	</widget>
 	
-		<!-- PAST INJURIES -->
-	<widget class="player_history_injury_panel" id="tphi" late_loading="true" file="player/tcs/selector/past injury">
-		<translation id="title" translation_id="316626" type="use"/>
+	<widget class="client_object_viewer_xml_panel" file="player/mustermann/archetypes" id="arch" late_loading="true">
+		<translation id="title" type="use" value="Archetypes (Mustermann Iconic)" />
 	</widget>
-
-	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true">
-		<translation id="title" translation_id="247571" type="use" value="Fitness" />
-	</widget>
-	<widget class="player_bans_overview_panel" id="pbop" late_loading="true">
-		<translation id="title" translation_id="247569" type="use" value="Bans" />
-	</widget>
-	<widget class="player_scout_reports_panel" id="pscR" file="player/player scout reports small popup" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+	
+		<widget class="player_scout_reports_panel" id="pscR" file="player/player scout reports small popup" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
 		<translation id="title" translation_id="248079" type="use" value="Report" />
 	</widget>
 	
@@ -57,26 +25,125 @@
 	<container class="player_scout_reports_panel" id="tPCo" file="player/tcs/selector/popup/tcs pros cons only">
 		<translation id="title" type="use" value="Pros and Cons"/>
 	</container>
-	<widget class="player_transfer_information_small_panel" id="ptri" late_loading="true">
-		<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
+	
+	<!-- BANS -->
+		<widget class="player_bans_overview_panel" section="PHst" id="pbop" late_loading="true" file="player/tcs/selector/small/bans">
+		<translation id="title" translation_id="247569" type="use" value="Bans" />
 	</widget>
-	<widget class="person_happiness_panel" file="person/person happiness profile" id="Phap" late_loading="true">
-		<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
-	</widget>
-	<widget class="person_happiness_panel" file="person/person happiness profile plans" id="Ppla" late_loading="true">
-		<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
-	</widget>
-
-	<widget class="player_training_stats_panel" id="pTTS" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-		<translation id="title" translation_id="242773" type="use" value="Training" />
-	</widget>
-	<widget class="player_contract_panel" id="pcon" file="player/player contract small" late_loading="true">
-		<translation id="title" translation_id="230163" type="use" value="Contract" />
-	</widget>
-	<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
+	
+	<!-- CAREER MILESTONES -->
+	<widget class="player_history_achievements_panel" id="pac1" file="player/tcs/selector/small/milestones" late_loading="true">
 		<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
 	</widget>
-	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
+	
+	<!-- CAREER STATS -->
+		<widget class="playing_history_summary_panel" file="player/tcs/selector/small/history" id="Pcrs" late_loading="true">
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
+	
+	<!-- CONTRACT  -->
+	<widget class="player_contract_panel" id="pcon" file="player/tcs/selector/small/contract" valid_for_unemployed_player="false" late_loading="true">
+		<translation id="title" translation_id="230163" type="use" value="Contract" />
+	</widget>
+	
+	<!-- DYNAMICS -->
+	<widget class="person_happiness_panel" file="player/tcs/selector/small/dynamics" id="Phap" late_loading="true">
+		<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
+	</widget>
+	
+	<!-- FITNESS -->
+	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true" file="player/tcs/selector/small/fitness">
+		<translation id="title" translation_id="247571" type="use" value="Fitness" />
+	</widget>
+	
+	<!-- PLANS -->
+	<widget class="person_happiness_panel" file="player/tcs/selector/small/plans" id="Ppla" late_loading="true">
+		<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
+	</widget>
+	
+	<!-- PLAYING TIME -->
+  <widget class="person_chemistry_relationship_panel" file="player/tcs/selector/small/playing time" id="PPtp" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+    <translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+  </widget>
+  
+  <!-- PROGRESS -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/selector/small/progress" section="Pgrg" id="Pgrg" late_loading="true">
+		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
+	</widget>
+	
+	<!-- TRAINING 
+	<widget class="player_training_stats_panel" id="pTTS" late_loading="true" valid_for_international_managers_other_team="false" valid_for_unemployed_player="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false" file="player/tcs/selector/small/training">
+		<translation id="title" translation_id="242773" type="use" value="Training" />
+	</widget> -->
+		
+	<widget class="player_transfer_information_panel" id="ptri" late_loading="true" file="player/tcs/selector/small/transfer">
+		<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
+	</widget>
+	
+	<!-- FORM / LAST 5 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la5g">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" translation_id="395236" type="use"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 5 games">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 10 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la10">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 10 games">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 20 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la20">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 20 Matches)"/>
+		<translation id="subtitle" translation_id="344664" type="use" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 5 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="lb5g">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" translation_id="395236" type="use"/>
+		<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 5 games_bar">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 10 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="lb10">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 10 Matches)"/>
+		<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 10 games_bar">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
+	<!-- FORM / LAST 20 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="lb0">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<translation id="title" type="use" value=" Form (Last 20 Matches)"/>
+		<translation id="subtitle" value="Recent Form (Bars)" type="use"/>
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<widget class="player_form_summary_panel" file="player/tcs/selector/header/form/last 20 games_bar">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</widget>
+
 </panel>
