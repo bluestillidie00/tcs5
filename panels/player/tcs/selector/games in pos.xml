@@ -13,8 +13,9 @@
 		</widget>
 	</container>
 	
-		<container>
+		<container class="player_games_in_position_panel" file="none">
 		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+<record id="object_property" get_property="objt" set_property="objt"/>
 
 		<!-- NO GAMES PLAYED -->
 		<widget class="label" id="nogp" alignment="centre" hidden="true" colour="faded text" />

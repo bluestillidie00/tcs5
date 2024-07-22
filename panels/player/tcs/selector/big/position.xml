@@ -41,10 +41,66 @@
 					<container class="vertical_arrange_container" alignment="top,extend" gap="4">
 
 						<widget class="text" id="Psid" colour="faded text" auto_size="vertical" alignment="centre"/>
-
-						<!-- Label -->
-						<widget id="r+dl" class="text" font="title" auto_size="vertical" colour="accent">
+						
+						<widget id="r+dl" class="text_button" font="title" auto_size="all" colour="tcs_accent" alignment="left" appearance="buttons/link/title/button">
 							<translation id="text" translation_id="363721" type="use" value="Role and Duty[COMMENT: FR 8989 - title for a panel allowing choosing of the role and duty for a player]"/>
+							
+							<event id="click_event" event_id="pGPb"/>
+
+						<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="pGPb">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="pGPb"/>
+							</record>
+						</attachment>
+
+						<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="pGPb">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="r+dl"/>
+							</record>
+						</attachment>
+						
+						<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="pGPb">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="r+d2"/>
+							</record>
+						</attachment>
+							
+						</widget>
+
+		<widget id="r+d2" class="text_button" font="title" auto_size="all" colour="tcs_accent" alignment="left" hidn="true" appearance="buttons/link/title/button">
+							<translation id="text" translation_id="363721" type="use" value="Role and Duty[COMMENT: FR 8989 - title for a panel allowing choosing of the role and duty for a player]"/>
+							
+							<event id="click_event" event_id="pGPb"/>
+
+						<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="pGPb">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="pGPb"/>
+							</record>
+						</attachment>			
+						<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="pGPb">
+							<record id="action_event">
+								<flags id="event_id" value="hide"/>
+								<flags id="event_target" value="r+d2"/>
+							</record>
+						</attachment>
+						
+								<!-- THIS EVENT SHOWS THE CLOSE ID BUTTON -->
+						<attachment class="event_relay_attachment" event_id="pGPb">
+							<record id="action_event">
+								<flags id="event_id" value="show"/>
+								<flags id="event_target" value="r+dl"/>
+							</record>
+						</attachment>
+							
 						</widget>
 
 						<container>
@@ -140,4 +196,20 @@
 			</container>
 		</container>
 	</container>
+
+<container>
+<attachment_group class="vertical_arrange" vertical_alignment="bottom" />
+
+<container class="standard_popup_box" height="210" id="pGPb" hidn="true">
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<animation class="slide_in_bottom_animation"/>
+
+<!-- PLAYER GAMES IN POSITION -->
+	<widget class="person_information_panel" id="pgpp" file="player/tcs/selector/games in pos">
+<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+</container>
+
+</container>
+
 </panel>
