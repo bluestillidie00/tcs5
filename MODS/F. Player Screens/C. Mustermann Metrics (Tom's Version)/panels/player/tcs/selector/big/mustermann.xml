@@ -1,0 +1,602 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+	
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<string id="skin_style" value="title link"/>
+
+		<!-- Linked header -->
+		<widget class="link_button" auto_size="all">
+			<translation id="text" value="Mustermann Metrics" type="use"/>
+		</widget>
+	</container>
+	
+	<container draw_vertical_dividers="true">
+		<layout class="horizontal_arrange" horizontal_layout="140,-1" horizontal_gap="16"/>
+
+		<!-- ARCHETYPE -->
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<!-- BASE -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+				
+				<record id="default_properties" height="30"/>
+
+				<!-- DEFENDER -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+
+					<widget class="picture" file="mustermann/archetypes/anchor"/>
+					<widget class="picture" file="mustermann/archetypes/spreader"/>
+					<widget class="picture" file="mustermann/archetypes/aggressor"/>
+				</container>
+				
+				<!-- FULL BACK -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+
+					<widget class="picture" file="mustermann/archetypes/progressor"/>
+					<widget class="picture" file="mustermann/archetypes/overlapper"/>
+
+				</container>
+
+				<!-- MIDFIELDER -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+					<widget class="picture" file="mustermann/archetypes/builder"/>
+					<widget class="picture" file="mustermann/archetypes/distributor"/>
+					<widget class="picture" file="mustermann/archetypes/box crasher"/>
+				</container>	
+				
+				<!-- FORWARD -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+					<widget class="picture" file="mustermann/archetypes/wide threat"/>
+					<widget class="picture" file="mustermann/archetypes/roamer"/>
+	
+				</container>	
+
+				<!-- STRIKER -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+				<widget class="picture" file="mustermann/archetypes/target"/>
+					<widget class="picture" file="mustermann/archetypes/finisher"/>
+	
+				</container>	
+			</container>
+		
+		<!-- FILTERS -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+				
+				<record id="default_properties" height="30"/>
+
+				<!-- DEFENDER -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+
+	<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_anchor_clearances">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POc9"/>
+						</widget>
+										
+						<widget class="archetype_popup_anchor_blocks">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PObg"/>
+						</widget>
+										
+						<widget class="archetype_popup_anchor_possession_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+										
+						<widget class="archetype_popup_anchor_pressures_attempted">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PRS9"/>
+						</widget>
+										
+					</container>
+
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_spreader_progressive_passes">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PGR9"/>
+						</widget>
+										
+						<widget class="archetype_popup_spreader_passes_completed">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POpc"/>
+						</widget>
+										
+						<widget class="archetype_popup_spreader_possession_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+										
+						<widget class="archetype_popup_spreader_pressures_attempted">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PRS9"/>
+						</widget>
+										
+					</container>
+
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_aggressor_headers_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POHg"/>
+						</widget>
+										
+						<widget class="archetype_popup_aggressor_possession_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+										
+					</container>
+
+				</container>
+				
+				<!-- FULL BACK -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+
+<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_progressor_progressive_passes">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PGR9"/>
+						</widget>
+										
+						<widget class="archetype_popup_progressor_possession_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+										
+						<widget class="archetype_popup_progressor_pressures_attempted">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PRS9"/>
+						</widget>
+										
+					</container>
+
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_overlapper_crosses_attempted">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POP9"/>
+						</widget>
+										
+						<widget class="archetype_popup_overlapper_possession_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+										
+						<widget class="archetype_popup_overlapper_pressures_attempted">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PRS9"/>
+						</widget>
+										
+					</container>
+
+				</container>
+
+				<!-- MIDFIELDER -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+	<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_builder_possession_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+										
+						<widget class="archetype_popup_builder_possession_lost">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POL9"/>
+						</widget>
+										
+						<widget class="archetype_popup_builder_pressures_attempted">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PRS9"/>
+						</widget>
+										
+					</container>
+
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_distributor_open_play_key_passes">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="Pop9"/>
+						</widget>
+										
+						<widget class="archetype_popup_distributor_progressive_passes">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PGR9"/>
+						</widget>
+										
+						<widget class="archetype_popup_distributor_passes_completed">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POpc"/>
+						</widget>
+										
+						<widget class="archetype_popup_distributor_possession_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POW9"/>
+						</widget>
+										
+					</container>
+
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_box_crasher_shots">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POsg"/>
+						</widget>
+										
+						<widget class="archetype_popup_box_crasher_progressive_passes">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PGR9"/>
+						</widget>
+										
+						<widget class="archetype_popup_box_crasher_passes_completed">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POpc"/>
+						</widget>
+										
+						<widget class="archetype_popup_box_crasher_dribbles">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="Podr"/>
+						</widget>
+										
+					</container>
+				</container>	
+				
+				<!-- FORWARD -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_wide_threat_dribbles">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="Podr"/>
+						</widget>
+										
+						<widget class="archetype_popup_wide_threat_shots">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POsg"/>
+						</widget>
+										
+					</container>
+
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_roamer_open_play_key_passes">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="Pop9"/>
+						</widget>
+										
+						<widget class="archetype_popup_roamer_shots">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POsg"/>
+						</widget>
+										
+						<widget class="archetype_popup_roamer_pressures_attempted">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PRS9"/>
+						</widget>
+										
+					</container>
+	
+				</container>	
+
+				<!-- STRIKER -->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left"/>
+
+					<record id="default_properties" rrep="tcs_accent" brep="bg darker" grep="tcs_accent" alignment="centre_x,centre_y" image_alignment="centre_x,centre_y" width="30"/>
+	<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_target_headers_won">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POHg"/>
+						</widget>
+										
+						<widget class="archetype_popup_target_shots">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POsg"/>
+						</widget>
+										
+					</container>
+
+					<container default_width="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+										
+						<widget class="archetype_popup_finisher_goals">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="POgg"/>
+						</widget>
+										
+						<widget class="archetype_popup_finisher_xg_overperformance">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+							<record id="object_property" get_property="PxGO"/>
+						</widget>
+										
+					</container>
+	
+				</container>	
+			</container>
+		
+		</container>
+
+		<!-- STACKED -->
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+		
+				<!--DEFENSIVE ACTIONS KEY-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize"/>
+	
+					<widget class="label" auto_size="all" font="title" colour="text">
+						<translation id="text" type="use" value="Defensive Actions"/>
+					</widget>
+		
+					<container width="4"/>
+		
+					<!-- TACKLES -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked1" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Tackles"/>
+					</widget>
+			
+					<container width="2"/>
+			
+					<!-- BLOCKS -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked2" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Blocks"/>
+					</widget>
+			
+					<container width="2"/>
+					
+					<!-- CLEARANCES -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked3" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Clearances"/>
+					</widget>
+			
+					<container width="2"/>
+			
+					<!-- INTERCEPTIONS -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked4" auto_size="vertical" width="4"/>
+					
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Interceptions"/>
+					</widget>
+				</container>
+		
+				<!-- DEFENSIVE ACTIONS BAR -->
+				<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally" height="30">
+			
+					<container>
+						<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+						<widget class="stacked_defensive_actions_tackles" auto_size="horizontal">
+							<record id="object_property" get_property="Pota"/>
+						</widget>
+					
+						<widget class="stacked_defensive_actions_blocks" auto_size="horizontal">
+							<record id="object_property" get_property="PObg"/>
+						</widget>
+					
+						<widget class="stacked_defensive_actions_clearances" auto_size="horizontal">
+							<record id="object_property" get_property="POc9"/>
+						</widget>
+					
+						<widget class="stacked_defensive_actions_interceptions" auto_size="horizontal">
+							<record id="object_property" get_property="POiG"/>
+						</widget>
+
+					</container>
+				
+					<container default_width="-1"/>
+				</container>
+				
+				<!--EXCITEMENT FACTOR KEY-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize"/>
+				
+					<widget class="label" auto_size="all" font="title" colour="text">
+						<translation id="text" type="use" value="Excitement Factor"/>
+					</widget>
+		
+					<container width="4"/>
+		
+					<!-- DRIBBLES -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked1" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Dribbles"/>
+					</widget>
+				
+					<container width="2"/>
+				
+					<!-- OPEN PLAY KEY PASSES -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked2" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Open Play Key Passes"/>
+					</widget>
+			
+					<container width="2"/>
+			
+					<!-- SHOTS -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked3" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Shots"/>
+					</widget>
+				</container>
+		
+				<!-- EXCITEMENT FACTOR -->
+				<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally" height="30">
+			
+					<container>
+						<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+						<widget class="stacked_excitement_factor_dribbles" auto_size="horizontal">
+							<record id="object_property" get_property="Podr"/>
+						</widget>
+					
+						<widget class="stacked_excitement_factor_key_passes" auto_size="horizontal">
+							<record id="object_property" get_property="Pop9"/>
+						</widget>
+					
+						<widget class="stacked_excitement_factor_shots" auto_size="horizontal">
+							<record id="object_property" get_property="POsg"/>
+						</widget>
+
+					</container>
+				
+					<container default_width="-1"/>
+				</container>
+		
+				<!--DEFENSIVE ACTIONS KEY-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize"/>
+				
+					<widget class="label" auto_size="all" font="title" colour="text">
+						<translation id="text" type="use" value="Key Passing Breakdown"/>
+					</widget>
+		
+					<container width="4"/>
+		
+					<!-- TACKLES -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked1" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Open Play"/>
+					</widget>
+			
+					<container width="2"/>
+			
+					<!-- BLOCKS -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked2" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Set Piece"/>
+					</widget>
+			
+					<container width="2"/>
+			
+					<!-- CLEARANCES -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked3" auto_size="vertical" width="4"/>
+
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Progressive"/>
+					</widget>
+
+					<container width="2"/>
+				
+					<!-- INTERCEPTIONS -->
+					<widget class="picture" file="mustermann/nipples/key" red_replacement="stacked4" auto_size="vertical" width="4"/>
+					
+					<widget class="label" auto_size="all" font="text" colour="faded text">
+						<translation id="text" type="use" value="Boring"/>
+					</widget>
+							
+				</container>
+		
+				<container height="30">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				
+					<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally">
+			
+						<container>
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+							<widget class="stacked_passing_breakdown_passes" auto_size="horizontal">
+								<record id="object_property" get_property="POpc"/>
+							</widget>
+						
+						</container>
+					
+						<container default_width="-1"/>
+					</container>
+				
+					<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally">
+			
+						<container>
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+							<widget class="stacked_passing_breakdown_key" auto_size="horizontal">
+								<record id="object_property" get_property="POkG"/>
+							</widget>
+						
+							<widget class="stacked_passing_breakdown_progressive" auto_size="horizontal">
+								<record id="object_property" get_property="PGR9"/>
+							</widget>
+						
+						</container>
+					
+						<container default_width="-1"/>
+					</container>
+				
+					<container class="horizontal_adaptive_container" gap="0" mode="distribute_equally">
+			
+						<container>
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+							<widget class="stacked_passing_breakdown_op" auto_size="horizontal">
+								<record id="object_property" get_property="Pop9"/>
+							</widget>
+						
+						</container>
+					
+						<container default_width="-1"/>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+			
+</panel>
