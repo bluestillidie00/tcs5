@@ -54,7 +54,7 @@
 			</attachment_group>
 
 			<container class="main_box_no_margin" appearance="boxes/custom/inbox attachment/fm23/paper" id="LIST" draw_horizontal_dividers="true">
-				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="8" horizontal_inset="0"/>
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="2" vertical_gap="8" horizontal_inset="0"/>
 
 				<container file="human/inbox buttons" id="BTNS" height="40" navigation_container="true"/>
 <!-- 				
