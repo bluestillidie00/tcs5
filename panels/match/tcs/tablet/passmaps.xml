@@ -1,0 +1,47 @@
+<!-- custom panel for ibh review screen - passmap and best/worst performers -->
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+    <!-- Team Analysis -->
+    <container class="plain_box" draw_vertical_dividers="true">
+
+        <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+        <!--home pass map-->
+        <container>
+            <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+            <!--pass map-->
+            <widget class="preselected_match_chalkboard_panel" id="pmcH" vertical="true" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false" enable_popup="false">
+                <record id="object_property" get_property="objt" set_property="objt" />
+                <list id="chalkboard_events_to_display">
+                    <!-- Passmap -->
+                    <integer value="42" />
+                    <integer value="63" />
+                </list>
+            </widget>
+
+        </container>
+
+        <!--away pass map-->
+        <container>
+
+            <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--pass map-->
+            <widget class="preselected_match_chalkboard_panel" id="pmcA" vertical="true" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false" wants_global_events="false" enable_popup="false">
+                <record id="object_property" get_property="objt" set_property="objt" />
+                <list id="chalkboard_events_to_display">
+                    <!-- Passmap -->
+                    <integer value="42" />
+                    <integer value="63" />
+                </list>
+            </widget>
+
+        </container>
+
+    </container>
+</panel>

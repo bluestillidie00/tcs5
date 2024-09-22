@@ -183,7 +183,7 @@
 										</container>
 									</container>
 
-									<widget class="match_analysis_panel" id="Anal" file="match/tcs/tablet/heatmaps">
+									<widget class="match_analysis_panel" id="Anal" file="match/tcs/tablet/passmaps">
 										<!-- Slide in from side of screen -->
 										<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,1" end_value="0,0" duration="0.35" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false"/>
 										<animation class="fade_on_hide_animation" duration="0.35"/>
