@@ -39,34 +39,16 @@
 							<record id="object_property" get_property="objt" set_property="objt"/>
 
 							<!-- MIDDLE -->
-							<container default_width="-1" priority="1" minimum_width="670" class="vertical_adaptive_container" gap="8">
+							<container default_width="-1" priority="1" minimum_width="670">
 								<record id="object_property" get_property="objt" set_property="objt"/>
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
 
-								<container default_height="350" priority="1">
-									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-									<translation id="title" translation_id="292808" type="use"/>
-
-									<!-- ATTRIBUTES -->
-									<widget class="player_attributes_panel" id="patp" late_loading="true" dont_allow_custom_attribute_change_ranges="true">
-										<record id="object_property" get_property="objt" set_property="objt"/>
-									</widget>
-
-									<widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true" alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="1" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true" file="none">
-										<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]"/>
-									</widget>
-								</container>
-
-								<!-- BOTTOM -->
-								<container class="tcs_box" default_height="-1" minimum_height="40" priority="2">
-									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
-
-									<container class="client_object_viewer_selector_panel" id="seoB" file="player/player overview bottom selector panel" minimum_width="310" default_width="-1" priority="3" save_session_state="true" dont_set_embedded_title="true">
-													<integer id="default_for_unemployed_managers" value="lb0"/>
-										<integer id="default_for_international_managers_other_team" value="lb0"/>
-										<integer id="default_for_everyone_else" value="lb0"/>
-										<integer id="default_for_versus_mode" value="lb0"/>
+									<container class="client_object_viewer_selector_panel" id="cLMT" minimum_width="330" default_width="-1" priority="3" file="player/player overview big selector panel" save_session_state="true" dont_set_embedded_title="true" default_item="tCSR">
+										<integer id="default_for_unemployed_managers" value="tCSR"/>
+										<integer id="default_for_international_managers_other_team" value="tCSR"/>
+										<integer id="default_for_everyone_else" value="tCSR"/>
+										<integer id="default_for_versus_mode" value="tCSR"/>
 									</container>
-								</container>
 
 							</container>
 
@@ -430,7 +412,7 @@
 										<!-- Praise/Criticise -->
 										<container>
 											<layout class="horizontal_arrange_autosize_all"/>
-																<record id="default_properties"  appearance="buttons/primary/normal/button" auto_size="horizontal" colour="fg" icon_colour="fg"/>
+											<record id="default_properties" appearance="buttons/primary/normal/button" auto_size="horizontal" colour="fg" icon_colour="fg"/>
 
 											<widget class="icon_button" icon="icons/16px/thumbs up" rrep="bg positive" click_event="ptev"/>
 											<widget class="icon_button" icon="icons/16px/thumbs down" rrep="bg negative" click_event="ctev"/>
