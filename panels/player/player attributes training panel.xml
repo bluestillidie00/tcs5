@@ -1,0 +1,136 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row" />
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row" />
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row" />
+	<flags id="graph_icon_unselected_appearance" value="" />
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 14, 60, 30" row_height="22" row_spacing="1" default_sort_column="name">
+
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="4">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" />
+			</record>
+			<!-- Attribute training improvement offset -->
+			<record index="1" id="offs" sort_disabled="true">
+				<record id="widget_info" class="training_improvement" />
+			</record>
+			<!-- Attribute value -->
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_bar" alignment="right,centre_y" style="semi_bold" multiline="false" />
+			</record>
+			<!-- Attribute edit widget -->
+			<record index="3" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!-- Technical Table -->
+		<widget class="table" id="pltt" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+					<translation id="text" translation_id="229413" type="use" value="Technical" />
+				</record>
+			</list>
+		</widget>
+		<!-- Goalkeeping Table -->
+		<widget class="table" id="plgk" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+					<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+				</record>
+			</list>
+		</widget>
+		<!-- Mental Table -->
+		<widget class="table" id="plmt" layout="-1">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+					<translation id="text" translation_id="230106" type="use" value="Mental" />
+				</record>
+			</list>
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Physical Table -->
+				<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true" font="title" colour="accent">
+							<translation id="text" translation_id="230003" type="use" value="Physical"/>
+						</record>
+					</list>
+				</widget>
+
+				<!-- Extra technical table for GK -->
+				<widget class="table" id="plgt" layout="-1" auto_size="vertical">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" font="title" colour="accent">
+							<translation id="text" translation_id="229413" type="use" value="Technical"/>
+						</record>
+					</list>
+				</widget>
+			</container>
+
+
+			<!-- Player Traits -->
+			<container class="scrolling_box">
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="10" />
+					<layout class="fit_children_attachment" alignment="vertical, fill" offset="10" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true" />
+
+					<widget class="label" auto_size="vertical" font="title" colour="accent">
+						<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+					</widget>
+
+					<widget class="preferred_moves_panel" auto_size="vertical" file="player/player information preferred moves" id="pfmp">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+
+					<widget class="preferred_move_popup_button" id="nPPM" appearance="buttons/standard/normal/button" alignment="left,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PmCo" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="preferred_move_label" id="ppML" alignment="left,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="PTpm" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="button" hidden="true" click_event="PPMC" id="cPPM" alignment="left,centre_y" auto_size="all">
+						<translation id="text" translation_id="229828" type="use" value="Cancel" />
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

@@ -34,17 +34,17 @@
 	<colour name="good attribute background" value="rgb(14,135,144)"/>
 	<colour name="excellent attribute background" value="excellent attribute"/>
 
-	<!-- ORIGINAL TCS ORIGINAL ATTRIBUTE BAR MOD COLOURS 
+	<!-- ORIGINAL TCS ORIGINAL ATTRIBUTE BAR MOD COLOURS -->
 	<colour name="low attribute bar" value="low attribute"/>
 	<colour name="normal attribute bar" value="normal attribute"/>
 	<colour name="good attribute bar" value="good attribute"/>
-	<colour name="excellent attribute bar" value="excellent attribute"/> -->
+	<colour name="excellent attribute bar" value="excellent attribute"/> 
 
-	<!-- ORIGINAL TCS ATTRIBUTE BAR MOD COLOURS -->
+	<!-- ORIGINAL TCS ATTRIBUTE BAR MOD COLOURS 
 	<colour name="low attribute bar" value="tcs_accent"/>
 	<colour name="normal attribute bar" value="tcs_accent"/>
 	<colour name="good attribute bar" value="tcs_accent"/>
-	<colour name="excellent attribute bar" value="tcs_accent"/>
+	<colour name="excellent attribute bar" value="tcs_accent"/> -->
 
 	<!-- TACTICS PITCH 
 	<colour name="pitch_box_background" value="bg"/>

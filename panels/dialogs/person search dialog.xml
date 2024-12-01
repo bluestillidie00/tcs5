@@ -1,0 +1,253 @@
+<panel width="1020">
+	<attachment_group class="vertical_arrange_autosize" />
+	<layout class="centre_in_parent_attachment" alignment="all" />
+	
+	<container id="main">
+		<attachment_group class="vertical_arrange_autosize" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" />
+		
+		<container class="container_with_mouse_events">
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<container class="standard_popup_box" id="stpb">
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8" vertical_offset="4" horizontal_inset="6" />
+
+				<widget class="text" id="psti" font="title" colour="text" size="large" auto_size="all" />
+				<widget class="horizontal_divider" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="220, -1" horizontal_gap="12" vertical_gap="2" />
+
+					<!-- left hand side widgets -->
+					<container navigation_container="true">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_inset="0" />
+
+						<widget class="text" font="title" colour="text" size="medium" auto_size="all">
+							<translation id="text" translation_id="230082" type="use" value="Positions" />
+						</widget>
+
+						<!--pitch widget-->
+						<container height="180" navigation_container="true" default_focus="true">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0, 24, 0, 24" />
+
+							<widget class="picture" height="180" default_path="boxes/custom/match/lineup pitch/" file="boxes/custom/match/lineup pitch/recruitment focus pitch" red_replacement="fg" blue_replacement="fg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false" />
+							<widget class="pitch_with_all_positions" id="ppip" height="180" vertical="true" pitch_show_names="false" pitch_allow_multiple_select_no_modifiers="true" pitch_touchline_width_percentage="10" pitch_width_percentage="125" pitch_vertical_padding="12" pitch_horizontal_padding="12" pitch_base_appearance="" pitch_pattern="" line_width="1.5" pitch_draw_goals="false" pitch_alignment="top, centre_x" select_event="esfp" absorb_click_events="true" pitch_line_colour="transparent" pitch_perspective="0.2" display_centre_side_positions="true" pitch_draw_markings="false" show_position_strength="false" pitch_draw_grass="false" pitch_override_icon_size="2" disable_animations="true" />
+						</container>
+
+						<widget class="text" font="title" colour="text" size="medium" auto_size="all">
+							<translation id="text" translation_id="298050" type="use" value="Role" />
+						</widget>
+
+						<widget class="subtle_popup_button" id="role" select_event="eROc" auto_size="all" alignment="left, centre_y" navigation_focus_target="true">
+							<translation id="text" translation_id="298050" type="use" value="Role" />
+						</widget>
+
+						<widget class="spacer" height="1" />
+
+						<widget class="text" font="title" colour="text" size="medium" auto_size="all">
+							<translation id="text" translation_id="553510" type="use" value="Aged Between[COMMENT: AREA: Scouting; SUB-AREA: Recruitment Focus Dialog; FR-BN: FM-4456; NOTE: Title of filter, where the human sets the age of the players the scouts should be looking for]" />
+						</widget>
+
+						<widget class="selection_list" id="mina" select_event="mias" use_menu_for_plus_minus="false" auto_size="vertical" navigation_focus_target="true">
+							<flags id="main_kind" value="selection_subtle_popup" />
+							<flags id="minus_kind" value="selection_subtle_minus" />
+							<flags id="plus_kind" value="selection_subtle_plus" />
+						</widget>
+						<widget class="selection_list" id="maxa" select_event="maas" use_menu_for_plus_minus="false" auto_size="vertical" navigation_focus_target="true">
+							<flags id="main_kind" value="selection_subtle_popup" />
+							<flags id="minus_kind" value="selection_subtle_minus" />
+							<flags id="plus_kind" value="selection_subtle_plus" />
+						</widget>
+						
+						<widget class="horizontal_divider" />
+
+						<widget class="text" font="title" colour="text" size="medium" auto_size="vertical" multiline="true">
+							<translation id="text" type="use" value="Scouting Team Recommendation[COMMENT - person list column heading hint tool tip; scouting section]" translation_id="565353" />
+						</widget>
+
+						<container height="30">
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left, extend" horizontal_offset="0" horizontal_gap="2" vertical_offset="0" />
+
+							<widget class="text" alignment="left, centre_y" auto_size="all">
+								<translation id="text" translation_id="596391" type="use" value="Grade Is At Least[COMMENT: AREA: Scouting; SUB-AREA: Player Search Dialog; FR-BN: FM-4340; NOTE: Condition label for scout recommendation section]" />
+							</widget>
+
+							<widget class="selection_list" id="scRL" select_event="eREc" style="bold" use_menu_for_plus_minus="true" reverse_function="true" navigation_focus_target="true" auto_size="vertical">
+								<flags id="main_kind" value="selection_subtle_popup" />
+								<flags id="minus_kind" value="selection_subtle_minus" />
+								<flags id="plus_kind" value="selection_subtle_plus" />
+							</widget>
+						</container>
+
+						<widget class="spacer" height="1" />
+
+						<widget class="text" font="title" colour="text" size="medium" auto_size="all">
+							<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+						</widget>
+
+						<container height="35" navigation_container="true">
+							<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<widget class="radio_toggle_switch_left" id="tsta" click_event="eTSc" type="-1" alignment="centre" auto_size="horizontal">
+								<translation id="text" translation_id="596390" type="use" value="Any[COMMENT: AREA: Scouting; SUB-AREA: Player Search Dialog; FR-BN: FM-4340; NOTE: Any selection for transfer status filter]" />
+							</widget>
+
+							<widget class="radio_toggle_switch_middle" id="tstl" click_event="eTSc" type="1" alignment="centre" auto_size="horizontal">
+								<translation id="text" translation_id="227369" type="use" value="Listed[COMMENT: transfer or loan status short string: listed/available]" />
+							</widget>
+
+							<widget class="radio_toggle_switch_right" id="tstu" click_event="eTSc" type="0" alignment="centre" auto_size="horizontal">
+								<translation id="text" translation_id="231468" type="use" value="Not Listed[COMMENT - transfer listed filter option]" />
+							</widget>
+						</container>
+
+						<widget class="spacer" height="1" />
+
+						<widget class="text" font="title" colour="text" size="medium" auto_size="all">
+							<translation id="text" translation_id="247489" type="use" value="Loan Status" />
+						</widget>
+
+						<container height="35" navigation_container="true">
+							<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<widget class="radio_toggle_switch_left" id="lsta" click_event="eLSc" type="-1" alignment="centre" auto_size="horizontal">
+								<translation id="text" translation_id="596389" type="use" value="Any[COMMENT: AREA: Scouting; SUB-AREA: Player Search Dialog; FR-BN: FM-4340; NOTE: Any selection for loan status filter]" />
+							</widget>
+
+							<widget class="radio_toggle_switch_middle" id="lstl" click_event="eLSc" type="2" alignment="centre" auto_size="horizontal">
+								<translation id="text" translation_id="227369" type="use" value="Listed[COMMENT: transfer or loan status short string: listed/available]" />
+							</widget>
+
+							<widget class="radio_toggle_switch_right" id="lstu" click_event="eLSc" type="0" alignment="centre" auto_size="horizontal">
+								<translation id="text" translation_id="231468" type="use" value="Not Listed[COMMENT - transfer listed filter option]" />
+							</widget>
+						</container>
+
+						<widget class="spacer" height="1" />
+
+						<widget class="text" font="title" colour="text" size="medium" auto_size="all">
+							<translation id="text" translation_id="227954" type="use" value="Contract Status" />
+						</widget>
+
+						<widget class="subtle_popup_button" id="cost" select_event="eCSc" alignment="left, centre_y" auto_size="vertical">
+							<translation id="text" translation_id="227954" type="use" value="Contract Status" />
+						</widget>
+					</container>
+
+					<!-- right hand side widgets -->
+					<container class="main_subtle_box_no_margin" id="mnsu" navigation_container="true">
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+						<container class="tabbed_container" id="fita" default_item="ConD" changed_event="ChFl">
+							<attachment_group class="vertical_arrange" horizontal_alignment="horizontal" vertical_inset="0" vertical_gap="0" horizontal_inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="8"/>
+							
+<container id="ConD" navigation_container="true">
+								<translation id="title" translation_id="335278" type="use" value="Search Criteria[COMMENT - title of panel showing network game filters]" />
+								<attachment_group class="vertical_arrange" vertical_layout="8, 1, 1, -1" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+								<widget class="spacer" />
+								
+								<!-- attributes only filter list -->
+								<widget class="person_filter_panel" id="psfp" draw_title="false" file="filter_panels/person search dialog filter panel" use_embedded_attributes_filter="false" wants_mouse_events="false" navigation_container="true" />
+								<widget class="horizontal_divider" />
+
+								<container>
+									<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+									
+									<container>
+										<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+										<widget class="text" font="title" colour="text" size="medium" auto_size="all">
+											<translation id="text" translation_id="364209" type="use" value="Additional Conditions[COMMENT: FR 6137, scout assignement dialog text, search conditions]" />
+											<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+										</widget>
+
+										<!-- embedded buttons -->
+										<container>
+											<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right, extend" horizontal_offset="0" horizontal_gap="2" vertical_offset="0" />
+											<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+
+											<widget class="filter_edit_box" id="adce" appearance="edit boxes/custom/selection/box" flatten_menu_items="true" clear_text_on_select="true" forward_selection_event="true" alignment="left, centre_y" auto_size="vertical" width="150">
+												<flags id="changed_event" value="chct" />
+												<flags id="select_on_focus" value="true" />
+												<boolean id="validate_string" value="true" />
+												<layout class="stick_to_sides_attachment" alignment="top" inset="2" />
+												<string id="remove_if" value="ui.is_fmt_controller_skin" />
+											</widget>
+
+											<widget class="popup_button" id="addc" fixed="true" appearance="buttons/subtle/split/right/button" auto_size="all">
+												<layout class="stick_to_sides_attachment" alignment="top" inset="2" />
+												<string id="remove_if" value="ui.is_fmt_controller_skin" />
+											</widget>
+
+											<widget class="popup_button" id="addc" fixed="true" auto_size="all">
+												<translation id="text" translation_id="249819" type="use" value="Add Condition[COMMENT - person search filter dialog text]" />
+												<translation id="hint" translation_id="321075" type="use" value="Add a condition to narrow your search by[COMMENT - person search filter dialog text]" />
+												<layout class="stick_to_sides_attachment" alignment="top" inset="2" />
+												<string id="create_if" value="ui.is_fmt_controller_skin" />
+											</widget>
+										</container>
+									</container>
+
+									<!-- table containing editable filter rules -->
+									<widget class="filter_table" id="otct" show_enabled_column="true" show_move_buttons="false" show_compare_rules="true" auto_update_filter="true" mode="fill_rows" row_spacing="2" auto_size="none" />
+								</container>
+							</container>
+
+						</container>
+						
+						<container>
+							<attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_alignment="right" vertical_inset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="top, right" inset="8"/>
+
+							<global id="hidden" name="ui.is_fmt_controller_skin"/>
+
+							<widget class="text" alignment="left, centre_y" auto_size="all">
+								<translation id="text" translation_id="466411" type="use" value="Find Similar Player to[COMMENT: FR 22665, scouting comparison option, allows a search to be made compared to an existing player's attributes]"/>
+							</widget>
+
+							<widget class="db_record_search_box" id="srcB" width="250" height="30" SRnk="false" file="widgets/search box scout assignment" database_table_type="1" ssro="true" lpfi="widgets/predictive search list scout assignment" lpmw="500"/>
+						</container>
+					</container>
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!-- bottom action buttons -->
+				<container height="30" navigation_container="true">
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left, extend">
+						<global id="horizontal_gap" name="ui.button_row_gap" />
+					</attachment_group>
+
+					<widget class="subtle_popup_button" id="seop" fixed="true" icon="icons/16px/settings" auto_size="all" />
+
+					<widget class="icon_button" id="clea" click_event="clpf" controller_button="x_button" appearance="buttons/subtle/normal/button" auto_size="all">
+						<translation id="text" translation_id="229717" type="use" value="Clear" />
+					</widget>
+
+					<widget class="widget_popup_button" id="excl" widget_type="person_search_filter_popup_panel" appearance="buttons/subtle/normal/button" popup_alignment="right, top" auto_size="horizontal" height="31">
+						<record id="widget_properties" file="filter_panels/person search filter popup" width="350" />
+						<translation id="text" translation_id="343652" type="use" value="Exclude[COMMENT: offer to clubs panel title; exclusion options for offer to clubs are contained within]" />
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="2" vertical_offset="0" />
+
+						<widget class="button" auto_size="all">
+							<translation id="text" translation_id="229828" type="use" value="Cancel" />
+							<record id="click_event" event_id="canc" />
+						</widget>
+
+						<widget class="primary_icon_tick_button" id="ok">
+							<translation id="text" translation_id="229829" type="use" value="Ok" />
+							<record id="click_event" event_id="ok  " />
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>
