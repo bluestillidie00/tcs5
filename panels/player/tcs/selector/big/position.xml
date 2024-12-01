@@ -73,7 +73,7 @@
 							
 						</widget>
 
-		<widget id="r+d2" class="text_button" font="title" auto_size="all" colour="tcs_accent" alignment="left" hidn="true" appearance="buttons/link/title/button">
+		<widget id="r+d2" class="text_button" font="title" auto_size="all" colour="tcs_accent" alignment="left" hidn="true" appearance="tcs/buttons/title/button">
 							<translation id="text" translation_id="363721" type="use" value="Role and Duty[COMMENT: FR 8989 - title for a panel allowing choosing of the role and duty for a player]"/>
 							
 							<event id="click_event" event_id="pGPb"/>
@@ -194,6 +194,73 @@
 					</container>
 				</container>
 			</container>
+			
+			<!-- FOOTEDNESS -->
+			<container height="40"  >
+			<layout class="horizontal_arrange" horizontal_layout="-1,2,-1"/>
+			
+			<!-- LEFT FOOT -->
+			<container>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<widget class="label" id="PlfG" auto_size="vertical" font="title" colour="text" alignment="centre">
+						<record id="object_property" get_property="PlfG" name="true"/>
+					</widget>
+
+					<container height="20">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="8"/>
+
+						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
+							<list id="value_list">
+								<record min_value="1" max_value="4" red_replacement="fg red"/>
+								<record min_value="5" max_value="8" red_replacement="awkward"/>
+								<record min_value="9" max_value="11" red_replacement="unconvincing"/>
+								<record min_value="12" max_value="14" red_replacement="competent"/>
+								<record min_value="15" max_value="17" red_replacement="accomplished"/>
+								<record min_value="18" max_value="20" red_replacement="natural"/>
+							</list>
+							<record id="object_property" get_property="PlfG"/>
+						</widget>
+
+						<widget class="footedness_label" id="PlfG" auto_size="all">
+							<record id="object_property" get_property="PlfG"/>
+						</widget>
+					</container>						
+			</container>
+			
+			<!-- DIVIDER -->
+			<widget class="vertical_subtle_divider" />
+			
+			<container>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<widget class="label" id="PrfG" auto_size="vertical" font="title" colour="text" alignment="centre">
+						<record id="object_property" get_property="PrfG" name="true"/>
+					</widget>
+
+					<container height="20">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="8"/>
+
+						<widget class="value_based_picture" file="tcs/icons/footedness/right" width="24">
+							<list id="value_list">
+								<record min_value="1" max_value="4" red_replacement="fg red"/>
+								<record min_value="5" max_value="8" red_replacement="awkward"/>
+								<record min_value="9" max_value="11" red_replacement="unconvincing"/>
+								<record min_value="12" max_value="14" red_replacement="competent"/>
+								<record min_value="15" max_value="17" red_replacement="accomplished"/>
+								<record min_value="18" max_value="20" red_replacement="natural"/>
+							</list>
+							<record id="object_property" get_property="PrfG"/>
+						</widget>
+
+						<widget class="footedness_label" id="PlfG" auto_size="all">
+							<record id="object_property" get_property="PrfG"/>
+						</widget>
+					</container>						
+			</container>
+			
+			</container>
+			
 		</container>
 	</container>
 
