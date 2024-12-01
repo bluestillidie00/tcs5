@@ -1,0 +1,12 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!--PIZZA OVERLAY-->
+	<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance pizza_outfield" id="mmpo" height="450">
+		<record id="object_property" get_property="Pigo" set_property="hidn"/>
+	</container>
+					
+	<container class="client_object_viewer_xml_panel" file="player/mustermann/selector/large/performance pizza_gk" id="mmpo" height="450">
+		<record id="object_property" get_property="Pigo" set_property="Shwn"/>
+	</container>
+</panel>
